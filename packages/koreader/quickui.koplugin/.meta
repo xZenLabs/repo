@@ -1,0 +1,20 @@
+# Quickui plugin for KOReader
+# https://github.com/gytwo/quickui.koplugin
+# zenpm:auto-scraped
+id=quickui
+name=Quickui
+version=1.0.1
+description=Quick Actions, Cover Visuals, Cloze Mode, Header & Footer — more efficient KOReader.
+author=gytwo
+category=theme
+platforms=koreader
+dependencies=
+source=https://github.com/gytwo/quickui.koplugin
+stars=15
+updated_at=2026-07-24T13:55:46Z
+published_at=2026-07-15T00:09:03Z
+readme_url=packages/koreader/quickui.koplugin/README.md
+readme_hash=52102b49334a703407fbfa50766c8acec73feb1a
+source_type=release
+source_asset=quickui.koplugin.zip
+size=141988
