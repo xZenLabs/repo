@@ -1,3 +1,26 @@
+# v2.3.0
+
+## New Features
+- **Custom image background** - Added “Custom image” as a background type, letting you use a single image as your sleep screen background (instead of the single image in folder workaround that many users were using).
+- **Export image on suspend** - If the export sleep screen to file option is in use, then the sleep screen now additionally exports on device suspend in addition to on book close.
+- **Configurable export filename and format** - Choose the filename and file format (PNG, JPG, BMP) used when exporting the sleep screen image. Useful for devices where a specific file name and type is needed e.g. Tolino, Pocketbook etc. Note/ Pocketbook caches images, so even though the file is changed, a reboot may be needed to see the new image.
+- **Anti-ghosting flash** - Optionally flashes the screen to black just before showing the sleep screen, clearing faint ghosting some e-ink devices show from text/images. Off by default since not every device is affected.
+- **Exclude a book’s cover from the sleep screen** - Per book option to hide a specific book’s cover (similar to the coverimage plugin option). Handy if you read multiple books simultaneously but don’t want to change or forget to change the sleep screen preset, and you’d rather have certain covers hidden.
+- **Independent clock and date on battery section** - ‘Show clock’ and ‘Show date’ are now separate toggles, and no longer on the title line. You can now show either, both or hide the clock and date if you’d rather not see them (since it’s static data at the time of sleep screen generation).
+- **Show/hide percentages on book, chapter and goal sections** - Hide the percentage labels if you’d rather they not be visible.
+- **WebP support** - Background images now support WebP in addition to PNG and JPG.
+- **Additional language support** - language support added for Hungarian, European Portuguese (pt_PT) and Ukrainian.
+
+## Fixes
+- Fixed chapter section data (title, chapter number, chapter page count) being incorrect when Hidden flows feature was in use.
+- Fixed incorrect “Minimal” and “Night” preset layout positioning.
+- Removed the “Show titles”, “Show subtitles” options - deemed unnecessary since subtitles items can be toggled in their content menus, and title line information should always remain.
+- Fixed broken .pot and .po strings for hr/hrs, min/mins and page/pages.
+
+Thanks to the community for your contributions.
+
+For installation instructions, see the [README](https://github.com/pxlflux/customisablesleepscreen.koplugin/blob/main/README.md).
+
 # v2.2.0
 
 ## New Features

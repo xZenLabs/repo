@@ -1,3 +1,15 @@
+# v1.0.0
+
+New in this release:
+
+* Two-player "flip board each turn": an option so the board turns to face whoever is on move, instead of one player reading it upside down. Off by default; turn it on in Board & colours.
+* **Post-game review:** after a game, tap Review to see where each side lost the most ground against the neural net, in standard notation.
+* **Lifetime statistics:** games played, current and best win streak, and a won/played record for each difficulty. Reached from the start menu.
+* **Turkish interface:** the whole UI can be set to Türkçe (or left on Auto to follow the device). Change it in Board & colours.
+Fixes:
+* The Roll button on the board spine is now a compact button instead of an oversized white box.
+* New "Board & colours" screen on the start menu: choose whether player 1 plays White or Black and which bottom corner they bear off to. The board layout, colours and labels follow the choice, which is saved for next time.
+
 # v1.1.0
 
 First stable release with computer opponents.
@@ -8,17 +20,3 @@ Since 1.0.0:
 - The computer's moves are paced so they're easy to follow, with a clear message when it has no legal move.
 
 Now licensed under GPL-3.0-or-later (see LICENSE and NOTICE.md).
-
-# v1.0.0
-
-Two-player backgammon (tavla) for KOReader - both players share one device and take turns on the same screen.
-
-- Full standard rules: hitting, the bar, bearing off, forced moves, doubles
-- Tap a checker to see its legal moves, tap a highlighted point to move - no dragging
-- 1 / 2 / 3 point scoring (mars and backgammon) with a session scoreboard
-- Portrait and landscape, switchable from an in-game button
-- Built for e-ink; pure Lua, no dependencies, nothing written to disk
-
-**Install:** copy the `backgammon.koplugin` folder into KOReader's `plugins` folder and restart. It appears under Tools → Backgammon. See the README for details.
-
-No AI opponent or doubling cube - every game is two humans.
