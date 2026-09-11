@@ -1,3 +1,18 @@
+# v1.14.0
+
+## Faster Update Checks
+
+**Refresh** no longer has to rescan all of GitHub every time.
+
+- Most refreshes are now **quick**: they only look for plugins/patches that changed since the last check.
+- A **full scan** (the old way, re-downloading everything) still runs automatically every **30 days** by default.
+- You can trigger a full scan anytime via the settings (⚙️) menu → **"Force full refresh"**.
+- The 30-day interval is also adjustable from the same menu.
+
+**What you'll notice:** refreshing usually finishes much faster now.
+
+**One small thing to know:** a plugin's star count only updates during a full scan, not during a quick check — this doesn't affect update detection, just sort order, and only until the next full scan.
+
 # v1.13.0
 
 ### New
@@ -75,8 +90,3 @@ Thanks to @iav, @koma52, @THE-XSX and @ksaMask123 for their contributions to thi
 # v1.9.1
 
 - release options pagination when there are more than 8 assests.
-
-# v1.9.0
-
- - Add release ignore feature to suppress update notifications for specific versions until newer release available
-    - Add "Ignore this release" button to download options dialog for updates
