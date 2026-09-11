@@ -1,0 +1,26 @@
+# Backgammon plugin for KOReader
+# https://github.com/EmirErtorer/backgammon.koplugin
+# zenpm:auto-scraped
+id=backgammon
+name=Backgammon
+version=1.1.0
+description=Classic backgammon plugin on KOReader
+author=EmirErtorer
+category=utility
+platforms=koreader
+dependencies=
+source=https://github.com/EmirErtorer/backgammon.koplugin
+stars=5
+updated_at=2026-09-11T17:27:49Z
+published_at=2026-09-02T11:58:27Z
+prerelease_version=1.1.2
+prerelease_published_at=2026-09-04T12:16:10Z
+readme_url=packages/koreader/backgammon.koplugin/README.md
+readme_hash=df2f06051f078a1c9c98b8310807eb0a21ece99f
+release_notes_url=packages/koreader/backgammon.koplugin/RELEASE_NOTES.md
+release_notes_hash=d464507c1cb9a2fd7b9e094310cf78df66b8bac46f24130a7ac565bb5ae321ee
+prerelease_notes_url=packages/koreader/backgammon.koplugin/PRERELEASE_NOTES.md
+prerelease_notes_hash=c7fc79c292d88caf30d87eb4b0932941d0708420572ee4702468f5c66fd925d0
+releases=[{"tag_name":"v1.1.2","assets":[{"name":"source-code.zip","url":"https://api.github.com/repos/EmirErtorer/backgammon.koplugin/zipball/v1.1.2"}],"name":"v1.1.2","prerelease":true},{"tag_name":"v1.1.1","assets":[{"name":"source-code.zip","url":"https://api.github.com/repos/EmirErtorer/backgammon.koplugin/zipball/v1.1.1"}],"name":"v1.1.1","prerelease":true},{"tag_name":"v1.1.0","assets":[{"name":"source-code.zip","url":"https://api.github.com/repos/EmirErtorer/backgammon.koplugin/zipball/v1.1.0"}],"name":"v1.1.0"},{"tag_name":"v1.0.4","assets":[{"name":"source-code.zip","url":"https://api.github.com/repos/EmirErtorer/backgammon.koplugin/zipball/v1.0.4"}],"name":"v1.0.4","prerelease":true},{"tag_name":"v1.0.3","assets":[{"name":"source-code.zip","url":"https://api.github.com/repos/EmirErtorer/backgammon.koplugin/zipball/v1.0.3"}],"name":"v1.0.3","prerelease":true},{"tag_name":"v1.0.2","assets":[{"name":"source-code.zip","url":"https://api.github.com/repos/EmirErtorer/backgammon.koplugin/zipball/v1.0.2"}],"name":"v1.0.2","prerelease":true},{"tag_name":"v1.0.1","assets":[{"name":"source-code.zip","url":"https://api.github.com/repos/EmirErtorer/backgammon.koplugin/zipball/v1.0.1"}],"name":"v1.0.1","prerelease":true},{"tag_name":"v1.0.0","assets":[{"name":"source-code.zip","url":"https://api.github.com/repos/EmirErtorer/backgammon.koplugin/zipball/v1.0.0"}],"name":"v1.0.0"}]
+source_type=source
+source_url=https://codeload.github.com/EmirErtorer/backgammon.koplugin/zip/refs/heads/main

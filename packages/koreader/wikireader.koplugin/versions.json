@@ -1,0 +1,3 @@
+{
+  "releases": [{"tag_name":"v1.0.1","assets":[{"name":"wikireader.koplugin.zip","url":"https://github.com/chandujr/wikireader.koplugin/releases/download/v1.0.1/wikireader.koplugin.zip","size":77718,"digest":"sha256:5ea0a829331f88b64243b24e0f5f9eb416377cc19734df118d11e3a5406506e6"}],"name":"v1.0.1"},{"tag_name":"v1.0.0","assets":[{"name":"wikireader.koplugin.zip","url":"https://github.com/chandujr/wikireader.koplugin/releases/download/v1.0.0/wikireader.koplugin.zip","size":77146,"digest":"sha256:78ce391b64fb3460d071e0d34f5b60737dd9a541f2592c2a85a3e6a8245844ea"}],"name":"v1.0.0"}]
+}

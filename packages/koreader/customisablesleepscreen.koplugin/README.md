@@ -26,7 +26,7 @@ Originally released as a patch, this project has now been rebuilt as a KOReader 
 - Quick access through taps and gestures shortcuts
 - Sleep screen orientation lock
 - Export sleep screen as image for use with android screen saver.
-- Language support for 13 languages: `de`, `es`, `fr`, `it`, `ja`, `ko`, `nl`, `pl`, `pt_BR`, `ru`, `tr`, `vi`, `zh_CN`
+- Language support for 16 languages: `de`, `es`, `fr`, `hu`, `it`, `ja`, `ko`, `nl`, `pl`, `pt_BR`, `pt_PT`, `ru`, `tr`, `uk`, `vi`, `zh_CN`
 
 ## Compatibility:
 
@@ -34,11 +34,11 @@ The following list assumes KOReader’s latest build (2026.03 Snowflake) is inst
 
 | Device                 | Status          | Notes                                                             |
 | ---------------------- | --------------- | ----------------------------------------------------------------- |
-| Kobo                   | ✅ Works         | Most supported platform. Tested on Kobo Libra Colour              |
-| Kindle                 | ✅ Works         | Tested on Kindle PW 10^(th) Gen                                   |
+| Kobo                   | ✅ Works         | Most supported platform. Tested on Kobo Libra Colour.              |
+| Kindle                 | ✅ Works         | Tested on Kindle PW 10<sup>th</sup> Gen.                                   |
 | Android / Desktop      | 🟠 Partial support | KOReader’s Sleep Screen feature is unavailable on these platforms however an image can be exported to use with the devices screensaver. |
+| PocketBook             | 🟠 Partial support | Device firmware overrides KOReader’s Sleep Screen, but an exported image can be set as PocketBook’s own sleep image. Note: PocketBook caches this image, so a reboot may sometimes be needed to see updates - not ideal for frequently updated book stats but it's the best solution currently for this device.           |
 | Cervantes / reMarkable | 🟡 Unverified   | Untested on these devices.                                        |
-| PocketBook             | ❌ Not supported | Device firmware overrides KOReader’s Sleep Screen                 |
 
 ## Notes:
 
@@ -49,7 +49,7 @@ The following list assumes KOReader’s latest build (2026.03 Snowflake) is inst
 
 ## Installation:
 
-1. Download `customisablesleepscreen_v2.0.0.zip` from the latest [release](https://github.com/pxlflux/customisablesleepscreen.koplugin/releases)
+1. Download `customisablesleepscreen_vx.x.x.zip` from the latest [release](https://github.com/pxlflux/customisablesleepscreen.koplugin/releases)
 2. Extract the zip and place the `customisablesleepscreen.koplugin` folder into your KOReader `/plugins` folder
 3. Restart KOReader
 4. Enable the plugin in  'Settings → Screen → Customisable Sleep Screen'

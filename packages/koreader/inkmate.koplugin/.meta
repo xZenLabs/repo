@@ -1,0 +1,22 @@
+# Inkmate plugin for KOReader
+# https://github.com/stormseasons/Inkmate.Koplugin
+# zenpm:auto-scraped
+id=inkmate
+name=Inkmate
+version=1.0.7
+description=InkMate is a suite of classic board games (Chess, Checkers, Reversi, and Fox & Hounds) optimized for KOReader e-ink devices. Enjoy offline play against adjustable AIs like Stockfish, solve puzzles,...
+author=stormseasons
+category=games
+platforms=koreader
+dependencies=
+source=https://github.com/stormseasons/Inkmate.Koplugin
+stars=5
+updated_at=2026-09-11T17:27:49Z
+published_at=2026-09-08T01:46:10Z
+readme_url=packages/koreader/inkmate.koplugin/README.md
+readme_hash=f1159f10ac0adafe556405027e58abf398b988db
+release_notes_url=packages/koreader/inkmate.koplugin/RELEASE_NOTES.md
+release_notes_hash=9e90c63422d1bfbc0ab911ff4e5f106f92761631d32e541ff5c27412be49c741
+releases=[{"tag_name":"v1.0.6","assets":[{"name":"source-code.zip","url":"https://api.github.com/repos/stormseasons/Inkmate.Koplugin/zipball/v1.0.6"}],"name":"V1.0.6"},{"tag_name":"V1.0.7","assets":[{"name":"source-code.zip","url":"https://api.github.com/repos/stormseasons/Inkmate.Koplugin/zipball/V1.0.7"}],"name":"V1.0.7"},{"tag_name":"V1.0.5","assets":[{"name":"source-code.zip","url":"https://api.github.com/repos/stormseasons/Inkmate.Koplugin/zipball/V1.0.5"}],"name":"V1.0.5"},{"tag_name":"v1.0.1","assets":[{"name":"source-code.zip","url":"https://api.github.com/repos/stormseasons/Inkmate.Koplugin/zipball/v1.0.1"}],"name":"V1.0.1"},{"tag_name":"v1.0.0","assets":[{"name":"source-code.zip","url":"https://api.github.com/repos/stormseasons/Inkmate.Koplugin/zipball/v1.0.0"}],"name":"V1.0.0"}]
+source_type=source
+source_url=https://codeload.github.com/stormseasons/Inkmate.Koplugin/zip/refs/heads/main

@@ -1,0 +1,23 @@
+# Wikireader plugin for KOReader
+# https://github.com/chandujr/wikireader.koplugin
+# zenpm:auto-scraped
+id=wikireader
+name=Wikireader
+version=1.0.1
+description=A KOReader plugin for reading Wikipedia articles as formatted books, with a cleaner reading experience than the built-in Wikipedia lookup.
+author=chandujr
+category=utility
+platforms=koreader
+dependencies=
+source=https://github.com/chandujr/wikireader.koplugin
+stars=6
+updated_at=2026-09-11T17:27:49Z
+published_at=2026-09-11T14:46:10Z
+readme_url=packages/koreader/wikireader.koplugin/README.md
+readme_hash=43e420c02e47da1f3503527cdb2169ced47aeb4f
+release_notes_url=packages/koreader/wikireader.koplugin/RELEASE_NOTES.md
+release_notes_hash=1e8ac5e4e5967536701ed52e72c78e49d2b57e289eeb597e57154473bbfb82ad
+releases=[{"tag_name":"v1.0.1","assets":[{"name":"wikireader.koplugin.zip","url":"https://github.com/chandujr/wikireader.koplugin/releases/download/v1.0.1/wikireader.koplugin.zip","size":77718,"digest":"sha256:5ea0a829331f88b64243b24e0f5f9eb416377cc19734df118d11e3a5406506e6"}],"name":"v1.0.1"},{"tag_name":"v1.0.0","assets":[{"name":"wikireader.koplugin.zip","url":"https://github.com/chandujr/wikireader.koplugin/releases/download/v1.0.0/wikireader.koplugin.zip","size":77146,"digest":"sha256:78ce391b64fb3460d071e0d34f5b60737dd9a541f2592c2a85a3e6a8245844ea"}],"name":"v1.0.0"}]
+source_type=release
+source_asset=wikireader.koplugin.zip
+size=77718

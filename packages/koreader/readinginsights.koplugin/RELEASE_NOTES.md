@@ -1,3 +1,8 @@
+# v6.5.2
+
+### Fixed
+- In the previous release missed to raise to _meta.lua version. Nothing else changed. #78
+
 # v6.5.1
 
 ### Added
@@ -30,9 +35,3 @@
 - Translations for both new actions/menu entry in all supported
   languages (en, de, hu, pt_PT, uk, zh_CN).
 #74
-
-# v6.3.0
-
-**Fixed**
-
-Landscape layout for the monthly chart, Last week section, and both calendars so everything fits on screen.
