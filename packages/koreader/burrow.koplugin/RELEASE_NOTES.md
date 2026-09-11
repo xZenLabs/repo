@@ -1,3 +1,14 @@
+# v0.4.9
+
+## What's Changed
+* Burrow 0.4.9 beta 1: refresh library after Store downloads by @richbeatty in https://github.com/richbeatty/burrow.koplugin/pull/57
+* Burrow 0.4.9 beta 2: fast dark-mode page turns on e-ink by @richbeatty in https://github.com/richbeatty/burrow.koplugin/pull/58
+* Burrow 0.4.9 beta 3: fast e-ink page turns by default by @richbeatty in https://github.com/richbeatty/burrow.koplugin/pull/59
+* Promote Burrow 0.4.9 to stable by @richbeatty in https://github.com/richbeatty/burrow.koplugin/pull/60
+
+
+**Full Changelog**: https://github.com/richbeatty/burrow.koplugin/compare/v0.4.8...v0.4.9
+
 # v0.4.8
 
 ## What's Changed
@@ -36,11 +47,3 @@
 
 
 **Full Changelog**: https://github.com/richbeatty/burrow.koplugin/compare/v0.4.4...v0.4.5
-
-# v0.4.4
-
-## What's Changed
-* Burrow 0.4.4 stable by @richbeatty in https://github.com/richbeatty/burrow.koplugin/pull/36
-
-
-**Full Changelog**: https://github.com/richbeatty/burrow.koplugin/compare/v0.4.3...v0.4.4

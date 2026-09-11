@@ -1,3 +1,19 @@
+# v0.4.9-beta.3
+
+## What's Changed
+* Burrow 0.4.9 beta 3: fast e-ink page turns by default by @richbeatty in https://github.com/richbeatty/burrow.koplugin/pull/59
+
+
+**Full Changelog**: https://github.com/richbeatty/burrow.koplugin/compare/v0.4.9-beta.2...v0.4.9-beta.3
+
+# v0.4.9-beta.2
+
+## What's Changed
+* Burrow 0.4.9 beta 2: fast dark-mode page turns on e-ink by @richbeatty in https://github.com/richbeatty/burrow.koplugin/pull/58
+
+
+**Full Changelog**: https://github.com/richbeatty/burrow.koplugin/compare/v0.4.9-beta.1...v0.4.9-beta.2
+
 # v0.4.9-beta.1
 
 ## What's Changed
@@ -21,19 +37,3 @@
 
 
 **Full Changelog**: https://github.com/richbeatty/burrow.koplugin/compare/v0.4.8-beta.7...v0.4.8-beta.8
-
-# v0.4.8-beta.7
-
-## What's Changed
-* Burrow 0.4.8 beta 7: reject out-of-order publisher page maps by @richbeatty in https://github.com/richbeatty/burrow.koplugin/pull/53
-
-
-**Full Changelog**: https://github.com/richbeatty/burrow.koplugin/compare/v0.4.8-beta.6...v0.4.8-beta.7
-
-# v0.4.8-beta.6
-
-## What's Changed
-* Burrow 0.4.8 beta 6: reject collapsed publisher page maps by @richbeatty in https://github.com/richbeatty/burrow.koplugin/pull/52
-
-
-**Full Changelog**: https://github.com/richbeatty/burrow.koplugin/compare/v0.4.8-beta.5...v0.4.8-beta.6
