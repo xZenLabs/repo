@@ -1,3 +1,13 @@
+# v5.0.2
+
+Patch for v5.0.1.
+
+Fixes:
+
+- Paging a large genre or author shelf in Spines view now reaches every book, forwards and backwards, instead of jumping to the next group after the first page
+- The Covers shelf style no longer offers List columns and List rows, which only apply to the list
+- Books downloaded from an OPDS catalogue are named the way KOReader's own browser names them, so a book already downloaded is recognised instead of fetched again (#389)
+
 # v5.0.1
 
 **Shelves even themselves out.** In Spines view, books share out across the rows on screen rather than filling the first row and stranding the last few.
@@ -58,12 +68,3 @@ Fixes:
 - Pinching to fit more rows fills them again, and redraws faster than before
 - The line editor no longer closes when a tap in the Tokens or Icons picker misses a row (#364)
 - Swipe to change pages in the token picker
-
-# v4.5.1
-
-- Stack folder tiles no longer show a white corner when the cover drop shadow is off (#362)
-- Toggling rotation from a start menu action redraws the shelf straight away, instead of on the next tap
-- With a custom chip colour, the currently-reading chip keeps its outline and the divider beside it stays visible
-- Calibre custom columns are now read from metadata files up to 64 MB (#357)
-- Calibre number columns above a million show in full, rather than as 1.2e+06
-- Some English/American spelling inconsistency caught and corrected (#358)
