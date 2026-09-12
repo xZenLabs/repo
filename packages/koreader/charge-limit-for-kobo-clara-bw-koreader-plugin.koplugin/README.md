@@ -2,8 +2,8 @@
 
 Stops battery charging at a configurable percentage on a **KOBO CLARA BW**
 (ROHM BD71827 PMIC), to avoid charging your kobo until 100%. 
-It should work in all Kobo Clara BW models, but I cannot be 100% sure, if your device is not supported the plugin menu will not appear in your cabinet icon menu, even if the plugin appears in plugin management. 
-Update: Users say it also works in **Kobo Clara Color, Libra Color and Kindle Paperwhite 12**. 
+It should work in all Kobo Clara BW models, if for any reason your device is not supported the plugin menu will not appear in your cabinet icon menu, even if the plugin appears in plugin management. 
+Update: Users say it also works in **Kobo Clara Color, Libra Color, Kindle Paperwhite 10 and Kindle Paperwhite 12**. 
 <p align="center">
   <img width="250" alt="WhatsApp Image 2026-08-28 at 19 09 33(2)" src="https://github.com/user-attachments/assets/03e631bf-edf3-4fa7-a54e-855de99d2ba3" />
   <img width="250" alt="WhatsApp Image 2026-08-28 at 19 09 33(1)" src="https://github.com/user-attachments/assets/e6e22cf4-d99e-480c-975f-8147e7370d7c" />

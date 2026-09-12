@@ -1,3 +1,9 @@
+# 26.9.11-beta
+
+- Add install from branch feature #5057 
+
+**Full Changelog**: https://github.com/ultimatejimmy/storefront.koplugin/compare/26.9.9...26.9.11-beta
+
 # 26.9.8-beta
 
 - Fix restart button on Kobo devices
@@ -22,10 +28,3 @@
 - fix bug with patches installation/removal
 
 **Full Changelog**: https://github.com/ultimatejimmy/storefront.koplugin/compare/26.9.3...26.9.4-beta
-
-# 26.9.1-beta
-
-- improve non-touch
-- logic change for versions tab loading
-
-**Full Changelog**: https://github.com/ultimatejimmy/storefront.koplugin/compare/26.8.31-beta...26.9.1-beta

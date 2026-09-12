@@ -1,3 +1,10 @@
+# 26.9.11.1
+
+- Fix bug with mentions when access from the menu
+- Fix bug with sorting options
+
+**Full Changelog**: https://github.com/ultimatejimmy/xray.koplugin/compare/26.9.11...26.9.11.1
+
 # 26.9.11
 
 - Fix bug in the update release notes dialog https://github.com/ultimatejimmy/xray.koplugin/issues/125
@@ -59,9 +66,3 @@
 - **Series Cache Management**: Added a menu option to clear cached series data for the active book when needed.
 
 **Full Changelog**: https://github.com/ultimatejimmy/xray.koplugin/compare/26.8.20...26.8.23
-
-# 26.8.20
-
-- Update to add new Gemini models
-
-**Full Changelog**: https://github.com/ultimatejimmy/xray.koplugin/compare/26.8.10...26.8.20
