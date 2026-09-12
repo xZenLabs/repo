@@ -1,3 +1,13 @@
+# v0.4.10
+
+## What's Changed
+* Burrow 0.4.10 beta 1: hero-to-books spacing by @richbeatty in https://github.com/richbeatty/burrow.koplugin/pull/61
+* Burrow 0.4.10 beta 2: expand hero spacing range by @richbeatty in https://github.com/richbeatty/burrow.koplugin/pull/62
+* Burrow 0.4.10 stable by @richbeatty in https://github.com/richbeatty/burrow.koplugin/pull/63
+
+
+**Full Changelog**: https://github.com/richbeatty/burrow.koplugin/compare/v0.4.9...v0.4.10
+
 # v0.4.9
 
 ## What's Changed
@@ -39,11 +49,3 @@
 # v0.4.6
 
 **Full Changelog**: https://github.com/richbeatty/burrow.koplugin/compare/v0.4.5...v0.4.6
-
-# v0.4.5
-
-## What's Changed
-* Burrow 0.4.5 stable by @richbeatty in https://github.com/richbeatty/burrow.koplugin/pull/39
-
-
-**Full Changelog**: https://github.com/richbeatty/burrow.koplugin/compare/v0.4.4...v0.4.5

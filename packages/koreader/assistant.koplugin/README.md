@@ -20,7 +20,7 @@ A powerful plugin that lets you interact with AI language models (Claude, GPT-4,
 - **Built-in Prompts**:
   - **Translation**: Instantly translate highlighted text to any language
   - **Quick Actions**: One-click buttons for common tasks like summarizing or explaining
-  - **Dictionary**: Get synonyms, context-aware dictionary explanations, and examples for the selected word. (thanks to [plateaukao](https://github.com/plateaukao))
+  - **Dictionary**: Get book-aware explanations — meaning, synonyms, and usage in the current book. (thanks to [plateaukao](https://github.com/plateaukao))
   - **Term X-Ray**: For single word or phrase highlights, get the meaning of it based on the previously mentioned places. (thanks to [Michael Kucek](https://github.com/michael-kucek))
   - **Recap**: Catch up on a book you haven't opened for a while. (thanks to [jbhul](https://github.com/jbhul))
   - **X-Ray**: A spoiler-free guide to characters, places, themes, and timeline up to your progress.
@@ -29,7 +29,7 @@ A powerful plugin that lets you interact with AI language models (Claude, GPT-4,
 - **Highlight Menu Presets**: Pin built-in prompts to the highlight popup for one-tap access (configurable).
 - **Book Insights**: Explore the whole book without highlighting — Book Summary & Recs, AI X-Ray, AI Recaps, and analysis or summaries built from your highlights and notes.
 - **Gesture Shortcuts**: Trigger Ask, Recap, and X-Ray by gesture, no highlighting needed. (thanks to [Jayphen](https://github.com/Jayphen))
-- **AI Dictionary**: Get instant, context-aware definitions, synonyms, and examples for any word.
+- **AI Dictionary**: Get book-aware definitions and synonyms for any word or phrase, based on the book you are reading.
 - **l10n Support**: Supports all languages that the KOReader project supports.
 
 ## Basic Requirements
@@ -124,20 +124,24 @@ return CONFIGURATION
        - **Translate**: Convert text to your configured language
 5. **Additional Questions**: Ask additional questions about the highlighted text using your custom prompts
 
-#### Using AI Dictionary with Gestures
+#### Using AI Translate with Gestures
 
-You can set up a long-press gesture to open the AI Dictionary instantly, bypassing the highlight menu. This is done by overriding KOReader's built-in "Translate" action. (thanks to [Ilia Reutov](https://github.com/Agnesor))
+You can set up a long-press gesture to translate instantly, bypassing the highlight menu. This is done by overriding KOReader's built-in "Translate" action. (thanks to [Ilia Reutov](https://github.com/Agnesor))
 
 1.  **Enable the Override**:
     *   Navigate to the top menu `Tools (🔧) > More tools`.
-    *   Find and enable **Use AI Dictionary for 'Translate'**.
+    *   Find and enable **Use AI Assistant for 'Translate'**.
 
 2.  **Set the Gesture**:
     *   Go to KOReader's main menu -> `Taps and gestures` -> `Gesture manager`.
     *   Select `Long-press on text`.
     *   Choose **"Translate"** from the list of actions.
 
-Now, when you long-press a word, the AI Dictionary will open directly. To use the standard translation feature again, simply uncheck the override option in the Assistant plugin's menu.
+Now, when you long-press a word, the AI translates it directly. To use the standard translation service again, simply uncheck the override option in the Assistant plugin's menu.
+
+#### Dictionary Output
+
+Choose what the AI Dictionary returns under **Dictionary Settings**: Concise / Standard / Full presets, or toggle individual sections (meaning, synonyms, translation, word form, examples, origin).
 
 #### Dictionary Popup Buttons
 

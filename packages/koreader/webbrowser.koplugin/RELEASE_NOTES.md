@@ -1,3 +1,10 @@
+# v0.8.0
+
+- add: Kiwix offline search engine
+- add: support for HTTPS websites via HTTP proxy ( thanks to @michalke-it )
+ 
+     If you use WebBrowser with an HTTP proxy configured, secure (https://) websites will now load correctly instead of failing to connect.
+
 # v0.7.1
 
 - add: optional "Web Search" button in the text selection popup
@@ -26,8 +33,3 @@
 - new search engines: Tavily, Exa
 - enable multiple profiles for the same engine
 - fix: settings popup language selection
-
-# v0.5.0
-
-- settings popup added (search engine, language, and country selection) 
-- fix: language support for search engines

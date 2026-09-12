@@ -1,3 +1,355 @@
+# v1.4.0
+
+<img width="1578" height="840" alt="image" src="https://github.com/user-attachments/assets/a0765887-4b37-4169-8588-902db0aecd89" />
+
+# Panels+ | The format-verse (& improved panels finding)
+
+Built from tag: `v1.4.0`
+
+Hi Panels+ users, this new update brings some of the biggest improvements to Panels+ yet, added support for more file formats, panels finding better accuracy, animations, added more customizable options, new navigation mode, translations/localizations, removed useless butttons and more.
+
+This time I wanted to provide support for text-based formats like `.epub`, `.kepub` and `.mobi` & improve a lot the panels finding internal algorythm because I found many false panel positives and some broken panels and weird panel ordering in v1.3.0.
+
+## Main Features
+
+### (1) .MOBI, .EPUB, .KEPUB Officially supported (and any other format that includes embbeded images)
+
+These 3 new formats are joining in to the family of Panels+ (Previously only: `.cbr`, `.cbz`, `.pdf`), due to popular demand from my reddit users.
+
+https://github.com/user-attachments/assets/675111ac-779e-44a6-a209-b42c876c91af
+
+### (2) Complete overhaul to internal panel finding algorythms
+
+In v1.3.0, some users and myself, found weird panels ordering. Sometimes it could be from bottom to top?, other times it just skips panels!. So I've started to work on this, with better testing, and manually mapping over 1200+ panels by hand then comparing Panels+ to the previous hand-made panels. (Took a while to do)
+
+https://github.com/user-attachments/assets/28a43edc-22e8-4d71-a236-5fb3b2a87815
+
+#### Button "Smart | Quick | Deep" mode removed.
+
+Originally I made these changes to the "deep mode" button, but it got so good (more performant and faster) than quick and smart mode, so there wasn´t any sense keeping the old ones. I removed the button, now is always "deep mode" but works better and for comics and mangas equally.
+
+<img width="1881" height="413" alt="image" src="https://github.com/user-attachments/assets/51d3b7e9-b709-45f5-b621-339229c0790b" />
+
+#### Benchmarks
+
+I did some benchmarks:
+
+<table>
+  <thead>
+    <tr>
+      <th>Metric</th>
+      <th align="center">Legacy (v1.3.0)</th>
+      <th align="center">Now (v1.4.0)</th>
+      <th align="center">Improvement</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Global Precision</td>
+      <td align="center">78.2%</td>
+      <td align="center">95.8%</td>
+      <td align="center">+17.6%</td>
+    </tr>
+    <tr>
+      <td>Global Recall</td>
+      <td align="center">80.5%</td>
+      <td align="center">93.8%</td>
+      <td align="center">+13.3%</td>
+    </tr>
+    <tr>
+      <td>Global F1 Score</td>
+      <td align="center">79.4%</td>
+      <td align="center">94.8%</td>
+      <td align="center">+15.4%</td>
+    </tr>
+    <tr>
+      <td>Average Matched IoU</td>
+      <td align="center">0.89</td>
+      <td align="center">0.95</td>
+      <td align="center">+0.06</td>
+    </tr>
+    <tr>
+      <td>Perfect Reading Order Pages</td>
+      <td align="center">358 / 764 (46.9%)</td>
+      <td align="center">626 / 764 (81.9%)</td>
+      <td align="center">+35.0%</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Per-manga dataset made by hand</h3>
+Why these specific mangas/comic?, because they're my favorite and I had to use some files anyways. But these improvements affects any other comics/manga as well.
+
+<table>
+  <thead>
+    <tr>
+      <th>Volume</th>
+      <th>Metric</th>
+      <th align="center">Legacy (v1.3.0)</th>
+      <th align="center">Now (v1.4.0)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Bloom Into You Vol. 8</td>
+      <td>F1 / Precision / Recall</td>
+      <td align="center">79.9% / 74.6% / 86.1%</td>
+      <td align="center">93.4% / 96.8% / 90.2%</td>
+    </tr>
+    <tr>
+      <td>Komi Can't Communicate Vol. 1</td>
+      <td>F1 / Precision / Recall</td>
+      <td align="center">87.6% / 89.8% / 85.5%</td>
+      <td align="center">96.4% / 97.3% / 95.6%</td>
+    </tr>
+    <tr>
+      <td>Miss Kobayashi's Dragon Maid Vol. 2</td>
+      <td>F1 / Precision / Recall</td>
+      <td align="center">66.2% / 70.2% / 62.6%</td>
+      <td align="center">92.9% / 95.0% / 91.0%</td>
+    </tr>
+    <tr>
+      <td>Scott Pilgrim Vol. 5</td>
+      <td>F1 / Precision / Recall</td>
+      <td align="center">80.4% / 77.2% / 83.8%</td>
+      <td align="center">95.9% / 94.4% / 97.4%</td>
+    </tr>
+  </tbody>
+</table>
+
+## (3) New navigation mode. `Nav. Animated`
+I realized e-ink devices have specific hardware for swiping and exclusive animation transitions (no surprise I guess) so, why not giving that to Panels+!? (This is only available in Kindle, Kobo, and supported e-ink devices, doesn´t work in Android and Desktop/Linux)
+
+https://github.com/user-attachments/assets/091835ec-11c5-48a3-a22b-60d60e2700b0
+
+## Secondary features
+Not only the previous ones, I've added many other qualities of lifes features!
+<div align="center">
+
+<table>
+<thead>
+<tr>
+<th align="center">Feature</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+
+<tr>
+<td align="center"><strong>Per-Document Settings Persistence</strong></td>
+<td>
+<strong>Remember preferred settings for every individual manga or comic</strong>
+<br><br>
+Panels+ now remembers your reading preferences on a per-book basis. You can read a Western comic in <strong>Comic mode</strong> with <strong>Margin crop</strong>, then switch to an action manga using <strong>Manga mode</strong>, <strong>Strict crop</strong>, and <strong>Animated navigation</strong>.
+<br><br>
+As soon as you reopen a title, Panels+ automatically restores its previous configuration, so you no longer need to reconfigure your preferred reading setup every time you switch between books.
+</td>
+</tr>
+
+<tr>
+<td align="center"><strong>Invert Tap &amp; Swipe Controls</strong></td>
+<td>
+<strong>Fine-grained customization for touch navigation and gesture flow</strong>
+<br><br>
+Default swipe gestures and tap zones now naturally mirror the selected reading direction: <strong>Manga mode</strong> advances to the right, while <strong>Comic mode</strong> advances to the left.
+<br><br>
+If you prefer the opposite behavior, the new <strong>Invert tap screen direction</strong> and <strong>Invert panel swipe direction</strong> options let you customize taps and gestures independently.
+</td>
+</tr>
+
+<tr>
+<td align="center"><strong>More Config... Menu</strong></td>
+<td>
+<strong>A dedicated place for advanced Panels+ configuration</strong>
+<br><br>
+Important Panels+ settings have been moved out of the main KOReader menu and consolidated under the new <strong>More Config...</strong> button, keeping the primary interface cleaner while making advanced options easier to find.
+<br><br>
+This menu includes configuration for <strong>per-document settings persistence</strong>, <strong>tap direction inversion</strong>, and <strong>panel swipe direction inversion</strong>.
+<br><br>
+<div align="center">
+<video src="https://github.com/user-attachments/assets/9df75a2c-696e-4c73-8ac9-f67889a0b5ff" alt="Panels+ More Config menu" width="520">
+
+</div>
+</td>
+</tr>
+
+<tr>
+<td align="center">
+<strong>Keyboard Navigation</strong><br>
+<code>A</code> / <code>D</code> &amp; Arrow Keys
+</td>
+<td>
+<strong>Navigate panels using physical keyboards</strong>
+<br><br>
+Readers using devices with built-in hardware keyboards or paired Bluetooth keyboards can now navigate panels without reaching for the touchscreen.
+<br><br>
+Use <code>A</code> for the previous panel and <code>D</code> for the next panel, or use <code>ArrowLeft</code> and <code>ArrowRight</code>.
+<br><br>
+</td>
+</tr>
+
+<tr>
+<td align="center"><strong>Device Rotation Zoom Retention</strong></td>
+<td>
+<strong>Maintain panel framing and zoom across screen rotation</strong>
+<br><br>
+Rotating the device while zoomed into an image or reflowable book now properly recalculates and preserves the current panel framing and zoom level.
+<br><br>
+Previously, rotating the screen could reset the zoom or allow KOReader's global document settings to overwrite the active Panels+ view.
+<br><br>
+</td>
+</tr>
+
+<tr>
+<td align="center">
+<strong>Spanish Translation</strong><br>
+<code>i18n</code>
+</td>
+<td>
+<strong>Full localization architecture with a hand-crafted Spanish translation</strong>
+<br><br>
+Panels+ is now fully localizable through a new <strong>internationalization (i18n)</strong> system.
+<br><br>
+Version 1.4.0 includes a complete Spanish translation covering viewer buttons, menus, dialogs, settings, and configuration descriptions. A contributor guide is also available for anyone interested in bringing Panels+ to additional languages.
+<br><br>
+<div align="center">
+<img width="670" height="1042" alt="image" src="https://github.com/user-attachments/assets/b5c54d61-cf2f-4312-baf6-8d4ccd10f800" />
+</div>
+</td>
+</tr>
+
+<tr>
+<td align="center"><strong>Package Manager Integration</strong></td>
+<td>
+<strong>One-click installation through KOReader package managers</strong>
+<br><br>
+Installing and updating Panels+ is now easier than ever. With a standardized <code>manifest.json</code> and stable release assets, Panels+ can now be discovered and installed through both the <strong>KOReader Plugin Appstore</strong> (<code>appstore.koplugin</code>) and the <strong>ZEN Package Manager</strong> (<code>zen_ui.koplugin</code>).
+</td>
+</tr>
+
+</tbody>
+</table>
+
+
+
+
+</div>
+
+## Fixes
+
+- Fixed reading flow sequencing where panels in complex or irregular Western comic layouts were visited out of narrative order.
+- Fixed stacked vertical panels in Manga mode causing erratic jumps instead of following top-to-bottom reading order within columns.
+- Fixed device orientation being reset or overwritten by KOReader's global document configuration when changing orientation inside Panels+.
+- Fixed panel zoom level not being restored properly when rotating the screen while reading embedded images in reflowable books.
+- Fixed reversed swipe directions in Manga and Comic modes so that swipe gestures naturally align with reading flow (with an option to invert if preferred).
+- Fixed "Smooth" navigation ignoring the "With margin" crop setting and losing panel margin during camera pans.
+- Fixed smooth navigation options not being available for embedded images in reflowable formats (.epub, .mobi, .kepub).
+- Fixed physical page-turn button navigation regressions on Kobo hardware and Bluetooth page-turner devices.
+- Fixed sudden viewer close / crashes when a document was closed or modified by external plugins by adding safe-guards.
+- Shortened and cleaned up verbose menu labels (e.g. `[Text Selection]: Touch & hold`).
+- Fixed potential memory leaks and redundant page rasterizations when navigating across consecutive embedded images.
+- Reduced CPU overhead and added reusable scratch buffers to keep panel detection snappy on low-RAM e-ink readers.
+
+## Included Commits
+
+- `017a53e` docs: Updating readme due to new release
+- `f7b249b` docs-fix: Fixed typos/erratas in README.md
+- `0ce36e1` docs: Added OCR setup instructions to README.md
+- `e8229f2` docs: Reorganized README.md sections
+- `e130d0f` docs-development: Synced docs for devs
+- `84f9c7b` chore: Ignore local planning docs
+- `0fa9881` ci: Publish a stable-name release asset alongside the versioned zip
+- `209e90e` feat: Add zen-pm manifest.json for package manager discovery
+- `4b9118e` chore: Cleaning up innecesary files/folders in main repo
+- `e6c113e` docs: Improving README.md with compatibility notes
+- `a4ce3dc` docs: Fixing typo in README.md
+- `22a4f1c` chore(meta): add missing plugin metadata
+- `564c501` chore(lint): setup format, linting, and CI workflows
+- `dd37dd9` style: format codebase and fix lint warnings
+- `3c36096` chore(lint): ignore .luarocks directory in CI
+- `aebd5ea` i18n: Added i18 + spanish initial translations
+- `56598c7` i18n(spanish): Making spanish translation more spanish-like (hand-crafted translation)
+- `7c5e272` build: Adding locales/ folder into final dist in build.* scripts
+- `4667416` docs: Readme.md
+- `34895bf` fix: Fixed bad order flow panels in comic and manga mode
+- `3656981` fix: Improved reading flow issues for comic mode
+- `8bde2ef` enhance: Improved hard/inconsistent layout ordering panels flow (comics)
+- `98f7422` Fix: Device orientation being overwritten by koreader specific config when using Panels+ orientation feature
+- `e14a841` lint: Applying check.sh to diff from last commits
+- `4473b39` fix: Added safe-guards closing when document closed by other plugins
+- `a668235` build: Added luals strong typing to final dist
+- `70d8a6c` enhance: Added better "stack" panels flow for manga mode
+- `ccb8e3e` translations: Adding translation docs for contributions
+- `1f7383a` docs: Improved readme for translators info
+- `f7293a6` enhance: Panels+ working in images inside .mobi and .epub files
+- `9471fc9` enhance: Now .mobi & .epub flows through different pages
+- `db2e866` enhance: .mobi & .epub. Now smooth mode and deep mode works out of the box.
+- `c715fe9` enhance(backend-detection): Optimizing koreader's deep mode reimplementation
+- `4941b34` enhance: Adding safe-guards and optimization to last commits features
+- `dfb4096` enhance: Added .kepub support
+- `3a8e472` enhance: Now smooth movements keeps margin option
+- `ee2bdd0` funfix: Swipe direction was reversed to tap direction lmao
+- `0b541f8` fix: Smooth options available in text-based formats (.epub, .mobi, .kepub)
+- `abd1901` optimizations: Improved GC usage and removing innecesary renderings
+- `df49d60` OMG: Improved A LOT manga panels recognition
+- `c32e0b5` fix: Bad swapping orientation and removed innecesary algorythms
+- `a12dfe1` dataset: Started to make my own dataset
+- `ad278d2` annotator-tool: Improved UI and some extra features
+- `abdc68b` annotator: Manual Panel detection tool created, finally...
+- `ecfdd10` DatasetExtracted: Bloom Into You Vol.8
+- `e03c253` enhance: Manga panel recognition algorythm improved
+- `5efd904` scripts: Adding some useful scripts
+- `35a7aaf` Dataset(started): Kobayashi's maid dragon
+- `e9af9bb` Dataset(Finished): Kobayashi's Maid Dragon Vol 2
+- `8ac7e7f` test(dataset): add Miss Kobayashi spec, benchmark baseline, and disk caching
+- `ece3f1e` feat(segmenter): add 4-koma centerline split heuristic with stroke run detection
+- `f294ad1` enhance: Making tests pass >90%
+- `c7c3643` enhance: Making panels tests pass > 96%
+- `2752349` docs: add reader component detector report and update wiki docs
+- `be24ae2` perf: optimize component detector for low-memory e-ink devices
+- `3a45344` fix: align swipe directions to reading flow and restore zoom on embedded rotator
+- `946ebca` enhance: Added support for Page-turn animation when reading in embbeded-image mode (.epub, .mobi, etc..)
+- `77b9432` enhance: Adding page-turn animation for classic rendering and embbeded rendering
+- `2defd95` fixes: Improvements and new navigation mode!
+- `8ebc043` perf: Added gc and leaks guards for new navigation mode in embbeded images
+- `c94034a` dataset: Adding initial scanning for other 2 mangas-sets
+- `3592f1f` datasets: Finished komi and scottpligrim tests
+- `b6d3d99` improvement: Improved > 95% precision for b/w panels (mangas/comics)
+- `9527ea7` safe-guard: Added nav.animated warning for no e-ink devices
+- `0dde4c8` feat: Added tap screen inverted config
+- `6dd71ef` feat: Per manga/comic file preferred settings stored (configurable)
+- `582c655` kobo: Restored back physical buttons and funtionality
+- `a639596` configs: Making kobo and more configs
+- `c2a2e29` tests: Making tests go faster
+- `d2b8c0a` perf: Little performance CPU usage
+- `e75d6fc` fix: Improved text-base supported file formats
+- `54ff7a1` tests: Added test-based (mobi,epub,kepub) tests
+- `98d4741` tests: Added tests for kobo page-turning specifics
+- `df96d1a` tests: Added tests for keyboard navigation (A & D) (ArrowLeft & ArrowRight)
+- `1af721b` docs: README.md
+- `7ca04fe` docs: README.md
+- `c441ac0` docs: README.md patch
+- `0ed5436` docs(fix): Fixed broken links in README.md
+
+## Upgrading
+
+Copy `panels_plus.koplugin` over your existing folder and restart KOReader. Your settings and reading progress are kept. All new navigation options (including Nav. Animated and inverted tap/swipe controls) can be configured directly from the panel viewer's "More config..." menu.
+
+## Author
+
+- KristanLaimon
+
+
+# Why are there 2 zips?
+  1. panels_plus-<version>.zip (panels_plus-1.4.0.zip):                                                                                                                                                                     
+      • Is the standard versioned asset intended for manual downloads and version archival, normally you would download this one.                                                                                                                                        
+  2. panels_plus.koplugin.zip:                                                                                                                                                                                                                                                                                                                                                                       
+      • This is provided so KOReader plugin managers (such as Zen PM via manifest.json) can reference a permanent, fixed URL:                                                                                                    
+        https://github.com/<owner>/<repo>/releases/latest/download/panels_plus.koplugin.zip
+      This allows package managers to download the newest version on update without needing manifest URLs changed every release.
+
+So technically doesn´t matter which version you use, they're identical. It's more for package managers compatibility.
+
 # v1.3.0
 
 <img width="100%" alt="Panels+ v1.3.0 banner" src="https://github.com/user-attachments/assets/658897e4-965f-4746-998e-226895e6697f" />
@@ -415,23 +767,3 @@ This release focuses on improving the panel-focused reading experience. It adds 
 ## Author
 
 - KristanLaimon
-
-# v1.0.0-RC3
-
-<img width="1922" height="818" alt="ChatGPT Image May 23, 2026, 11_29_03 AM" src="https://github.com/user-attachments/assets/328c9f07-d54b-49f3-bb92-a818eeafef72" />
-
-# Bugs, memory-leak and performance update
-
-This time, I noticed that, when using for some time, the plugin used to crash koreader due to not freeing previous-already-read pannels. It's fixed now.
-
-
-## Commits
-- df4aa69 CI: Now pipeline publishes zip (i hope so) (KristanLaimon)
-- eb5b0b4 fix: Fixing small memory leak when using plugin for long documents (KristanLaimon)
-- b7ad029 docs: Update download link text in README.md (Kristan Ruíz)
-- cc48e8a CI: Now fetches last tag instead of expecting last tag from merge (KristanLaimon)
-- 6d64998 CI: Pipeline runnable from web now (KristanLaimon)
-- 72d2bbf CI: Fixing github actions pipeline (KristanLaimon)
-
-## Authors
-- Kristan Ruíz
