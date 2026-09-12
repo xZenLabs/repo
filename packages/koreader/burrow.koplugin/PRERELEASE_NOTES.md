@@ -1,3 +1,19 @@
+# v0.4.10-beta.2
+
+## What's Changed
+* Burrow 0.4.10 beta 2: expand hero spacing range by @richbeatty in https://github.com/richbeatty/burrow.koplugin/pull/62
+
+
+**Full Changelog**: https://github.com/richbeatty/burrow.koplugin/compare/v0.4.10-beta.1...v0.4.10-beta.2
+
+# v0.4.10-beta.1
+
+## What's Changed
+* Burrow 0.4.10 beta 1: hero-to-books spacing by @richbeatty in https://github.com/richbeatty/burrow.koplugin/pull/61
+
+
+**Full Changelog**: https://github.com/richbeatty/burrow.koplugin/compare/v0.4.9...v0.4.10-beta.1
+
 # v0.4.9-beta.3
 
 ## What's Changed
@@ -21,19 +37,3 @@
 
 
 **Full Changelog**: https://github.com/richbeatty/burrow.koplugin/compare/v0.4.8...v0.4.9-beta.1
-
-# v0.4.8-beta.9
-
-## What's Changed
-* Burrow 0.4.8 beta 9: always use synthetic EPUB page numbers by @richbeatty in https://github.com/richbeatty/burrow.koplugin/pull/55
-
-
-**Full Changelog**: https://github.com/richbeatty/burrow.koplugin/compare/v0.4.8-beta.8...v0.4.8-beta.9
-
-# v0.4.8-beta.8
-
-## What's Changed
-* Burrow 0.4.8 beta 8: validate active page-map pages directly by @richbeatty in https://github.com/richbeatty/burrow.koplugin/pull/54
-
-
-**Full Changelog**: https://github.com/richbeatty/burrow.koplugin/compare/v0.4.8-beta.7...v0.4.8-beta.8
