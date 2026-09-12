@@ -1,3 +1,11 @@
+# v2.0.1
+
+A small stability update on top of 2.0.0
+
+Fixes
+- Shapes no longer get dropped or turned into a different shape when you switch tools or pick a new shape before the last one has fully registered. A shape you draw now always stays the shape you drew.
+- Lasso select is steadier: shapes no longer vanish when you switch to it, the loop is more forgiving about what it picks up, and the extra popup after selecting is gone.
+
 # v2.0.0
 
 A big update built around a new notebook mode, plus a lasso tool and clearer file folders.
