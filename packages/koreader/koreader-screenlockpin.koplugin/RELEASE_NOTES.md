@@ -1,3 +1,15 @@
+# v2026.09
+
+New community requested options and features!
+
+The major options include always-visible user notes for more obvious contact info presentation and the option to disable frontlight brightness control on lock screen tap (outside the frame).
+
+In addition, the change PIN dialog has been improved, and there was some color glitch in the lock screen PIN frame as well. The new "About" menu item will now always help you to know which plugin version you're using.
+
+For new users, a setup guide is added to ask for consent on github.com requests of the auto-update checker and improves onboarding in general.
+
+Enjoy! 🍂
+
 # v2026.05
 
 Just minor things…
@@ -29,11 +41,3 @@ Have a great 2026, folks 🎇💫
 This small update just adds some status information (time, battery, frontlight) to the bottom of the panel. It also includes a render fix after device deep sleep.
 
 Merry Christmas 🎄 and a happy new year! 🚀
-
-# v2025.12
-
-If everything works out, this should be the last update that you have to do by hand. From now on, the built-in updater will check "in the background" according to configured intervals (by default up to once a week) if any new updates are available. They'll patch themselves as well (with lots of safety guards) 🤞
-
-In addition, this update includes improvements (esp. for desktop users) and fixes.
-
-Merry Christmas 🎄
