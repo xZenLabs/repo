@@ -42,3 +42,7 @@ If this preset's useful to you and you'd like to chip in:
   ```
   bc1qkge6zr45tzqfwfmvma2ylumt6mg7wlwmhr05yv
   ```
+
+## License
+
+AGPL-3.0-or-later, matching the other VirInvictus KOReader presets.
