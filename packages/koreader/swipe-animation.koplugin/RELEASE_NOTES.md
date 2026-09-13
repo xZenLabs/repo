@@ -1,3 +1,14 @@
+# v4.3
+
+## What's Changed
+* feat: default page-turn animation on while the patch is loaded by @MsReverie in https://github.com/koplugin-swipe-animation/Swipe_Animation.koplugin/pull/29
+* Skip strip alignment on colour Kobo to avoid CFA seams by @MsReverie in https://github.com/koplugin-swipe-animation/Swipe_Animation.koplugin/pull/32
+## 更新内容
+* feat: 补丁加载后默认开启翻页动画 by @MsReverie in https://github.com/koplugin-swipe-animation/Swipe_Animation.koplugin/pull/29
+* fix: 彩色 Kobo 跳过条带对齐，避免 CFA 黑缝 by @MsReverie in https://github.com/koplugin-swipe-animation/Swipe_Animation.koplugin/pull/32
+
+**Full Changelog**: https://github.com/koplugin-swipe-animation/Swipe_Animation.koplugin/compare/v4.2...v4.3
+
 # v4.2
 
 ## What's Changed
@@ -74,10 +85,3 @@ Since v4.0, the plugin no longer depends on or modifies `ffi/framebuffer.lua`. T
 * 修复：恢复章节边界与图片页的原版全刷逻辑（#7）
 * 新增：刷新页跳过动画 + 轻度全局刷新选项（#8）
 * 完整更新日志：https://github.com/koplugin-swipe-animation/Swipe_Animation.koplugin/compare/v3.6...v3.7
-
-# v3.6
-
-## 新增功能
-- 新增：KINDLE 2022 及以上机型的完全支持
-## New Features
-- Added full support for Kindle 2022 and newer models.

@@ -4,7 +4,7 @@
 
 # Panels+ | The format-verse (& improved panels finding)
 
-Built from tag: `v1.4.0`
+Built from tag: `v1.4.x`
 
 Hi Panels+ users, this new update brings some of the biggest improvements to Panels+ yet, added support for more file formats, panels finding better accuracy, animations, added more customizable options, new navigation mode, translations/localizations, removed useless butttons and more.
 
@@ -263,11 +263,11 @@ Copy `panels_plus.koplugin` over your existing folder and restart KOReader. Your
   1. panels_plus-<version>.zip (panels_plus-1.4.0.zip):                                                                                                                                                                     
       • Is the standard versioned asset intended for manual downloads and version archival, normally you would download this one.                                                                                                                                        
   2. panels_plus.koplugin.zip:                                                                                                                                                                                                                                                                                                                                                                       
-      • This is provided so KOReader plugin managers (such as Zen PM via manifest.json) can reference a permanent, fixed URL:                                                                                                    
-        https://github.com/<owner>/<repo>/releases/latest/download/panels_plus.koplugin.zip
-      This allows package managers to download the newest version on update without needing manifest URLs changed every release.
+      • This is provided so KOReader plugin managers can reference a permanent, fixed URL.                                                                                               
 
 So technically doesn´t matter which version you use, they're identical. It's more for package managers compatibility.
+
+NOTE: Update 12/Sep/2026 many hours after first release. I've changed the zips below to fix bad versioning, it was 1.3.0, now in their metadata include 1.4.0 (In case you see the SHAS are different) 🦊
 
 # v1.3.0
 

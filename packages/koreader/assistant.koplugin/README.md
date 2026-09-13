@@ -141,7 +141,7 @@ Now, when you long-press a word, the AI translates it directly. To use the stand
 
 #### Dictionary Output
 
-Choose what the AI Dictionary returns under **Dictionary Settings**: Concise / Standard / Full presets, or toggle individual sections (meaning, synonyms, translation, word form, examples, origin).
+Choose what the AI Dictionary returns under **Dictionary Settings**: **Standard** or **Full** presets, a **Concise** toggle for shorter answers, and per-section toggles (meaning, synonyms, translation, word form, examples, origin).
 
 #### Dictionary Popup Buttons
 

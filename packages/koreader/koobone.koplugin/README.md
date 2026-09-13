@@ -21,6 +21,21 @@
    ```
 2. 重启 KOReader 或重新扫描插件即可。
 
+### 从旧版升级到 v1.2.1
+
+v1.2.1 已原生整合此前社区维护的 `koobonefixes.koplugin` 所有补丁：
+
+- 封面文件名 VFAT 安全化（`H.cover_filename_for`）
+- 书架重建后 tap 队列崩溃守卫（`Button.onTapSelectButton` 守卫）
+- 延迟样式更新崩溃守卫（`ReaderStyleTweak.updateCssText` 守卫）
+- 异步刷新父进程内存同步（`Bookshelf:apply_refresh_result`，替代 `debug.setupvalue` hack）
+
+升级后请**删除 `koobonefixes.koplugin` 目录**：
+- 主插件已包含所有修复，companion plugin 已无存在必要
+- koobonefixes 用 `debug.setupvalue` 操作 upvalue，依赖变量名匹配，脆弱易碎
+- koobonefixes 的 `H.join_path` 全局 hook 会让所有路径拼接调用走拦截，有副作用
+- 虽然双重安装不会冲突（守卫标记互斥，叠加结果一致），但保留它只会增加无谓开销
+
 ## 使用流程
 
 ```
@@ -52,12 +67,21 @@ KOReader 菜单 → 插件 → Koobone 漫画 → 打开书架
 | 配置项 | 说明 |
 |--------|------|
 | **服务器地址** | Koobone API 地址（默认 `https://koobone.com`） |
-| **登录 Cookie** | 手动设置登录 Cookie（VLIBSID + KBSKEY） |
+| **API Key 设置** | 在 [koobone.com](https://koobone.com/) 官网登录后，进入"个人设置"页面获取 API Key，填入此处即可 |
 | **排序方式** | 书架默认排序：更新时间 / 名称 / 最后阅读 |
 | **预下载卷数** | 打开漫画后自动预下载的后续卷数 |
 | **缓存大小上限** | EPUB 缓存最大占用空间（MB） |
 | **进度上传间隔** | 阅读时自动上传进度的间隔（秒） |
 | **下载封面** | 是否下载漫画封面到本地 |
+
+### API Key 获取步骤
+
+1. 浏览器打开 [https://koobone.com/](https://koobone.com/) 并登录账号
+2. 进入"个人设置"页面（通常位于右上角用户菜单内）
+3. 找到"API Key"或"接口密钥"项，复制显示的字符串
+4. 回到 KOReader：菜单 → 插件 → Koobone 漫画 → 设置 → **API Key 设置**，粘贴保存
+
+API Key 通过 `X-KB-INFO` 请求头直传服务端鉴权，无需配置 Cookie/Session。如果未配置 API Key，打开书架时会提示"未配置 API Key，请先在 Koobone 设置中填写"。
 
 ## 技术架构
 
@@ -111,6 +135,25 @@ KOReader 菜单 → 插件 → Koobone 漫画 → 打开书架
 - `loadstring` / `load` 编译兼容
 
 ## 更新日志
+
+### v1.2.1（2026-09-13）
+
+**修复：**
+
+- **刷新书架无效** — 修复 Async.run 子进程对 `SERIES_MEM_CACHE`/`SERIES_VOLS_MEM` 的修改不反映到父进程的问题。新增 `Bookshelf:apply_refresh_result(result)` 方法，在父进程 on_done 回调里用子进程返回的 series + all_vols 重建父进程内存缓存。此前需要禁用再启用插件才能看到刷新结果
+- **封面文件名 VFAT 不兼容** — 修复 Kindle VFAT 文件系统不接受 `:` 等字符导致封面下载报 Invalid argument 的问题。`series.id` 可能是 `KMOE:27464` 形式，直接用作文件名会在 Kindle 上失败。新增 `H.cover_filename_for(fmd)` 统一生成封面文件名，经过 `safe_filename` 处理非法字符
+- **书架重建后 tap 队列崩溃** — 修复封面下载失败触发 UI 重建后，队列里残留的 tap 事件访问已释放按钮的 `dimen` 字段导致 `button.lua:415 attempt to index field 'dimen' (a nil value)` 崩溃。新增 Button.onTapSelectButton 守卫，dimen 缺失时跳过 unsafe painting 但仍执行 callback
+- **延迟样式更新崩溃** — 修复 `patchReaderUI` 里 `scheduleIn(2.0)` 触发的 `updateCssText(true)` 可能在 ReaderUI 关闭后才执行导致 stale 引用崩溃。新增 ReaderStyleTweak.updateCssText 守卫，`self.ui` 或 `self.ui.document` 为 nil 时跳过
+
+**新增：**
+
+- **全局卷目录预填** — `bookshelf:refresh` 拉取系列列表时并行预拉全局 `vol_list.php`，按 `vol_series` 字段分组写入 L1 内存缓存 + L2 state 目录缓存。用户点进任何系列时直接命中缓存秒开，无需等待 API 返回
+- **EPUB 文件命名规范化** — 下载文件改为 `{系列名}/{vol_name}.epub` 目录结构，同一系列的卷集中在一个文件夹下，旧版 `{file_md5}.epub` 文件自动 rename 迁移到新位置
+
+**重构：**
+
+- **术语统一** — 代码标识符与 UI 文案统一改为"卷"概念：`chapter_index_cache` → `vol_index_cache`，`getDownloadedChapters` → `getDownloadedVols`，UI 文案"章节目录"→"卷目录"、"预下载章节数"→"预下载卷数"
+- **认证方式调整** — 完全改为 API Key 直传鉴权（`X-KB-INFO` 请求头），移除 Cookie/Session 配置，README 同步更新获取步骤
 
 ### v0.2.0（2026-08-10）
 

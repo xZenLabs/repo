@@ -1,0 +1,3 @@
+{
+  "releases": [{"tag_name":"v1.0.0","assets":[{"name":"startrakuyomi.koplugin.zip","url":"https://github.com/mgrimace/startrakuyomi.koplugin/releases/download/v1.0.0/startrakuyomi.koplugin.zip","size":2402,"digest":"sha256:1d1409219f55b5508c47a46c3e6f83bd40fd940ca0f96651ba4992cf3f37a50d"}],"name":"v1.0.0"}]
+}

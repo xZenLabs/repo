@@ -1,0 +1,23 @@
+# Startrakuyomi plugin for KOReader
+# https://github.com/mgrimace/startrakuyomi.koplugin
+# zenpm:auto-scraped
+id=startrakuyomi
+name=Startrakuyomi
+version=1.0.0
+description=A companion plugin that adds Rakuyomi to KOReader's native Start With menu
+author=mgrimace
+category=theme
+platforms=koreader
+dependencies=
+source=https://github.com/mgrimace/startrakuyomi.koplugin
+stars=5
+updated_at=2026-09-13T13:58:12Z
+published_at=2026-06-09T17:43:48Z
+readme_url=packages/koreader/startrakuyomi.koplugin/README.md
+readme_hash=3fe72ce2fcdef603507a125452d8a0fa93d8c3e1
+release_notes_url=packages/koreader/startrakuyomi.koplugin/RELEASE_NOTES.md
+release_notes_hash=3470fa101690884f01557f40b76ffe97b4a69f1c92920b36fc2899f99ffa8cce
+releases=[{"tag_name":"v1.0.0","assets":[{"name":"startrakuyomi.koplugin.zip","url":"https://github.com/mgrimace/startrakuyomi.koplugin/releases/download/v1.0.0/startrakuyomi.koplugin.zip","size":2402,"digest":"sha256:1d1409219f55b5508c47a46c3e6f83bd40fd940ca0f96651ba4992cf3f37a50d"}],"name":"v1.0.0"}]
+source_type=release
+source_asset=startrakuyomi.koplugin.zip
+size=2402

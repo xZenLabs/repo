@@ -1,3 +1,28 @@
+# v2.1.0
+
+Install by unzipping into your KOReader `plugins` folder.
+
+## New: text notes
+- Add text boxes anywhere on a drawing or notebook page and type with the on screen keyboard.
+- Rich formatting on the word under the cursor or a selection: bold, italic, underline, strikethrough, highlight, larger or smaller size, and bullet or numbered lists.
+- Font picker that previews every installed font in its own typeface, plus a default text size.
+- Grid line snapping on ruled notebook pages and on the drawing grid: each line sits on the ruling, and the text size follows the line spacing so lines are never skipped.
+- Word level undo and redo while editing, and word by word undo of a finished box.
+- Long words wrap instead of overflowing, and the box grows to fit its text.
+- Move and resize boxes, tap to place the caret, drag to select.
+- Protect text from the eraser: optional toggle so the eraser clears ink but leaves your text, both on screen and in exports.
+- Text saves in projects and exports to PNG, JPEG and PDF.
+
+## Toolbar and notebook
+- Redesigned toolbar with clean vector icons instead of text labels.
+- New Redo button next to Undo.
+- Notebook page strip now uses arrow buttons and a dedicated add page icon that tracks the page number width.
+- Notebook ruling style, spacing and strength are remembered for the next notebook.
+
+## Fixes
+- Reopening a text box no longer shifts it down.
+- Eraser and text now render the same on screen and in exported PDF and PNG.
+
 # v2.0.1
 
 A small stability update on top of 2.0.0
