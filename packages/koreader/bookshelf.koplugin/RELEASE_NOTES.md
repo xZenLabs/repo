@@ -1,3 +1,7 @@
+# v5.0.7
+
+Books sideloaded after you have opened a book now appear on the shelf on their own, instead of needing a swipe-down refresh
+
 # v5.0.6
 
 Fixes blurred cover images on the hero card, and books in a series sorting to the end of most-recently-added shelves
@@ -22,13 +26,3 @@ Fixes:
 
 - Folder tiles keep their card colour in night mode, so the folder name is readable again (#395)
 - In Spines view, the status and favourite marks no longer crowd out the title on thicker spines
-
-# v5.0.2
-
-Patch for v5.0.1.
-
-Fixes:
-
-- Paging a large genre or author shelf in Spines view now reaches every book, forwards and backwards, instead of jumping to the next group after the first page
-- The Covers shelf style no longer offers List columns and List rows, which only apply to the list
-- Books downloaded from an OPDS catalogue are named the way KOReader's own browser names them, so a book already downloaded is recognised instead of fetched again (#389)

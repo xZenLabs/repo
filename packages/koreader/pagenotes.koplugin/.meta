@@ -1,0 +1,22 @@
+# Pagenotes plugin for KOReader
+# https://github.com/toastiez/pagenotes.koplugin
+# zenpm:auto-scraped
+id=pagenotes
+name=Pagenotes
+version=1.0.0
+description=Stickers & Annotations
+author=toastiez
+category=utility
+platforms=koreader
+dependencies=
+source=https://github.com/toastiez/pagenotes.koplugin
+stars=7
+updated_at=2026-09-13T22:12:40Z
+published_at=2026-09-13T15:59:14Z
+readme_url=packages/koreader/pagenotes.koplugin/README.md
+readme_hash=fb8e1e4c8b51de2bab53008fd0fe627aeb00f2d2
+release_notes_url=packages/koreader/pagenotes.koplugin/RELEASE_NOTES.md
+release_notes_hash=409f4dfd0215bb5f796c4d587314d2e3570d62b6b6940f4db828eb5c35787dbc
+releases=[{"tag_name":"v1.0.0","assets":[{"name":"source-code.zip","url":"https://api.github.com/repos/toastiez/pagenotes.koplugin/zipball/v1.0.0"}],"name":"Pagenotes v 1.0.0"}]
+source_type=source
+source_url=https://codeload.github.com/toastiez/pagenotes.koplugin/zip/refs/heads/main
