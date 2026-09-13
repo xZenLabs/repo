@@ -1,3 +1,9 @@
+# 26.9.13-beta
+
+- Add filter option to allow users to only see books that are readable on KOReader
+
+**Full Changelog**: https://github.com/ultimatejimmy/libbee/compare/26.9.8...26.9.13-beta
+
 # 26.9.3-beta5
 
 - handle more types of PDFs
@@ -24,10 +30,3 @@
 - PDF fixes
 
 **Full Changelog**: https://github.com/ultimatejimmy/libbee/compare/26.9.1-beta...26.9.1-beta2
-
-# 26.9.1-beta
-
-- Fix PDF fulfillment bug #13 
-- Minor styling changes to top icons
-
-**Full Changelog**: https://github.com/ultimatejimmy/libbee/compare/26.8.31-beta...26.9.1-beta
