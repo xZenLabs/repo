@@ -258,16 +258,11 @@ Copy `panels_plus.koplugin` over your existing folder and restart KOReader. Your
 
 - KristanLaimon
 
+# 1.4.0 Release Notes:
+- [Saturday, 12 September 2026]: The release from day-0 apparently came out with some metadata problems with ZenPM and a weird bug that never shoul've belong to 1.4.0, if you downloaded the plugin this day, I recommend you to download again `panels_plus.koplugin.zip` (now they include correct metadata and no bugs ofc haha).
+In case you downloaded Panels+ through a package manager, uninstall it and install it again trough the same package manager.
 
-# Why are there 2 zips?
-  1. panels_plus-<version>.zip (panels_plus-1.4.0.zip):                                                                                                                                                                     
-      • Is the standard versioned asset intended for manual downloads and version archival, normally you would download this one.                                                                                                                                        
-  2. panels_plus.koplugin.zip:                                                                                                                                                                                                                                                                                                                                                                       
-      • This is provided so KOReader plugin managers can reference a permanent, fixed URL.                                                                                               
-
-So technically doesn´t matter which version you use, they're identical. It's more for package managers compatibility.
-
-NOTE: Update 12/Sep/2026 many hours after first release. I've changed the zips below to fix bad versioning, it was 1.3.0, now in their metadata include 1.4.0 (In case you see the SHAS are different) 🦊
+You can download any zip, both are Identical. The canonical zip is `panels_plus.koplugin.zip`, but kept `panels_plus-1.4.0.zip` for compatibility in ZenPM database's plugin metadata.
 
 # v1.3.0
 

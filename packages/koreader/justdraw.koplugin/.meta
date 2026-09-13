@@ -1,0 +1,18 @@
+# Justdraw plugin for KOReader
+# https://github.com/cristenger/justdraw.koplugin
+# zenpm:auto-scraped
+id=justdraw
+name=Justdraw
+version=source
+description=JustDraw is an experimental KOReader plugin for testing its new stylus support on e-ink devices.
+author=cristenger
+category=utility
+platforms=koreader
+dependencies=
+source=https://github.com/cristenger/justdraw.koplugin
+stars=5
+updated_at=2026-09-13T17:15:59Z
+readme_url=packages/koreader/justdraw.koplugin/README.md
+readme_hash=41d2e36797f465a9f676aa9aa530e1904f09bf72
+source_type=source
+source_url=https://codeload.github.com/cristenger/justdraw.koplugin/zip/refs/heads/main

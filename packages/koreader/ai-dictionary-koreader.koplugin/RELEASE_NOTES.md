@@ -1,3 +1,8 @@
+# v3.0
+
+- Added recursive lookups to AI Explain.
+- Fixed a bug where AI output could be incomplete.
+
 # v2.8
 
 - Added a new recursive dictionary lookup ability to AI Dictionary, where you can tap or tap-and-drag inside the AI dictionary window to look up the definition of new words.
@@ -23,11 +28,3 @@
 - Fixed a compatibility issue for Gemini
 - Added the option to disable auto updates
 - Selected text is now kept highlighted as long as the popup window is open
-
-# v2.3
-
-- Added support for PDF files
-- Fine-tuned AI responses
-- Now supporting local LLMs such as Ollama
-- Switched to a more low profile UI
-- Much improved text context extraction

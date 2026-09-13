@@ -11,6 +11,7 @@
   <a href="LICENSE"><img src="https://img.shields.io/github/license/KristanLaimon/BetterPanels?color=informational&style=flat-square" alt="MIT License"></a>
   <a href="https://github.com/KristanLaimon/BetterPanels/stargazers"><img src="https://img.shields.io/github/stars/KristanLaimon/BetterPanels?style=flat-square" alt="GitHub Stars"></a>
   <a href="https://github.com/sponsors/KristanLaimon"><img src="https://img.shields.io/badge/Sponsor-GitHub%20Sponsors-ea4aaa?logo=github&style=flat-square" alt="Sponsor on GitHub"></a>
+  <a href="https://github.com/AnthonyGress/zen_ui.koplugin"><img src="https://img.shields.io/badge/ZEN%20Package%20Manager-Available-purple?style=flat-square" alt="ZEN Package Manager"></a>
 </p>
 
 
@@ -20,7 +21,7 @@
     <td align="center" width="50%">
       <video src="https://github.com/user-attachments/assets/fff9ba07-565e-4f48-b016-1466bb74a609" controls width="420"></video>
       <br>
-      <sub>Core feature: Panel by panel smooth travelling. Battle-tested for performance on low-specs e-readers and old KOReader versions support.</sub>
+      <sub>Core feature: Panel by panel smooth travelling. Battle-tested for performance on low-specs e-readers and old KOReader versions support. (Starting from 2025 versions)</sub>
     </td>
     <td align="center" width="50%">
       <video src="https://github.com/user-attachments/assets/4ee8e78c-77a4-4432-a6e3-f841912c864b" controls width="420"></video>
@@ -76,22 +77,27 @@ This could work with even older versions, but not personally tested. If any issu
     </td>
   </tr>
 </table>
+
 ## 📦 Installation
 
 ### 🛍️ Package Managers
 
 Panels+ is structured for installation via KOReader package and plugin managers:
 
-| Package Manager | Search / Package Name | Installation Method |
-| :--- | :--- | :--- |
-| [**Plugin Appstore**](https://github.com/omer-faruq/appstore.koplugin) (`appstore.koplugin`) | [`Panels+`](https://omer-faruq.github.io/appstore.koplugin/?q=panels+plus) (`panels_plus.koplugin`) | Search and install directly inside the KOReader Plugin Appstore (or view on the [Appstore Web Catalog](https://omer-faruq.github.io/appstore.koplugin/?q=panels+plus)).<br><br> |
-| [**ZEN Package Manager**](https://github.com/AnthonyGress/zen_ui.koplugin) (`zen_ui.koplugin`) | `panelsplus` | Available directly in the ZEN package manager catalog.<br><br><img width="150" alt="screenshot-2026-09-12_20-01-13" src="https://github.com/user-attachments/assets/f1b4c0ba-802c-4627-b3aa-41393ab1386c" /> |
+| Package Manager                                                                                | Search / Package Name                                                                               | Installation Method                                                                                                                                                    |
+| ---------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [**Plugin Appstore**](https://github.com/omer-faruq/appstore.koplugin) (`appstore.koplugin`)   | [`Panels+`](https://omer-faruq.github.io/appstore.koplugin/?q=panels+plus) (`panelsplus.koplugin`)    | Search and install directly inside the KOReader Plugin Appstore (or view on the [Appstore Web Catalog](https://omer-faruq.github.io/appstore.koplugin/?q=panels+plus)) |
+| [**ZEN Package Manager**](https://github.com/AnthonyGress/zen_ui.koplugin) (`zen_ui.koplugin` or `zenos.koplugin`) | (`panelsplus`)                                                                                      | Available directly in the ZEN package manager catalog.<br><br><div class="flex gap-4 flex-row w-full h-auto"><img width="220" alt="zenpm_plugin_showcase" src="https://github.com/user-attachments/assets/334afd85-9260-446e-861e-c5d7d4bec515" /><img width="220" alt="search_zenpm_showcase" src="https://github.com/user-attachments/assets/218ac4b5-4c68-4806-a802-14db4e93e218" /></div> |
 
 ### 🛠️ Manual Installation
 
-1. Download the latest release from the [releases page](https://github.com/KristanLaimon/BetterPanels/releases/latest) and unzip it.
-2. You should now have this folder: `panels_plus.koplugin`
-3. Copy the **whole folder** into your KOReader `plugins` directory. (Do not copy only the files inside it).
+1. Download `panels_plus.koplugin.zip` from the [releases page](https://github.com/KristanLaimon/PanelsPlus/releases/latest) and unzip it.
+2. You should now have this folder: `panelsplus.koplugin`
+
+> [!NOTE]
+> **GUI zip extractors note:** Some desktop GUI archive managers (such as GNOME Archive Manager, Ark, or Windows Explorer "Extract All") may create an extra parent folder level matching the zip filename (e.g. `panels_plus.koplugin/panelsplus.koplugin/`). Take this into account when extracting: make sure you copy the actual `panelsplus.koplugin` folder (the one directly containing `_meta.lua` and `main.lua`) into your KOReader `plugins/` directory.
+
+3. Copy the **whole `panelsplus.koplugin` folder** into your KOReader `plugins` directory. (Do not copy only the files inside it).
 
 Common plugin paths:
 
@@ -106,7 +112,7 @@ Common plugin paths:
 The final path should look like this:
 
 ```text
-<koreader plugins directory>/panels_plus.koplugin
+<koreader plugins directory>/panelsplus.koplugin
 ```
 
 4. Restart KOReader after copying the folder.
