@@ -1,3 +1,9 @@
+# 26.9.13-beta2
+
+- Support older versions of libcrypto
+
+**Full Changelog**: https://github.com/ultimatejimmy/libbee/compare/26.9.13-beta...26.9.13-beta2
+
 # 26.9.13-beta
 
 - Add filter option to allow users to only see books that are readable on KOReader
@@ -24,9 +30,3 @@
 - improved handling/downloading for different types of PDF files
 
 **Full Changelog**: https://github.com/ultimatejimmy/libbee/compare/26.9.1-beta2...26.9.3-beta
-
-# 26.9.1-beta2
-
-- PDF fixes
-
-**Full Changelog**: https://github.com/ultimatejimmy/libbee/compare/26.9.1-beta...26.9.1-beta2

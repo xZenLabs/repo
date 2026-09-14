@@ -4,14 +4,14 @@
 id=dead-reckoning-bookend-preset
 name=Dead Reckoning Bookend Preset
 version=source
-description=The smallest thing in the portfolio: a single-file Lua preset for KOReader's Bookends plugin, styled as a navigation cockpit for the book in progress.
+description=A single-file preset for KOReader's Bookends plugin that turns the status bar into a navigation cockpit: session pace, chapter ETA, a projected finish date, and chapter waypoints ticked along the p...
 author=VirInvictus
 category=utility
 platforms=koreader
 dependencies=
 source=https://github.com/VirInvictus/dead-reckoning-bookend-preset
 stars=6
-updated_at=2026-09-13T22:12:40Z
+updated_at=2026-09-14T02:21:20Z
 readme_url=packages/koreader/dead-reckoning-bookend-preset.koplugin/README.md
 readme_hash=5f526d404bb22964c5699078ada9ce9b477a4b0d
 source_type=source
