@@ -5,50 +5,67 @@ Keep your KOReader reading in sync with Goodreads.
 An unofficial, community KOReader plugin. Install it from **KOReader Storefront**
 or manually from [Releases](https://github.com/gkgangavarapu/goodreadskosync/releases).
 
+## Notes
 
-## Issue
-- **Sign in on-device** - log in is a Hit and miss, it takes a few attempt , Try in a spaced manner- Once Logged in, It stays Logged in
+- Sign-in goes through Amazon and can occasionally take a few tries; if it
+  fails, wait a little and try again. Once signed in, the session is kept.
 
 ## Features
 
 - **Sign in on-device** — log in to Goodreads from KOReader itself, with an
   on-device prompt if Amazon asks for extra verification, and automatic retries
   when the connection is flaky.
-- **Over-the-air (OTA) updates:** checks GitHub Releases about once a week and can
+- **Over-the-air (OTA) updates:** checks GitHub Releases about once a day and can
   download, verify (SHA-256), install, and restart for you on request — no cable
   or manual copying needed.
 - Automatically updates your shelves: **Want to Read**, **Currently Reading**, and **Read**.
-- Syncs reading progress — by time, by percent change, or by page change.
+- Syncs reading progress as you read, or on open/close, according to your chosen preset.
 - Marks a book Read when you finish it (configurable), and offers a rating.
 - Optional star ratings.
 - Links a book to the best Goodreads match automatically, or lets you pick the right one.
 - Manual controls: **Sync now**, **Set status**, **Rate this book**, **Find on Goodreads**.
 - Reads your Goodreads shelf and never overwrites a book you have marked Read.
 - Works offline and syncs when you reconnect; background sync never blocks reading.
-- **Sync presets** (Battery saver / Balanced / Frequent) and Wi‑Fi handled the
+- **Sync presets** (Fastest / Faster / Medium / Relaxed) and Wi‑Fi handled the
   KOReader way, so it never fights your device settings.
 - Small, non-intrusive notifications.
 - No analytics and no telemetry.
 
 ## Syncing
 
-Syncs run in the background and never interrupt reading. There are three presets
-(**Settings → Sync preset**):
+Syncs run in the background and never interrupt reading. Pick one preset
+(**Settings → Sync preset**) — it sets all the sync behaviour for you:
 
 | Preset | Reading progress | Regular check |
 |---|---|---|
-| Battery saver | on open, close and reconnect | — |
-| **Balanced** (default) | on open, close and reconnect | every 15 minutes |
-| Frequent | as you turn pages | every 5 minutes |
+| **Medium** (default) | on open/close | every 15 minutes |
+| Fastest | as you read (every 2%) | every 2 minutes |
+| Faster | as you read (every 5%) | every 5 minutes |
+| Relaxed | on open/close | never |
 
-- Progress is only sent when it changes by your chosen step (default: 5% or 5 pages).
-- A sync fetches your latest shelf when a book is opened, when you sync manually,
-  or about once an hour; otherwise it reuses the last result, so routine syncs
-  stay quick.
-- **Sync now** (This book → Sync now) works at any time and shows a small progress window.
-- Offline changes are saved and sent automatically when you reconnect.
+Every preset also syncs on these events — the preset only changes the in‑reading
+updates above:
+
+| Trigger | Fastest | Faster | Medium | Relaxed |
+|---|---|---|---|---|
+| Open / close | yes | yes | yes | yes |
+| Sleep / wake / reconnect | yes | yes | yes | yes |
+| Status change, new link, sign‑in, **Sync now** | yes | yes | yes | yes |
+
+- Automatic syncs never switch Wi-Fi on; they run when you are already online
+  and otherwise wait for the next connection. **Sync now** will prompt to turn
+  Wi-Fi on if it is needed.
+- A sync fetches your latest shelf on book open, on manual sync, or about once
+  an hour; otherwise it reuses the last result, so routine syncs stay quick.
+- Offline changes are saved and sent automatically when you reconnect; the open
+  book's progress is pushed as soon as you are back online.
+- A new book opened while offline is linked automatically once you are back
+  online (when **Link books automatically** is on).
 - Opening a book does not change its shelf until there is progress.
-- When you finish a book it is marked **Read** (configurable from Settings).
+- When you finish a book it is marked **Read**.
+- Newly linked books are added to **Currently Reading** by default (turn this off in Settings).
+- Small toasts keep you informed while staying out of the way (linking, offline
+  saves/flushes, Currently Reading, and sync failures).
 
 ## Download
 
@@ -69,7 +86,7 @@ from its catalogue.
    - Android: `/sdcard/koreader/plugins/`- Untested
    - Linux / macOS: `~/.config/koreader/plugins/`- Untested
 2. Restart KOReader.
-3. Open **Tools → Goodreads Sync (unofficial) → Account → Log in**. (Buggy- Refer Issues)
+3. Open **Tools → Goodreads Sync (unofficial) → Account → Log in**.
 
 ## Disclaimer
 

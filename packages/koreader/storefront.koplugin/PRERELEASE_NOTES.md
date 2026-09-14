@@ -1,3 +1,9 @@
+# 26.9.14-beta
+
+- Minor UI tweaks
+
+**Full Changelog**: https://github.com/ultimatejimmy/storefront.koplugin/compare/26.9.13-beta2...26.9.14-beta
+
 # 26.9.13-beta2
 
 - Minor button change for new notification feature
@@ -21,9 +27,3 @@
 - Fix restart button on Kobo devices
 
 **Full Changelog**: https://github.com/ultimatejimmy/storefront.koplugin/compare/26.9.4-beta3...26.9.8-beta
-
-# 26.9.4-beta3
-
-- Store pre-releases in catalog and use that data for update checks
-
-**Full Changelog**: https://github.com/ultimatejimmy/storefront.koplugin/compare/26.9.4-beta2...26.9.4-beta3
