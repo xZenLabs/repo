@@ -1,3 +1,11 @@
+# v0.3.1
+
+
+### Fixed
+- AWS WAF **HTTP 202** (`x-amzn-waf-action: challenge`) is no longer shown as
+  “Network error: 202”. The plugin asks to refresh cookies, including
+  `aws-waf-token`, the same way as an expired session.
+
 # v0.3.0
 
 

@@ -1,3 +1,14 @@
+# v0.2.0.1
+
+
+- Added conservative ASIN extraction from KOReader document metadata. Explicitly labeled `asin`, `mobi-asin`, and Amazon-ASIN forms are normalized to uppercase and included in the existing Book Metadata payload for compatible servers.
+- Unlabeled 10-character identifiers are never guessed to be ASINs, preventing ISBN-10 values from being misclassified.
+- Existing Book Metadata consent, metadata compatibility fallback, and ordinary KOSync behavior remain unchanged.
+- Restored the intended enhanced-server client notice flow so compatible servers can surface actionable account or linked-service warnings on the reader, keep an attention marker on affected server entries, and suppress repeated display of the same notice for 24 hours.
+- Fixed Authenticate / Sign in capability refresh so the complete enhanced capability set is cached through the shared path; client notices and future enhanced capabilities are no longer skipped by the server test flow.
+- Progress pushes now allow a longer asynchronous response window before declaring a compatible server unavailable, preventing slower successful writes from being queued as false failures while keeping the tight synchronous fallback bounded.
+- Manual queued-update retry status now closes before the refreshed queue result is shown, so the retry message no longer remains over the result.
+
 # v0.2.0.0
 
 
