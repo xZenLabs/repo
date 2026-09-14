@@ -1,6 +1,6 @@
 # v2.1.1
 
-Bug fix prerelease.
+Bug fix
 
 Fixes toolbar icons appearing as danger/triangle placeholders on some devices (notably a first install on Kindle Scribe). The toolbar now loads its icons directly from the plugin instead of relying on KOReader's shared icon folder, which on a first run was not yet registered when KOReader looked for the icons. This was intermittent because it depended on whether that folder already existed from a previous run, which is why reinstalling appeared to fix it.
 

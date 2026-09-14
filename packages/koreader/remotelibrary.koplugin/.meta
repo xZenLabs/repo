@@ -1,0 +1,23 @@
+# Remotelibrary plugin for KOReader
+# https://github.com/dani84bs/RemoteLibrary.koplugin
+# zenpm:auto-scraped
+id=remotelibrary
+name=Remotelibrary
+version=0.2.0
+description=☁️ Seamlessly overlay and browse your remote cloud libraries directly inside KOReader's native file manager on-demand.
+author=dani84bs
+category=utility
+platforms=koreader
+dependencies=
+source=https://github.com/dani84bs/RemoteLibrary.koplugin
+stars=5
+updated_at=2026-09-14T09:22:27Z
+published_at=2026-09-01T15:09:55Z
+readme_url=packages/koreader/remotelibrary.koplugin/README.md
+readme_hash=c001090074b8bc137ae830c4b0dc8aee4b6da2e6
+release_notes_url=packages/koreader/remotelibrary.koplugin/RELEASE_NOTES.md
+release_notes_hash=19f818e5a90f13c23783e760e78e04138d012cc55ea84fc21ae365a7d390343d
+releases=[{"tag_name":"v0.2.0","assets":[{"name":"RemoteLibrary.koplugin.zip","url":"https://github.com/dani84bs/RemoteLibrary.koplugin/releases/download/v0.2.0/RemoteLibrary.koplugin.zip","size":20251,"digest":"sha256:d4d5c4dc4734640e2910ec98c25b5464e9eed32b3edcde11305572872dbde4cf"}],"name":"Release v0.2.0"}]
+source_type=release
+source_asset=RemoteLibrary.koplugin.zip
+size=20251

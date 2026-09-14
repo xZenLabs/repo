@@ -1,0 +1,3 @@
+{
+  "releases": [{"tag_name":"v0.2.0","assets":[{"name":"RemoteLibrary.koplugin.zip","url":"https://github.com/dani84bs/RemoteLibrary.koplugin/releases/download/v0.2.0/RemoteLibrary.koplugin.zip","size":20251,"digest":"sha256:d4d5c4dc4734640e2910ec98c25b5464e9eed32b3edcde11305572872dbde4cf"}],"name":"Release v0.2.0"}]
+}
