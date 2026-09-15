@@ -1,3 +1,10 @@
+# v1.0.6
+
+## What's Changed
+
+- Add SVG & Image previews
+- Sticky toolbar
+
 # v1.0.5
 
 ## What's Changed
@@ -32,18 +39,3 @@
 - Prevent duplicate inactivity-stop notifications
 - Update updater flow
 - Allow copy/paste in same dir with duplicate/overwrite
-
-# v1.0.1
-
-## What's Changed
-
-- Add show and hide controls to password fields
-- Hide misleading folder sizes and keep folders alphabetical when sorting by size
-- Add opt-in beta updates with correct prerelease version ordering
-- Better logging
-- Open file fullscreen
-- Find in page
-- Single http/https port
-- Redirect http -> https if http is disabled
-- Customize inactivity timeout
-- Bug fixes
