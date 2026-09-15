@@ -7,18 +7,21 @@ or manually from [Releases](https://github.com/gkgangavarapu/goodreadskosync/rel
 
 ## Notes
 
-- Sign-in goes through Amazon and can occasionally take a few tries; if it
+- Sign-in can occasionally take a few tries; if it
   fails, wait a little and try again. Once signed in, the session is kept.
 
 ## Features
 
 - **Sign in on-device** — log in to Goodreads from KOReader itself, with an
-  on-device prompt if Amazon asks for extra verification, and automatic retries
+  on-device prompt if the site asks for extra verification, and automatic retries
   when the connection is flaky.
 - **Over-the-air (OTA) updates:** checks GitHub Releases about once a day and can
   download, verify (SHA-256), install, and restart for you on request — no cable
   or manual copying needed.
-- Automatically updates your shelves: **Want to Read**, **Currently Reading**, and **Read**.
+- Automatically updates your shelves: **Currently Reading** and **Read**. Manual
+  **Set status on Goodreads** can move a book to any shelf (Want to Read,
+  Currently Reading, Read, Did Not Finish); automatic sync never downgrades a
+  finished book.
 - Syncs reading progress as you read, or on open/close, according to your chosen preset.
 - Marks a book Read when you finish it (configurable), and offers a rating.
 - Optional star ratings.
@@ -67,6 +70,20 @@ updates above:
 - Small toasts keep you informed while staying out of the way (linking, offline
   saves/flushes, Currently Reading, and sync failures).
 
+## Browse shelves
+
+**Browse shelves** (in the plugin menu) opens a box that stays open until you
+close it. It opens instantly with the books the plugin has linked, then
+**Load from Goodreads** fetches your shelf list — including custom shelves — with
+counts. From there you can:
+
+- open a shelf and see its books,
+- **move a book** to another shelf,
+- **Search & add** a book and choose its shelf,
+- **Support this project** (with the QR).
+
+Each shelf's books are fetched on demand, in a single small request.
+
 ## Download
 
 Get the latest `goodreadskosync-<version>.zip` from the [Releases](https://github.com/gkgangavarapu/goodreadskosync/releases) page, or install it from **KOReader Storefront**.
@@ -96,6 +113,11 @@ from its catalogue.
 - Use it responsibly and in accordance with the terms of service of Goodreads and Amazon. You are responsible for how you use this software.
 - Your credentials and session stay on your device. Nothing is sent anywhere except to Goodreads.
 - Goodreads and Amazon are trademarks of their respective owners.
+
+## Feedback and feature requests
+
+Have an idea or want to request a feature? Post it in the
+[issues](https://github.com/gkgangavarapu/goodreadskosync/issues/2).
 
 ## Support
 
