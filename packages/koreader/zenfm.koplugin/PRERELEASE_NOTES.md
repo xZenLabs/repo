@@ -1,3 +1,10 @@
+# v1.1.0-beta1
+
+## What's Changed
+
+- Add favorites/bookmarks
+- Fix image thumbnails not all showing
+
 # v1.0.5-beta2
 
 ## What's Changed
@@ -24,13 +31,6 @@
 - Reorganize settings
 
 # v1.0.4-beta4
-
-## What's Changed
-
-- Keep ZenFM icons visible in dark mode
-- Keep ZenFM icons visible in dark mode
-
-# v1.0.4-beta3
 
 ## What's Changed
 
