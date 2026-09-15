@@ -1,3 +1,11 @@
+# 26.9.16-beta
+
+- Fix bugs: #5061 and #5061
+
+**Full Changelog**: https://github.com/ultimatejimmy/storefront.koplugin/compare/26.9.15...26.9.15.1-beta
+
+**Full Changelog**: https://github.com/ultimatejimmy/storefront.koplugin/compare/26.9.15...26.9.16-beta
+
 # 26.9.14-beta2
 
 - Major performance improvements with screensavers catalog
@@ -22,9 +30,3 @@
 - Add update notification feature
 
 **Full Changelog**: https://github.com/ultimatejimmy/storefront.koplugin/compare/26.9.11-beta...26.9.13-beta
-
-# 26.9.11-beta
-
-- Add install from branch feature #5057 
-
-**Full Changelog**: https://github.com/ultimatejimmy/storefront.koplugin/compare/26.9.9...26.9.11-beta

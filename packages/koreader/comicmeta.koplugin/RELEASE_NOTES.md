@@ -1,3 +1,19 @@
+# v2.1
+
+## 📢 What's Changed
+
+### 👩🏻‍💻 Backend
+- Only write to book settings if a ToC is available
+- Resolve lib directories relative to plugin main dir
+
+### 🔧 Fixes
+- Convert series_index to number when applicable
+
+### ❤️ New Contributors
+* @bartlibert made their first contribution in https://github.com/KORComic/comicmeta.koplugin/pull/50
+
+📜 **Full Changelog**: https://github.com/KORComic/comicmeta.koplugin/compare/v2.0...v2.1
+
 # v2.0
 
 ## 📢 What's Changed
