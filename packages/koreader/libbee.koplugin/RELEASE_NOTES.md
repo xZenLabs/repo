@@ -1,3 +1,10 @@
+# 26.9.15
+
+- Add filter option to allow users to only see books that are readable on KOReader
+- Support older versions of libcrypto/KOReader
+
+**Full Changelog**: https://github.com/ultimatejimmy/libbee/compare/26.9.8...26.9.15
+
 # 26.9.8
 
 - Overall better PDF support for large files, comics, manga, etc 
@@ -43,9 +50,3 @@ This release brings some much-requested features, including early book returns, 
 - add detection for kindle/libby only books
 
 **Full Changelog**: https://github.com/ultimatejimmy/libbee/compare/26.8.21.6...26.8.21.7
-
-# 26.8.21.6
-
-- Restore toast message when downloading.
-
-**Full Changelog**: https://github.com/ultimatejimmy/libbee/compare/26.8.21.5...26.8.21.6

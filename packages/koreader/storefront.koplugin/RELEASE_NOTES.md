@@ -1,3 +1,14 @@
+# 26.9.15
+
+## What's Changed
+
+- **Install from branch**: You can now install plugins directly from any Git branch, making it easy to test experimental features, pull requests, and preview builds right on your device ([#5057](https://github.com/ultimatejimmy/storefront.koplugin/issues/5057)).
+- **Update notifications**: Added an update notification system to let you know when new versions are available for your installed items, with customizable options in settings.
+- **Screensavers catalog performance**: Updating the screensaver catalog is much faster and more efficient, especially on lower powered devices
+- **Screensavers refresh**: Triggering a catalog refresh now automatically updates the screensavers catalog as well, ensuring you always see the latest additions without needing extra steps.
+
+**Full Changelog**: https://github.com/ultimatejimmy/storefront.koplugin/compare/26.9.9...26.9.15
+
 # 26.9.9
 
 ## What's Changed
@@ -51,9 +62,3 @@
 - Some small code syntax fixes
 
 **Full Changelog**: https://github.com/ultimatejimmy/storefront.koplugin/compare/26.8.18.1...26.8.18.2
-
-# 26.8.18.1
-
-- hotfix for some users with a font missing
-
-**Full Changelog**: https://github.com/ultimatejimmy/storefront.koplugin/compare/26.8.18...26.8.18.1

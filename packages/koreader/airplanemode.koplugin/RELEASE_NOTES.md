@@ -1,3 +1,8 @@
+# v2.0.0
+
+
+- Fix for updater unarchive crashing koreader, introduced in 1.9.9
+
 # v1.9.9
 
 
@@ -37,9 +42,3 @@
 - Developer mode added - disable/enable features that are still in progress
 - Debug logging - enables/disables debug logging, only available when devmode is on
 - Update manager - now you can update AirPlaneMode from directly inside the plugin (#71). Currently gated with dev mode
-
-# v1.2.2
-
-## Version v1.2.2
-
-See [CHANGELOG.md](CHANGELOG.md) for details.
