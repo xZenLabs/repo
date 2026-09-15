@@ -1,3 +1,9 @@
+# v2026.09-1
+
+**Important** If you're on koreader v2026.07, the updater will crash trying to install this update. This hotfix will fix it for future updates. For now, you'll have to install the newest version by hand.
+
+Sorry!
+
 # v2026.09
 
 New community requested options and features!
@@ -35,9 +41,3 @@ Notably, a new "Lock" menu item for those who prefer to lock by hand.
 Also, the desktop support has improved a lot: global lock shortcuts `Ctrl+Alt+L` and `Alt+Shift+L`, as well as proper keyboard PIN input on the lock screen.
 
 Have a great 2026, folks 🎇💫
-
-# v2025.12-1
-
-This small update just adds some status information (time, battery, frontlight) to the bottom of the panel. It also includes a render fix after device deep sleep.
-
-Merry Christmas 🎄 and a happy new year! 🚀

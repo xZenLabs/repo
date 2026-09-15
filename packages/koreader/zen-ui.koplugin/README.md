@@ -32,13 +32,17 @@ ZenOS is built to be lightweight and efficient. Its dedicated renderer and intel
 
 Build a personal Home page for your e-reader with responsive widgets: date and time, featured book, reading stats, reading goals, book strip, and quotes. Arrange them within the screen's space budget, edit widgets directly from Home, or apply and save presets.
 
-The unified book strip can switch between recent books, favorites, To Be Read, authors, series, tags, collections, a folder, or a custom list. Optional strip controls can also launch actions, Controls, plugin menus, and KOReader menus. Featured books support recent, To Be Read, or a hand-picked title, with configurable metadata and progress labels.
+The Quotes widget can combine built-in quotes, annotations, and any selection
+of custom quote files stored in `koreader/settings/ZenOS/quotes/`, while the existing
+`koreader/settings/ZenOS/quotes.lua` remains the primary custom file.
+
+The unified book strip can switch between recent books, favorites, To Be Read, authors, series, languages, tags, collections, Kindle Library when available, a folder, or a custom list. Optional strip controls can also filter by book status or launch actions, Controls, plugin menus, and KOReader menus. Featured books support recent, To Be Read, or a hand-picked title, with configurable metadata and progress labels.
 
 See the [Home guide](docs/home.md).
 
 ### Controls
 
-Swipe down from anywhere for up to nine configurable controls plus brightness and warmth sliders. Buttons can toggle device features, run dispatcher actions, open plugins or KOReader menus, and expose installed integrations such as Bluetooth, Tailscale, and ZenFM. Hold the minus button on a lighting slider to jump to zero.
+Swipe down from anywhere for up to nine configurable controls plus brightness and warmth sliders. Buttons can toggle device features, run dispatcher actions, open plugins or KOReader menus, and expose installed integrations such as Bluetooth, Tailscale, and ZenFM. Tailscale can toggle Wi-Fi with itself, and optional hatching fills the area below the top menu. Hold the minus button on a lighting slider to jump to zero.
 
 <img src="./images/quickstart/onboarding/quicksettings.png" width="500" alt="Quick Settings">
 
@@ -46,7 +50,7 @@ Swipe down from anywhere for up to nine configurable controls plus brightness an
 
 Choose classic, mosaic, or detailed list layouts, then customize fonts, backgrounds, cover ratios, badges, progress, rounded corners, folder covers, and automatic series grouping. Display mode, sorting, and status filters can be saved per folder.
 
-The streamlined context menu handles read status, collections, file operations, and full-screen book details. From Details you can open KOReader metadata, rename a book by holding its filename, or choose another document provider with **Open with…**.
+The streamlined context menu handles read status, collections, file operations, and full-screen book details. Its native metadata editor changes book details, filenames, and covers, or fills them from Hardcover, Google Books, and Open Library.
 
 <img src="./images/quickstart/onboarding/library_covers_full.png" width="350" height="auto" alt="Library Covers">
       
@@ -58,7 +62,7 @@ See the [Library guide](docs/library.md).
 
 ### Navbar
 
-Keep up to seven tabs at the bottom of the Library. Built-in destinations include Library, a chosen Folder, Home, Continue, Favorites, Collections, Authors, Series, Tags, To Be Read, Stats, Manga, and News. Custom tabs can run a Control or dispatcher action, open a plugin or KOReader menu, and use a custom label and icon. Choose any supported tab as the default destination.
+Keep up to seven tabs at the bottom of the Library. Built-in destinations include Library, Kindle Library when available, a chosen Folder, Home, Continue, Favorites, Collections, Authors, Series, Languages, Tags, book statuses, Stats, Manga, and News. Custom tabs can run a Control or dispatcher action, open a plugin or KOReader menu, and use a custom label and icon. Choose any supported tab as the default destination.
 
 
 <img src="./images/quickstart/onboarding/navbar.png" width="500" alt="Navigation Bar">
@@ -98,7 +102,7 @@ Night mode, brightness, and warmth each have independent schedules. Brightness a
 
 ### Integrations and Customization
 
-ZenOS themes the OPDS browser, integrates with Rakuyomi, can install ZenPM on non-Android devices, and adds a ZenFM Control when the plugin is present. Custom icon packs can replace ZenOS and KOReader artwork. Plugins can also contribute Home widgets and status-bar items through public integration APIs.
+ZenOS themes the OPDS browser, integrates with Rakuyomi and [kindle.koplugin](https://github.com/kaikozlov/kindle.koplugin), can install ZenPM on supported non-Android ARM devices, and adds a ZenFM Control when the plugin is present. Custom icon packs can replace ZenOS and KOReader artwork. Plugins can also contribute Home widgets and status-bar items through public integration APIs.
 
 See the [Extras](docs/extras.md), [Custom Icon Packs](docs/icon-packs.md), and [Actions](docs/actions.md) guides.
 
@@ -106,7 +110,7 @@ See the [Extras](docs/extras.md), [Custom Icon Packs](docs/icon-packs.md), and [
 
 Zen Settings brings ZenOS and frequently used KOReader settings into one searchable, key-friendly interface. Sections are organized as Controls, Launcher, Home, Library, Navbar, Reader, Extras, and About. It remembers your previous location, most features remain independently configurable, and ZenOS can update itself without leaving KOReader.
 
-New installations include a visual setup guide followed by a short on-screen tour of Zen Mode and Zen Settings. The guide remains available from **Zen Settings > About > Setup Guide**.
+New installations include a visual setup guide followed by short on-screen tours of Zen Mode, Zen Settings, and the Reader page browser. The guide remains available from **Zen Settings > About > Setup Guide**.
 
 <img src="./images/quickstart/onboarding/zen_ui_settings.png" width="500" alt="ZenOS Settings">
 
@@ -145,7 +149,7 @@ Registering an existing external ID replaces its builder and options.
 ## Prerequisites
 
 - KOReader 2026.03 or newer must be installed first. ZenOS is tested against KOReader 2026.07 and compatibility-tested against 2026.03. [Install KOReader](https://github.com/koreader/koreader#installation)
-- Disable or remove **Project: Title** before starting ZenOS. ZenOS automatically disables Simple UI, QuickMenu, Appearance, Reader Menu Redesign, and known conflicting user patches, then asks you to restart KOReader.
+- Disable or remove **Project: Title** before starting ZenOS. ZenOS automatically disables Simple UI, Visual Overhaul Suite (VOS), QuickMenu, Appearance, Burrow, QuickUI, Reader Menu Redesign, Shortcuts Toolbar, and known conflicting user patches, then asks you to restart KOReader.
 
 
 ## Installation
@@ -158,8 +162,8 @@ The migration performs two automatic restarts. If Zen UI is disabled, enable
 it once so its migration can run. Do not manually install `zenos.koplugin`
 beside an existing `zen_ui.koplugin` directory.
 
-The upgrade keeps `settings/Zen UI` as an unchanged rollback snapshot and
-migrates a separate copy in `settings/ZenOS`. Downgrading to an older Zen UI
+The upgrade keeps `koreader/settings/Zen UI` as an unchanged rollback snapshot and
+migrates a separate copy in `koreader/settings/ZenOS`. Downgrading to an older Zen UI
 build therefore restores the settings as they were immediately before the
 ZenOS upgrade; changes made later in ZenOS are intentionally not copied back.
 
@@ -208,6 +212,7 @@ ZenOS is currently translated into:
 | `bg` | Bulgarian |
 | `cs` | Czech |
 | `hu` | Hungarian |
+| `id` | Indonesian |
 | `pt_BR` | Brazilian Portuguese |
 | `pt_PT` | European Portuguese |
 | `ro` | Romanian |
@@ -234,6 +239,11 @@ ZenOS is original work, but it wouldn't exist without the broader KOReader commu
 - **[sebdelsol/KOReader.patches](https://github.com/sebdelsol/KOReader.patches)** — Patches and UI techniques that informed several of ZenOS's features.
 - **[doctorhetfield-cmd/simpleui.koplugin](https://github.com/doctorhetfield-cmd/simpleui.koplugin)** — A fellow KOReader UI plugin that served as an inspiration as well as a model for how to apply language translations throughout the plugin.
 - **[kristianpennacchia/zzz-readermenuredesign.koplugin](https://github.com/kristianpennacchia/zzz-readermenuredesign.koplugin)** — Inspiration for the reader search menu redesign
+- **[rameezk/rebind.koplugin](https://github.com/rameezk/rebind.koplugin)** — The EPUB metadata mutation code is adapted from Rebind under the MIT License.
+- **[Phrogz/SLAXML](https://github.com/Phrogz/SLAXML)** — ZenOS vendors SLAXML's parser and DOM serializer under the MIT License.
+- **[certifi](https://github.com/certifi/python-certifi)** — The bundled Mozilla CA certificate data is distributed under the Mozilla Public License 2.0.
+
+The complete copyright and license texts for these embedded metadata components are in [modules/filebrowser/metadata/LICENSES.md](modules/filebrowser/metadata/LICENSES.md).
 
 Thank you to everyone who published their KOReader work openly.
 
