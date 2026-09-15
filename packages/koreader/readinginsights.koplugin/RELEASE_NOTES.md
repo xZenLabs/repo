@@ -1,3 +1,7 @@
+# v6.5.3
+
+Reading insights popup: prefetch the other two chart modes (hours/days/books) in the background after opening, so switching modes no longer triggers a slow, uncached DB query the first time each day
+
 # v6.5.2
 
 ### Fixed
@@ -22,16 +26,3 @@
   "Chapters per page" setting (default 25), the paging arrows no longer
   appear at all (previously shown greyed-out). Instead, the chapter
   columns stretch to use the freed-up width.
-
-# v6.4.0
-
-### Added
-- Reading streak popup can now be assigned to a gesture/shortcut
-  (Dispatcher action: "Reading insights: reading streak"). 
-- Reading heatmap popup can now be opened directly, without going
-  through the main insights popup first — via a new Tools menu entry
-  ("Show Reading heatmap") and a new gesture/shortcut action
-  ("Reading insights: reading heatmap").
-- Translations for both new actions/menu entry in all supported
-  languages (en, de, hu, pt_PT, uk, zh_CN).
-#74
