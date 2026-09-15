@@ -1,3 +1,11 @@
+# v0.4.11-beta.4
+
+## What's Changed
+* Burrow 0.4.11 beta 4: remove Kindle transition stalls by @richbeatty in https://github.com/richbeatty/burrow.koplugin/pull/68
+
+
+**Full Changelog**: https://github.com/richbeatty/burrow.koplugin/compare/v0.4.11-beta.3...v0.4.11-beta.4
+
 # v0.4.11-beta.3
 
 ## What's Changed
@@ -29,11 +37,3 @@
 
 
 **Full Changelog**: https://github.com/richbeatty/burrow.koplugin/compare/v0.4.10-beta.1...v0.4.10-beta.2
-
-# v0.4.10-beta.1
-
-## What's Changed
-* Burrow 0.4.10 beta 1: hero-to-books spacing by @richbeatty in https://github.com/richbeatty/burrow.koplugin/pull/61
-
-
-**Full Changelog**: https://github.com/richbeatty/burrow.koplugin/compare/v0.4.9...v0.4.10-beta.1

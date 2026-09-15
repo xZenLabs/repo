@@ -1,3 +1,11 @@
+# 2.3
+
+Frotz 2.3 adds a game browser and downloader using IFDB database.
+
+- *Lists:* Top rated, Most rated, Newest releases, Short games, Surprise me — limited to Z-machine and/or Glulx games (tap Formats to choose)
+- *Search…* by title or author, or with IFDB filters such as tag:horror, author:"Emily Short", rating:4-, playtime:-1h
+- *Tap a game* for its description, rating, play time and tags, its cover, and Download. Zip files are unpacked automatically; the game is saved to the download folder (default koreader/ifgames/<game title>/) and can be started right away
+
 # 2.2
 
 **Frotz now has basic image support.**
@@ -30,10 +38,3 @@ Before installing, remove the old files from Frotz 1.0
 
 Now with dictionary lookup support
 <img width="392" height="498" alt="Screenshot frotz dict sm" src="https://github.com/user-attachments/assets/957d84e6-4ffd-47f1-802c-4a9794ee9ce8" />
-
-# 1.0.1
-
-Fises a small bug - now you can send an empty command (just press enter).
-Needed because some games ask "Press enter to continue".
-
-Solves issue https://github.com/kbarni/frotz.koplugin/issues/1

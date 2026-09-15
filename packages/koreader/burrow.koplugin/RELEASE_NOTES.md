@@ -1,3 +1,15 @@
+# v0.4.11
+
+## What's Changed
+* Burrow 0.4.11 beta 1: prewarm opposite EPUB tone by @richbeatty in https://github.com/richbeatty/burrow.koplugin/pull/65
+* Burrow 0.4.11 beta 2: reduce reader transition latency by @richbeatty in https://github.com/richbeatty/burrow.koplugin/pull/66
+* Burrow 0.4.11 beta 3: speed up reader transitions by @richbeatty in https://github.com/richbeatty/burrow.koplugin/pull/67
+* Burrow 0.4.11 beta 4: remove Kindle transition stalls by @richbeatty in https://github.com/richbeatty/burrow.koplugin/pull/68
+* Promote Burrow 0.4.11 beta 4 to stable by @richbeatty in https://github.com/richbeatty/burrow.koplugin/pull/69
+
+
+**Full Changelog**: https://github.com/richbeatty/burrow.koplugin/compare/v0.4.10...v0.4.11
+
 # v0.4.10
 
 ## What's Changed
@@ -45,7 +57,3 @@
 
 
 **Full Changelog**: https://github.com/richbeatty/burrow.koplugin/compare/v0.4.6...v0.4.7
-
-# v0.4.6
-
-**Full Changelog**: https://github.com/richbeatty/burrow.koplugin/compare/v0.4.5...v0.4.6
