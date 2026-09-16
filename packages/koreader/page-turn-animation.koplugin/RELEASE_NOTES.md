@@ -1,3 +1,9 @@
+# v1.0
+
+Now you can create a grid of up to 8x8 that allows you to put the animation you want in each of the cells, as well as decide if that cell is going forward or backward.
+
+All of this is optional.
+
 # v0.2
 
 English, Portuguese and Spanish languages

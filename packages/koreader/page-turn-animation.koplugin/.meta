@@ -3,7 +3,7 @@
 # zenpm:auto-scraped
 id=page-turn-animation
 name=Page Turn Animation
-version=0.2
+version=1.0
 description=
 author=federico1176-wq
 category=utility
@@ -11,13 +11,13 @@ platforms=koreader
 dependencies=
 source=https://github.com/federico1176-wq/Page_turn_animation.koplugin
 stars=7
-updated_at=2026-09-16T19:12:22Z
-published_at=2026-09-16T03:46:14Z
+updated_at=2026-09-16T22:28:45Z
+published_at=2026-09-16T19:52:40Z
 readme_url=packages/koreader/page-turn-animation.koplugin/README.md
 readme_hash=6e8151db0fb9937a04460eb92dccca73b602aa3f
 release_notes_url=packages/koreader/page-turn-animation.koplugin/RELEASE_NOTES.md
-release_notes_hash=2bddcaad0e01cc3903c7d5db0a0457e61b4430e5bf6a60f963874688061a8da0
-releases=[{"tag_name":"v0.2","assets":[{"name":"page_turn_animation.koplugin.zip","url":"https://github.com/federico1176-wq/Page_turn_animation.koplugin/releases/download/v0.2/page_turn_animation.koplugin.zip","size":17410,"digest":"sha256:70fa3b1eb55050fd1f3c6932d8c9fc874e7a25c912217b59cf5622f268fc5487"}],"name":"v0.2"},{"tag_name":"v.0.1","assets":[{"name":"page_turn_animation.koplugin.zip","url":"https://github.com/federico1176-wq/Page_turn_animation.koplugin/releases/download/v.0.1/page_turn_animation.koplugin.zip","size":6919,"digest":"sha256:3ddf552be0170cf8d90ef30d2c972ffed7bc7071680f6b71893ec7f5915de10b"}],"name":"v0.1"}]
+release_notes_hash=1cf7922414f49b0688eb9970948dd90db6bbf0657c2ecb11e4d122170b20437c
+releases=[{"tag_name":"v1.0","assets":[{"name":"page_turn_animation.koplugin.zip","url":"https://github.com/federico1176-wq/Page_turn_animation.koplugin/releases/download/v1.0/page_turn_animation.koplugin.zip","size":25072,"digest":"sha256:8597e7758396dee1a3f4a01288d507bbd86cb98a2af097c3774c325c2a464ce4"}],"name":"v1.0"},{"tag_name":"v0.2","assets":[{"name":"page_turn_animation.koplugin.zip","url":"https://github.com/federico1176-wq/Page_turn_animation.koplugin/releases/download/v0.2/page_turn_animation.koplugin.zip","size":17410,"digest":"sha256:70fa3b1eb55050fd1f3c6932d8c9fc874e7a25c912217b59cf5622f268fc5487"}],"name":"v0.2"},{"tag_name":"v.0.1","assets":[{"name":"page_turn_animation.koplugin.zip","url":"https://github.com/federico1176-wq/Page_turn_animation.koplugin/releases/download/v.0.1/page_turn_animation.koplugin.zip","size":6919,"digest":"sha256:3ddf552be0170cf8d90ef30d2c972ffed7bc7071680f6b71893ec7f5915de10b"}],"name":"v0.1"}]
 source_type=release
 source_asset=page_turn_animation.koplugin.zip
-size=17410
+size=25072
