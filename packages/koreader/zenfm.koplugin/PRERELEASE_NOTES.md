@@ -1,3 +1,11 @@
+# v1.1.0-beta3
+
+## What's Changed
+
+- Add favorites/bookmarks
+- Fix image thumbnails not all showing
+- Queue multiple uploads
+
 # v1.1.0-beta2
 
 ## What's Changed
@@ -28,11 +36,3 @@
 - Add PWA manifest
 - Use white favicon for dark mode browser
 - Add show IP/QR code to ZenOS settings
-
-# v1.0.4-beta5
-
-## What's Changed
-
-- Add QR code
-- Keep ZenFM icons visible in dark mode
-- Reorganize settings
