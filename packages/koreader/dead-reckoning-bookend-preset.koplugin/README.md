@@ -1,8 +1,6 @@
 # Dead Reckoning
 
-#### It is important to remember to update your margins after installing this preset and to disable the native status bar.
-
-A [Bookends](https://github.com/AndyHazz/bookends.koplugin) preset for [KOReader](https://github.com/koreader/koreader): a navigation-themed reading cockpit that surfaces session speed, a finish-date projection, and chapter ETA, with chapter waypoints ticked along the progress bar. Text renders in a soft, low-contrast grey so the telemetry stays out of the way of the book.
+A [Bookends](https://github.com/AndyHazz/bookends.koplugin) preset for [KOReader](https://github.com/koreader/koreader): a navigation-themed reading cockpit that surfaces session speed, a finish-date projection, and chapter ETA, with chapter waypoints ticked along the progress bar. Text renders in grey ink so the telemetry stays out of the way of the book.
 
 <img width="1264" height="1680" alt="Dead Reckoning preset shown on a KOReader page" src="https://github.com/user-attachments/assets/73f2291d-1fa5-47da-a78e-3a85ba82b157" />
 
@@ -32,6 +30,8 @@ Drop `dead-reckoning.lua` into Bookends' preset folder:
 ```
 
 Then open **Bookends → Preset library** in KOReader and select **Dead Reckoning** from the list.
+
+**A note on margins:** the margins worth updating after installing are KOReader's own, not the preset's: disable the native status bar and set the document margins so the overlays get a clean page. The `defaults` block inside `dead-reckoning.lua` (top 18, bottom 28, left and right 30) is the preset's internal drawing geometry; there is nothing to copy or change there.
 
 ## Support
 
