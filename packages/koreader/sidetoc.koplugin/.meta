@@ -1,0 +1,29 @@
+# Sidetoc plugin for KOReader
+# https://github.com/DRDTR001/sidetoc.koplugin
+# zenpm:auto-scraped
+id=sidetoc
+name=Sidetoc
+version=1.2.0
+description=
+author=DRDTR001
+category=utility
+platforms=koreader
+dependencies=
+source=https://github.com/DRDTR001/sidetoc.koplugin
+stars=9
+updated_at=2026-09-16T08:55:50Z
+published_at=2026-09-11T10:53:58Z
+readme_url=packages/koreader/sidetoc.koplugin/README.md
+readme_hash=b4c87be0d0edf11dbeed1c211febba9019eb444c
+release_notes_url=packages/koreader/sidetoc.koplugin/RELEASE_NOTES.md
+release_notes_hash=e8a4202f1c9b154b1e69c426c408b0a52594cbe74575171dc2655d2a6e76c5e1
+releases=[{"tag_name":"v1.2.0","assets":[{"name":"sidetoc-02-v1.2.0.zip","url":"https://github.com/DRDTR001/sidetoc.koplugin/releases/download/v1.2.0/sidetoc-02-v1.2.0.zip","size":6977,"digest":"sha256:0c718eacf7ba244e0aa710f64a1024c178b716f49f4b5e8be12491ee7469b24d"},{"name":"sidetoc-v1.2.0.zip","url":"https://github.com/DRDTR001/sidetoc.koplugin/releases/download/v1.2.0/sidetoc-v1.2.0.zip","size":7256,"digest":"sha256:46efb53711a2d28debb7c4f0a1f6999db5b048cecf1c9af643bca75ce6464729"}],"name":"无尾缀只读取fonts文件根目录下的字体，02尾缀读取全部字体,已更新配置文件读取"}]
+source_type=release
+assets.0.arch=any
+assets.0.asset=sidetoc-02-v1.2.0.zip
+assets.0.url=https://github.com/DRDTR001/sidetoc.koplugin/releases/download/v1.2.0/sidetoc-02-v1.2.0.zip
+assets.0.size=6977
+assets.1.arch=any
+assets.1.asset=sidetoc-v1.2.0.zip
+assets.1.url=https://github.com/DRDTR001/sidetoc.koplugin/releases/download/v1.2.0/sidetoc-v1.2.0.zip
+assets.1.size=7256

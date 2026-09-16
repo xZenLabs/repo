@@ -1,3 +1,21 @@
+# v1.11.3
+
+﻿## Goodreads KO Sync 1.11.3
+
+### Fixed
+- **Syncing works again** (progress, shelf, rating, remove). Goodreads rotates its CSRF token; the plugin was reusing the one from login, so every write was rejected with 404. It now fetches a fresh token before each write.
+
+### Included since 1.10.1
+- **Diagnostic logging** option in Settings (off by default) for troubleshooting.
+- **Smaller toasts.**
+- **Shelves are cached** after the first load; refresh only when you ask.
+- Shelf book lists show each book's **author** with row separators.
+- The **update prompt shows release notes**.
+
+### Notes
+- **Relaxed** syncs on open, close and reconnect (no periodic timer).
+- No analytics and no telemetry.
+
 # v1.10.1
 
 ﻿## Goodreads KO Sync 1.10.1
@@ -41,7 +59,3 @@ Automatic syncs still never turn Wi-Fi on by themselves. No analytics and no tel
 ### Notes
 - Automatic syncs still never turn Wi-Fi on by themselves.
 - No analytics and no telemetry.
-
-# v1.9.1
-
-**Full Changelog**: https://github.com/gkgangavarapu/goodreadskosync/compare/v1.9.0...v1.9.1

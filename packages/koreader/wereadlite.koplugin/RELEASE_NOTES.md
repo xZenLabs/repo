@@ -1,3 +1,21 @@
+# v0.2.5
+
+## [0.2.5]
+
+### Fixed
+
+- 优化超大章节的加载体验
+- 优化评论弹窗的体验
+- 网络稳定性修复
+
+---
+
+### 安装
+
+将 `wereadlite.koplugin-v0.2.5.zip` 解压到 KOReader 的 `plugins/` 目录。
+
+请勿打包进 `data/`、`cache/`（会话与缓存数据）。
+
 # v0.2.4
 
 ## [0.2.4]
@@ -65,14 +83,3 @@
 
 
 **Full Changelog**: https://github.com/Exhen/wereadlite.koplugin/compare/v0.2.0...v0.2.1
-
-# v0.2.0
-
-## wereadlite v0.2.0
-
-安装：将 `wereadlite.koplugin-v0.2.0.zip` 解压到 KOReader 的 `plugins/` 目录。
-
-请勿打包进 `data/`、`cache/`（会话与缓存数据）。
-
-
-**Full Changelog**: https://github.com/Exhen/wereadlite.koplugin/compare/v0.1.1...v0.2.0
