@@ -1,3 +1,20 @@
+# v0.4.12-beta.2
+
+## What's Changed
+* Burrow 0.4.12 beta 2: isolate Kindle Wi-Fi recovery by @richbeatty in https://github.com/richbeatty/burrow.koplugin/pull/71
+
+
+**Full Changelog**: https://github.com/richbeatty/burrow.koplugin/compare/v0.4.12-beta.1...v0.4.12-beta.2
+
+# v0.4.12-beta.1
+
+## What's Changed
+* Promote Burrow 0.4.11 beta 4 to stable by @richbeatty in https://github.com/richbeatty/burrow.koplugin/pull/69
+* Burrow 0.4.12 beta 1: restore Kindle Wi-Fi reconnect behavior by @richbeatty in https://github.com/richbeatty/burrow.koplugin/pull/70
+
+
+**Full Changelog**: https://github.com/richbeatty/burrow.koplugin/compare/v0.4.11-beta.4...v0.4.12-beta.1
+
 # v0.4.11-beta.4
 
 ## What's Changed
@@ -21,19 +38,3 @@
 
 
 **Full Changelog**: https://github.com/richbeatty/burrow.koplugin/compare/v0.4.11-beta.1...v0.4.11-beta.2
-
-# v0.4.11-beta.1
-
-## What's Changed
-* Burrow 0.4.11 beta 1: prewarm opposite EPUB tone by @richbeatty in https://github.com/richbeatty/burrow.koplugin/pull/65
-
-
-**Full Changelog**: https://github.com/richbeatty/burrow.koplugin/compare/v0.4.10...v0.4.11-beta.1
-
-# v0.4.10-beta.2
-
-## What's Changed
-* Burrow 0.4.10 beta 2: expand hero spacing range by @richbeatty in https://github.com/richbeatty/burrow.koplugin/pull/62
-
-
-**Full Changelog**: https://github.com/richbeatty/burrow.koplugin/compare/v0.4.10-beta.1...v0.4.10-beta.2

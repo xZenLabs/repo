@@ -1,3 +1,11 @@
+# v0.2.0.2
+
+
+- Added KOReader book series metadata to the existing Book Metadata payload for compatible servers. Deluxe-Sync now sends series and numeric series_index values when KOReader exposes them.
+- Saved KOReader doc_props remain authoritative, with document properties used as a fallback. Zero and decimal series indexes are preserved, while invalid indexes are omitted.
+- Existing Book Metadata consent, capability checks, retry sanitization, and standard KOSync compatibility remain unchanged; unsupported servers do not receive the new metadata fields.
+- Refreshed the README capability summary to document Vocabulary Builder synchronization and the current per-server data-sharing controls.
+
 # v0.2.0.1
 
 
@@ -92,53 +100,3 @@ Deluxe-Sync 0.2.0.0 is a major roll-up release containing all improvements made 
 # v0.1.1
 
 **Full Changelog**: https://github.com/jadehawk/deluxe-sync.koplugin/compare/v0.1.0...v0.1.1
-
-# v0.1.0
-
-# Deluxe-Sync v0.1.0
-
-First public release of Deluxe-Sync, a KOReader plugin for synchronizing reading progress across multiple independent KOSync-compatible servers.
-
-## Highlights
-
-- Multiple server profiles with independent URL, account, enable/disable state, and detected capabilities.
-- Standard KOReader KOSync registration, authentication, push, and pull compatibility.
-- Push the current reading position to every enabled server.
-- Consolidated multi-server Pull Results with differing positions sorted newest-first and identical positions grouped together.
-- Independent automatic behavior for newer and older remote states: **Silently**, **Prompt**, or **Never**.
-- **Auto-Sync Documents defaults OFF**, matching KOReader built-in Progress Sync. When enabled, Deluxe-Sync can pull on document ready/resume and push on suspend/close.
-- Per-server retry queues for offline and transient failures, including a queue viewer, generic failure reasons, and manual retry. Queues belonging to disabled or deleted servers are discarded. A server reaching 20 queued updates is automatically disabled and its queue is cleared.
-- Safe remote-position review and preview. Deluxe-Sync preserves the exact local position while previewing and suppresses its own sync activity until the preview is accepted or cancelled.
-- Server Details capability card showing enabled state, remote library support, and account recovery support.
-- Generic user-facing connection/authentication errors while raw transport details remain available in diagnostic logging.
-
-## Enhanced server support
-
-Deluxe-Sync remains compatible with standard KOSync servers while detecting optional enhanced capabilities.
-
-- Optional metadata extension containing filename, title, and authors, with automatic fallback to the standard KOSync payload when unsupported.
-- Optional remote document listing and remote-library browsing.
-- Local library matching uses binary checksum matches first, then filename and title/author matching.
-- Remote library results are grouped into metadata-available and metadata-unavailable sections and can be inspected without changing reading position.
-- Optional account recovery with stored recovery email, time-limited six-digit email code, password reset, and verification of the replacement credential before it is saved.
-
-## Complimentary Techy-Notes server
-
-On first start with no configured servers, Deluxe-Sync offers the complimentary **Techy-Notes.com** server at https://sync.techy-notes.com or lets the user configure a custom KOSync server.
-
-The Techy-Notes server supports standard KOSync progress syncing plus metadata, remote library listing, and account recovery. Choosing it does not automatically enable Auto-Sync Documents.
-
-## Updates and diagnostics
-
-- Built-in GitHub update checking with automatic once-per-session checks, manual checks, per-version skip persistence, staged replacement, and restart prompt.
-- Plugin-owned runtime data under settings/deluxe-sync/.
-- Diagnostic logging is available from the plugin and can be disabled by the user.
-
-## Installation
-
-Download **deluxe-sync.koplugin.zip** from the assets below, extract it, copy the complete deluxe-sync.koplugin folder into KOReader plugins, and restart KOReader.
-
-Project: https://github.com/jadehawk/deluxe-sync.koplugin
-Techy Notes: https://techy-notes.com
-YouTube: https://youtube.com/@jadehawk
-Buy Me a Coffee: https://buymeacoffee.com/jadehawk

@@ -1,3 +1,16 @@
+# v0.0.9
+
+## v0.0.9
+
+### Fixed
+
+* Fixed an intermittent fatal KOReader crash while scanning the Kindle library from `cc.db`.
+* The crash appeared as `PANIC: unprotected error in call to Lua API (bad callback)` and could occur only on some launches depending on LuaJIT state.
+* Fixed the underlying SQLite/FFI callback path by preventing `sqlite3_step()` from being JIT-compiled before SQLite invokes the plugin's ICU collation callback.
+* The failure was reproduced deterministically on-device and the fix was verified against the same forced repro.
+
+Thanks to @DerHerzog7 for the detailed report in #18.
+
 # v0.0.8
 
 **Full Changelog**: https://github.com/kaikozlov/kindle.koplugin/compare/v0.0.5...v0.0.8

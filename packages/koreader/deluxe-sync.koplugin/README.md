@@ -2,11 +2,12 @@
 
 Deluxe-Sync is a KOReader plugin that extends the built-in KOSync workflow to multiple independent KOReader-compatible servers.
 
-Current plugin version: **0.2.0.1**
+Current plugin version: **0.2.0.2**
 
 - Enhanced Techy-Notes servers can register one durable physical device using the existing Deluxe device ID plus KOReader UUID/model/platform/version metadata; unsupported KOSync servers are unchanged.
 - Enhanced servers advertising annotation sync v1 can synchronize KOReader highlights, notes, and bookmarks with stable IDs, revision conflicts, and deletion tombstones; ordinary KOSync servers receive no annotation traffic.
 - Enhanced servers advertising reading-statistics v1 can receive KOReader's existing `statistics.sqlite3` history through a read-only, resumable, deduplicated upload; Deluxe-Sync never writes to KOReader's live statistics database.
+- Enhanced servers advertising Vocabulary Builder v1 can receive read-only deltas from KOReader's existing `vocabulary_builder.sqlite3`; passage context has its own separate sharing control and is sent only when both the user and server allow it.
 - Enhanced servers advertising settings-backup support with snapshot schema 2 can receive core-only, versioned KOReader settings snapshots. Unknown plugin-owned global settings, sensitive values, device identity, and volatile reader/session state are excluded automatically, and same-device restore still requires explicit confirmation.
 - Enhanced Techy-Notes servers can also keep a separately protected Deluxe-Sync profile for cross-device migration. It restores the same configured server URLs, usernames, preferences, and saved authentication keys so the new reader reconnects to the existing remote accounts and their already-synced progress instead of creating new accounts.
 - Cross-device Deluxe-Sync migration is reader-confirmed and revalidated immediately before apply. Protected authentication is delivered only to the specifically targeted reader, and a matching profile already present on that reader is not repeatedly offered.
@@ -15,7 +16,7 @@ Current plugin version: **0.2.0.1**
 
 ## Overview
 
-Deluxe-Sync lets you configure multiple KOSync servers and push or pull reading progress across them from one plugin. It remains compatible with standard KOSync servers while detecting optional enhanced capabilities such as metadata, remote library listing, account recovery, rich positions, durable device identity, annotation synchronization, reading statistics, client notices, safe per-device settings backups, and protected Deluxe-Sync profile migration.
+Deluxe-Sync lets you configure multiple KOSync servers and push or pull reading progress across them from one plugin. It remains compatible with standard KOSync servers while detecting optional enhanced capabilities such as metadata, remote library listing, account recovery, rich positions, durable device identity, annotation synchronization, reading statistics, Vocabulary Builder synchronization, client notices, safe per-device settings backups, and protected Deluxe-Sync profile migration.
 
 Key capabilities include:
 
@@ -31,6 +32,8 @@ Key capabilities include:
 - Server-side logical-book linking on capable enhanced servers, with linked versions presented as one book while raw sync identities remain intact and reversible.
 - Capability-gated KOReader annotation sync on enhanced servers, including highlights, notes, bookmarks, offline-safe revision conflicts, and tombstones.
 - Capability-gated read-only KOReader reading-statistics upload with resumable history import and server-side deduplication.
+- Capability-gated Vocabulary Builder synchronization from KOReader's existing `vocabulary_builder.sqlite3`, sending only new, changed, or deleted records after convergence. Reading-context text is shared only when the separate Vocabulary Reading Context option is enabled and the server advertises support.
+- Per-server data-sharing controls for Book Metadata, Annotations, Reading Statistics, KOReader Settings Backup, Deluxe-Sync Config Backup, Vocabulary Builder, and optional Vocabulary Reading Context, while Reading Progress remains the core always-on KOSync function.
 - Capability-gated client notices for enhanced servers, with 24-hour repeat suppression and a persistent server attention marker for warning/error notices.
 - Capability-gated per-device settings backups with a fail-closed core-only schema, sensitive/runtime-state filtering, checksum deduplication, and same-device reader-confirmed restore. Unknown third-party plugin settings are excluded by default; Deluxe-Sync setup/preferences use the separate protected profile path. An unchanged local checksum is only an optimization: Deluxe-Sync revalidates its remembered snapshot ID against the server and recreates the baseline if that server copy was deleted.
 - Protected cross-device Deluxe-Sync profile migration for capable servers, restoring the original server URLs, usernames, plugin preferences, and saved authentication keys so existing remote accounts and progress are reused without re-registration.
@@ -38,7 +41,7 @@ Key capabilities include:
 - Optional six-digit email account recovery when supported by the server.
 - Built-in GitHub update checks and in-plugin updates.
 
-When Deluxe-Sync starts with no configured servers, it offers the complimentary **Techy-Notes.com** server at `https://sync.techy-notes.com` or lets the user configure a custom KOSync server. The complimentary server supports standard KOSync progress syncing plus metadata, remote library listing, account recovery, rich positions, durable device identity, logical books, annotation synchronization, reading statistics, client notices, safe per-device settings backups, and protected Deluxe-Sync profile migration. Selecting it does not automatically enable Auto-Sync Documents.
+When Deluxe-Sync starts with no configured servers, it offers the complimentary **Techy-Notes.com** server at `https://sync.techy-notes.com` or lets the user configure a custom KOSync server. The complimentary server supports standard KOSync progress syncing plus metadata, remote library listing, account recovery, rich positions, durable device identity, logical books, annotation synchronization, reading statistics, Vocabulary Builder synchronization, client notices, safe per-device settings backups, and protected Deluxe-Sync profile migration. Selecting it does not automatically enable Auto-Sync Documents.
 
 ## Screenshots
 
@@ -136,12 +139,14 @@ When metadata is enabled for a compatible server, Deluxe-Sync extends the standa
     "filename": "Destroyer of Worlds.epub",
     "title": "Destroyer of Worlds",
     "authors": "Matt Ruff",
-    "asin": "B0DTT5LV77"
+    "asin": "B0DTT5LV77",
+    "series": "The Destroyer of Worlds",
+    "series_index": 2
   }
 }
 ```
 
-The metadata extension contains `filename`, `title`, and `authors`, plus a normalized `asin` when KOReader exposes an explicitly labeled ASIN in the document properties or identifiers. Deluxe-Sync does not guess that an unlabeled 10-character identifier is an ASIN, which avoids confusing ISBN-10 values with Amazon identifiers. ASIN remains part of the existing Book Metadata sharing choice; if metadata is disabled or the server is detected as metadata-incompatible, Deluxe-Sync falls back to the standard payload.
+The metadata extension contains `filename`, `title`, and `authors`, plus a normalized `asin` when KOReader exposes an explicitly labeled ASIN in the document properties or identifiers. When KOReader exposes series metadata, Deluxe-Sync also sends `series` and a numeric `series_index`; saved document properties take precedence over raw document properties, and invalid series indexes are omitted. Deluxe-Sync does not guess that an unlabeled 10-character identifier is an ASIN, which avoids confusing ISBN-10 values with Amazon identifiers. All of these fields remain part of the existing Book Metadata sharing choice; if metadata is disabled or the server is detected as metadata-incompatible, Deluxe-Sync falls back to the standard payload.
 
 ### Rich reading position on capable servers
 

@@ -1,3 +1,21 @@
+# v1.0.6-beta.11
+
+## What's Changed
+
+- Header & Footer: fix crash when tapping an item inside the menu
+- Icon picker: optimize search logic and rework showIconPicker to fix crashes on Android
+- Icon picker: add label toggle (eye / eye-off) to show or hide icon names in the grid
+- Quick Actions editor: add 'New' and 'Action Pool' buttons to action edit dialogs
+- Quick Actions editor: refresh panel and bottom bar immediately after add/remove/reorder
+- Preset management: add 'Apply preset' to 'Action Pool' ( falls back to defaults if none)
+- Bottom bar: fix missing bottom bar after screen rotation on Android
+- Bottom bar: fix missing bottom bar when entering History/Collections from another fullscreen view
+- Bottom bar: fix crash in History/Collections when handling tabs (add/move/sort/etc.)
+- Bottom bar: fix touch zone residue after removing the rightmost tab in History/Collections
+- Bottom bar: improve bottom bar show/hide experience in ReaderUI
+- Compatibility: Improved compatibility with SimpleUI Homescreen (see README or Plugin Info for setup details)
+- Updates: fix occasional crash when checking for updates
+
 # v1.0.6-beta.10
 
 ## 更新说明
@@ -110,17 +128,3 @@
 - Bottom bar: fix missing bottom bar after screen rotation on Android
 - Bottom bar: fix missing bottom bar when entering History/Collections from another fullscreen view
 - Bottom bar: fix crash in History/Collections when handling tabs (add/move/sort/etc.)
-
-# v1.0.6-beta.6
-
-## What's Changed
-
-- Header & Footer: fix crash when tapping an item inside the menu
-- Icon picker: optimize search logic and rework showIconPicker to fix crashes on Android
-- Icon picker: add label toggle (eye / eye-off) to show or hide icon names in the grid
-- Quick Actions editor: add 'New' and 'Action Pool' buttons to action edit dialogs
-- Quick Actions editor: refresh panel and bottom bar immediately after add/remove/reorder
-- Preset managemen: add 'Apply preset' to 'Action Pool' (uses saved preset, falls back to defaults if none)
-- Bottom bar: fix missing bottom bar after screen rotation on Android
-- Bottom bar: fix crash in History/Collections when handling tabs (add/move/sort/etc.)
-- Bottom bar: inject bottom bar into History/Collections before first paint to avoid double flash
