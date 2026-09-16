@@ -28,6 +28,12 @@ class CachedPackageMetadataTests(unittest.TestCase):
         scrape_common.fetch_readme = self.fetch_readme
         self.temp_dir.cleanup()
 
+    def test_classifies_reference_plugins(self):
+        self.assertEqual(scrape_common.classify_category({
+            "name": "lookup.koplugin",
+            "description": "A dictionary UI for KOReader",
+        }), "reference")
+
     def test_load_blacklist_normalizes_github_urls(self):
         scrape_common.SCRAPE_BLACKLIST = os.path.join(self.temp_dir.name, "blacklist.json")
         with open(scrape_common.SCRAPE_BLACKLIST, "w", encoding="utf-8") as fh:

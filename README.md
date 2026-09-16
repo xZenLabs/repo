@@ -167,6 +167,7 @@ Each package metadata file must include a `category` set to one of:
 - `utility`
 - `games`
 - `productivity`
+- `reference`
 - `media`
 - `theme`
 - `patches`

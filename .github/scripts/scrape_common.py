@@ -42,7 +42,7 @@ PLUGIN_IDENTITY_FIELDS = (
     "source_asset_aliases",
 )
 
-VALID_CATEGORIES = ("utility", "games", "productivity", "media", "theme", "patches", "fonts", "wallpapers", "screensavers")
+VALID_CATEGORIES = ("utility", "games", "productivity", "reference", "media", "theme", "patches", "fonts", "wallpapers", "screensavers")
 DEFAULT_CATEGORY = "utility"
 PATCH_CATEGORY = "patches"
 
@@ -62,6 +62,12 @@ CATEGORY_KEYWORDS = [
         "puzzle", "2048", "chess", "wordsearch", "word search", "frotz",
         "trivia", "quiz", "arcade", "tetris", "minesweeper", "connections",
     ]),
+    ("reference", [
+        "dictionary", "dictionaries", "definition", "definitions", "glossary",
+        "glossaries", "thesaurus", "thesauri", "encyclopedia", "encyclopedias",
+        "wikipedia", "wiktionary", "wordreference", "word wise", "x-ray", "xray",
+        "reference work", "reference images", "character map", "character guide",
+    ]),
     ("theme", [
         "theme", "ui", "look", "design", "redesign", "appearance", "skin",
         "style", "home screen", "homescreen", "home page", "homepage",
@@ -77,7 +83,7 @@ CATEGORY_KEYWORDS = [
         "rss", "feed", "telegram",
     ]),
     ("productivity", [
-        "anki", "flashcard", "vocabulary", "dictionary", "note", "notes",
+        "anki", "flashcard", "vocabulary", "note", "notes",
         "highlight", "annotation", "sync", "todo", "task", "planner", "tracker",
         "zotero", "obsidian", "readwise", "pomodoro", "calendar", "translate",
         "translation", "wallabag", "readeck", "instapaper", "bookmark",
