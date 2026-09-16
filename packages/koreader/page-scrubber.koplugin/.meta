@@ -9,6 +9,7 @@ author=lautaroelkin
 category=media
 platforms=koreader
 dependencies=
+conflicts=zen-ui
 source=https://github.com/lautaroelkin/page_scrubber.koplugin
 stars=44
 updated_at=2026-09-16T19:12:22Z
