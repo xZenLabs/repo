@@ -1,3 +1,9 @@
+# v1.0.1
+
+fix: Panels+ now answers the long press while it is enabled, and meguru answers when it is not.
+
+**Full Changelog**: https://github.com/Craftwork2720/meguru/compare/v1.0.0...v1.0.1
+
 # v1.0.0
 
 ## meguru — Panel reading
@@ -20,7 +26,3 @@
 # v0.9.3
 
 **Full Changelog**: https://github.com/Craftwork2720/meguru/compare/v0.9.2...v0.9.3
-
-# v0.9.2
-
-**Full Changelog**: https://github.com/Craftwork2720/meguru/compare/v0.9.1...v0.9.2
