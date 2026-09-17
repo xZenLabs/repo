@@ -1,3 +1,14 @@
+# v1.9.1
+
+- Installs from before v1.7.0 that still saved port 8080 now move to port 80, so http://filesync.local works with no ":8080" suffix. A port you set by hand is left alone. (#51)
+- On devices that cannot use port 80, the "needs root access" message now appears once per port instead of on every start. (#51)
+
+# v1.9.0
+
+- The server is now reachable at http://filesync.local, so there is no IP to type. Rename it in the plugin menu. Works on macOS, iOS and Windows; Linux needs avahi; Android needs the IP. (#47)
+- Folders can now be uploaded from the web UI, with a Choose Folder button or by dropping one on the page. (#41)
+- Fixed: folders with a leading or trailing space could be listed but not opened on 2024+ Kindles. Failed opens now say why. (#46)
+
 # v1.8.0
 
 - KOReader's *Delete plugin and settings* / *Disable plugin and delete settings* menu entries now work for FileSync: the plugin's settings are removed along with it, and the file server is stopped cleanly before the restart. (#25)
@@ -17,60 +28,3 @@
 
 - Start server flow now triggers KOReader's standard "Turn on Wi-Fi?" prompt instead of bailing with a warning when WiFi is off; server starts automatically once connected. Same flow applies to the update check. (#23)
 - Web UI now opens in the KOReader home folder by default. (#22)
-
-# v1.5.0
-
-## What's New
-
-### Streaming Uploads (up to 1 GB)
-- File uploads now stream directly to disk in 64 KB chunks instead of loading the entire file into memory
-- Upload limit raised from 50 MB to **1 GB** -- supports large comic compilations, graphic novels, and PDF collections
-- Memory usage during uploads stays constant (~128 KB) regardless of file size
-- Client-side file size validation with instant feedback before upload begins
-- Warning toast for files over 100 MB about potential UI slowdown
-
-### Code Quality & Maintainability
-- Extracted shared json.lua module -- eliminated ~300 lines of duplicated JSON parser code
-- Extracted shared utils.lua module -- consolidated plugin directory resolution and shell escaping across 5 files
-- Extracted mobi.lua module -- MOBI/AZW3 binary parser moved out of fileops.lua (~300 lines)
-- Consolidated EPUB OPF parsing into a single helper, eliminating ~120 lines of duplication
-- Removed dead code: qrcode.lua (145 lines, never used), unused _httpsRequest function
-
-### Security & Robustness
-- Added HTTP request body size limit (1 MB for API calls) with 413 response
-- Added HTTP header count limit (100 max) to prevent resource exhaustion
-- Fixed nil-safety crash in QR code icon path resolution
-- Added pcall protection for lfs.dir in recursive delete
-- Check f:write() return value on uploads -- partial files are now cleaned up on disk-full errors
-- Added tonumber guard on port before iptables commands (Kindle)
-- Check backup move return value before plugin update install
-
-### UI Responsiveness
-- E-reader UI stays responsive during large uploads and downloads (yields to UIManager every ~2 MB)
-- Reduced HTTP connection timeout from 5s to 2s with 3s per-poll-cycle time budget
-- Forced garbage collection after large uploads to prevent memory pressure on directory reload
-
-### Testing
-- Added busted test framework with **195 unit tests**
-- Test coverage for JSON encode/decode, path validation, filename validation, version parsing, URL decoding, query parsing, boundary extraction, and upload filename handling
-- Added constructors to FileOps and FileSyncManager for testability
-- Decoupled FileOps from HTTP transport layer
-
-### Documentation & i18n
-- Added "Running Tests" section to Contributing guide in all 10 languages
-- Added large file upload warning to troubleshooting in all 10 languages
-- Added module-level documentation and @param/@return annotations throughout
-- New web UI toast strings translated in all 10 .po files
-- Updated directory tree in all READMEs to reflect new module structure
-
-# v1.4.0
-
-## What's New
-
-- Add 6 new language translations: Arabic, Hindi, Japanese, Korean, Russian, and Turkish (#21)
-- Modularize monolithic web UI and unify i18n with .po files (#20)
-
-**Full Changelog**: https://github.com/abrahamnm/filesync.koplugin/compare/v1.3.1...v1.4.0
-
-### Contributions
-- @abrahamnm: New language translations and web UI modularization.
