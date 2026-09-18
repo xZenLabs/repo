@@ -1,3 +1,16 @@
+# v5.1.1
+
+A fix-up release for 5.1.0.
+
+- The bundled wallpaper is actually installed now.
+- Spine folders open much faster.
+- Face out the next unread book in a series, not just the first.
+- A face-out reason ticked on its own now works; "Unread" alone never did.
+- "Pages" in list rows is translatable, and so is the rest of the progress line (#418).
+- The top panel's menu items say "top panel" rather than "book detail view".
+- New installs open on Home / Recent / Series / Genres.
+- Russian, and the shading and speed labels that shared one word across unrelated menus (#416, thanks @d1-m4ss).
+
 # v5.1.0
 
 **A picture behind the shelf.** Wallpaper, chosen per shelf or as a library default, with a separate picture for full screen shelves where a backdrop that works behind the top panel is often too busy. Drop images into KOReader's `settings/bookshelf/wallpapers` folder and they turn up in the list; the menu always shows you the path, and one picture is bundled to start you off. Panel shading keeps the top panel and footer buttons legible over whatever you pick, from transparent through to solid.
@@ -60,7 +73,3 @@ Books sideloaded after you have opened a book now appear on the shelf on their o
 # v5.0.6
 
 Fixes blurred cover images on the hero card, and books in a series sorting to the end of most-recently-added shelves
-
-# v5.0.5
-
-Fixes a crash when opening a second book, and stops KOReader deleting Bookshelf's cached data
