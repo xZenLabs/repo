@@ -1,3 +1,9 @@
+# v1.5
+
+The angle of inclination of the diagonal (global and independent per cell in grid mode) can now be chosen.
+
+A vertical animation mode was added.
+
 # v1.0
 
 Now you can create a grid of up to 8x8 that allows you to put the animation you want in each of the cells, as well as decide if that cell is going forward or backward.
