@@ -1,3 +1,13 @@
+# V1.0.8
+
+Bug Fixes
+
+1. **Fixed a crash when starting an offline game against the computer.**
+
+- Root Cause: A module name collision within the KOReader ecosystem. Our plugin had a generic file named utils.lua. If a user had other plugins installed that also used the same file name (such as Audiobook, AnnotationSync, or others), KOReader would mistakenly load the other plugin's file instead of ours. This caused InkMate to crash because it couldn't find the specific functions it needed to launch the Stockfish chess engine.
+
+2. **Exit button closes KOReader instead of returning to KOReader.**
+
 # V1.0.7
 
 v1.0.7: Fix checkmate, Kindle timeouts, offline puzzles, and UI crash
@@ -32,31 +42,3 @@ Corrected player labels and clock alignment in the status bar: Fixed a confusing
 - Fixed KOReader Crash on Game Actions: Resolved a critical crash that occurred when selecting "Offer draw", "Propose takeback", or "Resign" from the in-game actions menu. This was caused by an immediate widget replacement during a teardown sequence. Callbacks have been properly safely wrapped so the menu closes correctly before the confirmation dialog opens.
 
 - Fixed Lichess Takeback Offers: Resolved an issue where incoming takeback offers from your opponent were being silently ignored. This was due to a strict camelCase formatting requirement in the Lichess streaming API (wTakeback/bTakeback instead of lowercase properties). You will now be correctly prompted when an opponent proposes a takeback.
-
-# v1.0.0
-
-### **Inkmate v1.0.0**
-
-Welcome to the first official release of Inkmate! Based on Casualchess, Inkmate has been completely overhauled to turn your e-reader into the ultimate standalone chess and board game companion.
-
-Whether you want to analyze lines against Stockfish on a plane, play against friends online, or solve your Lichess daily puzzles during your morning coffee, Inkmate is built to deliver a beautiful, e-ink-optimized experience.
-
- **Key Features**
-
-- Lichess Integration: Log in with your Lichess token to play live online games directly from your e-reader.
-- Daily Puzzles: Fetch and solve the official Lichess Daily Puzzle. Puzzle metadata (rating, themes, origin game) are displayed seamlessly below the board.
-- **Offline Puzzles:** Load your own puzzles via a local puzzles.csv file for offline practice.
-- **Play offline against the Stockfish** engine with adjustable difficulty levels to match your skill.
-- More than just Chess: Take a break from chess with fully playable built-in variants and mini-games including Checkers, Reversi (Othello), and Fox and Hounds.
-- **Smart Save State:** Close your book or turn off your device at any time. Inkmate automatically saves your current game, timer, and puzzle state so you can resume exactly where you left off.
-- E-Ink Optimized UI: A clean, distraction-free interface built specifically for KOReader, featuring touch-friendly buttons, clear piece contrast, and smooth interactions.
-
-🛠️ Installation
-
-1. Download the inkmate.koplugin folder from the source code below.
-2. Place the folder into the plugins/ directory of your KOReader installation on your e-reader.
-3. Restart KOReader. You will find Inkmate in your plugins menu!
-
-**(Optional) To enable Lichess online features, insert your personal Lichess API token in the plugin's settings menu.**
-
-**Feel free to tweak any wording or add a section if you want to include specific installation instructions or credits! Let me know if you need any adjustments.**

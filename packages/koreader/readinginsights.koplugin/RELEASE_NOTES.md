@@ -1,3 +1,9 @@
+# v6.6.0
+
+### New
+
+Progress bar for the "This book" section: shows how far you are into the book, on/off toggle plus configurable colors and height in the menu.
+
 # v6.5.3
 
 Reading insights popup: prefetch the other two chart modes (hours/days/books) in the background after opening, so switching modes no longer triggers a slow, uncached DB query the first time each day
@@ -18,11 +24,3 @@ Reading insights popup: prefetch the other two chart modes (hours/days/books) in
 - Added a hamburger menu to the top-left of the Reading Insights popup's title bar, giving quick access to the Streak, Heatmap, Records, and Achievements popups without navigating the full page.
   - Added an Advanced settings toggle (Reading insight popup → "Hamburger menu") to show/hide it. Default: off.
 - French translation added #75 (Thanks @maxxfly) and added some missing translations for other languages.
-
-# v6.4.1
-
-### Changed
-- Book progress → chapter bar: when a book has fewer chapters than the
-  "Chapters per page" setting (default 25), the paging arrows no longer
-  appear at all (previously shown greyed-out). Instead, the chapter
-  columns stretch to use the freed-up width.
