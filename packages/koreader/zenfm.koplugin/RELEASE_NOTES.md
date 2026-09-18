@@ -1,3 +1,12 @@
+# v1.1.0
+
+## What's Changed
+
+- Add favorites/bookmarks
+- Faster copy/upload to device
+- Fix image thumbnails not all showing
+- Queue multiple uploads
+
 # v1.0.6
 
 ## What's Changed
@@ -27,15 +36,3 @@
 ## What's Changed
 
 - Fix ZenFM startup on PocketBook firmware without shell arithmetic support
-
-# v1.0.2
-
-## What's Changed
-
-- Remember the current location across sign-in
-- Choose Home and a default directory
-- Restart a running server after plugin updates
-- Reduce routine logging and follow KOReader's debug setting
-- Prevent duplicate inactivity-stop notifications
-- Update updater flow
-- Allow copy/paste in same dir with duplicate/overwrite

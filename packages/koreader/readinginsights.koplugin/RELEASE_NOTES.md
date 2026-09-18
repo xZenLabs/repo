@@ -1,3 +1,7 @@
+# v6.6.1
+
+Loading indicator for slow heatmap opens
+
 # v6.6.0
 
 ### New
@@ -17,10 +21,3 @@ Reading insights popup: prefetch the other two chart modes (hours/days/books) in
 
 ### Added
 - "Show week numbers" option (off by default, in Advanced settings > Date & time): adds a gray week-number column to both reading calendars. #77
-
-# v6.5.0
-
-### New
-- Added a hamburger menu to the top-left of the Reading Insights popup's title bar, giving quick access to the Streak, Heatmap, Records, and Achievements popups without navigating the full page.
-  - Added an Advanced settings toggle (Reading insight popup → "Hamburger menu") to show/hide it. Default: off.
-- French translation added #75 (Thanks @maxxfly) and added some missing translations for other languages.

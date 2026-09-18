@@ -1,3 +1,23 @@
+# v1.11.5
+
+﻿## Goodreads KO Sync 1.11.5
+
+### Fixed
+- **Automatic syncs (open/close/reconnect) no longer abort** when you tap the screen; the queue flush now runs to completion.
+- **Automatic open/reconnect syncs show a toast** when they send a queued item.
+- **Sync now works with no book open** and respects sticky Read / Did Not Finish.
+- **Notes to Goodreads** are saved offline and posted automatically when you reconnect.
+- CSRF token is fetched/refreshed correctly (fixes the earlier write failures).
+
+### Changed
+- Toasts show just the book/action detail (no plugin-name prefix).
+- **Browse shelves** is temporarily hidden from the menu.
+- Optional **Diagnostic logging** in Settings (off by default).
+
+### Notes
+- **Relaxed** syncs on open, close and reconnect (no periodic timer).
+- No analytics and no telemetry.
+
 # v1.11.3
 
 ﻿## Goodreads KO Sync 1.11.3
@@ -42,20 +62,3 @@ Automatic syncs still never turn Wi-Fi on by themselves. No analytics and no tel
 - Minor changes.
 
 Automatic syncs still never turn Wi-Fi on by themselves. No analytics and no telemetry.
-
-# v1.9.2
-
-﻿## Goodreads Sync 1.9.2
-
-### Fixed
-1. **Settings no longer crashes KOReader.**
-2. **No duplicate progress:** if Goodreads already has your current percent, closing the book no longer pushes the same value again.
-3. **Shelves are cached:** after the first **Load from Goodreads**, the shelf list and the books you open are stored on the device, so the browser opens instantly and only re-fetches when you tap **Refresh from Goodreads**.
-
-### Changed
-4. **Shelf book lists** now show each book's **author** on the right, with clear row separators.
-5. **The update prompt shows release notes:** when a new version is available you see these notes before choosing **Update**; installing downloads, verifies (SHA-256), and asks for a restart.
-
-### Notes
-- Automatic syncs still never turn Wi-Fi on by themselves.
-- No analytics and no telemetry.
