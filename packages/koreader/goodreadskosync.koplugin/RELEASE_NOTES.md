@@ -1,3 +1,12 @@
+# v1.12.0
+
+﻿## Goodreads KO Sync 1.12.0
+
+### Changed
+- **Internal refactor only — no behaviour change.** A single reusable Goodreads API module, a dedicated sync controller, and shared tasks / menu / notes modules. This makes the code easier to maintain as Goodreads changes.
+
+No analytics and no telemetry.
+
 # v1.11.5
 
 ﻿## Goodreads KO Sync 1.11.5
@@ -52,13 +61,5 @@ Automatic syncs still never turn Wi-Fi on by themselves. No analytics and no tel
 ### Changed
 1. The plugin is now named **Goodreads KO Sync** (the "(unofficial)" suffix is gone from the menu).
 2. New installs default to the **Relaxed** sync preset (least battery use); existing installs keep their chosen preset.
-
-Automatic syncs still never turn Wi-Fi on by themselves. No analytics and no telemetry.
-
-# v1.9.3
-
-﻿## Goodreads Sync 1.9.3
-
-- Minor changes.
 
 Automatic syncs still never turn Wi-Fi on by themselves. No analytics and no telemetry.

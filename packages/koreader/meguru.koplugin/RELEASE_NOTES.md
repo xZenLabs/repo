@@ -1,3 +1,9 @@
+# v1.1.0
+
+Added KOReader → Komga progress sync: your current page is sent as you read, so Komga's own apps always show where you left off. Can be disabled in the Meguru menu
+
+**Full Changelog**: https://github.com/Craftwork2720/meguru/compare/v1.0.1...v1.1.0
+
 # v1.0.1
 
 fix: Panels+ now answers the long press while it is enabled, and meguru answers when it is not.
@@ -22,7 +28,3 @@ fix: Panels+ now answers the long press while it is enabled, and meguru answers 
 # v0.9.4
 
 **Full Changelog**: https://github.com/Craftwork2720/meguru/compare/v0.9.3...v0.9.4
-
-# v0.9.3
-
-**Full Changelog**: https://github.com/Craftwork2720/meguru/compare/v0.9.2...v0.9.3
