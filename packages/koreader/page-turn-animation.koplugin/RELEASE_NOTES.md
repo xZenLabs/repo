@@ -1,3 +1,7 @@
+# v2.0
+
+Basically, there are two new settings for diagonals from either side. It measures the angle between the center of the screen and the nearest corner, calculating anything from 45° at the bottom to 89° in the center. You can also add a dead zone in the middle so you don't have to be super precise to get a horizontal line. Sorry for the long explanation; it is just hard for me to keep things brief.
+
 # v1.5
 
 The angle of inclination of the diagonal (global and independent per cell in grid mode) can now be chosen.

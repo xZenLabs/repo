@@ -1,3 +1,27 @@
+# v1.5.0
+
+## 新功能与改进
+
+- 重做书架导航，支持书籍分组筛选，优化搜索和刷新体验。
+- 整本下载支持断点续传，降低内存占用，并改进进度反馈与取消操作。
+- 修复本地书章节匹配与划线刷新问题，减少开书和翻页时的卡顿。
+- 修复部分扫码登录失败的问题。
+- 自动检查更新的间隔缩短为 1 小时。
+
+感谢 @IswordSun、@vein-cyber 的贡献。
+
+## What's Changed
+* fix: match chapters independently of catalog order by @finlater in https://github.com/finlater/weread.koplugin/pull/161
+* fix: serialize empty QR login OTP value by @vein-cyber in https://github.com/finlater/weread.koplugin/pull/167
+* feat: resume interrupted full-book downloads by @IswordSun in https://github.com/finlater/weread.koplugin/pull/160
+* feat: redesign bookshelf navigation with cached book groups by @finlater
+
+## New Contributors
+* @vein-cyber made their first contribution in https://github.com/finlater/weread.koplugin/pull/167
+* @IswordSun made their first contribution in https://github.com/finlater/weread.koplugin/pull/160
+
+**Full Changelog**: https://github.com/finlater/weread.koplugin/compare/v1.4.2...v1.5.0
+
 # v1.4.2
 
 ## 新功能与改进
@@ -52,25 +76,3 @@
 
 
 **Full Changelog**: https://github.com/finlater/weread.koplugin/compare/v1.3.0...v1.3.1
-
-# v1.3.0
-
-## 新功能与改进
-
-- 新增自适应封面书架（设置-书架视图-封面模式），并默认启用分页，提升大书架的加载速度。
-- 重做想法弹窗，支持 Emoji、长内容滚动、物理按键操作和显示样式调整，支持长按复制想法。
-- 下载设置新增脚注弹窗选项，可隐藏正文中的脚注文本。
-- 移除划线末尾的星号，避免影响正文排版。
-- 修复阅读进度自动同步偶尔失败、封面书架显示不稳定等问题。
-
-感谢 @lostanother、@jqs7 和 @baily-zhang 的贡献。
-
-## What's Changed
-* perf(library): paginate bookshelf views by @lostanother in https://github.com/finlater/weread.koplugin/pull/121
-* feat(library): add adaptive cover shelf by @lostanother in https://github.com/finlater/weread.koplugin/pull/128
-* fix(progress-sync): retry automatic pull when the link is not ready by @baily-zhang in https://github.com/finlater/weread.koplugin/pull/130
-
-## New Contributors
-* @baily-zhang made their first contribution in https://github.com/finlater/weread.koplugin/pull/130
-
-**Full Changelog**: https://github.com/finlater/weread.koplugin/compare/v1.2.0...v1.3.0
