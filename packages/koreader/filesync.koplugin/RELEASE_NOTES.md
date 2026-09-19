@@ -1,3 +1,7 @@
+# v1.10.0
+
+- Fixes issue stopping server freezes Kobo devices
+
 # v1.9.1
 
 - Installs from before v1.7.0 that still saved port 8080 now move to port 80, so http://filesync.local works with no ":8080" suffix. A port you set by hand is left alone. (#51)
@@ -23,8 +27,3 @@
 - QR code screen now works on non-touch devices: The screen is fully keyboard-navigable. (#31)
 - README is now more generic about supported devices. (#30)
 - Synced all translation catalogs with the codebase. (#38)
-
-# v1.6.0
-
-- Start server flow now triggers KOReader's standard "Turn on Wi-Fi?" prompt instead of bailing with a warning when WiFi is off; server starts automatically once connected. Same flow applies to the update check. (#23)
-- Web UI now opens in the KOReader home folder by default. (#22)

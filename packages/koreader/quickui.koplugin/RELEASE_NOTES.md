@@ -12,7 +12,7 @@
 - 底部栏：修复历史记录/收藏界面处理（添加/移动/排序等）按钮时崩溃的问题
 - 底部栏：修复历史记录/收藏界面移除最右侧按钮时触摸区域残留的问题
 - 底部栏：优化阅读界面底部栏显示/隐藏体验（阅读时修改设置立即生效，而不是翻页或重新打开书籍才生效）
-- 兼容性：提升对simpleui主屏幕的兼容性（详情请查看readme或插件说明）
+- 兼容性：提升对[simpleui](https://github.com/gytwo/simpleui.koplugin/releases)主屏幕的兼容性（详情请查看readme或插件说明）
 - 更新：修复检查更新偶尔崩溃的问题
 ## What's Changed
 - Header & Footer: fix crash when tapping an item inside the menu
@@ -28,6 +28,7 @@
 - Bottom bar: improve bottom bar show/hide experience in ReaderUI
 - Compatibility: Improved compatibility with SimpleUI Homescreen (see README or Plugin Info for setup details)
 - Updates: fix occasional crash when checking for updates
+<img width="605" height="633" alt="image" src="https://github.com/user-attachments/assets/cff2a18b-0ff4-49b1-a2c3-ad4ccad6669c" />
 
 # v1.0.5
 
