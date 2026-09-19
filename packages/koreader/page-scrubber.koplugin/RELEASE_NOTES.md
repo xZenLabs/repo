@@ -1,3 +1,25 @@
+# v7.0.0
+
+
+### ​Full Landscape Mode Support:
+ All plugin interfaces (Grid, 6-Grid, Split View, and Table of Contents) have been adapted for landscape reading. The bottom navigation bar has been reorganized into a standardized two-level layout: a clean top row housing page-turning controls and reading telemetry, and a full-width progress slider below, optimizing ergonomics and thumb reach when holding the device horizontally.  
+
+### ​6-Grid Optimization: Significantly reduced loading latency when generating page thumbnails across the 3x2 grid layout, making browsing smoother.
+
+### ​Faster Startup & Reopening: Greatly improved load times when opening, closing, and reopening the scrubber interface during active reading.
+
+### ​Removed Top Bar: Eliminated the redundant top header to give the entire interface more breathing room and maximize vertical space for thumbnails and reading content.
+
+### ​Origin Page Indicator: A subtle gray dot now marks your starting reading page in the top-left corner (in Simple Grid mode, bookmarks are also clearly marked on the header).  
+
+### ​(index) Chapter Bookmark & Highlight Telemetry: The Table of Contents bottom bar now displays real-time counters showing the exact number of bookmarks and highlights present in the current chapter.  
+
+### ​Enhanced Dictionary Typography: Increased the default font size in the dictionary pop-up for more comfortable and legible reading on high-density displays.  
+
+### ​Visual Polish: Refined press feedback and tactile animations across buttons for a cleaner, modern look.
+
+[page_scrubber.koplugin.zip](https://github.com/user-attachments/files/32409558/page_scrubber.koplugin.zip)
+
 # v6.2.2
 
 v6.2.2 Update
@@ -63,29 +85,3 @@ This update introduces granular annotation management in Split View, typographic
 ​Optimized for responsive navigation on E-ink devices. If you encounter an unexpected issue, please attach a crash.log.
 
 [page_scrubber.koplugin.zip](https://github.com/user-attachments/files/32137671/page_scrubber.koplugin.zip)
-
-# v6.0.0
-
-Page Scrubber v6.0 — Release Notes
-
-### Introducing Scrubber Actions: Your Reading Control Center
-Access the features and plugins you actually use without leaving your page or digging through KOReader's nested system menus. Scrubber Actions transforms the page scrubber into a customizable hub:
- * Instant Access to Heavy-Hitting Tools: Launch your most important tools in a single tap—open Vocabulary Builder, launch other plugins like Bookshelf or SimpleUI, trigger cloud Progress Sync (push and pull), switch Screen Orientation, jump into Reading Statistics, browse your File Manager, and more.
- * Curated System Palette: Pick up to 8 dedicated shortcuts tailored to your personal workflow from an extensive, filtered list of available system and plugin actions.
- * Frictionless Management: Add, or remove shortcuts on the fly. Active items display a clear checkmark (✓) status, preventing accidental duplicates.
- * Seamless Action Dispatch: Executes chosen actions instantly via the wharehouse icon on the Mini-Menu.
- 
-### Smart Markdown Annotation Export
-Exporting your notes and highlights now preserves the exact style and intent of your reading session:
- * Type-Aware Visual Glyphs: Highlights automatically include dedicated Unicode symbols directly inside Markdown blockquotes (> glyph text):
-   * ✪ Standard highlight (lighten)
-   * ﹏ Underline (underscore)
-   * ◧ Inverted text (invert)
-   * ✖ Strikethrough (strikeout)
- * Clean Document Structure: Bookmarks are indexed neatly at the top under ⚑ (⚑ : 12, 34, 85), keeping chapter and page headers clean (## page).
- 
-### Stability & Internationalization
- * Touch & Modal Crash Fix: Fixed an event-loop crash when selecting duplicate actions, ensuring existing entries are skipped safely without freezing the interface.
- * Full Multi-Language Support: Scrubber Actions is translated into 10 languages: English, Spanish, French, German, Italian, Portuguese, Russian, Simplified Chinese, Japanese, Dutch, and Polish.
-
-[page_scrubber.koplugin.zip](https://github.com/user-attachments/files/32035243/page_scrubber.koplugin.zip)

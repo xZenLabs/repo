@@ -1,6 +1,6 @@
 # v1.1.0
 
-Added KOReader → Komga progress sync: your current page is sent as you read, so Komga's own apps always show where you left off. Can be disabled in the Meguru menu
+ Add: Meguru→ Komga progress sync
 
 **Full Changelog**: https://github.com/Craftwork2720/meguru/compare/v1.0.1...v1.1.0
 

@@ -28,6 +28,7 @@
 - Bottom bar: improve bottom bar show/hide experience in ReaderUI
 - Compatibility: Improved compatibility with SimpleUI Homescreen (see README or Plugin Info for setup details)
 - Updates: fix occasional crash when checking for updates
+<img width="505" height="680" alt="simpleui主屏幕" src="https://github.com/user-attachments/assets/b720e94e-b711-474d-8d98-16f2c693ab5e" />
 <img width="605" height="633" alt="image" src="https://github.com/user-attachments/assets/cff2a18b-0ff4-49b1-a2c3-ad4ccad6669c" />
 
 # v1.0.5
