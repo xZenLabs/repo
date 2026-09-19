@@ -1,3 +1,9 @@
+# v1.2.0-beta1
+
+## What's Changed
+
+- Direct p2p sharing over https locally (like localsend)
+
 # v1.1.0-beta5
 
 ## What's Changed
@@ -25,13 +31,6 @@
 - Queue multiple uploads
 
 # v1.1.0-beta2
-
-## What's Changed
-
-- Add favorites/bookmarks
-- Fix image thumbnails not all showing
-
-# v1.1.0-beta1
 
 ## What's Changed
 
