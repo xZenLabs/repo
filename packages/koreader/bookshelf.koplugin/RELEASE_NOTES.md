@@ -1,3 +1,18 @@
+# v5.1.2
+
+Fixes and polish for 5.1.
+
+- Returning to the shelf after closing a book is much quicker (#422).
+- Shelves showing folders open much faster (#409).
+- The hero no longer glitches when you switch to a shelf with nothing in it (#423).
+- Shelf colours no longer come out inverted when night mode is switched by something other than KOReader (#426).
+- The shelf boards keep their wood colour with the shelf theme pinned to Light or Dark.
+- Spine mode follows KOReader's "Folders and files mixed" setting.
+- "Recently added" faces out that many books across the shelf, rather than that many on every screen.
+- Face out the first, or the first unread, book of a series on a shelf with no series grouping (#425).
+- The label under a cover follows the Panel shading setting.
+- Tidier outlines in the shelf menu, and the drilled-in view now matches the top level.
+
 # v5.1.1
 
 A fix-up release for 5.1.0.
@@ -69,7 +84,3 @@ Fixes:
 # v5.0.7
 
 Books sideloaded after you have opened a book now appear on the shelf on their own, instead of needing a swipe-down refresh
-
-# v5.0.6
-
-Fixes blurred cover images on the hero card, and books in a series sorting to the end of most-recently-added shelves
