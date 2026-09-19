@@ -1,3 +1,11 @@
+# v0.4.12-beta.3
+
+## What's Changed
+* Burrow 0.4.12 beta 3: make Bionic Reading interactive sooner by @richbeatty in https://github.com/richbeatty/burrow.koplugin/pull/72
+
+
+**Full Changelog**: https://github.com/richbeatty/burrow.koplugin/compare/v0.4.12-beta.2...v0.4.12-beta.3
+
 # v0.4.12-beta.2
 
 ## What's Changed
@@ -30,11 +38,3 @@
 
 
 **Full Changelog**: https://github.com/richbeatty/burrow.koplugin/compare/v0.4.11-beta.2...v0.4.11-beta.3
-
-# v0.4.11-beta.2
-
-## What's Changed
-* Burrow 0.4.11 beta 2: reduce reader transition latency by @richbeatty in https://github.com/richbeatty/burrow.koplugin/pull/66
-
-
-**Full Changelog**: https://github.com/richbeatty/burrow.koplugin/compare/v0.4.11-beta.1...v0.4.11-beta.2
