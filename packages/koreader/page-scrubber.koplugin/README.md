@@ -1,13 +1,14 @@
 # Page Scrubber Plugin! 
-This plugin allows you to quickly flip back and forth through the book, with the option to easily return to your original page using the 'x' button or stay on the new page. You can also use the interactive progress bar and bookmark browser. Streamlined, E-ink optimized, based on KOReader's browser architecture and inspired by the native Kindle page picker experience. Compatible with EPUB, CBZ, and PDFs!
+This plugin allows you to quickly flip back and forth through the book, with the option to easily return to your original page using the 'x' button or stay on the new page. You can also use the interactive progress bar and bookmark browser. Streamlined, E-ink optimized, based on KOReader's browser architecture and inspired by the native Kindle page picker experience. Compatible with EPUB, CBZ, and PDFs and works seamlessly in both portrait and landscape modes! 
    
 ### Features
 *   **Thumbnail Grids:** Live 3-page and 6-page previews, plus a minimalist distraction-free "Simple Grid" mode.
 *   **Interactive Index:** A dedicated visual Table of Contents view with its own progress bar for easy chapter navigation.
 *   **Advanced Navigation:** Interactive progress slider, chapter-skip buttons, a quick-access top toolbar, and physical D-Pad support.
 *   **Split-View Annotations:** A beautiful split-screen manager for Bookmarks, Highlights, and Notes, featuring a live high-res page preview and smart highlight filters.
-*   **Redesigned Reading Pop-Ups (NEW):** Features a modern, pill-shaped floating dictionary and multi-word selection menu. It intelligently anchors away from your finger so it never blocks your text. Fully compatible with the AI Assistant, X-Ray, and other external plugins.
-*   **Robust Customization (NEW):** Auto-adapting layout with dynamic UI Scaling and customizable Text Size (Small/Medium/Large) that prevents crashes or overlapping at any resolution.
+*   **Redesigned Reading Pop-Ups :** Features a modern, pill-shaped floating dictionary and multi-word selection menu. It intelligently anchors away from your finger so it never blocks your text. Fully compatible with the AI Assistant, X-Ray, and other external plugins.
+*   **Robust Customization :** Auto-adapting layout with dynamic UI Scaling and customizable Text Size (Small/Medium/Large) that prevents crashes or overlapping at any resolution.
+* **Mini Menu:** Quick-access overlay for device controls (toggle front light, day/night mode), custom shortcut execution (scrubber actions), and settings navigation.
 *   **Markdown Export:** Export your highlights and notes directly to a `.md` file on your device.
 *   **Native Integration:** Launch all widgets and access settings directly from KOReader's native top menu, or bind them to your own custom gestures.
 
@@ -82,10 +83,23 @@ Basically, it takes the native features, removes the friction, and puts them int
  2. Extract the archive. You will get a folder named `page_scrubber.koplugin`.
  3. Place that entire folder in your KOReader user plugins directory (usually `koreader/plugins/`).
  4. Restart KOReader.
-   
-## 🚀 Setup & Activation
- 1. Open a book in KOReader.
- 2. Go to **Settings** (⚙️) > **Gestures** > **Reader**.
- 3. Choose your preferred gesture and bind it to any of the available actions: **Page browser: Grid**, **Page browser: Simple grid**, **Page browser: Multi-grid**, **Page browser: Menu (BM)**, **Page browser: Menu (highlights)**, or **Page browser: Index**.
 
-> 💡 **Tip:** You don't *have* to use gestures! You can also launch all views and access the new configuration options directly from KOReader's top menu.
+---
+
+## Tutorial if needed: **How to Open Page Scrubber**
+* **Option 1 (Menu):** Open a book in KOReader, go to the document menu tab (where native Table of Contents, Bookmarks, etc. live — often on the second page), and tap **Page Scrubber** to access all grids, widgets, and settings.
+* **Option 2 (Recommended - Gestures):** Assign a gesture for instant access. Go to KOReader settings > gear tab > **Taps and gestures** > **Gesture manager** > choose a gesture (e.g., *one finger swipe: right edge up*) > **Reader** > scroll and select it to any of the available actions: **Page browser: Grid**, **Page browser: Simple grid**, **Page browser: Multi-grid**, **Page browser: Menu (BM)**, **Page browser: Menu (highlights)**, or **Page browser: Index**.
+
+---
+
+## Useful Gestures & Shortcuts
+
+>* **Pinch / Spread (Grid):** Pinch or spread in the grid view to toggle between the 3x2 6-grid and the standard grid.
+>* **Long press 6-grid button:** Switches to Simple Grid.
+>* **Long press TOC button:** Opens the full index with the bottom bar hidden.
+>* **Notes button / Long press bottom bookmark icon:** Opens the split menu.
+>* **Long press Notes button:** Opens the split menu directly on the highlights (`hg`) tab.
+>* **Settings button:** Opens the mini menu (open Scrubber Action with the wharehouse icon).
+>* **Long press Settings button:** Opens Scrubber Actions (configurable in settings).
+>* **Long press any page thumbnail:** Opens the split menu focused on that specific page.
+>* **Tap top-right corner:** Toggle bookmark.
