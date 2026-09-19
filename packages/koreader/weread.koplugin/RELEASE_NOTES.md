@@ -1,3 +1,12 @@
+# v1.5.2
+
+## 新功能与改进
+
+- 修复部分书籍获取划线和想法时中途报错的问题。
+- 修复获取中断后，已完成章节的划线未及时显示的问题。
+
+**Full Changelog**: https://github.com/finlater/weread.koplugin/compare/v1.5.1...v1.5.2
+
 # v1.5.1
 
 ## 新功能与改进
@@ -55,25 +64,3 @@
 - 降低后台预下载和匹配的内存要求，并修复清理书籍缓存后旧划线想法自动恢复的问题。
 
 **Full Changelog**: https://github.com/finlater/weread.koplugin/compare/v1.4.0...v1.4.1
-
-# v1.4.0
-
-## 新功能与改进
-
-- 统一本地书与微信下载书的划线和想法管理，支持按章匹配、中断续传和同书数据复用。
-- 下一章正文及划线想法改为后台预下载，减少阅读时的等待和卡顿。
-- 优化公众号图片下载，降低内存占用。
-- 修复部分书籍正文不显示、脚注识别异常的问题。
-
-感谢 @baily-zhang、@szey 和 @q107580018 的贡献。
-
-## What's Changed
-* fix(footnotes): stop ancestor blocks from poisoning note definitions by @baily-zhang in https://github.com/finlater/weread.koplugin/pull/133
-* fix(content): sanitize hostile font-size:0 in server book css by @baily-zhang in https://github.com/finlater/weread.koplugin/pull/137
-* refactor(annotations): unify matching and resumable sync by @finlater in https://github.com/finlater/weread.koplugin/pull/150
-* fix(mp): stream public-account article images to disk by @szey in https://github.com/finlater/weread.koplugin/pull/132
-
-## New Contributors
-* @szey made their first contribution in https://github.com/finlater/weread.koplugin/pull/132
-
-**Full Changelog**: https://github.com/finlater/weread.koplugin/compare/v1.3.1...v1.4.0

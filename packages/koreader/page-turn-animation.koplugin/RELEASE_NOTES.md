@@ -1,3 +1,13 @@
+# v3.0
+
+Two new animations: one that starts diagonally from the right and ends horizontally and another that does the same thing, but from the left, I did it thinking that a book will grab it from one point but in the end the sheet is attached to another by the center, so the animation becomes horizontal.
+
+Now, the steps and speed of dark mode can also be set independently of light mode.
+
+The number of versions does not make sense, I know. 
+
+Also try to solve the Andriod problem, but do not know if it is the solution.
+
 # v2.1
 
 Add the profiles and reset factory values.
@@ -17,11 +27,3 @@ A vertical animation mode was added.
 Now you can create a grid of up to 8x8 that allows you to put the animation you want in each of the cells, as well as decide if that cell is going forward or backward.
 
 All of this is optional.
-
-# v0.2
-
-English, Portuguese and Spanish languages
-
-Independent animation in the page step for next or previous page with five parts: horizontal and diagonal from the four corners.
-
-3 independent modes for dark mode: one that reflects light mode, another that is slower but leaves no trace, and the third that makes the screen has a total screen refresh on each page.
