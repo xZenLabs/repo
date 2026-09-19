@@ -1,3 +1,18 @@
+# v1.5.1
+
+## 新功能与改进
+
+- 新增章节对应管理，支持手动调整匹配、按章获取或重新获取划线和想法，并显示“已获取”状态。
+- 优化获取想法时的暂停与断点续传，保留已完成进度。
+- 开书不再自动匹配划线位置；仅在章节预下载和预下载划线想法同时开启时，才在后台获取数据。
+- 新增独立的本地 Mock 测试模式，方便在 macOS 模拟器和 Kindle 上验证功能。
+
+## What's Changed
+* feat: 支持 macOS KOReader 集成测试与局域网 Mock 调试 by @finlater in https://github.com/finlater/weread.koplugin/pull/175
+
+
+**Full Changelog**: https://github.com/finlater/weread.koplugin/compare/v1.5.0...v1.5.1
+
 # v1.5.0
 
 ## 新功能与改进
@@ -62,17 +77,3 @@
 * @szey made their first contribution in https://github.com/finlater/weread.koplugin/pull/132
 
 **Full Changelog**: https://github.com/finlater/weread.koplugin/compare/v1.3.1...v1.4.0
-
-# v1.3.1
-
-## 新功能与改进
-
-- 整本下载的 EPUB 新增书籍简介，可在 KOReader 的书籍信息中查看。
-- 优化自适应封面书架布局，修复部分屏幕上的内容溢出和滚动条问题，并用封面折角标记已下载书籍。
-
-## What's Changed
-* fix(library): refine adaptive cover shelf by @finlater in https://github.com/finlater/weread.koplugin/pull/143
-* feat(epub): include book description metadata by @finlater in https://github.com/finlater/weread.koplugin/pull/144
-
-
-**Full Changelog**: https://github.com/finlater/weread.koplugin/compare/v1.3.0...v1.3.1

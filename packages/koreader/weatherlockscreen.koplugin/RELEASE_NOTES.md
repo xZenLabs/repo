@@ -1,3 +1,25 @@
+# v1.0.0
+
+## New Features
+
+* Thanks to @lianyis  WeatherLockscreen plugin is now available in Simplified Chinese.
+* Users can now select a different interval for Active Sleep while the device is charging.
+
+## Bugs fixed
+* Active Sleep now functions also while the device is charging.
+
+## Notes
+As you can see, I have decided to finally set the version to 1.0.0. I feel like the plugin is now stable and feature-rich enough that this is warranted. This does not mean, that I will stop maintaining, fixing bugs or even developing new features. 
+Going forward I will use the [semantic versioning system](https://semver.org/). 
+
+## What's Changed
+* Add Simplified Chinese translation. by @lianyis in https://github.com/loeffner/WeatherLockscreen/pull/38
+
+## New Contributors
+* @lianyis made their first contribution in https://github.com/loeffner/WeatherLockscreen/pull/38
+
+**Full Changelog**: https://github.com/loeffner/WeatherLockscreen/compare/v0.9.7-beta.1...v1.0.0
+
 # v0.9.7-beta.1
 
 ### This is a beta release.
@@ -103,44 +125,3 @@ Well, here we go:
 * @omer-faruq made their first contribution in https://github.com/loeffner/WeatherLockscreen/pull/16
 
 **Full Changelog**: https://github.com/loeffner/WeatherLockscreen/compare/v0.9.4-beta.1...v0.9.5-beta.1
-
-# v0.9.4-beta.1
-
-### This is a beta release.
-
-## New Features
-
-https://github.com/user-attachments/assets/7907b5b1-c677-49d0-9727-9f1f5361d9dc
-
-## Active Sleep Mode
-
-- Device wakes from sleep periodically to update weather, then returns to sleep
-- Low battery consumption 
-- Only Kindle devices are currently supported. 
-- Configurable intervals: 30 minutes, 1, 3, 6, 12 hours
-
-> Currently, this feature is only supported in Kindle devices. I do not own a Kobo device and can not test this feature. If you want to help me get this feature to Kobo devices, please contact me. 
-
-## Dashboard Mode
-
-- Full-screen weather display that auto-refreshes
-- Works on all devices (Kindle, Kobo, etc.)
-- Configurable intervals: 30 minutes, 1, 3, 6, 12 hours
-- Tap anywhere to dismiss the dashboard
-- Higher battery consumption (device stays awake during display)
-
-## Gesture support
-
-The dashboard can be started with a configurable gesture. 
-To enable it use the `Gesture manager`.
-
-## Improved network handling
-
-resolves #1. The device will enable Wi-Fi and search for available networks. 
-This requires that the setting `Action when Wi-Fi is off:` is set to `Turn on`. 
-
-## What's Changed
-* Periodic refresh by @loeffner in https://github.com/loeffner/WeatherLockscreen/pull/14
-
-
-**Full Changelog**: https://github.com/loeffner/WeatherLockscreen/compare/v0.9.3-beta.1...v0.9.4-beta.1

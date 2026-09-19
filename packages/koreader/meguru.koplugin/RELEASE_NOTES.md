@@ -1,3 +1,10 @@
+# v1.1.1
+
+fix: Pan & Zoom stops on every panel, not only the ones the window happens to cover.
+The bottom menu is hidden in all three views — tap the bottom of the screen, or swipe up, to bring it back.
+
+**Full Changelog**: https://github.com/Craftwork2720/meguru/compare/v1.1.0...v1.1.1
+
 # v1.1.0
 
  Add: Meguru→ Komga progress sync
@@ -24,7 +31,3 @@ fix: Panels+ now answers the long press while it is enabled, and meguru answers 
 - Books opened from Rakuyomi now get Meguru's own reading menu.
 
 **Full Changelog**: https://github.com/Craftwork2720/meguru/compare/v0.9.4...v0.9.5
-
-# v0.9.4
-
-**Full Changelog**: https://github.com/Craftwork2720/meguru/compare/v0.9.3...v0.9.4
