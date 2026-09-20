@@ -1,3 +1,13 @@
+# v1.10.1
+
+### What's new
+
+Today's reading summary now says when it's showing your current page rather than what was last saved, so the numbers underneath it are never unlabeled.
+
+### Install
+
+Download `seekquel.koplugin-v1.10.1.zip` below, unzip it, and copy the `seekquel.koplugin` folder into your KOReader `plugins/` directory. If you already have the add-on installed, use its own updater (Seekquel menu → Check for update) instead — it verifies every file before replacing anything.
+
 # v1.10.0
 
 ### What’s new
@@ -57,23 +67,3 @@ Existing installations can update from Tools, Seekquel. KOReader versions older 
   turning on wifi and failing at the end of a download.
 
   Found and fixed by [joelstitch](https://github.com/joelstitch).
-
-# v1.7.0
-
-
-### Added
-
-- **Seekquel can now show you which part of the day you read in, and your device is the
-  only thing that knows.** KOReader writes down the moment of every page turn, so the
-  add-on now reports the hours a day's reading fell in alongside the minutes it already
-  sent. Your reading stats gain a morning, afternoon, evening and night breakdown that is
-  filled in from the history already on your reader, going back as far as your statistics
-  do, rather than starting from empty on the day you update.
-
-  The hours are read on your device's own clock and shifted by the timezone offset the
-  add-on already uses for dating a day, so a chapter finished after midnight counts as
-  night rather than as the following morning.
-
-  Nothing else changes. The daily minutes, pages and chapter are the same numbers as
-  before, and a day whose hours do not add up to it is sent without them rather than
-  putting a correct total at risk.
