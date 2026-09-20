@@ -1,0 +1,23 @@
+# Paperdots For Koreader plugin for KOReader
+# https://github.com/jopidovba-a11y/Paperdots-for-Koreader
+# zenpm:auto-scraped
+id=paperdots-for-koreader
+name=Paperdots For Koreader
+version=2.0
+description=Paper texture effect for KOReader.
+author=jopidovba-a11y
+category=utility
+platforms=koreader
+dependencies=
+source=https://github.com/jopidovba-a11y/Paperdots-for-Koreader
+stars=6
+updated_at=2026-09-20T08:54:13Z
+published_at=2026-09-20T00:43:18Z
+readme_url=packages/koreader/paperdots-for-koreader.koplugin/README.md
+readme_hash=50ee12629a5abefbcefc5a9e4f97246e2fe85e3b
+release_notes_url=packages/koreader/paperdots-for-koreader.koplugin/RELEASE_NOTES.md
+release_notes_hash=987e7368c6a62d1adae0aa322c069383ea391daeca2d4e1ab93674c2fe6cd535
+releases=[{"tag_name":"v2.0","assets":[{"name":"paperdots.koplugin.zip","url":"https://github.com/jopidovba-a11y/Paperdots-for-Koreader/releases/download/v2.0/paperdots.koplugin.zip","size":5723,"digest":"sha256:bec507264bf192b436e59b8e58872aeafaaaa47c4ae86c1617e9006e87bc6eb3"}],"name":"v2.0"},{"tag_name":"v1.0","assets":[{"name":"paperdots.koplugin.zip","url":"https://github.com/jopidovba-a11y/Paperdots-for-Koreader/releases/download/v1.0/paperdots.koplugin.zip","size":3516,"digest":"sha256:d2612ea66259ce40e7349a9f96a33cc127d15693cf4ee03954c4a1e087cd4da7"}],"name":"paperdots.koplugin"}]
+source_type=release
+source_asset=paperdots.koplugin.zip
+size=5723

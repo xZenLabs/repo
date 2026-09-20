@@ -69,7 +69,11 @@ to have one-gesture access, bind **NeoDB: book actions** in **Settings → Taps 
 
 ## Working offline
 
-Anything you do offline is queued, and goes out next time you are online by itself when you open a book, or on demand from **NeoDB → Uploads**.
+Anything you do offline is queued. It goes out the next time you open a book, and you can send it yourself at any moment from **NeoDB → Uploads**, which also shows what is waiting. An upload that fails is tried three more times over about two minutes, then left for the next occasion.
+
+To have the queue send itself instead, turn on **Settings → Upload automatically when connected**. It is off until you ask for it. With it on, anything waiting goes out quietly whenever the device goes online, whatever put it online: turn Wi-Fi on for some other reason and your backlog leaves behind it, with nothing to open and nothing to tap.
+
+This never turns Wi-Fi on by itself, never interrupts you, and never sits there checking. KOReader tells the plugin when the device connects, so a reader who stays offline for a week pays no battery for it.
 
 
 ## Things to know

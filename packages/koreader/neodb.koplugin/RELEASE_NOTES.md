@@ -1,3 +1,7 @@
+# 0.3.2
+
+- add option to auto upload highlights when connected to network
+
 # 0.3.1
 
 minor bug fixes
@@ -11,5 +15,3 @@ minor bug fixes
 Fix issue when progress is not updated automatically every hour
 
 # 0.2.1
-
-# 0.2

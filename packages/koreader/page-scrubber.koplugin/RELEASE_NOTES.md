@@ -1,3 +1,23 @@
+# 7.1.0
+
+
+* **Manual RTL (Right-to-Left) Mode Toggle:**
+  * Added a dedicated **RTL** toggle to manually switch reading direction for manga, comics, or right-to-left documents that do not report native metadata flags.
+  * Preserves full automatic detection: if a document already exposes RTL metadata, the toggle automatically reflects its active state (`☑`).
+  * Per-document isolation: settings are stored locally in the book's properties (`doc_settings`), keeping the rest of your library untouched.
+  * Instant real-time UI refresh: updates the slider, progression, and thumbnail grid immediately upon toggling without requiring a book restart.
+
+* **Streamlined Settings ("Layout" Submenu):**
+  * Cleaned up the root settings menu by introducing a unified **Layout** submenu.
+  * Consolidated visual layout options under one roof: *3-Page Grid: Show full pages*, *Show chapter marks in slider*, *Text size*, *UI Scale (%)*, and *RTL*.
+
+* **Gesture Manager & Scrubber Actions Integration:**
+  * Registered native action: **Page Scrubber: Toggle RTL**. You can now bind reading direction toggling to any swipe or tap gesture in KOReader (*Settings > Taps and gestures > Gesture manager > Reader*).
+  * Available directly inside **Scrubber Actions** (+ Add action) with a dedicated arrow icon.
+  * Displays a quick toast message confirming the active state (`RTL ON` / `RTL OFF`).
+
+[page_scrubber.koplugin.zip](https://github.com/user-attachments/files/32429083/page_scrubber.koplugin.zip)
+
 # v7.0.0
 
 
@@ -61,27 +81,3 @@ DPI-Based Icon Scaling: Action icons now scale strictly according to screen DPI 
 ​Decoupled Scrubber Scaling (Reading Pop-Ups): Floating menus and buttons now scale directly according to screen resolution and DPI, preventing popup UI from shrinking when the reading scrubber scale is reduced.  
 
 [page_scrubber.koplugin.zip](https://github.com/user-attachments/files/32178270/page_scrubber.koplugin.zip)
-
-# v6.1.0
-
-This update introduces granular annotation management in Split View, typographic synchronization for the dictionary popup, and dedicated top-bar hold shortcuts.
-
-### ​Granular Annotation Management (Split View)
-​Individual item entries: Highlights and notes are tracked as separate entries and marked with discrete superscript indices (¹, ², ³) when sharing a page.  
-​Targeted actions: Styling (highlight, invert, underline, strikethrough), note editing, and deletions apply strictly to the selected item without modifying neighboring notes on the same page.  
-​Isolated preview: The bottom preview card isolates the active item's text instead of concatenating the entire page.  
-
-### ​Dynamic Floating Dictionary
-​Book typography matching: Automatically inherits the active book's font family (BookFont), size, and proportional line height.  
-​In-Dictionary Deep Lookup: Look up any unknown word directly inside a definition by holding down on it to trigger a new search seamlessly.  
-​Font path caching: Speeds up dictionary rendering by resolving and caching font files per document.  
-
-### ​Top-Bar Hold Shortcuts
-​Notes button (Hold): Jumps straight to Split View on the Highlights tab.
-​Grid button (Hold): Launches Simple Grid mode instantly.
-​ToC button (Hold): Opens the Table of Contents in full-screen mode with the bottom preview bar collapsed.  
-​Settings button (Hold): Launches Scrubber Actions directly.
-​Origin persistence: Retains the original reading page across deep jumps so the ← Page return button stays consistent.  
-​Optimized for responsive navigation on E-ink devices. If you encounter an unexpected issue, please attach a crash.log.
-
-[page_scrubber.koplugin.zip](https://github.com/user-attachments/files/32137671/page_scrubber.koplugin.zip)
