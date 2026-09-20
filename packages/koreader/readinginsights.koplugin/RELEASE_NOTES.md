@@ -1,3 +1,17 @@
+# v6.7.0
+
+### New
+
+**Book progress popup**
+- **Popup position:** show it at the top of the screen (as before) or as a centered box.
+- **Show or hide parts:** you can now turn off This chapter, Next chapter, the Read row, the Reading time row and the Read today row. If everything in a section is off, its header disappears too.
+- **All chapters:** the chapter bar can now draw every chapter in one row, with no 100-chapter limit.
+
+**Fixes**
+- The remaining reading time now matches Bookends calculation exactly.
+
+You'll find the new options under **Settings → Advanced settings → Book progress popup**.
+
 # v6.6.1
 
 Loading indicator for slow heatmap opens
@@ -16,8 +30,3 @@ Reading insights popup: prefetch the other two chart modes (hours/days/books) in
 
 ### Fixed
 - In the previous release missed to raise to _meta.lua version. Nothing else changed. #78
-
-# v6.5.1
-
-### Added
-- "Show week numbers" option (off by default, in Advanced settings > Date & time): adds a gray week-number column to both reading calendars. #77

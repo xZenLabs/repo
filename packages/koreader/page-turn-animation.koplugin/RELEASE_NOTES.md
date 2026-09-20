@@ -1,5 +1,7 @@
 # v3.1
 
+The diagonal effect was added from the corners to horizontal.
+
 # v3.0
 
 Two new animations: one that starts diagonally from the right and ends horizontally and another that does the same thing, but from the left, I did it thinking that a book will grab it from one point but in the end the sheet is attached to another by the center, so the animation becomes horizontal.
