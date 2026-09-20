@@ -1,3 +1,9 @@
+# v6.7.1
+
+## Changed ##
+
+Book progress: header now reads "Chapters" instead of "This book" when the chapter bar is the only thing shown in that section.
+
 # v6.7.0
 
 ### New
@@ -25,8 +31,3 @@ Progress bar for the "This book" section: shows how far you are into the book, o
 # v6.5.3
 
 Reading insights popup: prefetch the other two chart modes (hours/days/books) in the background after opening, so switching modes no longer triggers a slow, uncached DB query the first time each day
-
-# v6.5.2
-
-### Fixed
-- In the previous release missed to raise to _meta.lua version. Nothing else changed. #78
