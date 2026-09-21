@@ -1,3 +1,123 @@
+# v0.12.10
+
+## Release Highlights
+* Library: You can now organize books into configurable bookshelves, tag books in bulk
+* Audiobooks: You can download Audiobookshelf books for offline listening, stream audiobooks from OPDS catalogs and BookOrbit
+* Reading: You can now open HTML files as books, and select, highlight, and look up text in Paragraph Mode
+* Sync: Reading progress refreshes when you return to the app, WebDAV sync is more reliable, and Readwise exports now include bookmarks
+* TTS: You can now browse and resume your books from Android Auto and pick up recent books from CarPlay
+* PDF: Page-turn animations now work on PDFs, comics, and fixed-layout books, and wide comic pages get a spread of their own
+* KOReader: Added background sync, group downloads, and more library controls, and highlights you delete stay deleted
+* Dictionary: Pronunciations can play automatically on lookup, accented words are easier to find
+* More: Backups are much faster and keep the screen awake, and fixed freezes on App launch and in image-heavy chapters
+
+## What's Changed
+* release: version 0.12.8 by @chrox in https://github.com/readest/readest/pull/6135
+* fix(library): keep the context menu actions wired to their items by @chrox in https://github.com/readest/readest/pull/6143
+* fix(reader): draw the selection toolbar above the footnote popup by @chrox in https://github.com/readest/readest/pull/6146
+* fix(ci): bundle libxkbcommon-x11 in the CEF AppImage by @chrox in https://github.com/readest/readest/pull/6151
+* fix(proofread): keep selection rules applied after a toggle, edit or reopen (#6148) by @chrox in https://github.com/readest/readest/pull/6152
+* chore(deps): bump the github-actions group with 3 updates by @dependabot[bot] in https://github.com/readest/readest/pull/6166
+* fix(txt): detect Chinese chapters numbered with 两 or uppercase numerals (#6172) by @chrox in https://github.com/readest/readest/pull/6181
+* fix(annotator): keep a highlight's rounded caps on its own page, closes #6128 by @chrox in https://github.com/readest/readest/pull/6182
+* feat(reader): hide the image viewer controls on tap by @chrox in https://github.com/readest/readest/pull/6183
+* Fixed translation error by @tygoee in https://github.com/readest/readest/pull/6215
+* fix(reader): keep sliders mirrored when a book turns the layout RTL by @jadhavgaurav in https://github.com/readest/readest/pull/6168
+* docker: pull minio images from quay.io, Docker Hub removed them by @thietala in https://github.com/readest/readest/pull/6196
+* fix(payment): resolve the user's plan across every billing provider by @chrox in https://github.com/readest/readest/pull/6228
+* fix(reader): open image-heavy sections in paged mode without freezing by @chrox in https://github.com/readest/readest/pull/6229
+* fix(linux): drop the WebKitGTK assumptions now that Linux is CEF only by @Berserker-GM in https://github.com/readest/readest/pull/6218
+* chore(deps): bump the github-actions group with 5 updates by @dependabot[bot] in https://github.com/readest/readest/pull/6236
+* ci(android): stop asking sdkmanager for the removed `tools` package by @chrox in https://github.com/readest/readest/pull/6238
+* Fix page-turn direction fallback and add missing applyMarginAndGap for vertical layout by @JackyHe398 in https://github.com/readest/readest/pull/6197
+* fix(opds): persist sync progress incrementally so a large first sync can converge by @raman325 in https://github.com/readest/readest/pull/6237
+* fix(android): stop the app freezing at launch on a page load deadlock by @chrox in https://github.com/readest/readest/pull/6240
+* test(paginator): wait for the scroll relocate in the scrolled cover test by @chrox in https://github.com/readest/readest/pull/6243
+* chore(agent): update agent memories by @chrox in https://github.com/readest/readest/pull/6244
+* fix(epub): play embedded media the OPF manifest never declares by @chrox in https://github.com/readest/readest/pull/6245
+* feat(reader): animate page turns on PDF, CBZ and fixed-layout books by @chrox in https://github.com/readest/readest/pull/6246
+* fix(tts): keep a non-English book on its own voice when the doc says en-US by @chrox in https://github.com/readest/readest/pull/6247
+* fix(reader): select text on a long press near a link on Android (#6242) by @chrox in https://github.com/readest/readest/pull/6248
+* fix(paginator): keep an RTL book's progression when a re-render lands mid-load by @chrox in https://github.com/readest/readest/pull/6249
+* fix(reader): backward page curl on PDF/CBZ froze a few pixels in by @chrox in https://github.com/readest/readest/pull/6250
+* feat(reader): animate Push on PDF, CBZ and fixed-layout books by @chrox in https://github.com/readest/readest/pull/6251
+* fix(reader): keep a page-wide image inside its column in paginated mode by @chrox in https://github.com/readest/readest/pull/6252
+* fix(macos): keep the traffic lights on the library page and stop them jumping on navigation by @chrox in https://github.com/readest/readest/pull/6253
+* feat(reader): confirm before following external links by @chrox in https://github.com/readest/readest/pull/6254
+* fix(ios): restore cross-page selection on iPadOS 27 by @chrox in https://github.com/readest/readest/pull/6255
+* fix(reader): let the macOS annotation export save to disk (#6201) by @chrox in https://github.com/readest/readest/pull/6260
+* feat(reader): select, highlight and look up text in Paragraph Mode by @chrox in https://github.com/readest/readest/pull/6258
+* fix(ios): keep reader screen awake with native idle timer by @chrox in https://github.com/readest/readest/pull/6261
+* fix(reader): restore tablet toolbar taps at fractional display density by @chrox in https://github.com/readest/readest/pull/6263
+* feat(audiobookshelf): sync reading progress for ebook-only books (#6257) by @chrox in https://github.com/readest/readest/pull/6264
+* feat(audiobookshelf): download books for offline use and import ABS zips from the web browser by @chrox in https://github.com/readest/readest/pull/6267
+* fix(abs): stream audiobook tracks through a loopback media proxy so self-signed servers play (#6216) by @chrox in https://github.com/readest/readest/pull/6268
+* fix(annotator): hand the selection back when the instant dictionary closes by @chrox in https://github.com/readest/readest/pull/6272
+* perf(reader): split chapter loading to reduce swipe stalls by @chrox in https://github.com/readest/readest/pull/6266
+* feat(reader): give each wide comic page a spread of its own (#6210) by @chrox in https://github.com/readest/readest/pull/6273
+* fix(reader): preserve style tag attributes in the style transformer by @jadhavgaurav in https://github.com/readest/readest/pull/6270
+* fix(nix): add imagesize to the CEF lockfile by @chrox in https://github.com/readest/readest/pull/6274
+* feat(reader): cache wide comic pages and find them in streamed comics (#6210) by @chrox in https://github.com/readest/readest/pull/6276
+* fix(bookdrop): only sound on a completed transfer, enable Nearby BookDrop by default by @chrox in https://github.com/readest/readest/pull/6277
+* feat(reader): add pull-down bookmark gesture setting by @chrox in https://github.com/readest/readest/pull/6278
+* fix(sentry,about): report the real WebView build via webview_version() by @k6G52m4Dz75W in https://github.com/readest/readest/pull/6275
+* test(bookdrop): make the cue test independent of test order by @chrox in https://github.com/readest/readest/pull/6279
+* feat(reader): import and render HTML files, closes #6198 by @chrox in https://github.com/readest/readest/pull/6281
+* feat(dictionary): auto-play pronunciation on lookup by @chrox in https://github.com/readest/readest/pull/6280
+* fix(nix): don't query wry's webview_version on Linux by @chrox in https://github.com/readest/readest/pull/6282
+* feat(readwise): export bookmarks and their notes by @chrox in https://github.com/readest/readest/pull/6294
+* fix(android): recognize iReader devices in e-ink detection by @k6G52m4Dz75W in https://github.com/readest/readest/pull/6293
+* fix(backup): keep the screen awake and move bulk zip work to Rust, closes #6291 by @chrox in https://github.com/readest/readest/pull/6299
+* fix(translate): remember source language per book by @chrox in https://github.com/readest/readest/pull/6300
+* feat(wordlens): Traditional Chinese hints and an English→Arabic pack by @chrox in https://github.com/readest/readest/pull/6303
+* fix(test): stop ResizeObserver notices flooding the browser-test log by @chrox in https://github.com/readest/readest/pull/6305
+* fix(linux): explain missing X11 display on startup by @chrox in https://github.com/readest/readest/pull/6302
+* feat(android): browse and resume books in Android Auto by @kelvinalfaro in https://github.com/readest/readest/pull/6285
+* feat(opds): stream audiobooks from OPDS catalogs, with a BookOrbit connector (#6224) by @chrox in https://github.com/readest/readest/pull/6301
+* fix(reader): keep highlight options inside the reading area by @chrox in https://github.com/readest/readest/pull/6306
+* chore(agent): update agent memories by @chrox in https://github.com/readest/readest/pull/6309
+* feat(audiobook): stream BookOrbit audio through the loopback media proxy (#6224) by @chrox in https://github.com/readest/readest/pull/6308
+* fix(sync): retry failed WebDAV writes without advancing config state by @chrox in https://github.com/readest/readest/pull/6310
+* fix(sync): preserve WebDAV errors and report incomplete syncs by @chrox in https://github.com/readest/readest/pull/6311
+* fix(reader): prevent vertical toolbar swipes from paging Push books by @chrox in https://github.com/readest/readest/pull/6313
+* fix(mobile): align reader menus and improve dialog dismissal by @chrox in https://github.com/readest/readest/pull/6314
+* fix(translate): decode HTML entities in popup text by @chrox in https://github.com/readest/readest/pull/6317
+* fix: correct remaining-time sorting and chapter estimates by @chrox in https://github.com/readest/readest/pull/6319
+* fix(dictionary): normalize Unicode and fold Latin diacritics by @chrox in https://github.com/readest/readest/pull/6320
+* feat(koreader): background sync, group downloads, and library controls by @chrox in https://github.com/readest/readest/pull/6321
+* fix(koreader): keep synced highlight deletions from reappearing by @chrox in https://github.com/readest/readest/pull/6322
+* fix: refresh sidebar note timestamps every minute by @kv-chiu in https://github.com/readest/readest/pull/6324
+* feat(library): add configurable bookshelves by @chrox in https://github.com/readest/readest/pull/6329
+* fix(library): improve e-ink pagination and bookshelf sync by @chrox in https://github.com/readest/readest/pull/6330
+* fix(reader): keep note editors open until saving succeeds by @chrox in https://github.com/readest/readest/pull/6331
+* fix(sync): refresh reading progress when the app resumes by @chrox in https://github.com/readest/readest/pull/6332
+* fix(reader): read M4B chapters when moov comes after the audio (#6262) by @knigam in https://github.com/readest/readest/pull/6327
+* feat(library): book tags in the list view and a Tag Books action by @chrox in https://github.com/readest/readest/pull/6334
+* fix(ui): smooth bottom-sheet gestures and Settings scrolling by @chrox in https://github.com/readest/readest/pull/6335
+* fix(library): prevent scrollbar initialization layout shift by @chrox in https://github.com/readest/readest/pull/6336
+* chore(payments): end the Full Customization grace period for storage add-ons by @chrox in https://github.com/readest/readest/pull/6337
+* fix(reader): size annotation toolbar to enabled actions by @chrox in https://github.com/readest/readest/pull/6338
+* fix(payments): store Play cancellation time as a timestamp by @chrox in https://github.com/readest/readest/pull/6342
+* feat(ios): add CarPlay recent books and fix scene handoff by @chrox in https://github.com/readest/readest/pull/6339
+* fix: harden ebook content and proxy trust boundaries by @chrox in https://github.com/readest/readest/pull/6343
+* fix(tts): bound startup probes and filter Apple system voices by @chrox in https://github.com/readest/readest/pull/6345
+* fix(android-auto): play cold EPUBs in media service by @kelvinalfaro in https://github.com/readest/readest/pull/6341
+* fix: align player headers and restore mobile view menu dismissal by @chrox in https://github.com/readest/readest/pull/6346
+* chore(agent): update agent memories by @chrox in https://github.com/readest/readest/pull/6348
+* release: version 0.12.10 by @chrox in https://github.com/readest/readest/pull/6349
+
+## New Contributors
+* @tygoee made their first contribution in https://github.com/readest/readest/pull/6215
+* @thietala made their first contribution in https://github.com/readest/readest/pull/6196
+* @Berserker-GM made their first contribution in https://github.com/readest/readest/pull/6218
+* @JackyHe398 made their first contribution in https://github.com/readest/readest/pull/6197
+* @raman325 made their first contribution in https://github.com/readest/readest/pull/6237
+* @kelvinalfaro made their first contribution in https://github.com/readest/readest/pull/6285
+* @kv-chiu made their first contribution in https://github.com/readest/readest/pull/6324
+* @knigam made their first contribution in https://github.com/readest/readest/pull/6327
+
+**Full Changelog**: https://github.com/readest/readest/compare/v0.12.8...v0.12.10
+
 # v0.12.8
 
 ## Release Highlights
@@ -658,94 +778,3 @@
 * @chihumyum made their first contribution in https://github.com/readest/readest/pull/5179
 
 **Full Changelog**: https://github.com/readest/readest/compare/v0.11.18...v0.11.20
-
-# v0.11.18
-
-## Release Highlight
-* Reading: Added Auto Scroll, a hands-free mode that scrolls the page for you at an adjustable pace, plus middle-click autoscroll on the desktop
-* Reading: Added slide and page-curl animations when turning pages for a more natural feel
-* Reading: Fixed page turning and the reading ruler for vertical right-to-left books, PDF text selection when system font scaling is on, and header/footer readability over light PDFs in dark mode
-* Text-to-Speech: Redesigned read-aloud as a mini player with an expandable full player, and playback now keeps going even after you close the book
-* Text-to-Speech: Online voices now play gap-free with chapter seeking and lock-screen controls, plus Android Auto support so you can listen in the car
-* Sync: Added S3-compatible cloud storage and a new Cloud Sync screen to choose and switch between your sync providers
-* Integrations: Added a Calibre plugin to push books and custom columns into Readest, and improved OPDS sign-in and auto-download for self-hosted catalogs
-* Library: New books dropped into watched folders now import automatically, and you can sort your shelf by reading progress
-* More: Added a speak button in the dictionary popup, a cleaner theme switcher, and per-rule toggles for proofreading
-
-## What's Changed
-* fix(reader): remember last read position for markdown files by @chrox in https://github.com/readest/readest/pull/4871
-* fix(layout): respect author vertical-align on inline images (#4866) by @chrox in https://github.com/readest/readest/pull/4878
-* fix(reader): fix fixed-layout spread spine seam and zoomed-out blank page (#4857) by @chrox in https://github.com/readest/readest/pull/4873
-* fix(reader): correct reading ruler direction for vertical-rl books (#4865) by @chrox in https://github.com/readest/readest/pull/4879
-* chore(deps): bump the github-actions group with 5 updates by @dependabot[bot] in https://github.com/readest/readest/pull/4884
-* feat(proofread): editable Find pattern and per-rule enable/disable toggle (#4859) by @chrox in https://github.com/readest/readest/pull/4888
-* fix(android): avoid black screen when external cache dir is unavailable by @chrox in https://github.com/readest/readest/pull/4889
-* fix(macos): minimize instead of hide on macOS 26 to avoid black window (#4875) by @chrox in https://github.com/readest/readest/pull/4890
-* fix(ios): keep App Group entitlement on widget/share extensions in App Store builds by @chrox in https://github.com/readest/readest/pull/4891
-* fix(sync): WebDAV upload-after-enable and deletion propagation (#4856, #4860) by @chrox in https://github.com/readest/readest/pull/4892
-* feat(library): add "Progress Read" sort option (#4427) by @chrox in https://github.com/readest/readest/pull/4893
-* fix(auth): surface OAuth callback errors on desktop deeplink (#4881) by @chrox in https://github.com/readest/readest/pull/4894
-* fix(ios): release screen brightness on background so auto-brightness resumes (#4885) by @chrox in https://github.com/readest/readest/pull/4896
-* fix(koplugin): fold duplicate stats book rows so synced time shows in KOReader by @chrox in https://github.com/readest/readest/pull/4895
-* fix(updater): disable in-app updater on non-AppImage Linux (#4874) by @chrox in https://github.com/readest/readest/pull/4897
-* fix(reader): apply page margin changes live on all platforms (#4898) by @chrox in https://github.com/readest/readest/pull/4900
-* fix(reader): turn pages horizontally for vertical-rl books (#624) by @chrox in https://github.com/readest/readest/pull/4899
-* fix(window): enter fullscreen from maximized windows (#4034) by @chrox in https://github.com/readest/readest/pull/4903
-* fix(window): keep Linux window opaque so it can't turn invisible (#3682) by @chrox in https://github.com/readest/readest/pull/4904
-* feat(android): Android Auto media support for TTS playback by @chrox in https://github.com/readest/readest/pull/4907
-* ci(nightly): fix nightly update detection broken by AppImage bundling hang by @chrox in https://github.com/readest/readest/pull/4909
-* feat(library): auto-import new books from watched folders (#3889) by @chrox in https://github.com/readest/readest/pull/4902
-* fix(reader): open annotation deep link when a different book is open (#4887) by @chrox in https://github.com/readest/readest/pull/4910
-* fix(reader): keep running header/footer readable over light PDFs in dark mode (#4901) by @chrox in https://github.com/readest/readest/pull/4911
-* fix(reader): distinguish two-finger scroll from pinch-zoom on touchscreens (#4858) by @chrox in https://github.com/readest/readest/pull/4912
-* feat(settings): redesign theme mode toggle as a segmented control (#4831) by @chrox in https://github.com/readest/readest/pull/4913
-* feat(sentry): add crash reporting for Android, iOS, desktop, and web by @chrox in https://github.com/readest/readest/pull/4914
-* fix(ios): stop share extension hijacking shared .txt files by @chrox in https://github.com/readest/readest/pull/4917
-* fix(test): make Android double-tap e2e pass on default-config CI devices by @chrox in https://github.com/readest/readest/pull/4921
-* fix(nix): get nix devshell working by @dastarruer in https://github.com/readest/readest/pull/4883
-* feat(calibre): add Readest calibre plugin to push books and metadata by @chrox in https://github.com/readest/readest/pull/4918
-* fix(turso): bump plugin submodule to serialize connection operations by @chrox in https://github.com/readest/readest/pull/4927
-* feat(koplugin): pull sync on device wake with book open by @chrox in https://github.com/readest/readest/pull/4928
-* fix: Sentry production hardening (release/OS tags, unhandled-rejection & render-loop guards) by @chrox in https://github.com/readest/readest/pull/4929
-* fix: change formatter to nixpkgs-fmt by @dastarruer in https://github.com/readest/readest/pull/4932
-* feat(tts): gapless Web Audio playback engine for Edge TTS with chapter timeline and seek by @chrox in https://github.com/readest/readest/pull/4931
-* feat(tts): keep TTS playing when the book is closed by @chrox in https://github.com/readest/readest/pull/4941
-* fix(koplugin): key library pull cursor on synced_at to stop stale library (#4934) by @chrox in https://github.com/readest/readest/pull/4944
-* feat(metadata): surface calibre custom columns from EPUB metadata by @chrox in https://github.com/readest/readest/pull/4939
-* fix(sync): propagate group membership for already-synced books (#4942) by @chrox in https://github.com/readest/readest/pull/4946
-* fix: real fix for library-save storage-permission crash + narrowed view-transition filter by @chrox in https://github.com/readest/readest/pull/4943
-* fix(transfer): persist queue when clearing completed/failed/all by @chrox in https://github.com/readest/readest/pull/4947
-* fix(opds): crawl subdirectories when auto-downloading directory-style catalogs by @chrox in https://github.com/readest/readest/pull/4948
-* fix(widget): round iOS cover thumbnail size to whole pixels by @chrox in https://github.com/readest/readest/pull/4950
-* feat(reader): slide and page curl turn animations (#555) by @chrox in https://github.com/readest/readest/pull/4940
-* fix(reader): open books without a View Transition to avoid timeout (READEST-9) by @chrox in https://github.com/readest/readest/pull/4949
-* feat(sentry): tag events with the WebView engine and version by @chrox in https://github.com/readest/readest/pull/4952
-* feat(reader): middle mouse button autoscroll in scrolled mode by @chrox in https://github.com/readest/readest/pull/4955
-* feat(reader): add TTS speak button to dictionary popup (#4876) by @chrox in https://github.com/readest/readest/pull/4957
-* chore(agent): update agent memories by @chrox in https://github.com/readest/readest/pull/4958
-* fix(reader): fix PDF text selection misplaced by OS font scaling (#49) by @chrox in https://github.com/readest/readest/pull/4960
-* fix: more production crashes (View Transition noise, book-dir race, stats transaction) by @chrox in https://github.com/readest/readest/pull/4962
-* fix(sync): decouple Readest Cloud storage quota from third-party cloud sync by @chrox in https://github.com/readest/readest/pull/4971
-* feat(sync): propagate tags and reading status through third-party file sync by @chrox in https://github.com/readest/readest/pull/4973
-* perf(koplugin): defer and cache Library group covers (#4954) by @chrox in https://github.com/readest/readest/pull/4974
-* feat(sync): route library sync exclusively to the selected cloud provider by @chrox in https://github.com/readest/readest/pull/4975
-* feat(settings): unified Cloud Sync chooser with Readest Cloud as a first-class provider by @chrox in https://github.com/readest/readest/pull/4976
-* test(reader): harden fixed-layout wheel double-scroll test against CI flake by @chrox in https://github.com/readest/readest/pull/4978
-* fix(sync): abort the file-sync run on auth failure instead of marching the library by @chrox in https://github.com/readest/readest/pull/4981
-* chore(i18n): translate the cloud sync provider-selection strings by @chrox in https://github.com/readest/readest/pull/4980
-* feat(sync): incremental file sync and per-book transfers for the active provider by @chrox in https://github.com/readest/readest/pull/4982
-* fix(reader): gate route View Transitions on API support (READEST-9) by @chrox in https://github.com/readest/readest/pull/4989
-* feat(sync): S3-compatible cloud sync provider by @chrox in https://github.com/readest/readest/pull/4990
-* fix(reader): center the lone PDF page in portrait auto-spread (#4984) by @chrox in https://github.com/readest/readest/pull/4992
-* fix(android): background TTS media controls + lock-screen scrubber/seek + Edge click fix by @chrox in https://github.com/readest/readest/pull/4994
-* feat(reader): redesign the TTS control as a mini player with an expandable player sheet by @chrox in https://github.com/readest/readest/pull/4996
-* feat(reader): Auto Scroll reading mode for scrolled flow by @chrox in https://github.com/readest/readest/pull/4999
-* fix(reader): gate captured slide/curl turn on scrollLocked like push by @chrox in https://github.com/readest/readest/pull/5000
-* fix(reader): let page margins shrink into the safe-area inset (#4761) by @chrox in https://github.com/readest/readest/pull/5001
-* fix(opds): auth negotiation and auto-download fixes for self-hosted catalogs by @chrox in https://github.com/readest/readest/pull/5002
-* release: version 0.11.18 by @chrox in https://github.com/readest/readest/pull/5003
-
-## New Contributors
-* @dastarruer made their first contribution in https://github.com/readest/readest/pull/4883
-
-**Full Changelog**: https://github.com/readest/readest/compare/v0.11.17...v0.11.18
