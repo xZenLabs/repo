@@ -1,0 +1,22 @@
+# Pencil Handwriting plugin for KOReader
+# https://github.com/sharefoo/pencil-handwriting.koplugin
+# zenpm:auto-scraped
+id=pencil-handwriting
+name=Pencil Handwriting
+version=1.0
+description=为 Kindle Scribe 等带 Wacom/EMR 数字笔的墨水屏设备提供 KOReader 手写批注的插件，把笔迹低延迟直接写进屏幕，并支持擦除与按页持久化。
+author=sharefoo
+category=utility
+platforms=koreader
+dependencies=
+source=https://github.com/sharefoo/pencil-handwriting.koplugin
+stars=5
+updated_at=2026-09-21T20:51:55Z
+published_at=2026-09-18T04:36:07Z
+readme_url=packages/koreader/pencil-handwriting.koplugin/README.md
+readme_hash=d34473be0c248de830e30e147abba0399860f193
+release_notes_url=packages/koreader/pencil-handwriting.koplugin/RELEASE_NOTES.md
+release_notes_hash=f71435eee91f2edcc00f9611b593b4a469b617b8207445477610248ae2044263
+releases=[{"tag_name":"1.0","assets":[{"name":"source-code.zip","url":"https://api.github.com/repos/sharefoo/pencil-handwriting.koplugin/zipball/1.0"}],"name":"手写触控插件"}]
+source_type=source
+source_url=https://codeload.github.com/sharefoo/pencil-handwriting.koplugin/zip/refs/heads/main

@@ -1,3 +1,16 @@
+# v1.17.0
+
+## What's new
+
+- **Faster article downloads.** Images in an article are now fetched in parallel
+  (4 at a time) instead of one after another, so opening an image-heavy article
+  is noticeably quicker. You can still cancel mid-download.
+- **FreshRSS favourites.** Star and unstar articles from FreshRSS, and browse
+  everything you've starred in its own list — the same way the other backends
+  already worked.
+- **Fixed: FreshRSS showed no feeds.** Opening a feed or folder returned a 404,
+  which left the feed list empty. Feed and folder browsing works again.
+
 # v1.16.0
 
 ## Better book metadata for saved EPUBs
@@ -92,8 +105,3 @@ bound to a key combination with the Hotkeys plugin.
     aggregates all starred articles. 
 
 - Fix Miniflux feed state restore , pr by philvernon
-
-# v1.12.0
-
-- "open sanitized " and "save sanitized" buttons on link popup
-- add api support for the webbrowser plugin

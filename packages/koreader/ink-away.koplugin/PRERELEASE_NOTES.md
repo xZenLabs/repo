@@ -1,3 +1,23 @@
+# v2.3.0
+
+Palm rejection now clears the stray marks a resting hand could leave before the pen was recognised.
+
+Notebook interface polish:
+- The bottom bar now matches the top toolbar: consistent icons, sizing, and a shorter bar with the page number sized to the new-page icon.
+- The page menu and the new-notebook paper chooser use the same rounded style as the other menus.
+- A chevron at the bottom-left hides and shows the bottom bar.
+- Fixed a crash when opening Settings after switching to a notebook.
+
+Major performance tweaks:
+- New drawing frees the previous drawing's buffers and collects right away, so starting fresh returns its memory on the spot.
+- After a stroke commits, if the heap has grown unusually large over a
+  very long session, reclaim garbage between strokes.
+- Fixed the canvas slowing down as strokes accumulate
+- The live drawing path no longer allocates on every point: the symmetry
+  mirror rectangles come from a reused pool computed arithmetically (no
+  per-point helper closures) and the segment handed to the rasterizer is
+  a reused buffer.
+
 # v2.2.3
 
 Palm rejection should now work reliably on pen readers and is enabled by default where a pen is present.
