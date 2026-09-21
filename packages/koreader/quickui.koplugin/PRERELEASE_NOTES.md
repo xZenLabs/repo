@@ -1,3 +1,21 @@
+# v1.0.7-beta.6
+
+## What's Changed
+
+- Vertical Bar: Add vertical bar-draggable pop-up launcher with pagination, labels toggle, and e-ink open/close animation (long-press to edit buttons / open the side bar settings menu)+竖滑翻页（此时横滑仍可拖动）
+- Add Dispatcher action: toggle bottom bar in reader
+- Header & Footer: hide footer while the QuickUI bottom bar is shown in the reader
+- Cover: show status icons on the progress badge at 0% and 100%
+- Cover: support SimpleUI virtual paths for folder covers (Mosaic & List)
+- Bottom bar: inject into FileManager via FileManager.setupLayout (one-shot injection)
+- Bottom bar: show on filesearch results screen
+- Quick Actions: add built-in actions for SimpleUI library browse modes (Authors / Series / Tags)
+- Quick Actions: improve the font list in both Font List and UI Font Switcher (font preview + recently-selected sorting)
+- Panel: fix accidental touch issue in slider
+- Panel: refactor the slider menu, add sliders for font size, spacing, etc. in the reading view 
+- Panel: long-press a slider to open its slider settings 
+- i18n: improve Chinese translation
+
 # v1.0.7-beta.5
 
 ## What's Changed
@@ -63,12 +81,3 @@
 - Quick Actions: add built-in actions for SimpleUI library browse modes (Authors / Series / Tags)
 - Panel: warmth slider now matches frontlight (ON/OFF button, scaled value labels, instant refresh for 'Show Slider Value')
 - i18n: improve Chinese translation
-
-# v1.0.7-beta.1
-
-## What's Changed
-
-- Add Dispatcher action: toggle bottom bar in reader
-- Header & Footer: hide footer while the QuickUI bottom bar is shown in the reader
-- Cover: show status icons on the progress badge at 0% and 100%
-- Cover: support SimpleUI virtual paths for folder covers (Mosaic & List)

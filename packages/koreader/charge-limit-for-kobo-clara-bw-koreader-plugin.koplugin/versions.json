@@ -1,3 +1,3 @@
 {
-  "releases": [{"tag_name":"Plugin","assets":[{"name":"source-code.zip","url":"https://api.github.com/repos/jopidovba-a11y/Charge-Limit-For-Kobo-Clara-BW-Koreader-Plugin/zipball/Plugin"}],"name":"chargelimit.koplugin"}]
+  "releases": [{"tag_name":"v2.0","assets":[{"name":"chargelimit.koplugin.zip","url":"https://github.com/jopidovba-a11y/Charge-Limit-For-Kobo-Clara-BW-Koreader-Plugin/releases/download/v2.0/chargelimit.koplugin.zip","size":2702,"digest":"sha256:30748cf5ad39197982b98c99771f63f7c1e49d65a9ade753700698764f6693b0"}],"name":"v2.0"},{"tag_name":"Plugin","assets":[{"name":"source-code.zip","url":"https://api.github.com/repos/jopidovba-a11y/Charge-Limit-For-Kobo-Clara-BW-Koreader-Plugin/zipball/Plugin"}],"name":"chargelimit.koplugin"}]
 }

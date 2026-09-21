@@ -1,3 +1,18 @@
+# v0.5.4
+
+## 本次更新
+
+性能优化：
+上游四项移植——更新间隔/OTP空值/按章失效/手动指认（PR #27）
+
+新功能：
+绑定搜索长按显示书籍详情与缓存(Issue #28)（Issue #28 / PR #29）
+网页登录失效降级提示与完成报告失衡提醒
+
+问题修复：
+签名只管书籍身份,算法/条目失效交给条目级校验
+Scorecard 行动固定 v2.4.4 版本标签
+
 # v0.5.3
 
 ## 本次更新
@@ -50,36 +65,6 @@
 
 问题修复：
 发布摘要识别 PR 合并提交
-
----
-
-## Contributors（本次更新的贡献者）
-
-- @Mr54233
-
----
-
-## 安装
-
-1. 下载 `pickthought.koplugin.zip` 并解压
-2. 把 `pickthought.koplugin` 目录放到 KOReader 插件目录：
-`koreader/plugins/pickthought.koplugin`
-3. 完全重启 KOReader，在「工具」菜单找到「撷思」
-
-## 环境要求
-
-KOReader ≥ v2026.03（需要内建的 `ffi/archiver` 与 `lua-ljsqlite3`）。
-
----
-
-本插件衍生自 [miuread-koreader](https://github.com/miumiupy98-art/miuread-koreader) 与 [weread.koplugin](https://github.com/finlater/weread.koplugin)，基于 AGPL-3.0 许可证发布。
-
-# v0.4.2
-
-## 本次更新
-
-问题修复：
-修复跨页裁切并完善尺寸设置（Issue #21）
 
 ---
 

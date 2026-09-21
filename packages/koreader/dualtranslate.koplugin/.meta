@@ -1,0 +1,23 @@
+# Dualtranslate plugin for KOReader
+# https://github.com/enneaa/dualtranslate.koplugin
+# zenpm:auto-scraped
+id=dualtranslate
+name=Dualtranslate
+version=1.2.11-xp49
+description=KOReader EPUB 整书/逐章双语翻译插件：非破坏式译文覆盖层，双引擎（KOReader 内置系统翻译 + Microsoft Edge 免费批量），跨平台纯 Lua。
+author=enneaa
+category=productivity
+platforms=koreader
+dependencies=
+source=https://github.com/enneaa/dualtranslate.koplugin
+stars=6
+updated_at=2026-09-21T16:05:14Z
+published_at=2026-09-19T10:37:16Z
+readme_url=packages/koreader/dualtranslate.koplugin/README.md
+readme_hash=5de72cd0a6b209b19ffa1ebb245223fe88950005
+release_notes_url=packages/koreader/dualtranslate.koplugin/RELEASE_NOTES.md
+release_notes_hash=774f9d0b562d2c3c816e7dc59cca9971f16d61294e8d60f7df1e99d3e7d038e8
+releases=[{"tag_name":"v1.2.11-xp49","assets":[{"name":"dualtranslate.koplugin.zip","url":"https://github.com/enneaa/dualtranslate.koplugin/releases/download/v1.2.11-xp49/dualtranslate.koplugin.zip","size":79971,"digest":"sha256:e3a631a29a06cdc9448531e4506621f8bfc5341fb0b4f70c4ef6c56a73c9322f"}],"name":"DualTranslate v1.2.11-xp49"}]
+source_type=release
+source_asset=dualtranslate.koplugin.zip
+size=79971

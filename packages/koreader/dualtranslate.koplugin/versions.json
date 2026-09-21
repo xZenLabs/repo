@@ -1,0 +1,3 @@
+{
+  "releases": [{"tag_name":"v1.2.11-xp49","assets":[{"name":"dualtranslate.koplugin.zip","url":"https://github.com/enneaa/dualtranslate.koplugin/releases/download/v1.2.11-xp49/dualtranslate.koplugin.zip","size":79971,"digest":"sha256:e3a631a29a06cdc9448531e4506621f8bfc5341fb0b4f70c4ef6c56a73c9322f"}],"name":"DualTranslate v1.2.11-xp49"}]
+}

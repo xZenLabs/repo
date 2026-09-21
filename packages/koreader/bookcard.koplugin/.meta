@@ -1,0 +1,23 @@
+# Bookcard plugin for KOReader
+# https://github.com/peterboda236/bookcard.koplugin
+# zenpm:auto-scraped
+id=bookcard
+name=Bookcard
+version=1.1.1
+description=Book Card is a new sleep screen for KOReader, heavily inspired by the idea and visual design of CrossPoint's sleep screen implementation.
+author=peterboda236
+category=theme
+platforms=koreader
+dependencies=
+source=https://github.com/peterboda236/bookcard.koplugin
+stars=9
+updated_at=2026-09-21T16:05:14Z
+published_at=2026-09-21T12:19:41Z
+readme_url=packages/koreader/bookcard.koplugin/README.md
+readme_hash=19f23ea54499d5520d5ae5c0f9c3167f1937bca1
+release_notes_url=packages/koreader/bookcard.koplugin/RELEASE_NOTES.md
+release_notes_hash=c14e4e2e6172f91a83f707121235d6846c917403f6c022e3fb520d7ae88a7f0c
+releases=[{"tag_name":"v1.1.1","assets":[{"name":"bookcard.koplugin.zip","url":"https://github.com/peterboda236/bookcard.koplugin/releases/download/v1.1.1/bookcard.koplugin.zip","size":77614,"digest":"sha256:58f9a63caeec49b607daa3699c6dc138e81b91a7cc4fad56b9a6b2187a968b70"}],"name":"v1.1.1"},{"tag_name":"v1.1.0","assets":[{"name":"bookcard.koplugin.zip","url":"https://github.com/peterboda236/bookcard.koplugin/releases/download/v1.1.0/bookcard.koplugin.zip","size":77416,"digest":"sha256:d8df7d3dcbcc38bf90bad103803b6c50c3c81cc92f4b28c81f744c5d9f10a367"}],"name":"v1.1.0"},{"tag_name":"v1.0.0","assets":[{"name":"bookcard.koplugin.zip","url":"https://github.com/peterboda236/bookcard.koplugin/releases/download/v1.0.0/bookcard.koplugin.zip","size":74933,"digest":"sha256:61990fc932803b0b7211a55c70da317ba6f1f482827bd16da59d313425547443"}],"name":"v1.0.0"}]
+source_type=release
+source_asset=bookcard.koplugin.zip
+size=77614
