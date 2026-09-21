@@ -1,0 +1,22 @@
+# Koreader Notionsync plugin for KOReader
+# https://github.com/agluck91/koreader-notionsync
+# zenpm:auto-scraped
+id=koreader-notionsync
+name=Koreader Notionsync
+version=1.0.0
+description=A Koreader plugin that allows you to sync any database in your Notion library to Koreader for delightful on the go reading experience
+author=agluck91
+category=media
+platforms=koreader
+dependencies=
+source=https://github.com/agluck91/koreader-notionsync
+stars=5
+updated_at=2026-09-21T02:20:29Z
+published_at=2026-01-25T06:46:46Z
+readme_url=packages/koreader/koreader-notionsync.koplugin/README.md
+readme_hash=c07afe9f0d3aef187fa1ef6870cbe2bfe02ebf23
+release_notes_url=packages/koreader/koreader-notionsync.koplugin/RELEASE_NOTES.md
+release_notes_hash=4763f77a8cea9d7bd6dbf5e6fd4a6a60e0fbcb0f1c191c32bd75f464602fd724
+releases=[{"tag_name":"v1.0.0","assets":[{"name":"source-code.zip","url":"https://api.github.com/repos/agluck91/koreader-notionsync/zipball/v1.0.0"}],"name":"v1.0.0"}]
+source_type=source
+source_url=https://codeload.github.com/agluck91/koreader-notionsync/zip/refs/heads/main

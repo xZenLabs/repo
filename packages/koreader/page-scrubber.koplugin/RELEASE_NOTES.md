@@ -1,5 +1,22 @@
-# 7.1.0
+# v7.2.0
 
+
+### Performance & Screen Refresh
+ * Elimination of Global Full-Screen Flash: Eradicated invasive full screen refresh calls in onPanRelease, onRelease, and onSwipe, replacing them with partial refresh mode to consolidate crisp grayscale rendering without jarring black flashes.
+ * Fluid Bottom Bar Scrubbing: Implemented fast refresh mode (rapid waveform without screen inversion) strictly bounded to self._bar_dimen, allowing the knob and page/percentage numeric readouts to track continuous touch drag smoothly.
+ * Simple UI & Grid Responsiveness: Optimized render/refresh behavior in Simple Grid views to eliminate lagging, white-blanking.
+ 
+### Navigation & Gestures
+ * Hold Gesture Tuning: Reduced initial startup delay to 200 ms and tuned continuous repeat cadence to 650 ms, providing a fluid page-flipping rhythm that respects E-ink particle settling time (specially in simple grid).
+ * Removal of Arbitrary Page Limit: Removed hardcoded stop after ~30 continuous steps, allowing uninterrupted navigation as long as hold is maintained.
+ * Post-Hold Cleanup: Added a clean partial refresh cycle in onHoldRelease to clear lingering ghost text/halos after a long continuous flip burst.
+
+Visual & UI Improvements
+ * Transition to SVG Vector Icons: Replaced font glyphs for bookmark navigation buttons with chevron-left.svg and chevron-right.svg, ensuring razor-sharp edges and eliminating vertical font-offset misalignment.
+
+[page_scrubber.koplugin.zip](https://github.com/user-attachments/files/32448793/page_scrubber.koplugin.zip)
+
+# v7.1.0
 
 * **Manual RTL (Right-to-Left) Mode Toggle:**
   * Added a dedicated **RTL** toggle to manually switch reading direction for manga, comics, or right-to-left documents that do not report native metadata flags.
@@ -61,23 +78,3 @@ Action buttons registered by external plugins (such as AI dictionary and custom 
 Filtered out unsupported "Share text" entries on Kindle and prevented duplicate X-Ray buttons from showing up in the secondary menu. 
 
 [page_scrubber.koplugin.zip](https://github.com/user-attachments/files/32191999/page_scrubber.koplugin.zip)
-
-# v6.2.0
-
-What's New & Improvements
-
-### ​Selection Bar & "More" Menu (more.svg)
-​True Toggle Behavior: Tapping more.svg now toggles the "More" menu open and closed, invalidating and repainting the underlying page background to prevent ghosting on E-ink screens.  
-​Focused Primary Bar: Streamlined the main toolbar to prioritize instant annotation and reading actions (Highlight, Invert, Underline, Strikethrough, Note, AI, and X-Ray).  
-​6 Integrated System Utilities: Consolidated essential lookup tools into a symmetrical top row inside the "More" card (Sel, Copy, Dict, Wiki, Search, and Trans), removing unsupported or crash-prone Kindle actions (View HTML and Share).  
-​Bigger Action Icons: Scaled primary action bar icons to scale(36) and "More" menu utility icons to scale(31) for improved legibility.
-
-### Floating Dictionary
-1:1 Book Font Scaling: Definition body text matches the active book font size (scale(base_fs)), preserving identical optical proportions during reading.  
-Optimized E-ink Contrast: Removed heavy global bolding; definitions render in pure black (#000000) while preserving native bold tags (<b>, <strong>) for senses and entry numbers without clumping font strokes.  
-DPI-Based Icon Scaling: Action icons now scale strictly according to screen DPI rather than book font size.  
-
-**​Architecture & Scaling**
-​Decoupled Scrubber Scaling (Reading Pop-Ups): Floating menus and buttons now scale directly according to screen resolution and DPI, preventing popup UI from shrinking when the reading scrubber scale is reduced.  
-
-[page_scrubber.koplugin.zip](https://github.com/user-attachments/files/32178270/page_scrubber.koplugin.zip)
