@@ -1,3 +1,21 @@
+# v1.0.7-beta.5
+
+## What's Changed
+
+- Vertical Bar: Add vertical bar-draggable pop-up launcher with pagination, labels toggle, and e-ink open/close animation (long-press to edit buttons / open the side bar settings menu)
+- Add Dispatcher action: toggle bottom bar in reader
+- Header & Footer: hide footer while the QuickUI bottom bar is shown in the reader
+- Cover: show status icons on the progress badge at 0% and 100%
+- Cover: support SimpleUI virtual paths for folder covers (Mosaic & List)
+- Bottom bar: inject into FileManager via FileManager.setupLayout (one-shot injection)
+- Bottom bar: show on filesearch results screen
+- Quick Actions: add built-in actions for SimpleUI library browse modes (Authors / Series / Tags)
+- Quick Actions: improve the font list in both Font List and UI Font Switcher (font preview + recently-selected sorting)
+- Panel: fix accidental touch issue in slider
+- Panel: refactor the slider menu, add sliders for font size, spacing, etc. in the reading view 
+- Panel: long-press a slider to open its slider settings 
+- i18n: improve Chinese translation
+
 # v1.0.7-beta.4
 
 ## What's Changed
@@ -54,21 +72,3 @@
 - Header & Footer: hide footer while the QuickUI bottom bar is shown in the reader
 - Cover: show status icons on the progress badge at 0% and 100%
 - Cover: support SimpleUI virtual paths for folder covers (Mosaic & List)
-
-# v1.0.6-beta.11
-
-## What's Changed
-
-- Header & Footer: fix crash when tapping an item inside the menu
-- Icon picker: optimize search logic and rework showIconPicker to fix crashes on Android
-- Icon picker: add label toggle (eye / eye-off) to show or hide icon names in the grid
-- Quick Actions editor: add 'New' and 'Action Pool' buttons to action edit dialogs
-- Quick Actions editor: refresh panel and bottom bar immediately after add/remove/reorder
-- Preset management: add 'Apply preset' to 'Action Pool' ( falls back to defaults if none)
-- Bottom bar: fix missing bottom bar after screen rotation on Android
-- Bottom bar: fix missing bottom bar when entering History/Collections from another fullscreen view
-- Bottom bar: fix crash in History/Collections when handling tabs (add/move/sort/etc.)
-- Bottom bar: fix touch zone residue after removing the rightmost tab in History/Collections
-- Bottom bar: improve bottom bar show/hide experience in ReaderUI
-- Compatibility: Improved compatibility with SimpleUI Homescreen (see README or Plugin Info for setup details)
-- Updates: fix occasional crash when checking for updates

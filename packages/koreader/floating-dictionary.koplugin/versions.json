@@ -1,3 +1,3 @@
 {
-  "releases": []
+  "releases": [{"tag_name":"v6.0.0","assets":[{"name":"floatingdictionary.koplugin.zip","url":"https://github.com/DisastrousPatience83/Floating-Dictionary.koplugin/releases/download/v6.0.0/floatingdictionary.koplugin.zip","size":193772,"digest":"sha256:259ac946fe5b44f44a5ff79271d9a86cfdc2706094ea0cb55694ecf3ced6eced"}],"name":"Floating Dictionary v6.0.0"}]
 }

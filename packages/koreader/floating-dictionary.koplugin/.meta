@@ -3,16 +3,21 @@
 # zenpm:auto-scraped
 id=floating-dictionary
 name=Floating Dictionary
-version=source
+version=6.0.0
 description=A lightweight, highly customizable floating dictionary for KOReader.  Instead of opening KOReader's full dictionary popup every time, Floating Dictionary displays a compact preview beside your sele...
 author=DisastrousPatience83
 category=reference
 platforms=koreader
 dependencies=
 source=https://github.com/DisastrousPatience83/Floating-Dictionary.koplugin
-stars=31
-updated_at=2026-09-21T02:20:29Z
+stars=33
+updated_at=2026-09-21T09:24:52Z
+published_at=2026-09-21T04:30:38Z
 readme_url=packages/koreader/floating-dictionary.koplugin/README.md
-readme_hash=13d22454b1878ed5eb9cb1209272828bbd2f9906
-source_type=source
-source_url=https://codeload.github.com/DisastrousPatience83/Floating-Dictionary.koplugin/zip/refs/heads/main
+readme_hash=157dffd4fa0b6f0de24216da3b22eb64dff9ba2d
+release_notes_url=packages/koreader/floating-dictionary.koplugin/RELEASE_NOTES.md
+release_notes_hash=cc4e5a938cb0e6f43ff48589b9f574d6f0ffd295c7a5158f66676cbc149501bf
+releases=[{"tag_name":"v6.0.0","assets":[{"name":"floatingdictionary.koplugin.zip","url":"https://github.com/DisastrousPatience83/Floating-Dictionary.koplugin/releases/download/v6.0.0/floatingdictionary.koplugin.zip","size":193772,"digest":"sha256:259ac946fe5b44f44a5ff79271d9a86cfdc2706094ea0cb55694ecf3ced6eced"}],"name":"Floating Dictionary v6.0.0"}]
+source_type=release
+source_asset=floatingdictionary.koplugin.zip
+size=193772

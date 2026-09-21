@@ -1,3 +1,14 @@
+# v5.1.3
+
+Fixes for 5.1.2.
+
+- Tapping the page counter no longer closes KOReader, with a wallpaper set (#436).
+- The shelf follows a rotation you made while reading (#435).
+- Spines keep their colour on colour screens (#430).
+- The About screen no longer reports a second copy of Bookshelf when only one is installed.
+- "Author on spine" can be turned back off (#439).
+- A background no longer shows as a negative when night mode is set by a gesture or another plugin.
+
 # v5.1.2
 
 Fixes and polish for 5.1.
@@ -80,7 +91,3 @@ Fixes:
 - Covers are no longer grainy on Kobo and Onyx greyscale devices
 - Ornament SVGs are no longer ignored when their viewBox uses commas, or when they have none at all
 - A series named Calibre-style ("Dark Tower, The") now reads the right way round on its card
-
-# v5.0.7
-
-Books sideloaded after you have opened a book now appear on the shelf on their own, instead of needing a swipe-down refresh
