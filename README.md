@@ -4,7 +4,7 @@
 
 ## Requirements for automatic inclusion
 
-KOReader plugins and user patches are discovered from GitHub every two hours.
+KOReader plugins and user patches are discovered from GitHub every hour.
 To get a new package added automatically, meet **all the common requirements**
 and the **plugin or patch requirements** below. No pull request to this repo is
 needed for automatic discovery. Other package types are outside this process.
