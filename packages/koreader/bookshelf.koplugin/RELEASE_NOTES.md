@@ -1,3 +1,12 @@
+# v5.1.4
+
+- Micro-modules keep their outline after being tapped (#429).
+- "Menu search" works as a start menu item (#438).
+- The reading streak module's "Reading insight" tap opens the reading progress popup. It did nothing at all before.
+- Bookshelf paces itself against an OPDS catalogue that limits requests, rather than emptying the shelf and reporting the server as unreachable (#434).
+- With the status line turned off, the full shelf no longer leaves a gap where it would have been.
+- Recent opens as a list and Genres shows ribbons, for readers who have never changed their shelves.
+
 # v5.1.3
 
 Fixes for 5.1.2.
@@ -80,14 +89,3 @@ Under the hood, mostly around the spine shelf:
 - The top panel's text composites through its own render rather than a column stencil, which is what lets it sit over a picture.
 
 Translations: Russian and Slovak added, Spanish polished. Thanks to @d1-m4ss, @misko903 and @JortonMV.
-
-# v5.0.8
-
-Sorting by Title now ignores a leading "The", "A" or "An", and uses Calibre's Title Sort where a book has one (#401). Shelves sorted by title will reorder on upgrade.
-
-Fixes:
-
-- On a Series shelf that also shows standalones, books not in a series no longer sort to the end (#400)
-- Covers are no longer grainy on Kobo and Onyx greyscale devices
-- Ornament SVGs are no longer ignored when their viewBox uses commas, or when they have none at all
-- A series named Calibre-style ("Dark Tower, The") now reads the right way round on its card

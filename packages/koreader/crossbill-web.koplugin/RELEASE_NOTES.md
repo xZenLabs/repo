@@ -1,3 +1,20 @@
+# v0.30.1
+
+## Docker Image
+```bash
+docker pull tumetsu/crossbill:v0.30.1
+```
+
+
+## What's Changed
+* Update logo by @Tumetsu in https://github.com/Crossbill-App/crossbill-web/pull/887
+* Typography: rebuild the scale on Lora's real axis, add a UI sans for eyebrows by @Tumetsu in https://github.com/Crossbill-App/crossbill-web/pull/888
+* Keep the swipe that turns a page from opening a highlight by @Tumetsu in https://github.com/Crossbill-App/crossbill-web/pull/890
+* Give a highlight a colour of its own, apart from its label's by @Tumetsu in https://github.com/Crossbill-App/crossbill-web/pull/891
+
+
+**Full Changelog**: https://github.com/Crossbill-App/crossbill-web/compare/v0.30.0...v0.30.1
+
 # v0.30.0
 
 # Release 0.30.0 - Web reader update
@@ -146,21 +163,3 @@ docker pull tumetsu/crossbill:v0.28.0
 
 
 **Full Changelog**: https://github.com/Crossbill-App/crossbill-web/compare/v0.27.2...v0.28.0
-
-# v0.27.2
-
-## Docker Image
-```bash
-docker pull tumetsu/crossbill:v0.27.2
-```
-
-
-## What's Changed
-* Make the Railway deploy branch-aware and quiet about the environment by @Tumetsu in https://github.com/Crossbill-App/crossbill-web/pull/650
-* Fix broken KOReader plugin link in README by @jdbway in https://github.com/Crossbill-App/crossbill-web/pull/647
-* Replace "Preferences" with "Settings" in hamburger menu by @jdbway in https://github.com/Crossbill-App/crossbill-web/pull/646
-* Lock body scroll while the filter drawer is open by @Tumetsu in https://github.com/Crossbill-App/crossbill-web/pull/649
-* Bump @mui/icons-material from 9.2.0 to 9.3.1 by @dependabot[bot] in https://github.com/Crossbill-App/crossbill-web/pull/569
-
-
-**Full Changelog**: https://github.com/Crossbill-App/crossbill-web/compare/v0.27.1...v0.27.2

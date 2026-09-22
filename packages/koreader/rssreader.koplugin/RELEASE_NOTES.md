@@ -1,3 +1,55 @@
+# v1.17.1
+
+
+## v1.17.0
+- **Faster article downloads.** Images in an article are now fetched in parallel
+  (4 at a time) instead of one after another, so opening an image-heavy article
+  is noticeably quicker. You can still cancel mid-download.
+- **FreshRSS favourites.** Star and unstar articles from FreshRSS, and browse
+  everything you've starred in its own list — the same way the other backends
+  already worked.
+- **Fixed: FreshRSS showed no feeds.** Opening a feed or folder returned a 404,
+  which left the feed list empty. Feed and folder browsing works again.
+
+## v1.17.1
+### Fixed
+
+- **Diffbot now returns content instead of silently timing out.** It extracts
+  server-side and answers only when done — typically 4–23 s — but the plugin
+  gave up after 8. It now waits for Diffbot's own budget (`timeout`, default
+  30000 ms). Fast articles still open as fast as before.
+- **Diffbot rate limiting is handled.** The free plan allows about one call
+  every 10 s and rejects the rest with `429`, which was treated as a failure.
+  The plugin now honours `Retry-After` once before falling through, and the
+  wait can be cancelled with a tap. Six articles opened in a row used to give
+  one success; now they all succeed.
+- **Non-article Diffbot responses** (section and index pages) are no longer
+  discarded as empty.
+- **Feed links with escaped characters** no longer produce broken URLs. RSS
+  item links skipped the entity decoding that titles and Atom links get,
+  affecting 4% of links across 26 live feeds.
+
+### Changed
+
+- Request timeouts are now enforced across all sanitizers and the direct
+  article download; the total-timeout setting previously had no effect.
+- The README documents the measured speed gap: Diffbot is ~3× slower than
+  Instaparser and rate-limited on the free plan, so listing Instaparser first
+  is usually the better default.
+
+# v1.17.0
+
+## What's new
+
+- **Faster article downloads.** Images in an article are now fetched in parallel
+  (4 at a time) instead of one after another, so opening an image-heavy article
+  is noticeably quicker. You can still cancel mid-download.
+- **FreshRSS favourites.** Star and unstar articles from FreshRSS, and browse
+  everything you've starred in its own list — the same way the other backends
+  already worked.
+- **Fixed: FreshRSS showed no feeds.** Opening a feed or folder returned a 404,
+  which left the feed list empty. Feed and folder browsing works again.
+
 # v1.16.0
 
 ## Better book metadata for saved EPUBs
@@ -82,18 +134,3 @@ bound to a key combination with the Hotkeys plugin.
     tags and lets you drill into a tag's stories. Also adds an "Edit Tags" 
     action on stories  and shows a story's current tags in its long-press
     popup.
-
-# v1.13.0
-
-- Add article starring support for CommaFeed accounts
-    Wire CommaFeed's /entry/star API into the story viewer toolbar and the
-    story long-press menu (next to Add to List), show a star marker in
-    story titles, and add a ★ Starred virtual feed at the root level that
-    aggregates all starred articles. 
-
-- Fix Miniflux feed state restore , pr by philvernon
-
-# v1.12.0
-
-- "open sanitized " and "save sanitized" buttons on link popup
-- add api support for the webbrowser plugin

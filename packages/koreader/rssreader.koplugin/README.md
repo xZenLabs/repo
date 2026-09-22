@@ -30,7 +30,7 @@ CommaFeed offers the most comprehensive feature set for RSS reading on KOReader:
 - ✅ **Starring** – Star/unstar articles, synced through CommaFeed's API
 - ✅ **Tags** – Browse articles by tag and edit a story's tags directly, synced through CommaFeed's API
 
-Other services like NewsBlur, FreshRSS, and Miniflux are fully supported with similar features. Miniflux provides native API support with folder/category organization and mark as read functionality.
+Other services like NewsBlur, FreshRSS, and Miniflux are fully supported with similar features. FreshRSS additionally supports favourites (starring). Miniflux provides native API support with folder/category organization and mark as read functionality.
 
 ## Files You Need to Edit
 - **`rssreader_configuration.sample.lua` → rename to `rssreader_configuration.lua`**: Describe your accounts and per-account preferences.
@@ -74,12 +74,13 @@ NewsBlur, CommaFeed, Miniflux, and Fever API accounts include special virtual fe
 - **CommaFeed & Miniflux**: Virtual feeds support "Mark all as read" functionality. Long-press a virtual feed to mark all stories in that view as read.
 - **NewsBlur & Fever API**: Virtual feeds cannot be marked as read in bulk. Use individual feeds for "Mark all as read" functionality.
 
-## Starring Articles (CommaFeed)
-CommaFeed accounts support starring/unstarring individual articles, synced through CommaFeed's API:
+## Starring Articles (CommaFeed, FreshRSS)
+CommaFeed and FreshRSS accounts support starring/unstarring individual articles, synced through their APIs (FreshRSS calls them favourites and keeps them as the `user/-/state/com.google/starred` tag):
 - Long-press a story → **Star** / **Unstar** (next to **Add to List**), or use the star button in the story preview toolbar
 - Starred stories show a ★ prefix in the title
-- A **★ Starred** virtual feed appears at the top of the root feed list, aggregating every starred article across your CommaFeed subscriptions
-- Not yet available for NewsBlur, FreshRSS, Miniflux, or Fever API accounts
+- A starred virtual feed aggregates every starred article across your subscriptions: **★ Starred** at the top of the root feed list on CommaFeed, **Starred** among the special feeds on FreshRSS
+- On FreshRSS that feed also lists articles you have already read, since a favourite stays a favourite after reading; the other FreshRSS special feeds stay filtered to unread
+- Not yet available for NewsBlur, Miniflux, or Fever API accounts
 
 ## Tags (CommaFeed)
 CommaFeed accounts support browsing and editing per-article tags:
@@ -171,6 +172,7 @@ The `features` block in `rssreader_configuration.lua` controls how the plugin fe
 - **`download_images_when_sanitize_successful`** – When the active sanitizer returns cleaned HTML, enable this to download the referenced images alongside the sanitized content. Disable it if you prefer faster syncs or limited storage usage.
 - **`download_images_when_sanitize_unsuccessful`** – Determines whether images should still be fetched when sanitizers fail and the original feed HTML is used instead. Turn it on if you want images even without sanitized content; leave it off to avoid extra downloads in fallback scenarios.
 - **`show_images_in_preview`** – Controls whether images appear in the story preview screen. Disable to prioritize text-only previews or reduce clutter; enable to keep the original illustrations visible while browsing stories.
+- **`image_download_workers`** – How many images are fetched at the same time (default `4`, maximum `8`). Image downloads spend nearly all their time waiting on the network, so fetching several at once makes an image-heavy article land in a fraction of the time. Each worker is a short-lived forked process that writes its image straight to the asset cache; the progress message and tap-to-cancel keep working as before. Set it to `1` to go back to downloading one image after the other (e.g. for a server that dislikes concurrent requests).
 
 ## EPUB Book Metadata
 When a story is saved as EPUB, the plugin fills in the metadata KOReader shows in
@@ -200,11 +202,16 @@ asset cache — so richer metadata never costs an extra request.
 ## Content Sanitizers
 Sanitizers fetch and normalize full-page article HTML before it is shown in KOReader. When you open a story the plugin iterates over the active sanitizers in the order configured under `sanitizers` in `rssreader_configuration.lua`. Each sanitizer tries to produce cleaned HTML; if it fails (for example, by returning empty content or hitting an error) the plugin automatically falls back to the next sanitizer in the list, and eventually to the original feed content if none succeed.
 
-- **Instaparser** – Uses the Instaparser Article API to extract clean article content. Requires an API token from [instaparser.com](https://instaparser.com/). The free tier provides **1,000 requests per month**. Set the token in the sanitizer configuration entry.
+- **Instaparser** – Uses the Instaparser Article API to extract clean article content. Requires an API token from [instaparser.com](https://instaparser.com/). The free tier provides **1,000 requests per month**. Set the token in the sanitizer configuration entry. In measurements over Turkish news and blog feeds it answered in **1.4–4.4 s** (median 2.9 s) and tolerated back-to-back calls without rate limiting, which makes it a good first entry.
 - **Diffbot** – Uses the Diffbot Analyze API to extract article bodies. Diffbot requires a token tied to a work e-mail domain and the free tier currently grants **10,000 credits per month**. Set the token in the sanitizer configuration entry.
-- **FiveFilters** – Calls the FiveFilters Full-Text RSS endpoint. No account or token is required; you simply enable the sanitizer in the configuration.
+  Diffbot extracts server-side and sends nothing until it is finished, so it is considerably slower than Instaparser: measured over the same Turkish feeds it took **3.6–23.4 s** (median 9.1 s) per article. It is also rate-limited far below its credit budget — the free `kgfree` plan allows roughly one call every 10 s and answers `429` with a `Retry-After` — so six back-to-back articles produced one success and five rejections. The plugin honours `Retry-After` once (up to 12 s) before falling through to the next sanitizer.
+  Two knobs matter here. `timeout` (milliseconds, default **30000**) is Diffbot's own budget for fetching the target page; without enough of it Diffbot gives up and returns `errorCode 500` on slow sites. The socket budget is derived from it automatically. Both are ceilings, not delays: a page Diffbot extracts in 3 s still opens in 3 s.
+- **FiveFilters** – Calls a Full-Text RSS `makefulltextfeed.php` endpoint. The free public service at `ftr.fivefilters.net` has been **discontinued** (it answers `410 Gone` with an empty feed), so this type is only useful with `base_url` pointing at your own Full-Text RSS instance. It sends no credentials.
+- **FiveFilters (RapidAPI)** – `type = "fivefilters_rapidapi"`. Same endpoint and same output, reached through the [FiveFilters API on RapidAPI](https://rapidapi.com/fivefilters/api/full-text-rss), which authenticates with a key sent as request headers. Put the key in `token`; `base_url` is optional and defaults to `https://full-text-rss.p.rapidapi.com`. The free plan costs nothing to subscribe to but includes only **250 requests per month**, and it is a *soft* limit: further calls are not blocked, they are billed (currently $0.05 each) up to a hard ceiling of 2,000 calls. The plugin therefore counts requests itself and stops when `monthly_request_limit` (default **250**) is reached, falling back to the next sanitizer until the month rolls over. Set it to `0` to lift the ceiling, or raise it on a paid plan. The count lives in `data/rssreader_sanitizer_quota.json` and resets on its own each month.
 
-Mix and match the sanitizers to suit your feeds. Keep the most reliable option first so it is attempted before the fallbacks.
+Mix and match the sanitizers to suit your feeds. Keep the most reliable option first so it is attempted before the fallbacks — and bear in mind that order costs time as well as accuracy, because every sanitizer that fails is waited out before the next one is tried. Putting a slow sanitizer such as Diffbot ahead of a fast one such as Instaparser delays every article by the first one's failure, so if you run both, ordering Instaparser first is usually the better default.
+
+Note that Diffbot, Instaparser and the RapidAPI variant all send the URL of every article you open to a third-party service, and their keys are stored in plain text in `rssreader_configuration.lua`.
 
 ### Mark All as Read
 - **Long-press any feed title** to open the contextual menu.
