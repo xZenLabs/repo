@@ -1,3 +1,11 @@
+# v6.1.0
+
+**New**
+Buttons added by other dictionary plugins ([Assistant](https://github.com/omer-faruq/assistant.koplugin), etc.) now get the same customization as the built-in buttons: order, show/hide, custom text, and custom icon, all from `Buttons shown in preview`. Closes #17.
+
+**Fixed**
+Tapping Wikipedia and closing its window no longer leaves the highlight stuck in the text or triggers a stray new dictionary popup. Closes #19.
+
 # v6.0.0
 
 **Fixed:**
