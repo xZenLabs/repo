@@ -1,3 +1,15 @@
+# v6.8.1
+
+**Changed**
+
+Streak history bar color match to calendar days fill color
+
+# v6.8.0
+
+**New**
+
+Streak History popup opens when you tap "Current streak" or "Best streak" on the Reading streak — date, a bar, and the value (time or pages) for each day, newest days first, 21 days per page.  #80
+
 # v6.7.1
 
 ## Changed ##
@@ -21,13 +33,3 @@ You'll find the new options under **Settings → Advanced settings → Book prog
 # v6.6.1
 
 Loading indicator for slow heatmap opens
-
-# v6.6.0
-
-### New
-
-Progress bar for the "This book" section: shows how far you are into the book, on/off toggle plus configurable colors and height in the menu.
-
-# v6.5.3
-
-Reading insights popup: prefetch the other two chart modes (hours/days/books) in the background after opening, so switching modes no longer triggers a slow, uncached DB query the first time each day

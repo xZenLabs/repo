@@ -1,3 +1,24 @@
+# v2.4.0
+
+## New Features
+- **Automatic preset switching**: Switch between two presets (e.g. light by day, dark at night) on a fixed schedule or by KOReader's night mode. Includes a "Sync now" button and separate day/night pickers, in the Presets menu. Prevents sleep screen colours from being inverted if KOReader's night mode is enabled.
+- **Preview sleep screen**: See what your current settings or any preset will look like from the main menu, without suspending the device. Pinned at the top of each core menu section, or hold-to-preview on any preset.
+- **Alternative sleep screen for the file manager**: The file manager can now optionally show a simpler background-only sleep screen (transparent, solid colour, custom image, or random folder image) instead of the regular one, with its own settings that stay fixed regardless of your active preset.
+- **Stable page number support**: Sleep screen now also supports stable page numbers when the user has them enabled.
+- **Check for updates**: Checks GitHub, downloads and installs new release if available, and runs clean up. Any custom added icons/wallpapers survive updates.
+- **Export format improvements**: Sleep screen export now defaults to JPG for faster saves, and a new "Export in greyscale" toggle has been added to reduce file size in case colour isn't needed.
+- **Menu rework**: Icons on each headline and reset item; presets now live in their own submenus with individual management instead of bulk hide/delete; some settings moved out of 'Advanced' menu into more logical menus; nested menus added for more items (export, cover exclusion, icons, bars, border, etc.); section visibility and reordering combined into one screen; 'Advanced' renamed to 'Global settings' (since this menu now only covers global parameters), and 'Layout & Spacing' renamed to 'Layout, Spacing & Frame'; Fonts & Text now shows current values inline; several settings (cover alignment, icons, bars, inline bars, auto-switch options) now grey out properly when their parent selection is off.
+- **Reworked built-in presets**: 'Default' is now 'Default Day', and 'Night' is now 'Default Night' - with a matching design, and are now the default presets for Automatic preset switching. Additional minor tuning to the other presets.
+## Fixes
+- Fixed a rare crash on export/power-off from shared buffer tracking.
+- Fixed 'Clean chapter titles' missing roman-numeral markers, all-caps titles, and non-breaking spaces.
+- Fixed battery time remaining showing manual estimate for non-manual setting, instead of "Data unavailable" when real data isn't available.
+- Fixed the colour picker defaulting to 0% brightness on first use, and its +/- buttons getting stuck at the boundaries
+- Fixed content parameters not refreshing in menu after reset is performed. Previously needed to exit menu and return.
+- Fixed some Global settings items which were silently varying by preset, when they shouldn't have.
+
+For installation instructions, see the [README](https://github.com/pxlflux/customisablesleepscreen.koplugin/blob/main/README.md).
+
 # v2.3.0
 
 ## New Features
@@ -98,12 +119,3 @@ The main menu has been moved and is now registered using the proper KOReader plu
 If you are upgrading from the original patch version, delete the old patch file and folders first: `2-customisable-sleep-screen.lua`, `customisable-sleep-screen-fonts`, and `customisable-sleep-screen-iconsets`. Presets carry over, but any personally added icons or fonts will need to be copied into the new plugin folder.
 
 For full installation instructions, see the [README](https://github.com/pxlflux/customisablesleepscreen.koplugin/blob/main/README.md).
-
-# v1.0.0
-
-Original patch release of Customisable Sleep Screen for KOReader.
-
-Displays reading stats & book info on your sleep screen with extensive customisation options in the settings menu and the ability to save/load your own configurations to quickly switch between designs.
-
-This release has been superseded by v2.0.0, which converts the patch to a 
-native .koplugin with additional features, fixes, and simpler installation. See the latest release.

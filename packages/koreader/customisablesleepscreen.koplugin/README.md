@@ -13,18 +13,20 @@ Originally released as a patch, this project has now been rebuilt as a KOReader 
 - Book progress, chapter progress, daily reading/goal progress, battery stats
 - Random book highlights (with location), or custom messages
 - Save and load your own configurations, with 10 built-in presets included
+- Automatic preset switching between two presets, by schedule or by KOReader's night mode
 - Light/dark/monochrome modes (suitable for non-colour e-readers)
-- Background options: book cover (with optional overlay), images from folder, solid colour or transparent
+- Background options: book cover (with optional overlay), custom image, images from folder, solid colour or transparent.
 - Coloured progress bars for percentage stats with option to place inline with text
 - Customise info-box background and text colour
 - Dynamic icons for sections, with 7 icon sets included
 - Reorder sections, adjust section spacing, show/hide elements
 - Customise layout, padding, position, opacity, borders, font face/size, text alignment, corner rounding
 - Option to clean chapter title (remove prefixes like "Chapter 5:", leaving chapter names only)
-- Option to show in file manager (displays last book's data)
+- Shows in file manager (displays last book's data) or optional alternative background-only sleep screen for the file manager, independent of your presets
 - Choose whether daily stats apply to all books or the current book only
 - Quick access through taps and gestures shortcuts
 - Sleep screen orientation lock
+- Supports hidden flow and stable page numbers
 - Export sleep screen as image for use with android screen saver.
 - Language support for 16 languages: `de`, `es`, `fr`, `hu`, `it`, `ja`, `ko`, `nl`, `pl`, `pt_BR`, `pt_PT`, `ru`, `tr`, `uk`, `vi`, `zh_CN`
 
