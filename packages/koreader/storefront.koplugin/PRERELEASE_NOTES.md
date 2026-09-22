@@ -1,3 +1,10 @@
+# 26.9.22-beta
+
+- Fix notifications settings
+- Add sk translation via @misko903
+
+**Full Changelog**: https://github.com/ultimatejimmy/storefront.koplugin/compare/26.9.16-beta3...26.9.22-beta
+
 # 26.9.16-beta3
 
 - Fix bug with font filtering on installed tab
@@ -25,9 +32,3 @@
 - Refresh screensavers catalog with refresh is triggered 
 
 **Full Changelog**: https://github.com/ultimatejimmy/storefront.koplugin/compare/26.9.14-beta...26.9.14-beta2
-
-# 26.9.14-beta
-
-- Minor UI tweaks
-
-**Full Changelog**: https://github.com/ultimatejimmy/storefront.koplugin/compare/26.9.13-beta2...26.9.14-beta

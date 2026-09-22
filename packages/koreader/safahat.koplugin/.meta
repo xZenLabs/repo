@@ -1,0 +1,23 @@
+# Safahat plugin for KOReader
+# https://github.com/mazenoss/safahat.koplugin
+# zenpm:auto-scraped
+id=safahat
+name=Safahat
+version=2.0.0
+description=Koreader plugin to download ebooks directly from Hindawi free library
+author=mazenoss
+category=media
+platforms=koreader
+dependencies=
+source=https://github.com/mazenoss/safahat.koplugin
+stars=5
+updated_at=2026-09-22T21:50:21Z
+published_at=2026-09-05T15:20:15Z
+readme_url=packages/koreader/safahat.koplugin/README.md
+readme_hash=5ff2b77eae800ba7eb30356946c91c5fbe1d3d5d
+release_notes_url=packages/koreader/safahat.koplugin/RELEASE_NOTES.md
+release_notes_hash=5d4582a9003af9959e66e3d82015b1db0759357bcbf44697b419f65e2bd32f04
+releases=[{"tag_name":"v2.0.0","assets":[{"name":"safahat.koplugin.zip","url":"https://github.com/mazenoss/safahat.koplugin/releases/download/v2.0.0/safahat.koplugin.zip","size":13267,"digest":"sha256:07186b23c4ffe8e173a0eaba2793f414406162b46e007332c15a5ecfb04a854f"}],"name":"safahat.koplugin v2.0.0"},{"tag_name":"V1.1.0","assets":[{"name":"safahat.koplugin.zip","url":"https://github.com/mazenoss/safahat.koplugin/releases/download/V1.1.0/safahat.koplugin.zip","size":9598,"digest":"sha256:517d51d86d98038e75eaa12b9403150f15b58b8117c8fac1cbc86e7cecfc717f"}],"name":"safahat.koplugin v1.1.0"},{"tag_name":"v1.0.0","assets":[{"name":"safahat.koplugin.zip","url":"https://github.com/mazenoss/safahat.koplugin/releases/download/v1.0.0/safahat.koplugin.zip","size":9332,"digest":"sha256:711618f6b2aab24ed96b513d64aed247905b38356a2685eb82b46a728e94a3f1"}],"name":"safahat.koplugin"}]
+source_type=release
+source_asset=safahat.koplugin.zip
+size=13267

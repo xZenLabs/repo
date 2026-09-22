@@ -1,3 +1,11 @@
+# v1.3.1
+
+**New**
+- Spanish translation #3 (Thanks: @sergiomarquezdev )
+
+**Fixed**
+- Text positions when wallpaper has set and text background is not transparent
+
 # v1.3.0
 
 ### Added
@@ -44,7 +52,3 @@ When exiting from a book and the sleep, it now shows the up to date data.
 - Added cover shadows (default: On)
 - Added new 'Highlights' statistics (default: Off)
 - Reorganized the menu. Every statistics can be turned off now.
-
-# v1.0.0
-
-Initial

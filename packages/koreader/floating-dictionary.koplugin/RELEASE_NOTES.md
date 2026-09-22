@@ -1,3 +1,8 @@
+# v6.1.1
+
+Fixed:
+A crash triggered when using the small selection menu (the quick menu shown when you select text). A misreferenced variable in getSmallMenuButtonIds/showFloatingActionMenuForSelection caused KOReader to crash on that action. No changes to dictionaries, fonts, or settings.
+
 # v6.1.0
 
 **New**
