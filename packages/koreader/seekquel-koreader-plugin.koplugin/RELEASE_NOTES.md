@@ -1,3 +1,13 @@
+# v1.11.0
+
+### What's new
+
+- Each reading day is now sent as a share of the book as well as a page count. Changing the font size partway through a book used to make the days on either side of the change describe a different book; Seekquel now credits every day the same way.
+
+### Install
+
+If the add-on is already installed, it updates itself from Seekquel. For a new install, download seekquel.koplugin-v1.11.0.zip, unzip it, and copy the seekquel.koplugin folder into KOReader's plugins folder, then restart KOReader.
+
 # v1.10.1
 
 ### What's new
@@ -49,21 +59,3 @@ When Seekquel has a later place logged from a hardcover, audiobook, another edit
 Download the zip, extract it, copy the seekquel.koplugin folder into koreader/plugins, then restart KOReader.
 
 Existing installations can update from Tools, Seekquel. KOReader versions older than v2025.08 still require the manual file copy.
-
-# v1.7.1
-
-
-### Fixed
-
-- **Seekquel now works on older KOReader builds, where it used to be missing entirely.**
-  On any KOReader released before v2025.08, the add-on failed to load and showed nothing
-  at all: no menu, no pairing screen, and no message saying why. It loaded a part of
-  KOReader that only exists in newer builds, and KOReader skipped the whole add-on when
-  it could not find it.
-
-  Everything works on those builds now except the add-on updating itself, which needs
-  that same missing part. The menu says a new version is ready and that it needs a
-  computer to install, and tapping it explains to copy the files across rather than
-  turning on wifi and failing at the end of a download.
-
-  Found and fixed by [joelstitch](https://github.com/joelstitch).

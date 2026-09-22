@@ -1,19 +1,33 @@
 # Ink Away
 
-A finger drawing and handwriting app for KOReader, made for e-ink readers like the Kindle and Kobo.
+A complete **drawing** and **note-taking** app for KOReader, built for e-ink readers and with **palm rejection** support for stylus users!
 
-Draw or write with your finger, add typed text boxes, sketch and take notes across a multi page notebook, or open any PDF and annotate it by hand. You can also save a drawing as a PNG with a real transparent background, or a JPEG on white, at the exact pixel size of your screen, which is handy for making your own sleep screen covers and overlays that sit cleanly on top of anything.
+Draw or write with your finger OR stylus, add typed text boxes, sketch and take notes across a multi page notebook, or open any PDF and annotate it by hand. Save a drawing as a PNG with a real transparent background, or a JPEG on white, at the exact pixel size of your screen, which is handy for making your own sleep screen covers and overlays that sit cleanly on top of anything, or export a whole notebook back to an ordinary paged PDF.
 
-Here is a quick look:
+It is one of the most capable drawing tools you can add to KOReader, bringing together an adjustable pen, brushes you make yourself, shapes and arrows, a paint bucket, lasso select, text boxes with rich formatting, a symmetry mode for drawing complex patterns, background images, palm rejection, and full notebook and PDF annotation, with save for the whole page or just a chosen area. Everything stays on your device: there are no accounts and no networking.
 
-<video src="https://github.com/user-attachments/assets/e6b5eeba-c5c7-4495-b273-91da3c10720d" controls muted></video>
+## Screenshots
 
-Ink Away gives you a pen with adjustable size, opacity, and shade or colour; brushes you can make yourself; shapes and arrows; a paint bucket; an eraser; text boxes with rich formatting; undo and redo; zoom and pan; a symmetry mode; an optional background picture to draw over; and save, whole page or a chosen area. Everything stays on your device: there are no accounts and no networking.
+<table>
+  <tr>
+    <td width="33%" valign="top"><a href="assets/screenshots/pen-settings.png"><img src="assets/screenshots/pen-settings.png" alt="Pen settings"></a><br><sub>The pen: size, opacity, brush style and shade, with palm rejection.</sub></td>
+    <td width="33%" valign="top"><a href="assets/screenshots/brush-maker.png"><img src="assets/screenshots/brush-maker.png" alt="Brush maker"></a><br><sub>Design your own brush while a sample stroke redraws live.</sub></td>
+    <td width="33%" valign="top"><a href="assets/screenshots/shapes-menu.png"><img src="assets/screenshots/shapes-menu.png" alt="Shapes menu"></a><br><sub>Shapes and arrows, a fill toggle, snapping, paint bucket and lasso.</sub></td>
+  </tr>
+  <tr>
+    <td width="33%" valign="top"><a href="assets/screenshots/text-settings.png"><img src="assets/screenshots/text-settings.png" alt="Text settings"></a><br><sub>Typed text with any installed font, sizing and ruling snap.</sub></td>
+    <td width="33%" valign="top"><a href="assets/screenshots/settings-menu.png"><img src="assets/screenshots/settings-menu.png" alt="Settings"></a><br><sub>Notebooks, open a PDF to annotate, grid, symmetry and autosave.</sub></td>
+    <td width="33%" valign="top"><a href="assets/screenshots/notebook.png"><img src="assets/screenshots/notebook.png" alt="Notebook page"></a><br><sub>A notebook page with handwritten notes, an image and shapes.</sub></td>
+  </tr>
+</table>
+
+<sub>Tap any screenshot to open it full size.</sub>
 
 It is also a full note taking tool. Open a **notebook** and write across many pages by hand or with **typed text boxes**, or open **any PDF as a notebook** and write straight on top of it, then export the whole thing back to a normal paged PDF. A **lasso** lets you loop around part of a drawing or a page and move, duplicate or delete it as one piece.
 
 ## Features
 
+- **Palm rejection**: on a reader with a pen, rest your hand on the screen while you write and only the pen marks the page. It is on automatically for pen devices like the Kindle Scribe and reMarkable, and a switch in the pen menu for everyone else.
 - A **notebook mode**: a multi page notebook you can write, sketch and annotate across. Start blank, or **open any PDF as a notebook** and write on every page. Paper styles include lined, grid, dotted, left margin, and Cornell, with adjustable line spacing and strength. Flip pages, tap the page number to jump anywhere, or open a thumbnail overview grid, and add, duplicate, reorder or delete pages. Export the whole notebook to a real paged PDF (white or warm sandpaper paper, optional page numbers, all pages or only the ones you wrote on or a range). It opens as a fixed page document on any device.
 - A **lasso select**, on the canvas and on notebook pages: draw a loop around ink, shapes or a filled area and it becomes one selection you can drag freely, duplicate, or delete.
 - **Text notes**: drop a text box anywhere and type with the on screen keyboard. Format the word under the cursor or a whole selection as bold, italic, underline, strikethrough or highlight, step its size up or down, or turn a paragraph into a bullet or numbered list. Choose any installed font, previewed in its own typeface, and a default size. On a ruled notebook page an optional setting snaps every line onto the ruling and sizes the text to the line spacing, so your writing lands on the lines. Long words wrap instead of spilling out, the box grows to fit, and you can move, resize and re-edit a box, place the caret with a tap, or drag to select. An option keeps text safe from the eraser, so rubbing out ink leaves your words untouched. Text saves in projects and comes through in PNG, JPEG and PDF exports.
@@ -30,18 +44,18 @@ It is also a full note taking tool. Open a **notebook** and write across many pa
 - Re-openable **projects**: save an editable drawing and come back to it later. Optional **autosave** (off, on exit, or every few minutes) restores your last session when you reopen.
 - **Undo and redo**.
 - An optional **grid** (square, dots, ruled lines, isometric, or rule of thirds) with snapping, and a snap-to-45° for straight lines. You can set how strong it looks, from a faint guide up to solid like drawn ink. It is a guide on screen only: the eraser leaves it alone and it never shows up in a saved image.
-- Shapes: straight line, curve, rectangle, ellipse, and triangle, each filled or outline, using the pen's size, opacity, and colour. You place a shape by dragging, and it stretches to follow your finger like a paint program. Hold a placed shape to rotate, recolour, resize, restyle its opacity, or delete it.
-- A paint bucket that fills an enclosed area with one tap, in the current shade or colour and opacity.
+- Add **Shapes**: straight line, curve, rectangle, ellipse, and triangle, each filled or outline, using the pen's size, opacity, and colour. You place a shape by dragging, and it stretches to follow your finger like a paint program. Hold a placed shape to rotate, recolour, resize, restyle its opacity, or delete it.
+- A **paint bucket** that fills an enclosed area with one tap, in the current shade or colour and opacity.
 - An eraser with an adjustable size that takes ink away rather than painting white over it (see Transparency below). When a background picture is loaded it leaves the picture alone by default, and its menu has a toggle to erase the background too.
 - Undo, one step for each time you lift your finger.
-- Smooth zoom, in even steps from "whole page" up to 8×, with panning for close work.
+- Smooth zoom, in even steps from "whole page" up to 8x, with panning for close work.
 - Save as a transparent PNG or a white JPEG, always at the exact canvas size.
 - Pick the folder and file name with KOReader's own file browser.
-- Made with e-ink in mind: it repaints only the part of the screen that changed, keeps one screen buffer around, and builds the big export image only while it is saving.
 
 ## Requirements
 
 KOReader, any reasonably recent build. Ink Away only uses KOReader's own APIs and the image encoders that already ship with it, so there is nothing else to install on the device.
+* "Palm Rejection" feature requires Koreader version 2026.07 "Sailing Walrus" or above
 
 ## Installation
 

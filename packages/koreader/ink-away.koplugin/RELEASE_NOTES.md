@@ -1,3 +1,29 @@
+# v3.0.0
+
+A big release: reliable palm rejection, a top-to-bottom redesign of the drawing interface, and a lot of work to keep everything fast.
+
+## Palm rejection
+Rest your hand on the screen while you write — only the pen marks the page.
+- Enabled automatically on Kindle Scribe and reMarkable. On Kobo and other stylus readers you can switch it on in Pen Settings.
+- Tells a real pen from a resting palm reliably, so no more stray lines drawn between your hand and the pen tip.
+- The rear eraser and barrel button keep working as expected.
+
+## Redesigned drawing interface
+- Every tool menu in the toolbar has been reworked to be cleaner and easier to use.
+- The canvas now runs edge to edge — every drawing and notebook page fills the full width of your screen, with no grey border.
+- Hide the toolbar for a distraction-free, full-screen drawing experience.
+- Zoom moved out of the toolbar into a floating control in the bottom-right corner. It fades away on its own when your pen gets close, so you can draw underneath it, and comes back afterwards.
+- The Shapes menu was rebuilt with large, clear icons, a single Fill toggle, and the line, arrow and curve variants tucked into one place instead of a cluttered row of buttons.
+
+## Faster and lighter
+- The canvas no longer slows down as strokes pile up.
+- Lower memory use for notebooks, quicker undo, and smoother panning and zooming.
+- Memory is reclaimed when you start a new drawing or notebook, without needing a restart.
+
+## Fixes
+- Consistent notebook UI and a fix for a crash in Settings.
+- Tool menus now update in place when you switch tools instead of flickering.
+
 # v2.2.0
 
 - Add images (as many as you want) with move, resize, rotate, flip, duplicate and send-to-front.
@@ -46,15 +72,3 @@ A small stability update on top of 2.0.0
 Fixes
 - Shapes no longer get dropped or turned into a different shape when you switch tools or pick a new shape before the last one has fully registered. A shape you draw now always stays the shape you drew.
 - Lasso select is steadier: shapes no longer vanish when you switch to it, the loop is more forgiving about what it picks up, and the extra popup after selecting is gone.
-
-# v2.0.0
-
-A big update built around a new notebook mode, plus a lasso tool and clearer file folders.
-
-New
-- Notebook mode: open a fresh multi page notebook, or open any PDF as a notebook and write on every page. Paper styles: lined, grid, dotted, margin and Cornell, with adjustable line size and strength.
-- Get around fast: turn pages, tap the page number to jump to any page, or open a thumbnail overview grid to move around at a glance. Duplicate, reorder and delete pages.
-- Export a notebook to a real paged PDF (white or warm sandpaper paper). Choose all pages, only the pages you wrote on, or a range, and optionally number the pages. Exporting also keeps an editable copy so nothing is a dead end.
-- Lasso select, on the canvas and on notebook pages: draw a loop around ink, shapes or fills, then drag the whole group, duplicate it, or delete it.
-- Tidier saving: separate folders for drawing images, drawing projects, notebook PDFs and notebook projects. Existing projects are sorted into the new folders once, safely, with nothing deleted. Saving a drawing also keeps an editable copy of the same name.
-- Ink Away now sits at the top of the Tools menu.
