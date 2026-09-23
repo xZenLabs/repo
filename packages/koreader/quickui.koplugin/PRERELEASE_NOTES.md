@@ -1,4 +1,4 @@
-# v1.1.0-beta.3
+# v1.1.0-beta.4
 
 ## What's Changed
 
@@ -12,12 +12,19 @@
 - Panel: add pagination (default 3 rows per page-can be changed by tab +/-) with chevron pager and swipe to flip pages; remove the 66-button cap
 - Cover: show status icons on the progress badge at 0% and 100%
 - Cover: support SimpleUI virtual paths for folder covers (Mosaic & List)
+- Cover: skip CoverBrowser-dependent patches when CoverBrowser is not installed, so QuickUI loads normally without it
 - Header & Footer: hide footer while the QuickUI bottom bar is shown in the reader
-- Bottom bar: inject into FileManager via FileManager.setupLayout (one-shot injection)
+- Bottom bar: rework injection to live inside Menu's footer instead of wrapping the widget tree, so it now also works on the Collections list, the collection folder list and any other Menu-based screen
 - Bottom bar: attach bottom bar to ReaderFooter, fix flicker and progress misplacement in Reader
-- Bottom bar: show on filesearch results screen
 - Bottom bar: add dispatcher action-toggle bottom bar in reader
 - i18n: improve Chinese translation
+
+# v1.1.0-beta.3
+
+## 更新说明
+>底栏从"包裹替换 ReaderView"改为"寄生在 ReaderFooter 上"，与 KOReader 原生状态栏机制保持一致
+- 底部栏：修复进入阅读界面闪烁、进度错位问题
+- 底部栏：修复旋转、全屏切换等情形下偶尔底部栏丢失的问题（set Dirty)
 
 # v1.1.0-beta.2
 
@@ -65,24 +72,6 @@
 - Quick Actions: add reader sliders as built-in action and dispatcher action(long-press to bring up a settings dialog, check the box to add it to the panel)
 - Quick Actions: add more built-in actions for popular koplugins(find them in actio pools)
 - Quick Actions: cascade-delete custom action from all bars to avoid orphaned ids
-- Panel: fix accidental touch issue in slider and refactor the slider menu
-- Panel: add pagination (default 3 rows per page-can be changed by tab +/-) with chevron pager and swipe to flip pages; remove the 66-button cap
-- Cover: show status icons on the progress badge at 0% and 100%
-- Cover: support SimpleUI virtual paths for folder covers (Mosaic & List)
-- Header & Footer: hide footer while the QuickUI bottom bar is shown in the reader
-- Bottom bar: inject into FileManager via FileManager.setupLayout (one-shot injection)
-- Bottom bar: show on filesearch results screen
-- Bottom bar: add dispatcher action-toggle bottom bar in reader
-- i18n: improve Chinese translation
-
-# v1.0.7-beta.8
-
-## What's Changed
-
-- Vertical Bar: Add vertical bar as quick menu (swipe to page or move,long-press to edit/add buttons, open the settings menu)
-- Quick Actions: improve the font list in both Font List and UI Font Switcher (font preview + recently-selected sorting)
-- Quick Actions: add reader sliders as built-in action and dispatcher action(long-press to bring up a settings dialog, check the box to add it to the panel)
-- Quick Actions: add more built-in actions for popular koplugins(find them in actio pools)
 - Panel: fix accidental touch issue in slider and refactor the slider menu
 - Panel: add pagination (default 3 rows per page-can be changed by tab +/-) with chevron pager and swipe to flip pages; remove the 66-button cap
 - Cover: show status icons on the progress badge at 0% and 100%

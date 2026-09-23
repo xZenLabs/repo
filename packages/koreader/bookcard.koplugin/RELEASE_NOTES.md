@@ -1,3 +1,20 @@
+# v1.4.0
+
+**New**
+
+- Statistics modules can be re-arranged now
+- Random quote from the current book can be displayed under the author/series
+- Ukraine translation added #4 (Thanks: @advokatb)
+
+**Fixed**
+- Grouped text boxes adjusted the cover + shadow (if it's enabled)
+
+# v1.3.3
+
+**Changed**
+
+Changed Book Card to Book card to match the Koreader default plugin names.
+
 # v1.3.2
 
 **Added**
@@ -30,22 +47,3 @@
 ### Notes
 - Image export is opt-in and off by default; when disabled it has no
   effect on existing behavior (sleep screen, rendering, etc.).
-
-# v1.2.0
-
-**New**
-- Wallpaper backgrounds (based on Bookshelf's code) — pick a background picture for the card from settings/bookcard/wallpapers/ (Background > Wallpaper), with a translucent panel drawn behind each text element so it stays legible over the picture.
-Text background opacity setting (Off / Low / Moderate / High / Solid) controlling the strength of that translucent panel (Background > Text background opacity).
-- Daily Avg (pages) — optional second "Daily Avg" row showing pages/day instead of time (Card elements > Statistics), off by default.
-- Advanced Settings menu (Tools > Book Card > Advanced Settings):
-  - Orientation: Default / Force portrait / Force landscape. Forcing an orientation rotates the screen just before the sleep screen is drawn and restores it automatically on wake. The Preview popup is unaffected — it always renders at whatever orientation the screen is currently in.
-  - Clear cached data (moved here, see below).
-
-**Fixed**
-- Night mode SVG icons (flame / moon / sun / sunrise / sunset) no longer show a black box behind them — they're now composited with a proper coverage mask so only the icon's own pixels get inverted.
-
-# v1.1.1
-
-## Fixed ##
-
-When exiting from a book and the sleep, it now shows the up to date data.

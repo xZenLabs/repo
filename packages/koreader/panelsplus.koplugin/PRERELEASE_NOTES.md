@@ -51,6 +51,8 @@ After:
 
 <em>Showcase made by <strong>me</strong></em>
 
+NOTE: this works for android phones with RGB screens, currently not working in android ink-based screens, still working on it.
+
 ---
 
 # v1.5.0 ToDo: 

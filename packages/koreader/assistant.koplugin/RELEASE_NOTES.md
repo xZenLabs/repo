@@ -1,3 +1,47 @@
+# v1.18
+
+#### Highlights
+More places inside KOReader where AI is one tap away:
+- File Manager long-press: Book Info (AI) and Recap (AI)
+- Book Description Translate
+- Smarter AI Dictionary with configurable output
+- Notebook and result viewers with a consistent reading experience
+
+#### What's New
+
+**More KOReader Entry Points**
+- **File Manager long-press** — run Book Info (AI) and Recap (AI) without opening the book.
+- **Book Description Translate** — translate the book blurb directly from the description popup.
+- **Smarter Translate routing** — short selections ask once (Translate / Dictionary / Cancel) and remember your choice; long selections always translate.
+
+**AI Dictionary, Less Clutter**
+- Output sections are now configurable with Concise / Standard / Full presets, defaulting to a shorter Standard set. Concise mode additionally favors brevity over book-awareness.
+
+**Result Viewer and Notebook Viewer**
+- **Result viewer (ChatGPTViewer)** — two-row buttons with paging Find, plus Vocabulary Builder and Annotate actions.
+- **Notebook viewer** — notebooks open in a TextViewer-based Markdown viewer with table support.
+- Both viewers now share the same CSS, so AI answers and saved notes read the same.
+
+**AI Notes (formerly General Notebooks)**
+- Renamed to **AI Notes** to distinguish them from KOReader's built-in reading notes.
+- By default a single conversation log (`ai_notes.md`): AI answers and quick notes are appended to it, with optional auto-save per conversation.
+- **Multiple AI Notes** — enable it in AI Notes Settings to create several notes and choose which one is active.
+- Book notes save to per-book files (`<AI Notes folder>/<book>.md`) inside your AI Notes folder, which is configurable in Settings and auto-created on write.
+
+**Provider & Model Polish**
+- Model picker and provider forms are testable in place, with explicit confirmation and clearer failure reports.
+- API errors surface the provider's own message with HTTP status; connection-test output no longer leaks request bodies.
+
+#### Improvements & Fixes
+- Highlight menu: stale menus close after add/remove, selection stays alive for Annotate.
+- Anthropic models support built-in web search.
+- Reasoning (model thinking) renders dimmed above the answer and only when enabled.
+- Streaming title shows the request origin; provider/model identity is frozen per request.
+- Dictionary popup entries moved into Dictionary Settings; KOReader Tweaks renamed to Other Settings.
+
+#### Translations
+All languages refreshed with the new dictionary, viewer, and notebook strings.
+
 # v1.17
 
 > 📦 **Android users:** this release repairs the accelerated text renderer that was silently broken on Android — AI answers and dictionary results will render noticeably faster after updating.
@@ -118,30 +162,3 @@ And everyone who helped with translations, feedback, and testing.
 - Gemini `thinking_budget` handling consolidated into a single handler.
 - Bold formatting centralized through `bold_format` helper, keeping translatable strings contiguous.
 - Removed unused shell translation script.
-
-# v1.13
-
-# v1.13 Release Notes
-
-## Stream Response Performance
-
-Streaming responses previously caused noticeable UI lag, especially on e-ink devices with limited refresh capabilities. Each token triggered a separate screen update, leading to choppy rendering and slow perceived response times.
-
-This release introduces two performance improvements:
-
-- **Coalesced UI updates**: Incoming stream content is now buffered and flushed to the screen at 500ms intervals instead of on every token. This dramatically reduces the number of screen redraws, making the reading experience much smoother and more responsive.
-- **Cleaner reasoning separation**: When a model outputs its internal reasoning before the final answer, the UI now clears the reasoning content and starts the answer fresh, avoiding visual clutter and making the response easier to read.
-
-## Cleanup
-
-- Removed a long-unused plain-text rendering code path and the associated `render_markdown` configuration option (which was always effectively enabled). This simplifies the viewer code and eliminates dead code.
-
-## Other Improvements
-
-- Built-in prompt section headers (e.g. "What It Is", "Role & Function", "Evolution & Connections" in Term X-Ray, and similar headers in Grammar, ELI5, Key Points, and Historical Context prompts) are now localized. Users in supported languages will see these headers in their own language. All 40+ language translations have been updated.
-- Fixed the Azure OpenAI sample endpoint URL in the configuration template.
-- Internal naming improvements to reduce confusion between built-in and user-defined prompts.
-
----
-
-**Stats**: 70 files changed, +41,440 / -32,086 lines (mostly translation updates).
