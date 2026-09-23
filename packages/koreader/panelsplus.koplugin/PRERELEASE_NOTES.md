@@ -4,42 +4,42 @@ This is the road-map for next update which I'm planning to name `Texty-Texty`, b
 
 
 # v1.5.0-BETA Features Implemented so far
-## D1: Panels+ new trigger with double finger tab instead of always long press
- In case you have other plugins that uses the Long-press gestures in your panels, (opt-in option). Thanks to @Pixxel123  in [a PR](#2)
+
+D1 = Done 1,  D2 = Done 2 and so on.
+
+## D1 @Pixxel123 [\[Pull Request\]](#2): Panels+ new trigger with double finger tab instead of always long press
+ In case you have other plugins that uses the Long-press gestures in your panels, (opt-in option).  
 
 https://github.com/user-attachments/assets/46cfb6a1-3f66-48fc-a8eb-0ecc5a7a6921
 
 ---
 
-## D2: Improved OCR recognition for PDF files that include a text-layer embbeded. Thanks to @MartinoAichner in [a PR](https://github.com/KristanLaimon/PanelsPlus/pull/9)
+## D2 @MartinoAichner [\[Pull Request\]](https://github.com/KristanLaimon/PanelsPlus/pull/9): Improved OCR recognition for PDF files that include a text-layer embbeded.
 
 <img width="800" height="450" alt="text_layer_before_ocr" src="https://github.com/user-attachments/assets/2a72596c-efb5-48bc-9d1c-caa8eb33b2d4" />
 <em>Showcase made by @MartinoAichner</em>
 
 --- 
 
-## D3: Increased panel recognition patterns by adding more common mangas to internal Panels+ dataset like:
+## D3 @KristanLaimon [Generic Feature]: Increased panel recognition patterns by adding more common mangas to internal Panels+ dataset like:
 - [Nagatoro (Vol. 1)](https://es.wikipedia.org/wiki/Ijiranaide,_Nagatoro-san)
 - [Horimiya (Vol 1.)](https://es.wikipedia.org/wiki/Hori-san_to_Miyamura-kun)
 Which means, this plugin will have at least 95% precision on those mangas natively and will improve panels finding in other mangas as collateral effect (the purpose for this).
 
 ---
 
-## D4: Fixed bad rotation bug in android devices
+## D4 @KristanLaimon [(Bug-fix, reported by @Keithcat25)](https://github.com/KristanLaimon/PanelsPlus/issues/6): Fixed bad rotation bug in android devices
 Before:
 <table>
   <tr>
-    <td width="25%">
+    <td width="33%">
       <img alt="Image" src="https://github.com/user-attachments/assets/abe26e27-ef2f-402c-a867-d13e369a1b5d" />
     </td>
-    <td width="25%">
+    <td width="33%">
       <img alt="Image" src="https://github.com/user-attachments/assets/13b4662d-414d-4d56-92cf-b42439289e02" />
     </td>
-    <td width="25%">
+    <td width="33%">
       <img alt="Image" src="https://github.com/user-attachments/assets/f02e3046-8470-4a0b-9aa2-1405f4217eee" />
-    </td>
-    <td width="25%">
-      <img alt="Image" src="https://github.com/user-attachments/assets/e490e3c2-395e-49a7-911d-d5d07ec09dee" />
     </td>
   </tr>
 </table>
@@ -72,7 +72,7 @@ After:
 1. `panelsplus_1_5_0_nightly_android_fix.koplugin.zip`
 This is a build including *D1*, *D2* and *D4* (read previous section), featuring android fix. Made to test fix for [this PR](#6) along other android bugs I found.
 
-Currently there are no official builds put here, but you can follow the [build instructions](https://github.com/KristanLaimon/PanelsPlus#%EF%B8%8F-building-from-source) to test this unreleased v1.5 features, not guaranteed to be stable though due to the Nightly builds nature, but you will have all the cutting edge features from Panels+!
+If you want to have all D# like features, you can follow the [build instructions](https://github.com/KristanLaimon/PanelsPlus#%EF%B8%8F-building-from-source) to test this unreleased v1.5 features, not guaranteed to be stable though due to the Nightly builds nature, but you will have all the cutting edge features from Panels+!
 
 # v1.4.0-nightly
 

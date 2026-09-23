@@ -1,3 +1,8 @@
+# v1.3.2
+
+**Added**
+- New Margin settings under Advanced Settings.
+
 # v1.3.1
 
 **New**
@@ -44,11 +49,3 @@ Text background opacity setting (Off / Low / Moderate / High / Solid) controllin
 ## Fixed ##
 
 When exiting from a book and the sleep, it now shows the up to date data.
-
-# v1.1.0
-
-## New ##
-
-- Added cover shadows (default: On)
-- Added new 'Highlights' statistics (default: Off)
-- Reorganized the menu. Every statistics can be turned off now.
