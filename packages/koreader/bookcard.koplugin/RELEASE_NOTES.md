@@ -1,3 +1,9 @@
+# v1.4.2
+
+**Added**
+
+Option to select Random wallpaper
+
 # v1.4.1
 
 **Fixed**
@@ -24,11 +30,3 @@ Changed Book Card to Book card to match the Koreader default plugin names.
 
 **Added**
 - New Margin settings under Advanced Settings.
-
-# v1.3.1
-
-**New**
-- Spanish translation #3 (Thanks: @sergiomarquezdev )
-
-**Fixed**
-- Text positions when wallpaper has set and text background is not transparent
