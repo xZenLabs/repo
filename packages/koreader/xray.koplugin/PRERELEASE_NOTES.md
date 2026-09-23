@@ -1,3 +1,11 @@
+# 26.9.23-beta
+
+- fix claude bugs
+- update series logic
+- fix unit converter range logic 
+
+**Full Changelog**: https://github.com/ultimatejimmy/xray.koplugin/compare/26.9.17...26.9.23-beta
+
 # 26.9.15-beta
 
 ### What's New
@@ -31,10 +39,3 @@
 - Fix bug with mentions scanning on some devices and is some situations
 
 **Full Changelog**: https://github.com/ultimatejimmy/xray.koplugin/compare/26.9.11.2...26.9.13-beta
-
-# 26.9.11.1-beta
-
-- Fix bug with mentions when access from the menu
-- Fix bug with sorting options 
-
-**Full Changelog**: https://github.com/ultimatejimmy/xray.koplugin/compare/26.9.11...26.9.11.1-beta

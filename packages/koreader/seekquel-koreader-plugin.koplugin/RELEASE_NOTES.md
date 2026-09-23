@@ -1,3 +1,16 @@
+# v1.12.0
+
+### What's new
+
+- A book you finish in Seekquel is now marked finished in KOReader too. The next time you open it on your e-reader, KOReader's own status changes to finished. A status you set on the e-reader since always stands, and a book you are reading again is left alone.
+- Sync now sends today's reading up to the page you are on. KOReader only saves its reading statistics every fifty page turns, so a sync mid-sitting could leave out the last few dozen pages. The add-on now asks KOReader to save them first.
+
+### Install
+
+Already using the add-on? It updates itself, so there is nothing to do.
+
+New install: download `seekquel.koplugin-v1.12.0.zip`, unzip it into KOReader's `plugins` folder so you have a `seekquel.koplugin` folder there, restart KOReader, then pair it from the Seekquel menu with the code shown in the app.
+
 # v1.11.0
 
 ### What's new
@@ -39,20 +52,6 @@ Existing installations can update from Tools, Seekquel. KOReader versions older 
 ### What’s new
 
 A highlight now reaches Seekquel in the colour you painted it, matched to the nearest of the five colours the app offers. A grey highlight arrives without a colour. Highlights you had already synced are sent once more after updating, so those pick their colour up too.
-
-### Install
-
-Download the zip, extract it, copy the seekquel.koplugin folder into koreader/plugins, then restart KOReader.
-
-Existing installations can update from Tools, Seekquel. KOReader versions older than v2025.08 still require the manual file copy.
-
-# v1.8.0
-
-### What’s new
-
-Sync now ends with a short reading recap showing today’s minutes and pages, the chapter reached, and your current progress. Automatic syncs stay quiet. Open Today’s reading to see the recap again, or Today in Seekquel to refresh your daily targets and current streak.
-
-When Seekquel has a later place logged from a hardcover, audiobook, another edition or another app, opening the linked book now asks before moving KOReader to the closest percentage in the local file. The move is approximate and never adds pages or reading time.
 
 ### Install
 

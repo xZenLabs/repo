@@ -1,3 +1,32 @@
+# v7.3.5
+
+v7.3.5 — Release Notes
+
+### Reading Pop-Ups Disabled by Default
+ * Opt-in Behavior: Both Scrubber Dictionary and Scrubber Selection Menu are now disabled by default (default = false). Fresh installations and updates will preserve KOReader's stock dictionary and selection menus without unexpected interface changes.
+ * Users who prefer the minimalist floating pop-ups can enable them at any time in Page Scrubber Settings -> Reading Pop-Ups.
+
+### Reorganized Wallpaper Menu
+ * Dedicated Submenu: Wallpaper selection has been moved to its own submenu labeled Choose wallpaper using the sparkles.svg icon, keeping the top-level wallpaper menu clean and concise.
+ * Folder Guidance: The system path helper has been renamed to Add wallpaper and placed at the bottom of the wallpaper list.
+ * Dynamic State: The Book title background setting is automatically disabled and dimmed when no wallpaper is selected (None), preventing inactive configuration states over the stock white background.
+ 
+**New** Title Background Style: Translucent
+ * Translucent Mode: Added a new Translucent option under Wallpaper -> Book title background.
+ * E-ink Optimized (Zero-Allocation): Leveraging Bookshelf's native C blending algorithm (blendRectRGB32 with _roundedSpans), the translucent pill composites smoothly over the wallpaper without allocating intermediate Blitbuffers or introducing UI flicker.
+ * The title background setting now includes four options:
+   * With border: White pill with a solid black outline.
+   * No border: Solid white pill without an exterior border.
+   * Translucent: Semi-transparent white pill that allows the underlying wallpaper texture to show through.
+   * Off: Free-floating title text backed by a dense halo.
+
+**Stability** and Memory
+ * Instant RAM flushing and clean widget exit when switching wallpapers (including reverting to None) or toggling title pill styling options.
+ 
+ **Added translations.**
+ 
+[page_scrubber.koplugin.zip](https://github.com/user-attachments/files/32577238/page_scrubber.koplugin.zip)
+
 # v7.3.0
 
 v7.3 — Patch Notes
@@ -85,13 +114,3 @@ Visual & UI Improvements
 ### ​Visual Polish: Refined press feedback and tactile animations across buttons for a cleaner, modern look.
 
 [page_scrubber.koplugin.zip](https://github.com/user-attachments/files/32409558/page_scrubber.koplugin.zip)
-
-# v6.2.2
-
-v6.2.2 Update
- * True Font Scaling: Dictionary text and buttons now strictly scale relative to the book's font size and device DPI, fixing oversized text issues.
- * Quick Search: Added a ... button to the dictionary header that instantly opens KOReader's native search keyboard.
- * Menu Cleanup: Hidden the duplicate native "AI Assistant" from the + menu, keeping your custom AI plugins and the main sparkles.svg button intact.
- * UI Polish: Removed the redundant lookup word from the definition body and fixed header text updates when swiping between dictionaries.
-
-[page_scrubber.koplugin.zip](https://github.com/user-attachments/files/32215700/page_scrubber.koplugin.zip)

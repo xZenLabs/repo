@@ -1,3 +1,8 @@
+# v6.9.3
+
+**Fixed**
+The font picker now lists fonts from all of KOReader's font folders without duplicates. The same font file found in multiple folders is shown only once.
+
 # v6.9.2
 
 Hungarian translation fix
@@ -20,9 +25,3 @@ Next chapters renamed to Next 2 chapters
 **Changed**
 
 Streak history bar color match to calendar days fill color
-
-# v6.8.0
-
-**New**
-
-Streak History popup opens when you tap "Current streak" or "Best streak" on the Reading streak — date, a bar, and the value (time or pages) for each day, newest days first, 21 days per page.  #80
