@@ -1,3 +1,32 @@
+# v7.3.0
+
+v7.3 — Patch Notes
+Here is the latest update for Page Scrubber. This release brings key performance enhancements to page navigation, comprehensive UI refinements, and visual customization options.
+
+### Performance & Navigation
+ * Aggressive Page Preloading: Neighboring pages are now preloaded ahead of time in the background, making page turns via taps or swipes feel instant.
+ * Rewritten Bookmark Logic: The add/remove bookmark logic was completely rewritten to work reliably alongside background preloading, preventing crashes or freeze-ups during live bookmark toggling.
+
+### New Feature: Wallpapers
+A customization option designed to match recent aesthetic setups like Bookshelf:
+ * Multi-Folder Detection: Automatically loads custom wallpapers from the plugin’s own directory as well as shared system paths (including Bookshelf, SimpleUI, and /mnt/us/Wallpapers/).
+ * Title Pill & Dense Halo: Book titles can now sit inside an optional protective "pill" badge. If turned off in settings, a dense 8-pass circular halo renders behind the text to ensure complete readability across textured or dark backgrounds.
+ * Clean Divider Line: A crisp horizontal divider line renders directly beneath the top bar when a wallpaper is active.
+ * Note on Performance: Full-screen image rendering on E-ink requires additional RAM and CPU cycles. If you notice any interface lag on lower-spec hardware, you can instantly return to the stock white background by selecting None.
+
+**Split View Visual Refinements**:
+ * Standardized Geometry: Border thickness, corner radii, and list padding are now aligned across portrait and landscape views, ensuring consistent lines between the Polaroid preview and right-hand list cards.
+ * Refined Tabs: Upper category tabs and filter icons received subtle visual adjustments for a cleaner, balanced layout.
+
+**RTL / Manga Navigation Fixes**
+ * Directional Arrow Fixes: Resolved issues in landscape RTL mode where Bookmark Browser navigation chevrons and return-to-origin labels pointed in the wrong direction.
+ 
+**Stability & Memory Management**
+ * Clean Exits on Heavy Toggles: Switching heavy visual states—such as choosing a new wallpaper, disabling wallpapers via "None", toggling the title pill, or switching day/night mode and frontlight—now safely closes the widget to flush C-buffers from RAM and prevent ghosting or input lag.
+ * Minor state synchronization and alignment bug fixes.
+
+[page_scrubber.koplugin.zip](https://github.com/user-attachments/files/32567026/page_scrubber.koplugin.zip)
+
 # v7.2.0
 
 
@@ -66,15 +95,3 @@ v6.2.2 Update
  * UI Polish: Removed the redundant lookup word from the definition body and fixed header text updates when swiping between dictionaries.
 
 [page_scrubber.koplugin.zip](https://github.com/user-attachments/files/32215700/page_scrubber.koplugin.zip)
-
-# v6.2.1
-
-
-What's New in 6.2.1
-### **Fixed** Third-Party Plugin Compatibility: 
-Action buttons registered by external plugins (such as AI dictionary and custom lookup tools) now correctly appear in the "More" menu instead of being incorrectly filtered out. 
-
-### **​Cleaned** Up Action Overlaps: 
-Filtered out unsupported "Share text" entries on Kindle and prevented duplicate X-Ray buttons from showing up in the secondary menu. 
-
-[page_scrubber.koplugin.zip](https://github.com/user-attachments/files/32191999/page_scrubber.koplugin.zip)

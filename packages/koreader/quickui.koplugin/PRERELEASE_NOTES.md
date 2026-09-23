@@ -1,23 +1,10 @@
 # v1.1.0-beta.4
 
-## What's Changed
-
-- Vertical Bar: add vertical bar as quick menu (swipe to page or move,long-press to edit/add buttons, open the settings menu)
-- Quick Actions: improve the font list both in Font List、UI Font Switcher&HF font (font preview + recently-selected sorting)
-- Quick Actions: add reader sliders as built-in action and dispatcher action(long-press to bring up a settings dialog, check the box to add it to the panel)
-- Quick Actions: add more built-in actions for popular koplugins (find them in action pools)
-- Quick Actions: auto-detect plugin availability for plugin-dependent actions — unavailable ones are greyed out with a ✗ in the add menu, skipped by Select All, filtered out of Panel / Bottom Bar / Vertical Bar, and show a notification when tapped
-- Quick Actions: cascade-delete custom action from all bars to avoid orphaned ids
-- Panel: fix accidental touch issue in slider and refactor the slider menu(long-press slider to add more)
-- Panel: add pagination (default 3 rows per page-can be changed by tab +/-) with chevron pager and swipe to flip pages; remove the 66-button cap
-- Cover: show status icons on the progress badge at 0% and 100%
-- Cover: support SimpleUI virtual paths for folder covers (Mosaic & List)
-- Cover: skip CoverBrowser-dependent patches when CoverBrowser is not installed, so QuickUI loads normally without it
-- Header & Footer: hide footer while the QuickUI bottom bar is shown in the reader
-- Bottom bar: rework injection to live inside Menu's footer instead of wrapping the widget tree, so it now also works on the Collections list, the collection folder list and any other Menu-based screen
-- Bottom bar: attach bottom bar to ReaderFooter, fix flicker and progress misplacement in Reader
-- Bottom bar: add dispatcher action-toggle bottom bar in reader
-- i18n: improve Chinese translation
+### 更新说明
+>非 Reader 界面的底栏注入改为"寄生"在 Menu 自身的 footer 里，不再从外面包裹整个 widget 树。
+- 底部栏：重构底部栏注入方式-由包裹 widget 改为寄生在Menu 自身的 footer 里，彻底解决底栏丢失及与simpleui重复包裹时机先后的问题
+- 书库封面：添加对内置依赖插件coverbrowser的前置检查，避免因coverbrowser未启用导致插件其他功能也无法使用。
+- 兼容性：可搭配本人仓库[simpleui v2.7.1-b](https://github.com/gytwo/simpleui.koplugin/releases/tag/v2.7.1-b)使用
 
 # v1.1.0-beta.3
 

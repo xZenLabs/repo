@@ -1,3 +1,28 @@
+# v1.1.0
+
+## 更新说明
+> 添加侧边栏快捷菜单+阅读滑块+重构底部栏注入方式（寄生footer而非包裹widget）+更多内置动作
+- 侧边栏: 增加侧边栏快捷菜单（竖滑翻页、横滑拖动，长按按钮-编辑，长按上翻页-设置，长按下翻页-动作池，无按钮数量限制)
+- 快捷操作: 优化（阅读器、UI字体切换、页眉页脚）字体列表-字体预览、最近排序、选中最前
+- 快捷操作: 添加阅读滑块（字号、间距、样式微调等）的内置动作/手势操作-长按滑块弹出滑块列表（勾选以添加至顶部面板）、长按右侧数值重置为默认、长按左边标签弹出阅读滑块或重置为默认
+- 快捷操作: 添加更多流行插件的内置动作（到动作池中添加至顶部面板/底部栏/侧边栏）
+- 快捷操作: 给依赖插件的内置动作做前置检查-不可用会在动作池列表显示为灰，全选添加会自动过滤排除，顶部面板/底部栏/侧边栏按钮自动过滤排除
+- 快捷操作: 在顶部面板/底部栏/侧边栏彻底删除某动作时联动删除其他栏上的相同动作按钮（避免空引用）
+- 顶部面板: 修复点击顶部弹出菜单时误触前光滑块、重构滑块菜单（长按滑块以添加更多阅读滑块至顶部面板）
+- 顶部面板: 添加分页行（默认3行1页，行上按钮可快速切换按钮形状、显/隐标签、一页几行，可隐藏、可滑动翻页），移除最大66个的数量限制
+- 底部栏：添加阅读器界面显示/隐藏底部栏的手势操作
+- 底部栏：重构底部栏注入方式-由包裹 widget 改为寄生在Reader/Menu自身的footer里，修复进入阅读姐买你闪烁、进度错位的问题，彻底解决旋转、全屏切换等情形下底栏丢失及与simpleui重复包错位的问题（兼容性：可搭配本人仓库[simpleui v2.7.1-b](https://github.com/gytwo/simpleui.koplugin/releases/tag/v2.7.1-b)使用）
+- 页眉页脚: 阅读界面显示底部栏时自动隐藏页脚
+- 书库封面: 给进度为0%和100%的书籍也添加进度徽章
+- 书库封面: 支持识别simpleui虚拟文件夹（作者/系列/标签）路径中的书籍图片从而正确绘制虚拟文件夹封面（封面网格&图片列表均适用）
+- 书库封面：添加对内置依赖插件coverbrowser的前置检查，避免因coverbrowser未启用导致插件其他功能也无法使用。
+- 其他: 完善中文翻译
+<img width="1072" height="1448" alt="Screenshot_2026-09-23_214635" src="https://github.com/user-attachments/assets/89220b6c-bcba-4e11-99e1-d6f53ccf80bb" />
+<img width="1072" height="1448" alt="Screenshot_2026-09-23_215002" src="https://github.com/user-attachments/assets/94c8906b-8a27-4466-8079-be01ed862920" />
+<img width="1072" height="1448" alt="Screenshot_三体全集（全三册）_刘慈欣 epub_p582_2026-09-23_215332" src="https://github.com/user-attachments/assets/4dbcedbb-ebea-409c-9ea4-ab8edd8a23ba" />
+<img width="1072" height="1448" alt="Screenshot_三体全集（全三册）_刘慈欣 epub_p579_2026-09-23_214042" src="https://github.com/user-attachments/assets/bab93817-3b26-4769-a650-01c5868116ab" />
+<img width="1072" height="1448" alt="Screenshot_三体全集（全三册）_刘慈欣 epub_p582_2026-09-23_215342" src="https://github.com/user-attachments/assets/185d628a-eb76-4c65-92af-46cf9fade10b" />
+
 # v1.0.6
 
 ## 更新说明
@@ -69,12 +94,3 @@
 - Ddisable auto-keyboard popup on action edit dialogs to prevent accidental triggers
 - Display release notes when new version is found
 - Remove the name field to be compatible with KOReader v2026.07
-
-# v1.0.2
-
-## What's Changed
-
-- feat(bottombar): add overlap toggle for reader view
-- fix(qa_settings): hide Remove button when creating new custom action
-- fix(main): read plugin version from _meta.lua dynamically
-- i18n: add translations for overlap mode
