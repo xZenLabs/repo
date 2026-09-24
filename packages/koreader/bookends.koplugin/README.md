@@ -129,6 +129,8 @@ Tokens are placeholders that expand to live values. Type `%` followed by a name,
 | `%quote` | A highlight from this book, in quotation marks | *"The spice must flow."* |
 | `%quote_source` | Title and author, to caption `%quote` | *Dune, Frank Herbert* |
 | `%lang` | Book language | *en* |
+| `%genre` | First genre, from the book's Keywords | *Fantasy* |
+| `%genres` | All genres, comma-separated | *Fantasy, Fiction* |
 | `%format` | Document format | *EPUB* |
 | `%highlights` | Number of highlights | *3* |
 | `%notes` | Number of notes | *1* |
@@ -136,9 +138,11 @@ Tokens are placeholders that expand to live values. Type `%` followed by a name,
 | `%annotations` | Total annotations (highlights + notes + bookmarks) | *9* |
 | `%calibre{name}` | Any Calibre column, by its lookup name (the `#` is optional) | *cosy* |
 
+> **Genres.** `%genre` and `%genres` read the book's **Keywords** field, the one KOReader shows under *Book information* and lets you edit there. Keywords separated by commas, semicolons, pipes or line breaks each count as a genre, and a spaced slash splits a subject heading, so `Fiction / Fantasy` reads as two. A slash with no spaces around it stays part of the tag. If a book has no keywords both tokens are empty, so `[if:genres]` hides the line rather than leaving a gap.
+
 > **Calibre columns.** If your library is managed by Calibre, `%calibre{name}` shows any column from it, using the column's lookup name: a custom column `#mood` renders with `%calibre{mood}`. Text, list, number, date, yes/no and multi-value columns all work; long-text ("Comments") columns are skipped, being the wrong shape for a status line. Three standard fields come through the same way: `%calibre{pubdate}` (the year), `%calibre{publisher}` and `%calibre{rating}`. Conditionals work too, e.g. `[if:calibre{mood}="cosy"]Cosy read[/if]`.
 
-> This reads the `metadata.calibre` file Calibre writes into your KOReader home folder, and reads nothing at all unless one of your lines actually uses the token. One caveat worth knowing: KOReader's own wireless Calibre sync rewrites that file and permanently drops custom columns from it. A small `calibre.bookshelf.json` saved alongside preserves them and is shared with [Bookshelf](https://github.com/AndyHazz/bookshelf.koplugin) if you run both plugins.
+> This reads the `metadata.calibre` file Calibre writes into your KOReader home folder (the one set under *Settings > Home folder*), and reads nothing at all unless one of your lines actually uses the token. If your books live elsewhere, or you copy files across by hand rather than sending them from Calibre, there is no such file and these tokens stay empty. A book with no value for a column shows nothing at all, so `[if:calibre{pubdate}]%calibre{pubdate}[/if]` hides itself on books that have no date. One caveat worth knowing: KOReader's own wireless Calibre sync rewrites that file and permanently drops custom columns from it. A small `calibre.bookshelf.json` saved alongside preserves them and is shared with [Bookshelf](https://github.com/AndyHazz/bookshelf.koplugin) if you run both plugins.
 
 > **Author and last-digit families, typed manually.** `%author_1` through `%author_5` pick a specific author by position, the same way `%author_2` does. And `%page_num_lastdigit`, `%page_count_lastdigit`, `%pages_left_lastdigit`, `%chap_read_lastdigit`, `%chap_pages_lastdigit` and `%chap_pages_left_lastdigit` expose just the final digit of their counter, for languages whose grammar branches on it (Hungarian vowel harmony, for instance: `[if:page_num_lastdigit=3]`). Neither family appears in the token picker.
 
@@ -189,6 +193,7 @@ Tokens are placeholders that expand to live values. Type `%` followed by a name,
 | `%book_read_time` | Total reading time for book | *2h 30m* |
 | `%session_time` | Session reading time (skip-aware) | *0h 23m* |
 | `%session_pages` | Session pages read (skip-aware) | *14* |
+| `%session_pages_advanced` | Pages advanced this session, counted in stable page numbers when the book has them. Starts at 0 and goes up only when you get further than you've been this session, so paging back doesn't count. A jump ahead counts the pages it skips. Not skip-aware, unlike `%session_pages` | *3* |
 | `%pages_today` | Pages read today across all books | *32* |
 | `%time_today` | Reading time today across all books | *1h 15m* |
 | `%speed` | Reading speed (pages/hour) | *42* |
@@ -302,6 +307,7 @@ Comparison operators: `=` (equals), `!=` (not equals), `<` (less than), `>` (gre
 | `session` | minutes | Session reading time (skip-aware) |
 | `session_time` | minutes | Alias for `session`, matching the `%session_time` token name |
 | `session_pages` | count | Session pages read (skip-aware) |
+| `session_pages_advanced` | count | Pages advanced this session (matches `%session_pages_advanced`) |
 | `pages_today` | count | Pages read today across all books (skip-aware) |
 | `time_today` | minutes | Reading time today across all books |
 | `avg_page_time` | seconds | Average time per page |
@@ -309,7 +315,8 @@ Comparison operators: `=` (equals), `!=` (not equals), `<` (less than), `>` (gre
 | `book_pct_read` | 0–100 | Book read percentage, skip-aware (complements position-based `book_pct`) |
 | `days_reading_book` | count | Distinct days you've read this book |
 | `pages_per_day` | count | Pages per reading day for this book |
-| `page` | odd / even | Current page parity |
+| `page` | odd / even | Current page parity, counted through the book |
+| `chap_page` | odd / even | Parity of the page **within the chapter**, following `%chap_read`. Use this to alternate a line, so it restarts at each chapter rather than keeping the book's phase |
 | `light` | on / off | Frontlight state |
 | `warmth` | 0–100 | Frontlight warmth (only on devices with natural light) |
 | `format` | EPUB / PDF / CBZ… | Document format |
@@ -322,6 +329,8 @@ Comparison operators: `=` (equals), `!=` (not equals), `<` (less than), `>` (gre
 | `series_name` | string | Series name without index (matches `%series_name`) |
 | `series_num` | string | Series index, e.g. `"2"` (matches `%series_num`) |
 | `lang` | string | Document language code, e.g. `"en"` (matches `%lang`) |
+| `genre` | string | First genre (matches `%genre`) |
+| `genres` | string | All genres, comma-separated (matches `%genres`). `[if:not genres]` means "no genres set" |
 | `filename` | string | File name without extension (matches `%filename`) |
 | `chap_title` | string | Current chapter title (matches `%chap_title`) |
 | `chap_title_1` | string | Chapter title at depth 1 (matches `%chap_title_1`) |

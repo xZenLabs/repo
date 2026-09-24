@@ -1,3 +1,19 @@
+# v5.26.0
+
+**New**
+
+- `%genre` and `%genres` show a book's genres, taken from its keywords (the field in KOReader's Book information). `%genres` lists them all, separated by commas, and `%genre` shows the first. `[if:genres]` hides a line for books that have none.
+- `[if:chap_page=odd]` lets a line alternate on the page within the chapter, so the pattern starts again at every chapter. `[if:page=odd]` still follows the book's own page.
+- `%session_pages_advanced` shows how far you've got this session, counted in stable page numbers when the book has them. It starts at 0 and only goes up when you pass the furthest page you've reached, so paging back doesn't count. `%session_pages` is unchanged.
+
+**Fixes**
+
+- The book page no longer draws over part of KOReader's menu when a status bar updates while the menu is open, for example when toggling Wi-Fi from the menu.
+- Fixed an error box when opening a book on Kindles with a warm light, if the warmth couldn't be read at startup.
+- Calibre columns (`%calibre{...}`) now survive KOReader's wireless Calibre sync, which was wiping them.
+- Calibre columns now also work in large libraries, where they could go missing, and when KOReader's home folder is set with a trailing slash.
+- Whole-number Calibre columns, such as a word count, now print in full rather than as `1.23457e+06`.
+
 # v5.25.0
 
 **Fixes**
@@ -110,13 +126,3 @@ Install counts load faster and no longer stop working on busy days. The counts e
 **New languages**
 
 Ukrainian (uk) and European Portuguese (pt_PT), thanks to the contributors in #105 and #93.
-
-# v5.22.0
-
-**Chapter progress at any TOC depth**
-
-The chapter progress tokens now take a depth suffix, the same way `%chap_title_1`…`%chap_title_9` already do: `%chap_read_N`, `%chap_pages_N`, `%chap_pages_left_N`, `%chap_pct_N`, `%chap_pct_left_N`, plus `%chap_time_left_N` and `%chap_time_left_N_eta`.
-
-Without a number they track the deepest chapter, as before. With a depth, e.g. `%chap_read_1`, they measure against the top-level chapter instead. Useful for books with a very fine table of contents, where a plain `%chap_read` shows a tiny sub-section's length next to a top-level `%chap_title_1`.
-
-Type them manually (they're not in the token picker). The README token reference lists the full set.
