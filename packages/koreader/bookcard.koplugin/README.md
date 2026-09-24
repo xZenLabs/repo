@@ -38,21 +38,35 @@ hands control to Android's own lock screen instead, so the native Book
 Card sleep screen is never shown there.
 
 For Android, use **Tools > Book card > Advanced Settings > Image export
-(for Android wallpaper)** instead:
+(Android wallpaper / PocketBook logo)** instead:
 - **Save as image, kept up to date** - turns on a background PNG export of
   the card, refreshed automatically (Save image now / refresh interval,
   both in the same menu).
+- **Also save when opening a book** - on by default; also refreshes the
+  image a few seconds after a book has been opened, not only on the timer
+  (and when a book is closed or the device suspends).
+- **Image format** - PNG (default, lossless), JPG (smallest files) or BMP
+  (uncompressed, large). Switching format rewrites the picture right away and
+  removes the old-format file of the same name.
 - **Also copy to a shared folder…** - optionally also writes the same
   picture into a folder you pick (e.g. a shared `Pictures` folder), so it
   shows up in Android's own gallery/wallpaper picker, or so a
   wallpaper-changer app can watch that folder and keep applying the latest
   version automatically.
 - The always-on copy lives at
-  `koreader/screensaver/bookcard_png/bookcard_wallpaper.png` regardless of
+  `koreader/screensaver/bookcard_png/bookcard_wallpaper.png` (or `.jpg` / `.bmp`,
+  see **Image format**) regardless of
   whether an extra folder is set.
 
 This mirrors how the Ink Stain Wallpaper plugin handles the same
 Android limitation.
+
+## PocketBook
+On PocketBook devices, Advanced Settings > Image export (Android wallpaper / PocketBook logo) shows an extra option, **Also save as PocketBook power-off / boot logo** (off by default; the option is hidden on other devices). When it and image export are both on, the card is also written as
+`bookcard.bmp` into `/mnt/ext1/system/logo/offlogo/` and `/mnt/ext1/system/logo/bootlogo/`
+(pick it under the device's power-off logo setting). The boot logo is registered with
+`iv2sh WriteStartupLogo` only when the device goes to sleep or on "Save image now" (it
+writes to flash). On every other device this is skipped.
 
 ## Orientation
 Tools > Book card > Advanced Settings > Orientation:

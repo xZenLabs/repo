@@ -1,3 +1,14 @@
+# v1.1.1-beta.2
+
+## 更新说明
+> 修复一些已知问题
+- 底部栏: 阅读界面由原来的直接替换原生footer改为与原生footer共存，上下排布（保持与Menu patch一致）
+- 底部栏: 取消勾选“在阅读器中显示”时立即清除底栏触摸区域（避免误触）而非等到重排结束才彻底清除
+- 底部栏:  仅当底栏高度发生变化时才重排，修复打开书籍时闪烁一下的问题
+- 底部栏: 修复从阅读界面返回simpleui主屏幕后移除或添加底栏按钮无法立即更新的问题
+- 页眉页脚: 修复缩略图生成失败的问题——渲染离屏缓冲区（缩略图、书籍地图、页面浏览器）时跳过页眉/页脚叠加
+- 侧边栏: 删除无效的文件引用避免可能的崩溃
+
 # v1.1.1-beta.1
 
 ## 更新说明
@@ -39,22 +50,3 @@
 - 底部栏：搜素结果界面也显示底部栏
 - 底部栏：添加阅读器界面显示/隐藏底部栏的手势操作
 - 其他: 完善中文翻译
-
-# v1.1.0-beta.1
-
-## What's Changed
-
-- Vertical Bar: add vertical bar as quick menu (swipe to page or move,long-press to edit/add buttons, open the settings menu)
-- Quick Actions: improve the font list both in Font List、UI Font Switcher&HF font (font preview + recently-selected sorting)
-- Quick Actions: add reader sliders as built-in action and dispatcher action(long-press to bring up a settings dialog, check the box to add it to the panel)
-- Quick Actions: add more built-in actions for popular koplugins(find them in actio pools)
-- Quick Actions: cascade-delete custom action from all bars to avoid orphaned ids
-- Panel: fix accidental touch issue in slider and refactor the slider menu(long-press slider to add more)
-- Panel: add pagination (default 3 rows per page-can be changed by tab +/-) with chevron pager and swipe to flip pages; remove the 66-button cap
-- Cover: show status icons on the progress badge at 0% and 100%
-- Cover: support SimpleUI virtual paths for folder covers (Mosaic & List)
-- Header & Footer: hide footer while the QuickUI bottom bar is shown in the reader
-- Bottom bar: inject into FileManager via FileManager.setupLayout (one-shot injection)
-- Bottom bar: show on filesearch results screen
-- Bottom bar: add dispatcher action-toggle bottom bar in reader
-- i18n: improve Chinese translation

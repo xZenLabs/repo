@@ -1,3 +1,7 @@
+# v6.9.6
+
+More Hungarian translation text fix.
+
 # v6.9.5
 
 **Fixed**
@@ -17,9 +21,3 @@ The font picker now lists fonts from all of KOReader's font folders without dupl
 # v6.9.2
 
 Hungarian translation fix
-
-# v6.9.1
-
-**Changed**
-
-Next chapters renamed to Next 2 chapters

@@ -1,3 +1,14 @@
+# v1.1.1
+
+## 更新说明
+> 修复一些已知问题
+- 底部栏: 阅读界面由原来的直接替换原生footer改为与原生footer共存，上下排布（保持与Menu patch一致）
+- 底部栏: 取消勾选“在阅读器中显示”时立即清除底栏触摸区域（避免误触）而非等到重排结束才彻底清除
+- 底部栏:  仅当底栏高度发生变化时才重排，修复打开书籍时闪烁一下的问题
+- 底部栏: 修复从阅读界面返回simpleui主屏幕后移除或添加底栏按钮无法立即更新的问题
+- 页眉页脚: 修复缩略图生成失败的问题——渲染离屏缓冲区（缩略图、书籍地图、页面浏览器）时跳过页眉/页脚叠加
+- 侧边栏: 删除无效的文件引用避免可能的崩溃
+
 # v1.1.0
 
 ## 更新说明
@@ -85,12 +96,3 @@
 - 修复无封面书籍的占位封面及列表视图下的书籍封面无选中效果的问题
 - 添加在PDF中隐藏底部栏选项
 - 完善中文翻译
-
-# v1.0.3
-
-## What's Changed
-
-- Expose QuickUI bottom bar height globally for SimpleUI compatibility
-- Ddisable auto-keyboard popup on action edit dialogs to prevent accidental triggers
-- Display release notes when new version is found
-- Remove the name field to be compatible with KOReader v2026.07
