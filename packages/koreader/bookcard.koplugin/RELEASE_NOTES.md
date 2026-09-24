@@ -1,3 +1,14 @@
+# v1.4.4
+
+**Fixed**
+Removed some duplicates that remain in the font list buildup.
+
+# v1.4.3
+
+**Changed**
+
+Updated text 'Installed version' to 'Check for update' in the menu
+
 # v1.4.2
 
 **Added**
@@ -19,14 +30,3 @@ The font picker now lists fonts from all of KOReader's font folders without dupl
 
 **Fixed**
 - Grouped text boxes adjusted the cover + shadow (if it's enabled)
-
-# v1.3.3
-
-**Changed**
-
-Changed Book Card to Book card to match the Koreader default plugin names.
-
-# v1.3.2
-
-**Added**
-- New Margin settings under Advanced Settings.

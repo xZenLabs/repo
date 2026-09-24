@@ -1,3 +1,14 @@
+# v6.9.5
+
+**Fixed**
+Removed some duplicates that remain in the font list buildup.
+
+# v6.9.4
+
+**Changed**
+
+Updated text 'Installed version' to 'Check for update' in the menu
+
 # v6.9.3
 
 **Fixed**
@@ -12,16 +23,3 @@ Hungarian translation fix
 **Changed**
 
 Next chapters renamed to Next 2 chapters
-
-# v6.9.0
-
-**New**
-
-- Next-chapter display now supports showing up to 2 upcoming chapters instead of just 1.
-  -  New setting: "Next chapters shown", with options "1 (default)" and "2".
-
-# v6.8.1
-
-**Changed**
-
-Streak history bar color match to calendar days fill color

@@ -1,3 +1,7 @@
+# 2.2.1
+
+Just fixed the version string in metadata.
+
 # 2.2.0
 
 ## [2.2.0] - 2026-09-20
@@ -85,15 +89,3 @@
   - Aligned syncing actions to depend purely on native KOSync configuration state. Removed redundant custom sync interval options, background progress push loops, and offline Wi-Fi connection prompt warnings.
 - **Dead Code & Import Cleanup**:
   - Removed multiple unused local variables, duplicate imports, and obsolete helper functions (`sanitize_for_settings`, custom recursive folder creation, etc.) to optimize the plugin's memory footprint.
-
-# 1.0.0
-
-First release. 
-
-#### Highlights
-
-1. **Browse Komga Catalog:** View libraries, series, recently added, and on-deck books with cover thumbnails, layout adjustments (list/grid modes), read status filters, and direct downloads.
-2. **Metadata Extraction:** Upon downloading, automatically retrieves comic and book metadata (title, summary, authors, series index) from the Komga server and populates KOReader's document settings.
-3. **Next Chapter Flow:** Prompts at the end of a book to check the server for the next chapter. If it is already downloaded, it opens it; if not, it automatically downloads and opens it.
-4. **Integrated Progress Sync:** Integrations into the default KOReader sync (`kosync`) to intercept get/update progress events and sync directly with the Komga server for matched books.
-5. **Auto RTL:** An option to automatically toggle reading direction to Right-to-Left (RTL) upon opening any book that are from Komga.

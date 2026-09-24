@@ -1,3 +1,12 @@
+# v7.3.6
+
+### Fixes & Visual Polish (v7.3.2)
+
+* **Display / E-ink:** Fixed full-screen flash on hold release. Switched the gesture release trigger from an unnecessary deep refresh (`partial`) to an instant, smooth refresh (`ui`). Turning pages continuously by holding no longer triggers screen flashes.
+* **Floating Dictionary:** Removed the redundant horizontal divider separating the dictionary title from the definition text for a cleaner, unified reading layout. Action and plugin buttons retain their bottom separators.
+
+[page_scrubber.koplugin.zip](https://github.com/user-attachments/files/32589830/page_scrubber.koplugin.zip)
+
 # v7.3.5
 
 v7.3.5 — Release Notes
@@ -92,25 +101,3 @@ Visual & UI Improvements
   * Displays a quick toast message confirming the active state (`RTL ON` / `RTL OFF`).
 
 [page_scrubber.koplugin.zip](https://github.com/user-attachments/files/32429083/page_scrubber.koplugin.zip)
-
-# v7.0.0
-
-
-### ​Full Landscape Mode Support:
- All plugin interfaces (Grid, 6-Grid, Split View, and Table of Contents) have been adapted for landscape reading. The bottom navigation bar has been reorganized into a standardized two-level layout: a clean top row housing page-turning controls and reading telemetry, and a full-width progress slider below, optimizing ergonomics and thumb reach when holding the device horizontally.  
-
-### ​6-Grid Optimization: Significantly reduced loading latency when generating page thumbnails across the 3x2 grid layout, making browsing smoother.
-
-### ​Faster Startup & Reopening: Greatly improved load times when opening, closing, and reopening the scrubber interface during active reading.
-
-### ​Removed Top Bar: Eliminated the redundant top header to give the entire interface more breathing room and maximize vertical space for thumbnails and reading content.
-
-### ​Origin Page Indicator: A subtle gray dot now marks your starting reading page in the top-left corner (in Simple Grid mode, bookmarks are also clearly marked on the header).  
-
-### ​(index) Chapter Bookmark & Highlight Telemetry: The Table of Contents bottom bar now displays real-time counters showing the exact number of bookmarks and highlights present in the current chapter.  
-
-### ​Enhanced Dictionary Typography: Increased the default font size in the dictionary pop-up for more comfortable and legible reading on high-density displays.  
-
-### ​Visual Polish: Refined press feedback and tactile animations across buttons for a cleaner, modern look.
-
-[page_scrubber.koplugin.zip](https://github.com/user-attachments/files/32409558/page_scrubber.koplugin.zip)
