@@ -1,3 +1,15 @@
+# v6.10.1
+
+**Changed**
+
+Font picker changed from checkbox to radio button
+
+# v6.10.0
+
+**New**
+
+The font picker now shows how the fonts looks
+
 # v6.9.6
 
 More Hungarian translation text fix.
@@ -12,12 +24,3 @@ Removed some duplicates that remain in the font list buildup.
 **Changed**
 
 Updated text 'Installed version' to 'Check for update' in the menu
-
-# v6.9.3
-
-**Fixed**
-The font picker now lists fonts from all of KOReader's font folders without duplicates. The same font file found in multiple folders is shown only once.
-
-# v6.9.2
-
-Hungarian translation fix

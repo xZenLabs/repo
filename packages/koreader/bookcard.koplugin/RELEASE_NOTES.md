@@ -1,3 +1,15 @@
+# v1.5.4
+
+**Changed**
+
+Font picker changed from checkbox to radio button
+
+# v1.5.3
+
+New
+
+The font picker now shows how the fonts looks
+
 # v1.5.2
 
 **Added**
@@ -21,14 +33,3 @@ Images created here:
 
 **Changed**
 - "Grouped" is now the default text background grouping mode.
-
-# v1.4.4
-
-**Fixed**
-Removed some duplicates that remain in the font list buildup.
-
-# v1.4.3
-
-**Changed**
-
-Updated text 'Installed version' to 'Check for update' in the menu
