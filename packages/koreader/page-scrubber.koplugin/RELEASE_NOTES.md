@@ -1,3 +1,25 @@
+# v7.4.0
+
+v7.4- What's New
+### Custom Dictionary Text Sizes: 
+Added a setting with 5 preset font sizes (Very Small, Small, Normal, Large, Very Large) for the floating dictionary. The Normal preset preserves the default 1:1 ratio with the book font size.
+
+### Full-Screen Table of Contents Action: 
+Added "Page Scrubber: Index (Table of Content)" to Dispatcher actions, allowing gestures, corner taps, and shortcuts to open the Index directly with the shutter fully lowered.
+
+Bug Fixes & Improvements
+-Index Touch Hitbox Fix: Resolved an issue where tapping lower chapter entries with the shutter down triggered the invisible preview hitbox and navigated back to the previous chapter.
+-Index E-ink Stability & Preview Scaling: Stabilized E-ink ghosting during slider dragging and ensured the blank preview card maintains consistent dimensions without visual jumping.
+
+**Simple** **Grid** Refresh Bounds: Fixed refresh coordinate calculations in Simple Grid mode to prevent clipping and visual artifacts.
+
+**Localization**:
+-Added Turkish (tr) translation.
+-Added Brazilian Portuguese (pt_BR) translation.
+-Updated existing translations across supported languages.
+
+[page_scrubber.koplugin.zip](https://github.com/user-attachments/files/32639901/page_scrubber.koplugin.zip)
+
 # v7.3.6
 
 ### Fixes & Visual Polish (v7.3.2)
@@ -82,22 +104,3 @@ Visual & UI Improvements
  * Transition to SVG Vector Icons: Replaced font glyphs for bookmark navigation buttons with chevron-left.svg and chevron-right.svg, ensuring razor-sharp edges and eliminating vertical font-offset misalignment.
 
 [page_scrubber.koplugin.zip](https://github.com/user-attachments/files/32448793/page_scrubber.koplugin.zip)
-
-# v7.1.0
-
-* **Manual RTL (Right-to-Left) Mode Toggle:**
-  * Added a dedicated **RTL** toggle to manually switch reading direction for manga, comics, or right-to-left documents that do not report native metadata flags.
-  * Preserves full automatic detection: if a document already exposes RTL metadata, the toggle automatically reflects its active state (`☑`).
-  * Per-document isolation: settings are stored locally in the book's properties (`doc_settings`), keeping the rest of your library untouched.
-  * Instant real-time UI refresh: updates the slider, progression, and thumbnail grid immediately upon toggling without requiring a book restart.
-
-* **Streamlined Settings ("Layout" Submenu):**
-  * Cleaned up the root settings menu by introducing a unified **Layout** submenu.
-  * Consolidated visual layout options under one roof: *3-Page Grid: Show full pages*, *Show chapter marks in slider*, *Text size*, *UI Scale (%)*, and *RTL*.
-
-* **Gesture Manager & Scrubber Actions Integration:**
-  * Registered native action: **Page Scrubber: Toggle RTL**. You can now bind reading direction toggling to any swipe or tap gesture in KOReader (*Settings > Taps and gestures > Gesture manager > Reader*).
-  * Available directly inside **Scrubber Actions** (+ Add action) with a dedicated arrow icon.
-  * Displays a quick toast message confirming the active state (`RTL ON` / `RTL OFF`).
-
-[page_scrubber.koplugin.zip](https://github.com/user-attachments/files/32429083/page_scrubber.koplugin.zip)

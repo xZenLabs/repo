@@ -1,3 +1,11 @@
+# v0.0.14
+
+## What's Changed
+* Refactor plugin/companion sync and move receiver work off the main thread by @Tukks in https://github.com/Tukks/onyxbooxsync.koplugin/pull/16
+
+
+**Full Changelog**: https://github.com/Tukks/onyxbooxsync.koplugin/compare/v0.0.13...v0.0.14
+
 # v0.0.13
 
 **Full Changelog**: https://github.com/Tukks/onyxbooxsync.koplugin/compare/v0.0.12...v0.0.13
@@ -19,7 +27,3 @@
 # v0.0.10
 
 **Full Changelog**: https://github.com/Tukks/onyxbooxsync.koplugin/compare/v0.0.9...v0.0.10
-
-# v0.0.9
-
-**Full Changelog**: https://github.com/Tukks/onyxbooxsync.koplugin/compare/v0.0.8...v0.0.9

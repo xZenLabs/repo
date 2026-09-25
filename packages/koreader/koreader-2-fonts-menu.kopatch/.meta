@@ -1,0 +1,25 @@
+# Koreader 2 Fonts Menu patch for KOReader
+# https://github.com/Wolfazzo/Koreader-2-fonts-menu
+# zenpm:auto-scraped
+id=koreader-2-fonts-menu
+name=Koreader 2 Fonts Menu
+version=koreader-user-patch
+description=Fonts menù link in the character panel
+author=Wolfazzo
+category=patches
+platforms=koreader
+dependencies=
+source=https://github.com/Wolfazzo/Koreader-2-fonts-menu
+stars=8
+updated_at=2026-09-25T07:22:19Z
+published_at=2026-09-24T13:00:09Z
+readme_url=packages/koreader/koreader-2-fonts-menu.kopatch/README.md
+readme_hash=46b29f83720ef4372333196b73fe5a40d20f58e3
+release_notes_url=packages/koreader/koreader-2-fonts-menu.kopatch/RELEASE_NOTES.md
+release_notes_hash=3d3a8e3cca5b7b833309dd5aa903336036898f1ee3ca5801527807c5ac240c5d
+releases=[{"tag_name":"koreader-user-patch","assets":[{"name":"source-code.zip","url":"https://api.github.com/repos/Wolfazzo/Koreader-2-fonts-menu/zipball/koreader-user-patch"}],"name":"Koreader-2-fonts-menu"}]
+source_type=source
+assets.0.arch=any
+assets.0.asset=2-fonts-menu.lua
+assets.0.url=https://raw.githubusercontent.com/Wolfazzo/Koreader-2-fonts-menu/main/2-fonts-menu.lua
+assets.0.size=15337
