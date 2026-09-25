@@ -1,3 +1,19 @@
+# 26.9.25
+
+## What's Changed
+
+* **New Blueprints Feature**: Easily snapshot, export, and share your KOReader customization setup! With a simple 6-digit code, you can quickly replicate all your installed plugins, user patches, fonts, screensavers, and Storefront settings onto another device.
+  * Access it via **Settings → Blueprints** (or the **[ Blueprint ]** toolbar button on the Installed tab).
+  * Check out the [Blueprints Wiki Guide](https://github.com/ultimatejimmy/storefront.koplugin/wiki/8.-Blueprints) for full documentation.
+* **Reorganized Settings Menu**: Re-architected and streamlined the Settings interface into clean, structured categories for easier navigation.
+* **Notification Settings & Persistence**: Fixed notification configuration handling so custom check frequencies (e.g., daily vs. weekly) persist properly across restarts ([#5064](https://github.com/ultimatejimmy/storefront.koplugin/issues/5064)).
+* **Installed Font Filtering**: Fixed an issue on the Installed tab where default core fonts and user-installed fonts were miscategorized when filtering.
+* **Duplicate Notification Fix**: Resolved an issue where Storefront updates were listed multiple times under both their localized name and default English name in update notifications ([#5061](https://github.com/ultimatejimmy/storefront.koplugin/issues/5061)).
+* **Localization**: Added Slovak (`sk`) translation support thanks to @misko903 ([#5065](https://github.com/ultimatejimmy/storefront.koplugin/pull/5065)).
+
+
+**Full Changelog**: https://github.com/ultimatejimmy/storefront.koplugin/compare/26.9.15...26.9.25
+
 # 26.9.15
 
 ## What's Changed
@@ -56,9 +72,3 @@
 * **Font detection on WSL**: Fixed font path resolution issues when running KOReader in WSL environments.
 
 **Full Changelog**: https://github.com/ultimatejimmy/storefront.koplugin/compare/26.8.18.2...26.8.23
-
-# 26.8.18.2
-
-- Some small code syntax fixes
-
-**Full Changelog**: https://github.com/ultimatejimmy/storefront.koplugin/compare/26.8.18.1...26.8.18.2
