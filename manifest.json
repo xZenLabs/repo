@@ -10076,12 +10076,16 @@
       "source": "https://github.com/xZenLabs/zen-mtp",
       "source_type": "release",
       "stars": "28",
-      "updated_at": "2026-09-25T01:12:31Z",
+      "updated_at": "2026-09-25T06:00:55Z",
       "published_at": "2026-09-07T19:55:52Z",
+      "prerelease_version": "1.7.2-beta.1",
+      "prerelease_published_at": "2026-09-25T05:59:09Z",
       "readme_url": "packages/koreader/zen_mtp.koplugin/README.md",
       "readme_hash": "d717e82c15a10a1025162ef2f36fe685b6bd4bc1",
       "release_notes_url": "packages/koreader/zen_mtp.koplugin/RELEASE_NOTES.md",
       "release_notes_hash": "4eb1fb88d18683c91a7e16ac149c06d06c0545d19c9cb60e2dd317f463d864ac",
+      "prerelease_notes_url": "packages/koreader/zen_mtp.koplugin/PRERELEASE_NOTES.md",
+      "prerelease_notes_hash": "6bd3e8adf5d819123356a8454ade4e5211153242376ff794d9fa0f6c2c8c50ce",
       "versions_url": "packages/koreader/zen_mtp.koplugin/versions.json",
       "assets": [
         {
