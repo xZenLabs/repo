@@ -1,3 +1,23 @@
+# v3.1.0
+
+The big new thing this release: you can add pictures to your drawings.
+
+## Add pictures to your canvas
+- Open the image tool and either pick a file or search for a picture without leaving the app.
+- Search runs on Wikimedia Commons by default (it's the quickest), with Openverse one tap away when you want a wider mix. No account or setup, and it only goes online when you actually search.
+- Optional "transparent PNG only" filter, and a full-resolution toggle if you'd rather keep the original than a scaled-down copy.
+- A picture you add drops in already selected, so you can move, resize, rotate or duplicate it straight away.
+
+## Stylus
+- The pen's side button now switches to lasso select, so you can grab and move things without going back to the toolbar.
+
+## Save
+- If you use the Bookshelf plugin, you can now save a drawing straight to your bookshelf ornaments as cover art.
+
+## Fixes
+- Smoother colour panel, more reliable palm rejection, and menus that no longer stick around after you close them.
+- Fixed the notebook bottom-bar font.
+
 # v3.0.0
 
 A big release: reliable palm rejection, a top-to-bottom redesign of the drawing interface, and a lot of work to keep everything fast.
@@ -64,11 +84,3 @@ Install by unzipping into your KOReader `plugins` folder.
 ## Fixes
 - Reopening a text box no longer shifts it down.
 - Eraser and text now render the same on screen and in exported PDF and PNG.
-
-# v2.0.1
-
-A small stability update on top of 2.0.0
-
-Fixes
-- Shapes no longer get dropped or turned into a different shape when you switch tools or pick a new shape before the last one has fully registered. A shape you draw now always stays the shape you drew.
-- Lasso select is steadier: shapes no longer vanish when you switch to it, the loop is more forgiving about what it picks up, and the extra popup after selecting is gone.

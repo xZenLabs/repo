@@ -1,3 +1,29 @@
+# v5.2.0
+
+- "Extract page counts" lays books out at your own reading settings, so its counts match what you see when reading, and shows them as each book's page count. It opens with a dialog to pick the sources to try, in order: publisher page numbers, Hardcover editions, your reading settings, a Calibre page column such as #pages (#405), and page counts in file names. You can fill in only missing counts or recount every book, or delete scanned counts. Progress shows in the status line while the shelf stays usable, and the Pages sort uses the counts.
+- Ornament packs: a folder of ornaments inside bookshelf.ornaments is a pack. A new ornaments browser under Background and colours shows every ornament, with a tab per pack, so you can switch single ornaments or whole packs on and off, or delete them.
+- If you didn't have bookends installed, the bookshelf font picker was a basic fallback - bookshelf now has its own font picker for anyone who doesn't also have bookends installed.
+- Battery micro-module, with the level, KOReader's battery icon and the cover battery where there is one. Tap it for battery statistics (#342).
+- Quote of the day module can read quote files in settings/bookshelf/quotes (#258), and you can leave out a book or a highlight colour (#368).
+- "My review" in a book's reviews tab shows and edits the personal review KOReader keeps for the book (#238, #315).
+- A "Series or title" sort puts series and standalone books in one alphabetical order (#437).
+- New setting in the library & search menu: leave genres and tags out of search (#371)
+- New setting in the behaviour menu if you want to keep the floor to ceiling shelf view without collapsing it when you swipe down - imaginatively called 'stay in full screen shelves when swiping down' - you can still press the currently reading button to pop the top panel back open (#366)
+- New option to choose a custom wallpaper folder, to use alongside bookshelf's standard folder (#419).
+- The book description in the book popup uses your Bookshelf UI font, or KOReader's own UI font when following it (#284, #233).
+- In the shelf editor, "Source" is now "Source / grouping", and its list is split into book shelves and grouped shelves (series, authors, genres and so on).
+- Spacing, drop shadows and rounded corners no longer grow with a DPI override, so large DPI layouts keep more room for covers and text.
+- Scrollbars are drawn as a slim rail along the edge, and the book popup's tabs stay on one row on larger DPI settings.
+- Faster page turns and shelf switches, most of all with a wallpaper. Spine shelves and two-column lists redraw less of the screen.
+- The Recent shelf shows books you've read from outside your home folder (#305).
+- Covers no longer disappear from the shelf and the top panel after a page turn when a library's metadata was scanned before its covers (#451).
+- With true cover aspect ratio on, a folder or group with its own image takes that image's shape (#402).
+- Unpacked EPUB folders are detected as such and no longer show up as dozens of small books.
+- Spine widths match the page count shown for a book: one with publisher page numbers no longer keeps a wider spine from an earlier page count scan.
+- Fix: On a spine shelf, choosing a second genre or tag from the top panel shows its own books instead of the first one's.
+- Fix: Switching shelves in full screen with the status line off no longer leaves the old shelf button's fill behind.
+- Fix: Tapping a shelf button over a wallpaper no longer flashes it black and white.
+
 # v5.1.5
 
 - Collection shelves can sort by "Collection order", the order you've arranged the collection in KOReader, and an "Edit collection order" button beside it opens KOReader's arrange screen (#441).
@@ -50,16 +76,3 @@ Fixes and polish for 5.1.
 - Face out the first, or the first unread, book of a series on a shelf with no series grouping (#425).
 - The label under a cover follows the Panel shading setting.
 - Tidier outlines in the shelf menu, and the drilled-in view now matches the top level.
-
-# v5.1.1
-
-A fix-up release for 5.1.0.
-
-- The bundled wallpaper is actually installed now.
-- Spine folders open much faster.
-- Face out the next unread book in a series, not just the first.
-- A face-out reason ticked on its own now works; "Unread" alone never did.
-- "Pages" in list rows is translatable, and so is the rest of the progress line (#418).
-- The top panel's menu items say "top panel" rather than "book detail view".
-- New installs open on Home / Recent / Series / Genres.
-- Russian, and the shading and speed labels that shared one word across unrelated menus (#416, thanks @d1-m4ss).
