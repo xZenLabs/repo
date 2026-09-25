@@ -1,3 +1,13 @@
+# v1.12.1
+
+### What's new
+
+- When the add-on cannot update itself, it now says what went wrong: the download stopped partway, arrived damaged, or could not be installed on this device, and what to try next. Before, every failure read "Could not reach Seekquel".
+
+### Install
+
+Download `seekquel.koplugin-v1.12.1.zip`, unzip it, and copy the `seekquel.koplugin` folder into KOReader's `plugins` folder. Restart KOReader. If the add-on is already installed and paired, it updates itself from Seekquel.
+
 # v1.12.0
 
 ### What's new
@@ -40,18 +50,6 @@ Seekquel’s actions can now be put on a gesture. Open KOReader’s Gesture Mana
 Nothing is bound out of the box. A gesture fired with no book open, or on a file that is not linked to a book yet, tells you so rather than doing nothing.
 
 Sync now also ignores a second request that arrives on the heels of the first, since a gesture is far easier to fire twice by accident than a menu item was.
-
-### Install
-
-Download the zip, extract it, copy the seekquel.koplugin folder into koreader/plugins, then restart KOReader.
-
-Existing installations can update from Tools, Seekquel. KOReader versions older than v2025.08 still require the manual file copy.
-
-# v1.9.0
-
-### What’s new
-
-A highlight now reaches Seekquel in the colour you painted it, matched to the nearest of the five colours the app offers. A grey highlight arrives without a colour. Highlights you had already synced are sent once more after updating, so those pick their colour up too.
 
 ### Install
 

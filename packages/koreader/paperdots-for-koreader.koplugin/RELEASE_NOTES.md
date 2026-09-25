@@ -1,3 +1,13 @@
+# v2.2
+
+**What's New**
+
+ * **Paperdots Gesture:** Easily toggle the feature on and off using your favorite gesture. (Gesture manager>your favorite gesture>general>toggle paperdots)
+ * **Expanded Menu Access:** The menu is now also accessible from the file browser (first icon outside a book)
+ * **Dark Mode Control:** Added a new setting to disable the feature when Dark Mode is active.
+ * **One new style** 
+*  **Minor performance optimizations**
+
 # v2.1
 
 **New options**
