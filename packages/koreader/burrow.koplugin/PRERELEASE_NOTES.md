@@ -1,3 +1,19 @@
+# v0.4.12-beta.5
+
+## What's Changed
+* Burrow 0.4.12 beta 5: fix Bionic boundary restore and dark ornaments by @richbeatty in https://github.com/richbeatty/burrow.koplugin/pull/74
+
+
+**Full Changelog**: https://github.com/richbeatty/burrow.koplugin/compare/v0.4.12-beta.4...v0.4.12-beta.5
+
+# v0.4.12-beta.4
+
+## What's Changed
+* Burrow 0.4.12 beta 4: restore Bionic ornaments and fix Kindle wake lag by @richbeatty in https://github.com/richbeatty/burrow.koplugin/pull/73
+
+
+**Full Changelog**: https://github.com/richbeatty/burrow.koplugin/compare/v0.4.12-beta.3...v0.4.12-beta.4
+
 # v0.4.12-beta.3
 
 ## What's Changed
@@ -22,19 +38,3 @@
 
 
 **Full Changelog**: https://github.com/richbeatty/burrow.koplugin/compare/v0.4.11-beta.4...v0.4.12-beta.1
-
-# v0.4.11-beta.4
-
-## What's Changed
-* Burrow 0.4.11 beta 4: remove Kindle transition stalls by @richbeatty in https://github.com/richbeatty/burrow.koplugin/pull/68
-
-
-**Full Changelog**: https://github.com/richbeatty/burrow.koplugin/compare/v0.4.11-beta.3...v0.4.11-beta.4
-
-# v0.4.11-beta.3
-
-## What's Changed
-* Burrow 0.4.11 beta 3: speed up reader transitions by @richbeatty in https://github.com/richbeatty/burrow.koplugin/pull/67
-
-
-**Full Changelog**: https://github.com/richbeatty/burrow.koplugin/compare/v0.4.11-beta.2...v0.4.11-beta.3

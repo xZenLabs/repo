@@ -1,3 +1,76 @@
+# v0.1.2
+
+## 月读 v0.1.2
+
+KOReader 插件包：`book.koplugin-v0.1.2.zip`
+
+输入法词库（整库，手动 sideload）：`dictionary.sqlite3 dictionary-wubi.sqlite3 dictionary-cangjie.sqlite3 dictionary-zhuyin.sqlite3`
+
+安装：解压后将 `book.koplugin` 复制到 KOReader 的 `plugins` 目录，然后重启。
+
+词库 sideload：下载对应布局的词库，直接放入 KOReader 数据目录下的
+`.moon/`（与 `book.sqlite3` 同级）。附件已使用最终文件名，无需重命名。
+
+### 更新内容
+
+相对上一版本 `v0.1.1`：
+
+#### 新功能
+
+- :sparkles: (ui): 改进图书馆筛选界面，实现分页显示功能 #31 (730c7a0)
+- :sparkles: (test): 添加测试用例以验证进度帧的顺序处理 (b00e341)
+- :sparkles: (ui): 改进输入法词库下载进度条显示逻辑 (8b2359c)
+- :sparkles: (ai): 优化下载进度显示功能 (db938ba)
+- :sparkles: (settings): 添加书友交流群按钮 (9a86b62)
+
+#### 修复
+
+- :bug: (fanqie): fix book detail fetching and reconciliation logic (422691b)
+- :bug: (ui): 修复桌面手势被文件管理器抢先消费 (227ee99)
+- :bug: (ui): 修复底栏点按被默认前光手势吞掉的问题 (0752b71)
+- :bug: (remote): 移除覆盖写入对受保护路径的拦截 (1a7cf70)
+- :bug: (font): 修复字体 id 处理与重复注册误判 (6c0a027)
+
+#### 重构
+
+- :recycle: (ui): 拆分行为设置并修复顶栏宽度缓存 (fb069c5)
+
+### 完整对比
+
+https://github.com/AnkioTomas/moon/compare/v0.1.1...v0.1.2
+
+# v0.1.1
+
+## 月读 v0.1.1
+
+KOReader 插件包：`book.koplugin-v0.1.1.zip`
+
+输入法词库（整库，手动 sideload）：`dictionary.sqlite3 dictionary-wubi.sqlite3 dictionary-cangjie.sqlite3 dictionary-zhuyin.sqlite3`
+
+安装：解压后将 `book.koplugin` 复制到 KOReader 的 `plugins` 目录，然后重启。
+
+词库 sideload：下载对应布局的词库，直接放入 KOReader 数据目录下的
+`.moon/`（与 `book.sqlite3` 同级）。附件已使用最终文件名，无需重命名。
+
+### 更新内容
+
+相对上一版本 `v0.1.0`：
+
+#### 新功能
+
+- :sparkles: (book): 新增缓存状态判断并调整详情页操作 (a79f9df)
+- :sparkles: (book): 添加已下载筛选与单书缓存清理 (c66d732)
+- :sparkles: (ui): 在首次渲染前写入顶栏偏好 (d1a022e)
+
+#### 性能
+
+- :zap: (utils): 转换微信读书字体为 sfnt 以降低内存 #12 (18b4035)
+- :zap: (utils): 转换微信读书字体为 sfnt 以降低内存 (401cda1)
+
+### 完整对比
+
+https://github.com/AnkioTomas/moon/compare/v0.1.0...v0.1.1
+
 # v0.1.0
 
 ## 月读 v0.1.0
@@ -359,128 +432,3 @@ KOReader 插件包：`book.koplugin-v0.0.8.zip`
 ### 完整对比
 
 https://github.com/AnkioTomas/moon/compare/v0.0.7...v0.0.8
-
-# v0.0.7
-
-## 月读 v0.0.7
-
-KOReader 插件包：`book.koplugin-v0.0.7.zip`
-
-输入法词库（整库，手动 sideload）：`dictionary.sqlite3 dictionary-wubi.sqlite3 dictionary-cangjie.sqlite3 dictionary-zhuyin.sqlite3`
-
-安装：解压后将 `book.koplugin` 复制到 KOReader 的 `plugins` 目录，然后重启。
-
-词库 sideload：下载对应布局的词库，直接放入 KOReader 数据目录下的
-`.moon/`（与 `book.sqlite3` 同级）。附件已使用最终文件名，无需重命名。
-
-### 更新内容
-
-相对上一版本 `v0.0.6`：
-
-#### 新功能
-
-- :sparkles: (update): 添加插件在线更新与校验安装 (caa3279)
-- :sparkles: (ime): 支持大千注音 11 键候选栏布局 (73d2205)
-- :sparkles: (remote): 新增月读数据目录配置 (cd1e987)
-- :sparkles: (zlib): 调整镜像顺序并增加请求调试日志 (8a1f838)
-- :sparkles: (jdread): 新增京东读书数据源 (17ad7d3)
-- :sparkles: (book): 支持连续章节目录的章内锚点与原生目录适配 (443e35d)
-
-#### 修复
-
-- :bug: (xray): 修正标记点击手势处理 (581e095)
-- :bug: (reader): 修复底栏手势劫持短按翻页 (db4266f)
-- :bug: (ui): 修正原生面板菜单父级引用 (1f8a0e0)
-- :bug: (ui): 修正原生面板菜单父级引用 (f56977e)
-- :bug: (cache): 修复清缓存误删书籍元数据 (d096d5c)
-- :bug: (http): 修复响应体读取的 Content-Length 解析与分块处理 (6a2827e)
-- :bug: (progress): 修复阅读进度计算 (db44244)
-
-#### 界面
-
-- :lipstick: (l10n): 添加 X-Ray 刷新文案并更新缓存清理说明 (c7dc57a)
-- :lipstick: (ui): 优化滑杆刷新并新增 xray 刷新动作 (3a343e2)
-- :lipstick: (ui): 优化滑杆刷新并新增 xray 刷新动作 (744714f)
-- :lipstick: (ui): 增加 show_status 控制封面状态显示 (8e7b883)
-- :lipstick: (l10n): 新增阅读状态与京东登录文案 (954f716)
-
-#### 重构
-
-- :recycle: (settings): 重组桌面设置分类与文案 (efbb3bc)
-
-#### 文档
-
-- :memo: (docs): 更新图书馆设计说明 (242110f)
-- :memo: (docs): 更新拼音词典手动安装说明 (a601290)
-
-#### 变更
-
-- :white_check_mark: (tests): 为 library 测试预加载 ui/geometry 桩模块 (59fc942)
-- :white_check_mark: (tests): 更新下载、设置、阅读栏与标注测试 (6ac76fc)
-- :white_check_mark: (tests): 添加注音、X-Ray、滑条与远程路径测试 (858f28c)
-- :white_check_mark: (tests): 更新图书目录与词典可用性测试 (2bfefbe)
-- :white_check_mark: (tests): 更新阅读状态、分类与自动标记测试 (2b6a6dd)
-
-### 完整对比
-
-https://github.com/AnkioTomas/moon/compare/v0.0.6...v0.0.7
-
-# v0.0.6
-
-## 月读 v0.0.6
-
-KOReader 插件包：`book.koplugin-v0.0.6.zip`
-
-输入法词库（整库，手动 sideload）：`pinyin-dictionary-v0.0.6.sqlite3 wubi-dictionary-v0.0.6.sqlite3 cangjie-dictionary-v0.0.6.sqlite3 zhuyin-dictionary-v0.0.6.sqlite3`
-
-安装：解压后将 `book.koplugin` 复制到 KOReader 的 `plugins` 目录，然后重启。
-
-词库 sideload：拼音重命名为 `dictionary.sqlite3`；其他布局重命名为
-`dictionary-wubi.sqlite3`、`dictionary-cangjie.sqlite3` 或 `dictionary-zhuyin.sqlite3`，
-放入 KOReader 数据目录下的 `.moon/`（与 `book.sqlite3` 同级），然后重启。
-
-### 更新内容
-
-相对上一版本 `v0.0.5`：
-
-#### 新功能
-
-- :sparkles: (ime): 支持五笔、仓颉与注音输入法 (3d82b24)
-- :sparkles: (settings): 支持选择中文输入法并统一词库管理 (c829485)
-- :sparkles: (local): 未设置目录时引导用户设置 (0c090ad)
-- :sparkles: (ui): 支持配置顶部状态栏项目显示 (21e6bd1)
-- :sparkles: (ui): 支持配置顶部状态栏项目显示 (120ae45)
-
-#### 修复
-
-- :bug: 固定顶栏水平留白并记录字体加载 (5e670aa)
-- :bug: (reader_prefs): 防止过期字体 id 覆盖原生菜单切换后的字体 (52cd77b)
-
-#### 性能
-
-- :zap: (xray): 添加标记扫描防抖和任务取消 (cfb97ac)
-
-#### 重构
-
-- :recycle: (xray): 改用 Job 处理标记扫描 (6977dce)
-- :recycle: (xray): 改用 Job 处理标记扫描 (13d61f6)
-- :recycle: (ime): 简化字根编码与键帽显示 (fa17f29)
-
-#### 文档
-
-- :memo: (docs): 更新输入法特性说明 (18815d7)
-- :memo: 更新中文输入法文档 (22e9448)
-
-#### 其他
-
-- :wrench: (assets): 添加注音输入法字典清单 (bf45f34)
-- :wrench: (assets): 添加注音输入法字典清单 (0629128)
-- :wrench: (license): 删除许可证声明文本 (f8003bf)
-
-#### 变更
-
-- :white_check_mark: (tests): 更新输入法测试并补充多词库覆盖 (b0a0209)
-
-### 完整对比
-
-https://github.com/AnkioTomas/moon/compare/v0.0.5...v0.0.6

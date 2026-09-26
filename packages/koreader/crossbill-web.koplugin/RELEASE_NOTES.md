@@ -1,3 +1,36 @@
+# v0.31.0
+
+## Release notes
+- You can now upload epub files via web ui from Library page. So technically you don't need Koreader to benefit from Crossbill if you use web reader :tada: 
+- Optimized Koreader upload flow to not send epub files on every upload. Should speed up upload and solve some data integrity edge cases with books existing without epubs
+- Automated test improvements and streamlining 
+
+## Docker Image
+```bash
+docker pull tumetsu/crossbill:v0.31.0
+```
+
+
+## What's Changed
+* Run pure-logic tests in node, rendered tests in Chromium by @Tumetsu in https://github.com/Crossbill-App/crossbill-web/pull/905
+* Reader tests: control time with a fake clock, drop test-only props by @Tumetsu in https://github.com/Crossbill-App/crossbill-web/pull/906
+* Fold the dialog-shell tests into the chapter dialog route test by @Tumetsu in https://github.com/Crossbill-App/crossbill-web/pull/907
+* Give empty states and reader failures a role to be found by by @Tumetsu in https://github.com/Crossbill-App/crossbill-web/pull/908
+* Add test-specific lint rules: vitest plugin, no real-time sleeps, capped per-test timeouts by @Tumetsu in https://github.com/Crossbill-App/crossbill-web/pull/909
+* Bump @tanstack/router-cli from 1.167.21 to 1.167.33 by @dependabot[bot] in https://github.com/Crossbill-App/crossbill-web/pull/699
+* Bump lint-staged from 17.2.0 to 17.5.1 by @dependabot[bot] in https://github.com/Crossbill-App/crossbill-web/pull/696
+* Bump @types/react-dom from 19.2.4 to 19.2.7 by @dependabot[bot] in https://github.com/Crossbill-App/crossbill-web/pull/766
+* Merge open Dependabot updates by @Tumetsu in https://github.com/Crossbill-App/crossbill-web/pull/911
+* Fix the flaky frontend tests from #910 by @Tumetsu in https://github.com/Crossbill-App/crossbill-web/pull/912
+* Read user settings from the chapter on screen in the reader page tests by @Tumetsu in https://github.com/Crossbill-App/crossbill-web/pull/913
+* Prune tests shadowed by stronger ones by @Tumetsu in https://github.com/Crossbill-App/crossbill-web/pull/914
+* Extract parse-first EPUB ingestion into AttachEpubUseCase by @Tumetsu in https://github.com/Crossbill-App/crossbill-web/pull/915
+* Say KOReader is optional now that EPUBs can be uploaded in the browser by @Tumetsu in https://github.com/Crossbill-App/crossbill-web/pull/917
+* Create a KOReader book with a single upload request by @Tumetsu in https://github.com/Crossbill-App/crossbill-web/pull/918
+
+
+**Full Changelog**: https://github.com/Crossbill-App/crossbill-web/compare/v0.30.1...v0.31.0
+
 # v0.30.1
 
 ## Docker Image
@@ -139,27 +172,3 @@ docker pull tumetsu/crossbill:v0.28.1
 
 
 **Full Changelog**: https://github.com/Crossbill-App/crossbill-web/compare/v0.28.0...v0.28.1
-
-# v0.28.0
-
-## Docker Image
-```bash
-docker pull tumetsu/crossbill:v0.28.0
-```
-
-
-## What's Changed
-* Show each book's reading stage in the library list by @Tumetsu in https://github.com/Crossbill-App/crossbill-web/pull/651
-* Add note and reading-session counts to the book stats strip by @Tumetsu in https://github.com/Crossbill-App/crossbill-web/pull/656
-* Bump @tanstack/react-router from 1.170.18 to 1.170.32 by @dependabot[bot] in https://github.com/Crossbill-App/crossbill-web/pull/563
-* Add book blurb to the book header area (#653) by @Tumetsu in https://github.com/Crossbill-App/crossbill-web/pull/659
-* Write and edit a chapter gist inline by @Tumetsu in https://github.com/Crossbill-App/crossbill-web/pull/658
-* UI audit: the agreed findings in sections A–J by @Tumetsu in https://github.com/Crossbill-App/crossbill-web/pull/663
-* MUI Guidelines based UI/UX improvements by @Tumetsu in https://github.com/Crossbill-App/crossbill-web/pull/667
-* Normalise KOReader highlight timestamps to ISO in the backend by @Tumetsu in https://github.com/Crossbill-App/crossbill-web/pull/678
-* Merge the two landing-page carousels into one recent-books row by @Tumetsu in https://github.com/Crossbill-App/crossbill-web/pull/679
-* Fade every book tab in from one place by @Tumetsu in https://github.com/Crossbill-App/crossbill-web/pull/681
-* Show highlight, note and flashcard counts on library book cards by @Tumetsu in https://github.com/Crossbill-App/crossbill-web/pull/682
-
-
-**Full Changelog**: https://github.com/Crossbill-App/crossbill-web/compare/v0.27.2...v0.28.0
