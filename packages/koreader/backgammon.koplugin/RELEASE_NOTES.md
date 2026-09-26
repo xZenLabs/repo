@@ -1,3 +1,12 @@
+# v1.4.0
+
+What's new:
+
+- Landscape now runs as fast as portrait. It used to lag when you moved pieces with the board turned sideways — that's fixed. Checkers, dice and markers are drawn as small sprites and the board is kept in the screen's own pixel order, so it redraws quickly either way.
+- Fixed the Roll button being too small in landscape, and the board now goes back to whatever orientation you started the game in.
+
+Install: download backgammon.koplugin.zip, unzip it, and drop the backgammon.koplugin folder into KOReader's plugins folder, then restart KOReader.
+
 # v1.3.0
 
 What's new:

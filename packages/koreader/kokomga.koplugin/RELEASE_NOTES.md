@@ -1,3 +1,26 @@
+# 3.0.0
+
+### Added
+- **Bookshelf Integration**:
+  - Komga is now a shelf source in the [Bookshelf](https://github.com/AndyHazz/bookshelf.koplugin) home screen plugin, showing All Series (default), Keep Reading, On Deck, Recently Read Series, Recently Added Series, Recently Added Books, One-Shots, or Collections. Add one from Bookshelf's shelf editor (**Source → Komga…**) or from **Options → Add Komga Shelf to Bookshelf**.
+  - All Series pages from Komga as you browse, with Komga's sorting (title, recently added / updated / read, release date, book count) and filters (read status, library, publication status). Every other list can be filtered by read status. Each filter takes any combination of values.
+  - Series and collections open as folders inside Bookshelf. Series show an unread / total badge when Bookshelf's folder badge is on, and fully read series are marked finished. Books show their Komga cover, summary (or their series' summary when a chapter has none), read state, and a tick once downloaded; tapping one that isn't downloaded offers to download it through kokomga, so progress sync and the next-chapter flow keep working.
+  - Only book details and covers are fetched; pull down on a Komga shelf to refresh it from the server. Komga shelves display as covers.
+- **Remove Finished Chapters**:
+  - New option to keep only the last N chapters of a series (off by default). Moving to the next chapter quietly deletes older chapters of that series that are marked finished; their reading position, highlights, and notes are kept.
+- **Localization (i18n)**:
+  - Added Simplified Chinese, Traditional Chinese, Japanese, and Spanish translations for all new Bookshelf and chapter options.
+
+### Changed
+- **Offline Next-Chapter Transitions**:
+  - kokomga now remembers each book's next book, so a downloaded next chapter opens at the end of a book even without a connection, and faster when online.
+- **Komga Progress Option**:
+  - "Use Komga server progress when available" now covers sending progress too, not only fetching it. When it is off, Komga books sync through KOReader's progress sync like any other book.
+
+### Fixed
+- **Progress Sync Error Message** (#13, thanks @PoebelPogge):
+  - KOReader's progress sync now syncs a Komga book with Komga only, never with the KOSync server, where it failed with an error (e.g. HTTP 405) when that server isn't a KOSync server. KOReader still decides when to sync, connects to Wi-Fi for it (and disconnects again after a push on suspend), and reports the result. Komga books no longer need a KOSync account for this.
+
 # 2.2.1
 
 Just fixed the version string in metadata.
@@ -55,37 +78,3 @@ Just fixed the version string in metadata.
   - Fixed an issue where books ending with decimal volume or chapter numbers (e.g., `xxx-vol-12.5`) would be downloaded without their extensions, preventing KOReader from recognizing them.
   - Refined extension validation to check specifically for the expected extension when the media type is known, ensuring even mismatched metadata extensions are corrected (e.g., ensuring a `.cbz` file is always saved as `.cbz` even if named `.pdf` on the server).
   - Maintained general non-numeric extension validation for fallback cases when the media type is unknown.
-
-# 2.0.0
-
-### Added
-- **Manual Book Matching & Side-loading**:
-  - Added support to manually match side-loaded books to Komga IDs with local fallback metadata support.
-- **Bulk Download in Browser**:
-  - Selection gesture on book items (tap to toggle selection with checkmark overlays directly on cover images).
-  - Contextual menu triggered by holding any book item to view download options (long-press is ignored for non-book entries).
-  - Clear, simplified options to download selected books, download all books on the current page, or cancel (excluding duplicate/already downloaded books seamlessly).
-- **Aesthetic Cover Indicators**:
-  - Added visual indicators for local download status ("↓") on both list and grid item covers.
-  - Implemented real-time reading progress indicators ("New", "Done", page/total pages, or raw page count) for list and grid views in the browser catalog.
-- **Series Title Omission**:
-  - Omitted prepending the series name from book titles when browsing books within a specific series since the series title is already displayed as the main title bar header.
-  - Retained the series name prefix in multi-series lists (e.g. "Keep Reading", "On Deck", "Recently Added Books") for proper context.
-- **Series Cover Image Download**:
-  - Automatically downloads the series cover art (`.cover.<ext>`) to the series subdirectory on successful book download if no series cover is present, enabling folder-level cover previews in KOReader's coverbrowser.
-- **Improved List Mode UI Layout**:
-  - Made the list-mode separator lines significantly more distinct by changing the color to a darker mid-gray (`COLOR_GRAY`) and dynamically scaling the line height (`delimiter_h`) based on the device's screen scale factor.
-  - Added wider, more balanced horizontal padding (left and right) on list view rows to give them elegant margins and breathe better on a wider variety of display devices.
-- **Multi-language Localization**:
-  - Added complete localization dictionaries for Traditional Chinese (`zh_TW`/`zh_HK`), Japanese (`ja`), and Spanish (`es`).
-
-### Fixed
-- **Memory Safety & Mutex Crash Prevention**:
-  - Re-architected item layout rendering to avoid calling native `:getSize()` on un-parented `TextWidget` instances, eliminating the intermittent Freetype-related "pthread_mutex_lock called on a destroyed mutex" crash in KOReader.
-  - Eliminated custom manual memory/badge tracking and destruction logic in favor of KOReader's native garbage collector and widget parenting lifecycle.
-- **Robust Type Checking**:
-  - Added defensive type verification (`type(...) == "table"`) on both `book` entries and `readProgress` objects to prevent the runtime error "attempt to index local 'readProgress' (a function value)".
-- **KOSync Settings Integration**:
-  - Aligned syncing actions to depend purely on native KOSync configuration state. Removed redundant custom sync interval options, background progress push loops, and offline Wi-Fi connection prompt warnings.
-- **Dead Code & Import Cleanup**:
-  - Removed multiple unused local variables, duplicate imports, and obsolete helper functions (`sanitize_for_settings`, custom recursive folder creation, etc.) to optimize the plugin's memory footprint.
