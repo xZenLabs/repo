@@ -1,3 +1,9 @@
+# v6.10.2
+
+**Fixed**
+- Book progress popup: the "This chapter / Next chapter" pages view now correctly shows both of the next two chapters' page counts when "Next chapters shown" is set to 2 (Settings > Advanced settings > Book progress popup). Previously it silently showed only one chapter's page count in that view, even though the setting was already combining both chapters correctly in the reading-time view.
+- Added short, single-line page-count abbreviations (e.g. "p.", "o.", "S.", "стор.", "pág.", "页") for all bundled languages so the two-chapter page counts fit side by side without overflowing.
+
 # v6.10.1
 
 **Changed**
@@ -18,9 +24,3 @@ More Hungarian translation text fix.
 
 **Fixed**
 Removed some duplicates that remain in the font list buildup.
-
-# v6.9.4
-
-**Changed**
-
-Updated text 'Installed version' to 'Check for update' in the menu

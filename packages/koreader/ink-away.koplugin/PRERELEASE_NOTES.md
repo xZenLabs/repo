@@ -1,12 +1,13 @@
 # v3.1.2
 
-Faster landscape, a scrollable settings menu, and a pen-input test to help track down stylus problems.
+Faster landscape, a tidier settings menu, and a pen-input test to help track down stylus problems.
 
 * Landscape drawing and repaints are noticeably faster.
-* The gear/settings menu now scrolls, so nothing gets cut off on smaller screens.
-* New pen-input test in the gear menu, for stylus users: it shows exactly what your pen and palm report to the device. If you're on a stylus device and seeing stray dots or lines under your palm, please run it and send me what it shows, it lets me dig into palm-rejection issues on devices I can't test myself.
+* The settings menu is tidied up so it fits without scrolling — all the grid options (type, size, opacity) now live together in one Grid panel.
+* The grid no longer slows drawing: turning it on, even at a small size, keeps drawing as smooth as with it off.
+* New pen-input test in the gear menu, for stylus users: it shows exactly what your pen and palm report to the device. If you're on a stylus device and seeing stray dots or lines under your palm, please run it and send me what it shows — it lets me look into palm rejection on devices I can't test myself.
 
-Prereleas: please try it on your device and let me know how it holds up, especially the pen-input test on stylus devices.
+Prerelease — please try it on your device and let me know how it holds up, especially the pen-input test on stylus devices.
 
 # v3.1.1
 

@@ -1,3 +1,19 @@
+# v0.31.1
+
+## Docker Image
+```bash
+docker pull tumetsu/crossbill:v0.31.1
+```
+
+
+## What's Changed
+* Fix reader crash when adding a note to a highlight (#919) by @Tumetsu in https://github.com/Crossbill-App/crossbill-web/pull/922
+* Ban unittest.mock outside infrastructure unit tests and migrate application-layer tests by @Tumetsu in https://github.com/Crossbill-App/crossbill-web/pull/923
+* Let browser Back return from a link followed in the reader (#921) by @Tumetsu in https://github.com/Crossbill-App/crossbill-web/pull/925
+
+
+**Full Changelog**: https://github.com/Crossbill-App/crossbill-web/compare/v0.31.0...v0.31.1
+
 # v0.31.0
 
 ## Release notes
@@ -157,18 +173,3 @@ docker pull tumetsu/crossbill:v0.29.0
 
 
 **Full Changelog**: https://github.com/Crossbill-App/crossbill-web/compare/v0.28.1...v0.29.0
-
-# v0.28.1
-
-## Docker Image
-```bash
-docker pull tumetsu/crossbill:v0.28.1
-```
-
-
-## What's Changed
-* Give the six book tabs one shared PageHeader by @Tumetsu in https://github.com/Crossbill-App/crossbill-web/pull/685
-* Fix the mobile filter drawer leaving the page unscrollable by @Tumetsu in https://github.com/Crossbill-App/crossbill-web/pull/686
-
-
-**Full Changelog**: https://github.com/Crossbill-App/crossbill-web/compare/v0.28.0...v0.28.1
