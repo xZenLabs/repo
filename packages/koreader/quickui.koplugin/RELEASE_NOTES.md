@@ -2,6 +2,7 @@
 
 ## 更新说明
 > 修复一些已知问题
+> 如果要同时安装simpleui，请搭配本仓库[simpleui v2.7.1-b](https://github.com/gytwo/simpleui.koplugin/releases/tag/v2.7.1-b)使用
 - 底部栏: 阅读界面由原来的直接替换原生footer改为与原生footer共存，上下排布（保持与Menu patch一致）
 - 底部栏: 取消勾选“在阅读器中显示”时立即清除底栏触摸区域（避免误触）而非等到重排结束才彻底清除
 - 底部栏:  仅当底栏高度发生变化时才重排，修复打开书籍时闪烁一下的问题

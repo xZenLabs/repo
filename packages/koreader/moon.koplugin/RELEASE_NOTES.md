@@ -1,3 +1,45 @@
+# v0.1.3
+
+## 月读 v0.1.3
+
+KOReader 插件包：`book.koplugin-v0.1.3.zip`
+
+输入法词库（整库，手动 sideload）：`dictionary.sqlite3 dictionary-wubi.sqlite3 dictionary-cangjie.sqlite3 dictionary-zhuyin.sqlite3`
+
+安装：解压后将 `book.koplugin` 复制到 KOReader 的 `plugins` 目录，然后重启。
+
+词库 sideload：下载对应布局的词库，直接放入 KOReader 数据目录下的
+`.moon/`（与 `book.sqlite3` 同级）。附件已使用最终文件名，无需重命名。
+
+### 更新内容
+
+相对上一版本 `v0.1.2`：
+
+#### 新功能
+
+- :sparkles: (ai): 更新多语言文本和微信读书章节解析逻辑 (abfb7df)
+- :sparkles: (ai): 新增连续章节模式全书笔记列表功能 (54040bb)
+- :sparkles: (ai): 添加和更新本地化文本以及优化微信客户端逻辑 (7411f2e)
+- :sparkles: (ai): enhance localization and API interaction for WeChat读书插件 (0dd7747)
+- :sparkles: (ui): 添加桌面整页重画等待刷新完成的功能 (4ca670d)
+- :sparkles: (update): 添加 GitHub Release 下载镜像加速功能 (14be457)
+
+#### 修复
+
+- :bug: (remote): 修正下载解析和配置保护逻辑 (53b3246)
+
+#### 重构
+
+- :recycle: (auth): refactor wechat authentication logic (6c70b74)
+
+#### 其他
+
+- :wrench: update files 项目级 MCP 配置（含 token） (e2ecf3c)
+
+### 完整对比
+
+https://github.com/AnkioTomas/moon/compare/v0.1.2...v0.1.3
+
 # v0.1.2
 
 ## 月读 v0.1.2
@@ -361,74 +403,3 @@ KOReader 插件包：`book.koplugin-v0.0.9.zip`
 ### 完整对比
 
 https://github.com/AnkioTomas/moon/compare/v0.0.8...v0.0.9
-
-# v0.0.8
-
-## 月读 v0.0.8
-
-KOReader 插件包：`book.koplugin-v0.0.8.zip`
-
-输入法词库（整库，手动 sideload）：`dictionary.sqlite3 dictionary-wubi.sqlite3 dictionary-cangjie.sqlite3 dictionary-zhuyin.sqlite3`
-
-安装：解压后将 `book.koplugin` 复制到 KOReader 的 `plugins` 目录，然后重启。
-
-词库 sideload：下载对应布局的词库，直接放入 KOReader 数据目录下的
-`.moon/`（与 `book.sqlite3` 同级）。附件已使用最终文件名，无需重命名。
-
-### 更新内容
-
-相对上一版本 `v0.0.7`：
-
-#### 新功能
-
-- :sparkles: (lockscreen): 使用 RGB 画布保留原始颜色 (c40628b)
-- :sparkles: (plugin): 添加 KOReader 最低版本检查 (8dc3866)
-- :sparkles: (copymanga): 支持已缓存章节直接打开 (8a8f305)
-- :sparkles: (settings): 添加拷贝漫画配置支持 (7ae35f7)
-- :sparkles: (book): 支持单书缓存清理与在线源同步删除 (3b4368f)
-- :sparkles: (db): 已读标记同步进度至 100% (ab4e6ca)
-- :sparkles: (copymanga): 添加后续章节后台预取 (251faa8)
-- :sparkles: (copymanga): 添加后续章节后台预取 (3154f8a)
-- :sparkles: (copymanga): 新增拷贝漫画数据源 (79642cb)
-- :sparkles: (update): 展示月读更新日志并拆分安装流程 (e497af9)
-- :sparkles: (store): 新增本地下载状态判断 (c27cecf)
-- :sparkles: (catalog): 补充目录项的 path 字段 (12cfc3a)
-- :sparkles: (update): 增加月读更新下载进度条 (4a747c8)
-
-#### 修复
-
-- :bug: (http): 修正连接状态探测逻辑 (6a30102)
-- :bug: (lockscreen): 修正统计缓存并支持章节数 (b66ddac)
-- :bug: (ui): 修正设置页分页高度计算 (c3c9200)
-- :bug: (http): 避免离线时发起 HTTP 请求 (6ed9756)
-- :bug: 修复失败 URL 缓存与离线连接失败处理 (f0f2497)
-- :bug: (ui): 限制阅读器栏刷新区域 (7584742)
-- :bug: (source): 限制缓存与待处理队列大小 (ac09eb3)
-- :bug: (http): 修复 Turbo 连接失败导致离线崩溃 (c1529ce)
-- :bug: (progress): 移除云端进度拉取失败弹窗 (aa98d62)
-- :bug: (ui): 修正分页时当前页内容判断 (d03743b)
-- :bug: (page_turn_animation): 修复日志模块引用 (57b40da)
-- :bug: (page_turn_animation): 修复日志模块引用 (9566137)
-- :bug: (reader_prefs): 修复插件字体冷启动回退默认字体 (8ad61c9)
-
-#### 界面
-
-- :lipstick: (copymanga): 将账户图标改为 account_circle (b09f8cb)
-- :lipstick: (ui): 重构封面状态叠层并新增已读与下载标记 (1abb5af)
-
-#### 重构
-
-- :recycle: (ui): 重构图片解码为单任务后台队列 (fce986a)
-
-#### 变更
-
-- :white_check_mark: (tests): 为 reader bars 测试添加 ui/geometry 桩模块 (b4d033e)
-- :white_check_mark: (tests): 添加拷贝漫画离线打开测试 (02a66fc)
-- :white_check_mark: (tests): 重置网络管理模块缓存 (ad4280b)
-- :white_check_mark: (tests): 重置网络管理模块缓存 (0ec8bd6)
-- :globe_with_meridians: (l10n): 添加版本提示与未知版本翻译 (643b565)
-- :white_check_mark: (tests): 增加拷贝漫画进度与目录缓存测试 (0802d98)
-
-### 完整对比
-
-https://github.com/AnkioTomas/moon/compare/v0.0.7...v0.0.8

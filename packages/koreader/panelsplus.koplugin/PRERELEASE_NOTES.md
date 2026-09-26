@@ -3,9 +3,9 @@
 This is the road-map for next update which I'm planning to name `Texty-Texty`, being the main focus to improve OCR for dictionary-lookups and translations and all text-features related to mangas/comics.
 
 
-# v1.5.0-BETA Features Implemented so far
+# Beta Features Implemented so far
 
-D1 = Done 1,  D2 = Done 2 and so on.
+*D1 = Done 1,  D2 = Done 2 and so on.*
 
 ## D1 @Pixxel123 [\[Pull Request\]](#2): Panels+ new trigger with double finger tab instead of always long press
  In case you have other plugins that uses the Long-press gestures in your panels, (opt-in option).  
@@ -28,7 +28,7 @@ Which means, this plugin will have at least 95% precision on those mangas native
 
 ---
 
-## D4 @KristanLaimon [(Bug-fix, reported by @Keithcat25)](https://github.com/KristanLaimon/PanelsPlus/issues/6): Fixed bad rotation bug in android devices
+## D4 @KristanLaimon [(1/2 Bug-fix, reported by @Keithcat25)](https://github.com/KristanLaimon/PanelsPlus/issues/6): Fixed bad rotation bug in android devices
 Before:
 <table>
   <tr>
@@ -45,13 +45,17 @@ Before:
 </table>
 <em>Images/Feedback provided thanks to @Keithcat25</em>
 
-
 After:
 <video alt="Image" src="https://github.com/user-attachments/assets/86a7a166-557d-4354-9754-2f90e7339e66" />
 
 <em>Showcase made by <strong>me</strong></em>
 
-NOTE: this works for android phones with RGB screens, currently not working in android ink-based screens, still working on it.
+### NOTE: this works for android phones with RGB screens, currently not working in android ink-based screens, still working on it.
+
+---
+## D5 @Pixxel123  [\[Pull Request\]](https://github.com/KristanLaimon/PanelsPlus/pull/10): Improved OCR recognition for PDF files that include a text-layer embbeded.
+
+<img align="center" alt="img" height="auto" width="480"  src="https://private-user-images.githubusercontent.com/36304206/655848880-61ef544c-b595-4b5d-9d4b-7415bf739563.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3OTA0MTUyNzcsIm5iZiI6MTc5MDQxNDk3NywicGF0aCI6Ii8zNjMwNDIwNi82NTU4NDg4ODAtNjFlZjU0NGMtYjU5NS00YjVkLTlkNGItNzQxNWJmNzM5NTYzLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNjA5MjYlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjYwOTI2VDA5MjkzN1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWRhZjQzMWRiYmFjNTc5NGViZDY5NjY5OWJiYzQ0OWVlMjBiZDUxYjI2YTFlNDdmMTZlMmUyMGY2ZmViNWE4NzcmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JnJlc3BvbnNlLWNvbnRlbnQtdHlwZT1pbWFnZSUyRnBuZyJ9.JFnCFeoQhOcFJYPWJgfdBaYK8kXPJPQ8Y8mJ2rPhbBg" />
 
 ---
 

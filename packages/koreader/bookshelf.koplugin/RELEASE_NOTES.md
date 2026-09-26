@@ -1,3 +1,11 @@
+# v5.2.1
+
+- New option under the wallpaper image pickers: Invert wallpaper in night mode (off by default), so a light wallpaper turns dark when the shelf is in night mode.
+- Fix: Colours you pick for the progress bar, shelf menu background, badges, bookmarks, the selected shelf button and text now show in colour on colour screens instead of grey.
+- Fix: A colour picked in night mode, or with the shelf theme pinned to light or dark, now shows as the colour you picked rather than its opposite.
+- Fix: Titles on generated covers no longer get cut short when they would fit at a slightly smaller size (#457).
+- Fix: "First unread in series" on spine shelves no longer faces out a second book when a series runs across a page break (#458).
+
 # v5.2.0
 
 - "Extract page counts" lays books out at your own reading settings, so its counts match what you see when reading, and shows them as each book's page count. It opens with a dialog to pick the sources to try, in order: publisher page numbers, Hardcover editions, your reading settings, a Calibre page column such as #pages (#405), and page counts in file names. You can fill in only missing counts or recount every book, or delete scanned counts. Progress shows in the status line while the shelf stays usable, and the Pages sort uses the counts.
@@ -61,18 +69,3 @@ Fixes for 5.1.2.
 - The About screen no longer reports a second copy of Bookshelf when only one is installed.
 - "Author on spine" can be turned back off (#439).
 - A background no longer shows as a negative when night mode is set by a gesture or another plugin.
-
-# v5.1.2
-
-Fixes and polish for 5.1.
-
-- Returning to the shelf after closing a book is much quicker (#422).
-- Shelves showing folders open much faster (#409).
-- The hero no longer glitches when you switch to a shelf with nothing in it (#423).
-- Shelf colours no longer come out inverted when night mode is switched by something other than KOReader (#426).
-- The shelf boards keep their wood colour with the shelf theme pinned to Light or Dark.
-- Spine mode follows KOReader's "Folders and files mixed" setting.
-- "Recently added" faces out that many books across the shelf, rather than that many on every screen.
-- Face out the first, or the first unread, book of a series on a shelf with no series grouping (#425).
-- The label under a cover follows the Panel shading setting.
-- Tidier outlines in the shelf menu, and the drilled-in view now matches the top level.

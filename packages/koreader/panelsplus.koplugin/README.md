@@ -31,12 +31,42 @@
 
 Panels+ is a KOReader plugin that improves manga and comic reading by replacing the default KOReader single-panel zoom flow with a custom direction-aware panel reader with in-live panel scanning. No complex pre-mangas-scanning setup required, install Panels+ and *it just works*.
 
+### Features
+- Includes 3 reading modes: 
+<table>
+  <!-- Videos (mismo alto y centrados) -->
+  <tr valign="middle">
+    <td width="33%" align="center">
+      <video height="180" src="https://github.com/user-attachments/assets/7200f3e1-74d8-4b24-bd64-c775600d35ed"></video>
+    </td>
+    <td width="33%" align="center">
+      <video height="180" src="https://github.com/user-attachments/assets/c247ed18-57db-4748-9205-7a50035096a3"></video>
+    </td>
+    <td width="33%" align="center">
+      <video height="180" src="https://github.com/user-attachments/assets/54ce079c-176b-420e-acb6-d6f9738b6f70"></video>
+    </td>
+  </tr>
+
+  <tr>
+    <td align="center"><b>1. Animated mode</b></td>
+    <td align="center"><b>2. Smooth mode</b></td>
+    <td align="center"><b>3. Classic mode</b></td>
+  </tr>
+
+  <tr>
+    <td align="center"><em>Swipe through your manga with fade-in/fade-out transitions. (Only available in e-ink devices).  You can swipe or tap on edges, configurable in "More Config" button, and rotate only the panel view or whole device from the same place. So you can read your panels even in landscape mode.</em></td>
+    <td align="center"><em>Make the current zoom view to move smoothly between panels (Duration and FPS between panels customizable). (Works better in non-eink devices, like Android and Desktop)</em></td>
+    <td align="center"><em>Move between panels with no transitions at all, simple...classic.</em></td>
+  </tr>
+</table>
+
 - Zoom-friendly screenshot support while reading panels.
 - Open panels with a long press or, if you prefer, a two-finger tap.
 - Panels finding on dark-background pages.
 - Animated panel transitions (or even pages transition, optional)
 - Comics & Mangas support
 - Customizable and performant in low-end e-ink devices.
+- Move between panels with swipes and/or taps on edges.
 - And much more.
 
 > Currently we're looking for translators. If you'd like to help us translate this plugin to your native language, check our [Translation Quick Guide](docs/translations/README.md).
@@ -156,6 +186,13 @@ Of course if you prefer vertical, with margin, loose cropped or even animated, t
 ### 🔍 OCR Word Lookup Setup (Experimental)
 
 Panels+ introduces experimental OCR support, allowing you to touch & hold text inside a zoomed-in panel to look up words in the dictionary—even in comics/manga! Works across `.CBZ`, `.CBR`, and `.PDF`.
+
+For English lettering, try **Panels+ → Lightweight English OCR**, then open a
+panel. This optional 3.92 MiB model is included and works offline through
+KOReader's existing OCR engine. It applies only when the document OCR language
+is English and is off by default. It improved the current manga dataset with
+KOReader's desktop OCR library; accuracy and speed still need device testing.
+See [OCR_REPORT.md](OCR_REPORT.md) for results and remaining limitations.
 
 <strong>IMPORTANT:</strong> To use this feature, you'll need to set up a couple of things first:
 
