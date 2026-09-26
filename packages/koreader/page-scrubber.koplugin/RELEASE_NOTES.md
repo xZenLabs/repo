@@ -1,3 +1,13 @@
+# v7.4.4
+
+### **Table of Contents (ToC) Improvements**
+ * **Dynamic Chapter Page Count:** Added a book-open-text metric in the footer displaying total pages for the active chapter, with full physical page label (pagemap) support.
+ * Hierarchical Page Counts: Parent sections calculate the cumulative page count of all nested subchapters instead of stopping at the first child entry.
+ * Decoupled Same-Page Entries: Removed inline title merging (Parent Chapter · Child Chaoter); items sharing the same starting page now appear as distinct rows with proper indentation.
+ * Streamlined Footer Layout: Grouped bookmarks and annotations on the right side to balance the new chapter page stats on the left, fully integrated across Portrait and Landscape views.
+
+[page_scrubber.koplugin.zip](https://github.com/user-attachments/files/32688160/page_scrubber.koplugin.zip)
+
 # v7.4.0
 
 v7.4- What's New
@@ -86,21 +96,3 @@ A customization option designed to match recent aesthetic setups like Bookshelf:
  * Minor state synchronization and alignment bug fixes.
 
 [page_scrubber.koplugin.zip](https://github.com/user-attachments/files/32567026/page_scrubber.koplugin.zip)
-
-# v7.2.0
-
-
-### Performance & Screen Refresh
- * Elimination of Global Full-Screen Flash: Eradicated invasive full screen refresh calls in onPanRelease, onRelease, and onSwipe, replacing them with partial refresh mode to consolidate crisp grayscale rendering without jarring black flashes.
- * Fluid Bottom Bar Scrubbing: Implemented fast refresh mode (rapid waveform without screen inversion) strictly bounded to self._bar_dimen, allowing the knob and page/percentage numeric readouts to track continuous touch drag smoothly.
- * Simple UI & Grid Responsiveness: Optimized render/refresh behavior in Simple Grid views to eliminate lagging, white-blanking.
- 
-### Navigation & Gestures
- * Hold Gesture Tuning: Reduced initial startup delay to 200 ms and tuned continuous repeat cadence to 650 ms, providing a fluid page-flipping rhythm that respects E-ink particle settling time (specially in simple grid).
- * Removal of Arbitrary Page Limit: Removed hardcoded stop after ~30 continuous steps, allowing uninterrupted navigation as long as hold is maintained.
- * Post-Hold Cleanup: Added a clean partial refresh cycle in onHoldRelease to clear lingering ghost text/halos after a long continuous flip burst.
-
-Visual & UI Improvements
- * Transition to SVG Vector Icons: Replaced font glyphs for bookmark navigation buttons with chevron-left.svg and chevron-right.svg, ensuring razor-sharp edges and eliminating vertical font-offset misalignment.
-
-[page_scrubber.koplugin.zip](https://github.com/user-attachments/files/32448793/page_scrubber.koplugin.zip)

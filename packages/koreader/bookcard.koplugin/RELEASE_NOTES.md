@@ -1,3 +1,9 @@
+# v1.5.8
+
+**Added**
+- New "Invert wallpaper in night mode" toggle under Background → Wallpaper.
+  When enabled, the wallpaper picture is inverted in night mode
+
 # v1.5.7
 
 **Added**
@@ -24,9 +30,3 @@
 **Changed**
 
 Font picker changed from checkbox to radio button
-
-# v1.5.3
-
-New
-
-The font picker now shows how the fonts looks

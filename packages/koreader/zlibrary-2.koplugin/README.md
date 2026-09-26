@@ -8,6 +8,8 @@ Access Z-library seamlessly within your KOReader application. This plugin allows
 
 If you find this plugin helpful, please consider supporting its development. Your donations help keep the project alive and allow for new features and improvements.
 
+<a href="https://ko-fi.com/zlibraryko" target="_blank"><img src="https://storage.ko-fi.com/cdn/kofi3.png?v=6" alt="Support me on Ko-fi" height="41"></a>
+&nbsp;
 <a href="https://buymeacoffee.com/zlibraryko" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="41" width="174"></a>
 
 ## Demo
@@ -67,10 +69,14 @@ return {
     -- baseUrl = "https://your.zlibrary.domain",
     -- email = "your_email",
     -- password = "your_password",
+    -- userId = "your_remix_userid",
+    -- userKey = "your_remix_userkey",
 }
 ```
 
 **Note:** Credentials set in the `zlibrary_credentials.lua` file will always take precedence over those set via the UI. The plugin loads these settings at startup.
+
+**Signing in with a session instead of a password:** `userId` and `userKey` are a ready-made session. Set both (or neither) and the plugin uses them as-is, so it never has to reach a login endpoint — useful when Z-library's sign-in is refusing valid credentials, as it has done more than once. Sign in to Z-library in a browser and copy the `remix_userid` and `remix_userkey` cookies into these two fields. No email or password is needed alongside them, and these sessions do not expire.
 
 ## Setup gesture (optional)
 
