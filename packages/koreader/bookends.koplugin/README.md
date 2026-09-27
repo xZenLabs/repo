@@ -478,6 +478,8 @@ The Bookends menu separates **global** settings (apply everywhere, never saved w
 | Prioritise left/right and truncate long center text | Off | Reverses the default centre-first truncation |
 | Text colour | Black | Default text colour (per-preset) |
 | Symbol colour | Black | Default colour for icon glyphs |
+| Top background | Off | Solid fill behind the top overlay region, edge to edge |
+| Bottom background | Off | Solid fill behind the bottom overlay region, edge to edge. Set the two to the same colour to fill both alike |
 
 #### Bookshelf's status line
 

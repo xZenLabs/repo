@@ -1,3 +1,8 @@
+# v1.5.9
+
+**Fixed**
+- Today's reading time (per-book `today_time` and all-books `all_books_time`) now matching Reading Insights' time.
+
 # v1.5.8
 
 **Added**
@@ -24,9 +29,3 @@
 - Portuguese – Portugal (pt_PT)
 - Portuguese – Brazil (pt_BR)
 - Chinese – Simplified (zh_CN)
-
-# v1.5.4
-
-**Changed**
-
-Font picker changed from checkbox to radio button

@@ -1,3 +1,131 @@
+# v0.1.8
+
+## 月读 v0.1.8
+
+KOReader 插件包：`book.koplugin-v0.1.8.zip`
+
+输入法词库（整库，手动 sideload）：`dictionary.sqlite3 dictionary-wubi.sqlite3 dictionary-cangjie.sqlite3 dictionary-zhuyin.sqlite3`
+
+安装：解压后将 `book.koplugin` 复制到 KOReader 的 `plugins` 目录，然后重启。
+
+词库 sideload：下载对应布局的词库，直接放入 KOReader 数据目录下的
+`.moon/`（与 `book.sqlite3` 同级）。附件已使用最终文件名，无需重命名。
+
+### 更新内容
+
+相对上一版本 `v0.1.7`：
+
+#### 新功能
+
+- :sparkles: (ui): 优化 OPDS 设置界面 (4f995fa)
+- :sparkles: (opds): 添加 OPDS 支持 (10b8efb)
+- :sparkles: (ai): 更新翻页动画功能门面以绑定 Moon 自身的动画开关 (0dea1b8)
+- :sparkles: (ai): 更新翻页动画功能门面以绑定 Moon 自身的动画开关 (aa7edf8)
+- :sparkles: (ai): 优化书籍元数据同步逻辑 (c707a32)
+- :sparkles: (ai): 优化书籍元数据同步逻辑 (2ffa99a)
+
+#### 修复
+
+- :bug: (http, ui, tests): 修复处理 Content-Length 为 0 的请求和 302 重定向逻辑 (6266e1f)
+- :bug: (测试): 修正 system_spec.lua 中的测试逻辑 (c447ea8)
+- :bug: (测试): 修正测试脚本中的内存拷贝逻辑 (bfbc311)
+
+#### 重构
+
+- :recycle: (lib): 加载 libz 库并初始化 inflate 函数 (ac74eb1)
+- :recycle: (lockscreen): 适配混合模式 source_id 处理 (de59990)
+
+#### 变更
+
+- :fire: (ui): 优化封面下载处理逻辑 (5c3b479)
+
+### 完整对比
+
+https://github.com/AnkioTomas/moon/compare/v0.1.7...v0.1.8
+
+# v0.1.7
+
+## 月读 v0.1.7
+
+KOReader 插件包：`book.koplugin-v0.1.7.zip`
+
+输入法词库（整库，手动 sideload）：`dictionary.sqlite3 dictionary-wubi.sqlite3 dictionary-cangjie.sqlite3 dictionary-zhuyin.sqlite3`
+
+安装：解压后将 `book.koplugin` 复制到 KOReader 的 `plugins` 目录，然后重启。
+
+词库 sideload：下载对应布局的词库，直接放入 KOReader 数据目录下的
+`.moon/`（与 `book.sqlite3` 同级）。附件已使用最终文件名，无需重命名。
+
+### 更新内容
+
+相对上一版本 `v0.1.6`：
+
+#### 修复
+
+- :bug: (api): 修复登录及续期逻辑 (a93f9d6)
+
+### 完整对比
+
+https://github.com/AnkioTomas/moon/compare/v0.1.6...v0.1.7
+
+# v0.1.6
+
+## 月读 v0.1.6
+
+KOReader 插件包：`book.koplugin-v0.1.6.zip`
+
+输入法词库（整库，手动 sideload）：`dictionary.sqlite3 dictionary-wubi.sqlite3 dictionary-cangjie.sqlite3 dictionary-zhuyin.sqlite3`
+
+安装：解压后将 `book.koplugin` 复制到 KOReader 的 `plugins` 目录，然后重启。
+
+词库 sideload：下载对应布局的词库，直接放入 KOReader 数据目录下的
+`.moon/`（与 `book.sqlite3` 同级）。附件已使用最终文件名，无需重命名。
+
+### 更新内容
+
+相对上一版本 `v0.1.5`：
+
+#### 新功能
+
+- :sparkles: (ui): 优化界面样式和布局 (68a8fbd)
+- :sparkles: (ui): 优化界面样式和布局 (44a9988)
+- :sparkles: (ai): 添加本地 WebDAV 配置支持 (0660a3b)
+- :sparkles: (ui): 添加多语言支持并优化票根生成 (4ccd5a3)
+- :sparkles: (ui): 添加多语言支持并优化票根生成 (973f787)
+- :sparkles: (ui): 添加多语言支持并优化票根生成 (4ec65d2)
+- :sparkles: (ui): 添加多语言支持并优化票根生成 (edad981)
+- :sparkles: (ui): 添加阅读页侧栏及配置选项 (86ddccc)
+- :sparkles: (ai): 添加基于日出时间计算时区的功能 (dadc8cd)
+- :sparkles: (ai) 优化封面图片加载逻辑 (a27bce4)
+- :sparkles: (ui,feature): 更新多语言文本及同步阅读时间设置 (a071f43)
+- :sparkles: (book): 实现书籍封面缓存功能 (d538fd7)
+- :sparkles: (ui): 更新语言文件 (a767ae7)
+- :sparkles: (ui): 添加书库刷新的假进度弹窗 (5082f0a)
+- :sparkles: (db): 支持新旧身份合并及物理路径登记 (0eaad26)
+- :sparkles: (ai): add WebDAV 支持 (d97ffb9)
+- :sparkles: (ai): 支持处理 azw 文件格式 (98991ae)
+- :sparkles: (ai): add AZW3 文档支持 (cbafe61)
+- :sparkles: (ai): add AZW3 文档支持 (b647326)
+- :sparkles: (ai): 更新 README 内容以反映新功能和改进 (7fff131)
+
+#### 修复
+
+- :bug: (ui,测试): 修复离线时注解同步逻辑 (30e778d)
+- :bug: (http): 修复 Basic 认证问题 (4c48302)
+
+#### 界面
+
+- :lipstick: (ui): 添加分享锁屏图功能 (7bb0ffd)
+
+#### 重构
+
+- :recycle: (ui): 优化侧边栏显示逻辑 (5660c79)
+- :recycle: (ui): 优化侧边栏翻页条布局 (0c82d0c)
+
+### 完整对比
+
+https://github.com/AnkioTomas/moon/compare/v0.1.5...v0.1.6
+
 # v0.1.5
 
 ## 月读 v0.1.5
@@ -80,118 +208,3 @@ KOReader 插件包：`book.koplugin-v0.1.4.zip`
 ### 完整对比
 
 https://github.com/AnkioTomas/moon/compare/v0.1.3...v0.1.4
-
-# v0.1.3
-
-## 月读 v0.1.3
-
-KOReader 插件包：`book.koplugin-v0.1.3.zip`
-
-输入法词库（整库，手动 sideload）：`dictionary.sqlite3 dictionary-wubi.sqlite3 dictionary-cangjie.sqlite3 dictionary-zhuyin.sqlite3`
-
-安装：解压后将 `book.koplugin` 复制到 KOReader 的 `plugins` 目录，然后重启。
-
-词库 sideload：下载对应布局的词库，直接放入 KOReader 数据目录下的
-`.moon/`（与 `book.sqlite3` 同级）。附件已使用最终文件名，无需重命名。
-
-### 更新内容
-
-相对上一版本 `v0.1.2`：
-
-#### 新功能
-
-- :sparkles: (ai): 更新多语言文本和微信读书章节解析逻辑 (abfb7df)
-- :sparkles: (ai): 新增连续章节模式全书笔记列表功能 (54040bb)
-- :sparkles: (ai): 添加和更新本地化文本以及优化微信客户端逻辑 (7411f2e)
-- :sparkles: (ai): enhance localization and API interaction for WeChat读书插件 (0dd7747)
-- :sparkles: (ui): 添加桌面整页重画等待刷新完成的功能 (4ca670d)
-- :sparkles: (update): 添加 GitHub Release 下载镜像加速功能 (14be457)
-
-#### 修复
-
-- :bug: (remote): 修正下载解析和配置保护逻辑 (53b3246)
-
-#### 重构
-
-- :recycle: (auth): refactor wechat authentication logic (6c70b74)
-
-#### 其他
-
-- :wrench: update files 项目级 MCP 配置（含 token） (e2ecf3c)
-
-### 完整对比
-
-https://github.com/AnkioTomas/moon/compare/v0.1.2...v0.1.3
-
-# v0.1.2
-
-## 月读 v0.1.2
-
-KOReader 插件包：`book.koplugin-v0.1.2.zip`
-
-输入法词库（整库，手动 sideload）：`dictionary.sqlite3 dictionary-wubi.sqlite3 dictionary-cangjie.sqlite3 dictionary-zhuyin.sqlite3`
-
-安装：解压后将 `book.koplugin` 复制到 KOReader 的 `plugins` 目录，然后重启。
-
-词库 sideload：下载对应布局的词库，直接放入 KOReader 数据目录下的
-`.moon/`（与 `book.sqlite3` 同级）。附件已使用最终文件名，无需重命名。
-
-### 更新内容
-
-相对上一版本 `v0.1.1`：
-
-#### 新功能
-
-- :sparkles: (ui): 改进图书馆筛选界面，实现分页显示功能 #31 (730c7a0)
-- :sparkles: (test): 添加测试用例以验证进度帧的顺序处理 (b00e341)
-- :sparkles: (ui): 改进输入法词库下载进度条显示逻辑 (8b2359c)
-- :sparkles: (ai): 优化下载进度显示功能 (db938ba)
-- :sparkles: (settings): 添加书友交流群按钮 (9a86b62)
-
-#### 修复
-
-- :bug: (fanqie): fix book detail fetching and reconciliation logic (422691b)
-- :bug: (ui): 修复桌面手势被文件管理器抢先消费 (227ee99)
-- :bug: (ui): 修复底栏点按被默认前光手势吞掉的问题 (0752b71)
-- :bug: (remote): 移除覆盖写入对受保护路径的拦截 (1a7cf70)
-- :bug: (font): 修复字体 id 处理与重复注册误判 (6c0a027)
-
-#### 重构
-
-- :recycle: (ui): 拆分行为设置并修复顶栏宽度缓存 (fb069c5)
-
-### 完整对比
-
-https://github.com/AnkioTomas/moon/compare/v0.1.1...v0.1.2
-
-# v0.1.1
-
-## 月读 v0.1.1
-
-KOReader 插件包：`book.koplugin-v0.1.1.zip`
-
-输入法词库（整库，手动 sideload）：`dictionary.sqlite3 dictionary-wubi.sqlite3 dictionary-cangjie.sqlite3 dictionary-zhuyin.sqlite3`
-
-安装：解压后将 `book.koplugin` 复制到 KOReader 的 `plugins` 目录，然后重启。
-
-词库 sideload：下载对应布局的词库，直接放入 KOReader 数据目录下的
-`.moon/`（与 `book.sqlite3` 同级）。附件已使用最终文件名，无需重命名。
-
-### 更新内容
-
-相对上一版本 `v0.1.0`：
-
-#### 新功能
-
-- :sparkles: (book): 新增缓存状态判断并调整详情页操作 (a79f9df)
-- :sparkles: (book): 添加已下载筛选与单书缓存清理 (c66d732)
-- :sparkles: (ui): 在首次渲染前写入顶栏偏好 (d1a022e)
-
-#### 性能
-
-- :zap: (utils): 转换微信读书字体为 sfnt 以降低内存 #12 (18b4035)
-- :zap: (utils): 转换微信读书字体为 sfnt 以降低内存 (401cda1)
-
-### 完整对比
-
-https://github.com/AnkioTomas/moon/compare/v0.1.0...v0.1.1

@@ -1,3 +1,21 @@
+# v1.18.0
+
+### New
+
+- A refresh icon in the top-left corner of feed and article lists (or the Menu key on devices without a touchscreen) reloads the list without leaving the plugin.
+- On lists that support it, that same icon opens a small menu with "Refresh" and "Mark all as read".
+- You can long-press any feed or folder and pick "Open on startup" so the plugin opens straight to it.
+- In the article preview, turning the page past the last page opens the next article, and turning back from the first page opens the previous one. You can change this under Settings > Page keys at article edges.
+- The article preview has a new "Previous" button for devices that only have a touchscreen.
+- The dialog at the end of an article now has "Next" and "Next unread" buttons, so you can go on to the following article without going back to the list.
+
+### Fixed
+
+- "Mark all as read" now works for FreshRSS feeds, folders and whole accounts. Before, they stayed unread.
+- If your login is rejected, the plugin now stops instead of retrying forever.
+- Leaving the RSS list now closes the article that was open under it, so you're no longer stuck going back and forth between the two.
+- Two articles opened quickly one after another no longer break each other's images.
+
 # v1.17.2
 
 ## v1.17.2 — Designed EPUB covers
@@ -158,13 +176,3 @@ key-based Kobo/PocketBook models:
 
 If you would rather have a dedicated shortcut, the **RSS Reader** action can be
 bound to a key combination with the Hotkeys plugin.
-
-# v1.14.1
-
-- Fix non-Latin titles (Cyrillic, etc.) being sanitized to underscores in filenames
-
-    Filename sanitization used a whitelist of ASCII word chars, so any
-    non-ASCII letter was stripped, turning archived titles into
-    all-underscore filenames. Switch to a blacklist of characters actually
-    illegal in filenames, and make title truncation UTF-8 boundary aware
-    so it can't cut a multi-byte character in half.

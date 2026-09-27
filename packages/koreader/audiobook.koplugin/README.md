@@ -202,10 +202,12 @@ Two Bluetooth stacks are supported, auto-detected at runtime:
 
 | Stack | Devices | Audio path |
 |-------|---------|------------|
-| **MTK** (mtkbtmwrpc) | Clara 2E, Sage, Libra Colour | GStreamer persistent pipeline |
-| **BlueZ** (bluetoothd) | Libra 2 / Io | aplay via ALSA |
+| **MTK** (mtkbtmwrpc) | Clara 2E, Sage (fw < 4.38), Libra Colour | GStreamer persistent pipeline |
+| **BlueZ** (bluetoothd) | Libra 2 / Io, Sage (fw >= 4.38) | aplay via ALSA |
 
 On MTK devices the BT audio pipeline uses an exclusive abstract socket. If audio stops working after a crash, restart KOReader -- the plugin kills orphan processes on startup.
+
+On BlueZ devices, KOReader's startup script kills `bluetoothd` and `bluealsa` whenever KOReader is launched from Nickel. If the plugin has a saved Bluetooth device, it restores the stack and reconnects that device automatically at startup; audiobook playback routes to the connected headset through the BlueALSA PCM. A device connected once from the plugin's Bluetooth menu is remembered for this.
 
 > On MTK Kobo devices, the mtkbtmwrpc daemon binds a single abstract socket. Only one GStreamer pipeline can hold it at a time. The plugin keeps one persistent pipeline alive across sentences to avoid reconnection gaps. On BlueZ devices, the plugin starts `bluetoothd` and resets the HCI adapter automatically when you power on Bluetooth.
 > **Known issue on MTK devices:** MBROLA voices other than `mb-en1` (UK English Male 1) may produce mid-sentence audio repeats due to a firmware bug in the MTK Bluetooth SBC encoder. This affects all MBROLA voices except `mb-en1`. See [docs/MBROLA_MTK_REPEAT_BUG.md](docs/MBROLA_MTK_REPEAT_BUG.md) for the full diagnostic report.

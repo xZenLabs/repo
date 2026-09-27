@@ -1,3 +1,13 @@
+# v5.2.2
+
+- Fix: With "Return to file browser" as the end of document action, finishing a book goes straight back to bookshelf again instead of flashing KOReader's file browser first (#460).
+- Fix: Sorting by Progress now works on shelves that also have a status filter, instead of falling back to title order (#463).
+- Fix: The skip to end button on spine shelves now reaches the last page on the first tap (#463).
+- Fix: Extract page counts no longer undercounts FB2 books (#461).
+- Fix: Brackets in Chinese titles on spines are now turned to match the vertical text (#462).
+- Fix: The clock and battery in the full screen micro-modules view now keep up with the time instead of staying as they were when it opened.
+- Slovak translation now says "doplnok" instead of "plugin", matching KOReader (from @misko903's PR #467).
+
 # v5.2.1
 
 - New option under the wallpaper image pickers: Invert wallpaper in night mode (off by default), so a light wallpaper turns dark when the shelf is in night mode.
@@ -58,14 +68,3 @@
 - Bookshelf paces itself against an OPDS catalogue that limits requests, rather than emptying the shelf and reporting the server as unreachable (#434).
 - With the status line turned off, the full shelf no longer leaves a gap where it would have been.
 - Recent opens as a list and Genres shows ribbons, for readers who have never changed their shelves.
-
-# v5.1.3
-
-Fixes for 5.1.2.
-
-- Tapping the page counter no longer closes KOReader, with a wallpaper set (#436).
-- The shelf follows a rotation you made while reading (#435).
-- Spines keep their colour on colour screens (#430).
-- The About screen no longer reports a second copy of Bookshelf when only one is installed.
-- "Author on spine" can be turned back off (#439).
-- A background no longer shows as a negative when night mode is set by a gesture or another plugin.

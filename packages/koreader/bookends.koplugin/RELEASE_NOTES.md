@@ -1,3 +1,10 @@
+# v5.27.0
+
+**New**
+
+- The background fill can now be set separately for the top and bottom of the screen. In the preset menu, *Top background* and *Bottom background* replace the single background colour, so you can fill just one of them or give each its own colour. Presets that used one background colour keep it on both.
+- Slovak translation, thanks to @misko903.
+
 # v5.26.0
 
 **New**
@@ -63,66 +70,3 @@ The download was never the problem, so nothing was left half-installed — the p
 **If you're on v5.23.0 or earlier you'll need to install this one by hand.** The updater is the thing that was broken, so it can't update itself. Download the zip below, unzip it, and copy the `bookends.koplugin` folder over the existing one in your KOReader `plugins` directory. Updates after this one work normally again.
 
 Everything in [v5.23.0](https://github.com/AndyHazz/bookends.koplugin/releases/tag/v5.23.0) is included — auto preset by file type, the progress-marker fix, the new tokens, and Ukrainian and European Portuguese translations.
-
-# v5.23.0
-
-> [!IMPORTANT]
-> **Don't install this one with the in-app updater — use [v5.23.1](https://github.com/AndyHazz/bookends.koplugin/releases/tag/v5.23.1) instead.**
->
-> Updating crashes KOReader on v2026.07 and newer. Bookends unpacked the download using `Device:unpackArchive`, which KOReader removed in [751b497](https://github.com/koreader/koreader/commit/751b49784878fa749f8c06cffbeeb43031ea5202) (5 July 2026). v5.23.1 fixes it and contains everything below, but has to be installed by hand the first time, since the updater is the broken part. See #109.
-
-**Auto preset by file type**
-
-Bookends can now switch preset, or hide itself entirely, based on the file you open. Under **Bookends settings > Auto preset by file type**, add a rule for a file extension and pick either a preset or **Hidden (no overlay)**. The picker previews each preset live on the page before you commit.
-
-Comics and manga were the motivating case: a rule that hides the overlay for CBZ keeps the artwork clear, and going back to an EPUB restores your normal preset with nothing to toggle by hand. The same works the other way, e.g. a plainer preset for PDFs.
-
-Rules key off the extension, so one rule covers every file of that type. Your normal preset is remembered separately from whatever a rule switches you to, so removing a rule puts you back where you were.
-
-**Progress markers stay put when you change font size**
-
-The Today, session and book-opened markers on progress bars were anchored to a page number. Changing font size re-paginates the book, so that number stopped pointing at the same place and the marker drifted away from where you had actually read to. They're now anchored to the text itself and hold their position through font, margin and line-spacing changes.
-
-**Hours and minutes in conditionals**
-
-`chap_time_left_h`, `chap_time_left_m`, `book_time_left_h` and `book_time_left_m` now work inside `[if:…]`, matching the tokens of the same names. That makes the stock-Kindle phrasing possible, where the hours only appear when there are any:
-
-```
-[if:chap_time_left_h>0]%chap_time_left_h hr(s) [/if]%chap_time_left_m min(s) left in chapter
-```
-
-giving "2 hrs 5 mins left in chapter", then "42 mins left in chapter" once under an hour. Both the chapter and book versions are in the token picker under **Templates**.
-
-**Tokens that sit flush against text**
-
-A token name runs until the next non-letter, so anything typed straight after it gets read as part of the name. Wrapping the name in angle brackets marks where it ends:
-
-```
-%<book_time_left_h>h%<book_time_left_m>m
-```
-
-gives `4h40m`. Width limits still work inside, e.g. `%<author{200}>`.
-
-**Position in the folder**
-
-`%file_num` and `%file_count` give the open file's place among the documents in its folder, so `File %file_num/%file_count` shows "File 5/10". Ordering follows your file manager sort settings. Aimed at comics and manga kept as one file per chapter, where the page and chapter tokens can only describe the chapter you're in.
-
-**Weekday and month names follow your language**
-
-`%weekday`, `%weekday_short`, `%date_long` and `%datetime{}` were rendering English day and month names regardless of your KOReader language. They now use KOReader's own translations, which covers every language KOReader ships rather than only the ones Bookends has a translation file for.
-
-**Presets folder in Folder shortcuts**
-
-The presets folder now appears in KOReader's **Folder shortcuts**, so you can reach it from the file manager without typing the path. Useful for copying preset files on or off the device by hand.
-
-**Gallery**
-
-Install counts load faster and no longer stop working on busy days. The counts endpoint was doing one lookup per preset in the gallery, which grew slower as the gallery grew and was hitting a daily quota; it's now a single lookup regardless of size.
-
-**Memory token on older Kindles**
-
-`%mem` rendered as nothing on older devices, because it read a field that only exists on newer Linux kernels. It now falls back to the equivalent older fields. Thanks to ksaMask123 for the fix and the diagnosis, in #106.
-
-**New languages**
-
-Ukrainian (uk) and European Portuguese (pt_PT), thanks to the contributors in #105 and #93.

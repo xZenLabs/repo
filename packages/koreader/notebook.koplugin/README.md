@@ -10,8 +10,10 @@ other stylus-capable e-ink devices. It does not patch KOReader.
 | Gallery & Organization | Drawing & Tools |
 | :---: | :---: |
 | <img src="docs/images/gallery.png" width="300" alt="Notebooks Gallery" /> | <img src="docs/images/drawing.png" width="300" alt="Drawing and Stylus Tools" /> |
-| **Paper Templates** | **PDF & XOPP Export** |
-| <img src="docs/images/templates.png" width="300" alt="Paper Templates" /> | <img src="docs/images/export.png" width="300" alt="Export Formats" /> |
+| **Pen Options & Color Palette** | **Paper Templates** |
+| <img src="docs/images/colored_pen.png" width="300" alt="Pen Options and Color Palette" /> | <img src="docs/images/templates.png" width="300" alt="Paper Templates" /> |
+| **PDF & XOPP Export** | **Quick Action (SimpleUI)** |
+| <img src="docs/images/export.png" width="300" alt="Export Formats" /> | <img src="docs/images/home.png" width="300" alt="Quick Action in SimpleUI" /> |
 
 ## Install
 
@@ -24,31 +26,92 @@ other stylus-capable e-ink devices. It does not patch KOReader.
 
 Notebooks are stored in `koreader/notebook/`.
 
+### Input debug log
+
+To capture a device-specific pen problem, create a new notebook named `_debug_`
+in the Notebook gallery (or create an empty file named `_debug_` inside `koreader/notebook/`).
+Then open the `_debug_` notebook, reproduce the problem, and send
+`koreader/notebook/notebook-debug.log` with your device model and firmware version.
+The log records raw and screen coordinates, selected tools, touch events, and
+rotation, plus the stylus button and physical tool flags; it does not contain
+notebook pages or handwriting content. The log
+rotates at about 1 MB: if `notebook-debug.log.1` exists, send that too. Together
+the two files use at most about 2 MB. Delete the `_debug_` notebook (or `_debug_`
+marker file) and reopen Notebook to stop logging. You can then delete both log files.
+
+## Dispositivi
+
+### Testati
+
+- Amazon Kindle Scribe (1ª generazione)
+
+### Da verificare
+
+- Altri modelli Kindle Scribe
+- Dispositivi KOReader con penna/stilo
+
+Notebook è un plugin di KOReader; la compatibilità non dipende dal launcher
+(per esempio ZenUI o Simple UI). Le voci “da verificare” non sono ancora state
+provate e non implicano supporto confermato.
+
 > [!TIP]
 > You can also place Notebook directly on KOReader's bottom navigation bar using [SimpleUI](https://github.com/doctorhetfield-cmd/simpleui.koplugin) (Custom quick actions → Plugin → Notebook, icon `F405`).
 
 ## Features
 
-- Fineliner, pressure-sensitive fountain pen and pencil, with black or white ink.
+- Fineliner, pressure-sensitive fountain pen and pencil, with a color palette.
 - Highlighter; whole-stroke and partial-stroke erasers.
+- A configurable pen button: use it for the highlighter or the eraser.
+- Experimental 2× writing view on ordinary notebook pages: tap `2×` in the
+  toolbar, drag with a finger to move around, and tap `1×` to return. Pen,
+  highlighter and eraser work in this view; selecting another tool returns to
+  the normal view. Imported PDF backgrounds and larger virtual page sizes are
+  not yet supported by this first zoom trial.
 - Palm rejection and direct stylus input.
-- Lines, arrows, rectangles, squares and circles.
+- Explicit triangles, rectangles, squares and circles. Hold the pen or marker
+  still at the end of a stroke to straighten a line or regularise a shape.
+  In the notebook's gear menu, **Hold to straighten** turns this on or off;
+  **Straight stroke** chooses a line or an arrow. It is enabled by default.
 - Lasso selection with move, cut, copy, paste and delete.
 - Editable text, multiple pages and per-page paper templates.
 - PDF and Xournal++ export; optional LocalSend integration.
 
-Hold or double-tap a tool button to open its options. After cutting or copying,
+Colored pens and pencil use a dark live preview; the highlighter uses a light
+black hatch so text remains readable. After roughly 0.8 seconds of inactivity,
+the selected color is refreshed (plus the panel’s own update time).
+This keeps slow grayscale/color refreshes out of the moving pen's path. Saved
+notes and exports always retain the selected color and brush.
+
+Hold or double-tap a tool button to open its options. Text options include a
+10–96 pt size selector with −/+ buttons and a live typography sample. After cutting or copying,
 use the Paste button in the top bar.
+
+### Custom pen icons
+
+KOReader looks in its user `icons` directory before bundled icons. On Kindle,
+place your SVGs in `/mnt/us/koreader/icons/` with these exact names:
+`notebook.pen.svg` (toolbar), `notebook.fineliner.svg` (Fineliner option), and
+`notebook.pencil.svg` (Pencil option). The current fountain pen icon is
+`notebook.fountain.svg` if you ever want to replace it too. Use a square
+`viewBox="0 0 24 24"`, then restart KOReader so its icon cache sees the files.
+These files stay outside the plugin directory when the plugin is updated.
+
+The KOReader desktop emulator can check the color palette and grayscale
+fallback, but its display is monochrome. To confirm actual color rendering,
+test on a color e-ink device.
 
 ## Development
 
-Requires LuaJIT and `luacheck`.
+Requires LuaJIT, `luacheck` and gettext (`msgfmt`). For in-depth architectural and engineering documentation, see the [Technical Reference Manual](docs/README.md).
 
 ```bash
 make verify       # lint and tests
 make ci           # verification plus package checks
 make package      # build the installable zip in build/
 ```
+
+Tests run in separate LuaJIT processes across the available CPU cores. Set
+`TEST_JOBS=4 make test` to limit concurrency.
 
 For device deployment, copy `kindle.env.example` to `kindle.env`, configure the
 device, then run `make deploy`. See `tools/deploy.sh --help` for options.
@@ -69,6 +132,12 @@ Sponsorship is optional and does not unlock features.
 ## LLM Disclosure
 
 This project was developed with the assistance of Large Language Models, used to support code writing and documentation.
+
+---
+
+## Acknowledgements
+
+Inspired by [localsend.koplugin](https://github.com/kaikozlov/localsend.koplugin), [pencil.koplugin](https://github.com/mysticknits/pencil.koplugin), and [ink-away.koplugin](https://github.com/EmirErtorer/ink-away.koplugin).
 
 ---
 

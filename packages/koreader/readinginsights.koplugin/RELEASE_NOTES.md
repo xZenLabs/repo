@@ -1,3 +1,16 @@
+# v6.10.3
+
+**Fixed**
+- Book stats popup: 
+  - in the "Next 2 chapters" pages cell, the short
+  page-count unit (e.g. "o.", "p.") no longer sits lower than and
+  closer to the number than in the rest of the popup — it's now
+  vertically centered with the same spacing used everywhere else.
+  - pages cell now shows the
+  full "page"/"pages" word whenever it fits, same as the regular
+  (non-split) pages view, and only abbreviates when the translated
+  word is too long for the available space.
+
 # v6.10.2
 
 **Fixed**
@@ -19,8 +32,3 @@ The font picker now shows how the fonts looks
 # v6.9.6
 
 More Hungarian translation text fix.
-
-# v6.9.5
-
-**Fixed**
-Removed some duplicates that remain in the font list buildup.

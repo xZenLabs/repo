@@ -5,3 +5,6 @@ The patch adds a clickable text (a link) called “Show Fonts”, which opens th
 
 Patch update: added multilingual support. The patch should now display text in the language set on your device.
 Patch update: The clickable “Font” text is shown using the name of the font selected by the user, and it’s rendered in that font’s own style.
+
+**2-fonts-menu-alternative.lua**
+Alternative version of the patch, with a fixed‑panel font list.

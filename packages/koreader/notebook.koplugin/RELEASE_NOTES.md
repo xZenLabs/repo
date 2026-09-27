@@ -1,3 +1,21 @@
+# v1.3.0
+
+## [1.3.0](https://github.com/pierspad/notebook.koplugin/compare/v1.2.0...v1.3.0) (2026-09-27)
+
+### Features
+
+* add zoom viewport and configurable pen button ([219ca99](https://github.com/pierspad/notebook.koplugin/commit/219ca99d66f64539b913c61440e5e33fc5b647a9))
+* expand drawing tools and device diagnostics ([3a710f9](https://github.com/pierspad/notebook.koplugin/commit/3a710f98be37f468370ec9868e31e9b10622309c))
+* improve ink latency, zoom editing and text tools ([d8b8edf](https://github.com/pierspad/notebook.koplugin/commit/d8b8edfd0f8d82368c63db7bbf9d2e9783a4f002))
+* organize tool options and add live text sizing ([f99eaea](https://github.com/pierspad/notebook.koplugin/commit/f99eaea4f8800186c5c2c42d5288921ec0a0e609))
+
+### Bug Fixes
+
+* enable input debug logging on _debug_ notebook ([0e11eb7](https://github.com/pierspad/notebook.koplugin/commit/0e11eb72016e8afa5ac926cdcf4d0e14ceba96c3))
+* prevent notebook shutdown when changing tool colors ([07c1688](https://github.com/pierspad/notebook.koplugin/commit/07c168822bdb1217247abb055ccf0d001722df96))
+* reveal colored ink sooner and streamline drawing work ([df18cfc](https://github.com/pierspad/notebook.koplugin/commit/df18cfca2ee809e79947d03220a21609ec2b4448))
+* streamline zoom controls and speed up panning ([f92164a](https://github.com/pierspad/notebook.koplugin/commit/f92164a9ea69019cc88c1ba1345496b4eab9ff2f))
+
 # v1.2.0
 
 ## [1.2.0](https://github.com/pierspad/notebook.koplugin/compare/v1.1.0...v1.2.0) (2026-09-24)
