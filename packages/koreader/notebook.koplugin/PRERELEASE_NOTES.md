@@ -1,3 +1,11 @@
+# v1.3.0-dev.5
+
+## [1.3.0-dev.5](https://github.com/pierspad/notebook.koplugin/compare/v1.3.0-dev.4...v1.3.0-dev.5) (2026-09-26)
+
+### Features
+
+* improve ink latency, zoom editing and text tools ([d8b8edf](https://github.com/pierspad/notebook.koplugin/commit/d8b8edfd0f8d82368c63db7bbf9d2e9783a4f002))
+
 # v1.3.0-dev.4
 
 ## [1.3.0-dev.4](https://github.com/pierspad/notebook.koplugin/compare/v1.3.0-dev.3...v1.3.0-dev.4) (2026-09-25)
@@ -29,18 +37,3 @@
 ### Features
 
 * expand drawing tools and device diagnostics ([3a710f9](https://github.com/pierspad/notebook.koplugin/commit/3a710f98be37f468370ec9868e31e9b10622309c))
-
-# v1.2.0-dev.6
-
-## [1.2.0-dev.6](https://github.com/pierspad/notebook.koplugin/compare/v1.2.0-dev.5...v1.2.0-dev.6) (2026-09-24)
-
-### Features
-
-* smooth low-latency highlighter ink ([389dd9f](https://github.com/pierspad/notebook.koplugin/commit/389dd9fed61530438a005cca35d5b0919b3c7b49))
-
-### Bug Fixes
-
-* keep live ink and text state visible ([89d2335](https://github.com/pierspad/notebook.koplugin/commit/89d233532f704572e2fd51bf3e2095c0016f83d6))
-* pre-release ([2709775](https://github.com/pierspad/notebook.koplugin/commit/27097753faea6a8b4fd489eedadcc2241987faa8))
-* preserve PDF geometry in XOPP sharing ([f129d36](https://github.com/pierspad/notebook.koplugin/commit/f129d36885ec77b57a9df9e859586ef97e89afed))
-* restore fast highlighting and compact text input ([16bb062](https://github.com/pierspad/notebook.koplugin/commit/16bb0627407f8682470a47e72e5b95aa74f80308))

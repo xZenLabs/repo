@@ -2,7 +2,7 @@
 
 ## 更新说明
 > 新增书籍元数据编辑模块（标题、作者、系列、分类、语言、出版社、简介）
-> 💡 **Inspiration**:
+> 💡 **功能来源**:
 > [zenos.koplugin](https://github.com/xZenLabs/zen-os)
 >  [metadata.koplugin](https://github.com/ZHA30/metadata.koplugin) 
 - 元数据：支持 EPUB 内嵌元数据读写，可恢复
