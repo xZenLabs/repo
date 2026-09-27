@@ -1,3 +1,47 @@
+# v0.1.9
+
+## 月读 v0.1.9
+
+KOReader 插件包：`book.koplugin-v0.1.9.zip`
+
+输入法词库（整库，手动 sideload）：`dictionary.sqlite3 dictionary-wubi.sqlite3 dictionary-cangjie.sqlite3 dictionary-zhuyin.sqlite3`
+
+安装：解压后将 `book.koplugin` 复制到 KOReader 的 `plugins` 目录，然后重启。
+
+词库 sideload：下载对应布局的词库，直接放入 KOReader 数据目录下的
+`.moon/`（与 `book.sqlite3` 同级）。附件已使用最终文件名，无需重命名。
+
+### 更新内容
+
+相对上一版本 `v0.1.8`：
+
+#### 新功能
+
+- :sparkles: (ui): 添加设置项并启用桌面图标打开桌面功能 (2a16975)
+- :sparkles: (ai): 优化上下文显示逻辑和实体处理 (c5dcbd8)
+- :sparkles: (ai): 优化锁屏组件显示逻辑 (10b2fe4)
+- :sparkles: (ai): 优化锁屏组件显示逻辑 (fcd5112)
+- :sparkles: (ai): 优化 X-Ray 数据获取逻辑，增加首次初始化和章节增量逻辑 (ebf5ff3)
+
+#### 修复
+
+- :bug: (local): fix book scanning crash and retry logic (176336d)
+- :bug: (ui): 修复登录流程中的取消逻辑 (9bc4408)
+- :bug: (ui): 修复登录流程中的取消逻辑 (e3766ee)
+- :bug: (db): 修复文件移动/重命名逻辑 (9d8ea63)
+
+#### 重构
+
+- :recycle: (auth): 重构 auth 模块逻辑以适配 token 与 wlfstk_smdl 的配对校验 (5b4f2cb)
+
+#### 文档
+
+- :memo: (docs): 更新 xray README.md (2e5dd7f)
+
+### 完整对比
+
+https://github.com/AnkioTomas/moon/compare/v0.1.8...v0.1.9
+
 # v0.1.8
 
 ## 月读 v0.1.8
@@ -166,45 +210,3 @@ KOReader 插件包：`book.koplugin-v0.1.5.zip`
 ### 完整对比
 
 https://github.com/AnkioTomas/moon/compare/v0.1.4...v0.1.5
-
-# v0.1.4
-
-## 月读 v0.1.4
-
-KOReader 插件包：`book.koplugin-v0.1.4.zip`
-
-输入法词库（整库，手动 sideload）：`dictionary.sqlite3 dictionary-wubi.sqlite3 dictionary-cangjie.sqlite3 dictionary-zhuyin.sqlite3`
-
-安装：解压后将 `book.koplugin` 复制到 KOReader 的 `plugins` 目录，然后重启。
-
-词库 sideload：下载对应布局的词库，直接放入 KOReader 数据目录下的
-`.moon/`（与 `book.sqlite3` 同级）。附件已使用最终文件名，无需重命名。
-
-### 更新内容
-
-相对上一版本 `v0.1.3`：
-
-#### 新功能
-
-- :sparkles: 优化京东读书目录和章节下载逻辑 (fc856ea)
-- :sparkles: (ui): 更新界面语言和设置项 (033e2f9)
-- :sparkles: (ui): 添加背景遮罩功能 (eb127fc)
-- :sparkles: (ai): 添加自动亮度和夜间模式功能 (a704971)
-- :sparkles: (ai): 添加自动亮度和夜间模式功能 (f537081)
-- :sparkles: (ai): 添加自动夜间模式功能 (b9129d6)
-
-#### 界面
-
-- :lipstick: (ui): 优化锁屏背景图绘制逻辑 (fa9e558)
-- :lipstick: (ui): 优化锁屏背景图绘制逻辑 (e774100)
-- :lipstick: (ui): 优化夜间模式下的 MeshMask 组件显示 (0618e6a)
-
-#### 重构
-
-- :recycle: (ui): 修复 reader_bar.lua 和测试中的 ReaderUI 状态处理 (ea42970)
-- :recycle: (source): 修改章节缓存请求间隔参数 (bcfdd92)
-- :recycle: (source): 修改章节缓存请求间隔参数 (1f4a99b)
-
-### 完整对比
-
-https://github.com/AnkioTomas/moon/compare/v0.1.3...v0.1.4

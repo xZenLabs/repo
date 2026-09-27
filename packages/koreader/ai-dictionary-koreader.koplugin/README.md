@@ -20,6 +20,7 @@ Inside the answer popup:
 
 - Tap **↻** to regenerate an answer, or **✕** to close it.
 - Tap a word or select a phrase in a Dictionary answer to look it up. In Explain, the same gesture explores that topic further.
+- Use **‹** and **›** at the bottom to revisit answers and their images without querying again. Arrows appear only when usable; going back during a lookup cancels and discards its unfinished answer. A new lookup from an earlier answer replaces the forward history; regenerating replaces only the current answer. Closing the popup releases this in-memory history.
 - Dictionary and Explain can show a relevant **Wikipedia image** when available; tap it to enlarge.
 - On **Android**, configure voice output to hear dictionary pronunciations using the speaker button.
 
@@ -55,6 +56,8 @@ You'll need [KOReader](https://koreader.rocks/), a network connection, and an AP
 4. Now tap and hold on any word or group of words, and select **AI Dictionary**, **AI Explain**, or **AI Simplify**.
 
 **Tip:** If KOReader's default dictionary opens immediately, disable **Dictionary on single word selection** under **Settings → Taps and gestures → Long-press on text**. Menu placement may vary by KOReader version.
+
+To launch an AI lookup directly when you release a text selection, choose **AI Dictionary** or **AI Explain** in that same **Long-press on text** menu. Disable **Dictionary on single word selection** to apply your choice to single words as well. A very-long press still opens the selection popup. Choose **Ask with popup dialog** to return to the normal menu.
 
 ## Settings reference
 | Setting | Purpose / default |
