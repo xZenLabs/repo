@@ -1,3 +1,19 @@
+# v1.3.0-dev.7
+
+## [1.3.0-dev.7](https://github.com/pierspad/notebook.koplugin/compare/v1.3.0-dev.6...v1.3.0-dev.7) (2026-09-27)
+
+### Features
+
+* organize tool options and add live text sizing ([f99eaea](https://github.com/pierspad/notebook.koplugin/commit/f99eaea4f8800186c5c2c42d5288921ec0a0e609))
+
+# v1.3.0-dev.6
+
+## [1.3.0-dev.6](https://github.com/pierspad/notebook.koplugin/compare/v1.3.0-dev.5...v1.3.0-dev.6) (2026-09-27)
+
+### Bug Fixes
+
+* reveal colored ink sooner and streamline drawing work ([df18cfc](https://github.com/pierspad/notebook.koplugin/commit/df18cfca2ee809e79947d03220a21609ec2b4448))
+
 # v1.3.0-dev.5
 
 ## [1.3.0-dev.5](https://github.com/pierspad/notebook.koplugin/compare/v1.3.0-dev.4...v1.3.0-dev.5) (2026-09-26)
@@ -21,19 +37,3 @@
 ### Features
 
 * add zoom viewport and configurable pen button ([219ca99](https://github.com/pierspad/notebook.koplugin/commit/219ca99d66f64539b913c61440e5e33fc5b647a9))
-
-# v1.3.0-dev.2
-
-## [1.3.0-dev.2](https://github.com/pierspad/notebook.koplugin/compare/v1.3.0-dev.1...v1.3.0-dev.2) (2026-09-25)
-
-### Bug Fixes
-
-* enable input debug logging on _debug_ notebook ([0e11eb7](https://github.com/pierspad/notebook.koplugin/commit/0e11eb72016e8afa5ac926cdcf4d0e14ceba96c3))
-
-# v1.3.0-dev.1
-
-## [1.3.0-dev.1](https://github.com/pierspad/notebook.koplugin/compare/v1.2.0...v1.3.0-dev.1) (2026-09-25)
-
-### Features
-
-* expand drawing tools and device diagnostics ([3a710f9](https://github.com/pierspad/notebook.koplugin/commit/3a710f98be37f468370ec9868e31e9b10622309c))

@@ -1,3 +1,22 @@
+# v1.2.0
+
+## 更新说明
+> 新增书籍元数据编辑模块（标题、作者、系列、分类、语言、出版社、简介）
+> 💡 **功能来源**:
+> [zenos.koplugin](https://github.com/xZenLabs/zen-os)
+>  [metadata.koplugin](https://github.com/ZHA30/metadata.koplugin) 
+> 可搭配[simpleui v2.7.1-b](https://github.com/gytwo/simpleui.koplugin/releases/v2.7.1-b)使用
+- 元数据：支持 EPUB 内嵌元数据读写，可恢复
+- 元数据：非 EPUB 书籍的元数据保存到sdr文件
+- 元数据：文件管理器界面长按书籍弹出菜单，点击「编辑元数据」
+- 元数据：在线元数据源 —— 豆瓣、Google Books、Hardcover、Open Library
+- 元数据：搜索源选择界面支持配置各自的 API key、修改搜索关键词、分页预览结果
+- 元数据：逐字段应用结果，手动修改过的字段不会被覆盖
+- 元数据：可恢复上一版元数据（仅 EPUB，单步撤销）
+- 元数据：添加到koreader快捷手势动作及QA内置动作
+- 元数据：QuickUI 设置新增「元数据设置」子菜单，含「启用元数据编辑器」开关
+- 元数据：支持标准预设系统（保存 / 应用 / 重置）
+
 # v1.1.1
 
 ## 更新说明
@@ -77,23 +96,3 @@
 ## 更新日志
 - 修复旋转屏幕时布局混乱的问题
 - 给历史记录/书单/收藏界面添加底部栏
-
-# v1.0.4
-
-## What's Changed
-- Fix crash when removing last bottom bar tab (empty tab list handling)
-- Fix residual touch handler when removing the rightmost bottom bar tab
-- Fix Deselect All not showing when bottom bar tab count reaches max limit
-- Move Remove button next to Save in built-in action edit dialog
-- Adjust title and author font size in list view
-- Fix placeholder cover dim effect not showing when selected in filemanager
-- Add 'Hide in PDF' option for bottom bar
-- Improve Chinese translations
-- 修复底部栏移除最后一个按钮时崩溃闪退的问题（无按钮时显示提示性文字）
-- 修复底部栏移除最右边按钮后触摸区域仍为旧按钮的问题
-- 修复底部栏因达数量限制而无法批量移除所有按钮的问题
-- 将内置动作编辑框的移除按钮放至保存按钮左侧（保持与自定义动作编辑框相同布局）
-- 调整显示模式列表视图下标题及作者字体大小（解决字体过大的问题）
-- 修复无封面书籍的占位封面及列表视图下的书籍封面无选中效果的问题
-- 添加在PDF中隐藏底部栏选项
-- 完善中文翻译

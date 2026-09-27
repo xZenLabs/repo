@@ -1,3 +1,29 @@
+# v7.4.9
+
+### Stable pages should be more... stable
+
+**Stable Pages (*Pagemap*)**
+* **Pinpoint Accuracy (Zero Drift):** Eliminated the 1 to 5-page drift from earlier math estimations; stable pages now map with exact 1:1 precision against the physical print edition.
+* **Correct Page Totals:** Synchronized page counts so Roman numeral front matter no longer inflates the total (e.g., displaying `879 / 879` instead of `879 / 905`).
+* **Instant Mid-Screen Updates:** When a new physical page begins mid-screen, the label updates immediately rather than waiting for the next page turn.
+
+**Six Grid Mode**
+* **Fixed RTL Traversal:** Left and right buttons turn pages in the correct direction when reading right-to-left.
+* **Boundary Auto-Hide:** Block jump buttons automatically disappear upon reaching the start or end of the book.
+* **Simplified Return Button:** Removed extra arrows from the origin button in landscape, standardizing it to a clean `Page X` label matching portrait mode.
+
+**Landscape & Views**
+* **Auto-Hiding Chapter Controls:** Chapter jump buttons cleanly disappear when reaching the first or last chapter across all landscape layouts (Six Grid, Grid, Split, and Simple Grid).
+* **UI Glitch Fix:** Anchored slider geometry to fixed margins, preventing the bottom bar from turning completely blank when chapter buttons hide.
+* **No More Ghost Cards:** Eliminated empty white placeholder cards with loading dots beyond book boundaries in Landscape Grid.
+
+**Table of Contents (ToC)**
+* **Clean Scrubbing State:** The chapter page counter hides its number and displays only the icon while dragging the slider; the exact count appears instantly upon release over the active chapter.
+* **Adaptive Landscape Pagination:** If chapter list pages overflow toward side buttons (✕ and shutter), pagination dots automatically convert into a compact numeric pill (`X / Y`) matching portrait mode.
+* **Clean Navigation Controls:** Chapter list jump buttons (`<<`, `<`, `>`, `>>`) dynamically hide at list boundaries.
+
+[page_scrubber.koplugin.zip](https://github.com/user-attachments/files/32694557/page_scrubber.koplugin.zip)
+
 # v7.4.4
 
 ### **Table of Contents (ToC) Improvements**
@@ -67,32 +93,3 @@ v7.3.5 — Release Notes
  **Added translations.**
  
 [page_scrubber.koplugin.zip](https://github.com/user-attachments/files/32577238/page_scrubber.koplugin.zip)
-
-# v7.3.0
-
-v7.3 — Patch Notes
-Here is the latest update for Page Scrubber. This release brings key performance enhancements to page navigation, comprehensive UI refinements, and visual customization options.
-
-### Performance & Navigation
- * Aggressive Page Preloading: Neighboring pages are now preloaded ahead of time in the background, making page turns via taps or swipes feel instant.
- * Rewritten Bookmark Logic: The add/remove bookmark logic was completely rewritten to work reliably alongside background preloading, preventing crashes or freeze-ups during live bookmark toggling.
-
-### New Feature: Wallpapers
-A customization option designed to match recent aesthetic setups like Bookshelf:
- * Multi-Folder Detection: Automatically loads custom wallpapers from the plugin’s own directory as well as shared system paths (including Bookshelf, SimpleUI, and /mnt/us/Wallpapers/).
- * Title Pill & Dense Halo: Book titles can now sit inside an optional protective "pill" badge. If turned off in settings, a dense 8-pass circular halo renders behind the text to ensure complete readability across textured or dark backgrounds.
- * Clean Divider Line: A crisp horizontal divider line renders directly beneath the top bar when a wallpaper is active.
- * Note on Performance: Full-screen image rendering on E-ink requires additional RAM and CPU cycles. If you notice any interface lag on lower-spec hardware, you can instantly return to the stock white background by selecting None.
-
-**Split View Visual Refinements**:
- * Standardized Geometry: Border thickness, corner radii, and list padding are now aligned across portrait and landscape views, ensuring consistent lines between the Polaroid preview and right-hand list cards.
- * Refined Tabs: Upper category tabs and filter icons received subtle visual adjustments for a cleaner, balanced layout.
-
-**RTL / Manga Navigation Fixes**
- * Directional Arrow Fixes: Resolved issues in landscape RTL mode where Bookmark Browser navigation chevrons and return-to-origin labels pointed in the wrong direction.
- 
-**Stability & Memory Management**
- * Clean Exits on Heavy Toggles: Switching heavy visual states—such as choosing a new wallpaper, disabling wallpapers via "None", toggling the title pill, or switching day/night mode and frontlight—now safely closes the widget to flush C-buffers from RAM and prevent ghosting or input lag.
- * Minor state synchronization and alignment bug fixes.
-
-[page_scrubber.koplugin.zip](https://github.com/user-attachments/files/32567026/page_scrubber.koplugin.zip)

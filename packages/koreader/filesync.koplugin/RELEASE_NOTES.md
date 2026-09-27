@@ -1,3 +1,15 @@
+# v1.11.0
+
+## In-browser text editor
+
+- New **Edit** button in the web UI opens text and config files in a full-screen editor with syntax highlighting for 30+ languages (Lua, JSON, YAML, Markdown, shell, Python, and more). Save in place with the Save button or `Ctrl+S`.
+- Files up to 256 KB are editable. Binary files are detected and stay download-only.
+- Backup files such as `bookshelf.lua.old` and `notes.lua~` are recognised by their base type.
+- Safe mode stays strictly read-only: the Save button is hidden and saves are refused server-side.
+- Editor UI strings are machine-translated for the 10 supported languages. Corrections welcome.
+
+Thanks to @imsudip for the contribution (#43, closes #42).
+
 # v1.10.0
 
 - Fixes issue stopping server freezes Kobo devices
@@ -17,13 +29,3 @@
 
 - KOReader's *Delete plugin and settings* / *Disable plugin and delete settings* menu entries now work for FileSync: the plugin's settings are removed along with it, and the file server is stopped cleanly before the restart. (#25)
 - Stopping the file server no longer quits KOReader on Android (and macOS/SDL), where the app cannot restart itself. The screen is refreshed instead. The updater's *Restart now* button had the same problem and now asks you to reopen KOReader manually. (#34)
-
-# v1.7.0
-
-- File server toggle is now available as a Simple UI quick action, so the server can be started and stopped without opening the plugin menu. (#36)
-- Hidden files and folders are now shown in the web UI when safe mode is off. (#32)
-- Default port is now 80, so the server can be reached by typing just the device IP with no ':port' suffix. Existing users keep their saved port. (#27)
-- Ports below 1024 are now accepted, with automatic fallback to 8080 when the privileged bind fails (Android/desktop, where KOReader isn't root). (#27)
-- QR code screen now works on non-touch devices: The screen is fully keyboard-navigable. (#31)
-- README is now more generic about supported devices. (#30)
-- Synced all translation catalogs with the codebase. (#38)

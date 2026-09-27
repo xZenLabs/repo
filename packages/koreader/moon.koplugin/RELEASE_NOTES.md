@@ -1,3 +1,44 @@
+# v0.1.5
+
+## 月读 v0.1.5
+
+KOReader 插件包：`book.koplugin-v0.1.5.zip`
+
+输入法词库（整库，手动 sideload）：`dictionary.sqlite3 dictionary-wubi.sqlite3 dictionary-cangjie.sqlite3 dictionary-zhuyin.sqlite3`
+
+安装：解压后将 `book.koplugin` 复制到 KOReader 的 `plugins` 目录，然后重启。
+
+词库 sideload：下载对应布局的词库，直接放入 KOReader 数据目录下的
+`.moon/`（与 `book.sqlite3` 同级）。附件已使用最终文件名，无需重命名。
+
+### 更新内容
+
+相对上一版本 `v0.1.4`：
+
+#### 新功能
+
+- :sparkles: (utils): 更新自动灯光周期配置 (5599759)
+- :sparkles: (ai): 新增 WebDAV 连接测试功能 (bb9cce8)
+- :sparkles: (ai): 添加翻页动画样式选项并更新测试 (8c79cf8)
+- :sparkles: (ai): 添加翻页动画风格设置功能 (0096c30)
+- :sparkles: (ai): 添加翻页动画风格设置功能 (b617680)
+- :sparkles: (ai): 添加翻页动画风格设置功能 (fe3182c)
+- :sparkles: (ai): 添加翻页动画风格设置功能 (f72592a)
+- :sparkles: (ai): 添加和更新翻页动画样式 (422cd1b)
+- :sparkles: (ai): 添加翻页动画补丁和国际化支持 (7d9d05f)
+
+#### 界面
+
+- :lipstick: (ui): 优化设置界面的按钮行为 (538fd5a)
+
+#### 重构
+
+- :recycle: (ui, tests): 优化首页组件数据刷新逻辑 (7414235)
+
+### 完整对比
+
+https://github.com/AnkioTomas/moon/compare/v0.1.4...v0.1.5
+
 # v0.1.4
 
 ## 月读 v0.1.4
@@ -154,53 +195,3 @@ KOReader 插件包：`book.koplugin-v0.1.1.zip`
 ### 完整对比
 
 https://github.com/AnkioTomas/moon/compare/v0.1.0...v0.1.1
-
-# v0.1.0
-
-## 月读 v0.1.0
-
-KOReader 插件包：`book.koplugin-v0.1.0.zip`
-
-输入法词库（整库，手动 sideload）：`dictionary.sqlite3 dictionary-wubi.sqlite3 dictionary-cangjie.sqlite3 dictionary-zhuyin.sqlite3`
-
-安装：解压后将 `book.koplugin` 复制到 KOReader 的 `plugins` 目录，然后重启。
-
-词库 sideload：下载对应布局的词库，直接放入 KOReader 数据目录下的
-`.moon/`（与 `book.sqlite3` 同级）。附件已使用最终文件名，无需重命名。
-
-### 更新内容
-
-相对上一版本 `v0.0.9`：
-
-#### 新功能
-
-- :sparkles: (reader): 优先使用备用目录生成自动目录 (f099313)
-- :sparkles: (reader): add 整书模式自动目录扫描 (9d17b4d)
-- :sparkles: (reader): add 整书模式自动目录扫描 (c0c8037)
-- :sparkles: (moon): 根据 Content-Length 显示下载进度 (5ef3a57)
-
-#### 修复
-
-- :bug: (http): 提高连接超时默认值并移除局部覆盖 (9ba88e9)
-- :bug: (http): 修复异步连接失败时 DNS 缓存与错误提示 (845c198)
-- :bug: (popup): 修复多选时误触发关闭回调 (721cdea)
-
-#### 界面
-
-- :lipstick: (ui): 迁移设置弹窗并添加菜单遮罩 (95e8ba4)
-
-#### 性能
-
-- :zap: (reader): 限制高亮菜单与选区刷新区域 (9ede23c)
-
-#### 其他
-
-- :wrench: (remote): 设置 kind 为 light (f038a47)
-
-#### 变更
-
-- :white_check_mark: (remote): 补充 workers.job.run 参数校验断言 (a16bbb0)
-
-### 完整对比
-
-https://github.com/AnkioTomas/moon/compare/v0.0.9...v0.1.0
