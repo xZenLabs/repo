@@ -1,3 +1,31 @@
+# v3.1.3
+
+Prerelease rolling up **everything since 3.1.0** (3.1.1 and 3.1.2 were prereleases), with a major focus on making landscape fast and correct.
+
+## New
+- **Landscape orientation.** Draw with the device held sideways; Ink Away remembers the choice and reopens the same way. A landscape session gets a wide canvas, and its PNG / JPEG / PDF export comes out landscape automatically.
+- **Background remover for images.** First-pass remover that flood-fills from the edges, so a photo's subject stays solid while the surrounding background drops out.
+
+## Landscape performance (the big rework)
+On e-ink readers that render landscape by rotating the framebuffer in software, drawing and menus used to lag. Landscape is now rebuilt to be as responsive as portrait:
+- Panel-order rendering — the canvas is scaled and copied through the screen's native pixel order (a memcpy) instead of a per-pixel rotated copy on every frame.
+- The master bitmap is mirrored in panel order, so pan / zoom / redraw never re-rotate the whole screen.
+- Shape commits re-render only the shape's rectangle, not the whole drawing area.
+- The floating zoom control is cached as a sprite instead of being redrawn every frame; toolbar chrome isn't repainted mid-stroke or mid-drag.
+
+## Settings & grid
+- Grid type, size and opacity moved into their own grid sub-sheet, so the settings sheet fits with no scrolling (no more nudging a slider by accident).
+- Fixed grid-on drawing slowness (the grid is clipped to the changed region while you draw).
+
+## Reliability
+- Reopening Ink Away can no longer stack a second canvas over an old one (which had made the app get slower until a restart); reopening recovers cleanly.
+- Notebook shape clipping on rotation fixed; text stays put across rotation.
+- Online image browser: fixed a tap-to-add crash and re-searching without the keyboard getting trapped.
+- Memory backstops so long sessions don't degrade.
+
+## Known issue
+- Very heavy, prolonged switching between portrait and landscape *while drawing* can gradually reduce responsiveness until KOReader is restarted. Normal use is unaffected; a fix is still being investigated.
+
 # v3.1.2
 
 Faster landscape, a tidier settings menu, and a pen-input test to help track down stylus problems.

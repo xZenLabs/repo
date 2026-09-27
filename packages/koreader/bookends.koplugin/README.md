@@ -359,6 +359,7 @@ Up to 8 independent progress bars rendered as dedicated layers behind text. Conf
 - **Style** — Solid, Bordered, Rounded, Metro, Wave, Radial, Radial hollow
 - **Chapter ticks** — Off, Top level, Top 2 levels (book type only)
 - **Thickness** and **margins** with real-time nudge adjustment
+- **Position relative to line text**: keep a top or bottom bar a set distance from the lines of text on that side, instead of a fixed distance from the screen edge. Text grows and shrinks with the screen, so a bar placed just under a header on one device can land inside the text, or out on the page, on another; this keeps it with the text. **Adjust margins** then sets that distance, and negative values move the bar in towards the text
 
 Progress on EPUB documents updates smoothly per screen turn using pixel-level position tracking. Chapter tick marks vary in thickness by TOC depth.
 

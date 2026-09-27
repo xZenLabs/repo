@@ -1,3 +1,9 @@
+# v5.28.0
+
+**New**
+
+- Full-width progress bars can now be placed relative to the lines of text at the top or bottom, instead of at a fixed distance from the edge of the screen. Turn on *Position relative to line text* in a bar's settings and it keeps its place beside the text, even on a screen where the text comes out bigger or smaller. The new *Inverted header* preset in the gallery uses it to look the same on any device.
+
 # v5.27.0
 
 **New**
@@ -58,15 +64,3 @@ A new elastic gap that pushes everything after it to the far edge of the line, s
 **If you use Bookshelf too**
 
 Bookshelf can now show its status line across the top of the reader. When it does, your top row and any top-anchored progress bar shift down to make room. The switch is in Bookshelf; there is nothing to set up here.
-
-# v5.23.1
-
-**Fixes the in-app updater**
-
-Installing an update crashed KOReader before it could finish. Bookends unpacked the downloaded file using a KOReader helper that was removed from KOReader itself in mid-2026, so on current versions that call failed and took the reader down with it. It now unpacks using the same library KOReader uses internally.
-
-The download was never the problem, so nothing was left half-installed — the previous version stayed in place and came back on restart.
-
-**If you're on v5.23.0 or earlier you'll need to install this one by hand.** The updater is the thing that was broken, so it can't update itself. Download the zip below, unzip it, and copy the `bookends.koplugin` folder over the existing one in your KOReader `plugins` directory. Updates after this one work normally again.
-
-Everything in [v5.23.0](https://github.com/AndyHazz/bookends.koplugin/releases/tag/v5.23.0) is included — auto preset by file type, the progress-marker fix, the new tokens, and Ukrainian and European Portuguese translations.

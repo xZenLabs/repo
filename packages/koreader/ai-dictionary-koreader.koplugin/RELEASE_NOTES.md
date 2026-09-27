@@ -1,3 +1,8 @@
+# v3.1
+
+- Added navigation buttons to recursive lookups
+- Can now use AI lookups using KOReader's long-press on text gesture.
+
 # v3.0
 
 - Added recursive lookups to AI Explain.
@@ -21,10 +26,3 @@
 - Added support for giving the output in languages other than English
 - When helpful, the plugin now shows an image alongside text
 - Bugfixes
-
-# v2.5
-
-- Switched to a new UI where the dictionary is placed next to the selected word
-- Fixed a compatibility issue for Gemini
-- Added the option to disable auto updates
-- Selected text is now kept highlighted as long as the popup window is open
