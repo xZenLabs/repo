@@ -1,3 +1,11 @@
+# v1.4.0
+
+## [1.4.0](https://github.com/pierspad/notebook.koplugin/compare/v1.3.1...v1.4.0) (2026-09-28)
+
+### Features
+
+* add vector SVG notebook export ([0c37b90](https://github.com/pierspad/notebook.koplugin/commit/0c37b90afc88364c2c237ffb41a54871d88e2461))
+
 # v1.3.1
 
 ## [1.3.1](https://github.com/pierspad/notebook.koplugin/compare/v1.3.0...v1.3.1) (2026-09-28)
@@ -67,59 +75,3 @@
 ### Performance Improvements
 
 * fix notebook input backlog and clipped rendering ([4f2484f](https://github.com/pierspad/notebook.koplugin/commit/4f2484f4ff88cec9bae55b678c325070af1c2db0))
-
-# v1.0.0
-
-# Changelog
-
-## v1.0.0
-
-First release.
-
-### Writing
-
-- Pen, highlighter and eraser, with the eraser working either by area or by
-  whole strokes.
-- Hold still at the end of a stroke to snap it to a line, rectangle, circle or
-  triangle.
-- Lasso a part of the page to move, cut, copy, paste or delete it.
-- Undo and redo, and as many pages as you like, each able to take its own
-  background: blank, lined, narrow lined, grid, dot grid or checklist.
-- A hand resting on the glass does not draw. The pen is tracked in its own input
-  slot and touches are ignored while it is down, for a moment longer than the
-  stroke itself, because a hand usually leaves the glass after the nib does.
-
-### The gallery
-
-- Notebooks as thumbnails rather than file names, in folders.
-- Rename, duplicate, move, delete and export, on one notebook or on a selection.
-- Sorting by last edited, least recently edited, or name in either direction,
-  remembered between sessions.
-- Export to PDF, one or many, rendered a notebook per tick so the screen keeps
-  answering.
-- Sidecar directories KOReader writes beside an opened PDF are hidden, and the
-  one belonging to a PDF you delete goes with it.
-
-### Sending
-
-- With [localsend.koplugin](https://github.com/kaikozlov/localsend.koplugin)
-  installed, a Send action appears and hands a notebook — or a whole selection,
-  rendered to PDF on the way out — to a phone over Wi-Fi.
-- Entirely optional and not a dependency: nothing is required, the running
-  plugin is looked up on the UI, and if it is not there the button is never
-  built.
-
-### Not falling over
-
-- Every way the event loop can enter this plugin is behind a pcall and a
-  watchdog. A fault closes the notebook, writes `notebook-error.log` and leaves
-  KOReader running.
-- The watchdog turns the JIT off for the duration of a protected call, because a
-  count hook is not checked inside a compiled trace — which is to say that
-  without it an infinite loop in a handler is a dead device, silently.
-- 203 tests across ten suites, run before every push and before every deploy.
-
-### Installing
-
-Extract `notebook.koplugin-v1.0.0.zip` into your KOReader plugins directory and
-restart. On a Kindle that is `/mnt/us/koreader/plugins/`.

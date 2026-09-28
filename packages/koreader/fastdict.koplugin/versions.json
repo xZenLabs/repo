@@ -1,0 +1,3 @@
+{
+  "releases": [{"tag_name":"v1.0.0","assets":[{"name":"fastdict.koplugin.zip","url":"https://github.com/asxelot/fastdict.koplugin/releases/download/v1.0.0/fastdict.koplugin.zip","size":25066,"digest":"sha256:609bdad12ec4f8235251141a5d8d00d7ddf4d4c4445cf8cd428b9c3531358e69"}],"name":"FastDict v1.0.0"}]
+}
