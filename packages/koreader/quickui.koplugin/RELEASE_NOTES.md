@@ -1,3 +1,13 @@
+# v1.2.1
+
+## 更新说明
+> 元数据编辑模块（封面、标题、作者、系列、分类、语言、出版社、出版时间、简介）
+> 可搭配[simpleui v2.7.1-b](https://github.com/gytwo/simpleui.koplugin/releases/v2.7.1-b)使用
+-  元数据: 添加编辑自定义封面-从设备获取、在线源预览、移除自定义封面
+-  元数据: 添加在线获取元数据来源-微信阅读（打开微信读书skill以获取API key)
+-  元数据: 添加可编辑字段-出版日期
+-  元数据: 完善中文翻译
+
 # v1.2.0
 
 ## 更新说明
@@ -86,13 +96,3 @@
 - Updates: fix occasional crash when checking for updates
 <img width="505" height="680" alt="simpleui主屏幕" src="https://github.com/user-attachments/assets/b720e94e-b711-474d-8d98-16f2c693ab5e" />
 <img width="605" height="633" alt="image" src="https://github.com/user-attachments/assets/cff2a18b-0ff4-49b1-a2c3-ad4ccad6669c" />
-
-# v1.0.5
-
-## What's Changed
-- Fix: prevent layout corruption when rotating screen
-- Added bottombar to history/collections/favorites
-
-## 更新日志
-- 修复旋转屏幕时布局混乱的问题
-- 给历史记录/书单/收藏界面添加底部栏

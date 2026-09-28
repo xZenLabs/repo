@@ -1,3 +1,23 @@
+# 3.0
+
+This release adds support for **Twine** games. This is the most popular category of interactive fiction for the last 10 years: as these are more choice-based games, they are easier to create and to play. Basically they don't need any typing.
+
+This adds over **1000 new games** to the supported game list!
+
+### Adding Twine support
+
+This was a huge project, as Koreader misses a modern web browser, so a custom engine based on *QuickJS* javascript library needed to be created. As some Twine games use custom javascript stuff, some games won't work. Check out the [**games compatibility list**](https://github.com/kbarni/frotz.koplugin/blob/main/twinegames.md) before playing a game.
+
+Normally *twine* games are stylized (as they are HTML files), but this plugin keeps the text-only mode. This also helps the games to adapt to the small e-ink screens.
+
+Most twine games can be downloaded from [IFDB](https://ifdb.org/search?searchfor=tag:twine) as zip files, but others are only available on itch.io (or similar platforms). As this plugin only needs the base HTML file, so you can open the game in a browser, then save the HTML file and transfer it to your reader device.
+
+### Support for SimpleUI and ZenUI
+
+Frots integrates now with these custom launchers: you can add *Frotz* as a homescreen widget (with the list of the last played games) or as a quick action.
+
+Also check out the new [**Beginner's tutorial for IF games**](https://github.com/kbarni/frotz.koplugin/blob/main/TUTORIAL.md)
+
 # 2.3
 
 Frotz 2.3 adds a game browser and downloader using IFDB database.
@@ -33,8 +53,3 @@ The correct binary is now selected automatically, don't need to copy it manually
 Solves issues #3 #4 #6
 
 Before installing, remove the old files from Frotz 1.0
-
-# 1.1
-
-Now with dictionary lookup support
-<img width="392" height="498" alt="Screenshot frotz dict sm" src="https://github.com/user-attachments/assets/957d84e6-4ffd-47f1-802c-4a9794ee9ce8" />

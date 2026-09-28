@@ -1,3 +1,25 @@
+# v7.5.0
+
+### FastDict Engine
+ * **Instant Dictionary** Lookups: Added an in-memory StarDict lookup engine for significantly faster word searches.
+ * Reliable Fallback: Retained full compatibility with the native dictionary engine for missing or advanced queries.
+Improvements on Dictionary Pop-Up
+ * **Dynamic Window Sizing (Shrink-to-Fit)**: The popup automatically shrinks to fit short definitions, getting rid of awkward empty space.
+ * **Reorderable Dictionary Buttons:** Custom order and visibility toggles for all bottom actions directly from settings.
+ * X-Ray Integration: Integrated X-Ray directly into the dictionary action bar (set to the end by default and if not just move it with the chevron wherever you like).
+ 
+### Improvements on Selection Menu
+ * **Custom Action Ordering**: Added full sorting and toggle support for every tool in the text selection toolbar.
+ * Smart "More" Button: Easily move the expansion button (...) to appear either first or last on the bar.
+ * X-Ray in Selection: Enabled sorting and toggling for X-Ray alongside standard selection tools.
+
+### Scrubber Actions & Settings UI
+ * **Reorderable Quick Actions**: Easily rearrange custom launcher actions with up/down arrows or delete them using the trash icon.
+ * Adaptive SVG Chevrons: Replaced plain text arrows with native chevron icons that dynamically hide when an item cannot move further.
+ * Stability & Touch Fixes: Isolated modal menus to eliminate ghost touches and accidental window closures, keeping menus properly layered during transitions.
+
+[page_scrubber.koplugin.zip](https://github.com/user-attachments/files/32747242/page_scrubber.koplugin.zip)
+
 # v7.4.9
 
 ### Stable pages should be more... stable
@@ -64,32 +86,3 @@ Bug Fixes & Improvements
 * **Floating Dictionary:** Removed the redundant horizontal divider separating the dictionary title from the definition text for a cleaner, unified reading layout. Action and plugin buttons retain their bottom separators.
 
 [page_scrubber.koplugin.zip](https://github.com/user-attachments/files/32589830/page_scrubber.koplugin.zip)
-
-# v7.3.5
-
-v7.3.5 — Release Notes
-
-### Reading Pop-Ups Disabled by Default
- * Opt-in Behavior: Both Scrubber Dictionary and Scrubber Selection Menu are now disabled by default (default = false). Fresh installations and updates will preserve KOReader's stock dictionary and selection menus without unexpected interface changes.
- * Users who prefer the minimalist floating pop-ups can enable them at any time in Page Scrubber Settings -> Reading Pop-Ups.
-
-### Reorganized Wallpaper Menu
- * Dedicated Submenu: Wallpaper selection has been moved to its own submenu labeled Choose wallpaper using the sparkles.svg icon, keeping the top-level wallpaper menu clean and concise.
- * Folder Guidance: The system path helper has been renamed to Add wallpaper and placed at the bottom of the wallpaper list.
- * Dynamic State: The Book title background setting is automatically disabled and dimmed when no wallpaper is selected (None), preventing inactive configuration states over the stock white background.
- 
-**New** Title Background Style: Translucent
- * Translucent Mode: Added a new Translucent option under Wallpaper -> Book title background.
- * E-ink Optimized (Zero-Allocation): Leveraging Bookshelf's native C blending algorithm (blendRectRGB32 with _roundedSpans), the translucent pill composites smoothly over the wallpaper without allocating intermediate Blitbuffers or introducing UI flicker.
- * The title background setting now includes four options:
-   * With border: White pill with a solid black outline.
-   * No border: Solid white pill without an exterior border.
-   * Translucent: Semi-transparent white pill that allows the underlying wallpaper texture to show through.
-   * Off: Free-floating title text backed by a dense halo.
-
-**Stability** and Memory
- * Instant RAM flushing and clean widget exit when switching wallpapers (including reverting to None) or toggling title pill styling options.
- 
- **Added translations.**
- 
-[page_scrubber.koplugin.zip](https://github.com/user-attachments/files/32577238/page_scrubber.koplugin.zip)
