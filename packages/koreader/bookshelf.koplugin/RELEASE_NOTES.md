@@ -1,3 +1,7 @@
+# v5.2.3
+
+- Fix: A very large PNG ornament no longer crashes KOReader when you open the ornaments browser. Ornaments over 8 megapixels are now left out, with a note in the log; 1000-2000 px on the longest side is plenty (#471).
+
 # v5.2.2
 
 - Fix: With "Return to file browser" as the end of document action, finishing a book goes straight back to bookshelf again instead of flashing KOReader's file browser first (#460).
@@ -59,12 +63,3 @@
 - The wallpaper follows night mode when it's switched by another plugin that doesn't broadcast the change correctly, and switching no longer flashes the old colours first (#426).
 - Bold and italic are kept on wrapped title lines in list view (#379).
 - With "Flash buttons and menu items" on, the page buttons no longer flash a patch of the wallpaper when tapped.
-
-# v5.1.4
-
-- Micro-modules keep their outline after being tapped (#429).
-- "Menu search" works as a start menu item (#438).
-- The reading streak module's "Reading insight" tap opens the reading progress popup. It did nothing at all before.
-- Bookshelf paces itself against an OPDS catalogue that limits requests, rather than emptying the shelf and reporting the server as unreachable (#434).
-- With the status line turned off, the full shelf no longer leaves a gap where it would have been.
-- Recent opens as a list and Genres shows ribbons, for readers who have never changed their shelves.

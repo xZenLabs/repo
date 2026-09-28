@@ -1,3 +1,11 @@
+# 26.9.28-beta
+
+- Updated catalog refresh logic to be more consistent and follow the notification frequency settings
+- Made sure screensaver catalog is updated at the same time
+- Minor performance improvement when removing a screensaver from the collection.
+
+**Full Changelog**: https://github.com/ultimatejimmy/storefront.koplugin/compare/26.9.25.1...26.9.28-beta
+
 # 26.9.22-beta
 
 - Fix notifications settings
@@ -25,10 +33,3 @@
 **Full Changelog**: https://github.com/ultimatejimmy/storefront.koplugin/compare/26.9.15...26.9.15.1-beta
 
 **Full Changelog**: https://github.com/ultimatejimmy/storefront.koplugin/compare/26.9.15...26.9.16-beta
-
-# 26.9.14-beta2
-
-- Major performance improvements with screensavers catalog
-- Refresh screensavers catalog with refresh is triggered 
-
-**Full Changelog**: https://github.com/ultimatejimmy/storefront.koplugin/compare/26.9.14-beta...26.9.14-beta2

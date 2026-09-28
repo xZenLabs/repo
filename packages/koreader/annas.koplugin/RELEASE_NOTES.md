@@ -1,3 +1,14 @@
+# v0.2.2
+
+Fix No results with direct Libgen fallback.
+Adds direct Libgen fallback when Anna is gone.
+
+Since the DDoS guard seems to stay with us for a while the plugin will now directly search Libgen for queries. While the original implementation would look for results from different hosts, most files should be available on Libgen as well.
+
+Note that search filters might not work as well as on Annas.
+
+Also added Czech and Slovak language filters.
+
 # v0.2.0
 
 This update separates the underlying code forked from the ZLibrary KOReader plugin and fixes issues with invalid server response handling:
@@ -32,7 +43,3 @@ This update fixes an issue causing crashes when AA is not responding.
 # v0.1.6
 
 This update fixes issues with the version number in the packaging.
-
-# v0.1.5
-
-This update fixes issues with opening downloaded books. The issue arose after removing curl dependencies in an attempt to support non-curl devices. Guess that's why you implement tests oh well
