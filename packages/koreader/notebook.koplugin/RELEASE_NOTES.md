@@ -1,3 +1,12 @@
+# v1.3.1
+
+## [1.3.1](https://github.com/pierspad/notebook.koplugin/compare/v1.3.0...v1.3.1) (2026-09-28)
+
+### Bug Fixes
+
+* defer zoom cleanup and preserve clipped ink redraws ([835e7fb](https://github.com/pierspad/notebook.koplugin/commit/835e7fb73f3a901796bd8bf96ffeff53fab14101))
+* stabilize zoom refresh and suspend, enable PDF zoom ([9def4e2](https://github.com/pierspad/notebook.koplugin/commit/9def4e243169b19cbcd1d7fff01f57ec982216df))
+
 # v1.3.0
 
 ## [1.3.0](https://github.com/pierspad/notebook.koplugin/compare/v1.2.0...v1.3.0) (2026-09-27)
