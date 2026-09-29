@@ -1,3 +1,13 @@
+# v0.2.0.4
+
+
+- Added first-class KOReader completion feedback synchronization for supported enhanced servers, including half-star ratings and the private completion review Note.
+- Added an explicit per-server **Ratings & Reviews** sharing control that is fail-closed for existing servers and rechecked before queued/retried sends.
+- Added capability-gated progress event timestamps for enhanced servers so delayed progress can be ordered by when the reading position was captured instead of when the request finally reaches the server.
+- Preserved the original progress event time through offline queues, failed online sends, metadata fallback, and manual/automatic retries. Retry now resolves an unknown timestamp capability before delivery, preventing reconnect races from making stale queued progress look newer.
+- Preserved compatibility with ordinary KOSync servers: `event_timestamp` is sent only after explicit capability confirmation, while unsupported servers continue using the standard progress payload.
+- Preserved feedback privacy and backward compatibility: unsupported servers receive no rating/review fields, and ordinary KOSync behavior is unchanged.
+
 # v0.2.0.3
 
 
@@ -83,25 +93,3 @@ Deluxe-Sync 0.2.0.0 is a major roll-up release containing all improvements made 
 - The built-in updater supports a direct upgrade from the public **0.1.2** release to **0.2.0.0**.
 - Deluxe-Sync now uses four-part release versions. The updater accepts both the older three-part format and the new four-part format, including `v`-prefixed GitHub release tags.
 - **Auto-Sync Documents remains OFF by default** unless the user enables it.
-
-# v0.1.2
-
-
-### Added
-
-- Added KOReader gesture/dispatcher actions for Deluxe-Sync Auto-Sync On/Off, Auto-Sync Toggle, Push Progress to All, and Pull Progress from All.
-- Added gesture-safe availability checks and user-facing feedback when syncing is unavailable because the plugin is not ready, preview mode is active, or no sync server is enabled.
-
-### Changed
-
-- Bumped Deluxe-Sync to version 0.1.2.
-- Updated the in-plugin updater to accept both current three-part `x.y.z` versions and future four-part `w.x.y.z` versions, including `v`-prefixed GitHub release tags.
-- Normalized legacy three-part versions as `0.x.y.z` for comparisons so future four-part releases sort predictably.
-- Updated README version synchronization and GitHub release validation to accept both supported version formats.
-- Documented the new KOReader gesture actions and their safe multi-server behavior in the README.
-- Updated the release workflow so the matching changelog section is used as the GitHub release notes.
-
-### Tests
-
-- Added Dispatcher registration regression coverage.
-- Added updater comparison coverage for three-part, four-part, prefixed, mixed-format, and invalid version strings.
