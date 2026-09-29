@@ -1,10 +1,9 @@
 # koreader-user-patch
 
 Patch for KOReader. “Fonts panel” in the bottom panel, under the font‑size section.
-The patch adds a clickable text (a link) called “Show Fonts”, which opens the menu for selecting the fonts installed in your KOReader.
+The patch adds a clickable text (a link) called “"FONT: font name”, which opens the menu for selecting the fonts installed in your KOReader.
 
-Patch update: added multilingual support. The patch should now display text in the language set on your device.
-Patch update: The clickable “Font” text is shown using the name of the font selected by the user, and it’s rendered in that font’s own style.
+Merged the previous patches with user‑selectable options.
+To choose your preferred mode, simply long‑press on “FONT: font name”. A window will appear where you can set your preference, which will remain saved until you change it again.
 
-**2-fonts-menu-alternative.lua**
-Alternative version of the patch, with a fixed‑panel font list.
+By default, it starts with the fixed bottom panel mode.

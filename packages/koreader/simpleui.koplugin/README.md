@@ -48,7 +48,7 @@ A clean, distraction-free UI plugin for KOReader that transforms your reading ex
 
 1. Open the [latest release](https://github.com/doctorhetfield-cmd/simpleui.koplugin/releases/latest) page
 2. Scroll down to **Assets** and click **`simpleui.koplugin.zip`** to download it (ignore *Source code (zip)* and *Source code (tar.gz)*)
-3. Extract the ZIP on your computer. You should get a folder named exactly `simpleui.koplugin`; open it and confirm that `main.lua` and `_meta.lua` are directly inside, not inside another folder
+3. Extract the ZIP on your computer. You should get a folder named exactly `simpleui.koplugin` with `main.lua` and `_meta.lua` directly inside. Some extraction tools add a wrapper folder with the same name (`simpleui.koplugin/simpleui.koplugin`); if that happens, copy the inner folder, the one that holds `main.lua`
 4. Connect your device to your computer and copy the `simpleui.koplugin` folder to the `plugins/` directory of your KOReader installation:
    * Kobo: `/.adds/koreader/plugins`
    * Kindle: `/koreader/plugins`
@@ -56,7 +56,7 @@ A clean, distraction-free UI plugin for KOReader that transforms your reading ex
 5. Restart KOReader — Simple UI enables itself automatically and, on this first launch only, walks you through a short **Welcome Screen** (pick a starter layout, a few quick tips) before landing on your new Home Screen
 6. From there, tap the **Settings** button (gear icon) on the Navigation Bar any time to open the SUI Settings Window and configure the plugin further
 
-> **Tip:** If the plugin does not appear after restarting, check that the folder is named exactly `simpleui.koplugin` and sits directly inside `plugins/`.
+> **Tip:** If the plugin does not appear after restarting, check that the folder is named exactly `simpleui.koplugin`, sits directly inside `plugins/`, and is not nested (`plugins/simpleui.koplugin/simpleui.koplugin`).
 
 > **Tip:** If you skip or close the Welcome Screen, tap the **Home Screen** tab in the Navigation Bar to open your new home screen.
 
@@ -302,12 +302,13 @@ Every file in the pack root must be an `.svg` or `.png`. The filename (without e
 | `sui_action_homescreen.svg` | Home Screen |
 | `sui_action_collections.svg` | Collections |
 | `sui_action_history.svg` | History |
+| `sui_action_recent.svg` | Recent |
 | `sui_action_continue.svg` | Continue Reading |
 | `sui_action_random_document.svg` | Random |
 | `sui_action_favorites.svg` | Favourites |
 | `sui_action_bookmark_browser.svg` | Bookmark Browser |
-| `sui_action_wifi_toggle.svg` | Wi-Fi toggle (On) |
-| `sui_action_wifi_toggle_off.svg` | Wi-Fi toggle (Off) |
+| `sui_action_search_library.svg` | Search |
+| `sui_action_wifi_toggle.svg` | Wi-Fi toggle |
 | `sui_action_frontlight.svg` | Brightness |
 | `sui_action_night_mode.svg` | Night Mode |
 | `sui_action_stats_calendar.svg` | Reading Stats |

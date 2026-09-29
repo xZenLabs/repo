@@ -1,3 +1,16 @@
+# 26.9.29-beta2
+
+- Fix one more translation 
+
+**Full Changelog**: https://github.com/ultimatejimmy/storefront.koplugin/compare/26.9.29-beta...26.9.29-beta2
+
+# 26.9.29-beta
+
+- Add Readerbackdrop as an additional source for screensavers
+- Update some translations #5066 
+
+**Full Changelog**: https://github.com/ultimatejimmy/storefront.koplugin/compare/26.9.28-beta...26.9.29-beta
+
 # 26.9.28-beta
 
 - Updated catalog refresh logic to be more consistent and follow the notification frequency settings
@@ -18,18 +31,3 @@
 - Fix bug with font filtering on installed tab
 
 **Full Changelog**: https://github.com/ultimatejimmy/storefront.koplugin/compare/26.9.16-beta2...26.9.16-beta3
-
-# 26.9.16-beta2
-
-- Reorganize settings menu
-- Add new blueprints feature for exporting and sharing your current setup.  A 6 digit code is all you need to quickly install every plugin, patch, font, screensaver, and copy your storefront settings to another device.  See it in Settings -> Blueprints.  Check out the wiki page for more details: https://github.com/ultimatejimmy/storefront.koplugin/wiki/8.-Blueprints
-
-**Full Changelog**: https://github.com/ultimatejimmy/storefront.koplugin/compare/26.9.15...26.9.16-beta2
-
-# 26.9.16-beta
-
-- Fix bugs: #5061 and #5061
-
-**Full Changelog**: https://github.com/ultimatejimmy/storefront.koplugin/compare/26.9.15...26.9.15.1-beta
-
-**Full Changelog**: https://github.com/ultimatejimmy/storefront.koplugin/compare/26.9.15...26.9.16-beta

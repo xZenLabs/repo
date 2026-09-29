@@ -1,3 +1,16 @@
+# 1.4.0
+
+##### Plugin
+- Prevent title auto-linking from selecting unrelated search results by checking title and author similarity. Wikipedia and WikiReader EPUBs are excluded from linking and syncing.
+- Add Pagebound sync support with email/password login, book linking, status updates, and page/percentage progress sync.
+- Pagebound notes are published to the linked book's forum with a title showing progress and page position.
+- Fixed on-demand Wi-Fi shutting off while provider requests were still running; restored Wi-Fi now stays on until all queued operations finish.
+
+
+---
+
+Full changelog: [CHANGELOG.md](https://github.com/Lyfts/ShelfSync/blob/main/CHANGELOG.md#140)
+
 # 1.3.3
 
 ##### Plugin
@@ -39,13 +52,3 @@ Full changelog: [CHANGELOG.md](https://github.com/Lyfts/ShelfSync/blob/main/CHAN
 ---
 
 Full changelog: [CHANGELOG.md](https://github.com/Lyfts/ShelfSync/blob/main/CHANGELOG.md#130)
-
-# 1.2.1
-
-##### Plugin
-- Add an "Enabled" toggle to each service's menu (StoryGraph, Hardcover, Goodreads), on by default. Turning it off fully pauses that service — no linking, syncing, or other actions — without losing your saved cookie/API token, and turning it back on resumes right where it left off. A service is now also treated as off until you've actually saved a cookie/token for it, instead of quietly trying (and failing) in the background.
-
-
----
-
-Full changelog: [CHANGELOG.md](https://github.com/Lyfts/ShelfSync/blob/main/CHANGELOG.md#121)

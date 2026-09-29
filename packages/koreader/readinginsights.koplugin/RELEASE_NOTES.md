@@ -1,3 +1,11 @@
+# v6.10.5
+
+**Changed**
+
+- Book stats view: The "This book" section now orders its rows based on the progress bar setting.
+  - Progress bar on: reading time row, then the read % row (percent + pages), then the progress bar.
+  - Progress bar off: the read % row moves to the top, above the reading time row.
+
 # v6.10.4
 
 **Changed**
@@ -27,9 +35,3 @@ Switched reading time and read% rows on Book progress view - the progress bar no
 **Changed**
 
 Font picker changed from checkbox to radio button
-
-# v6.10.0
-
-**New**
-
-The font picker now shows how the fonts looks

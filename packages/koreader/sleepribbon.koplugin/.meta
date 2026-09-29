@@ -1,0 +1,23 @@
+# Sleepribbon plugin for KOReader
+# https://github.com/araponga321/sleepribbon.koplugin
+# zenpm:auto-scraped
+id=sleepribbon
+name=Sleepribbon
+version=1.0.0
+description=Minimal, customizable sleep-screen banner plugin for KOReader.
+author=araponga321
+category=theme
+platforms=koreader
+dependencies=
+source=https://github.com/araponga321/sleepribbon.koplugin
+stars=5
+updated_at=2026-09-29T19:50:15Z
+published_at=2026-09-29T03:30:37Z
+readme_url=packages/koreader/sleepribbon.koplugin/README.md
+readme_hash=5fbbe483bdad2e1c5a0f20de119d2376f613817b
+release_notes_url=packages/koreader/sleepribbon.koplugin/RELEASE_NOTES.md
+release_notes_hash=83b9b4392a65e96a77d91a0e49ea8d9d4a3e75d78510552af130f3bbbbc85851
+releases=[{"tag_name":"v1.0.0","assets":[{"name":"SleepRibbon-v1.0.0.zip","url":"https://github.com/araponga321/sleepribbon.koplugin/releases/download/v1.0.0/SleepRibbon-v1.0.0.zip","size":28506,"digest":"sha256:204c7dfa80b1fc5ab5fc71d66ac39c931fde6af090f7a54ab94e68064ee6da51"}],"name":"SleepRibbon v1.0.0"}]
+source_type=release
+source_asset=SleepRibbon-v1.0.0.zip
+size=28506

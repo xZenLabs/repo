@@ -1,3 +1,7 @@
+# v5.29.1
+
+Submitting a preset to the gallery now always asks who to credit and for its description, pre-filled so you can check them. Before, a preset installed from the gallery and then changed could go out under the original author's name without asking.
+
 # v5.29.0
 
 **New**
@@ -32,14 +36,3 @@
 - Calibre columns (`%calibre{...}`) now survive KOReader's wireless Calibre sync, which was wiping them.
 - Calibre columns now also work in large libraries, where they could go missing, and when KOReader's home folder is set with a trailing slash.
 - Whole-number Calibre columns, such as a word count, now print in full rather than as `1.23457e+06`.
-
-# v5.25.0
-
-**Fixes**
-
-- Fixed a crash when turning the top or bottom status bar on while another plugin is hosting the Bookends menu. The settings dialog now opens over the menu instead of replacing it in that case.
-- `%sysused` now reports correctly on older Kindles such as the Paperwhite 3, where it was counting reclaimable disk cache as used memory and sitting close to full. Thanks to @ksaMask123 for tracking this down and fixing it.
-
-**Changes**
-
-- `%sysused` renders as `84M` rather than `84 MiB`, matching `%ram` and the Bookshelf plugin. Lines using it will be a little shorter.

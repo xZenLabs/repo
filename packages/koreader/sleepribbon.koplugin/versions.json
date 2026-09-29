@@ -1,0 +1,3 @@
+{
+  "releases": [{"tag_name":"v1.0.0","assets":[{"name":"SleepRibbon-v1.0.0.zip","url":"https://github.com/araponga321/sleepribbon.koplugin/releases/download/v1.0.0/SleepRibbon-v1.0.0.zip","size":28506,"digest":"sha256:204c7dfa80b1fc5ab5fc71d66ac39c931fde6af090f7a54ab94e68064ee6da51"}],"name":"SleepRibbon v1.0.0"}]
+}

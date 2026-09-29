@@ -6,13 +6,13 @@
 
 A simple, reliable backup, restore, and migration plugin for [KOReader](https://github.com/koreader/koreader). 
 
-Save your reading settings, custom fonts, plugins, sleep screens, and book progress in one tap—or beam your entire setup wirelessly to another e-reader using a quick 6-character code.
+Save your reading settings, custom fonts, icons, plugins, sleep screens, and book progress in one tap—or beam your entire setup wirelessly to another e-reader using a quick 6-character code.
 
 ---
 
 ## Key Highlights
 
-- **Pick What to Save**: Choose exactly what to include in your backup—reading settings, user plugins, custom fonts, screensavers, style tweaks, or reading history.
+- **Pick What to Save**: Choose exactly what to include in your backup—reading settings, custom Profiles, QuickMenus, UI gestures, user plugins, custom fonts, icons, screensavers, style tweaks, or reading history.
 - **Safe Device Switching**: Moving from Kindle to Kobo, or Android to an e-ink reader? The plugin automatically adapts screen and hardware settings so your new device starts up cleanly without display glitches.
 - **Wireless Device Beaming**: Transfer backups directly between e-readers without cables or a computer. Just generate a 6-character code on one device and enter it on the other.
 - **One-Tap Undo Safety Net**: A safety rollback snapshot is automatically created before any restore, so you can revert back anytime if you ever change your mind.
