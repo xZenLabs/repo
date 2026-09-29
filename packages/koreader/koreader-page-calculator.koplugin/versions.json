@@ -1,3 +1,3 @@
 {
-  "releases": []
+  "releases": [{"tag_name":"koreader-plugin","assets":[{"name":"pagecalc2.koplugin.zip","url":"https://github.com/Wolfazzo/KOReader-page-calculator/releases/download/koreader-plugin/pagecalc2.koplugin.zip","size":3322,"digest":"sha256:9a29ab2175aaf26c50dedb1a68374f05d9bbc3fbcd3ff8c2b7bde614b80d437f"}],"name":"Page Number Calculator"}]
 }

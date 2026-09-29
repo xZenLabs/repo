@@ -4,14 +4,14 @@
 id=meguru
 name=Meguru
 version=1.2.0
-description=Meguru — a fast Manga reader for CBZ, with OPDS streaming (Kavita, Suwayomi, Komga)
+description=Meguru - manga reader for .cbz files + OPDS streaming (Komga, Suwayomi, Kavita)
 author=Craftwork2720
 category=media
 platforms=koreader
 dependencies=
 source=https://github.com/Craftwork2720/meguru
 stars=8
-updated_at=2026-09-29T07:59:30Z
+updated_at=2026-09-29T14:48:45Z
 published_at=2026-09-28T22:45:23Z
 readme_url=packages/koreader/meguru.koplugin/README.md
 readme_hash=0e6adc3277f29224edb56a66b6a105d42959c05b

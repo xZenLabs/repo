@@ -1,3 +1,10 @@
+# v1.4.6
+
+## 更新说明
+- 修复坚果云 WebDAV 750 个文件上限导致云端书籍列表获取不完整的问题
+- 长按书籍菜单新增「上传元数据(CL) / 下载元数据(CL)/ 上传书籍(CL)」操作
+- 选择模式 Plus 菜单新增批量「上传元数据(CL) / 下载元数据(CL) / 上传书籍(CL)」操作
+
 # v1.4.5
 
 ## 更新说明
@@ -51,10 +58,3 @@ Thanks to @iav  for contributions to improving the K3 device experience.
 
 - Fix: support all KOReader formats in book validation (including .fb2.zip)
 - Non-touch navigation for the cloud book dialog
-
-# v1.4.1
-
-## What's Changed
-
-- Added changelog.lua to track version history
-- Optimize plugin module loading path and fix naming conflict with other plugins

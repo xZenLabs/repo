@@ -1,3 +1,8 @@
+# v6.10.4
+
+**Changed**
+Switched reading time and read% rows on Book progress view - the progress bar now under te reading %.
+
 # v6.10.3
 
 **Fixed**
@@ -28,7 +33,3 @@ Font picker changed from checkbox to radio button
 **New**
 
 The font picker now shows how the fonts looks
-
-# v6.9.6
-
-More Hungarian translation text fix.
