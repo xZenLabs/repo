@@ -4,6 +4,7 @@
 ![Status](https://img.shields.io/badge/status-active-brightgreen.svg)
 [![liberapay](https://img.shields.io/liberapay/patrons/ultimatejimmy.svg?logo=liberapay)](https://liberapay.com/ultimatejimmy)
 [!["Buy Me A Coffee"](https://img.shields.io/badge/-buy_me_a%C2%A0coffee-gray?logo=buy-me-a-coffee)](https://www.buymeacoffee.com/ultimatejimmy)
+[![ko-fi](https://shields.io/badge/kofi-Support-ff5f5f?logo=ko-fi&style=flat)](https://ko-fi.com/G0J627UAY9)
 
 Discover, install, and update community-created KOReader plugins, user patches, and fonts without leaving your device. 
 
@@ -62,7 +63,7 @@ Detailed guides available on the wiki:
 ## Support me
 
 [liberapay](https://liberapay.com/ultimatejimmy) 
-
+[ko-fi](https://ko-fi.com/G0J627UAY9)
 [Buy me a coffee](https://www.buymeacoffee.com/ultimatejimmy)
 
 

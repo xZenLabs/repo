@@ -1,8 +1,11 @@
 # Device Backup & Restore for KOReader
 
 ![Platform](https://img.shields.io/badge/platform-KOReader-green.svg)
-![License](https://img.shields.io/badge/license-GPL_3.0-yellow.svg)
+![License](https://img.shields.io/badge/license-MIT-yellow.svg)
 ![Status](https://img.shields.io/badge/status-active-brightgreen.svg)
+[![liberapay](https://img.shields.io/liberapay/patrons/ultimatejimmy.svg?logo=liberapay)](https://liberapay.com/ultimatejimmy)
+[!["Buy Me A Coffee"](https://img.shields.io/badge/-buy_me_a%C2%A0coffee-gray?logo=buy-me-a-coffee)](https://www.buymeacoffee.com/ultimatejimmy)
+[![ko-fi](https://shields.io/badge/kofi-Support-ff5f5f?logo=ko-fi&style=flat)](https://ko-fi.com/G0J627UAY9)
 
 A simple, reliable backup, restore, and migration plugin for [KOReader](https://github.com/koreader/koreader). 
 
@@ -33,3 +36,11 @@ For detailed guides and walkthroughs, visit our [Wiki](https://github.com/ultima
 - [7. Beam Wireless Transfer](https://github.com/ultimatejimmy/backup.koplugin/wiki/7.-Beam-Transfer) — Beaming backups between e-readers wirelessly.
 
 
+
+## Support me
+
+[liberapay](https://liberapay.com/ultimatejimmy) 
+
+[ko-fi](https://ko-fi.com/G0J627UAY9)
+
+[Buy me a coffee](https://www.buymeacoffee.com/ultimatejimmy)

@@ -1,3 +1,24 @@
+# v6.11.1
+
+**Changed**
+
+- Moved the chapter bar out of the "This book" section into its own "Chapters" section, placed directly below the "This chapter / Next chapter" row.
+
+- With the skim-style bar selected, the "Chapters" heading is dropped and the skim bar becomes the first element of the "This book" section, right under its header.
+
+# v6.11.0
+
+**New**
+
+Skim bar chapter view
+
+- Added an alternative to the per-chapter bar chart in the Book progress popup. It is a single bar drawn like the one in KOReader's "Skim to" dialog: filled up to the current page, with a separator at every chapter start and the position marker (top and bottom triangles) at the current page.
+- Chapter separators are drawn black or white, whichever contrasts with the color underneath.
+
+- Settings → Advanced settings → Book progress popup → Chapter bar style
+  - Chapter bars: the existing bar chart (default).
+  - Skim bar: the new view.
+
 # v6.10.5
 
 **Changed**
@@ -23,15 +44,3 @@ Switched reading time and read% rows on Book progress view - the progress bar no
   full "page"/"pages" word whenever it fits, same as the regular
   (non-split) pages view, and only abbreviates when the translated
   word is too long for the available space.
-
-# v6.10.2
-
-**Fixed**
-- Book progress popup: the "This chapter / Next chapter" pages view now correctly shows both of the next two chapters' page counts when "Next chapters shown" is set to 2 (Settings > Advanced settings > Book progress popup). Previously it silently showed only one chapter's page count in that view, even though the setting was already combining both chapters correctly in the reading-time view.
-- Added short, single-line page-count abbreviations (e.g. "p.", "o.", "S.", "стор.", "pág.", "页") for all bundled languages so the two-chapter page counts fit side by side without overflowing.
-
-# v6.10.1
-
-**Changed**
-
-Font picker changed from checkbox to radio button
