@@ -1,3 +1,36 @@
+# v1.1.0
+
+SleepRibbon v1.1.0 adds per-book profiles and cover-derived color palettes, while moving the plugin to a more reliable and convenient location directly under KOReader's Settings menu.
+
+### Highlights
+
+- Per-book profiles with Global fallback
+- Per-book message, position, opacity, typography, colors and progress-bar settings
+- 25-color palette generated from the current book cover
+- Cover palette caching and manual refresh
+- Direct message, position and opacity controls inside SleepRibbon
+- SleepRibbon now appears directly under Settings using KOReader's normal plugin menu registration
+- Horizontal padding range now scales with screen width
+- Updated preview behavior and menu organization
+
+### Compatibility
+
+Tested with:
+- KOReader emulator based on v2026.07.2
+- Kindle Colorsoft
+
+### Installation
+
+Download `SleepRibbon-v1.1.0.zip` below, extract the `sleepribbon.koplugin` folder into `koreader/plugins/`, and restart KOReader.
+
+SleepRibbon still requires KOReader's native sleep-screen custom message to be enabled and its container set to **Banner**.
+
+See the README and CHANGELOG for details.
+
+### SHA-256
+
+`09ab6e9f3012512fc7812c4e1c0e0a6f2adc977c0a707acf60fb3d4b429fbed4`
+
 # v1.0.0
 
 Initial public release of SleepRibbon.

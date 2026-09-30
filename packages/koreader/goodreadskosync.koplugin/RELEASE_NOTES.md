@@ -1,22 +1,14 @@
-# v1.18.1
+# v1.26.1
 
+- **Browse Goodreads — crash fix.** If the image cache directory was missing, pruning threw and the whole page failed ("Couldn't load the page"). Pruning is now a safe no-op and image/CSS enrichment can never fail a page. Added a regression test.
+- **Browse Goodreads — better home + messages.** It opens **My Books** (`/review/list`) instead of the anti-bot-challenged root `/`, and shows clearer "sign-in required" / "blocked" messages.
+- **Browse Goodreads is now experimental and dev-channel only** (hidden on stable), labelled "Browse Goodreads (experimental)…".
+- **Reader-style rendering by default** (skips the site's modern CSS, which CRE can't lay out); dev toggle for Site vs Reader style.
 
-"Browse Goodreads" now renders pages properly instead of showing plain text.
+# v1.26.0
 
-- Pages open in KOReader's HTML engine, so headings, paragraphs, lists and links are formatted.
-- Tapping a link shows an **Open in Goodreads reader** option, so you keep browsing in place.
-- A small top bar offers **Back / Reload / Home**.
-- JavaScript-only screens and forms are still not rendered (writes use the plugin's own actions).
-
-# v1.18.0
-
-
-Adds a built-in Goodreads reader, so you can browse Goodreads on the device.
-
-- New **Browse Goodreads…** in the main menu: reads pages with your existing sign-in and shows them as clean text, with the page's links listed so you can keep browsing.
-- Navigation: Back / Forward / Reload / Home / Open URL / Close.
-- Covers the server-rendered parts of Goodreads (home, My Books, book pages, reviews, notes, profile, quotes, recommendations…). JavaScript-only screens and forms are not rendered — writing to Goodreads still happens through the plugin's own actions.
-- Nothing is sent anywhere except goodreads.com.
+- **Selectable update channel.** Settings, and the main-menu version label, now honour an **Update channel** preference: **Stable** (published releases) or **Dev** (prereleases from the dev branch). The default matches the channel the running build was published on; switching channels changes where "check for updates" (and the daily auto-check) fetches from.
+- Both channels are now published: `v1.26.0` (stable) and `v1.26.0-dev` (dev prerelease).
 
 # v1.17.4
 

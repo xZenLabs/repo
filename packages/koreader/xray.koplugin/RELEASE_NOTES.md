@@ -1,3 +1,20 @@
+# 26.9.30.1
+
+## What's Changed
+- Add gpt-6-luna support by @abs3ntdev in https://github.com/ultimatejimmy/xray.koplugin/pull/141
+- ix claude bugs
+- update series logic
+- fix unit converter range logic
+- Fix series bug
+- Fix alias/lookup bug
+- fix overlapping save bug
+
+
+## New Contributors
+* @abs3ntdev made their first contribution in https://github.com/ultimatejimmy/xray.koplugin/pull/141
+
+**Full Changelog**: https://github.com/ultimatejimmy/xray.koplugin/compare/26.9.30...26.9.30.1
+
 # 26.9.17
 
 ## What's New
@@ -37,28 +54,3 @@
 - Fix image jump bug
 
 **Full Changelog**: https://github.com/ultimatejimmy/xray.koplugin/compare/26.9.9...26.9.11
-
-# 26.9.9
-
-### What's New
-- **Image viewer**: Added a dedicated viewer to inspect and browse maps, diagrams, and illustrations directly within X-Ray.
-- **Non-touch device support**: Full navigation support for e-readers without a touch screen using physical buttons and D-pads ([#115](https://github.com/ultimatejimmy/xray.koplugin/issues/115)).
-- Overall UI updates to modernize
-
-### Improvements
-- **Unit converter**: Improved multi-language support to better handle non-English measurements and non-ASCII characters.
-- **Performance & memory**: General optimizations to lower memory overhead and keep UI navigation snappy.
-- Removed duplicate gesture registrations from the menu.
-
-### Bug Fixes
-- Fixed an issue affecting inline lookups.
-- Fixed a crash under certain conditions ([#121](https://github.com/ultimatejimmy/xray.koplugin/issues/121)).
-- Fixed a bug where in-text X-Ray wasn't matching properly in Cyrillic text ([#116](https://github.com/ultimatejimmy/xray.koplugin/issues/116)).
-- Fixed a spoiler leak issue ([#118](https://github.com/ultimatejimmy/xray.koplugin/issues/118)).
-- Fixed bug [#119](https://github.com/ultimatejimmy/xray.koplugin/issues/119).
-* Fix italian translation by @blurryuma in https://github.com/ultimatejimmy/xray.koplugin/pull/123
-
-## New Contributors
-* @blurryuma made their first contribution in https://github.com/ultimatejimmy/xray.koplugin/pull/123
-
-**Full Changelog**: https://github.com/ultimatejimmy/xray.koplugin/compare/26.8.27...26.9.9

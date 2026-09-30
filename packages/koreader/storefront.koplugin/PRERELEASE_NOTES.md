@@ -1,3 +1,10 @@
+# 26.9.30-beta
+
+- Update refresh button location
+- Fix refresh timestamp
+
+**Full Changelog**: https://github.com/ultimatejimmy/storefront.koplugin/compare/26.9.29-beta2...26.9.30-beta
+
 # 26.9.29-beta2
 
 - Fix one more translation 
@@ -25,9 +32,3 @@
 - Add sk translation via @misko903
 
 **Full Changelog**: https://github.com/ultimatejimmy/storefront.koplugin/compare/26.9.16-beta3...26.9.22-beta
-
-# 26.9.16-beta3
-
-- Fix bug with font filtering on installed tab
-
-**Full Changelog**: https://github.com/ultimatejimmy/storefront.koplugin/compare/26.9.16-beta2...26.9.16-beta3
