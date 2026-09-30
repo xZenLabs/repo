@@ -969,7 +969,7 @@ Failures are silent (surfaced only in the X-Ray popup's coverage line and the de
 
 <a id="x-ray-version-ladder"></a>
 
-**X-Ray checkpoints (runs in the background):** from **"Create X-Ray…"** (no X-Ray yet) or the **Extend… / Rebuild…** rows on the X-Ray popup and the browser's ☰ menu, pick how far the X-Ray should cover, then pick **"In checkpoints, now"** to generate a full set of prefix versions of the book's X-Ray in bounded background steps (or **"In checkpoints, as I read (automatic)"** to let [Automatic X-Ray](#x-ray-auto-update) build them as you go). Spacing is roughly one checkpoint every 10% of a normal-length book (adapting to book length: wider on short books so a novella isn't sliced into tiny calls, narrower on very long books so a single version never covers an oversized slice; versions snap to chapter ends when the book has a usable table of contents, so they read as "up to the end of a chapter"). The creation form's **"Checkpoint spacing, categories, depth, type:"** row leads with an **"Every N%…"** button that adjusts it (2.5% to 50%, with the recommended value marked and live checkpoint counts); the pick sticks for that book and can be changed later in Book Settings → X-Ray. After that one dialog, the checkpoints are built in the background one incremental step at a time — the book is read once in total, plus a fixed per-checkpoint overhead, so somewhat more than one full X-Ray run — while you keep reading (the book must stay open; you can cancel anytime and resume later from where it stopped). As you read past a version's position, it is silently swapped in as your live X-Ray, so the X-Ray follows your reading position with zero waiting; all versions stay browsable under **"All versions"**. A checkpoint whose text is only the edition's front matter (an introduction, a biography, a chronology) is skipped, so the first one lands where the work begins; in a book whose front matter you hid with KOReader's hidden flows, checkpoints count only the visible pages, as your reading position does. With [spoiler protection](#spoiler-protection) off for the book, installs go **newest-first** instead: the newest built checkpoint installs right away, and a Book Settings row ("X-Ray updates: Follow my position") restores position-following if you prefer it without protection.
+**X-Ray checkpoints (runs in the background):** from **"Create X-Ray…"** (no X-Ray yet) or the **Extend… / Rebuild…** rows on the X-Ray popup and the browser's ☰ menu, pick how far the X-Ray should cover, then pick **"In checkpoints, now"** to generate a full set of prefix versions of the book's X-Ray in bounded background steps (or **"In checkpoints, as I read (automatic)"** to let [Automatic X-Ray](#x-ray-auto-update) build them as you go). Spacing is roughly one checkpoint every 10% of a normal-length book (adapting to book length: wider on short books so a novella isn't sliced into tiny calls, narrower on very long books so a single version never covers an oversized slice; versions snap to chapter ends when the book has a usable table of contents, so they read as "up to the end of a chapter"). The creation form's **"Checkpoint spacing, categories, depth, type:"** row leads with an **"Every N%…"** button that adjusts it (2.5% to 50%, with the recommended value marked and live checkpoint counts); the pick sticks for that book and can be changed later in Book Settings → X-Ray. After that one dialog, the checkpoints are built in the background one incremental step at a time — the book is read once in total, plus a fixed per-checkpoint overhead, so somewhat more than one full X-Ray run — while you keep reading (the book must stay open; you can cancel anytime and resume later from where it stopped). As you read past a version's position, it is silently swapped in as your live X-Ray, so the X-Ray follows your reading position with zero waiting; all versions stay browsable under **"All versions"**. A new X-Ray's checkpoint the AI finds nothing to build from (often an edition's opening pages: a biography, a chronology) is skipped and the next one reads further, up to three times; in a book whose front matter you hid with KOReader's hidden flows, checkpoints count only the visible pages, as your reading position does. With [spoiler protection](#spoiler-protection) off for the book, installs go **newest-first** instead: the newest built checkpoint installs right away, and a Book Settings row ("X-Ray updates: Follow my position") restores position-following if you prefer it without protection.
 
 Checkpoints serve two purposes, and both are first-class: **spoiler-safe reading** (every position gets an X-Ray that never runs ahead of you), and a **checkpointed full build** — completing a big book's X-Ray in bounded increments instead of one oversized request (a failure keeps the finished versions; resume continues from the highest). If you built them for the second reason and don't want spoiler gating, tap **"Switch to complete version (100%), instant"** in the X-Ray popup: it installs the finished 100% version as your live X-Ray for free (no merging is ever needed — each checkpoint already *contains* everything below it), with a notice that the other checkpoints can be safely deleted (keeping them is fine too; they stay browsable). The switch is not a one-way door: while the checkpoints are kept, **"Switch back to your position (NN%), instant"** re-installs the version at or below where you're reading, and position-tracking (promotion as you read) resumes — both switches are free and reversible. Useful before a re-read, for book clubs, or to give a book spoiler-safe X-Rays for its whole length up front.
 
@@ -981,7 +981,7 @@ Checkpoints serve two purposes, and both are first-class: **spoiler-safe reading
 1. From the X-Ray scope popup, tap **"Generate Section X-Ray…"**
 2. A hierarchical TOC picker shows all chapters/parts, tap the section you want
 3. Optionally rename it (defaults to the TOC entry title, 80-character limit)
-4. The AI analyzes only the text within that page range and produces a complete X-Ray
+4. The AI analyzes only the text within that page range and produces a complete X-Ray, with the book's X-Ray categories, depth and type, as a new X-Ray would (Book Settings → X-Ray, or the defaults in Settings)
 
 **Section ranges:** **"Generate for a section range…"** (same popup group) asks for two TOC picks — the first and last section — and produces ONE Section X-Ray spanning everything between them (e.g. chapters 3–7 as a single artifact). Picks work in either order; the name defaults to "First – Last". One request instead of building each chapter separately and merging.
 
@@ -1112,7 +1112,7 @@ Details on each:
 |---------|----------------|
 | **Highlight** | ELI5, Elaborate, Connect, Fact Check, AI Wiki, Counterpoint, Explain in Context, Translate, Explain, Summarize |
 | **Book** | About, Find Similar, Key Arguments, Counterarguments, Extract Key Insights, Discussion Questions, About Author, Reviews |
-| **Closed Book (file browser)** | About, Find Similar, Analyze Notes, Related Thinkers, About Author, Historical Context, Reviews, Suggest from Library |
+| **Closed Book (file browser)** | About, Find Similar, Analyze Notes, Related Thinkers, About Author, Historical Context, Reviews, Suggest from Library, X-Ray (Simple) |
 | **X-Ray Chat** | Explain, Elaborate, ELI5, Fact Check, Connect |
 | **Library** | Next Read, Discover New, Analyze Library, Challenge My Taste, Compare, Find Common Themes, Analyze Collection, Quick Summaries, Reading Order, Recommend, Analyze Notes |
 | **General** | *(none, use Send button for freeform chat)* |
@@ -2245,9 +2245,9 @@ Each row shows its current value ("Follow global (X)" when unset, or "Follow gro
 | **Checkpoint spacing** | Recommended / every 2.5%–50% | How far apart background [checkpoints](#x-ray-version-ladder) land for this book. |
 | **X-Ray updates** | Newest first / Follow my position | Whether checkpoint installs may run ahead of your position while spoiler protection is off (the per-book hold). |
 | **Marking & lookup** | 9 per-book overrides | Passive marking on/off, density, which entities are marked, tap-to-open, upcoming entities, what an upcoming entity's card shows first, how much of an entry a card shows, matching selections, and how exact hits open (footnote card / popup card / full entry). |
-| **New X-Ray depth** | Follow global / Light / Standard / Deep | How much each entry carries in future creates and rebuilds of this book's X-Ray. Checkpoints and updates keep the depth the X-Ray was started with. |
-| **New X-Ray type** | Follow global / Auto / Fiction / Nonfiction / Academic | Which schema future creates and rebuilds of this book's X-Ray use; Auto lets the AI decide. Updates keep the X-Ray's own type. Picking a type the book's X-Ray does not have offers to rebuild it: the fix for an X-Ray that came out as the wrong type. |
-| **New X-Ray categories** | Follow global / All categories / a narrower pick | Category preset (people/places/ideas/terms/events) for future creates and rebuilds of this book's X-Ray. |
+| **New X-Ray depth** | Follow global / Light / Standard / Deep | How much each entry carries in future creates and rebuilds of this book's X-Ray, and in its section X-Rays. Checkpoints and updates keep the depth the X-Ray was started with. |
+| **New X-Ray type** | Follow global / Auto / Fiction / Nonfiction / Academic | Which schema future creates and rebuilds of this book's X-Ray use, and its section X-Rays; Auto lets the AI decide. Updates keep the X-Ray's own type. Picking a type the book's X-Ray does not have offers to rebuild it: the fix for an X-Ray that came out as the wrong type. |
+| **New X-Ray categories** | Follow global / All categories / a narrower pick | Category preset (people/places/ideas/terms/events) for future creates and rebuilds of this book's X-Ray, and for its section X-Rays. |
 
 **Privacy** (sub-screen): four tri-state overrides of the global sharing toggles — **highlights**, **annotations**, **notebook**, and **text extraction** (Follow global / Allow for this book / Deny for this book). **Deny always wins**, even over trusted providers; Allow satisfies only the global gate (per-action flags still apply); annotations-allow implies highlights-allow, like the globals.
 
@@ -2755,9 +2755,9 @@ Background X-Ray settings keep a book's X-Ray current as you read (the automatio
 - **X-Ray Versions to Keep**: Whenever an update or redo overwrites the X-Ray, the outgoing version is archived — browse, view, or restore them via "All versions" in the X-Ray popup and browser menu. Sets how many are kept per book (the versions covering the least of the book are dropped first, oldest first among equally covering ones; 0 stops archiving new versions). Ladder versions are stored separately and are never trimmed by this.
 - **Connection Buttons per Entry**: How many boxes an entity page may spend on its connections (default 9, range 0-30). Past the cap the last box becomes an "All connections (N)…" overflow row; 0 draws no buttons and lists every connection instead. Repeated links to the same entity are always collapsed.
 - **Chapter Appearances Rows**: Row density for the Chapter Appearances tree — **Compact (20 rows per page)** (default) or **Follow KOReader's ToC settings** (its items-per-page and font size).
-- **Categories for New X-Rays**: Narrow what a new X-Ray tracks by default: everything, or a pick of people / places / ideas / terms / events. Presets: **All categories**, **Characters and story (people, timeline)**, **Reference (everything except the timeline)**, and **Characters only** — the last two much cheaper on long novels. Individual books can pick their own categories in Book Settings → X-Ray.
-- **Depth of New X-Rays**: How much each entry carries by default — **Light** (one line per entry, recurring figures and turning points only, about half the cost), **Standard** (a few sentences per entry, everything the reader meets; the default), or **Deep** (longer entries, every figure and development, richer connections). Applies when an X-Ray is created or rebuilt; checkpoints and updates keep the depth the X-Ray was started with. Individual books can pick their own depth in Book Settings → X-Ray.
-- **Type of New X-Rays**: Which schema a new X-Ray uses: **Auto** (the default; the AI tells fiction from nonfiction), **Fiction** (characters, places, story), **Nonfiction** (people, concepts, argument) or **Academic** (concepts, methods, findings, cited works). Applies when an X-Ray is created or rebuilt; updates keep the X-Ray's own type. Individual books can pick their own type in Book Settings → X-Ray.
+- **Categories for New X-Rays**: Narrow what a new X-Ray (or section X-Ray) tracks by default: everything, or a pick of people / places / ideas / terms / events. Presets: **All categories**, **Characters and story (people, timeline)**, **Reference (everything except the timeline)**, and **Characters only** — the last two much cheaper on long novels. Individual books can pick their own categories in Book Settings → X-Ray.
+- **Depth of New X-Rays**: How much each entry carries by default — **Light** (one line per entry, recurring figures and turning points only, about half the cost), **Standard** (a few sentences per entry, everything the reader meets; the default), or **Deep** (longer entries, every figure and development, richer connections). Applies when an X-Ray or a section X-Ray is created, or an X-Ray rebuilt; checkpoints and updates keep the depth the X-Ray was started with. Individual books can pick their own depth in Book Settings → X-Ray.
+- **Type of New X-Rays**: Which schema a new X-Ray uses: **Auto** (the default; the AI tells fiction from nonfiction), **Fiction** (characters, places, story), **Nonfiction** (people, concepts, argument) or **Academic** (concepts, methods, findings, cited works). Applies when an X-Ray or a section X-Ray is created, or an X-Ray rebuilt; updates keep the X-Ray's own type. Individual books can pick their own type in Book Settings → X-Ray.
 - **Passive marking & lookup**: Discreetly underline words on the page that match an X-Ray entity (default: ON), with sub-settings for tap-to-open, **Upcoming Entities** (recognize entities from the next checkpoint built past your reading position, never a later one — identification only, spoiler-guarded), **Upcoming Entity Cards** (name only, tap to add a one-line description, or the first sentence right away), **Card Shows** (how much of an already-installed entry a card shows: first sentence only, or the full entry), the entity-card landing and its style (footnote panel or floating popup), marking density (every occurrence / once per page / after 10 or 25 unseen pages / once per book), and which families are marked (everything / people / people + places). **Matching selections** opens an exactly-matching entity's entry instead of the dictionary or highlight menu (default: ON). All of these are per-book overridable (Book Settings → X-Ray, or the X-Ray popup's "Marking & lookup…").
 
 #### Recap Reminder
@@ -2978,8 +2978,8 @@ See [Privacy & Data](#privacy--data) for background on what gets sent to AI prov
   - **Allow Text Extraction**: Master toggle for text extraction (off by default). When enabled, actions can extract and send book text to the AI. Used by X-Ray, Recap, Explain in Context, Analyze in Context, AI Book Tools, and actions with text placeholders (`{book_text}`, `{full_document}`, etc.). Enabling shows an informational notice about token costs and a tip about using Hidden Flows to save tokens.
   - **Max Text Characters**: Maximum characters to extract (100,000-10,000,000, default 4,000,000 ~1M tokens). The default covers most books with Gemini's 1M-token context; lower it for smaller models
   - **Max Pages (PDF, DJVU, CBZ…)**: Maximum pages to extract from page-based formats (100-5,000, default 2,000)
-  - **Don't warn about truncated extractions**: When unchecked (default), a blocking warning dialog appears before sending requests where extracted text was truncated to fit the character limit. It shows the coverage percentage so you know how much of the document was included. The warning offers Cancel, Continue Anyway, or Don't warn again
-  - **Don't warn about large extractions**: When unchecked (default), a warning dialog appears before sending requests with over 500K characters (~125K tokens) of extracted text. Most models except Gemini will struggle at this size. The warning offers Cancel, Continue, or Don't warn again
+  - **Don't warn about truncated extractions**: When unchecked (default), a blocking warning dialog appears before sending requests where extracted text was truncated to fit the character limit. It shows the coverage percentage so you know how much of the document was included. The warning offers Cancel or Continue Anyway; this setting is the way to turn it off
+  - **Don't warn about large extractions**: When unchecked (default), a warning dialog appears before sending requests with over 500K characters (~125K tokens) of extracted text. Most models except Gemini will struggle at this size. The warning offers Cancel or Continue; this setting is the way to turn it off
   - **Delete Book Artifacts**: Delete all saved artifacts (X-Ray, X-Ray (Simple), Recap, Summary, Analysis, About, Analyze Notes, Key Arguments, Counterarguments, Discussion Questions, Quiz, Insights, Reading Guide) for the current book (requires book to be open). To delete just one, use the delete button in the artifact viewer instead.
 
 ### Backup & Reset
@@ -3050,7 +3050,7 @@ When KOAssistant detects a new version (automatically on startup, or via a manua
 
 1. Downloads the release zip from GitHub
 2. Extracts it to a staging folder and verifies the new version (checks `_meta.lua`/`main.lua` exist and the version matches)
-3. Preserves your configuration files (`apikeys.lua`, `configuration.lua`, `custom_actions.lua`, and custom `behaviors/`/`domains/` folders)
+3. Preserves your configuration files (`apikeys.lua`, `configuration.lua`, `custom_actions.lua`, `custom_models.lua`, and custom `behaviors/`/`domains/` folders)
 4. Swaps the old plugin folder aside and moves the new version into place (if the swap fails, the previous version is automatically restored)
 5. Restores your configuration files into the new version
 6. Prompts you to restart KOReader
@@ -3069,7 +3069,7 @@ Your settings and data are **not affected** by updates (automatic or manual):
 - **Chat history, notebooks, caches** are all stored in KOReader's settings/sidecar files
 - **Backups, exports, and generated images** are stored outside the plugin folder (in `koassistant_backups/`, `koassistant_exports/`, and `koassistant_images/` under KOReader's data directory)
 
-The auto-updater also preserves the optional configuration files that live inside the plugin folder: `apikeys.lua`, `configuration.lua`, `custom_actions.lua`, and custom `behaviors/`/`domains/` folders.
+The auto-updater also preserves the optional configuration files that live inside the plugin folder: `apikeys.lua`, `configuration.lua`, `custom_actions.lua`, `custom_models.lua`, and custom `behaviors/`/`domains/` folders.
 
 ### Manual Update
 
@@ -3102,6 +3102,7 @@ If you're having problems after an update, a clean install can help. This delete
    - `apikeys.lua` (if you use file-based API keys instead of the Settings menu)
    - `configuration.lua` (if you created one)
    - `custom_actions.lua` (if you created one)
+   - `custom_models.lua` (if you created one)
    - `behaviors/` and `domains/` folders (if you added custom files)
 2. Delete the existing `koassistant.koplugin` folder
 3. Extract the new zip to the plugins directory
@@ -3259,7 +3260,7 @@ Backups are selective: choose what to include:
 |----------|----------------|---------|
 | **Core Settings** | Provider/model, behaviors, domains, temperature, languages, all toggles, custom providers, custom models, action menu customizations, general/library pinned artifacts, book groups, and every book's per-book settings | Always included |
 | **API Keys** | Your API keys (encrypted storage planned for future) | ⚠️ Excluded by default |
-| **Configuration Files** | configuration.lua, custom_actions.lua (and apikeys.lua only if "Include API Keys" is on), if they exist | Included if files exist |
+| **Configuration Files** | configuration.lua, custom_actions.lua, custom_models.lua (and apikeys.lua only if "Include API Keys" is on), if they exist | Included if files exist |
 | **Domains & Behaviors** | Custom domains and behaviors from your folders (`.md`/`.txt` files) | Included |
 | **Chat History** | All saved conversations (book, general, and library chats) | Excluded (can be large) |
 
@@ -3623,8 +3624,8 @@ If you haven't run X-Ray yet, the placeholder renders empty and the action still
 - Default limit: 4,000,000 characters (~1M tokens), configurable up to 10,000,000
 - Default page limit (PDF, DJVU, CBZ, etc.): 2,000 pages, configurable up to 5,000
 - The 4M default handles most books with Gemini's 1M-token context. For smaller models (Claude ~200K tokens, GPT-5.4-mini ~128K tokens), you may want to lower it, or rely on the large extraction warning (see below)
-- **The extraction limit is not the bottleneck, your model's context window is.** If the extracted text exceeds what your model can handle, the API will reject the request. A **large extraction warning** dialog appears before sending requests over 500K characters (~125K tokens), giving you a chance to cancel. You can dismiss it permanently via the dialog or in Settings → Privacy & Data → Text Extraction → Don't warn about large extractions
-- **Truncation warning:** If extracted text exceeds the character limit and gets truncated, a blocking dialog appears before sending, showing the coverage range (e.g., "covers 0%–85% of the document") with Cancel, Continue Anyway, or Don't warn again. The truncation warning fires before the large extraction warning; each is independent and has its own suppress setting. You can also dismiss it permanently in Settings → Privacy & Data → Text Extraction → Don't warn about truncated extractions
+- **The extraction limit is not the bottleneck, your model's context window is.** If the extracted text exceeds what your model can handle, the API will reject the request. A **large extraction warning** dialog appears before sending requests over 500K characters (~125K tokens), giving you a chance to cancel. To turn it off, use Settings → Privacy & Data → Text Extraction → Don't warn about large extractions
+- **Truncation warning:** If extracted text exceeds the character limit and gets truncated, a blocking dialog appears before sending, showing the coverage range (e.g., "covers 0%–85% of the document") with Cancel or Continue Anyway. The truncation warning fires before the large extraction warning; each is independent and has its own suppress setting. To turn it off, use Settings → Privacy & Data → Text Extraction → Don't warn about truncated extractions
 - **Use KOReader's Hidden Flows** to exclude front matter, appendices, endnotes, and other irrelevant content. This reduces token usage and improves AI results without lowering extraction limits. See the [Hidden flows support](#reading-analysis-actions) note above
 - **Two extraction types:** `{book_text_section}` extracts from start to current position (spoiler-safe, used by X-Ray/Recap only), `{full_document_section}` extracts the entire document regardless of position (used by all other text extraction actions)
 
@@ -3713,7 +3714,7 @@ The Reasoning chip in the Quick Settings panel shows the **effective** state for
 | Gemini 3 flash-lite (3.5, 3.1) | Off by default | Off / effort (minimal…high) |
 | Gemini 2.5-flash | Thinks by default | Off / budget (dynamic…max) |
 | OpenAI GPT-6 sol / luna | Reasons by default | Off / effort (low…xhigh) |
-| OpenAI GPT-6 astra | Reasons by default | Effort (low…xhigh); can't be fully disabled |
+| OpenAI GPT-6 astra, GPT-6.1 sol | Reasons by default | Effort (low…xhigh); can't be fully disabled |
 | OpenAI GPT-5.6 family, GPT-5.4 family | Off by default (gated) | Off / effort (low…xhigh) |
 | OpenAI GPT-5.5 | Reasons by default | Effort (low/medium/high); can't be fully disabled |
 | DeepSeek V4 and Flash, Z.AI GLM-4.7 to 5.2, SambaNova DeepSeek-V3.x | Thinks by default | On / Off |
@@ -4005,13 +4006,13 @@ The first model in each provider's list is its default. Current defaults (subjec
 | Provider | Default | Notable alternatives |
 |----------|---------|----------------------|
 | **Anthropic** | `claude-sonnet-5-5` | `claude-opus-5-5` (deep reasoning), `claude-fable-5-1` (most capable, premium price), `claude-sonnet-5` (previous default), `claude-haiku-4-5` (fast), `claude-sonnet-4-6` (1M context) |
-| **OpenAI** | `gpt-5.6-terra` | `gpt-6-sol` (most capable, reasons by default), `gpt-6-luna` (cost-saver), `gpt-6-astra` (frontier, premium price), `gpt-5.6-sol`, `gpt-5.6-luna`, `gpt-5.5` |
+| **OpenAI** | `gpt-5.6-terra` | `gpt-6.1-sol` (most capable, can't turn reasoning off), `gpt-6-sol` (previous sol, reasons by default), `gpt-6-luna` (cost-saver), `gpt-6-astra` (frontier, premium price), `gpt-5.6-sol`, `gpt-5.6-luna`, `gpt-5.5` |
 | **DeepSeek** | `deepseek-flash` | `deepseek-v4-pro` (most capable; both 1M context, thinking on by default). `deepseek-flash` is DeepSeek's new name for the V4 flash model |
 | **Gemini** | `gemini-3.8-flash` | `gemini-3.7-flash`, `gemini-3.1-pro-preview` (paid only), `gemini-3.5-flash-lite` (ultrafast), `gemini-2.5-flash/pro` (older accounts only) |
 | **Groq** | `openai/gpt-oss-120b` | `openai/gpt-oss-20b` (fast), `qwen/qwen3.8-27b` |
 | **Mistral** | `mistral-large-latest` | `mistral-medium-latest`, `mistral-small-latest`, `magistral-medium-latest` (reasoning) |
 | **xAI** | `grok-4.7` | `grok-4.6`, `grok-4.5`, `grok-4.3`, `grok-4.20-0309-reasoning`/`-non-reasoning` |
-| **Perplexity** | `perplexity/sonar` | `openai/gpt-6-luna`, `openai/gpt-6-sol`, `anthropic/claude-sonnet-5-5`, `google/gemini-3.8-flash`, `xai/grok-4.7` |
+| **Perplexity** | `perplexity/sonar` | `openai/gpt-6-luna`, `openai/gpt-6-sol`, `openai/gpt-6.1-sol`, `anthropic/claude-sonnet-5-5`, `google/gemini-3.8-flash`, `xai/grok-4.7` |
 | **Z.AI** | `glm-5.2` | `glm-5.3` (most capable, always thinks), `glm-5.3-flash`, `glm-5.1`, `glm-4.7` (reasoning), `glm-4.7-flash` (free) |
 | **Cohere** | `command-a-plus-05-2026` | `command-a-reasoning-08-2025`, `command-r7b-12-2024` (fast) |
 | **Kimi** | `kimi-k2.6` | `kimi-k3` (most capable), `kimi-k2.6-thinking` (reasoning), `kimi-k2-turbo-preview` (fast) -- these two are China-platform only; the international platform serves `kimi-k2.6` and `kimi-k3` |
@@ -4019,7 +4020,7 @@ The first model in each provider's list is its default. Current defaults (subjec
 | **Doubao** | `doubao-seed-2.0-pro-32k` | `doubao-seed-2.0-pro-256k`, `doubao-seed-2.0-lite` |
 | **Ollama** | `llama4` | `qwen3.5`, `deepseek-v4`, `gemma4`, `mistral`, `phi4`, `tinyllama` |
 
-> **Note:** OpenRouter, Requesty, Together, Fireworks, and SambaNova use provider-prefixed or vendor-specific model IDs (e.g. `anthropic/claude-sonnet-5` on OpenRouter, `deepseek-ai/DeepSeek-V4-Pro` on Together) — see the provider's own catalog for exact strings.
+> **Note:** OpenRouter, Requesty, Together, Fireworks, and SambaNova use provider-prefixed or vendor-specific model IDs (e.g. `anthropic/claude-sonnet-5` on OpenRouter, `deepseek-ai/DeepSeek-V4-Pro-0813` on Together) — see the provider's own catalog for exact strings.
 
 ### Provider Quirks
 

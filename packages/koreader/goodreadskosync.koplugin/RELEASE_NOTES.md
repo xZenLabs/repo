@@ -1,3 +1,23 @@
+# v1.18.1
+
+
+"Browse Goodreads" now renders pages properly instead of showing plain text.
+
+- Pages open in KOReader's HTML engine, so headings, paragraphs, lists and links are formatted.
+- Tapping a link shows an **Open in Goodreads reader** option, so you keep browsing in place.
+- A small top bar offers **Back / Reload / Home**.
+- JavaScript-only screens and forms are still not rendered (writes use the plugin's own actions).
+
+# v1.18.0
+
+
+Adds a built-in Goodreads reader, so you can browse Goodreads on the device.
+
+- New **Browse Goodreads…** in the main menu: reads pages with your existing sign-in and shows them as clean text, with the page's links listed so you can keep browsing.
+- Navigation: Back / Forward / Reload / Home / Open URL / Close.
+- Covers the server-rendered parts of Goodreads (home, My Books, book pages, reviews, notes, profile, quotes, recommendations…). JavaScript-only screens and forms are not rendered — writing to Goodreads still happens through the plugin's own actions.
+- Nothing is sent anywhere except goodreads.com.
+
 # v1.17.4
 
 
@@ -32,33 +52,3 @@ Notifications are much easier to read, and updating is clearer.
 - The Version item now reads "Version: x.y.z · tap to check for updates", and changes to "Update available: x.y.z · tap to update" once a newer release is known.
 - GitHub release pages now show this changelog text (instead of a bare "Full Changelog" line).
 - Fixed: clearing a saved value (e.g. turning off "Remember password") now persists on device.
-
-# v1.17.0
-
-## [1.17.0] - 2026-09-29
-
-Reliability fixes, and your Goodreads password is now saved by default so you don't have to sign in again.
-
-**Sign-in**
-- "Remember password" is now **on by default**. Turn it off in **More → Settings → Remember password** to delete the saved password; it's encrypted when possible and plain text otherwise.
-
-**Fixes**
-- Deleting saved data now actually persists on device — "Forget saved password" (and clearing the selected provider) previously left the value on disk.
-- A sync and a queue flush can no longer run at the same time, so a queued note or progress update can't be posted twice.
-- Queued items that fail during a sync now surface the retry notice too.
-- Note queue keys are guaranteed unique (seeded random + counter), and the retry backoff uses its full schedule before giving up.
-
-# v1.16.0
-
-## [1.16.0] - 2026-09-29
-
-Notes are now saved on the device first and posted one at a time in order, and failed syncs are kept so you can retry them.
-
-**Notes**
-- Adding several notes no longer loses all but the last one: each note gets its own queue slot and they sync in the order you added them (FIFO).
-- Notes are always stored locally first, then posted; offline notes go out automatically when you reconnect.
-
-**Failed syncs**
-- Failed changes are no longer silently removed — they are kept and listed under **More → Waiting to sync**.
-- New **More → Retry failed syncs**, plus a **Retry failed** button in the Waiting to sync dialog.
-- Only one sync flush runs at a time, so a note can't be posted twice.

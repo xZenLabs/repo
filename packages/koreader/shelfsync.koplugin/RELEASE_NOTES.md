@@ -1,3 +1,37 @@
+# 1.4.3
+
+##### Plugin
+- Fix Pagebound progress updates so page-based sync sends the absolute percentage with the current edition page, matching Pagebound's own request format. Keep both values updated when syncing by percentage too.
+
+
+---
+
+Full changelog: [CHANGELOG.md](https://github.com/Lyfts/ShelfSync/blob/main/CHANGELOG.md#143)
+
+# 1.4.2
+
+##### Plugin
+- Fix Fable progress updates failing when **Auto sync by edition pages** is enabled; percentage-based syncing is unaffected.
+
+
+---
+
+Full changelog: [CHANGELOG.md](https://github.com/Lyfts/ShelfSync/blob/main/CHANGELOG.md#142)
+
+# 1.4.1
+
+##### Plugin
+- Refresh Fable and Pagebound account labels immediately after logging in or out.
+- Improve Pagebound login feedback with separate sign-in and token-exchange stages, a longer bounded timeout for Pagebound's token exchange, and clearer transport errors. Explain why automatic tracking is unavailable and label the locally saved account without implying its session was just verified.
+- Fix Hardcover sometimes failing to mark a newly linked book as Currently Reading automatically.
+- Fix Hardcover note syncing.
+- Prevent automatic book-status caching from using a document after it is closed or replaced while Wi-Fi is restoring.
+
+
+---
+
+Full changelog: [CHANGELOG.md](https://github.com/Lyfts/ShelfSync/blob/main/CHANGELOG.md#141)
+
 # 1.4.0
 
 ##### Plugin
@@ -20,35 +54,3 @@ Full changelog: [CHANGELOG.md](https://github.com/Lyfts/ShelfSync/blob/main/CHAN
 ---
 
 Full changelog: [CHANGELOG.md](https://github.com/Lyfts/ShelfSync/blob/main/CHANGELOG.md#133)
-
-# 1.3.2
-
-##### Plugin
-- Add a **ShelfSync: Update progress for all linked books** gesture under KOReader's General actions, which immediately syncs the open book's current progress to every linked provider in sequence and reports each provider's result. Gesture-triggered sync now refreshes an unknown remote reading status first, instead of incorrectly treating it as a status mismatch.
-- Fable now caches the login password on the device, encrypted at rest where possible, so an expired or revoked session can silently re-authenticate without asking for the password again. Logging out clears the cached password as well as the session tokens.
-
-
----
-
-Full changelog: [CHANGELOG.md](https://github.com/Lyfts/ShelfSync/blob/main/CHANGELOG.md#132)
-
-# 1.3.1
-
-##### Plugin
-- Add an "Automatically link by provider identifier" setting, which takes priority over ISBN and title+author matching when auto-linking a book: Goodreads via a `goodreads:<id>` metadata tag, Hardcover via its existing `hardcover:`/`hardcover-edition:` tags, StoryGraph via its existing `storygraph:`/`storygraph-edition:` tags. New auto-link priority order is identifier -> ISBN -> title+author. Fable has no matching identifier scheme yet.
-
-
----
-
-Full changelog: [CHANGELOG.md](https://github.com/Lyfts/ShelfSync/blob/main/CHANGELOG.md#131)
-
-# 1.3.0
-
-##### Plugin
-- Add Fable sync support alongside StoryGraph, Hardcover, and Goodreads (linking, progress/note updates, and background sync), using Fable's official API. Unlike the other services, Fable has a real login API, so the plugin logs in directly with your Fable email and password rather than a cookie/token fetched by hand — see the README's Fable authentication section, including a note for accounts that signed up via Google/Apple.
-- The StoryGraph, Hardcover, Goodreads, and Fable sub-menus are now combined into a single **Providers** sub-menu (previously listed directly under ShelfSync), and **Common settings** is renamed to **Settings**.
-
-
----
-
-Full changelog: [CHANGELOG.md](https://github.com/Lyfts/ShelfSync/blob/main/CHANGELOG.md#130)
