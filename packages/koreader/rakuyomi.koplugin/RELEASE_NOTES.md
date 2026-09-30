@@ -1,3 +1,12 @@
+# v1.42.2
+
+## [1.42.2](https://github.com/tachibana-shin/rakuyomi/compare/v1.42.1...v1.42.2) (2026-09-30)
+
+
+### Bug Fixes
+
+* **source:** reload an Aidoku source when its settings change ([#371](https://github.com/tachibana-shin/rakuyomi/issues/371)) ([856eb06](https://github.com/tachibana-shin/rakuyomi/commit/856eb06fbab89703dbe767846921b920d7a9bb57))
+
 # v1.42.1
 
 ## [1.42.1](https://github.com/tachibana-shin/rakuyomi/compare/v1.42.0...v1.42.1) (2026-09-29)
@@ -40,12 +49,3 @@
 
 * apply cookies.json to wasm image requests ([#338](https://github.com/tachibana-shin/rakuyomi/issues/338)) ([#340](https://github.com/tachibana-shin/rakuyomi/issues/340)) ([2dbcbbc](https://github.com/tachibana-shin/rakuyomi/commit/2dbcbbc78d2f1d0ce9543ac872c23f83cd985c5a))
 * **ui:** reconnect to Wi-Fi before retrying source list fetch ([#334](https://github.com/tachibana-shin/rakuyomi/issues/334)) ([#341](https://github.com/tachibana-shin/rakuyomi/issues/341)) ([ccdeaac](https://github.com/tachibana-shin/rakuyomi/commit/ccdeaac140c7fbfb60ee89a17f99ac9e6a8a53bf))
-
-# v1.41.6
-
-## [1.41.6](https://github.com/tachibana-shin/rakuyomi/compare/v1.41.5...v1.41.6) (2026-09-05)
-
-
-### Bug Fixes
-
-* **html:** flatten nested element lists + MangaPlus blank images ([#336](https://github.com/tachibana-shin/rakuyomi/issues/336)) ([c46b1a8](https://github.com/tachibana-shin/rakuyomi/commit/c46b1a8e3ce3274584c0e8787da1d3b19c464b6a))

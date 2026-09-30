@@ -1,3 +1,35 @@
+# v7.6.0
+
+### What's New
+
+#### Quick Menu Enhancements
+* **Typography Tab**: Added a dedicated Typography tab to the Quick Menu. You can now select your favorite fonts, adjust font size, and fine-tune line spacing on the fly.
+* **Gesture Support**: The Quick Menu can now be assigned to a gesture (via Dispatcher) to open it directly while reading.
+* **Toggleable Quick Menu**: Added a new setting to enable or disable the Quick Menu entirely, keeping things clean for Page Scrubber purists who only want page scrubbing.
+* **Default Starting Tab**: Added an option in settings to choose whether the Quick Menu opens by default on the standard actions tab or the new Typography tab.
+* **Instant Style Switching**: Changing styles and typography options via the Quick Menu now updates almost instantaneously without loading screens.
+
+#### Selection & Highlights Menu
+* **Instant Highlight Style Changes**: Changing highlight styles in the selection/split menu is now seamless—no more loading screens, refreshing almost instantly.
+
+#### Appearance & Settings Polish
+* **Top Bar Separator Line**: Added a new toggle in the Appearance menu to draw an optional separator line beneath the top bar.
+* **Visual Improvements**: Refreshed the settings menu layout and visual styling for a cleaner, more intuitive look.
+
+#### Localization & Languages
+* **New Languages**: Added full translations for Norwegian (`nb`) and Ukrainian (`uk`).
+* **Translation Updates**: Updated all existing translation catalogs (German, Spanish, French, Hindi, Italian, Japanese, Dutch, Polish, Portuguese, Russian, Turkish, and Simplified Chinese) to cover the new menus and settings strings.
+
+---
+
+### Bug Fixes
+
+* **TOC Page Count**: Fixed inaccurate page count calculations when opening the Table of Contents via the Dispatcher.
+* **Dictionary Double Pop-Up**: Fixed a bug where long-pressing a word occasionally triggered the dictionary pop-up twice.
+* **Dictionary Text Bounds**: Fixed font size calculation in the dictionary to ensure "shrink to fit" renders and paints text properly.
+
+[page_scrubber.koplugin.zip](https://github.com/user-attachments/files/32851569/page_scrubber.koplugin.zip)
+
 # v7.5.0
 
 ### FastDict Engine
@@ -77,12 +109,3 @@ Bug Fixes & Improvements
 -Updated existing translations across supported languages.
 
 [page_scrubber.koplugin.zip](https://github.com/user-attachments/files/32639901/page_scrubber.koplugin.zip)
-
-# v7.3.6
-
-### Fixes & Visual Polish (v7.3.2)
-
-* **Display / E-ink:** Fixed full-screen flash on hold release. Switched the gesture release trigger from an unnecessary deep refresh (`partial`) to an instant, smooth refresh (`ui`). Turning pages continuously by holding no longer triggers screen flashes.
-* **Floating Dictionary:** Removed the redundant horizontal divider separating the dictionary title from the definition text for a cleaner, unified reading layout. Action and plugin buttons retain their bottom separators.
-
-[page_scrubber.koplugin.zip](https://github.com/user-attachments/files/32589830/page_scrubber.koplugin.zip)

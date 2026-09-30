@@ -1,3 +1,22 @@
+# v1.17.4
+
+
+Every change is now saved on the device first and posted in the background, and the last long network burst is gone.
+
+- Ratings, shelf changes, and the reading goal are queued locally first and sync in the background — the same way notes already did.
+- "Sync now" with no book open pushes linked books in small batches instead of all at once.
+- Nothing is lost: anything queued goes out on the next pass or when you're back online.
+
+# v1.17.3
+
+
+Fixes a hang that could freeze KOReader when several queued changes — especially notes — tried to sync at once.
+
+**Fixes**
+- Queue flushes are now bounded: only a few changes are sent per pass, and the rest drain shortly after, so a long network burst can't stall the device.
+- Closing a book no longer waits on a large queue; pending changes sync on the next resume, reconnect, or timer tick.
+- No data is lost — anything not sent this pass stays queued and goes out on the next one.
+
 # v1.17.2
 
 
@@ -43,39 +62,3 @@ Notes are now saved on the device first and posted one at a time in order, and f
 - Failed changes are no longer silently removed — they are kept and listed under **More → Waiting to sync**.
 - New **More → Retry failed syncs**, plus a **Retry failed** button in the Waiting to sync dialog.
 - Only one sync flush runs at a time, so a note can't be posted twice.
-
-# v1.15.0
-
-## [1.15.0] - 2026-09-24
-
-A new **Reading** section in the main menu brings your Goodreads Reading Challenge onto the device.
-
-**Reading challenge**
-- Shows your annual goal, how many books you've read, the percentage, how many days are left, and whether you're ahead of or behind schedule.
-
-**Change reading goal**
-- Set or update your annual goal from KOReader, no need to open the website.
-
-**Reading stats**
-- A year-by-year list of how many books you've finished, with a total.
-
-All three are read/one-tap actions and do not change how existing sync, linking, notes, ratings, or shelves work.
-
-# v1.14.0
-
-## [1.14.0] - 2026-09-24
-
-The menu is tidier: the everyday actions stay up front, and the rest moved under **More**. Linking a book by hand is now one consistent flow. And there's a gentle, occasional reminder that you can support the project.
-
-**Menu**
-- Main menu: **Sync now**, **Set status on Goodreads**, **This book**, **Test connection**, **Version** (tap it to check for updates), **More**, and **Support this project** at the bottom.
-- **More** now holds **Account**, **Settings**, **Sync status**, **Waiting to sync**, and **Clear failed syncs**.
-- **Test connection** moved to the main menu; the version entry now checks for updates when tapped.
-
-**Linking a book**
-- "Find on Goodreads" opens a small menu with **Find manually** then **Find automatically**.
-- **Find manually** — and the "Couldn't link this book" screen — open the same prompt for a title, author, ISBN, or Goodreads ID.
-- The separate "Enter ISBN", "Enter Goodreads ID", and "Change linked book" entries were removed since they all did the same thing, and the book-status screen's "Change book" now uses the same prompt.
-
-**Support**
-- After a successful sync, a small, non-intrusive reminder about supporting the project appears at most once every two weeks. Turn it off in **More → Settings → Support reminders**.

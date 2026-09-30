@@ -99,7 +99,21 @@ A per-book overlay for the book you're currently reading:
 Many rows toggle between time/pages or percent/page on tap. Tap the "Pace"
 title to open the **Book progress calendar** — a month grid coloured like a
 heatmap, showing your progress each day plus the start and estimated finish
-dates. Book view only.
+dates. Tap the "This book" title to open the **Book info** popup. Book view
+only.
+
+## 📕 Book info
+
+A small centered popup about the open book: its **cover** on the left (framed,
+with optional rounded corners and a drop shadow) and, beside it, level with the
+top of the cover, the **title**, the **author(s)** (several authors are
+joined with a language-appropriate "and") and the **series** with the book's
+number in it, when the book is part of one.
+
+Open it from *Tools → Reading insights → Show Book info*, from a gesture
+("Reading insights: book info"), or by tapping the "This book" title in the
+Book progress popup (closing it then brings the Book progress popup back).
+Book view only.
 
 ## 😴 Sleep screen
 
@@ -139,9 +153,16 @@ unticked keeps everything, so a later reinstall picks up where you left off.
 - **Colors** — a hex colour (or a touch colour wheel) for every bar, line and
   label the popups draw.
 - **Fonts** — your own font and size for each text role.
-- **Advanced settings** — chart heights, date/time and week-start formats,
-  which sections the insights popup shows, the heatmap range, achievement
-  refresh frequency, and the Book progress calendar's cell content.
+- **Reading insight popup / Book progress popup / Book progress calendar** —
+  one submenu per view: which sections each shows, the heatmap range,
+  achievement refresh frequency, the Book progress popup's position and
+  "This book" style (classic rows or a donut chart), and the calendar's
+  cell content.
+- **Book info** — show or hide the cover, its rounded corners, shadow and
+  border, and the author and series lines. The title / author / series fonts
+  are under *Fonts → Book info* (by default the same as the Book card plugin's).
+- **Advanced settings** — chart heights, long durations as days, and the
+  date/time and week-start formats.
 
 The popups are also registered with `Dispatcher`, so you can assign them to
 gestures under *Settings → Taps and gestures*.
