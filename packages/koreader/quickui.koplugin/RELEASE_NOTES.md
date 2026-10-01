@@ -1,3 +1,17 @@
+# v1.2.2
+
+## 更新内容
+>可搭配[simpleui v2.7.1-b](https://github.com/gytwo/simpleui.koplugin/releases/v2.7.1-b)使用
+
+1. 快捷操作：新增内置动作
+- 切换翻页方向
+- 番茄-拉取段评：需安装[fanqie.koplugin v2.2.1-b](https://github.com/gytwo/fanqie.koplugin/releases)
+- 页面浏览器：需安装[page_scrubber.koplugin](https://github.com/lautaroelkin/page_scrubber.koplugin)
+2. 阅读滑块：新增配置区 —— 可直接在滑块弹窗中应用、创建、删除 KOReader 配置文件
+3. 阅读滑块：新增文档设置区 —— 重置文档设置为默认、保存文档设置为默认
+4. 阅读滑块：样式微调区改为可折叠
+5. 默认设置：修改部分默认设置
+
 # v1.2.1
 
 ## 更新说明
@@ -63,36 +77,3 @@
 <img width="1072" height="1448" alt="Screenshot_三体全集（全三册）_刘慈欣 epub_p582_2026-09-23_215332" src="https://github.com/user-attachments/assets/4dbcedbb-ebea-409c-9ea4-ab8edd8a23ba" />
 <img width="1072" height="1448" alt="Screenshot_三体全集（全三册）_刘慈欣 epub_p579_2026-09-23_214042" src="https://github.com/user-attachments/assets/bab93817-3b26-4769-a650-01c5868116ab" />
 <img width="1072" height="1448" alt="Screenshot_三体全集（全三册）_刘慈欣 epub_p582_2026-09-23_215342" src="https://github.com/user-attachments/assets/185d628a-eb76-4c65-92af-46cf9fade10b" />
-
-# v1.0.6
-
-## 更新说明
-- 页眉页脚：修复点击页眉页脚内部子菜单时崩溃的问题
-- 图标选择器：优化搜素逻辑并重构，修复安卓端打开图标选择器时崩溃的问题
-- 图标选择器：添加标签显示/隐藏切换按钮（右上角）
-- 快捷操作编辑框：添加新建/动作池按钮并重排按钮
-- 快捷操作编辑框：添加/移除/排序后立即刷新面板
-- 预设管理：添加“应用预设”至动作池列表（如无预设则回退至默认设置）
-- 底部栏：修复安卓端旋转屏幕后底部栏丢失的问题
-- 底部栏：修复从别的全屏界面进入历史记录/收藏界面时底部栏丢失的问题
-- 底部栏：修复历史记录/收藏界面处理（添加/移动/排序等）按钮时崩溃的问题
-- 底部栏：修复历史记录/收藏界面移除最右侧按钮时触摸区域残留的问题
-- 底部栏：优化阅读界面底部栏显示/隐藏体验（阅读时修改设置立即生效，而不是翻页或重新打开书籍才生效）
-- 兼容性：提升对[simpleui](https://github.com/gytwo/simpleui.koplugin/releases)主屏幕的兼容性（详情请查看readme或插件说明）
-- 更新：修复检查更新偶尔崩溃的问题
-## What's Changed
-- Header & Footer: fix crash when tapping an item inside the menu
-- Icon picker: optimize search logic and rework showIconPicker to fix crashes on Android
-- Icon picker: add label toggle (eye / eye-off) to show or hide icon names in the grid
-- Quick Actions editor: add 'New' and 'Action Pool' buttons to action edit dialogs
-- Quick Actions editor: refresh panel and bottom bar immediately after add/remove/reorder
-- Preset management: add 'Apply preset' to 'Action Pool' ( falls back to defaults if none)
-- Bottom bar: fix missing bottom bar after screen rotation on Android
-- Bottom bar: fix missing bottom bar when entering History/Collections from another fullscreen view
-- Bottom bar: fix crash in History/Collections when handling tabs (add/move/sort/etc.)
-- Bottom bar: fix touch zone residue after removing the rightmost tab in History/Collections
-- Bottom bar: improve bottom bar show/hide experience in ReaderUI
-- Compatibility: Improved compatibility with SimpleUI Homescreen (see README or Plugin Info for setup details)
-- Updates: fix occasional crash when checking for updates
-<img width="505" height="680" alt="simpleui主屏幕" src="https://github.com/user-attachments/assets/b720e94e-b711-474d-8d98-16f2c693ab5e" />
-<img width="605" height="633" alt="image" src="https://github.com/user-attachments/assets/cff2a18b-0ff4-49b1-a2c3-ad4ccad6669c" />
