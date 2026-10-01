@@ -10271,10 +10271,10 @@
       "plugin_module_aliases": ["zen_ui"],
       "source_type": "release",
       "stars": "734",
-      "updated_at": "2026-10-01T23:01:23Z",
+      "updated_at": "2026-10-01T23:17:44Z",
       "published_at": "2026-09-15T14:10:09Z",
-      "prerelease_version": "4.0.0-beta2",
-      "prerelease_published_at": "2026-09-30T20:01:16Z",
+      "prerelease_version": "4.0.0-beta3",
+      "prerelease_published_at": "2026-10-01T23:17:31Z",
       "alpha_version": "4.0.0-alpha12",
       "alpha_published_at": "2026-10-01T23:00:56Z",
       "readme_url": "packages/koreader/zen-ui.koplugin/README.md",
@@ -10282,7 +10282,7 @@
       "release_notes_url": "packages/koreader/zen-ui.koplugin/RELEASE_NOTES.md",
       "release_notes_hash": "270808a4254fad331804a6769c3487794b42809ac16b70cfa92f6b88ffe39bc1",
       "prerelease_notes_url": "packages/koreader/zen-ui.koplugin/PRERELEASE_NOTES.md",
-      "prerelease_notes_hash": "162434e7a38f6c2f4fb6c9c70025ded981bbc2337c0f8b9251d36cb530df2b08",
+      "prerelease_notes_hash": "c698cbb6e1268c2bf882151e11e3cedb78a6dbd81c0ff89dbd67297ea1eda308",
       "versions_url": "packages/koreader/zen-ui.koplugin/versions.json",
       "assets": [
         {
