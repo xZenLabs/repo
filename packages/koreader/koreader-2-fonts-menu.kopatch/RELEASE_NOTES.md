@@ -1,5 +1,13 @@
 # koreader-user-patch
 
+LAST UPDATE: 2‑fonts‑menu‑profile  
+Added quick profile selection.
+
+A user pointed out that when changing fonts, you often need to adjust weight, spacing, or contrast, since each font has its own characteristics. For convenience, some users create profiles with different settings for each font.
+Now you can switch profiles directly from the character‑settings screen — allowing you to change a single font or apply a full profile instantly for more refined setups.
+
+Note: The profile tab shows existing profiles. If you create a new one, you’ll need to restart KOReader for it to appear in the quick‑selection list.
+
 Patch for KOReader. “Fonts panel” in the bottom panel, under the font‑size section.
 The patch adds a clickable text (a link) called “"FONT: font name”, which opens the menu for selecting the fonts installed in your KOReader.
 

@@ -1,3 +1,19 @@
+# v1.5.3
+
+## 新功能与改进
+
+- 优化封面书架布局与阅读状态标记，公众号支持封面模式。
+- 优化章节对应界面，清晰区分已获取、待获取和未对应状态。
+- 修复关闭书架后封面资源未释放的问题。
+
+感谢 @IswordSun 的贡献。
+
+## What's Changed
+* feat: 美化书架封面网格并支持公众号封面模式 by @IswordSun in https://github.com/finlater/weread.koplugin/pull/176
+
+
+**Full Changelog**: https://github.com/finlater/weread.koplugin/compare/v1.5.2...v1.5.3
+
 # v1.5.2
 
 ## 新功能与改进
@@ -55,12 +71,3 @@
 - 修复清理想法不彻底，以及重新打开书籍后重复匹配的问题。
 
 **Full Changelog**: https://github.com/finlater/weread.koplugin/compare/v1.4.1...v1.4.2
-
-# v1.4.1
-
-## 新功能与改进
-
-- 修复划线和想法的显示状态及章节匹配问题，兼容本地书与微信读书章节编号不一致的情况。
-- 降低后台预下载和匹配的内存要求，并修复清理书籍缓存后旧划线想法自动恢复的问题。
-
-**Full Changelog**: https://github.com/finlater/weread.koplugin/compare/v1.4.0...v1.4.1

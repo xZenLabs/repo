@@ -1,3 +1,18 @@
+# 26.10.1
+
+## What's new
+- Add Readerbackdrop as an additional source for screensavers, open the filter dialog to change the sources
+- Move refresh button to the top level of settings
+
+## Bug fixes
+- Fix refresh timestamp
+- Update some translations #5066 
+- Updated catalog refresh logic to be more consistent and follow the notification frequency settings
+- Made sure screensaver catalog is updated at the same time
+- Minor performance improvement when removing a screensaver from the collection
+
+**Full Changelog**: https://github.com/ultimatejimmy/storefront.koplugin/compare/26.9.25.1...26.10.1
+
 # 26.9.25.1
 
 - Fix bug with blueprint on Installed tab for some devices
@@ -42,18 +57,3 @@
 * **Restart fix for Kobo devices**: Fixed an issue where tapping the restart button after updates or installs caused a freeze on Kobo hardware.
 
 **Full Changelog**: https://github.com/ultimatejimmy/storefront.koplugin/compare/26.9.3...26.9.9
-
-# 26.9.3
-
-## What's New
-
-- **Non-touch device support**: You can now navigate and use Storefront entirely using physical buttons and page-turn keys.
-- **Less screen flashing**: Reworked e-ink refresh behavior to cut down on unnecessary full-screen flashes while browsing around.
-- **Better performance**: Noticeably snappier overall, especially on older and lower-powered e-readers.
-- **Faster update checks**: The *Check Updates* button is much more responsive and loads faster.
-- **Download reliability**: Fixed issues with downloads failing, including a bug that caused larger files to fail when running *Update All*.
-- **UI fixes for long names**: Cleaned up button layouts so long version numbers no longer overflow or wrap awkwardly, and fixed folder picker issues with long screensaver directory names.
-- **Smoother tab loading**: Cleaned up the loading and refresh behavior when viewing READMEs and the *Versions* tab.
-- **Font tracking**: Improved font tracking/management.
-
-**Full Changelog**: https://github.com/ultimatejimmy/storefront.koplugin/compare/26.8.23...26.9.3

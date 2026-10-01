@@ -5,8 +5,8 @@
 
 1. 快捷操作：新增内置动作
 - 切换翻页方向
-- 番茄-拉取段评：需安装[fanqie.koplugin v2.2.1-b](https://github.com/gytwo/fanqie.koplugin/releases)
-- 页面浏览器：需安装[page_scrubber.koplugin](https://github.com/lautaroelkin/page_scrubber.koplugin)
+- 番茄-拉取段评：可为本地书籍匹配书源段评-需安装[fanqie.koplugin v2.2.1-b](https://github.com/gytwo/fanqie.koplugin/releases)
+- 页面浏览器：类似kindle原生页面缩略图，可快速预览页面、快速跳转下一章-需安装[page_scrubber.koplugin](https://github.com/lautaroelkin/page_scrubber.koplugin)
 2. 阅读滑块：新增配置区 —— 可直接在滑块弹窗中应用、创建、删除 KOReader 配置文件
 3. 阅读滑块：新增文档设置区 —— 重置文档设置为默认、保存文档设置为默认
 4. 阅读滑块：样式微调区改为可折叠

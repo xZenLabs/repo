@@ -1,3 +1,20 @@
+# v1.5.0
+
+## [1.5.0](https://github.com/pierspad/notebook.koplugin/compare/v1.4.0...v1.5.0) (2026-10-01)
+
+### Features
+
+* add stable self-updates and selective page export ([fd68014](https://github.com/pierspad/notebook.koplugin/commit/fd680146afe315045fe208eceb5d3e78cf9b958f))
+* improve notebook page navigation and undo responsiveness ([8a5b418](https://github.com/pierspad/notebook.koplugin/commit/8a5b4180df33c6948f665a6a4d9ee190055a1ce8))
+
+### Bug Fixes
+
+* show plugin version only in gallery header ([38fcfd5](https://github.com/pierspad/notebook.koplugin/commit/38fcfd52213e1f5b60dd2bbe9d107c3b37ef49c8))
+
+### Performance Improvements
+
+* optimize lasso, cached page rendering and XOPP checksums ([c5300cb](https://github.com/pierspad/notebook.koplugin/commit/c5300cbb64092517727026f1288a592042c34325))
+
 # v1.4.0
 
 ## [1.4.0](https://github.com/pierspad/notebook.koplugin/compare/v1.3.1...v1.4.0) (2026-09-28)
@@ -52,26 +69,3 @@
 * preserve PDF geometry in XOPP sharing ([f129d36](https://github.com/pierspad/notebook.koplugin/commit/f129d36885ec77b57a9df9e859586ef97e89afed))
 * remove pen-up stalls and surface XOPP exports ([0296b52](https://github.com/pierspad/notebook.koplugin/commit/0296b52ef725c6e1c0ae20067f08d4aa8ded90fb))
 * restore fast highlighting and compact text input ([16bb062](https://github.com/pierspad/notebook.koplugin/commit/16bb0627407f8682470a47e72e5b95aa74f80308))
-
-# v1.1.0
-
-## [1.1.0](https://github.com/pierspad/notebook.koplugin/compare/v1.0.0...v1.1.0) (2026-09-14)
-
-### Features
-
-* distinguish pen options and place clock beside settings ([97624ca](https://github.com/pierspad/notebook.koplugin/commit/97624ca95feb37443707c3c92285654db624f744))
-* every lasso edit is one entry in the history ([44711f0](https://github.com/pierspad/notebook.koplugin/commit/44711f0a0985c99b90e6cb8191c6182cfd462e18))
-* streamline PDF export and drag selection in gallery ([a83a9b8](https://github.com/pierspad/notebook.koplugin/commit/a83a9b8c56552376747c262db6b8b7217b288c43))
-* the numbers that decide how the pen feels, as values ([42bdd7a](https://github.com/pierspad/notebook.koplugin/commit/42bdd7a9ef3dec1490747af081c8fa19ccc3e496))
-* the tuning panel, built from the tab declaration ([9bc84c2](https://github.com/pierspad/notebook.koplugin/commit/9bc84c216a77ba616f47e4128ac87c539fff5d5a))
-
-### Bug Fixes
-
-* isolate plugin modules and protect pen selections from palm touches ([1eefbfb](https://github.com/pierspad/notebook.koplugin/commit/1eefbfbdd781fa967118a1e36b0516d285592afa))
-* keep a selection's repaints, and its clipboard, to itself ([0ba1187](https://github.com/pierspad/notebook.koplugin/commit/0ba11875a4bd677dd4db6ae8c819f8a963c16f98))
-* use compatible conventional changelog preset ([af75d82](https://github.com/pierspad/notebook.koplugin/commit/af75d82f22ba88a95e30e2aa1b6bfc9933738664))
-* what v1.0.0 got wrong about the device it runs on ([ed4ee13](https://github.com/pierspad/notebook.koplugin/commit/ed4ee13491b5e3b50c1b83ee72d9665906fad654))
-
-### Performance Improvements
-
-* fix notebook input backlog and clipped rendering ([4f2484f](https://github.com/pierspad/notebook.koplugin/commit/4f2484f4ff88cec9bae55b678c325070af1c2db0))

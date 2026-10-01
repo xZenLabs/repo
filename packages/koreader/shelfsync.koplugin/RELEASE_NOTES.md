@@ -1,3 +1,16 @@
+# 1.4.4
+
+##### Plugin
+- Show one gesture sync message listing providers being updated, followed by a combined result summary.
+- Skip inactive providers from the all-provider progress gesture without showing per-provider failure popups.
+- Fix Pagebound transport failures crashing while formatting error responses or being reported as authentication failures.
+- Fix book syncing when Wi-Fi is turned on only when needed by waiting for it to connect before syncing.
+
+
+---
+
+Full changelog: [CHANGELOG.md](https://github.com/Lyfts/ShelfSync/blob/main/CHANGELOG.md#144)
+
 # 1.4.3
 
 ##### Plugin
@@ -44,13 +57,3 @@ Full changelog: [CHANGELOG.md](https://github.com/Lyfts/ShelfSync/blob/main/CHAN
 ---
 
 Full changelog: [CHANGELOG.md](https://github.com/Lyfts/ShelfSync/blob/main/CHANGELOG.md#140)
-
-# 1.3.3
-
-##### Plugin
-- Add StoryGraph email/password login under **Account (Cookies & Tokens) > Log in**, using the mobile app's login flow and saving the returned session cookies without storing your password. Login errors identify whether the page load or submission was blocked, and manual browser-cookie entry remains available as a fallback.
-
-
----
-
-Full changelog: [CHANGELOG.md](https://github.com/Lyfts/ShelfSync/blob/main/CHANGELOG.md#133)

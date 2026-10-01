@@ -1,3 +1,9 @@
+# 26.10.2-beta
+
+- Address memory issues with lower powered devices
+
+**Full Changelog**: https://github.com/ultimatejimmy/storefront.koplugin/compare/26.10.1...26.10.2-beta
+
 # 26.9.30-beta
 
 - Update refresh button location
@@ -25,10 +31,3 @@
 - Minor performance improvement when removing a screensaver from the collection.
 
 **Full Changelog**: https://github.com/ultimatejimmy/storefront.koplugin/compare/26.9.25.1...26.9.28-beta
-
-# 26.9.22-beta
-
-- Fix notifications settings
-- Add sk translation via @misko903
-
-**Full Changelog**: https://github.com/ultimatejimmy/storefront.koplugin/compare/26.9.16-beta3...26.9.22-beta
