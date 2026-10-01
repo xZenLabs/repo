@@ -1,3 +1,3 @@
 {
-  "releases": []
+  "releases": [{"tag_name":"v1.0.0","assets":[{"name":"AnkiFlashcards.koplugin.zip","url":"https://github.com/lgallard/anki-flashcards-koreader/releases/download/v1.0.0/AnkiFlashcards.koplugin.zip","size":51899,"digest":"sha256:a1c53c4dd86df0126e7aaec5c756fc61560d68a1e4b076d47d682cd10ee554d0"}],"name":"v1.0.0"}]
 }

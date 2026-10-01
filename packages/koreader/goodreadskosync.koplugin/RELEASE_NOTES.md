@@ -1,3 +1,7 @@
+# v2.0.0
+
+Release v2.0.0
+
 # v1.26.1
 
 - **Browse Goodreads — crash fix.** If the image cache directory was missing, pruning threw and the whole page failed ("Couldn't load the page"). Pruning is now a safe no-op and image/CSS enrichment can never fail a page. Added a regression test.
@@ -28,19 +32,3 @@ Fixes a hang that could freeze KOReader when several queued changes — especial
 - Queue flushes are now bounded: only a few changes are sent per pass, and the rest drain shortly after, so a long network burst can't stall the device.
 - Closing a book no longer waits on a large queue; pending changes sync on the next resume, reconnect, or timer tick.
 - No data is lost — anything not sent this pass stays queued and goes out on the next one.
-
-# v1.17.2
-
-
-Notifications are much easier to read, and updating is clearer.
-
-**Notifications**
-- Toasts are now wider, fixed-width cards instead of tiny boxes.
-- Book names are shown in **full** (they used to be shortened to the first two words).
-- A small monochrome symbol marks each notification (✓ ★ • …); choose **More → Settings → Toast symbols → Off** for plain text.
-- Important results (a manual sync) now appear as a larger banner with a KOReader icon.
-
-**Updates**
-- The Version item now reads "Version: x.y.z · tap to check for updates", and changes to "Update available: x.y.z · tap to update" once a newer release is known.
-- GitHub release pages now show this changelog text (instead of a bare "Full Changelog" line).
-- Fixed: clearing a saved value (e.g. turning off "Remember password") now persists on device.

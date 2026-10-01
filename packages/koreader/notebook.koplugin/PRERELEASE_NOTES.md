@@ -1,3 +1,11 @@
+# v1.5.0-dev.3
+
+## [1.5.0-dev.3](https://github.com/pierspad/notebook.koplugin/compare/v1.5.0-dev.2...v1.5.0-dev.3) (2026-09-30)
+
+### Performance Improvements
+
+* optimize lasso, cached page rendering and XOPP checksums ([c5300cb](https://github.com/pierspad/notebook.koplugin/commit/c5300cbb64092517727026f1288a592042c34325))
+
 # v1.5.0-dev.2
 
 ## [1.5.0-dev.2](https://github.com/pierspad/notebook.koplugin/compare/v1.5.0-dev.1...v1.5.0-dev.2) (2026-09-29)
@@ -29,11 +37,3 @@
 ### Bug Fixes
 
 * prevent notebook shutdown when changing tool colors ([07c1688](https://github.com/pierspad/notebook.koplugin/commit/07c168822bdb1217247abb055ccf0d001722df96))
-
-# v1.3.0-dev.7
-
-## [1.3.0-dev.7](https://github.com/pierspad/notebook.koplugin/compare/v1.3.0-dev.6...v1.3.0-dev.7) (2026-09-27)
-
-### Features
-
-* organize tool options and add live text sizing ([f99eaea](https://github.com/pierspad/notebook.koplugin/commit/f99eaea4f8800186c5c2c42d5288921ec0a0e609))
