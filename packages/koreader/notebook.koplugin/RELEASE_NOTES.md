@@ -1,3 +1,11 @@
+# v1.6.0
+
+## [1.6.0](https://github.com/pierspad/notebook.koplugin/compare/v1.5.0...v1.6.0) (2026-10-01)
+
+### Features
+
+* improve visual page export, eraser performance and component boundaries ([7b54536](https://github.com/pierspad/notebook.koplugin/commit/7b54536cbf3b6b2b164b6ea3be5f3ba26d42b6f5))
+
 # v1.5.0
 
 ## [1.5.0](https://github.com/pierspad/notebook.koplugin/compare/v1.4.0...v1.5.0) (2026-10-01)
@@ -49,23 +57,3 @@
 * prevent notebook shutdown when changing tool colors ([07c1688](https://github.com/pierspad/notebook.koplugin/commit/07c168822bdb1217247abb055ccf0d001722df96))
 * reveal colored ink sooner and streamline drawing work ([df18cfc](https://github.com/pierspad/notebook.koplugin/commit/df18cfca2ee809e79947d03220a21609ec2b4448))
 * streamline zoom controls and speed up panning ([f92164a](https://github.com/pierspad/notebook.koplugin/commit/f92164a9ea69019cc88c1ba1345496b4eab9ff2f))
-
-# v1.2.0
-
-## [1.2.0](https://github.com/pierspad/notebook.koplugin/compare/v1.1.0...v1.2.0) (2026-09-24)
-
-### Features
-
-* add cancellable PDF export progress ([bf1b4c0](https://github.com/pierspad/notebook.koplugin/commit/bf1b4c05d384af4f4c26fead10976a417a48f057))
-* add editable text, PDF backgrounds and XOPP export ([bd10ca0](https://github.com/pierspad/notebook.koplugin/commit/bd10ca06ab1b526149e7570601fc0efac29a0285))
-* add live styled text editing ([9e311a9](https://github.com/pierspad/notebook.koplugin/commit/9e311a9529f47e679f07df8e6a8a44b284ed641b))
-* improve stylus tools, editable shapes and drawing responsiveness ([002ae5b](https://github.com/pierspad/notebook.koplugin/commit/002ae5b45f6297f57937513b3bfed48254653f19))
-* smooth low-latency highlighter ink ([389dd9f](https://github.com/pierspad/notebook.koplugin/commit/389dd9fed61530438a005cca35d5b0919b3c7b49))
-
-### Bug Fixes
-
-* keep live ink and text state visible ([89d2335](https://github.com/pierspad/notebook.koplugin/commit/89d233532f704572e2fd51bf3e2095c0016f83d6))
-* pre-release ([2709775](https://github.com/pierspad/notebook.koplugin/commit/27097753faea6a8b4fd489eedadcc2241987faa8))
-* preserve PDF geometry in XOPP sharing ([f129d36](https://github.com/pierspad/notebook.koplugin/commit/f129d36885ec77b57a9df9e859586ef97e89afed))
-* remove pen-up stalls and surface XOPP exports ([0296b52](https://github.com/pierspad/notebook.koplugin/commit/0296b52ef725c6e1c0ae20067f08d4aa8ded90fb))
-* restore fast highlighting and compact text input ([16bb062](https://github.com/pierspad/notebook.koplugin/commit/16bb0627407f8682470a47e72e5b95aa74f80308))

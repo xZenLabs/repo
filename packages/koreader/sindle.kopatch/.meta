@@ -1,0 +1,25 @@
+# Sindle patch for KOReader
+# https://github.com/idkrandombuilds/SINdle
+# zenpm:auto-scraped
+id=sindle
+name=Sindle
+version=1.1.0
+description=A hidden, password protected library for your most secret Kindle books. KoReader Patch.
+author=idkrandombuilds
+category=patches
+platforms=koreader
+dependencies=
+source=https://github.com/idkrandombuilds/SINdle
+stars=5
+updated_at=2026-10-01T21:44:23Z
+published_at=2026-10-01T20:32:08Z
+readme_url=packages/koreader/sindle.kopatch/README.md
+readme_hash=2204243f04888eca6e09bca50f9b2c1f1d28df04
+release_notes_url=packages/koreader/sindle.kopatch/RELEASE_NOTES.md
+release_notes_hash=6eda8d85bca7532c4c1ea2ee6bacce9ae74598c5271216308eb7593edd3a7ad6
+releases=[{"tag_name":"v1.1.0","assets":[{"name":"SINdle-v1.1.zip","url":"https://github.com/idkrandombuilds/SINdle/releases/download/v1.1.0/SINdle-v1.1.zip","size":160912,"digest":"sha256:d5cebf07c749411281d9844dd9b031a6de3f3c2b91e64ac16a46b2ceb5659620"}],"name":"SINdle v1.1"},{"tag_name":"v1.0.0","assets":[{"name":"SINdle-v1.0.zip","url":"https://github.com/idkrandombuilds/SINdle/releases/download/v1.0.0/SINdle-v1.0.zip","size":142448,"digest":"sha256:0b2721f50f9c63732c51f595821b6aa61ac07f6c9c6ae8a6721b032fa1db04b1"}],"name":"SINdle v1.0"}]
+source_type=source
+assets.0.arch=any
+assets.0.asset=2-sindle.lua
+assets.0.url=https://raw.githubusercontent.com/idkrandombuilds/SINdle/main/koreader/patches/2-sindle.lua
+assets.0.size=78550

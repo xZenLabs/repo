@@ -1,3 +1,15 @@
+# v2026.10
+
+This update comes with some temporary lock screen bypass options. A new dispatcher action makes it convenient to just bypass the very next lock screen, in case you're the planning type. It can now be assigned in the Gesture Manager. Secondly, a configurable time-based threshold allows to delay locking the device during sleep to bypass the lock on short sleep durations (disabled by default).
+
+Some UI finishing and more goodies are included as well.
+
+A big thank you to our two new contributors: @ghepting and @tecnolgd. Very much appreciated!
+
+We're also closing in fast on 100 ⭐ on GitHub, and the first commit anniversary is due soon 🎉🎉🎉
+
+Enjoy October! 🍂🌠
+
 # v2026.09-1
 
 **Important** If you're on koreader v2026.07, the updater will crash trying to install this update. This hotfix will fix it for future updates. For now, you'll have to install the newest version by hand.
@@ -32,12 +44,3 @@ Minor update with a fix for transparent wallpaper support. Also, I've added an o
 All essential features for myself are complete now, and based on the lack of reported issues, I'd say we reached a stable state. Thus, the update releases will probably continue to slow down 🤞
 
 Enjoy 📚
-
-# v2026.01
-
-A couple of stability and a bunch of user experience improvements.
-
-Notably, a new "Lock" menu item for those who prefer to lock by hand.
-Also, the desktop support has improved a lot: global lock shortcuts `Ctrl+Alt+L` and `Alt+Shift+L`, as well as proper keyboard PIN input on the lock screen.
-
-Have a great 2026, folks 🎇💫
