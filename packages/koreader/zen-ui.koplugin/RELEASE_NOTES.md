@@ -1,3 +1,40 @@
+# v4.0.0 · 2026-10-02
+
+## What's Changed
+
+- Add KOReader menus and document layout controls inside Zen Settings
+- Add Bluetooth device manager for Kindle, Kobo, and PocketBook (hold Bluetooth in Controls or open from Device settings)
+- Add wifi switcher to settings
+- Add unified brightness/warmth slider (Controls > Unified brightness/warmth slider)
+- Add Zen Settings option to be in Controls
+- Add Launcher button to Controls
+- Add Zen keyboard to settings (improved responsiveness and EN layout)
+- Add color pickers for Reader themes and highlights
+- Add Airplane Mode control when the plugin is installed
+- Add plugin actions to Context Menu in the More section (Library > Context menu)
+- Add Archive functionality from default move to Archive plugin (Library > Context Menu)
+- Add swipe to go back gesture in Zen Settings
+- Add Kindle books to Home/Collections
+- Add manual order TBR (TBR Context menu > Sort > Order)
+- Add Zen battery stats to General settings
+- Add Kobo bluetooth control (KLC, Mediatek, Sage, Clara 2E)
+- Add single tap context menu when double tap open is enabled
+- Add more options to Book Switcher - # of books, remove book, hide finished
+- Add option to disable Library wallpaper inversion in dark mode
+- Update a single field of metadata
+- Update metadata editor results
+- Update selection menu and selected styling
+- Restore brightness with + after turning off frontlight
+- Hide empty folders when filtering Library
+- Adjust spacing between home widgets
+- Show page dots in Home Book Strip
+- Show finished badge on books with dimmed covers
+- Option to exclude CBZ/CBR from Reading Goals (Stats > Reading goals)
+- Option to exclude Rakuyomi comics from history/home (Extras > Rakuyomi)
+- Open KOReader + menu outside home in context menu
+- Fix even home widget spacing
+- Bug fixes & performance improvements
+
 # v3.3.1 · 2026-09-15
 
 ## What's Changed
@@ -49,28 +86,3 @@
 
 - Fix: deduplicate multiple similar languages i.e en and en-us
 - Fix: Variable Book strip control width
-
-# v3.2.0 · 2026-08-28
-
-## What's Changed
-
-- Automatically add and remove ZenPM-installed plugins in Launcher
-- Add three-page carousel layout to the page browser
-- Add opacity slider to Library background (Library > Background)
-- Add new icon for bookmark (dogear) in Reader
-- Add font options for TOC and Bookmarks (Reader > Zen page browser)
-- Add custom highlight names (Reader > Highlight / Lookup)
-- Add folder cover image picker (Hold folder > Edit > Set folder cover)
-- Add option to hide the Wi-Fi status icon when Wi-Fi is off (Library > Status bar)
-- Add parent + child per folder view in Authors/Series/Tags/Languages tabs
-- Add ordering for To Be Read books in Navbar/Home Book Strip widget
-- Add more options and ordering to Launcher Book Details
-- Add OPDS already downloaded tracking + dim covers
-- Allow renaming the To Be Read collection
-- Fix restore library location regression
-- Fix finished books reporting 0
-- Fix brightness schedule not applying after first wake on some devices
-- Adjust opening banner border color
-- Ignore cbz and Rakuyomi chapters from books finished stat
-- Add Hungarian translation
-- Bug fixes
