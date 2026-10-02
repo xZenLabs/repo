@@ -1,0 +1,23 @@
+# Solariconpack plugin for KOReader
+# https://github.com/pxlflux/solariconpack.koplugin
+# zenpm:auto-scraped
+id=solariconpack
+name=Solariconpack
+version=1.0.0
+description=Modern, rounded icons for KOReader and SimpleUI, in Colour or Mono. Based on the Solar icon set by 480 Design.
+author=pxlflux
+category=theme
+platforms=koreader
+dependencies=
+source=https://github.com/pxlflux/solariconpack.koplugin
+stars=6
+updated_at=2026-10-02T20:25:18Z
+published_at=2026-10-02T14:29:10Z
+readme_url=packages/koreader/solariconpack.koplugin/README.md
+readme_hash=274f7faf38b98a09951869c614942522cb4d2306
+release_notes_url=packages/koreader/solariconpack.koplugin/RELEASE_NOTES.md
+release_notes_hash=5c3492e0d88aead45d2c336a3a293a384d1dd70191b9265cbe2eb6b7f03c6468
+releases=[{"tag_name":"v1.0.0","assets":[{"name":"solariconpack.koplugin.zip","url":"https://github.com/pxlflux/solariconpack.koplugin/releases/download/v1.0.0/solariconpack.koplugin.zip","size":236388,"digest":"sha256:07099256c33c4e7171d509b65f1cc9938d739a457b6347391d9fc729ca675044"}],"name":"v1.0.0"}]
+source_type=release
+source_asset=solariconpack.koplugin.zip
+size=236388
