@@ -1,4 +1,4 @@
-# v4.0.0-beta3
+# v4.0.0-beta3 · 2026-10-01
 
 ## What's Changed
 
@@ -35,7 +35,7 @@
 - Fix even home widget spacing
 - Bug fixes & performance improvements
 
-# v4.0.0-beta2
+# v4.0.0-beta2 · 2026-09-30
 
 ## What's Changed
 
@@ -72,7 +72,7 @@
 - Fix even home widget spacing
 - Bug fixes & performance improvements
 
-# v4.0.0-beta1
+# v4.0.0-beta1 · 2026-09-29
 
 ## What's Changed
 
@@ -109,7 +109,7 @@
 - Fix even home widget spacing
 - Bug fixes & performance improvements
 
-# v3.4.0-beta2
+# v3.4.0-beta2 · 2026-09-24
 
 ## What's Changed
 
@@ -137,7 +137,7 @@
 - Improve virtual keyboard responsiveness and layouts
 - Bug fixes & performance improvements
 
-# v3.4.0-beta1
+# v3.4.0-beta1 · 2026-09-23
 
 ## What's Changed
 

@@ -1,10 +1,10 @@
-# v3.3.1
+# v3.3.1 · 2026-09-15
 
 ## What's Changed
 
 - Fix TBR applying Library filter hiding all TBR books
 
-# v3.3.0
+# v3.3.0 · 2026-09-14
 
 ## What's Changed
 
@@ -35,7 +35,7 @@
 - Fix final KOSync progress when finishing a book
 - Fix dimmed book covers not showing everywhere
 
-# v3.2.2
+# v3.2.2 · 2026-08-29
 
 ## What's Changed
 
@@ -43,14 +43,14 @@
 - Fix reader highlight crash
 - Fix some icons not rendering
 
-# v3.2.1
+# v3.2.1 · 2026-08-28
 
 ## What's Changed
 
 - Fix: deduplicate multiple similar languages i.e en and en-us
 - Fix: Variable Book strip control width
 
-# v3.2.0
+# v3.2.0 · 2026-08-28
 
 ## What's Changed
 
