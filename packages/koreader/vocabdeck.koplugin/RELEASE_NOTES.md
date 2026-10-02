@@ -1,4 +1,4 @@
-# v1.2.5
+# v1.2.5 · 2026-08-31
 
 - Group dictionary actions in one row.
 - Keep separate dictionary actions as the default.
@@ -10,7 +10,7 @@
 
 SHA-256: `28d7db29d091bcdcdb66c149f2234cc17a5a0f79bbe0f3adcae64ee078122771`
 
-# v1.2.4
+# v1.2.4 · 2026-08-18
 
 ## KOReader compatibility
 
@@ -37,17 +37,17 @@ Users on KOReader 2026.03 do not need this recovery. Existing VocabDeck 1.2.3 in
 
 SHA-256: `584457dff11eabba0ea80030d006ed1e474d9eada8c87a5807d546e3ec33c64c`
 
-# v1.2.2
+# v1.2.2 · 2026-08-18
 
 - Restored **Add to VD**, **VD +AI**, and **Define (VD)** in the dictionary popup on KOReader 2026.07 and newer.
 - Preserved the legacy dictionary-button integration for older KOReader releases.
 
-# v1.2.1
+# v1.2.1 · 2026-06-10
 
 - Improved update flow: concise update prompt, clearer install progress, and restart request after install.
 - Removed the unnecessary post-restart update message.
 
-# v1.2.0
+# v1.2.0 · 2026-06-10
 
 ### 🆕 New Features
 

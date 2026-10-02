@@ -1,4 +1,4 @@
-# v0.2.3
+# v0.2.3 · 2026-08-01
 
 # ❗ KoInsight Github Organization
 
@@ -11,7 +11,7 @@ The KoInsight project now has its own Github Organization - github.com/Ko-Insigh
 
 - Add button to show hidden books when no books are available - #122 by @binarymelon
 
-# v0.2.2
+# v0.2.2 · 2026-01-11
 
 # 🚨 Bugfix
 - Fixes a bug where importing highlights for a book would mark all highlights for all other bugs as deleted 😅 (#87 
@@ -37,7 +37,7 @@ Raw data and book reload are now hidden in an "Advanced" dropdown menu:
 
 <img width="277" height="172" alt="image" src="https://github.com/user-attachments/assets/93838dbc-77d7-45ce-b0ab-7294fa7624d5" />
 
-# v0.2.1
+# v0.2.1 · 2026-01-11
 
 For v0.2 changes, [click here](https://github.com/GeorgeSG/KoInsight/releases/tag/v0.2.0)
 
@@ -46,7 +46,7 @@ This release contains:
 - Various bugfixes
 - Dependency upgrades
 
-# v0.2.0
+# v0.2.0 · 2026-01-11
 
 > [!CAUTION]
 > **Upgrade of KoReader plugin required to sync with v0.2.0 of KoInsight**
@@ -69,7 +69,7 @@ You can now enable "Aggressive Sync" mode, which will attempt to turn on WiFi an
 
 Thank you @tku137! <3
 
-# v0.1.4
+# v0.1.4 · 2025-10-18
 
 # ✨ Improvements
 

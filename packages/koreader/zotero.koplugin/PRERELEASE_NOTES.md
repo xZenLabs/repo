@@ -1,4 +1,4 @@
-# 1.0.0-rc.1
+# 1.0.0-rc.1 · 2024-10-12
 
 **Full Changelog**: https://github.com/stelzch/zotero.koplugin/compare/0.2.1...1.0.0-rc.1
 
@@ -10,7 +10,7 @@
 
 This is a pre-release. Feedback and bug reports are highly appreciated before we can release it as final v1.0.
 
-# 0.2.1
+# 0.2.1 · 2024-10-04
 
 ## Changelog
 * Add dispatcher action for *browse* and *sync*. Allows assigning gestures to these actions. (#7)
@@ -18,7 +18,7 @@ This is a pre-release. Feedback and bug reports are highly appreciated before we
 * Display attachments that do not have a parent item with metadata (#14)
 * Also show EPUBs (#10)
 
-# 0.2
+# 0.2 · 2023-11-03
 
 In this version, support for Zoteros web API is added.
 PDFs are downloaded ad-hoc.

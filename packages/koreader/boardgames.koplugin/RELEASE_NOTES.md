@@ -1,8 +1,8 @@
-# V.1.0.2
+# V.1.0.2 · 2026-08-19
 
 Updated compatibility for newest [KOReader 2026.07.1].
 
-# V.1.0.1
+# V.1.0.1 · 2026-06-18
 
 A small compatibility update for Board Games.
 
@@ -15,7 +15,7 @@ No gameplay, appearance, or feature changes.
 This update is recommended for everyone using v1.0.0.
 Made by KitanaCode.
 
-# V.1.0.0
+# V.1.0.0 · 2026-06-17
 
 Included Games
 

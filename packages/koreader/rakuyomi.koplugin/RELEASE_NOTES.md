@@ -1,4 +1,4 @@
-# v1.42.2
+# v1.42.2 · 2026-09-30
 
 ## [1.42.2](https://github.com/tachibana-shin/rakuyomi/compare/v1.42.1...v1.42.2) (2026-09-30)
 
@@ -7,7 +7,7 @@
 
 * **source:** reload an Aidoku source when its settings change ([#371](https://github.com/tachibana-shin/rakuyomi/issues/371)) ([856eb06](https://github.com/tachibana-shin/rakuyomi/commit/856eb06fbab89703dbe767846921b920d7a9bb57))
 
-# v1.42.1
+# v1.42.1 · 2026-09-29
 
 ## [1.42.1](https://github.com/tachibana-shin/rakuyomi/compare/v1.42.0...v1.42.1) (2026-09-29)
 
@@ -16,7 +16,7 @@
 
 * don't use `_` for space param ([e78e255](https://github.com/tachibana-shin/rakuyomi/commit/e78e255f03cfafadd7ac1037870c26ca0f452457))
 
-# v1.42.0
+# v1.42.0 · 2026-09-23
 
 # [1.42.0](https://github.com/tachibana-shin/rakuyomi/compare/v1.41.8...v1.42.0) (2026-09-23)
 
@@ -31,7 +31,7 @@
 
 * support downloading specific chapters and ranges ([#355](https://github.com/tachibana-shin/rakuyomi/issues/355)) ([3620d55](https://github.com/tachibana-shin/rakuyomi/commit/3620d559e5be2b54b4e593a9bafe3ff3c242fcf6)), closes [#344](https://github.com/tachibana-shin/rakuyomi/issues/344) [#344](https://github.com/tachibana-shin/rakuyomi/issues/344)
 
-# v1.41.8
+# v1.41.8 · 2026-09-08
 
 ## [1.41.8](https://github.com/tachibana-shin/rakuyomi/compare/v1.41.7...v1.41.8) (2026-09-08)
 
@@ -40,7 +40,7 @@
 
 * **aidoku:** sync process_page_image on lazy boot ([#342](https://github.com/tachibana-shin/rakuyomi/issues/342)) ([82087f7](https://github.com/tachibana-shin/rakuyomi/commit/82087f74f42d88ebbb12b3df388df61f7c46874c))
 
-# v1.41.7
+# v1.41.7 · 2026-09-08
 
 ## [1.41.7](https://github.com/tachibana-shin/rakuyomi/compare/v1.41.6...v1.41.7) (2026-09-08)
 

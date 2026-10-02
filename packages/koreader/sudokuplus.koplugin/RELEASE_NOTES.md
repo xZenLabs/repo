@@ -1,4 +1,4 @@
-# v1.1.0
+# v1.1.0 · 2026-08-22
 
 ### Added
 - **Custom Strategy Practice Mode**:
@@ -29,7 +29,7 @@
 - **Difficulty Progression Realignment**:
   - Reclassified **Swordfish** into Master tier alongside X-Wing and Skyscraper for a smoother difficulty curve.
 
-# v1.0.0
+# v1.0.0 · 2026-08-15
 
 
 Initial release of **Sudoku+** (`sudokuplus.koplugin`), a full-featured, logical Sudoku puzzle game and tutor for KOReader.

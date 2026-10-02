@@ -1,4 +1,4 @@
-# v1.0.4
+# v1.0.4 · 2026-09-18
 
 Security fix: a config file could run commands as root
 
@@ -31,18 +31,18 @@ release. That work is still open.
 
 **Full Changelog**: https://github.com/wtb04/wireguard.koplugin/compare/v1.0.3...v1.0.4
 
-# v1.0.3
+# v1.0.3 · 2026-06-07
 
 **Full Changelog**: https://github.com/wtb04/wireguard.koplugin/compare/v1.0.2...v1.0.3
 
-# v1.0.2
+# v1.0.2 · 2026-06-07
 
 **Full Changelog**: https://github.com/wtb04/wireguard.koplugin/compare/v1.0.1...v1.0.2
 
-# v1.0.1
+# v1.0.1 · 2026-06-07
 
 **Full Changelog**: https://github.com/wtb04/wireguard.koplugin/compare/v1.0.0...v1.0.1
 
-# v1.0.0
+# v1.0.0 · 2026-06-07
 
 **Full Changelog**: https://github.com/wtb04/wireguard.koplugin/commits/v1.0.0

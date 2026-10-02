@@ -1,10 +1,10 @@
-# v5.12.3
+# v5.12.3 · 2026-08-01
 
 Mudanças:
 
 * Correções de bugs.
 
-# v5.11.0
+# v5.11.0 · 2026-07-31
 
 Mudanças:
 
@@ -19,7 +19,7 @@ Mudanças:
 * Melhorados divisores, espaçamentos e nomes das posições.
 * Corrigidas traduções e restauração completa.
 
-# v5.9.18
+# v5.9.18 · 2026-07-27
 
 Mudanças:
 
@@ -27,7 +27,7 @@ Adição de icons,
 Reformulação dos menus,
 Correção de bugs.
 
-# v5.5.3
+# v5.5.3 · 2026-07-25
 
 # Changelog — 5.5.3
 
@@ -60,7 +60,7 @@ Correção de bugs.
 * Restaurar agora também apaga Significados Pessoais, mensagens de aviso e configurações relacionadas.
 * Arquivos `.po`, `.mo` e `.pot` atualizados para Português e Chinês.
 
-# v5.1.0
+# v5.1.0 · 2026-07-24
 
 ## [5.1.0] - Layout Adaptativo
 

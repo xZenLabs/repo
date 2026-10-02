@@ -1,4 +1,4 @@
-# v0.11.16
+# v0.11.16 · 2026-06-28
 
 ## Release Highlight
 * Sync: Added WebDAV and Google Drive sync for your books and reading data
@@ -106,7 +106,7 @@
 
 **Full Changelog**: https://github.com/readest/readest/compare/v0.11.12...v0.11.16
 
-# v0.9.39
+# v0.9.39 · 2025-05-06
 
 ## Release Highlight
 * Enhanced Navigation: Added location information to the table of contents

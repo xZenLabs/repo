@@ -1,4 +1,4 @@
-# v0.3.0
+# v0.3.0 · 2026-09-14
 
 First release of **JustDraw**, an **experimental** KOReader plugin for writing and drawing on an e-ink reader with a stylus. It began as a fork of [Finger Ink](https://github.com/SMUsamaShah/fingerink.koplugin).
 

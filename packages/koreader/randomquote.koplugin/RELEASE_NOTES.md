@@ -1,4 +1,4 @@
-# v0.1.0
+# v0.1.0 · 2025-12-17
 
 - Shows a random quote in a lightweight `QuoteWidget` with basic formatting (bold/\[italic\]/alignment).
 - Extracts quoted/highlighted texts from book metadata into the plugin's local library.

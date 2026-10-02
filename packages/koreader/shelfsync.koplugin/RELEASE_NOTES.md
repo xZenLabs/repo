@@ -1,4 +1,4 @@
-# 1.4.4
+# 1.4.4 · 2026-10-01
 
 ##### Plugin
 - Show one gesture sync message listing providers being updated, followed by a combined result summary.
@@ -11,7 +11,7 @@
 
 Full changelog: [CHANGELOG.md](https://github.com/Lyfts/ShelfSync/blob/main/CHANGELOG.md#144)
 
-# 1.4.3
+# 1.4.3 · 2026-09-30
 
 ##### Plugin
 - Fix Pagebound progress updates so page-based sync sends the absolute percentage with the current edition page, matching Pagebound's own request format. Keep both values updated when syncing by percentage too.
@@ -21,7 +21,7 @@ Full changelog: [CHANGELOG.md](https://github.com/Lyfts/ShelfSync/blob/main/CHAN
 
 Full changelog: [CHANGELOG.md](https://github.com/Lyfts/ShelfSync/blob/main/CHANGELOG.md#143)
 
-# 1.4.2
+# 1.4.2 · 2026-09-30
 
 ##### Plugin
 - Fix Fable progress updates failing when **Auto sync by edition pages** is enabled; percentage-based syncing is unaffected.
@@ -31,7 +31,7 @@ Full changelog: [CHANGELOG.md](https://github.com/Lyfts/ShelfSync/blob/main/CHAN
 
 Full changelog: [CHANGELOG.md](https://github.com/Lyfts/ShelfSync/blob/main/CHANGELOG.md#142)
 
-# 1.4.1
+# 1.4.1 · 2026-09-30
 
 ##### Plugin
 - Refresh Fable and Pagebound account labels immediately after logging in or out.
@@ -45,7 +45,7 @@ Full changelog: [CHANGELOG.md](https://github.com/Lyfts/ShelfSync/blob/main/CHAN
 
 Full changelog: [CHANGELOG.md](https://github.com/Lyfts/ShelfSync/blob/main/CHANGELOG.md#141)
 
-# 1.4.0
+# 1.4.0 · 2026-09-29
 
 ##### Plugin
 - Prevent title auto-linking from selecting unrelated search results by checking title and author similarity. Wikipedia and WikiReader EPUBs are excluded from linking and syncing.

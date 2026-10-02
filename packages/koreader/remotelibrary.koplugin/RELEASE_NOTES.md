@@ -1,4 +1,4 @@
-# v0.2.0
+# v0.2.0 · 2026-09-01
 
 Hey folks! 👋 This release focuses on making the `[Refresh Cloud]` workflow smoother, tightens up a proxy-detection edge case, and adds a much beefier test suite behind the scenes. Thanks for using RemoteLibrary!
 

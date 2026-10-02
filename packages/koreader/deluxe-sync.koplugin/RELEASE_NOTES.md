@@ -1,4 +1,4 @@
-# v0.2.0.4
+# v0.2.0.4 · 2026-09-29
 
 
 - Added first-class KOReader completion feedback synchronization for supported enhanced servers, including half-star ratings and the private completion review Note.
@@ -8,7 +8,7 @@
 - Preserved compatibility with ordinary KOSync servers: `event_timestamp` is sent only after explicit capability confirmation, while unsupported servers continue using the standard progress payload.
 - Preserved feedback privacy and backward compatibility: unsupported servers receive no rating/review fields, and ordinary KOSync behavior is unchanged.
 
-# v0.2.0.3
+# v0.2.0.3 · 2026-09-20
 
 
 - Fixed annotation synchronization getting permanently blocked when the client remembered a revision for an annotation the server no longer knew. Deluxe-Sync now repairs that stale state, retries the affected annotation from revision zero, and continues uploading newer highlights, notes, and bookmarks instead of failing the whole batch with HTTP 422.
@@ -17,7 +17,7 @@
 - Preserved the last confirmed enhanced-server capability set across transient capability-request failures, while still clearing capabilities for definitive unsupported responses.
 - Added clearer annotation-sync diagnostic logging for sharing-disabled, capability-unavailable, offline, in-flight, and stale-revision recovery paths.
 
-# v0.2.0.2
+# v0.2.0.2 · 2026-09-16
 
 
 - Added KOReader book series metadata to the existing Book Metadata payload for compatible servers. Deluxe-Sync now sends series and numeric series_index values when KOReader exposes them.
@@ -25,7 +25,7 @@
 - Existing Book Metadata consent, capability checks, retry sanitization, and standard KOSync compatibility remain unchanged; unsupported servers do not receive the new metadata fields.
 - Refreshed the README capability summary to document Vocabulary Builder synchronization and the current per-server data-sharing controls.
 
-# v0.2.0.1
+# v0.2.0.1 · 2026-09-14
 
 
 - Added conservative ASIN extraction from KOReader document metadata. Explicitly labeled `asin`, `mobi-asin`, and Amazon-ASIN forms are normalized to uppercase and included in the existing Book Metadata payload for compatible servers.
@@ -36,7 +36,7 @@
 - Progress pushes now allow a longer asynchronous response window before declaring a compatible server unavailable, preventing slower successful writes from being queued as false failures while keeping the tight synchronous fallback bounded.
 - Manual queued-update retry status now closes before the refreshed queue result is shown, so the retry message no longer remains over the result.
 
-# v0.2.0.0
+# v0.2.0.0 · 2026-09-13
 
 
 Deluxe-Sync 0.2.0.0 is a major roll-up release containing all improvements made since the public 0.1.2 release. Standard KOSync progress syncing remains compatible with ordinary KOSync servers; the additional features below are used only when a server advertises support for them.

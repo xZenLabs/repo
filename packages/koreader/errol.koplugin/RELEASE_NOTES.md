@@ -1,4 +1,4 @@
-# v0.3
+# v0.3 · 2025-12-23
 
 ## Discord Embeds & Architecture Overhaul
 
@@ -20,7 +20,7 @@
 - **Telegram Downloader:** Rewritten to use the new Network helper, improving reliability and error reporting when fetching books.
 - **Performance:** Optimized memory usage by lazy-loading heavy libraries (socket, json, lfs) only when needed.
 
-# v0.2
+# v0.2 · 2025-12-19
 
 ## Archive, Spoilers & Stability
 
@@ -35,7 +35,7 @@
 - **UI Overflow:** Long quotes in preview dialogs are now truncated safely (full text still sent).
 - **Queue Optimization:** Implemented memory caching to reduce disk reads.
 
-# v0.1.1
+# v0.1.1 · 2025-12-19
 
 ## Spoiler Mode
 
@@ -46,7 +46,7 @@
 - **Main Menu UI:** "Mark as Spoiler" toggle has been added to the main menu for quick access.
 - **Context Menu:** New "Errol: Spoiler" button to force-hide a specific highlight without changing global settings.
 
-# v0.1
+# v0.1 · 2025-12-18
 
 ## Initial Release
 

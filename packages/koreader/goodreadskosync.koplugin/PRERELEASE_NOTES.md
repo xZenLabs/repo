@@ -1,16 +1,16 @@
-# v1.26.1-dev
+# v1.26.1-dev · 2026-09-30
 
 - **Browse Goodreads — crash fix.** If the image cache directory was missing, pruning threw and the whole page failed ("Couldn't load the page"). Pruning is now a safe no-op and image/CSS enrichment can never fail a page. Added a regression test.
 - **Browse Goodreads — better home + messages.** It opens **My Books** (`/review/list`) instead of the anti-bot-challenged root `/`, and shows clearer "sign-in required" / "blocked" messages.
 - **Browse Goodreads is now experimental and dev-channel only** (hidden on stable), labelled "Browse Goodreads (experimental)…".
 - **Reader-style rendering by default** (skips the site's modern CSS, which CRE can't lay out); dev toggle for Site vs Reader style.
 
-# v1.26.0-dev
+# v1.26.0-dev · 2026-09-30
 
 - **Selectable update channel.** Settings, and the main-menu version label, now honour an **Update channel** preference: **Stable** (published releases) or **Dev** (prereleases from the dev branch). The default matches the channel the running build was published on; switching channels changes where "check for updates" (and the daily auto-check) fetches from.
 - Both channels are now published: `v1.26.0` (stable) and `v1.26.0-dev` (dev prerelease).
 
-# v1.25.1-dev
+# v1.25.1-dev · 2026-09-30
 
 - Clear the stale `last_sync_error` after a successful sync. It was only ever set on failure, so an old network error lingered in the diagnostics page even after later successful syncs. Now a successful sync clears it (and the diagnostics page treats an empty value as "none").
 
@@ -20,7 +20,7 @@
   `double free or corruption`. This is a **real ARM build/run bug**, not a qemu
   artifact (the earlier note was corrected). Root-cause in progress.
 
-# v1.25.0-dev
+# v1.25.0-dev · 2026-09-30
 
 
 PW3 packaging + helper robustness; QEMU limitation documented.
@@ -42,7 +42,7 @@ PW3 packaging + helper robustness; QEMU limitation documented.
   proxy for PW3 fetch/runtime validation — physical hardware is required.
 - Tests 233 → 240.
 
-# v1.24.0-dev
+# v1.24.0-dev · 2026-09-30
 
 
 Linux KOReader → Browser Host → NetSurf → bitmap integration (end-to-end).

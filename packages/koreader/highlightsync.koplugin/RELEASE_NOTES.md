@@ -1,13 +1,13 @@
-# 0.7.2
+# 0.7.2 · 2026-02-12
 
 Refactor HighlightSync logic for better performance
 
-# 0.7.1
+# 0.7.1 · 2026-02-05
 
 - Update user notifications for clarity during sync and document reload.
 - Ensure 'silent' mode properly don't suppresses UI messages during auto-sync.
 
-# 0.7
+# 0.7 · 2026-02-05
 
 This release introduces automatic synchronization and major stability improvements.
 
@@ -19,7 +19,7 @@ This release introduces automatic synchronization and major stability improvemen
 
 📂 Smart Sidecar Location: The plugin now respects KOReader's global metadata settings, supporting both local and Hash-based storage directories.
 
-# 0.6
+# 0.6 · 2026-02-02
 
 🛠️ Bug Fixes
 Fixed Cross-Device Sync Duplication: Addressed an issue where syncing between devices (e.g., Kindle and Android) caused duplicate highlights due to differing page numbers. The sync logic now uses stable XPath positions as the unique identifier, ensuring highlights are correctly merged regardless of font size or screen layout.
@@ -29,7 +29,7 @@ Resolved Multi-Page PDF Crash: Fixed a crash that occurred when loading highligh
 📦 Update Manager Support
 OTA Updates Integration: The plugin is now compatible with KOReader's native Update Manager. This allows for easier updates directly within the device.
 
-# 0.5
+# 0.5 · 2025-05-14
 
 Previously, the plugin was incorrectly using the settings key from the KOReader "Statistics" plugin (statistics) to store its sync configuration.
 

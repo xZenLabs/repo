@@ -1,4 +1,4 @@
-# 2.2
+# 2.2 · 2026-08-21
 
 ### Enhancement by @jmanoj0905 
 
@@ -7,7 +7,7 @@
 - Reject malformed saved-game data before it can corrupt runtime state
 - Polish the board UI with clearer status text, adaptive tableau spacing, improved card rendering, cleaner empty slots, and a less crowded action bar
 
-# 2.1
+# 2.1 · 2026-03-07
 
 Enhancement by [TomasDiLeo](https://github.com/TomasDiLeo)
 
@@ -16,7 +16,7 @@ Enhancement by [TomasDiLeo](https://github.com/TomasDiLeo)
 - Refine card drawing logic: center the suits correctly, draw a corner suit on partially drawn cards (piles and stock), enhanced pattern rendering.
 - Improve refresh behavior for Eink devices, avoid partial refreshes when unnecessary
 
-# 2.0
+# 2.0 · 2026-03-04
 
 **v2.0**
 
@@ -27,7 +27,7 @@ Enhancement by [TomasDiLeo](https://github.com/TomasDiLeo)
 - Stats & Top buttons: Direct access to statistics and leaderboard from button bar
 - Enhanced win message: Shows time, draw mode, new-best indicators, and win streak
 
-# 1.1.1
+# 1.1.1 · 2025-12-30
 
 # 🐛 Bug Fix
 
@@ -35,7 +35,7 @@ Enhancement by [TomasDiLeo](https://github.com/TomasDiLeo)
 
 **Full Changelog**: https://github.com/Lalocaballero/solitaire.koplugin/compare/v1.1.0...v1.1.1
 
-# 1.1.0
+# 1.1.0 · 2025-12-30
 
 # 🃏 Solitaire v1.1.0 - Undo & Auto-Save
 

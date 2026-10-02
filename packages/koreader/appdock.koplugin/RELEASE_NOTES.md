@@ -1,8 +1,8 @@
-# v6.6.2
+# v6.6.2 · 2026-09-20
 
-# v6.6.0
+# v6.6.0 · 2026-09-20
 
-# v6.5.13
+# v6.5.13 · 2026-09-14
 
 # AppDock 6.5.13
 
@@ -12,7 +12,7 @@ Die fünf DApps werden nicht mehr in AppDock gebündelt. Sie verbleiben ausschli
 
 Der vorherige Bundle-Commit wurde vollständig zurückgenommen.
 
-# v6.5.12
+# v6.5.12 · 2026-09-14
 
 # AppDock 6.5.12
 
@@ -30,7 +30,7 @@ AppDock bündelt jetzt fünf geprüfte, offline-first DApps aus dem Repository `
 
 Die Apps werden beim Start über einen sicheren, pluginrelativen Pfad geladen und nur dann registriert, wenn sie den erwarteten DApp-Vertrag mit `id`, `title` und `buildPane` erfüllen. Bestehende Store-Installationen und gespeicherte DApp-Zustände bleiben kompatibel.
 
-# v6.5.11
+# v6.5.11 · 2026-09-14
 
 # AppDock 6.5.11
 

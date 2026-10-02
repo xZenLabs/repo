@@ -1,4 +1,4 @@
-# v2026.10
+# v2026.10 · 2026-10-01
 
 This update comes with some temporary lock screen bypass options. A new dispatcher action makes it convenient to just bypass the very next lock screen, in case you're the planning type. It can now be assigned in the Gesture Manager. Secondly, a configurable time-based threshold allows to delay locking the device during sleep to bypass the lock on short sleep durations (disabled by default).
 
@@ -10,13 +10,13 @@ We're also closing in fast on 100 ⭐ on GitHub, and the first commit anniversar
 
 Enjoy October! 🍂🌠
 
-# v2026.09-1
+# v2026.09-1 · 2026-09-14
 
 **Important** If you're on koreader v2026.07, the updater will crash trying to install this update. This hotfix will fix it for future updates. For now, you'll have to install the newest version by hand.
 
 Sorry!
 
-# v2026.09
+# v2026.09 · 2026-09-12
 
 New community requested options and features!
 
@@ -28,7 +28,7 @@ For new users, a setup guide is added to ask for consent on github.com requests 
 
 Enjoy! 🍂
 
-# v2026.05
+# v2026.05 · 2026-05-02
 
 Just minor things…
 
@@ -37,7 +37,7 @@ Also, an upcoming "delete plugin settings" hook for KOReader (nightly) is now pr
 
 ⛱️☀️
 
-# v2026.02
+# v2026.02 · 2026-02-08
 
 Minor update with a fix for transparent wallpaper support. Also, I've added an option to disable the button feedback (flash on tap) for a slight input performance gain. This way it doesn't need to be disabled system-wide.
 

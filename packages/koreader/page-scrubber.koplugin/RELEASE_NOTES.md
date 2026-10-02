@@ -1,4 +1,4 @@
-# v7.6.0
+# v7.6.0 · 2026-09-30
 
 ### What's New
 
@@ -30,7 +30,7 @@
 
 [page_scrubber.koplugin.zip](https://github.com/user-attachments/files/32851569/page_scrubber.koplugin.zip)
 
-# v7.5.0
+# v7.5.0 · 2026-09-28
 
 ### FastDict Engine
  * **Instant Dictionary** Lookups: Added an in-memory StarDict lookup engine for significantly faster word searches.
@@ -52,7 +52,7 @@ Improvements on Dictionary Pop-Up
 
 [page_scrubber.koplugin.zip](https://github.com/user-attachments/files/32747242/page_scrubber.koplugin.zip)
 
-# v7.4.9
+# v7.4.9 · 2026-09-27
 
 ### Stable pages should be more... stable
 
@@ -78,7 +78,7 @@ Improvements on Dictionary Pop-Up
 
 [page_scrubber.koplugin.zip](https://github.com/user-attachments/files/32694557/page_scrubber.koplugin.zip)
 
-# v7.4.4
+# v7.4.4 · 2026-09-26
 
 ### **Table of Contents (ToC) Improvements**
  * **Dynamic Chapter Page Count:** Added a book-open-text metric in the footer displaying total pages for the active chapter, with full physical page label (pagemap) support.
@@ -88,7 +88,7 @@ Improvements on Dictionary Pop-Up
 
 [page_scrubber.koplugin.zip](https://github.com/user-attachments/files/32688160/page_scrubber.koplugin.zip)
 
-# v7.4.0
+# v7.4.0 · 2026-09-25
 
 v7.4- What's New
 ### Custom Dictionary Text Sizes: 

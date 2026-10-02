@@ -1,4 +1,4 @@
-# v1.0.1
+# v1.0.1 · 2026-08-18
 
 ## Summary
 This is a crash fix coming from recent versions of muPDF, you'll likely have seen this if you updated KOReader/Rakuyomi recently.
@@ -8,7 +8,7 @@ This is a crash fix coming from recent versions of muPDF, you'll likely have see
 
 **Full Changelog**: https://github.com/mgrimace/stretch.koplugin/compare/v1.0.0...v1.0.1
 
-# v1.0.0
+# v1.0.0 · 2026-06-22
 
 ## Summary
 

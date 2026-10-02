@@ -1,4 +1,4 @@
-# v0.2.0
+# v0.2.0 · 2026-01-09
 
 This release includes the following improvements 
 
@@ -10,7 +10,7 @@ This release includes the following Bug corrections:
 - Evaluation is now working
 - A user can move *only* in his turn
 
-# v0.1.0
+# v0.1.0 · 2026-01-08
 
 ## Kochess — KOReader Chess Plugin (v0.1.0)
 

@@ -1,4 +1,4 @@
-# v2.0.0
+# v2.0.0 · 2026-08-18
 
 # AnnotationSync v2.0.0 🎉
 
@@ -47,7 +47,7 @@ refactor, a hardened end-to-end test suite, and a new translation.
 
 **Full Changelog**: https://github.com/dani84bs/AnnotationSync.koplugin/compare/v1.9.9999...v2.0.0
 
-# v1.9.9999
+# v1.9.9999 · 2026-07-25
 
 ## v1.9.9999
 
@@ -63,11 +63,11 @@ refactor, a hardened end-to-end test suite, and a new translation.
   ### Other
   - Test suite hardening (real XPointers in bookmark deletion tests, flushed nested sync schedules in integration tests) — no user-facing changes.
 
-# v1.9.99
+# v1.9.99 · 2026-06-30
 
 **Full Changelog**: https://github.com/dani84bs/AnnotationSync.koplugin/compare/v1.9.9...v1.9.99
 
-# v1.9.9
+# v1.9.9 · 2026-06-19
 
 ## What's Changed
 * Feature/progress name by @dani84bs in https://github.com/dani84bs/AnnotationSync.koplugin/pull/64
@@ -84,7 +84,7 @@ refactor, a hardened end-to-end test suite, and a new translation.
 
 **Full Changelog**: https://github.com/dani84bs/AnnotationSync.koplugin/compare/v1.1.1...v1.9.9
 
-# v1.1.1
+# v1.1.1 · 2026-06-02
 
 ## What's Changed
 * feat: debounce reading progress sync to prevent page turn stutter by @dani84bs in https://github.com/dani84bs/AnnotationSync.koplugin/pull/59

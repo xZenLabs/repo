@@ -1,12 +1,12 @@
-# v0.1.2
+# v0.1.2 · 2026-09-19
 
 **Full Changelog**: https://github.com/decko/scielo.koplugin/compare/v0.1.1...v0.1.2
 
-# v0.1.1
+# v0.1.1 · 2026-09-19
 
 **Full Changelog**: https://github.com/decko/scielo.koplugin/compare/v0.1.0...v0.1.1
 
-# v0.1.0
+# v0.1.0 · 2026-09-19
 
 First release.
 

@@ -1,4 +1,4 @@
-# v2.0
+# v2.0 · 2026-09-21
 
 ## v2
 
@@ -10,6 +10,6 @@
 
 - **Fixed a scheduling edge case** where a check could get silently stuck and stop recurring if a pending timer didn't survive device suspend.
 
-# Plugin
+# Plugin · 2026-08-29
 
 [chargelimit.koplugin.zip](https://github.com/user-attachments/files/31578375/chargelimit.koplugin.zip)

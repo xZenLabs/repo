@@ -1,4 +1,4 @@
-# 0.5.0
+# 0.5.0 · 2026-05-18
 
 ## What's Changed
 * Debounce saves, defer bookmark sync, page-index eraser to cut lag for by @mysticknits in https://github.com/mysticknits/pencil.koplugin/pull/68
@@ -7,7 +7,7 @@
 
 **Full Changelog**: https://github.com/mysticknits/pencil.koplugin/compare/0.4.1...0.5.0
 
-# 0.4.1
+# 0.4.1 · 2026-05-12
 
 ## What's Changed
 * Side button highlight by @mysticknits in https://github.com/mysticknits/pencil.koplugin/pull/65
@@ -15,7 +15,7 @@
 
 **Full Changelog**: https://github.com/mysticknits/pencil.koplugin/compare/0.4.0...0.4.1
 
-# 0.4.0
+# 0.4.0 · 2026-05-11
 
 ## What's Changed
 * Update compatibility name from Ghost to Snowflake by @mysticknits in https://github.com/mysticknits/pencil.koplugin/pull/46
@@ -30,7 +30,7 @@
 
 **Full Changelog**: https://github.com/mysticknits/pencil.koplugin/compare/0.3.1...0.4.0
 
-# 0.3.1
+# 0.3.1 · 2026-03-26
 
 For this release, you will need to swap the input.lua as well as the plugin itself! Please check the README for specific info on how to do that.
 
@@ -43,7 +43,7 @@ xoxo
 
 **Full Changelog**: https://github.com/mysticknits/pencil.koplugin/compare/0.3.0...0.3.1
 
-# 0.3.0
+# 0.3.0 · 2026-03-16
 
 ## What's Changed
 * fix: reinvert to keep the same colors in night mode by @Euphoriyy in https://github.com/mysticknits/pencil.koplugin/pull/32

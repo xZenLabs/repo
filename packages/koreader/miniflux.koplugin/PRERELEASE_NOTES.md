@@ -1,4 +1,4 @@
-# v0.0.11-dev
+# v0.0.11-dev · 2026-04-27
 
 Automated pre-release of miniflux.koplugin v0.0.11-dev
 
@@ -13,7 +13,7 @@ Automated pre-release of miniflux.koplugin v0.0.11-dev
 2. Extract it to your KOReader plugins directory
 3. Restart KOReader and enable the plugin
 
-# v0.0.10-dev-0687f31
+# v0.0.10-dev-0687f31 · 2025-08-20
 
 Development pre-release of miniflux.koplugin
 
@@ -28,7 +28,7 @@ Development pre-release of miniflux.koplugin
 2. Extract it to your KOReader plugins directory
 3. Restart KOReader and enable the plugin
 
-# v0.0.10-dev-6576624
+# v0.0.10-dev-6576624 · 2025-08-20
 
 Development pre-release of miniflux.koplugin
 
@@ -43,7 +43,7 @@ Development pre-release of miniflux.koplugin
 2. Extract it to your KOReader plugins directory
 3. Restart KOReader and enable the plugin
 
-# v0.0.10-dev
+# v0.0.10-dev · 2025-08-14
 
 Automated pre-release of miniflux.koplugin v0.0.10-dev
 
@@ -58,7 +58,7 @@ Automated pre-release of miniflux.koplugin v0.0.10-dev
 2. Extract it to your KOReader plugins directory
 3. Restart KOReader and enable the plugin
 
-# v0.0.9-dev
+# v0.0.9-dev · 2025-08-08
 
 Automated pre-release of miniflux.koplugin v0.0.9-dev
 

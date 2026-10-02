@@ -1,4 +1,4 @@
-# v1.1.0
+# v1.1.0 · 2026-06-27
 
 ## v1.1.0
 
@@ -20,4 +20,4 @@
 - All debug print() calls replaced with proper logger calls
 - Removed commented-out dead code from OTA module
 
-# v1.0.0
+# v1.0.0 · 2026-05-17

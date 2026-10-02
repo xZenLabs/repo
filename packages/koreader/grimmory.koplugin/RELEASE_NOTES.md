@@ -1,4 +1,4 @@
-# v0.0.30
+# v0.0.30 · 2026-07-11
 
 ## What's Changed
 * chore: drop asc from Grimmory books API call by @imnotjames in https://github.com/grimmory-tools/grimmory.koplugin/pull/191
@@ -9,7 +9,7 @@
 
 **Full Changelog**: https://github.com/grimmory-tools/grimmory.koplugin/compare/v0.0.29...v0.0.30
 
-# v0.0.29
+# v0.0.29 · 2026-07-08
 
 ## What's Changed
 * fix: resolve _meta from local plugin path by @imnotjames in https://github.com/grimmory-tools/grimmory.koplugin/pull/190
@@ -17,7 +17,7 @@
 
 **Full Changelog**: https://github.com/grimmory-tools/grimmory.koplugin/compare/v0.0.28...v0.0.29
 
-# v0.0.28
+# v0.0.28 · 2026-07-04
 
 ## What's Changed
 * chore: remove CFI migration by @imnotjames in https://github.com/grimmory-tools/grimmory.koplugin/pull/184
@@ -27,7 +27,7 @@
 
 **Full Changelog**: https://github.com/grimmory-tools/grimmory.koplugin/compare/v0.0.27...v0.0.28
 
-# v0.0.27
+# v0.0.27 · 2026-07-01
 
 ## What's Changed
 * refactor: make `withDatabase` a helper by @imnotjames in https://github.com/grimmory-tools/grimmory.koplugin/pull/168
@@ -40,7 +40,7 @@
 
 **Full Changelog**: https://github.com/grimmory-tools/grimmory.koplugin/compare/v0.0.26...v0.0.27
 
-# v0.0.26
+# v0.0.26 · 2026-06-27
 
 ## What's Changed
 * fix: properly wait for automatic wifi without breaking executor by @sabrina553 in https://github.com/grimmory-tools/grimmory.koplugin/pull/149

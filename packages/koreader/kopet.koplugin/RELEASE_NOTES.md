@@ -1,4 +1,4 @@
-# v2.0
+# v2.0 · 2026-04-18
 
 ## What’s new in v2.0
 
@@ -19,6 +19,6 @@
 
 Status badges are shown in **View Pet** (`SICK`, `BORED`, `SLEEPY`) for quick visibility.
 
-# v1.0.0
+# v1.0.0 · 2026-04-13
 
 **Full Changelog**: https://github.com/PedroMachado1/kopet.koplugin/commits/v1.0.0

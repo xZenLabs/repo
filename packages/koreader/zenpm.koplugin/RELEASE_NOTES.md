@@ -1,4 +1,4 @@
-# v1.6.0
+# v1.6.0 · 2026-09-18
 
 ## What's Changed
 
@@ -13,7 +13,7 @@
 - Bug fixes
 - Performance improvements
 
-# v1.5.0
+# v1.5.0 · 2026-08-28
 
 ## What's Changed
 
@@ -23,21 +23,21 @@
 - Better arch selection
 - Improve README url/image handling
 
-# v1.4.2
+# v1.4.2 · 2026-08-27
 
 ## What's Changed
 
 - Disable Kindle scriptlets and Kindleforge by default (enable via settings)
 - Use stable koreader location for kpm installs
 
-# v1.4.1
+# v1.4.1 · 2026-08-22
 
 ## What's Changed
 
 - Fix an edge case on android where backend can close while a package is updating
 - Fix android permissions
 
-# v1.4.0
+# v1.4.0 · 2026-08-15
 
 ## What's Changed
 

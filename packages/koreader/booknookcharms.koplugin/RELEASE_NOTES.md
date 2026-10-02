@@ -1,4 +1,4 @@
-# V1.1.1
+# V1.1.1 · 2026-06-19
 
 Book Nook Charms V1.1.1
 
@@ -13,7 +13,7 @@ Preserved all original SVG artwork and charm designs.
 Confirmed working on both Kobo and PocketBook with KOReader.
 Please fully restart KOReader after installing the update.
 
-# v1.1.0
+# v1.1.0 · 2026-06-06
 
 Book Nook Charms V1.1.0
 
@@ -48,7 +48,7 @@ If something does not work, please include your device model, KOReader version, 
 
 Happy reading, my lovelies. 📚✨
 
-# v1.0.0
+# v1.0.0 · 2026-05-27
 
 📖Book Nook Charms v1.0.0
 

@@ -1,4 +1,4 @@
-# v1.13.0
+# v1.13.0 · 2026-09-27
 
 ### What's new
 
@@ -9,7 +9,7 @@
 
 Download `seekquel.koplugin-v1.13.0.zip`, unzip it, and copy the `seekquel.koplugin` folder into KOReader's `plugins` folder on your e-reader. Restart KOReader, then open the Seekquel menu to pair. If the add-on is already installed and paired, it updates itself and you do not need to do anything.
 
-# v1.12.1
+# v1.12.1 · 2026-09-25
 
 ### What's new
 
@@ -19,7 +19,7 @@ Download `seekquel.koplugin-v1.13.0.zip`, unzip it, and copy the `seekquel.koplu
 
 Download `seekquel.koplugin-v1.12.1.zip`, unzip it, and copy the `seekquel.koplugin` folder into KOReader's `plugins` folder. Restart KOReader. If the add-on is already installed and paired, it updates itself from Seekquel.
 
-# v1.12.0
+# v1.12.0 · 2026-09-23
 
 ### What's new
 
@@ -32,7 +32,7 @@ Already using the add-on? It updates itself, so there is nothing to do.
 
 New install: download `seekquel.koplugin-v1.12.0.zip`, unzip it into KOReader's `plugins` folder so you have a `seekquel.koplugin` folder there, restart KOReader, then pair it from the Seekquel menu with the code shown in the app.
 
-# v1.11.0
+# v1.11.0 · 2026-09-22
 
 ### What's new
 
@@ -42,7 +42,7 @@ New install: download `seekquel.koplugin-v1.12.0.zip`, unzip it into KOReader's 
 
 If the add-on is already installed, it updates itself from Seekquel. For a new install, download seekquel.koplugin-v1.11.0.zip, unzip it, and copy the seekquel.koplugin folder into KOReader's plugins folder, then restart KOReader.
 
-# v1.10.1
+# v1.10.1 · 2026-09-20
 
 ### What's new
 

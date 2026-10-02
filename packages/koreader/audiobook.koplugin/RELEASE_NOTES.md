@@ -1,4 +1,4 @@
-# v0.2.11
+# v0.2.11 · 2026-09-30
 
 ## Audiobook Read-Along v0.2.11
 
@@ -30,7 +30,7 @@ See [README](https://github.com/stradichenko/audiobook.koplugin/blob/master/READ
 
 **Full Changelog**: https://github.com/stradichenko/audiobook.koplugin/compare/v0.2.10...v0.2.11
 
-# v0.2.10
+# v0.2.10 · 2026-09-30
 
 ## Audiobook Read-Along v0.2.10
 
@@ -62,7 +62,7 @@ See [README](https://github.com/stradichenko/audiobook.koplugin/blob/master/READ
 
 **Full Changelog**: https://github.com/stradichenko/audiobook.koplugin/compare/v0.2.9...v0.2.10
 
-# v0.2.9
+# v0.2.9 · 2026-09-29
 
 ## Audiobook Read-Along v0.2.9
 
@@ -94,7 +94,7 @@ See [README](https://github.com/stradichenko/audiobook.koplugin/blob/master/READ
 
 **Full Changelog**: https://github.com/stradichenko/audiobook.koplugin/compare/v0.2.8...v0.2.9
 
-# v0.2.8
+# v0.2.8 · 2026-09-28
 
 ## Audiobook Read-Along v0.2.8
 
@@ -126,7 +126,7 @@ See [README](https://github.com/stradichenko/audiobook.koplugin/blob/master/READ
 
 **Full Changelog**: https://github.com/stradichenko/audiobook.koplugin/compare/v0.2.7...v0.2.8
 
-# v0.2.7
+# v0.2.7 · 2026-09-27
 
 ## Audiobook Read-Along v0.2.7
 

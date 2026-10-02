@@ -1,4 +1,4 @@
-# v1.3.4
+# v1.3.4 · 2026-08-25
 
 What's changed:
 - SimpleUI's cover deck books has rounded corners applied to them all
@@ -7,7 +7,7 @@ What's changed:
 
 **Full Changelog**: https://github.com/SeriousHornet/vos.koplugin/compare/v1.3.3...v1.3.4
 
-# v1.3.3
+# v1.3.3 · 2026-08-21
 
 Changelog:
 - fixed folder count bug
@@ -15,7 +15,7 @@ Changelog:
 
 **Full Changelog**: https://github.com/SeriousHornet/vos.koplugin/compare/v1.3.2...v1.3.3
 
-# v1.3.2
+# v1.3.2 · 2026-08-19
 
 Changelog:
 
@@ -26,7 +26,7 @@ Changelog:
 
 **Full Changelog**: https://github.com/SeriousHornet/vos.koplugin/compare/v1.3.1...v1.3.2
 
-# v1.3.1
+# v1.3.1 · 2026-08-19
 
 Changelog:
 - Fixed not working on Android devices
@@ -34,7 +34,7 @@ Changelog:
 
 **Full Changelog**: https://github.com/SeriousHornet/vos.koplugin/compare/v1.3.0...v1.3.1
 
-# v1.3.0
+# v1.3.0 · 2026-08-18
 
 Changelog:
 

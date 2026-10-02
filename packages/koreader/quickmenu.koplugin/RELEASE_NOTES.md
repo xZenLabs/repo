@@ -1,4 +1,4 @@
-# 2.0
+# 2.0 · 2026-09-20
 
 <p align="center">
 <img width="50%" alt="screenshot" src="https://github.com/user-attachments/assets/17c41540-d06e-4652-95ca-126f1417c71f" />
@@ -35,7 +35,7 @@ Fix :
 
 - Fix footer behavior. For example, in v1.9 footer gear dialog only show modification if you were on quickmenu tab.
 
-# 1.9
+# 1.9 · 2026-08-30
 
 Back from "holidays" (restore an apartment).
 I use alpha during this month, seems stable and complete, so not much in this release :
@@ -45,7 +45,7 @@ I use alpha during this month, seems stable and complete, so not much in this re
 
 For me Quickmenu does the job as an improve and stable version of Quicksetting. So not much to expect in the future except bug fix.
 
-# 1.9-alpha
+# 1.9-alpha · 2026-07-17
 
 WARNING: This is an alpha release. Please stay on version 1.8, which is currently stable.
 
@@ -62,14 +62,14 @@ There isn't much to see on the surface, but under the hood, it is a whole differ
 
 WARNING: This is an alpha release. Please stay on version 1.8, which is currently stable.
 
-# 1.8
+# 1.8 · 2026-07-13
 
 - Footer override defaults one especially page turning. Correct it the best way i find...
 - Align Warmth label
 - Align ZenSlider label and option to center label (as they are in zenui)
 - Add de, es, fr, it, ja, pt, ru
 
-# 1.7
+# 1.7 · 2026-07-12
 
 - Quickmenu now use its own setting file BREAKING change
 - Add footer from zen ui, harder than anticipated...

@@ -1,4 +1,4 @@
-# 1.1
+# 1.1 · 2026-07-06
 
 Added pathfinding algorithm:
 - Click on an empty square and the player will go there
@@ -10,7 +10,7 @@ This will speed up the play on the touchscreen devices especially for larger lev
 
 This release also adds support for external keyboard.
 
-# 1.0
+# 1.0 · 2026-05-04
 
 Sokoban game as a Koreader plugin
 

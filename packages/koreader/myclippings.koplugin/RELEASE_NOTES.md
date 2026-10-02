@@ -1,4 +1,4 @@
-# v1.0.6
+# v1.0.6 · 2026-08-30
 
 
 - **Restricted push/restore to reflowable documents only** (EPUB, FB2,
@@ -14,7 +14,7 @@
   The read-only tools (Merge, Undo, Delete, Repair) are unaffected, since
   they only remove existing entries and can't write a bad position.
 
-# v1.0.5
+# v1.0.5 · 2026-08-30
 
 
 - **"Check for updates..."** — new menu action (bottom of the plugin's
@@ -26,7 +26,7 @@
 - `_meta.lua` now carries a `version` field, needed for the above to know
   what's currently installed.
 
-# v1.0.4
+# v1.0.4 · 2026-08-30
 
 
 - **Fixes a v1.0.3 bug that could crash KOReader** when opening the
@@ -42,7 +42,7 @@
   other highlights) and unlinks the matching database items back to
   pending, so pushing again safely recovers them.
 
-# v1.0.3
+# v1.0.3 · 2026-08-27
 
 
 - **Highlight notes**: a note you attach to a KOReader highlight is now
@@ -84,7 +84,7 @@
   Renamed "Rebuild My Clippings file" to "(Re)build My Clippings file
   from Highlights".
 
-# v1.0.2
+# v1.0.2 · 2026-08-26
 
 
 - Fixed KOReader-native highlights piling up as duplicates every time you

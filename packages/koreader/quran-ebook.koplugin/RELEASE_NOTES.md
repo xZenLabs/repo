@@ -1,4 +1,4 @@
-# v0.10.0
+# v0.10.0 · 2026-03-19
 
 151 EPUB files across 42 languages — bilingual, interactive, word-by-word, and Arabic-only.
 
@@ -124,7 +124,7 @@ Overwrite the old file with the new one, keeping the same filename. KOReader (an
 
 **Full Changelog**: https://github.com/zeeyado/quran-ebook/compare/v0.9.0...v0.10.0
 
-# v0.9.0
+# v0.9.0 · 2026-03-16
 
 151 EPUB files across 42 languages — bilingual, interactive, word-by-word, and Arabic-only.
 
@@ -248,7 +248,7 @@ Overwrite the old file with the new one, keeping the same filename. KOReader (an
 
 **Full Changelog**: https://github.com/zeeyado/quran-ebook/compare/v0.8.0...v0.9.0
 
-# v0.8.0
+# v0.8.0 · 2026-03-16
 
 109 EPUB files across 42 languages — bilingual, interactive, word-by-word, and Arabic-only.
 
@@ -366,7 +366,7 @@ Overwrite the old file with the new one, keeping the same filename. KOReader (an
 
 **Full Changelog**: https://github.com/zeeyado/quran-ebook/compare/v0.7.1...v0.8.0
 
-# v0.7.1
+# v0.7.1 · 2026-03-13
 
 95 EPUB files across 42 languages — bilingual, interactive, and Arabic-only.
 
@@ -479,7 +479,7 @@ Overwrite the old file with the new one, keeping the same filename. KOReader (an
 
 **Full Changelog**: https://github.com/zeeyado/quran-ebook/compare/v0.7.0...v0.7.1
 
-# v0.7.0
+# v0.7.0 · 2026-03-12
 
 95 EPUB files across 42 languages — bilingual, interactive, and Arabic-only.
 

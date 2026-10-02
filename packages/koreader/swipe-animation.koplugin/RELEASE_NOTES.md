@@ -1,4 +1,4 @@
-# v4.3
+# v4.3 · 2026-09-13
 
 ## What's Changed
 * feat: default page-turn animation on while the patch is loaded by @MsReverie in https://github.com/koplugin-swipe-animation/Swipe_Animation.koplugin/pull/29
@@ -9,7 +9,7 @@
 
 **Full Changelog**: https://github.com/koplugin-swipe-animation/Swipe_Animation.koplugin/compare/v4.2...v4.3
 
-# v4.2
+# v4.2 · 2026-08-18
 
 ## What's Changed
 * feat: Fix first-refresh stutter on Kobo MTK devices by @MsReverie in https://github.com/koplugin-swipe-animation/Swipe_Animation.koplugin/pull/20
@@ -22,7 +22,7 @@
 
 **Full Changelog**: https://github.com/koplugin-swipe-animation/Swipe_Animation.koplugin/compare/v4.1...v4.2
 
-# v4.1
+# v4.1 · 2026-08-09
 
 ## What's Changed
 * feat: pt-BR translation by @caiojares in https://github.com/koplugin-swipe-animation/Swipe_Animation.koplugin/pull/15
@@ -37,7 +37,7 @@
 
 **Full Changelog**: https://github.com/koplugin-swipe-animation/Swipe_Animation.koplugin/compare/v4.0...v4.1
 
-# v4.0
+# v4.0 · 2026-08-05
 
 ## 升级注意
 
@@ -69,7 +69,7 @@ Since v4.0, the plugin no longer depends on or modifies `ffi/framebuffer.lua`. T
 
 **Full Changelog**: https://github.com/koplugin-swipe-animation/Swipe_Animation.koplugin/compare/v3.7...v4.0%E7%A8%B3%E5%AE%9A%E7%89%88
 
-# v3.7
+# v3.7 · 2026-07-30
 
 ## What's Changed
 * Merge device.lua functionality into settings and sync with latest KOReader by @MsReverie in https://github.com/koplugin-swipe-animation/Swipe_Animation.koplugin/pull/6

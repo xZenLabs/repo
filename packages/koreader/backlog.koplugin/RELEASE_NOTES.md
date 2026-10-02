@@ -1,4 +1,4 @@
-# v1.3.0
+# v1.3.0 · 2026-06-22
 
 What's new in 1.3.0:
 
@@ -9,7 +9,7 @@ What's new in 1.3.0:
 
 **Install:** download `backlog.koplugin-v1.3.0.zip`, extract into your device's `koreader/plugins/` directory, and restart KOReader. Or update in place via the App Store plugin.
 
-# v1.2.0
+# v1.2.0 · 2026-06-15
 
 What's new in 1.2.0:
 
@@ -19,7 +19,7 @@ What's new in 1.2.0:
 
 **Install:** download `backlog.koplugin-v1.2.0.zip`, extract into your device's `koreader/plugins/` directory, and restart KOReader. Or update in place via the App Store plugin.
 
-# v1.1.0
+# v1.1.0 · 2026-06-15
 
 What's new in 1.1.0:
 
@@ -29,7 +29,7 @@ What's new in 1.1.0:
 
 **Install:** download `backlog.koplugin-v1.1.0.zip`, extract into your device's `koreader/plugins/` directory, restart KOReader. Or update in place via the App Store plugin.
 
-# v1.0.0
+# v1.0.0 · 2026-06-14
 
 Per-chapter read tracking for anthology EPUBs in KOReader — collections of standalone, cross-linked articles you read in any order (blog archives, essay collections). Shows which articles you've read, jumps to the next unread, and auto-marks as you finish reading one.
 

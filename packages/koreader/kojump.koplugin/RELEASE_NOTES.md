@@ -1,4 +1,4 @@
-# v1.0.0
+# v1.0.0 · 2026-06-07
 
 # 🧭 Kojump v1.0.0 — Initial Release
 

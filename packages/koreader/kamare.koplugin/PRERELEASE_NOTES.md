@@ -1,4 +1,4 @@
-# v0.9.16
+# v0.9.16 · 2026-02-11
 
 I prepared a new version that will make use of the new auth method that was introduced for plugins in kavita 0.8.9. Additionally I changed the way the thumbnails/metadata is retrieved for cover browser to hopefully fix a metadata display bug that was reported in #3.
 
@@ -13,7 +13,7 @@ Additionally I am happy to add the first community contributions 🎉:
 * allow RTL controls in all view modes (thanks @EduFdezSoy)
 * add front light controls to settings (thanks @EduFdezSoy):
 
-# v0.9.10
+# v0.9.10 · 2025-11-20
 
 Big Changes:
 * Another attempt at finally fixing the tiled rendering artifacts that remained
@@ -21,7 +21,7 @@ Big Changes:
 Small Changes:
 * Small UI fixes
 
-# v0.9.8
+# v0.9.8 · 2025-11-12
 
 Big Changes:
 * Dual Page mode for more book like experience on big readers or in landscape mode

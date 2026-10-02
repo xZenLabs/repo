@@ -1,4 +1,4 @@
-# v0.2.0
+# v0.2.0 · 2026-01-19
 
 > "Just as a gnomish-forged Gwyhyr blade hones the edge of a witcher’s craft with razor-sharp precision, this update sharpens the connection between your library and your digital archives."
 
@@ -30,7 +30,7 @@ To upgrade to Gwyhyr, you must perform a small ritual in your **Notion Database*
 
 **Full Changelog**: https://github.com/CezaryPukownik/koreader-notion-sync/commits/v0.2.0
 
-# v0.1.0
+# v0.1.0 · 2025-12-22
 
 > "Just as the mage Alzur forged the first witchers to bring order to a chaotic world, this plugin forges the first link to tame your unruly highlights."
 

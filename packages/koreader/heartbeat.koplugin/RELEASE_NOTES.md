@@ -1,4 +1,4 @@
-# v26.03.25
+# v26.03.25 · 2026-03-25
 
 - Better binary sensor name sanitization: only allow letters, numbers, and underscores
 - Optimize loadSettings():
@@ -7,4 +7,4 @@
 
 **Full Changelog**: https://github.com/moritz-john/heartbeat.koplugin/compare/v26.03.19...v26.03.25
 
-# v26.03.19
+# v26.03.19 · 2026-03-19

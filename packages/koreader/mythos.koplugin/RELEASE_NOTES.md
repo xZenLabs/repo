@@ -1,4 +1,4 @@
-# v0.3.0
+# v0.3.0 · 2026-08-09
 
 **Mythos v0.3.0**
 ---
@@ -29,7 +29,7 @@
 **Installation:**
 Download `mythos.koplugin.zip`, extract, and copy the folder into your KOReader plugins directory. If updating, replace the existing `mythos.koplugin` folder, or just use the OTA updater.
 
-# v0.2.0
+# v0.2.0 · 2026-08-09
 
 **Mythos v0.2.0**
 ---
@@ -41,7 +41,7 @@ Download `mythos.koplugin.zip`, extract, and copy the folder into your KOReader 
 **Installation:**
 Download `mythos.koplugin.zip`, extract, and copy the folder into your KOReader plugins directory. If updating from 0.1.0, replace the existing `mythos.koplugin` folder.
 
-# v0.1.0
+# v0.1.0 · 2026-08-08
 
 **Mythos v0.1.0 — Initial Release**
 ---

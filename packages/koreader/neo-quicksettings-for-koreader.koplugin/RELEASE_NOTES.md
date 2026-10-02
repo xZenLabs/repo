@@ -1,4 +1,4 @@
-# v1.21
+# v1.21 · 2026-08-28
 
 Added a smart timer that automatically pauses in sleep mode.
 Fixed a bug causing the timer to count faster than normal.
@@ -6,7 +6,7 @@ Added an independent language selection menu supporting 13 languages.
 Added an option to hide the Min/Max buttons on sliders.
 Fixed UI overflow issues caused by long translation texts.
 
-# v1.20
+# v1.20 · 2026-08-25
 
 Neo Quick Settings v1.20 - Changelog
 New Features
@@ -52,7 +52,7 @@ Updated version information in _meta.lua to 1.20.
  Special Thanks
 Zenos UI / AnthonyGress: We were inspired by the Zenos UI plugin and utilized some of its code for our interface components and basic architectures. Endless thanks to [AnthonyGress](https://github.com/AnthonyGress) for his contributions and support to the open-source community!
 
-# v1.10
+# v1.10 · 2026-07-09
 
 Neo Quick Settings Changelog (v1.10)
 
@@ -65,7 +65,7 @@ Neo Quick Settings Changelog (v1.10)
 
 ******Note: Special thanks to @renandeivison for writing the amazing fluidity code, detecting the visual alignment glitch, and reporting the plugin naming bug! Your contributions are greatly appreciated!
 
-# Koreader-plugin
+# Koreader-plugin · 2026-07-05
 
 # Neo QuickSettings for KOReader
 

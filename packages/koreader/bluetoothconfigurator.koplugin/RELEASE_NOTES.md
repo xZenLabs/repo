@@ -1,16 +1,16 @@
-# v2.2.4
+# v2.2.4 · 2026-07-27
 
 Restores the Reflowable documents and Fixed layout documents categories in the Bluetooth action picker.\n\nThe release archive uses the updater-compatible single bluetoothconfigurator.koplugin/ wrapper layout.
 
-# v2.2.3
+# v2.2.3 · 2026-07-13
 
 Adds controller input diagnostics. Fixes the in-plugin updater on current KOReader versions by using ffi/archiver, with staged validation, backup, and rollback. Normal key handling no longer performs diagnostic device lookups unless diagnostics are active.
 
-# v2.2.2
+# v2.2.2 · 2026-07-07
 
 Maintenance rebuild: fixes the in-plugin updater on current KOReader versions by using ffi/archiver instead of the removed Device:unpackArchive API. Plugin behavior remains v2.2.2.
 
-# v2.2.1
+# v2.2.1 · 2026-07-06
 
 Changes in this release:
 
@@ -20,7 +20,7 @@ Changes in this release:
 - Corrects the in-app version display to v2.2.1.
 - Refreshes README usage wording for reader and file manager bindings.
 
-# v2.2.0
+# v2.2.0 · 2026-07-06
 
 Changes in this release:
 

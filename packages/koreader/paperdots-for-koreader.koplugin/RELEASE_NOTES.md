@@ -1,4 +1,4 @@
-# v2.2
+# v2.2 · 2026-09-24
 
 **What's New**
 
@@ -8,14 +8,14 @@
  * **One new style** 
 *  **Minor performance optimizations**
 
-# v2.1
+# v2.1 · 2026-09-20
 
 **New options**
 - Hide dots on menus: keeps dots on the book page only, without dots on menus and dialogs.
 - Settings are now saved per style (density, size, shades, fiber length), so a value that looks good in one style doesn't affect the others.
 
-# v2.0
+# v2.0 · 2026-09-20
 
 New styles added: linen, newspaper, fibers
 
-# v1.0
+# v1.0 · 2026-09-19

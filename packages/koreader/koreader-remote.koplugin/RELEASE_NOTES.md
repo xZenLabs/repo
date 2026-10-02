@@ -1,4 +1,4 @@
-# v0.9.5
+# v0.9.5 · 2026-07-19
 
 ## v0.9.5
 
@@ -38,7 +38,7 @@ Build channel: stable
 Build ID: stable
 Commit: 946545f4c3474d26247409c56c65c7ece64facdc
 
-# v0.9.4
+# v0.9.4 · 2026-07-16
 
 ## v0.9.4
 
@@ -51,7 +51,7 @@ Build channel: stable
 Build ID: stable
 Commit: 7b8bf97824f46357a485cb432777507f2db49c3d
 
-# v0.9.3
+# v0.9.3 · 2026-07-16
 
 ## v0.9.3
 
@@ -68,7 +68,7 @@ Build channel: stable
 Build ID: stable
 Commit: 6cdc3f00e2602d47d277affe86068ea3dfaec124
 
-# v0.9.2
+# v0.9.2 · 2026-07-16
 
 ## v0.9.2
 
@@ -90,7 +90,7 @@ Build channel: stable
 Build ID: stable
 Commit: d6e728c5c262131a6281417a9bbb5e11ddedc17e
 
-# v0.9.1
+# v0.9.1 · 2026-07-15
 
 ## v0.9.1
 

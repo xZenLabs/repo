@@ -1,8 +1,8 @@
-# v2.3
+# v2.3 · 2026-08-22
 
 后缀修改
 
-# 20260801
+# 20260801 · 2026-07-31
 
 # 📖 Release Notes · v2.2
 
@@ -124,7 +124,7 @@ GNU General Public License v3.0
 
 **Happy Reading! 📖**
 
-# 20260731
+# 20260731 · 2026-07-30
 
 # 📖 Release Notes · v2.1.1
 
@@ -234,7 +234,7 @@ GNU General Public License v3.0
 
 **Happy Reading! 📖**
 
-# 20260730
+# 20260730 · 2026-07-30
 
 # 📖 Release Notes · v2.0
 
@@ -303,7 +303,7 @@ GNU General Public License v3.0
 
 **Happy Reading! 📖**
 
-# main
+# main · 2026-07-30
 
 # 📖 书籍收据屏保插件 v2.0 · 中文增强版
 

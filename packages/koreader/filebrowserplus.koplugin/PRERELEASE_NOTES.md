@@ -1,4 +1,4 @@
-# 1.2.0-pre
+# 1.2.0-pre · 2026-05-16
 
 - This pre-release aims to test the following functionality contributed by @cb12tre
 

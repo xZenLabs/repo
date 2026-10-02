@@ -1,4 +1,4 @@
-# v1.0.0
+# v1.0.0 · 2026-05-02
 
 ## Installation
 1. Download `foldermemory.koplugin.zip`

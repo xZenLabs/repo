@@ -1,4 +1,4 @@
-# v1.1
+# v1.1 · 2026-08-14
 
 ## Install
 
@@ -17,7 +17,7 @@ See [README](https://github.com/5kxh2dxqmd-afk/kindle-koreader-airplay/blob/main
 
 **Full Changelog**: https://github.com/5kxh2dxqmd-afk/kindle-koreader-airplay/compare/v1.3.1...v1.1
 
-# v1-working
+# v1-working · 2026-07-19
 
 ## Install
 

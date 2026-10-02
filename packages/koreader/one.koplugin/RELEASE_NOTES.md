@@ -1,4 +1,4 @@
-# v0.5.2
+# v0.5.2 · 2026-08-08
 
 ## 新功能与改进
 
@@ -6,7 +6,7 @@
 
 **Full Changelog**: https://github.com/finlater/one.koplugin/compare/v0.5.1...v0.5.2
 
-# v0.5.1
+# v0.5.1 · 2026-08-08
 
 ## 新功能与改进
 
@@ -14,7 +14,7 @@
 
 **Full Changelog**: https://github.com/finlater/one.koplugin/compare/v0.5.0...v0.5.1
 
-# v0.5.0
+# v0.5.0 · 2026-08-08
 
 ## 新功能与改进
 
@@ -33,13 +33,13 @@
 
 **Full Changelog**: https://github.com/finlater/one.koplugin/compare/0.4.3...v0.5.0
 
-# 0.4.3
+# 0.4.3 · 2026-08-01
 
 - 支持 SimpleUI 和 Zen_UI 集成快捷方式
 
 **Full Changelog**: https://github.com/finlater/one.koplugin/compare/0.4.2...0.4.3
 
-# 0.4.2
+# 0.4.2 · 2026-07-28
 
 - 已缓存列表中支持长按清理单期缓存
 

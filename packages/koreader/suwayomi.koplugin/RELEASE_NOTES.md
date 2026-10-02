@@ -1,4 +1,4 @@
-# v1.2.1
+# v1.2.1 · 2026-09-27
 
 Suwayomi Client v1.2.1 fixes chapter browsing and read-state regressions affecting older downloads, makes failed verification saves recoverable, and adds selectable Browse layouts. Updating from v1.2.0 is recommended.
 
@@ -32,7 +32,7 @@ Older queued jobs with an unknown server origin still cannot **Retry**. Use **Do
 
 **Full changelog:** [v1.2.0...v1.2.1](https://github.com/LK4D4/suwayomi.koplugin/compare/v1.2.0...v1.2.1)
 
-# v1.2.0
+# v1.2.0 · 2026-09-24
 
 Suwayomi Client v1.2.0 adds saved Library and chapter lists for offline browsing, opens Library directly, and strengthens download and reading-state safety when connections change or saves fail.
 
@@ -79,7 +79,7 @@ If an older queued job reports an unknown server origin, **Retry** cannot resume
 
 **Full changelog:** https://github.com/LK4D4/suwayomi.koplugin/compare/v1.1.1...v1.2.0
 
-# v1.1.1
+# v1.1.1 · 2026-09-10
 
 Suwayomi Client v1.1.1 fixes a regression in v1.1.0 that prevented Basic Auth connections over HTTPS, including connections that were already configured.
 
@@ -103,7 +103,7 @@ Suwayomi Client v1.1.1 fixes a regression in v1.1.0 that prevented Basic Auth co
 
 **Full changelog:** https://github.com/LK4D4/suwayomi.koplugin/compare/v1.1.0...v1.1.1
 
-# v1.1.0
+# v1.1.0 · 2026-09-10
 
 Suwayomi Client v1.1.0 adds Simple Login and UI Login support, makes offline downloads more resilient, and improves how reading progress and local chapter cleanup work together.
 
@@ -153,4 +153,4 @@ Existing Basic Auth connections do not need to switch methods. If a download fai
 
 **Full changelog:** https://github.com/LK4D4/suwayomi.koplugin/compare/v1.0.6...v1.1.0
 
-# v1.0.6
+# v1.0.6 · 2026-05-31

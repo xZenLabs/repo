@@ -1,4 +1,4 @@
-# v1.2.0
+# v1.2.0 · 2026-03-19
 
 # OPDS Plus v1.2.0
 
@@ -43,7 +43,7 @@ Special thanks to these contributors for their work in this release cycle:
 Full changelog:
 https://github.com/greywolf1499/opds_plus.koplugin/blob/main/CHANGELOG.md
 
-# v1.1.0
+# v1.1.0 · 2025-11-18
 
 # OPDS Plus v1.1.0 - Polish & Performance Release
 
@@ -106,4 +106,4 @@ Thanks to everyone (myself, so far) who tested v1.0.0 and provided feedback! Thi
 
 **Full Changelog**: https://github.com/greywolf1499/opds_plus.koplugin/blob/main/CHANGELOG.md
 
-# v1.0.0
+# v1.0.0 · 2025-11-18

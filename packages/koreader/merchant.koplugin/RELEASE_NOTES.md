@@ -1,4 +1,4 @@
-# v2.0.0
+# v2.0.0 · 2026-07-11
 
 - Initial commit: Merchant, a turn-based trading game for KOReader
 Buy low and sell high across six trading posts over 30 days: manage

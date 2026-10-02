@@ -1,4 +1,4 @@
-# koreader-user-patch
+# koreader-user-patch · 2026-09-24
 
 LAST UPDATE: 2‑fonts‑menu‑profile  
 Added quick profile selection.

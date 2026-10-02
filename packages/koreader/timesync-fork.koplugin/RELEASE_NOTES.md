@@ -1,4 +1,4 @@
-# LTS
+# LTS · 2026-02-21
 
 This plugin syncs the Kindle 10th gen clock in koreader automatically taking into account the IP address or the timezone put manually. 
 

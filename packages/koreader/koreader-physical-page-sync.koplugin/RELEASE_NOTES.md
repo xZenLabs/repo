@@ -1,4 +1,4 @@
-# v1.30
+# v1.30 · 2026-07-09
 
 **API and Limits: Switched to Open Library due to Google Books API restrictions, and HTTP errors when fetching page counts have been fixed.
 
@@ -10,12 +10,12 @@
 
 **Fixed the page count glitch on the book status screen upon finishing a book
 
-# v1.20
+# v1.20 · 2026-07-07
 
 Added / Improved
 Enhanced Ratio Accuracy (1.00+ and <1.00): Significantly improved the mathematical accuracy of statistical calculations and ratios. Data points and rates falling both below and above the 1.00 threshold are now calculated and displayed with precise accuracy.
 
-# koreader-plugin
+# koreader-plugin · 2026-07-02
 
 Changelog: Physical Page Sync v1.11
 🐛 Bug Fixes
@@ -28,7 +28,7 @@ Imagine reading a book that is rendered on 355 screens on your device, while the
 Before: The system would calculate the ratio as 355 / 412 = 0.86, but due to a safety restriction, it would artificially force the UI to display "Ratio: 1.00".
 After: The restriction has been completely removed. The system now accurately calculates and displays the exact mathematical ratio as "Ratio: 0.86 taps per page".
 
-# koreader
+# koreader · 2026-06-30
 
 📝 Physical Page Sync (Ninja Engine) - Changelog
 Module: KOReader Statistics Plugin (statistics.koplugin) - Physical Page Sync Module

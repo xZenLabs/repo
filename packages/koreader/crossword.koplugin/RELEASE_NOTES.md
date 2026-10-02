@@ -1,4 +1,4 @@
-# v0.3.0
+# v0.3.0 · 2026-06-12
 
 - Clue banner is now tappable: tapping it pops up the full, untruncated
   clue so long clues that get cut off in the banner are still readable.
@@ -10,15 +10,15 @@
 - The keyboard now  expands to fill the remaining width (shrink_unneeded_width off) instead
   of sitting shrunk-and-centered with empty side margins.
 
-# v0.2.1
+# v0.2.1 · 2026-06-07
 
 - fix: clu banner not shown
 - only show clue banner on a word's starting cell
 
-# v0.2.0
+# v0.2.0 · 2026-05-25
 
 - Add dispatcher action and refactor menu system to support both traditional and quick dialog menus
 
-# v0.1.0
+# v0.1.0 · 2026-05-19
 
 - initial release

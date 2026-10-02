@@ -1,4 +1,4 @@
-# v1.0.2
+# v1.0.2 · 2026-04-23
 
 ## [1.0.2](https://github.com/ckilb/pocketbooksync.koplugin/compare/v1.0.1...v1.0.2) (2026-04-23)
 
@@ -12,7 +12,7 @@
 
 * fix asset upload when release PR merged no-ff ([cce464e](https://github.com/ckilb/pocketbooksync.koplugin/commit/cce464e6c7d0487fb67ed9e4a54762e2c2e63263))
 
-# v1.0.1
+# v1.0.1 · 2026-04-14
 
 ## [1.0.1](https://github.com/ckilb/pocketbooksync.koplugin/compare/v1.0.0...v1.0.1) (2026-04-14)
 
@@ -21,7 +21,7 @@
 
 * publish zip release asset ([b422639](https://github.com/ckilb/pocketbooksync.koplugin/commit/b422639a6aad00f2b823ffbeafb19c149e947866))
 
-# v1.0.0
+# v1.0.0 · 2026-04-13
 
 ## 1.0.0 (2026-04-13)
 

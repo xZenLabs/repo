@@ -1,4 +1,4 @@
-# v0.4.1
+# v0.4.1 · 2026-02-20
 
 ## [0.4.1](https://github.com/OGKevin/kobo.koplugin/compare/v0.4.0...v0.4.1) (2026-02-20)
 
@@ -7,7 +7,7 @@
 
 * **Virtual Library:** add cover path configuration ([#189](https://github.com/OGKevin/kobo.koplugin/issues/189)) ([69f5deb](https://github.com/OGKevin/kobo.koplugin/commit/69f5debdd4d3d74bf613c8bd720073ef577d018b)), closes [#185](https://github.com/OGKevin/kobo.koplugin/issues/185)
 
-# v0.4.0
+# v0.4.0 · 2026-01-11
 
 ## [0.4.0](https://github.com/OGKevin/kobo.koplugin/compare/v0.3.0...v0.4.0) (2026-01-11)
 
@@ -40,7 +40,7 @@
 * optimize DRM detection by using database lookup instead of attempting to open the file ([#169](https://github.com/OGKevin/kobo.koplugin/issues/169)) ([53f4942](https://github.com/OGKevin/kobo.koplugin/commit/53f4942273fbacd44925e803775ee2e974657c2c)), closes [#73](https://github.com/OGKevin/kobo.koplugin/issues/73)
 * resume from suspend no longer refreshes virtual library this means that resuming from suspend is faster ([#162](https://github.com/OGKevin/kobo.koplugin/issues/162)) ([787236e](https://github.com/OGKevin/kobo.koplugin/commit/787236edd68ee4080baf0af359235b431d6911a6)), closes [#161](https://github.com/OGKevin/kobo.koplugin/issues/161)
 
-# v0.3.0
+# v0.3.0 · 2025-12-27
 
 ## [0.3.0](https://github.com/OGKevin/kobo.koplugin/compare/v0.2.6...v0.3.0) (2025-12-27)
 
@@ -66,7 +66,7 @@ Special thanks to:
 - @Mn3m3nth https://github.com/OGKevin/kobo.koplugin/issues/44
 - @CrazyCoder https://github.com/OGKevin/kobo.koplugin/issues/44
 
-# v0.2.6
+# v0.2.6 · 2025-12-09
 
 ## [0.2.6](https://github.com/OGKevin/kobo.koplugin/compare/v0.2.5...v0.2.6) (2025-12-09)
 
@@ -81,7 +81,7 @@ Special thanks to:
 
 * **bluetooth:** reset auto-standby timer on key input ([1c66bf3](https://github.com/OGKevin/kobo.koplugin/commit/1c66bf37d0a3e607c6d25b1212b5482405ca7e6c))
 
-# v0.2.5
+# v0.2.5 · 2025-12-07
 
 ## [0.2.5](https://github.com/OGKevin/kobo.koplugin/compare/v0.2.4...v0.2.5) (2025-12-07)
 

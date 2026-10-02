@@ -1,4 +1,4 @@
-# v0.2.0
+# v0.2.0 · 2026-08-27
 
 ## What changed
 
@@ -19,7 +19,7 @@
 Closes #1.
 Closes #2.
 
-# v0.1.0
+# v0.1.0 · 2026-08-25
 
 Initial public release.
 

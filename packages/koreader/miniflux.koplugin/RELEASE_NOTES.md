@@ -1,4 +1,4 @@
-# v0.0.12
+# v0.0.12 · 2026-04-27
 
 Automated release of miniflux.koplugin v0.0.12
 
@@ -11,7 +11,7 @@ Automated release of miniflux.koplugin v0.0.12
 2. Extract it to your KOReader plugins directory
 3. Restart KOReader and enable the plugin
 
-# v0.0.11
+# v0.0.11 · 2026-04-27
 
 Automated release of miniflux.koplugin v0.0.11
 
@@ -24,7 +24,7 @@ Automated release of miniflux.koplugin v0.0.11
 2. Extract it to your KOReader plugins directory
 3. Restart KOReader and enable the plugin
 
-# v0.0.10
+# v0.0.10 · 2025-08-14
 
 Automated release of miniflux.koplugin v0.0.10
 
@@ -37,7 +37,7 @@ Automated release of miniflux.koplugin v0.0.10
 2. Extract it to your KOReader plugins directory
 3. Restart KOReader and enable the plugin
 
-# v0.0.9
+# v0.0.9 · 2025-08-08
 
 Automated release of miniflux.koplugin v0.0.9
 
@@ -50,7 +50,7 @@ Automated release of miniflux.koplugin v0.0.9
 2. Extract it to your KOReader plugins directory
 3. Restart KOReader and enable the plugin
 
-# v0.0.8
+# v0.0.8 · 2025-08-08
 
 Automated release of miniflux.koplugin v0.0.8
 

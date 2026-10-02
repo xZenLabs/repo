@@ -1,4 +1,4 @@
-# v1.8.2
+# v1.8.2 · 2026-09-21
 
 ## [1.8.2](https://github.com/Euphoriyy/appearance.koplugin/compare/v1.8.1...v1.8.2) (2026-09-21)
 [![Github Downloads (by release)](https://img.shields.io/github/downloads/Euphoriyy/appearance.koplugin/v1.8.2/total.svg)](#)
@@ -10,7 +10,7 @@
 
 *Supported KOReader Version: **v2026.07***
 
-# v1.8.1
+# v1.8.1 · 2026-09-21
 
 ## [1.8.1](https://github.com/Euphoriyy/appearance.koplugin/compare/v1.8.0...v1.8.1) (2026-09-21)
 [![Github Downloads (by release)](https://img.shields.io/github/downloads/Euphoriyy/appearance.koplugin/v1.8.1/total.svg)](#)
@@ -27,7 +27,7 @@
 
 *Supported KOReader Version: **v2026.07***
 
-# v1.8.0
+# v1.8.0 · 2026-09-08
 
 ## [1.8.0](https://github.com/Euphoriyy/appearance.koplugin/compare/v1.7.0...v1.8.0) (2026-09-08)
 [![Github Downloads (by release)](https://img.shields.io/github/downloads/Euphoriyy/appearance.koplugin/v1.8.0/total.svg)](#)
@@ -54,7 +54,7 @@
 
 *Supported KOReader Version: **v2026.07***
 
-# v1.7.0
+# v1.7.0 · 2026-09-03
 
 ## [1.7.0](https://github.com/Euphoriyy/appearance.koplugin/compare/v1.6.1...v1.7.0) (2026-09-03)
 [![Github Downloads (by release)](https://img.shields.io/github/downloads/Euphoriyy/appearance.koplugin/v1.7.0/total.svg)](#)
@@ -89,7 +89,7 @@
 
 *Supported KOReader Version: **v2026.07***
 
-# v1.6.1
+# v1.6.1 · 2026-08-19
 
 ## [1.6.1](https://github.com/Euphoriyy/appearance.koplugin/compare/v1.6.0...v1.6.1) (2026-08-19)
 [![Github Downloads (by release)](https://img.shields.io/github/downloads/Euphoriyy/appearance.koplugin/v1.6.1/total.svg)](#)

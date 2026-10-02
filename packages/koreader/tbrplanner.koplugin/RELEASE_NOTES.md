@@ -1,4 +1,4 @@
-# v1.1.0
+# v1.1.0 · 2025-12-22
 
 - Remember sorting 
 - Remember scroll position after edit 
@@ -6,6 +6,6 @@
 - Hide from calendar
 - Archive items (as complete  or abandoned)
 
-# v1.0.0
+# v1.0.0 · 2025-11-25
 
 - initial release

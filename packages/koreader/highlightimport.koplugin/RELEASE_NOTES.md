@@ -1,4 +1,4 @@
-# v1.3
+# v1.3 · 2026-09-02
 
 ## What's Changed
 * adaptive matching, pt-BR support, failed highlights view, manual book selection by @humanolaranja in https://github.com/nojux-official/HighlightImport.koplugin/pull/5
@@ -8,7 +8,7 @@
 
 **Full Changelog**: https://github.com/nojux-official/HighlightImport.koplugin/compare/v1.2...v1.3
 
-# v1.2
+# v1.2 · 2026-05-01
 
 ## What's Changed
 * Improve highlight import matching and user experience by @capitaineplanete in https://github.com/nojux-official/HighlightImport.koplugin/pull/3
@@ -24,7 +24,7 @@ This includes:
 
 **Full Changelog**: https://github.com/nojux-official/HighlightImport.koplugin/compare/v1.1...v1.2
 
-# v1.1
+# v1.1 · 2026-03-03
 
 Release v1.1
 - Added status display of import process 
@@ -33,7 +33,7 @@ Release v1.1
 - Fixed bug of the need to scroll document before import
 - Other UX improvements
 
-# v1.0
+# v1.0 · 2025-12-31
 
 Initial release
 

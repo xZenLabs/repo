@@ -1,4 +1,4 @@
-# v2.7.3
+# v2.7.3 · 2026-07-03
 
 <!-- © 2026 James Edward Honiball. All Rights Reserved. -->
 <!-- Tomo™ (友) — Social Reading Companion for Kobo -->
@@ -28,16 +28,16 @@ Also in this release: messages no longer duplicate in rooms, pen pal letters kee
 
 Requires KOReader 2024.07 or later.
 
-# v2.7.0
+# v2.7.0 · 2026-04-16
 
-# v2.6.6
+# v2.6.6 · 2026-04-06
 
 Crash report dedup and upload fix, Kindle device ID fallback, crash log parser, crash-loop detection, full crash field population, atomic OTA with rollback, last_seen tracking, postcrossing debounce, penpal matching fix, reading presence reporting.
 
-# v2.6.5
+# v2.6.5 · 2026-03-31
 
 Fixed OTA updater failing silently. Update now retries on failure and always re-prompts until successful. OTA failures now report to crash telemetry.
 
-# v2.6.4
+# v2.6.4 · 2026-03-31
 
 Username and user data now persist across OTA updates. All settings cached from Supabase to external storage.

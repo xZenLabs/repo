@@ -1,4 +1,4 @@
-# v2.1
+# v2.1 · 2026-09-15
 
 ## 📢 What's Changed
 
@@ -14,7 +14,7 @@
 
 📜 **Full Changelog**: https://github.com/KORComic/comicmeta.koplugin/compare/v2.0...v2.1
 
-# v2.0
+# v2.0 · 2025-09-25
 
 ## 📢 What's Changed
 
@@ -34,7 +34,7 @@
 
 ![kusuriya-no-hitorigoto-apothecary](https://github.com/user-attachments/assets/d1ee0ca5-bd83-409b-b70c-a34e90740f40)
 
-# v1.2
+# v1.2 · 2025-09-17
 
 ## What's Changed
 * feat(comicmeta): add recursive .cbz file processing and tests by @OGKevin in https://github.com/NightQuest/comicmeta.koplugin/pull/10
@@ -43,7 +43,7 @@
 
 **Full Changelog**: https://github.com/NightQuest/comicmeta.koplugin/compare/v1.1...v1.2
 
-# v1.1
+# v1.1 · 2025-09-09
 
 ## What's Changed
 * fix: rename xml to comicxml by @OGKevin in https://github.com/NightQuest/comicmeta.koplugin/pull/9
@@ -51,7 +51,7 @@
 
 **Full Changelog**: https://github.com/NightQuest/comicmeta.koplugin/compare/v1.0...v1.1
 
-# v1.0
+# v1.0 · 2025-05-27
 
 Initial Release.
 

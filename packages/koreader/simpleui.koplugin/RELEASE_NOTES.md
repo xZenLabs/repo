@@ -1,4 +1,4 @@
-# 2.7.1
+# 2.7.1 · 2026-09-07
 
 What's New in Simple UI v2.7.1
 
@@ -8,7 +8,7 @@ What's New in Simple UI v2.7.1
 - Fix bug blocking Library access after using the Quick Settings Bar to head home;
 - General bug fixes and quality-of-life optimizations.
 
-# 2.7.0
+# 2.7.0 · 2026-08-30
 
 What's New in Simple UI v2.7.0
 
@@ -18,7 +18,7 @@ What's New in Simple UI v2.7.0
 - Backup & Restore: Added a native backup and restore system;
 - General bug fixes and quality-of-life optimizations.
 
-# 2.6.0
+# 2.6.0 · 2026-08-26
 
 What's New in Simple UI 2.6.0:
 
@@ -31,7 +31,7 @@ What's New in Simple UI 2.6.0:
 - Bug Fixes: Fixed frame and background box misalignment with section labels across homescreen modules. Truncated the compact stats row to prevent layout stretching. Fixed cover scaling issues in the default layout, and ensured hidden collections remain visible in the Arrange screen.
 - General bug fixes and quality-of-life optimizations.
 
-# 2.5.0
+# 2.5.0 · 2026-08-17
 
 What's New in Simple UI v2.5
 
@@ -48,7 +48,7 @@ What's New in Simple UI v2.5
 - Collections Manager: Fixed an issue where selecting a collection from a book's long-press menu could leave the screen in a broken state.
 - General bug fixes and quality-of-life optimizations.
 
-# 2.1.1
+# 2.1.1 · 2026-07-16
 
 What's New in Simple UI v2.1.1
 

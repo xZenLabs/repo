@@ -1,4 +1,4 @@
-# v2.4.0
+# v2.4.0 · 2026-09-22
 
 ## New Features
 - **Automatic preset switching**: Switch between two presets (e.g. light by day, dark at night) on a fixed schedule or by KOReader's night mode. Includes a "Sync now" button and separate day/night pickers, in the Presets menu. Prevents sleep screen colours from being inverted if KOReader's night mode is enabled.
@@ -19,7 +19,7 @@
 
 For installation instructions, see the [README](https://github.com/pxlflux/customisablesleepscreen.koplugin/blob/main/README.md).
 
-# v2.3.0
+# v2.3.0 · 2026-09-11
 
 ## New Features
 - **Custom image background** - Added “Custom image” as a background type, letting you use a single image as your sleep screen background (instead of the single image in folder workaround that many users were using).
@@ -42,7 +42,7 @@ Thanks to the community for your contributions.
 
 For installation instructions, see the [README](https://github.com/pxlflux/customisablesleepscreen.koplugin/blob/main/README.md).
 
-# v2.2.0
+# v2.2.0 · 2026-05-09
 
 ## New Features
 
@@ -67,7 +67,7 @@ For installation instructions, see the [README](https://github.com/pxlflux/custo
 
 For installation instructions, see the [README](https://github.com/pxlflux/customisablesleepscreen.koplugin/blob/main/README.md).
 
-# v2.1.0
+# v2.1.0 · 2026-04-08
 
 This release fixes reported issues from v2 and adds user suggested features. 
 ## New Features
@@ -88,7 +88,7 @@ This release fixes reported issues from v2 and adds user suggested features.
 
 For installation instructions, see the [README](https://github.com/pxlflux/customisablesleepscreen.koplugin/blob/main/README.md).
 
-# v2.0.0
+# v2.0.0 · 2026-03-21
 
 Customisable Sleep Screen is now available as a KOReader plugin. This release replaces the original patch version with a plugin rewrite, making installation simpler and adding new features and fixes based on feedback from v1.
 

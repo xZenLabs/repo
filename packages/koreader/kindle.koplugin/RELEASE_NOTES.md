@@ -1,4 +1,4 @@
-# v0.0.10
+# v0.0.10 · 2026-10-01
 
 ### Fixed
 
@@ -6,7 +6,7 @@
 
 Thanks to @siddhartpai for the report and debugging help in #18.
 
-# v0.0.9
+# v0.0.9 · 2026-09-16
 
 ## v0.0.9
 
@@ -19,7 +19,7 @@ Thanks to @siddhartpai for the report and debugging help in #18.
 
 Thanks to @DerHerzog7 for the detailed report in #18.
 
-# v0.0.8
+# v0.0.8 · 2026-09-11
 
 **Full Changelog**: https://github.com/kaikozlov/kindle.koplugin/compare/v0.0.5...v0.0.8
 
@@ -35,7 +35,7 @@ python remains slow
 
 please make github issues for any problems you run into
 
-# v0.0.5
+# v0.0.5 · 2026-08-25
 
 **Full Changelog**: https://github.com/kaikozlov/kindle.koplugin/compare/v0.0.4...v0.0.5
 
@@ -51,7 +51,7 @@ python remains slow
 
 please make github issues for any problems you run into
 
-# v0.0.4
+# v0.0.4 · 2026-07-24
 
 v0.0.4 - Processing now works on older Kindle firmware
 

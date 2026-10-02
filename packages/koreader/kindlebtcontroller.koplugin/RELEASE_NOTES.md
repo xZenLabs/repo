@@ -1,12 +1,12 @@
-# v0.1.6
+# v0.1.6 · 2026-07-14
 
 Auto release version v0.1.6
 
-# v0.1.5
+# v0.1.5 · 2026-04-10
 
 Auto release version v0.1.5
 
-# v0.1.4
+# v0.1.4 · 2026-03-21
 
 # Features
 - Added instructions for the Bluetooth pairing process
@@ -22,7 +22,7 @@ Auto release version v0.1.5
 # 缺陷修复
 - 修复未映射设备码弹框导致触摸屏卡死问题
 
-# v0.1.3
+# v0.1.3 · 2026-02-16
 
 # Features
 Key Config and Action Selection dialogs now support paginated display, single-select and multi-select mode switching
@@ -38,7 +38,7 @@ Key Config and Action Selection dialogs now support paginated display, single-se
 # 缺陷修复
 - 修复系统按键码100xx未映射问题
 
-# v0.1.2
+# v0.1.2 · 2026-02-13
 
 # Fixes
 - Fixed the issue where incorrect key codes 10001 and 10002 were generated when unlocking the screen. Now, key events are correctly passed without invalid key codes causing interference.

@@ -1,4 +1,4 @@
-# v0.1.0
+# v0.1.0 · 2026-01-25
 
 # Life Tracker for KOReader v0.1.0
 

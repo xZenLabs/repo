@@ -1,4 +1,4 @@
-# v1.6.0
+# v1.6.0 · 2026-09-03
 
 ## [1.6.0](https://github.com/rameezk/rebind.koplugin/compare/v1.5.0...v1.6.0) (2026-09-03)
 
@@ -12,7 +12,7 @@
 
 * make the whole rebind picker scroll as one view ([#23](https://github.com/rameezk/rebind.koplugin/issues/23)) ([1df6b96](https://github.com/rameezk/rebind.koplugin/commit/1df6b96647621ffd76dab6725d9d1ccde50b2a76))
 
-# v1.5.0
+# v1.5.0 · 2026-07-31
 
 ## [1.5.0](https://github.com/rameezk/rebind.koplugin/compare/v1.4.0...v1.5.0) (2026-07-30)
 
@@ -27,7 +27,7 @@
 
 * make Hardcover lookups work in the macOS emulator ([#21](https://github.com/rameezk/rebind.koplugin/issues/21)) ([9a86da6](https://github.com/rameezk/rebind.koplugin/commit/9a86da65df74edddefa2a712f61e398f7df214b2))
 
-# v1.4.0
+# v1.4.0 · 2026-07-24
 
 ## [1.4.0](https://github.com/rameezk/rebind.koplugin/compare/v1.3.0...v1.4.0) (2026-07-24)
 
@@ -36,7 +36,7 @@
 
 * add genre ([#12](https://github.com/rameezk/rebind.koplugin/issues/12)) ([1fa3613](https://github.com/rameezk/rebind.koplugin/commit/1fa361396f25d14ffde7523fa030ed432360a962))
 
-# v1.3.0
+# v1.3.0 · 2026-07-23
 
 ## [1.3.0](https://github.com/rameezk/rebind.koplugin/compare/v1.2.0...v1.3.0) (2026-07-23)
 
@@ -45,7 +45,7 @@
 
 * allow for free text editing ([#7](https://github.com/rameezk/rebind.koplugin/issues/7)) ([6789b1e](https://github.com/rameezk/rebind.koplugin/commit/6789b1e0a978c02ef1b95e9d4001f5e06ad27600))
 
-# v1.2.0
+# v1.2.0 · 2026-07-23
 
 ## [1.2.0](https://github.com/rameezk/rebind.koplugin/compare/v1.1.0...v1.2.0) (2026-07-23)
 

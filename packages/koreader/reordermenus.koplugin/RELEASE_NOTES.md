@@ -1,4 +1,4 @@
-# v0.3
+# v0.3 · 2026-09-04
 
 Revamped architecture: custom submenus, tons of new tests, enhanced stability, and new mirroring functionality.
 
@@ -11,12 +11,12 @@ Revamped architecture: custom submenus, tons of new tests, enhanced stability, a
 - Disabling the plugin now restores stock menus; re-enabling restores custom layout.
 - Expanded compatibility and regression tests.
 
-# v0.2-beta
+# v0.2-beta · 2026-08-21
 
 Improved live menu refreshing and stability
 - Removed unavailable menu entries from the reorder screen
 - Existing and newly installed plugin items now appear automatically
 
-# v0.1-beta
+# v0.1-beta · 2026-08-21
 
 First release of the ReorderingMenus plugin. May be unstable: please submit any issues you encounter. Hope its useful!

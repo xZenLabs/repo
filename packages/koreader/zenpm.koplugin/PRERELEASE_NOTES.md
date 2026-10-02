@@ -1,23 +1,23 @@
-# v1.6.1-beta3
+# v1.6.1-beta3 · 2026-10-02
 
 ## What's Changed
 
 - Fix a bug matching version to GH tag in direct to github fetch
 - Update top menu tap zone
 
-# v1.6.1-beta2
+# v1.6.1-beta2 · 2026-09-20
 
 ## What's Changed
 
 - Fix a bug matching version to GH tag in direct to github fetch
 
-# v1.6.1-beta1
+# v1.6.1-beta1 · 2026-09-20
 
 ## What's Changed
 
 _No changelog entries for this version._
 
-# v1.6.0-beta29
+# v1.6.0-beta29 · 2026-09-17
 
 ## What's Changed
 
@@ -32,7 +32,7 @@ _No changelog entries for this version._
 - Bug fixes
 - Performance improvements
 
-# v1.6.0-beta28
+# v1.6.0-beta28 · 2026-09-17
 
 ## What's Changed
 

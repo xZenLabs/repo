@@ -1,4 +1,4 @@
-# v1.1.1
+# v1.1.1 · 2025-11-14
 
 ## Email to KOReader v1.1.1
 
@@ -16,7 +16,7 @@
 - Improved settings persistence code
 - Minor code cleanup, formatting fixes, and internal optimizations
 
-# v1.1.0
+# v1.1.0 · 2025-11-03
 
 ## Email to KOReader v1.1.0
 
@@ -35,7 +35,7 @@
 - Multi-line email header support
 - Enhanced logging and user notifications
 
-# v1.0.0
+# v1.0.0 · 2025-11-02
 
 ### Initial release with:
 

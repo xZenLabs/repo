@@ -1,4 +1,4 @@
-# 1.2
+# 1.2 · 2026-05-06
 
 **Full Changelog**: https://github.com/quanganhdo/plainui.koplugin/compare/1.1...1.2
 
@@ -14,7 +14,7 @@
 
   - Accessibility: Cover badge font size can now be customized with `plainui_badge_font_size`.
 
-# 1.1
+# 1.1 · 2026-05-05
 
 **Full Changelog**: https://github.com/quanganhdo/plainui.koplugin/compare/1.1...1.1
 
@@ -31,7 +31,7 @@
 - Series index badges now use #, e.g. #2.
 - Badge styling is more consistent and translucent across finished, progress, series index, and count badges.
 
-# 1.0
+# 1.0 · 2026-05-03
 
 Hello World!
 

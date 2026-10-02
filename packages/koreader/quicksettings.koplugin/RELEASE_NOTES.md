@@ -1,10 +1,10 @@
-# v1.3.0
+# v1.3.0 · 2026-07-24
 
 ### Added
 - Custom buttons: create, edit, and delete your own quick-settings buttons, with icon picker and action selector.
 - Plugin icons are automatically imported into KOReader's icon folder on startup, need to restar koreader.
 
-# v1.2.0
+# v1.2.0 · 2026-07-01
 
 <html>
 <body>
@@ -70,7 +70,7 @@ Return to File Browser | appbar.filebrowser
 
 <img width="400" alt="FileManager_2026-07-01_194755" src="https://github.com/user-attachments/assets/dcbaaa17-d2fb-47b9-9ad3-7b979c6454ee" />
 
-# v1.1.0
+# v1.1.0 · 2026-06-28
 
 <img width="400" alt="FileManager_2026-06-28_155701" src="https://github.com/user-attachments/assets/fd81fe93-760e-42f4-a835-bb36ac002dcd" />
 # Changelog
@@ -119,7 +119,7 @@ Nine new optional quick-settings buttons have been added, all disabled by defaul
 
 **Full Changelog**: https://github.com/renandeivison/quicksettings/compare/v1.1.0...v1.1.0
 
-# v1.0.0
+# v1.0.0 · 2026-06-20
 
 This is the first public release of the Quick Settings Plugin for KOReader, a hybrid rework that combines two excellent community projects into a single, cohesive menu panel.
 

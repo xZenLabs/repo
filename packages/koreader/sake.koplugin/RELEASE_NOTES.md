@@ -1,4 +1,4 @@
-# webapp/v2026.07.10.1
+# webapp/v2026.07.10.1 · 2026-07-10
 
 New release because a few DNS issues with the KOReader plugin have been resolved + Web E-Reader and Hardcover progress sync.
 
@@ -25,7 +25,7 @@ New release because a few DNS issues with the KOReader plugin have been resolved
 
 **Full Changelog**: https://github.com/Sudashiii/Sake/compare/webapp/v2026.04.04.4...webapp/v2026.07.10.1
 
-# webapp/v2026.04.04.4
+# webapp/v2026.04.04.4 · 2026-04-04
 
 I've added quite a lot of stuff the last weeks. Thanks for everyone who created an issue and reported bugs or suggested features!
 

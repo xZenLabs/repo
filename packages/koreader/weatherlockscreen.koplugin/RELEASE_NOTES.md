@@ -1,4 +1,4 @@
-# v1.0.0
+# v1.0.0 · 2026-09-19
 
 ## New Features
 
@@ -20,7 +20,7 @@ Going forward I will use the [semantic versioning system](https://semver.org/).
 
 **Full Changelog**: https://github.com/loeffner/WeatherLockscreen/compare/v0.9.7-beta.1...v1.0.0
 
-# v0.9.7-beta.1
+# v0.9.7-beta.1 · 2026-06-28
 
 ### This is a beta release.
 
@@ -50,7 +50,7 @@ Well, here we go:
 
 **Full Changelog**: https://github.com/loeffner/WeatherLockscreen/compare/v0.9.6-beta.2...v0.9.7-beta.1
 
-# v0.9.6-beta.2
+# v0.9.6-beta.2 · 2026-02-21
 
 ### This is a beta release.
 
@@ -69,7 +69,7 @@ Well, here we go:
 
 **Full Changelog**: https://github.com/loeffner/WeatherLockscreen/compare/v0.9.6-beta.1...v0.9.6-beta.2
 
-# v0.9.6-beta.1
+# v0.9.6-beta.1 · 2026-02-03
 
 ### This is a beta release.
 
@@ -108,7 +108,7 @@ Well, here we go:
 
 **Full Changelog**: https://github.com/loeffner/WeatherLockscreen/compare/v0.9.5-beta.1...v0.9.6-beta.1
 
-# v0.9.5-beta.1
+# v0.9.5-beta.1 · 2025-12-29
 
 ### This is a beta release.
 

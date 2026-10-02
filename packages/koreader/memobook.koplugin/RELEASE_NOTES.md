@@ -1,4 +1,4 @@
-# v1.3.0
+# v1.3.0 · 2026-09-22
 
 ### MemoBook v1.3.0
 - **Rename a memo** — Hold a memo in the Memo Book list and tap Rename to change its main word; notes and aliases stay with it, a word another memo in the book already uses is refused, and an alias of the memo itself simply becomes the new main word.
@@ -7,20 +7,20 @@
 
 - **Fixed: the Memo button disappeared from the dictionary pop-up** — The button was registered without a menu label, so KOReader's "Customize buttons" selector never listed it and silently dropped it from the saved layout the first time you sorted or toggled anything there; it is now listed, and the missing button is restored once on upgrade.
 
-# v1.2.0
+# v1.2.0 · 2026-07-25
 
 - show multiple notes as a scrollable list instead of buttons
 - remove alias by tapping it in a scrollable list
 - attach a selection to an existing memo as an alias
 
-# v1.1.0
+# v1.1.0 · 2026-05-17
 
 - support new KOReader dict API (PR #15184) with fallback to legacy hook
 
-# v1.0.3
+# v1.0.3 · 2026-03-22
 
 - fix: note not shown on alias
 
-# v1.0.2
+# v1.0.2 · 2025-11-07
 
 - document id added on export json

@@ -1,4 +1,4 @@
-# v0.4.0
+# v0.4.0 · 2026-09-24
 
 
 ### Added
@@ -18,7 +18,7 @@
 - No Goodreads requests until session cookies are saved (no error spam on
   first open).
 
-# v0.3.1
+# v0.3.1 · 2026-09-14
 
 
 ### Fixed
@@ -26,7 +26,7 @@
   “Network error: 202”. The plugin asks to refresh cookies, including
   `aws-waf-token`, the same way as an expired session.
 
-# v0.3.0
+# v0.3.0 · 2026-09-01
 
 
 ### Fixed
@@ -35,7 +35,7 @@
   retries once after `GET /`. Failed progress posts are throttled so they
   do not fire on every page turn.
 
-# v0.2.0
+# v0.2.0 · 2026-08-28
 
 
 ### Added
@@ -55,7 +55,7 @@
   is up but DHCP has not finished. Background sync waits for a real
   connection and retries once; a leftover network error is a 3s toast.
 
-# v0.1.0
+# v0.1.0 · 2026-08-27
 
 
 First public release: link a Goodreads edition to the open KOReader book,

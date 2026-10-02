@@ -1,4 +1,4 @@
-# 2.0b
+# 2.0b · 2026-06-11
 
 This is the public beta of the rewritten Frotz plugin.
 

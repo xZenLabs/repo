@@ -1,4 +1,4 @@
-# v1.0.1
+# v1.0.1 · 2026-08-04
 
 - Fix all-day events leaking into the next day in DST-observing zones
 
@@ -11,6 +11,6 @@
     matching the convention already used in calendar_view.lua's midnight()/
     addDays().
 
-# v1.0.0
+# v1.0.0 · 2026-07-10
 
  - initial release

@@ -1,4 +1,4 @@
-# v0.0.12
+# v0.0.12 · 2026-07-27
 
 ## [0.0.12](https://github.com/Euphoriyy/derainbowify.koplugin/compare/v0.0.11...v0.0.12) (2026-07-26)
 [![Github Downloads (by release)](https://img.shields.io/github/downloads/Euphoriyy/derainbowify.koplugin/v0.0.12/total.svg)](#)
@@ -9,7 +9,7 @@
 
 *Supported KOReader Versions: **v2026.07***
 
-# v0.0.11
+# v0.0.11 · 2026-07-08
 
 ## [0.0.11](https://github.com/Euphoriyy/derainbowify.koplugin/compare/v0.0.10...v0.0.11) (2026-07-07)
 [![Github Downloads (by release)](https://img.shields.io/github/downloads/Euphoriyy/derainbowify.koplugin/v0.0.11/total.svg)](#)
@@ -21,7 +21,7 @@
 
 *Supported KOReader Versions: **v2026.07 & v2026.03-200+ (nightly)***
 
-# v0.0.10
+# v0.0.10 · 2026-07-05
 
 ## [0.0.10](https://github.com/Euphoriyy/derainbowify.koplugin/compare/v0.0.9...v0.0.10) (2026-06-07)
 [![Github Downloads (by release)](https://img.shields.io/github/downloads/Euphoriyy/derainbowify.koplugin/v0.0.10/total.svg)](#)
@@ -32,7 +32,7 @@
 
 *Supported KOReader Version: **v2026.03***
 
-# v0.0.9
+# v0.0.9 · 2026-06-08
 
 ## [0.0.9](https://github.com/Euphoriyy/derainbowify.koplugin/compare/v0.0.8...v0.0.9) (2026-06-07)
 [![Github Downloads (by release)](https://img.shields.io/github/downloads/Euphoriyy/derainbowify.koplugin/v0.0.9/total.svg)](#)
@@ -46,7 +46,7 @@
 
 *Supported KOReader Version: **v2026.03***
 
-# v0.0.8
+# v0.0.8 · 2026-05-29
 
 ## [0.0.8](https://github.com/Euphoriyy/derainbowify.koplugin/compare/v0.0.7...v0.0.8) (2026-05-29)
 [![Github Downloads (by release)](https://img.shields.io/github/downloads/Euphoriyy/derainbowify.koplugin/v0.0.8/total.svg)](#)

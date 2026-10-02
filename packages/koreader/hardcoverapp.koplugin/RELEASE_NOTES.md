@@ -1,4 +1,4 @@
-# 0.4.0
+# 0.4.0 · 2026-04-05
 
 ## 0.4.0 (2026-04-26)
 
@@ -6,7 +6,7 @@
 
 * Added option to show a confirmation when changing a book's currently read status to reduce misclick issues
 
-# 0.3.1
+# 0.3.1 · 2026-02-08
 
 ## 0.3.1 (2026-02-18)
 
@@ -19,7 +19,7 @@
 * Fix page change gestures causing a refresh (even when there are no pages to navigate to) of the suggest a book, and
   book/edition linking dialogs
 
-# 0.3.0
+# 0.3.0 · 2026-01-24
 
 ## 0.3.0 (2026-01-24)
 
@@ -41,7 +41,7 @@ This was removed previously because of the lack of integration with KOReader. No
 * Fix page map crash when loading document formats that don't support page maps (like CBR)
 * Fix page map crash when document is out of range of the active page map
 
-# 0.2.0
+# 0.2.0 · 2025-11-22
 
 ## 0.2.0 (2025-11-22)
 
@@ -82,7 +82,7 @@ _Note: KOReader 2025.10 also adds stable page numbers based on a number of chara
 
 * Fix zip release directory structure
 
-# 0.0.13
+# 0.0.13 · 2025-09-20
 
 ## 0.1.3 (2025-09-10)
 

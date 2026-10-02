@@ -1,4 +1,4 @@
-# v1.8.0
+# v1.8.0 · 2026-09-03
 
 # Release v1.8.0 - 字号动态比例联动缩放 & KOBO 原生风格全屏自适应优化
 
@@ -31,7 +31,7 @@
 2. 解压并将 `readingfolio.koplugin` 文件夹整体放入设备的 `koreader/plugins/` 目录（覆盖旧文件）。
 3. 重启 KOReader 即可体验全新动态比例排版。
 
-# v1.7.0
+# v1.7.0 · 2026-08-31
 
 ## 阅笺 (Reading Folio) v1.7.0
 
@@ -74,7 +74,7 @@
 - **i18n**: sync 279 strings across `zh_CN` and `en` with 100% parity.
 - **test**: add `test_font_face_unscaled` invariant check to release verification toolchain.
 
-# v1.6.1
+# v1.6.1 · 2026-08-17
 
 # Release v1.6.1
 
@@ -92,7 +92,7 @@
 - **i18n Completion**：Added missing translations for applied preset notifications and cleaned up duplicate keys.
 - **Regression Specs**：Added `style_render_spec.lua` and `clock_refresh_spec.lua`.
 
-# v1.3.0
+# v1.3.0 · 2026-08-06
 
 # Release v1.3.0
 
@@ -114,6 +114,6 @@
 - **Input Validation & Feedback**: Added bounds checking and `Notification` error messages for custom inputs (font size deltas `-20` to `+20`, cover scale `0.00`–`1.00`, and card ratios).
 - **Metadata & Development Spec Alignment**: Completed `_meta.lua` tags and standardized development review specs (`DEVELOPMENT_SPEC.md`).
 
-# v1.2.0
+# v1.2.0 · 2026-08-02
 
 删除手势中多余项目

@@ -1,4 +1,4 @@
-# V2.1.1
+# V2.1.1 · 2025-11-23
 
 ## Panel Zoom Edition - v2.1.1 🔍
 
@@ -23,7 +23,7 @@ Download `mokuroreader-v2.1.1-panelzoom.zip`. Don't install both versions!
 ### Requirements
 - KOReader v2025.08 or higher
 
-# V2.1.0
+# V2.1.0 · 2025-11-23
 
 ## What's New in v2.1.0 🎉
 
@@ -54,7 +54,7 @@ Download `mokuroreader-v2.1.0-standard.zip` below, extract, and copy to your KOR
 - Popup is now non-modal, allowing dictionary to open on top
 - Same behavior as KOReader's footnotes for a familiar experience
 
-# V2.0.1
+# V2.0.1 · 2025-11-23
 
 ## Panel Zoom Edition
 
@@ -71,7 +71,7 @@ Indicators may be slightly offset due to mokuro detection accuracy. This is norm
 ### Installation
 Download `mokuroreader-v2.0.1-panelzoom.zip`. Don't install both versions!
 
-# V2.0.0
+# V2.0.0 · 2025-11-22
 
 ## What's New
 
@@ -87,4 +87,4 @@ See [CHANGELOG.md](CHANGELOG.md) for complete version history.
 ## Installation
 Download `mokuroreader.koplugin.zip` below and extract it to your KOReader plugins folder.
 
-# V1.0.0
+# V1.0.0 · 2025-11-10

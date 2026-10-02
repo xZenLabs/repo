@@ -1,4 +1,4 @@
-# v1.5.0
+# v1.5.0 · 2026-09-09
 
 
 ### Added
@@ -6,7 +6,7 @@
   - **Toast color** — background tint for toast notifications (default white).
   - **Calendar fill** — fill colour for streak days in the calendar (default stock gray).
 
-# v1.4.0
+# v1.4.0 · 2026-08-30
 
 
 ### Added
@@ -19,19 +19,19 @@
 ### Fixed
 - Skip Project Title footer integration when Project Title is missing, so uninstalling or renaming it no longer crash-loops KOReader ([#14](https://github.com/advokatb/readingstreak.koplugin/issues/14)).
 
-# v1.3.7
+# v1.3.7 · 2026-08-05
 
 
 ### Fixed
 - Fixed reading time continuing to run when the device was suspended (thanks to @jandamm, #17).
 
-# v1.3.6
+# v1.3.6 · 2026-05-27
 
 
 ### Added
 - Added KOReader uninstall hook `deletePluginSettings()` to remove plugin settings when users check **"Also delete plugin settings"** in plugin management ([#15](https://github.com/advokatb/readingstreak.koplugin/issues/15)).
 
-# v1.3.5
+# v1.3.5 · 2026-04-06
 
 
 ### Fixed

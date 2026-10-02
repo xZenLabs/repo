@@ -1,4 +1,32 @@
-# 26.9.29-beta
+# 26.10.2-beta3 · 2026-10-02
+
+## What's Changed
+
+This release focuses on memory optimizations and stability improvements to keep X-Ray running smoothly, especially on older or low-memory e-ink devices like earlier Kindles and Kobos.
+
+* **Low-memory protection**: X-Ray now dynamically monitors available device RAM. If system memory is running critically low, silent background tasks (like automatic chapter fetches and weekly update checks) will quietly step aside to prevent crashes or freezes. Manual requests from the menu still work as usual.
+* **Smoother book opening**: Background tasks and automatic unit scans are now deferred for a few moments after opening a book. This gives KOReader the breathing room it needs to render pages and load fonts without competing for CPU and RAM.
+* **Unit scanner memory cleanup**: Searching an entire book for units now cleans up temporary search tables in stages rather than holding them in memory, noticeably lowering peak memory usage during book scans.
+* **Leaner AI data handling**: Background network requests now clean up raw downloaded buffers and temporary structures immediately after parsing book details.
+
+**Full Changelog**: https://github.com/ultimatejimmy/xray.koplugin/compare/26.10.2-beta...26.10.2-beta3
+
+# 26.10.2-beta · 2026-10-02
+
+## What's Changed
+* Add Slovak and Czech translations with declension-aware lookups by @misko903 in https://github.com/ultimatejimmy/xray.koplugin/pull/138
+
+## Bug Fixes
+- Fix #145 
+- Fix #144 
+- Fix #143 
+
+## New Contributors
+* @misko903 made their first contribution in https://github.com/ultimatejimmy/xray.koplugin/pull/138
+
+**Full Changelog**: https://github.com/ultimatejimmy/xray.koplugin/compare/26.9.30.1...26.10.2-beta
+
+# 26.9.29-beta · 2026-09-29
 
 - Fix series bug
 - Fix alias/lookup bug 
@@ -6,7 +34,7 @@
 
 **Full Changelog**: https://github.com/ultimatejimmy/xray.koplugin/compare/26.9.23-beta...26.9.29-beta
 
-# 26.9.23-beta
+# 26.9.23-beta · 2026-09-23
 
 - fix claude bugs
 - update series logic
@@ -14,7 +42,7 @@
 
 **Full Changelog**: https://github.com/ultimatejimmy/xray.koplugin/compare/26.9.17...26.9.23-beta
 
-# 26.9.15-beta
+# 26.9.15-beta · 2026-09-15
 
 ### What's New
 
@@ -23,20 +51,3 @@
 * **Cleaner Gestures**: Removed unnecessary unit scanning and unit converter actions from the dispatcher gesture list to declutter your gesture configuration options.
 
 **Full Changelog**: https://github.com/ultimatejimmy/xray.koplugin/compare/26.9.13-beta3...26.9.15-beta
-
-# 26.9.13-beta3
-
-### What's New: Address #114 
-
-- **Smarter Fetch Menu**: The main menu now adapts based on whether you've fetched data for your book yet. If a book has no X-Ray data, the menu shows **Fetch X-Ray Data** to run a clean first-time analysis. Once data is saved, it switches to **Update X-Ray Data (Merge)** for your regular reading updates.
-- **Rebuild X-Ray Data**: Added a **Rebuild X-Ray Data (Clean Fetch)** option under *Settings → Maintenance*. If cached events or character notes ever get messy or out of sync, you can completely refresh the book's data with a single tap (with a confirmation step) without losing your saved image favorites or series settings.
-- **Quick Fetch from Empty Screens**: Opening Timeline, Locations, or Historical Figures on a book without any X-Ray data will now ask if you'd like to fetch data from AI right then and there, rather than just giving you an empty screen notice.
-
-
-**Full Changelog**: https://github.com/ultimatejimmy/xray.koplugin/compare/26.9.13-beta2...26.9.13-beta3
-
-# 26.9.13-beta2
-
-- Add page turn button support
-
-**Full Changelog**: https://github.com/ultimatejimmy/xray.koplugin/compare/26.9.13-beta...26.9.13-beta2

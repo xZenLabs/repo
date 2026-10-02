@@ -1,9 +1,9 @@
-# 1.3.0
+# 1.3.0 · 2026-08-28
 
 - Adds Show QR functionality
 - Adds an option to show QR Code on start
 
-# 1.2.0
+# 1.2.0 · 2026-08-16
 
 Sorry for the delay, everyone! 🙏 This release is now stable and ready to go. Thanks for your patience — full changelog below.
 
@@ -31,14 +31,14 @@ Sorry for the delay, everyone! 🙏 This release is now stable and ready to go. 
 >
 > These changes make FilebrowserPlus safer (server does not stay exposed indefinitely), faster to control from the main menu, and clearer to use thanks to dynamic status feedback.
 
-# 1.1.0
+# 1.1.0 · 2025-11-18
 
 - Bugfix for #4
 
-# 1.0.3
+# 1.0.3 · 2025-11-17
 
 - __meta.lua_ syntax correction(added comma)
 
-# 1.0.2
+# 1.0.2 · 2025-11-14
 
 - A minor update adding version field in __meta.lua_ for the compatibility with KOReader Updates Manager.

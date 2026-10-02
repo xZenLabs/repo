@@ -1,4 +1,4 @@
-# v0.4
+# v0.4 · 2026-05-05
 
 ## New Features
 * **Annotations viewable from within book** – A new menu entry for current-book annotations makes it easier to access and manage your notes from within a book.
@@ -21,7 +21,7 @@
 * **Annotation Gathering** – Now also uses KOReader's cached book information DB for gathering annotation which should cover most use cases.
 * **Menu** – Adjusted menus so they are a bit more organised.
 
-# v0.3
+# v0.3 · 2026-02-03
 
 ## What's Changed
 * Author name now shows up in annotation info and details
@@ -38,10 +38,10 @@
 
 **Full Changelog**: https://github.com/xblain/annotationsviewer.koplugin/compare/v0.2...v0.3
 
-# v0.2
+# v0.2 · 2026-01-31
 
 **Full Changelog**: https://github.com/xblain/annotationsviewer.koplugin/compare/v0.1...v0.2
 
-# v0.1
+# v0.1 · 2026-01-09
 
 First release

@@ -1,4 +1,4 @@
-# v0.31.1
+# v0.31.1 · 2026-09-26
 
 ## Docker Image
 ```bash
@@ -14,7 +14,7 @@ docker pull tumetsu/crossbill:v0.31.1
 
 **Full Changelog**: https://github.com/Crossbill-App/crossbill-web/compare/v0.31.0...v0.31.1
 
-# v0.31.0
+# v0.31.0 · 2026-09-26
 
 ## Release notes
 - You can now upload epub files via web ui from Library page. So technically you don't need Koreader to benefit from Crossbill if you use web reader :tada: 
@@ -47,7 +47,7 @@ docker pull tumetsu/crossbill:v0.31.0
 
 **Full Changelog**: https://github.com/Crossbill-App/crossbill-web/compare/v0.30.1...v0.31.0
 
-# v0.30.1
+# v0.30.1 · 2026-09-21
 
 ## Docker Image
 ```bash
@@ -64,7 +64,7 @@ docker pull tumetsu/crossbill:v0.30.1
 
 **Full Changelog**: https://github.com/Crossbill-App/crossbill-web/compare/v0.30.0...v0.30.1
 
-# v0.30.0
+# v0.30.0 · 2026-09-20
 
 # Release 0.30.0 - Web reader update
 <img width="600" alt="image" src="https://github.com/user-attachments/assets/0e2884a1-ba70-42e7-a5f7-b9f7d328478e" />
@@ -135,7 +135,7 @@ docker pull tumetsu/crossbill:v0.30.0
 
 **Full Changelog**: https://github.com/Crossbill-App/crossbill-web/compare/v0.29.0...v0.30.0
 
-# v0.29.0
+# v0.29.0 · 2026-09-06
 
 Major UI changes. New landing page and library page, sessions page replaced by statistics page in books, lots of minor UI/UX consistency fixes etc.
 

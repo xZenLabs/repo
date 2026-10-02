@@ -1,4 +1,4 @@
-# test-build
+# test-build · 2026-07-25
 
 **Unofficial test build** — full asset set from an untagged CI run, for testing only.
 
@@ -11,7 +11,7 @@
 Assets are reconciled in place (the tag may point at an older commit; `source` above is authoritative).
 Official releases: see [latest release](../../releases/latest).
 
-# data-snapshot
+# data-snapshot · 2026-07-20
 
 Rolling data snapshot — the pinned upstream data CI builds from.
 

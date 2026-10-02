@@ -1,4 +1,4 @@
-# v0.1.1
+# v0.1.1 · 2026-05-07
 
 # Changelog
 
@@ -97,7 +97,7 @@ This release is a maintenance and refactoring release focused on reliability, cl
 - 如果从很早期实验版本升级后，同步或认证表现异常，请清除旧的 `readeck.lua` 插件配置并重新配置。
 - 实验性子进程下载默认关闭。除非你正在专门测试该后端在自己设备/服务器上的表现，否则建议保持关闭。
 
-# v0.1.0
+# v0.1.0 · 2026-05-07
 
 ## Changelog
 

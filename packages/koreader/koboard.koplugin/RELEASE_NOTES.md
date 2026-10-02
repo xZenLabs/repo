@@ -1,4 +1,4 @@
-# v0.6.5
+# v0.6.5 · 2026-08-15
 
 ## Android keyboard auto-capitalization
 
@@ -10,7 +10,7 @@ capitalization mode at the current cursor position. Keyboards can therefore
 capitalize the first letter of an empty field and the first letter after a
 sentence boundary while continuing to respect the user's keyboard preference.
 
-# v0.6.4
+# v0.6.4 · 2026-08-15
 
 ## Native keyboard dialog layout fix
 
@@ -30,7 +30,7 @@ This adapts automatically to screen resolution, orientation, suggestion rows,
 and the height of a normally docked keyboard. Floating and split keyboards do
 not reserve one continuous bottom region and are not covered by this fix.
 
-# v0.6.3
+# v0.6.3 · 2026-07-27
 
 ## Important updater repair
 
@@ -80,11 +80,11 @@ release and install it manually once.
 After v0.6.3 is installed, KOBoard's updater contains the repaired,
 staged-installation path and can be used for subsequent releases.
 
-# v0.6.2
+# v0.6.2 · 2026-07-27
 
 Fixes stale Android IME input snapshots carrying text or pending backspaces into a newly opened editor. KOBoard now clears pending input state when a keyboard session closes and before the next session begins.
 
-# v0.6.1
+# v0.6.1 · 2026-07-18
 
 Fixes KOReader Text Editor not recognizing changes made through KOBoard.
 

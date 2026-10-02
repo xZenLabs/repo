@@ -1,4 +1,4 @@
-# v0.0.13
+# v0.0.13 · 2026-08-24
 
 **Full Changelog**: https://github.com/kaikozlov/acsm.koplugin/compare/v0.0.12...v0.0.13
 
@@ -20,7 +20,7 @@ paths. Processing is now verified end-to-end against Adobe's full public sample 
 
 See README for usage instructions.
 
-# v0.0.12
+# v0.0.12 · 2026-07-31
 
 **Full Changelog**: https://github.com/kaikozlov/acsm.koplugin/compare/v0.0.11...v0.0.12
 
@@ -40,7 +40,7 @@ See README for usage instructions.
 
 See README for usage instructions.
 
-# v0.0.11
+# v0.0.11 · 2026-07-27
 
 **Full Changelog**: https://github.com/kaikozlov/acsm.koplugin/compare/v0.0.10...v0.0.11
 
@@ -61,7 +61,7 @@ See README for usage instructions.
 
 See README for usage instructions.
 
-# v0.0.10
+# v0.0.10 · 2026-07-16
 
 **Full Changelog**: https://github.com/kaikozlov/acsm.koplugin/compare/v0.0.9...v0.0.10
 
@@ -82,7 +82,7 @@ See README for usage instructions.
 
 See README for usage instructions.
 
-# v0.0.9
+# v0.0.9 · 2026-06-16
 
 **Full Changelog**: https://github.com/kaikozlov/acsm.koplugin/compare/v0.0.8...v0.0.9
 

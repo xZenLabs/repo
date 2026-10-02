@@ -1,4 +1,4 @@
-# v0-h264-continuous-decode-1
+# v0-h264-continuous-decode-1 · 2026-07-19
 
 ## Install
 
@@ -18,7 +18,7 @@ See [README](https://github.com/5kxh2dxqmd-afk/kindle-koreader-airplay/blob/main
 
 **Full Changelog**: https://github.com/5kxh2dxqmd-afk/kindle-koreader-airplay/compare/v0-mtk-waveform-fix-1...v0-h264-continuous-decode-1
 
-# v0-mtk-waveform-fix-1
+# v0-mtk-waveform-fix-1 · 2026-07-19
 
 ## Install
 
@@ -38,7 +38,7 @@ See [README](https://github.com/5kxh2dxqmd-afk/kindle-koreader-airplay/blob/main
 
 **Full Changelog**: https://github.com/5kxh2dxqmd-afk/kindle-koreader-airplay/compare/v0-refresh-abi-probe-1...v0-mtk-waveform-fix-1
 
-# v0-refresh-abi-probe-1
+# v0-refresh-abi-probe-1 · 2026-07-19
 
 ## Install
 
@@ -58,7 +58,7 @@ See [README](https://github.com/5kxh2dxqmd-afk/kindle-koreader-airplay/blob/main
 
 **Full Changelog**: https://github.com/5kxh2dxqmd-afk/kindle-koreader-airplay/compare/common...v0-refresh-abi-probe-1
 
-# v0-marker-protocol-2
+# v0-marker-protocol-2 · 2026-07-14
 
 ## Install
 
@@ -78,4 +78,4 @@ See [README](https://github.com/5kxh2dxqmd-afk/kindle-koreader-airplay/blob/main
 
 **Full Changelog**: https://github.com/5kxh2dxqmd-afk/kindle-koreader-airplay/compare/v0-marker-protocol-1...v0-marker-protocol-2
 
-# common
+# common · 2026-07-14

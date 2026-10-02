@@ -1,4 +1,4 @@
-# v0.6.1
+# v0.6.1 · 2026-08-19
 
 First public release of Later Thoughts.
 

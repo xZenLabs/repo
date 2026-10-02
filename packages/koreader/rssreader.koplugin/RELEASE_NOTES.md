@@ -1,4 +1,4 @@
-# v1.18.0
+# v1.18.0 · 2026-09-27
 
 ### New
 
@@ -16,7 +16,7 @@
 - Leaving the RSS list now closes the article that was open under it, so you're no longer stuck going back and forth between the two.
 - Two articles opened quickly one after another no longer break each other's images.
 
-# v1.17.2
+# v1.17.2 · 2026-09-22
 
 ## v1.17.2 — Designed EPUB covers
 
@@ -59,7 +59,7 @@ the plugin falls back to that automatically.
   feed, and see the star in the list.
 - **FreshRSS 404 fix** — the error that hid every feed on some servers is gone.
 
-# v1.17.1
+# v1.17.1 · 2026-09-21
 
 
 ## v1.17.0
@@ -98,7 +98,7 @@ the plugin falls back to that automatically.
   Instaparser and rate-limited on the free plan, so listing Instaparser first
   is usually the better default.
 
-# v1.17.0
+# v1.17.0 · 2026-09-21
 
 ## What's new
 
@@ -111,7 +111,7 @@ the plugin falls back to that automatically.
 - **Fixed: FreshRSS showed no feeds.** Opening a feed or folder returned a 404,
   which left the feed list empty. Feed and folder browsing works again.
 
-# v1.16.0
+# v1.16.0 · 2026-08-22
 
 ## Better book metadata for saved EPUBs
 

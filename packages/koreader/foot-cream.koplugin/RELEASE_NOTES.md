@@ -1,16 +1,16 @@
-# v1.8.3
+# v1.8.3 · 2026-09-08
 
 If KOReader's language was set to Russian, Ukrainian or Welsh, Footcream never appeared at all — it looked like it was not installed. That is fixed. The plugin was tripping over its own translation file for those three languages and failing to start, which is why 1.6.0 was the last version that worked for those readers.
 
 Also fixed (thank you for the flagging!): when a book already gives both units, Footcream now leaves it alone, so "12 pounds (5.5 kilograms)" no longer gains a third number. Quotation marks in web articles and code listings are no longer mistaken for inch marks, and a bid at an auction is read as money rather than weight.
 
-# v1.8.2
+# v1.8.2 · 2026-08-20
 
 Footcream was mistaking quotation marks for foot marks, so quoted numbers turned into measurements — `'18'` on a label became 5.5 m. That's now fixed in nearly every case, and no real measurements were lost along the way.
 
 Also fixed: `6' 4"` is read as one height instead of two, page numbers in indexes and endnotes are no longer read as sizes, big numbers like "one hundred and eight million" are no longer split in two, and phrases like "one and one-half inches" now get underlined in full.
 
-# v1.8.1
+# v1.8.1 · 2026-08-19
 
 Two fixes, both about Footcream doing things you didn't ask for.
 
@@ -26,7 +26,7 @@ A book converted by an earlier version was interrupted on opening with a questio
 
 That now only happens with **Auto-convert when opening a new book** switched on, which is the setting that says "rewrite my books without asking". With it off, an already-converted book simply opens, keeping the conversions it has. "Rescan book" still refreshes one whenever you want.
 
-# v1.8.0
+# v1.8.0 · 2026-08-18
 
 Scanning a book is roughly four times faster, and converting one asks its question before it starts rather than after.
 
@@ -63,7 +63,7 @@ Still 30 languages, now including this release's new wording. Hungarian has had 
 
 Cache version 64 → 67; already-scanned books rescan themselves once on open.
 
-# v1.7.0
+# v1.7.0 · 2026-08-11
 
 Thank you for all the errors/flags you've sent in! The conversion and filtering is now much improved thanks to that. Please keep doing that. 
 

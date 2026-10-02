@@ -1,8 +1,8 @@
-# v1.3.0
+# v1.3.0 · 2026-05-12
 
 - adaptive spaced repetition algorithm added
 
-# v1.2.0
+# v1.2.0 · 2026-04-01
 
 
 1. **Delete button on study screen**
@@ -44,10 +44,10 @@
    
  7. **Make rate buttons tappable anywhere in their column area, not just the button itself**
 
-# v1.1.0
+# v1.1.0 · 2026-02-15
 
 - export as md
 
-# v1.0.0
+# v1.0.0 · 2026-02-15
 
 - initial release

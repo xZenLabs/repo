@@ -1,4 +1,4 @@
-# v2.0.1
+# v2.0.1 · 2026-07-24
 
 ## Covers should now extract automatically
 
@@ -8,7 +8,7 @@ Covers are now extracted on demand when they're missing. The plugin previously o
 
 * "Check for updates" failed with a redirect error and could never find new versions
 
-# v2.0
+# v2.0 · 2026-07-23
 
 ## Yearly overview
 
@@ -28,4 +28,4 @@ Both the monthly header and the yearly overview show three stat slots you choose
 * Settings reorganised into **Monthly calendar** and **Yearly overview** groups
 * Fixed: some cover rendering issues
 
-# v1.0.0
+# v1.0.0 · 2026-07-02

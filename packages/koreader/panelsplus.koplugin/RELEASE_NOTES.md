@@ -1,4 +1,4 @@
-# v1.4.0
+# v1.4.0 · 2026-09-12
 
 <img width="1578" height="840" alt="image" src="https://github.com/user-attachments/assets/a0765887-4b37-4169-8588-902db0aecd89" />
 
@@ -264,7 +264,7 @@ In case you downloaded Panels+ through a package manager, uninstall it and insta
 
 You can download any zip, both are Identical. The canonical zip is `panels_plus.koplugin.zip`, but kept `panels_plus-1.4.0.zip` for compatibility in ZenPM database's plugin metadata.
 
-# v1.3.0
+# v1.3.0 · 2026-08-20
 
 <img width="100%" alt="Panels+ v1.3.0 banner" src="https://github.com/user-attachments/assets/658897e4-965f-4746-998e-226895e6697f" />
 
@@ -449,7 +449,7 @@ Copy `panels_plus.koplugin` over your existing folder and restart KOReader. Your
 
 - KristanLaimon
 
-# v1.2.0
+# v1.2.0 · 2026-07-31
 
 <img width="3168" height="1344" alt="final" src="https://github.com/user-attachments/assets/bea7ff8b-c7c3-4a24-86c1-b76c89a808e7" />
 
@@ -513,7 +513,7 @@ Copy `panels_plus.koplugin` over your existing folder and restart KOReader. Your
 
 Thanks for using PanelsPlus+, any bug you found, pls create an Issue and I'll fix it ASAP 👍🏻.
 
-# v1.0.0-RC5
+# v1.0.0-RC5 · 2026-07-26
 
 <img width="1923" height="817" alt="Panels+ Release Candidate 5 banner" src="https://github.com/user-attachments/assets/14ad347d-845b-42fb-a4e5-72efb34c428b" />
 
@@ -639,7 +639,7 @@ Copy `panels_plus.koplugin` over your existing folder and restart KOReader. Your
 
 - KristanLaimon
 
-# v1.0.0-RC4
+# v1.0.0-RC4 · 2026-05-23
 
 <img width="1922" height="818" alt="Panels+ Release Candidate 4 banner" src="https://github.com/user-attachments/assets/0377fbfc-baa2-4e01-bd22-acaad0b71871" />
 

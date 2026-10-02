@@ -1,4 +1,4 @@
-# v1.2.0
+# v1.2.0 · 2026-08-27
 
 ### Playground — faster, and it stays where you put it
 
@@ -8,7 +8,7 @@
 - Turning a page while looking at *before*, or at both halves, keeps you there
   instead of dropping back to the new style.
 
-# v1.1.0
+# v1.1.0 · 2026-08-27
 
 ## Playground
 
@@ -22,6 +22,6 @@ Try style changes without touching the book.
 - **Memory-aware.** How many pages one render covers is sized from what the device has free, and a playground that will not fit is refused with a message rather than risking a crash.
 - **Not available inside the playground:** typography & hyphenation, header & footer, and the book's own style tweak — they change the live book and cannot be held back.
 
-# v1.0.0
+# v1.0.0 · 2026-08-26
 
 - initial release

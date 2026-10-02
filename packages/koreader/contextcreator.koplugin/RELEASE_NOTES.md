@@ -1,4 +1,4 @@
-# v0.1.4-beta
+# v0.1.4-beta · 2026-06-24
 
 Large amount of bug fixes, quality of life updates and new features. Far more polished now! I plan to upgrade the graph visualisation in the next release but here are the changes for this one:
 
@@ -28,7 +28,7 @@ Webapp:
 - Reorganisation of file structure in the repo for frontend stuff which was much needed
 - Fixes to attaching imported jsons to your own books
 
-# v0.1.3-alpha
+# v0.1.3-alpha · 2026-06-22
 
 Within KOreader:
 - Reworked windows and buttons to be more responsive to smaller screens

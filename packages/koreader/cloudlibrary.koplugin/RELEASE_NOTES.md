@@ -1,11 +1,11 @@
-# v1.4.6
+# v1.4.6 · 2026-09-29
 
 ## 更新说明
 - 修复坚果云 WebDAV 750 个文件上限导致云端书籍列表获取不完整的问题
 - 长按书籍菜单新增「上传元数据(CL) / 下载元数据(CL)/ 上传书籍(CL)」操作
 - 选择模式 Plus 菜单新增批量「上传元数据(CL) / 下载元数据(CL) / 上传书籍(CL)」操作
 
-# v1.4.5
+# v1.4.5 · 2026-09-08
 
 ## 更新说明
 - 适应bookshelf插件：在bookshelf书架页面执行手势批量操作可自动进入书架的选择模式并获取选中书籍
@@ -18,7 +18,7 @@
 - Optimization: Repaint the progress bar once a second on non-touch Kindles to improve download progress feedback
 - Improved Chinese translations
 
-# v1.4.4
+# v1.4.4 · 2026-08-16
 
 ## 更新说明 
 
@@ -44,7 +44,7 @@
 
 Thanks to @iav  for contributions to improving the K3 device experience.
 
-# v1.4.3
+# v1.4.3 · 2026-07-06
 
 ## What's Changed
 
@@ -52,7 +52,7 @@ Thanks to @iav  for contributions to improving the K3 device experience.
 - Optimized gesture registration: merged reader/filemanager paired gestures into unified general gestures
 - Remove logger.info
 
-# v1.4.2
+# v1.4.2 · 2026-06-29
 
 ## What's Changed
 

@@ -1,4 +1,4 @@
-# v2026.08.31.1
+# v2026.08.31.1 · 2026-08-31
 
 
 ### Fixed
@@ -17,7 +17,7 @@
 9b3e5e3 release: v2026.08.31.1
 8485847 fix: no total download timeout by default; configurable timeouts in Settings
 
-# v2026.08.31
+# v2026.08.31 · 2026-08-31
 
 
 ### Added
@@ -43,7 +43,7 @@ fdb48d5 feat(core): retry transient failures across the API on flaky connections
 80abd8b refactor(views): decompose the chapter picker onto pure modules; UX & i18n fixes
 d41ba02 refactor(core): pure domain/API modules + robust, deterministic download pipeline
 
-# v2026.06.22
+# v2026.06.22 · 2026-06-22
 
 
 First public release.

@@ -1,4 +1,4 @@
-# 3.0.1
+# 3.0.1 · 2026-09-30
 
 Fixes a small bug on the twine engine of previous release.
 
@@ -24,7 +24,7 @@ Frots integrates now with these custom launchers: you can add *Frotz* as a homes
 
 Also check out the new [**Beginner's tutorial for IF games**](https://github.com/kbarni/frotz.koplugin/blob/main/TUTORIAL.md)
 
-# 3.0
+# 3.0 · 2026-09-28
 
 This release adds support for **Twine** games. This is the most popular category of interactive fiction for the last 10 years: as these are more choice-based games, they are easier to create and to play. Basically they don't need any typing.
 
@@ -44,7 +44,7 @@ Frots integrates now with these custom launchers: you can add *Frotz* as a homes
 
 Also check out the new [**Beginner's tutorial for IF games**](https://github.com/kbarni/frotz.koplugin/blob/main/TUTORIAL.md)
 
-# 2.3
+# 2.3 · 2026-09-15
 
 Frotz 2.3 adds a game browser and downloader using IFDB database.
 
@@ -52,7 +52,7 @@ Frotz 2.3 adds a game browser and downloader using IFDB database.
 - *Search…* by title or author, or with IFDB filters such as tag:horror, author:"Emily Short", rating:4-, playtime:-1h
 - *Tap a game* for its description, rating, play time and tags, its cover, and Download. Zip files are unpacked automatically; the game is saved to the download folder (default koreader/ifgames/<game title>/) and can be started right away
 
-# 2.2
+# 2.2 · 2026-09-02
 
 **Frotz now has basic image support.**
 
@@ -62,6 +62,6 @@ It only supports story related images, not decorative images (like text separato
 
 You can test it with Everybody dies (several images) or Violet or Lost pig (cover image)
 
-# 2.1
+# 2.1 · 2026-06-23
 
 This release fixes the use of Bluetooth keyboard with Frotz.

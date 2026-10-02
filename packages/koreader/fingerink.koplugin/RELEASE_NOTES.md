@@ -1,4 +1,4 @@
-# v0.2.1
+# v0.2.1 · 2026-08-31
 
 ## What's Changed
 * Automate plugin ZIP assets on releases by @SMUsamaShah in https://github.com/SMUsamaShah/fingerink.koplugin/pull/7
@@ -7,7 +7,7 @@
 
 **Full Changelog**: https://github.com/SMUsamaShah/fingerink.koplugin/compare/0.2...v0.2.1
 
-# 0.2
+# 0.2 · 2026-08-30
 
 ## What's Changed
 * Stop the toolbar swallowing input meant for the reader and menus by @SMUsamaShah in https://github.com/SMUsamaShah/fingerink.koplugin/pull/1

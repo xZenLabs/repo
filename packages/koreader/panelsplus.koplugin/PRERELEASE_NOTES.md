@@ -1,4 +1,4 @@
-# v1.5.0-nightly
+# v1.5.0-nightly · 2026-09-21
 
 This is the road-map for next update which I'm planning to name `Texty-Texty`, being the main focus to improve OCR for dictionary-lookups and translations and all text-features related to mangas/comics.
 
@@ -80,7 +80,7 @@ This is a build including *D1*, *D2* and *D4* (read previous section), featuring
 
 If you want to have all D# like features, you can follow the [build instructions](https://github.com/KristanLaimon/PanelsPlus#%EF%B8%8F-building-from-source) to test these unreleased v1.5 features, not guaranteed to be stable though due to the Nightly builds nature, but you will have all the cutting edge features from Panels+!
 
-# v1.4.0-nightly
+# v1.4.0-nightly · 2026-09-06
 
 Hello fellas, this time, it's a nightly build release. Including some fixes for bugs found thanks to @sukhmeetsingh170200 and other ones I found myself and translations!. Why not a full release? well, normally I test the plugin many days myself until I found it stable and pleasant to use but wanted to release these meanwhile I'm battle-testing this 1.4.0 version. 
 

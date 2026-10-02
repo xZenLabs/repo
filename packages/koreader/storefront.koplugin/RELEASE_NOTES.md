@@ -1,4 +1,12 @@
-# 26.10.1
+# 26.10.2 · 2026-10-02
+
+- Address memory issues with lower powered devices
+- Add check for RB catalog to not download/refresh if there are no changes
+- fix bug in rating system
+
+**Full Changelog**: https://github.com/ultimatejimmy/storefront.koplugin/compare/26.10.1...26.10.2
+
+# 26.10.1 · 2026-10-01
 
 ## What's new
 - Add Readerbackdrop as an additional source for screensavers, open the filter dialog to change the sources
@@ -13,13 +21,13 @@
 
 **Full Changelog**: https://github.com/ultimatejimmy/storefront.koplugin/compare/26.9.25.1...26.10.1
 
-# 26.9.25.1
+# 26.9.25.1 · 2026-09-25
 
 - Fix bug with blueprint on Installed tab for some devices
 
 **Full Changelog**: https://github.com/ultimatejimmy/storefront.koplugin/compare/26.9.25...26.9.25.1
 
-# 26.9.25
+# 26.9.25 · 2026-09-25
 
 ## What's Changed
 
@@ -35,7 +43,7 @@
 
 **Full Changelog**: https://github.com/ultimatejimmy/storefront.koplugin/compare/26.9.15...26.9.25
 
-# 26.9.15
+# 26.9.15 · 2026-09-15
 
 ## What's Changed
 
@@ -45,15 +53,3 @@
 - **Screensavers refresh**: Triggering a catalog refresh now automatically updates the screensavers catalog as well, ensuring you always see the latest additions without needing extra steps.
 
 **Full Changelog**: https://github.com/ultimatejimmy/storefront.koplugin/compare/26.9.9...26.9.15
-
-# 26.9.9
-
-## What's Changed
-
-* **Performance and memory optimizations**: Overhauled background handling and memory usage across catalog browsing, settings, and ratings to keep things fast and prevent out-of-memory crashes on resource-constrained e-readers.
-* **Patch installation and removal fix**: Fixed a bug where installing or removing patches would fail to apply cleanly or not update status properly in the UI.
-* **Improved update checker**: Refined the update checking routine so checking for new releases is faster, smoother, and more reliable.
-* **Pre-release tracking in catalog**: The catalog now stores the latest pre-release versions so that pre-release update checks can pull accurate version data without extra lookups.
-* **Restart fix for Kobo devices**: Fixed an issue where tapping the restart button after updates or installs caused a freeze on Kobo hardware.
-
-**Full Changelog**: https://github.com/ultimatejimmy/storefront.koplugin/compare/26.9.3...26.9.9

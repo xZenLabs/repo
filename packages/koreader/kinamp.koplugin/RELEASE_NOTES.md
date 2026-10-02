@@ -1,4 +1,4 @@
-# 3.0.0
+# 3.0.0 · 2026-08-25
 
 KinAMP3 is a huge update of this application:
 
@@ -14,7 +14,7 @@ On Kindles it is included in the **KindleTweaks KPM** repository. Read the docum
 
 **UPDATE 8. sept:** Release file fixed (added missing libraries)
 
-# 3.0beta
+# 3.0beta · 2026-08-13
 
 This is a huge update of KinAMP. The main feature is the completely new Koreader plugin interface. For quick access, assign it to the lower right corner tap in the *Gesture manager*. 
 
@@ -25,14 +25,14 @@ It has many new features, the main ones are listed below:
 - Radio - Station metadata decoded for ICY compatible stations
 - Koreader - Completely new interface, with floating player window; no more menu access; with Playlist and Radio editor
 
-# 2.2
+# 2.2 · 2026-08-03
 
 **Changelog:**
 - **Sleep mode**: KinAMP will stop and the device go to sleep mode after the end of the playlist or after a set time. Enable it with the *Sleep* button.
 - **Update from the app**: You can check for updates and update the app from the *About* dialog
 - Some UI tweaks.
 
-# 2.1
+# 2.1 · 2026-03-10
 
 The most important addition is the volume slider, because sometimes even the minimal volume was too loud on my headphones. Note that there's a ~2 seconds delay between setting the slider and the volume.
 
@@ -42,7 +42,7 @@ The most important addition is the volume slider, because sometimes even the min
 - KUAL menu fixed
 - Native `faad` library removes the need of `libm`
 
-# 2.0
+# 2.0 · 2026-02-08
 
 **Big KinAMP update ! **
 

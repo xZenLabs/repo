@@ -1,4 +1,4 @@
-# v1.5.3
+# v1.5.3 · 2026-10-01
 
 ## 新功能与改进
 
@@ -14,7 +14,7 @@
 
 **Full Changelog**: https://github.com/finlater/weread.koplugin/compare/v1.5.2...v1.5.3
 
-# v1.5.2
+# v1.5.2 · 2026-09-19
 
 ## 新功能与改进
 
@@ -23,7 +23,7 @@
 
 **Full Changelog**: https://github.com/finlater/weread.koplugin/compare/v1.5.1...v1.5.2
 
-# v1.5.1
+# v1.5.1 · 2026-09-19
 
 ## 新功能与改进
 
@@ -38,7 +38,7 @@
 
 **Full Changelog**: https://github.com/finlater/weread.koplugin/compare/v1.5.0...v1.5.1
 
-# v1.5.0
+# v1.5.0 · 2026-09-18
 
 ## 新功能与改进
 
@@ -62,7 +62,7 @@
 
 **Full Changelog**: https://github.com/finlater/weread.koplugin/compare/v1.4.2...v1.5.0
 
-# v1.4.2
+# v1.4.2 · 2026-09-06
 
 ## 新功能与改进
 

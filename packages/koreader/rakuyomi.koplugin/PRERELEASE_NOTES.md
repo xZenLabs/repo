@@ -1,4 +1,4 @@
-# v1.40.1
+# v1.40.1 · 2026-08-18
 
 ## [1.40.1](https://github.com/tachibana-shin/rakuyomi/compare/v1.40.0...v1.40.1) (2026-08-18)
 
@@ -7,7 +7,7 @@
 
 * condition for android build key in build-all.sh ([6e6e736](https://github.com/tachibana-shin/rakuyomi/commit/6e6e7369bf05638e09a3fc7decf2e488768d0c05))
 
-# v1.40.0
+# v1.40.0 · 2026-08-18
 
 # [1.40.0](https://github.com/tachibana-shin/rakuyomi/compare/v1.39.6...v1.40.0) (2026-08-18)
 
@@ -25,7 +25,7 @@
 
 * support extension LNReader, Mangayomi (js, dart), Tachiyomi/Mihon ([#296](https://github.com/tachibana-shin/rakuyomi/issues/296)) ([a2d95f1](https://github.com/tachibana-shin/rakuyomi/commit/a2d95f1fb0184e90412f38c21a1e70cd04ab5656))
 
-# v1.37.2
+# v1.37.2 · 2026-07-14
 
 ## [1.37.2](https://github.com/tachibana-shin/rakuyomi/compare/v1.37.1...v1.37.2) (2026-07-14)
 
@@ -34,7 +34,7 @@
 
 * add test cases to rust ([#248](https://github.com/tachibana-shin/rakuyomi/issues/248)) ([cecd3be](https://github.com/tachibana-shin/rakuyomi/commit/cecd3be2f65237cea0319f2ad54aa72038cde0a7))
 
-# v1.37.1
+# v1.37.1 · 2026-07-14
 
 ## [1.37.1](https://github.com/tachibana-shin/rakuyomi/compare/v1.37.0...v1.37.1) (2026-07-14)
 
@@ -43,7 +43,7 @@
 
 * **tls:** use owned ClientConfig for use_preconfigured_tls and route … ([#246](https://github.com/tachibana-shin/rakuyomi/issues/246)) ([ac8c74a](https://github.com/tachibana-shin/rakuyomi/commit/ac8c74a0559feb3163203d90de5883e732491271))
 
-# v1.37.0
+# v1.37.0 · 2026-07-13
 
 # [1.37.0](https://github.com/tachibana-shin/rakuyomi/compare/v1.36.11...v1.37.0) (2026-07-13)
 

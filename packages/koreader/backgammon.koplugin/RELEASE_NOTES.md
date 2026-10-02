@@ -1,4 +1,4 @@
-# v1.4.0
+# v1.4.0 · 2026-09-26
 
 What's new:
 
@@ -7,7 +7,7 @@ What's new:
 
 Install: download backgammon.koplugin.zip, unzip it, and drop the backgammon.koplugin folder into KOReader's plugins folder, then restart KOReader.
 
-# v1.3.0
+# v1.3.0 · 2026-09-25
 
 What's new:
 
@@ -21,7 +21,7 @@ What's new:
 
 Install: download backgammon.koplugin.zip, unzip it, and drop the backgammon.koplugin folder into KOReader's plugins folder, then restart KOReader.
 
-# v1.0.0
+# v1.0.0 · 2026-09-11
 
 New in this release:
 
@@ -33,7 +33,7 @@ Fixes:
 * The Roll button on the board spine is now a compact button instead of an oversized white box.
 * New "Board & colours" screen on the start menu: choose whether player 1 plays White or Black and which bottom corner they bear off to. The board layout, colours and labels follow the choice, which is saved for next time.
 
-# v1.1.0
+# v1.1.0 · 2026-09-02
 
 First stable release with computer opponents.
 

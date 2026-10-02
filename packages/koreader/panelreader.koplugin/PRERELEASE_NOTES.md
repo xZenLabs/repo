@@ -1,5 +1,5 @@
-# v1.0.0.1
+# v1.0.0.1 · 2026-01-25
 
 Stability improvements and contrast setting support
 
-# PanelReader
+# PanelReader · 2026-01-25

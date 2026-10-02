@@ -1,4 +1,4 @@
-# v0.1.9
+# v0.1.9 · 2026-09-27
 
 ## 月读 v0.1.9
 
@@ -42,7 +42,7 @@ KOReader 插件包：`book.koplugin-v0.1.9.zip`
 
 https://github.com/AnkioTomas/moon/compare/v0.1.8...v0.1.9
 
-# v0.1.8
+# v0.1.8 · 2026-09-27
 
 ## 月读 v0.1.8
 
@@ -87,7 +87,7 @@ KOReader 插件包：`book.koplugin-v0.1.8.zip`
 
 https://github.com/AnkioTomas/moon/compare/v0.1.7...v0.1.8
 
-# v0.1.7
+# v0.1.7 · 2026-09-27
 
 ## 月读 v0.1.7
 
@@ -112,7 +112,7 @@ KOReader 插件包：`book.koplugin-v0.1.7.zip`
 
 https://github.com/AnkioTomas/moon/compare/v0.1.6...v0.1.7
 
-# v0.1.6
+# v0.1.6 · 2026-09-27
 
 ## 月读 v0.1.6
 
@@ -170,7 +170,7 @@ KOReader 插件包：`book.koplugin-v0.1.6.zip`
 
 https://github.com/AnkioTomas/moon/compare/v0.1.5...v0.1.6
 
-# v0.1.5
+# v0.1.5 · 2026-09-27
 
 ## 月读 v0.1.5
 

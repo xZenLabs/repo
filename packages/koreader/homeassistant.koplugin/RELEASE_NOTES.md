@@ -1,4 +1,4 @@
-# v26.03.19
+# v26.03.19 · 2026-03-19
 
 - The "Heartbeat" / Home Assistant sensor feature now lives in a different plugin: https://github.com/moritz-john/heartbeat.koplugin
 - This means that `koreader_sensor_name` and `sensor_resume_delay` can be deleted from your homeassistant.koplugin `config.lua` file.
@@ -8,7 +8,7 @@
 
 **Full Changelog**: https://github.com/moritz-john/homeassistant.koplugin/compare/v26.02.26...v26.03.19
 
-# v26.02.26
+# v26.02.26 · 2026-02-26
 
 This update focuses primarily on refactoring and general code cleanup to improve maintainability 
 
@@ -29,14 +29,14 @@ Kobo devices may require a slightly longer delay.
 
 **Full Changelog**: https://github.com/moritz-john/homeassistant.koplugin/compare/v26.02.03...v26.02.26
 
-# v26.02.03
+# v26.02.03 · 2026-02-03
 
 - Fix potential crash if author value is nil (Thanks @noxhirsch for reporting)
 - Re-add battery information to Home Assistant sensor
 
 **Full Changelog**: https://github.com/moritz-john/homeassistant.koplugin/compare/v26.02.02...v26.02.03
 
-# v26.02.02
+# v26.02.02 · 2026-02-02
 
 - Added title and author metadata to the `koreader_status` Home Assistant sensor attributes
 - Removed battery information from the sensor[^1]
@@ -50,7 +50,7 @@ Kobo devices may require a slightly longer delay.
 
 <img width="1840" height="542" alt="2026-02-02 at 17 33 24 Screenshot" src="https://github.com/user-attachments/assets/e9981525-72e5-4274-a35c-f2a89bc849be" />
 
-# v26.01.24
+# v26.01.24 · 2026-01-24
 
 - Add toggle in Tools → Home Assistant to enable or disable sendHeartbeat (disabled by default)
 - Change hearbeat status sensor from type `sensor` to `binary_sensor`

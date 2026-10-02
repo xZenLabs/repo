@@ -1,4 +1,4 @@
-# v2.0.0-beta.2
+# v2.0.0-beta.2 · 2026-08-25
 
 # AppDock 2.0.0-beta.2
 
@@ -20,7 +20,7 @@ Please test both language choices and restart KOReader after changing the langua
 
 The requested Splitscreen bug fix is not included in beta.2. DReader 2.0 and its additional file-format support are also not included. Both remain planned for a later, separately tested change.
 
-# v2.0.0-beta.1
+# v2.0.0-beta.1 · 2026-08-25
 
 # AppDock 2.0.0-beta.1
 

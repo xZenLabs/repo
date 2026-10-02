@@ -1,4 +1,4 @@
-# v0.9.2
+# v0.9.2 · 2026-06-06
 
 bug fixes : 
 
@@ -6,7 +6,7 @@ bug fixes :
 
 2) fixed orientation issue and screen refresh issues on older kobo models (kobo Glo)
 
-# v0.9.1
+# v0.9.1 · 2026-06-05
 
 Bug Fixes : 
 
@@ -18,6 +18,6 @@ Screen Rotation Fixes: Resolved bugs where custom clock rotation failed to resto
 
 UI Customizer: Removed the redundant "Rotation" setting line from the Format tab.
 
-# v0.9
+# v0.9 · 2026-06-01
 
 This the first beta release of this plugin. It might be unstable so any bugs found in this version should be reported to issues to allow me to fix them.

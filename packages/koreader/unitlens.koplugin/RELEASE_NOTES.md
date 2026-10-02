@@ -1,4 +1,4 @@
-# v1.1.0
+# v1.1.0 · 2026-08-23
 
 ### Added
 
@@ -7,6 +7,6 @@
 
 - UI setting to toggle unit icons
 
-# v1.0.0
+# v1.0.0 · 2026-08-20
 
 Release v1.00 🎉

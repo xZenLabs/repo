@@ -1,4 +1,4 @@
-# 3.0.0
+# 3.0.0 · 2026-09-25
 
 ### Added
 - **Bookshelf Integration**:
@@ -21,11 +21,11 @@
 - **Progress Sync Error Message** (#13, thanks @PoebelPogge):
   - KOReader's progress sync now syncs a Komga book with Komga only, never with the KOSync server, where it failed with an error (e.g. HTTP 405) when that server isn't a KOSync server. KOReader still decides when to sync, connects to Wi-Fi for it (and disconnects again after a push on suspend), and reports the result. Komga books no longer need a KOSync account for this.
 
-# 2.2.1
+# 2.2.1 · 2026-09-24
 
 Just fixed the version string in metadata.
 
-# 2.2.0
+# 2.2.0 · 2026-09-20
 
 ## [2.2.0] - 2026-09-20
 ### Added
@@ -53,7 +53,7 @@ Just fixed the version string in metadata.
   - Readest progress is now rejected when it arrives through a reader that is no longer the active one, or when both the file checksum and the page count disagree with the open document. Legitimate cross-device resumes are unaffected.
   - Readest's pending background pull and delayed push are now cancelled before switching documents.
 
-# 2.1.0
+# 2.1.0 · 2026-07-15
 
 ### Added
 - **Multi-Chapter Background Pre-Downloading**:
@@ -71,7 +71,7 @@ Just fixed the version string in metadata.
 - **Home Screen Return Behavior**:
   - Aligned browser window stack properties and resolved settings menu stack retention to ensure closing the browser correctly returns to launcher/homescreen plugins (e.g. Simple UI) instead of showing the book file manager.
 
-# 2.0.1
+# 2.0.1 · 2026-07-10
 
 ### Fixed
 - **File Extension Handling**:

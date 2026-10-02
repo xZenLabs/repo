@@ -1,4 +1,4 @@
-# v1.2.4.1
+# v1.2.4.1 · 2026-08-19
 
 ## [v1.2.4.1] — 2026-08-19
 
@@ -8,7 +8,7 @@
 
 **Full Changelog**: https://github.com/d0nizam/syncery.koplugin/compare/v1.2.4...v1.2.4.1
 
-# v1.2.4
+# v1.2.4 · 2026-08-14
 
 ## [v1.2.4] — 2026-08-14
 
@@ -35,7 +35,7 @@
 
 **Full Changelog**: https://github.com/d0nizam/syncery.koplugin/compare/v1.2.3...v1.2.4
 
-# v1.2.3
+# v1.2.3 · 2026-07-24
 
 ## [v1.2.3] — 2026-07-24
 
@@ -51,7 +51,7 @@
   opening prompt is unchanged — repeating the title there would just be
   noise.
 
-# v1.2.2
+# v1.2.2 · 2026-07-23
 
 ## [v1.2.2] — 2026-07-23
 
@@ -67,7 +67,7 @@
 
 **Full Changelog**: https://github.com/d0nizam/syncery.koplugin/compare/v1.2.1...v1.2.2
 
-# v1.2.1
+# v1.2.1 · 2026-07-21
 
 ## [v1.2.1] — 2026-07-21
 

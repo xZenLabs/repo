@@ -1,4 +1,4 @@
-# v1.2.0
+# v1.2.0 · 2026-09-08
 
 ## Prayer Times v1.2.0
 
@@ -151,7 +151,7 @@
 
 **Full Changelog**: https://github.com/Mahmoudgomaa001/prayertimes.koplugin/compare/v1.1.0...v1.2.0
 
-# v1.1.1
+# v1.1.1 · 2026-09-07
 
 ## Release Notes – Prayer Times v1.1.1
 **What's New**
@@ -160,7 +160,7 @@ The clock now always shows your device's system time. No more confusion with DST
 
 **Full Changelog**: https://github.com/Mahmoudgomaa001/prayertimes.koplugin/compare/v1.1.0...v1.1.1
 
-# v1.1.0
+# v1.1.0 · 2026-09-07
 
 ## Release Notes – Prayer Times v1.1.0
 
@@ -210,7 +210,7 @@ If you’re updating from v1.0.x:
 
 **Full Changelog:** [v1.0.1...v1.1.0](https://github.com/Mahmoudgomaa001/koreader.prayertimes/compare/v1.0.1...v1.1.0)
 
-# v1.0.1
+# v1.0.1 · 2026-09-06
 
 ## Release Notes – Prayer Times v1.0.1
 

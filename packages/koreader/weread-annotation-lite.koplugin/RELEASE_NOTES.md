@@ -1,11 +1,11 @@
-# v0.2.1
+# v0.2.1 · 2026-09-04
 
 ## What's Changed
 * 修复已知问题
 
 **Full Changelog**: https://github.com/MsReverie/Weread_Annotation_Lite.koplugin/compare/v0.2.0...v0.2.1
 
-# v0.2.0
+# v0.2.0 · 2026-09-03
 
 ## What's Changed
 * 重构部分代码
@@ -17,6 +17,6 @@
 
 **Full Changelog**: https://github.com/MsReverie/Weread_Annotation_Lite.koplugin/compare/v0.1.0...v0.2.0
 
-# v0.1.0
+# v0.1.0 · 2026-08-28
 
 HAPPY READING!!!

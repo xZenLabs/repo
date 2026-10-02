@@ -1,4 +1,4 @@
-# v1.3.1
+# v1.3.1 · 2026-03-05
 
 **v1.3.1 (2026-03-05)**
 
@@ -12,7 +12,7 @@
 - PT footer integration now uses a modified covermenu.lua approach (more reliable)
 - Updated installation instructions for PT footer setup
 
-# v1.3.0
+# v1.3.0 · 2026-03-03
 
 v1.3.0 (2026-03-02)
 
@@ -37,13 +37,13 @@ v1.3.0 (2026-03-02)
 
 - ProjectTitle Footer Support (#9): ReadMastery stats can now be displayed in the Project: Title plugin's footer bar. Includes a dedicated patch file (2-projecttitle-footer-readmastery.lua) and a new "Level + XP" display format (e.g., Lv11 XP 514/687). Configure via ReadMastery → Display → ProjectTitle Footer.
 
-# v1.2.1
+# v1.2.1 · 2026-01-05
 
 Quick fix:
 
 Cleaned the code to remove the integration with Project:Title, work in progress this integration
 
-# v1.2.0
+# v1.2.0 · 2026-01-05
 
 # v1.2.0 - Gestures & Streak Overlay
 
@@ -71,7 +71,7 @@ Cleaned the code to remove the integration with Project:Title, work in progress 
 ## Bug Fixes
 - Fixed streak lost when reading across midnight
 
-# v1.1.0
+# v1.1.0 · 2025-12-29
 
 # v1.1.0 - Badge Tier System
 

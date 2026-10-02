@@ -1,4 +1,4 @@
-# v1.18
+# v1.18 · 2026-09-23
 
 #### Highlights
 More places inside KOReader where AI is one tap away:
@@ -42,7 +42,7 @@ More places inside KOReader where AI is one tap away:
 #### Translations
 All languages refreshed with the new dictionary, viewer, and notebook strings.
 
-# v1.17
+# v1.17 · 2026-09-07
 
 > 📦 **Android users:** this release repairs the accelerated text renderer that was silently broken on Android — AI answers and dictionary results will render noticeably faster after updating.
 
@@ -74,7 +74,7 @@ Do more from the screen: tune your AI providers, test them, and update the plugi
 #### Translations
 All languages refreshed with the new on-screen settings.
 
-# v1.16
+# v1.16 · 2026-09-01
 
 > ⚠️ **OTA Users: Please update twice — the first OTA loses translations, the second restores them.** Details below.
 
@@ -102,7 +102,7 @@ When the provider returns **HTTP 429 Too Many Requests** (rate limit / quota exc
 #### Translations & Details
 All 42+ languages updated. The plugin now reuses KOReader's native translation module directly instead of bundling a stale copy of `gettext` — only the adapter entry is customized — with translations shipped as compiled `.mo` files for faster loading. This format change is why OTA requires two passes; fresh installs via zip are not affected.
 
-# v1.15
+# v1.15 · 2026-08-26
 
 ## v1.15 Release Notes
 
@@ -136,7 +136,7 @@ Special thanks to contributors in this cycle:
 
 And everyone who helped with translations, feedback, and testing.
 
-# v1.14
+# v1.14 · 2026-08-08
 
 ## v1.14 Release Notes
 

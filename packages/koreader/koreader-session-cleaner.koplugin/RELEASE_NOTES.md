@@ -1,4 +1,4 @@
-# v1.10.1
+# v1.10.1 · 2026-04-18
 
 Session Cleaner v1.10.1 is the recommended public baseline.
 

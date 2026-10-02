@@ -1,4 +1,4 @@
-# v1.1.2
+# v1.1.2 · 2026-09-06
 
 Fixes for module loading, gestures, and split-page navigation on KOReader.
 
@@ -15,15 +15,15 @@ Validation: regression tests pass on Lua 5.1 and LuaJIT, with touch-dispatch int
 
 Changes: https://github.com/Auri3l/leadingmangazoom.koplugin/pull/6
 
-# v1.1.1
+# v1.1.1 · 2026-07-24
 
 v1.1.1 Release: Fix physical page-turn button remapping bug on Kobo Sage, Kobo Libra 2, Kobo Forma, PocketBook, and Kindle Oasis devices when auto-rotating landscape pages.
 
-# v1.1.0
+# v1.1.0 · 2026-07-16
 
 v1.1.0 release: Add CZB support, fix zoom coordinates, pinch gesture, and RTL split-page navigation
 
-# v1.0.0
+# v1.0.0 · 2026-04-11
 
 Initial release of LeadingMangaZoom for KOReader.
 

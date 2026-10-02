@@ -1,4 +1,4 @@
-# v3.1.3
+# v3.1.3 · 2026-09-27
 
 Prerelease rolling up **everything since 3.1.0** (3.1.1 and 3.1.2 were prereleases), with a major focus on making landscape fast and correct.
 
@@ -26,7 +26,7 @@ On e-ink readers that render landscape by rotating the framebuffer in software, 
 ## Known issue
 - Very heavy, prolonged switching between portrait and landscape *while drawing* can gradually reduce responsiveness until KOReader is restarted. Normal use is unaffected; a fix is still being investigated.
 
-# v3.1.2
+# v3.1.2 · 2026-09-26
 
 Faster landscape, a tidier settings menu, and a pen-input test to help track down stylus problems.
 
@@ -37,7 +37,7 @@ Faster landscape, a tidier settings menu, and a pen-input test to help track dow
 
 Prerelease — please try it on your device and let me know how it holds up, especially the pen-input test on stylus devices.
 
-# v3.1.1
+# v3.1.1 · 2026-09-26
 
 Landscape mode, plus a few fixes.
 

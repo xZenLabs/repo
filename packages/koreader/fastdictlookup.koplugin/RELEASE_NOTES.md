@@ -1,10 +1,10 @@
-# v1.5.0
+# v1.5.0 · 2026-07-27
 
 Fix compatibility issues with new KOReader version 2026.07.
 
 **Full Changelog**: https://github.com/Sirozha1337/fastdictlookup.koplugin/compare/v1.4.0...v1.5.0
 
-# v1.4.0
+# v1.4.0 · 2026-07-24
 
 * New Full Definition Lookup menu
 * Put all settings in sub menu
@@ -14,7 +14,7 @@ Fix compatibility issues with new KOReader version 2026.07.
 
 **Full Changelog**: https://github.com/Sirozha1337/fastdictlookup.koplugin/compare/v1.3.1...v1.4.0
 
-# v1.3.1
+# v1.3.1 · 2026-05-28
 
 Fix Footnote Lookup issues:
 * Footnotes with h1..h6 headers were ignored due to excessive flag
@@ -22,7 +22,7 @@ Fix Footnote Lookup issues:
 
 **Full Changelog**: https://github.com/Sirozha1337/fastdictlookup.koplugin/compare/v1.3.0...v1.3.1
 
-# v1.3.0
+# v1.3.0 · 2026-05-08
 
 Features:
 * Text Highlighting Mode: pressing the button now enables highliting mode, pressing it again opens context menu for the selected text
@@ -33,7 +33,7 @@ Fixes:
 
 **Full Changelog**: https://github.com/Sirozha1337/fastdictlookup.koplugin/compare/v1.2.0...v1.3.0
 
-# v1.2.0
+# v1.2.0 · 2026-04-20
 
 Features:
 * Lookup footnotes when moving cursor over them

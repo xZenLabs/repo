@@ -1,4 +1,4 @@
-# v0.12.10
+# v0.12.10 · 2026-09-21
 
 ## Release Highlights
 * Library: You can now organize books into configurable bookshelves, tag books in bulk
@@ -118,7 +118,7 @@
 
 **Full Changelog**: https://github.com/readest/readest/compare/v0.12.8...v0.12.10
 
-# v0.12.8
+# v0.12.8 · 2026-09-07
 
 ## Release Highlights
 * Reading: Customize the information shown in headers and footers, resize text with zoom shortcuts
@@ -249,7 +249,7 @@
 
 **Full Changelog**: https://github.com/readest/readest/compare/v0.12.6...v0.12.8
 
-# v0.12.6
+# v0.12.6 · 2026-08-28
 
 ## Release Highlights
 * Audiobooks: Added Audiobookshelf support for streaming audiobooks and podcasts, and you can now pair an audiobook with its ebook to read along as it plays
@@ -438,7 +438,7 @@
 
 **Full Changelog**: https://github.com/readest/readest/compare/v0.12.1...v0.12.6
 
-# v0.12.1
+# v0.12.1 · 2026-08-08
 
 ## Release Highlight
 * Text-to-Speech: Books that come with recorded narration now play their own audio in step with the text, and you can set the sleep timer to stop at the end of a chapter
@@ -645,7 +645,7 @@
 
 **Full Changelog**: https://github.com/readest/readest/compare/v0.11.20...v0.12.1
 
-# v0.11.20
+# v0.11.20 · 2026-07-19
 
 ## Release Highlight
 * Text-to-Speech: Read-aloud voices can now be downloaded per book for offline listening, and adjustable pauses between sentences and paragraphs

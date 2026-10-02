@@ -1,4 +1,4 @@
-# v1.1.0
+# v1.1.0 · 2026-09-30
 
 SleepRibbon v1.1.0 adds per-book profiles and cover-derived color palettes, while moving the plugin to a more reliable and convenient location directly under KOReader's Settings menu.
 
@@ -31,7 +31,7 @@ See the README and CHANGELOG for details.
 
 `09ab6e9f3012512fc7812c4e1c0e0a6f2adc977c0a707acf60fb3d4b429fbed4`
 
-# v1.0.0
+# v1.0.0 · 2026-09-29
 
 Initial public release of SleepRibbon.
 

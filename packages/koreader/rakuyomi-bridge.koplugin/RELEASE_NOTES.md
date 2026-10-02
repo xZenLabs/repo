@@ -1,4 +1,4 @@
-# v1.3.0
+# v1.3.0 · 2026-09-25
 
 # [1.3.0](https://github.com/tachibana-shin/rakuyomi_bridge/compare/v1.2.2...v1.3.0) (2026-09-25)
 
@@ -7,7 +7,7 @@
 
 * release ([9e069c0](https://github.com/tachibana-shin/rakuyomi_bridge/commit/9e069c056fa2b5f380ad52fe9ae5bd11e1bcb76f))
 
-# v1.2.2
+# v1.2.2 · 2026-09-09
 
 ## [1.2.2](https://github.com/tachibana-shin/rakuyomi_bridge/compare/v1.2.1...v1.2.2) (2026-09-09)
 
@@ -19,7 +19,7 @@
 * repair Android CI rust build ([f744a6a](https://github.com/tachibana-shin/rakuyomi_bridge/commit/f744a6a5f636a4ab38dddaadba1a61f3f454899c))
 * update rust version ([096affa](https://github.com/tachibana-shin/rakuyomi_bridge/commit/096affa36661de2c68c85a615497c01d077482e0))
 
-# v1.2.1
+# v1.2.1 · 2026-09-06
 
 ## [1.2.1](https://github.com/tachibana-shin/rakuyomi_bridge/compare/v1.2.0...v1.2.1) (2026-09-06)
 
@@ -28,7 +28,7 @@
 
 * release ([adfd859](https://github.com/tachibana-shin/rakuyomi_bridge/commit/adfd859a20298527165e78a5a724db0d593c7fd6))
 
-# v1.2.0
+# v1.2.0 · 2026-08-26
 
 # [1.2.0](https://github.com/tachibana-shin/rakuyomi_bridge/compare/v1.1.0...v1.2.0) (2026-08-26)
 
@@ -38,7 +38,7 @@
 * release ([160e2ba](https://github.com/tachibana-shin/rakuyomi_bridge/commit/160e2baac7a405a93cd176ceaa43427f4fae1d33))
 * release [#5](https://github.com/tachibana-shin/rakuyomi_bridge/issues/5) ([8d21af1](https://github.com/tachibana-shin/rakuyomi_bridge/commit/8d21af1b7e33bf7a35b0d3c3fc1c863af8c5e6e1))
 
-# v1.1.0
+# v1.1.0 · 2026-07-19
 
 # [1.1.0](https://github.com/tachibana-shin/rakuyomi_bridge/compare/v1.0.2...v1.1.0) (2026-07-19)
 

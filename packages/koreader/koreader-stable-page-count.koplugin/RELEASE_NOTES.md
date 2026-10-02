@@ -1,4 +1,4 @@
-# v0.2.1
+# v0.2.1 · 2026-08-24
 
 ## [0.2.1](https://github.com/treetrum/koreader-stable-page-count/compare/v0.2.0...v0.2.1) (2026-08-24)
 
@@ -7,7 +7,7 @@
 
 * use direct input for page count ([#10](https://github.com/treetrum/koreader-stable-page-count/issues/10)) ([a3fb66c](https://github.com/treetrum/koreader-stable-page-count/commit/a3fb66c00a1afbc153ef8e670730b18606d375fd))
 
-# v0.2.0
+# v0.2.0 · 2026-08-18
 
 ## [0.2.0](https://github.com/treetrum/koreader-stable-page-count/compare/v0.1.1...v0.2.0) (2026-08-18)
 
@@ -16,7 +16,7 @@
 
 * add ZenPM package repository ([#8](https://github.com/treetrum/koreader-stable-page-count/issues/8)) ([eea8296](https://github.com/treetrum/koreader-stable-page-count/commit/eea8296194709f1f0f6f0068bec768616076b41a))
 
-# v0.1.1
+# v0.1.1 · 2026-08-18
 
 ## [0.1.1](https://github.com/treetrum/koreader-stable-page-count/compare/v0.1.0...v0.1.1) (2026-08-18)
 
@@ -27,7 +27,7 @@
 * simplify page count dialog ([e1956c2](https://github.com/treetrum/koreader-stable-page-count/commit/e1956c2e4b9d33a9d661f12c043d41eadfad80f9))
 * use version-only release tags ([ae56525](https://github.com/treetrum/koreader-stable-page-count/commit/ae5652502bacf72976c24ddb0cb0deac66290cc6))
 
-# v0.1.0
+# v0.1.0 · 2026-08-18
 
 ## 0.1.0 (2026-08-18)
 

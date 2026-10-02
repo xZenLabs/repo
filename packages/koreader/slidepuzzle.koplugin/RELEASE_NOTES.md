@@ -1,9 +1,9 @@
-# v1.3.0
+# v1.3.0 · 2026-04-26
 
 - Shortcut/Dispatcher action added
 - Auto-close on device suspend
 
-# v1.2.0
+# v1.2.0 · 2026-04-26
 
 # Slide Puzzle 1.2.0
 
@@ -68,11 +68,11 @@
   *Default* font (inherits KOReader UI font). Pick *Sans (Noto)* in
   **Settings → Font** to restore the previous look.
 
-# v1.1.0
+# v1.1.0 · 2026-04-23
 
 - tiles drawn inverted when in the correct position for visual feedback
 - fix: correctly record the last movement
 
-# v1.0.0
+# v1.0.0 · 2026-04-22
 
 - initial release

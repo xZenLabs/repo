@@ -1,4 +1,4 @@
-# v1.2.0
+# v1.2.0 · 2026-08-04
 
 DoctorBattery v1.2.0
 ✨ New Features
@@ -48,7 +48,7 @@ The goal is to progressively support as many Kindle, Kobo, Android, and Linux-ba
 General code improvements and internal refinements.
 Expanded infrastructure for future hardware compatibility.
 
-# v.1.1.0
+# v.1.1.0 · 2026-07-30
 
 ## What's New
 

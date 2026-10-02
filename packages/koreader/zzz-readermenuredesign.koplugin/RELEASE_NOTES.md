@@ -1,25 +1,25 @@
-# v1.0.7
+# v1.0.7 · 2026-07-08
 
 - Support for changes in upcoming KOReader update.
 - Added custom button for the [X-Ray](https://github.com/ultimatejimmy/koreader-xray-plugin/) plugin.
 
-# v1.0.6
+# v1.0.6 · 2026-03-01
 
 - Fixed icons not showing on Android (https://github.com/kristianpennacchia/zzz-readermenuredesign.koplugin/issues/6)
 
-# v1.0.5
+# v1.0.5 · 2025-11-13
 
 **New features:**
 - Icons are now automatically installed.
 - Added versioning support for the [Updates Manager Plugin](https://github.com/advokatb/updatesmanager.koplugin).
 
-# v1.0.4
+# v1.0.4 · 2025-11-11
 
 - Fixed issue where the button icons would not appear on some devices (https://github.com/kristianpennacchia/zzz-readermenuredesign.koplugin/issues/5)
 
 **If you encountered this issue**, Try deleting this plugins SVG icons from `/koreader/resources/icons/mdlight` and replace them with the PNG icons from this release, then **restart KOReader**.
 
-# v1.0.3
+# v1.0.3 · 2025-11-06
 
 - Added custom button for [AI Assistant](https://github.com/omer-faruq/assistant.koplugin) plugin (https://github.com/kristianpennacchia/zzz-readermenuredesign.koplugin/pull/4) @Nuhser 
 - Can now toggle between highlighting and unhighlighting text from the Dict Quick Lookup.

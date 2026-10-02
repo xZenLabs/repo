@@ -1,14 +1,14 @@
-# v2.10
+# v2.10 · 2026-08-31
 
 Simpleui v2.7 and Simpleui_ext v1.15.0 support added.
 
-# Koreader-plugin
+# Koreader-plugin · 2026-06-10
 
 1- Language files fixed
 2- Added Turkish language file for Turkish users. 
     (Move the tr.po file to the plugins/simpleui.koplugin/locale directory)
 
-# Currently_Yanllsama
+# Currently_Yanllsama · 2026-06-09
 
 Enhanced Currently Reading Yanllsama (SimpleUI Dashboard Module)
 

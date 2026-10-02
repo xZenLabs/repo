@@ -1,4 +1,4 @@
-# v0.21.0
+# v0.21.0 · 2026-09-02
 
 ## 🚀 Features
 - feat(ui): show the reading-progress bar in list view too
@@ -8,12 +8,12 @@
 - fix(ui): repaint the screen when the chapter-range dialog closes
 - fix(ui): make the mosaic reading-progress bar actually show progress
 
-# v0.20.1
+# v0.20.1 · 2026-09-02
 
 ## 🐛 Bug Fixes
 - fix(epub): keep the contents out of the spine so reading positions survive
 
-# v0.20.0
+# v0.20.0 · 2026-09-01
 
 ## 🚀 Features
 - feat(epub): add an in-book contents page
@@ -25,7 +25,7 @@
 ## 🧰 Maintenance
 - docs: track CLAUDE.md pointing at AGENTS.md
 
-# v0.19.0
+# v0.19.0 · 2026-09-01
 
 ## 🚀 Features
 - feat: add a manual "clear new-chapters badge" action per story
@@ -40,7 +40,7 @@
 - docs(site): restyle landing page and fix walkthrough layout bugs
 - docs: refresh README screenshots and note reading progress
 
-# v0.18.8
+# v0.18.8 · 2026-08-20
 
 ## 🚀 Features
 - feat: show reading progress on manage-downloads page

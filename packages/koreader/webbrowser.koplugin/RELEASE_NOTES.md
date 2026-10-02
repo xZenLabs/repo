@@ -1,11 +1,11 @@
-# v0.8.0
+# v0.8.0 · 2026-09-12
 
 - add: Kiwix offline search engine
 - add: support for HTTPS websites via HTTP proxy ( thanks to @michalke-it )
  
      If you use WebBrowser with an HTTP proxy configured, secure (https://) websites will now load correctly instead of failing to connect.
 
-# v0.7.1
+# v0.7.1 · 2026-08-14
 
 - add: optional "Web Search" button in the text selection popup
 
@@ -19,16 +19,16 @@
       on a word boundary before it is sent to the engine
     - off by default, enabled with search_highlighted_text = true
 
-# v0.7.0
+# v0.7.0 · 2026-05-12
 
 - open sanitized and save sanitized buttons on search popup (uses [rssreader.koplugin](https://github.com/omer-faruq/rssreader.koplugin) functions, so you need to install it also) 
 - cache folder safety modifications
 
-# v0.6.1
+# v0.6.1 · 2026-05-08
 
 - fix: DuckDuckGo language setting missing
 
-# v0.6.0
+# v0.6.0 · 2026-05-06
 
 - new search engines: Tavily, Exa
 - enable multiple profiles for the same engine

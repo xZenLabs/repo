@@ -1,14 +1,14 @@
-# v1.5.0
+# v1.5.0 · 2026-09-10
 
 - Add bidirectional reading progress sync.  Thanks to @emes81
 
-# v1.4.0
+# v1.4.0 · 2026-08-25
 
 - show popup on bulk download process
 - name downloads after the article title, without the bookmark id 
 - add author, excerpt, cover and chapters to downloaded articles
 
-# v1.3.3
+# v1.3.3 · 2026-07-20
 
 - fix: don't crash on non-http(s) image URLs
   Articles can contain `<img src="file://...">` or other non-web schemes
@@ -16,10 +16,10 @@
   and throws uncaught, crashing the reader. Reject unsupported schemes
   in resolveUrl and wrap http.request in pcall as a backstop.
 
-# v1.3.2
+# v1.3.2 · 2026-06-06
 
 - fill author field for HTML and epub output file
 
-# v1.3.1
+# v1.3.1 · 2026-05-10
 
 - fix: rendering of article listing

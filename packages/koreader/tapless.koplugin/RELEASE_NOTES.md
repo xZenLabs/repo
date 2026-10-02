@@ -1,4 +1,4 @@
-# v0.4.0
+# v0.4.0 · 2026-09-10
 
 - personalized dictionaries
 - geometric re-ranking
@@ -6,7 +6,7 @@
 - capitalization
 - minor fixes
 
-# v0.3.0
+# v0.3.0 · 2026-09-05
 
 ## 0.3.0
 
@@ -14,4 +14,4 @@
 - dictionary manager
 - improved performance
 
-# v0.1.0
+# v0.1.0 · 2026-09-01

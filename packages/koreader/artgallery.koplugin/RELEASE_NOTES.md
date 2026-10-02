@@ -1,4 +1,4 @@
-# v1.0.22
+# v1.0.22 · 2026-08-29
 
 ## v1.0.22 (2026-08-29)
 
@@ -14,7 +14,7 @@ Self-check: PASS=17 FAIL=0 WARN=0. KPW3 on-device verified.
 README + Compare doc now reflect v1.5.1 absorption (not just v1.3.0).
 Version bumped: 1.0.21 → 1.0.22.
 
-# v1.0.21
+# v1.0.21 · 2026-08-18
 
 美术馆 / ArtGallery v1.0.21
 
@@ -30,7 +30,7 @@ ArtGallery = Glimpse + Illustrations 合并增强（自包含，无 require 上�
 
 安装：下载 artgallery.koplugin-v1.0.21.zip，解压得 artgallery.koplugin 文件夹，复制到 koreader/plugins/ 后重启 KOReader。
 
-# v1.0.20
+# v1.0.20 · 2026-08-16
 
 ## 美术馆 / ArtGallery v1.0.20
 
@@ -60,7 +60,7 @@ Phase 38 "bookmarks into gallery" is now stabilized on-device (KPW3) after multi
 ---
 > **2026-08-16 文档刷新（版本仍为 v1.0.20，无运行行为变化）**：README §相比上游的改进 对比段校正为 Glimpse 最新稳定版 **v1.3.0**（原写 v1.2.5），并补记与美术馆的差异（书签独立实现／未采用屏上缩放控件与全局总开关）；Illustrations 仍为 v0.5.2。插件内「关于 美术馆」文本与独立对比件同步，做到三版统一。本次重新打包 zip 以使下载包内含更新后的文档。
 
-# v1.0.19
+# v1.0.19 · 2026-08-15
 
 # 美术馆 / ArtGallery v1.0.19
 
@@ -96,7 +96,7 @@ Phase 38 "bookmarks into gallery" is now stabilized on-device (KPW3) after multi
 
 > 完整逐次改动时间线见仓库 `audit/CHANGELOG.html`（中文）；部署前验收报告见 `audit/ACCEPTANCE_v1.0.19.html`。
 
-# v1.0.16
+# v1.0.16 · 2026-08-13
 
 v1.0.16 更新（最大放大倍数可配置，吸收母插件 glimpse v1.2.2）：
 

@@ -1,4 +1,4 @@
-# v0.3.0
+# v0.3.0 · 2026-06-14
 
 ## What's new
 
@@ -12,7 +12,7 @@ Translations live in `l10n_zh.lua` — easy to review or extend.
 
 Download `eyerest.koplugin.zip` below, unzip, and drop the `eyerest.koplugin` folder into KOReader's `plugins/` directory. See the README for details.
 
-# v0.2.0
+# v0.2.0 · 2026-06-14
 
 ## What's new
 
@@ -26,7 +26,7 @@ Download `eyerest.koplugin.zip` below, unzip, and drop the `eyerest.koplugin` fo
 - Postpone now honours durations longer than the break interval.
 - Status bar refreshes correctly after a break closes.
 
-# v0.1.0
+# v0.1.0 · 2026-06-14
 
 First public release.
 

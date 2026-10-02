@@ -1,4 +1,4 @@
-# v0.0.2
+# v0.0.2 · 2026-04-15
 
 ### What's new:
 
@@ -9,7 +9,7 @@
   - Fixed various issues in the icon browser
   - Removed unintended dependency with ProjectTitle plugin
 
-# v0.0.1
+# v0.0.1 · 2026-04-15
 
 # Initial release
 - Adds a toolbar to the reader menu.

@@ -1,4 +1,4 @@
-# v2.0.2
+# v2.0.2 · 2026-03-05
 
 # **V2.0.2**
 - Completely rewritten codebase and modernized folder structure to improve maintainability and facilitate easier open-source contributions
@@ -12,7 +12,7 @@ Also on some devices it caused the plugins to change it's location randomly and 
 
 Special thanks to @sparklerfish for their contribution and massive help to this release.
 
-# v2.0.1
+# v2.0.1 · 2025-12-02
 
 Release Notes: Version 2.0.1 (Patch)
 
@@ -31,7 +31,7 @@ Zlibrary, Telegram Downloader, Sudoku, Web browser, RSS reader etc. Works proper
 
 Fixed issue #7
 
-# v2.0.0
+# v2.0.0 · 2025-11-25
 
 This update rewrites the codebase from the ground up to improve stability, modernize the user interface, and prevent system crashes.
 
@@ -54,7 +54,7 @@ https://github.com/JoeBumm/Koreader-Menu-customizer/issues/2
 https://github.com/JoeBumm/Koreader-Menu-customizer/issues/5
 https://github.com/JoeBumm/Koreader-Menu-customizer/issues/3
 
-# v1.0.0
+# v1.0.0 · 2025-06-30
 
 Community contributions and feedback are very welcome. If you experience crashes or instability, please refer to the installation tutorial or open an issue on GitHub — I’ll be happy to help.
 

@@ -1,4 +1,4 @@
-# v1.3.0
+# v1.3.0 · 2026-09-30
 
 ## New features
 
@@ -21,26 +21,26 @@
 
 **Full Changelog**: https://github.com/Craftwork2720/meguru/compare/v1.2.0...v1.3.0
 
-# v1.2.0
+# v1.2.0 · 2026-09-28
 
 new: **Contrast**, **Saturation** and **Dithering** in the bottom menu
 
 **Full Changelog**: https://github.com/Craftwork2720/meguru/compare/v1.1.1...v1.2.0
 
-# v1.1.1
+# v1.1.1 · 2026-09-19
 
 fix: Pan & Zoom stops on every panel, not only the ones the window happens to cover.
 The bottom menu is hidden in all three views — tap the bottom of the screen, or swipe up, to bring it back.
 
 **Full Changelog**: https://github.com/Craftwork2720/meguru/compare/v1.1.0...v1.1.1
 
-# v1.1.0
+# v1.1.0 · 2026-09-18
 
  Add: Meguru→ Komga progress sync
 
 **Full Changelog**: https://github.com/Craftwork2720/meguru/compare/v1.0.1...v1.1.0
 
-# v1.0.1
+# v1.0.1 · 2026-09-17
 
 fix: Panels+ now answers the long press while it is enabled, and meguru answers when it is not.
 

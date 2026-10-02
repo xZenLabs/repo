@@ -1,4 +1,4 @@
-# v1.14.0
+# v1.14.0 · 2026-09-11
 
 ## Faster Update Checks
 
@@ -13,7 +13,7 @@
 
 **One small thing to know:** a plugin's star count only updates during a full scan, not during a quick check — this doesn't affect update detection, just sort order, and only until the next full scan.
 
-# v1.13.0
+# v1.13.0 · 2026-08-24
 
 ### New
 
@@ -50,7 +50,7 @@
 
 Thanks to @iav, @koma52, @THE-XSX and @ksaMask123 for their contributions to this release.
 
-# v1.12.0
+# v1.12.0 · 2026-08-01
 
 -  Show README in a TextViewer popup on KOReader >= 2026.07
 
@@ -65,7 +65,7 @@ Thanks to @iav, @koma52, @THE-XSX and @ksaMask123 for their contributions to thi
 - Fixed blank pages in the full changelog viewer.
 - Fine-grained PAT rejection on GitHub search is now detected and explained to the user.
 
-# v1.10.0
+# v1.10.0 · 2026-07-05
 
 ## Modifications via PR 16,17,20 by [iav](https://github.com/iav)
 ### Browser & installed-list navigation improvements
@@ -87,6 +87,6 @@ Thanks to @iav, @koma52, @THE-XSX and @ksaMask123 for their contributions to thi
 
 - Fixed plugins with a "v"-prefixed version number (e.g. v1.4.2) being incorrectly flagged as needing an update.
 
-# v1.9.1
+# v1.9.1 · 2026-06-05
 
 - release options pagination when there are more than 8 assests.

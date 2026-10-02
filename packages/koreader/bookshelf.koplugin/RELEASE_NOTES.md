@@ -1,8 +1,8 @@
-# v5.2.3
+# v5.2.3 · 2026-09-28
 
 - Fix: A very large PNG ornament no longer crashes KOReader when you open the ornaments browser. Ornaments over 8 megapixels are now left out, with a note in the log; 1000-2000 px on the longest side is plenty (#471).
 
-# v5.2.2
+# v5.2.2 · 2026-09-27
 
 - Fix: With "Return to file browser" as the end of document action, finishing a book goes straight back to bookshelf again instead of flashing KOReader's file browser first (#460).
 - Fix: Sorting by Progress now works on shelves that also have a status filter, instead of falling back to title order (#463).
@@ -12,7 +12,7 @@
 - Fix: The clock and battery in the full screen micro-modules view now keep up with the time instead of staying as they were when it opened.
 - Slovak translation now says "doplnok" instead of "plugin", matching KOReader (from @misko903's PR #467).
 
-# v5.2.1
+# v5.2.1 · 2026-09-26
 
 - New option under the wallpaper image pickers: Invert wallpaper in night mode (off by default), so a light wallpaper turns dark when the shelf is in night mode.
 - Fix: Colours you pick for the progress bar, shelf menu background, badges, bookmarks, the selected shelf button and text now show in colour on colour screens instead of grey.
@@ -20,7 +20,7 @@
 - Fix: Titles on generated covers no longer get cut short when they would fit at a slightly smaller size (#457).
 - Fix: "First unread in series" on spine shelves no longer faces out a second book when a series runs across a page break (#458).
 
-# v5.2.0
+# v5.2.0 · 2026-09-25
 
 - "Extract page counts" lays books out at your own reading settings, so its counts match what you see when reading, and shows them as each book's page count. It opens with a dialog to pick the sources to try, in order: publisher page numbers, Hardcover editions, your reading settings, a Calibre page column such as #pages (#405), and page counts in file names. You can fill in only missing counts or recount every book, or delete scanned counts. Progress shows in the status line while the shelf stays usable, and the Pages sort uses the counts.
 - Ornament packs: a folder of ornaments inside bookshelf.ornaments is a pack. A new ornaments browser under Background and colours shows every ornament, with a tab per pack, so you can switch single ornaments or whole packs on and off, or delete them.
@@ -46,7 +46,7 @@
 - Fix: Switching shelves in full screen with the status line off no longer leaves the old shelf button's fill behind.
 - Fix: Tapping a shelf button over a wallpaper no longer flashes it black and white.
 
-# v5.1.5
+# v5.1.5 · 2026-09-23
 
 - Collection shelves can sort by "Collection order", the order you've arranged the collection in KOReader, and an "Edit collection order" button beside it opens KOReader's arrange screen (#441).
 - Spine titles too long for a thick spine wrap onto a second line (#440).

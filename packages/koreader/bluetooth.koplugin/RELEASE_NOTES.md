@@ -1,16 +1,16 @@
-# 1.0.2
+# 1.0.2 · 2026-01-03
 
 [Full change logs](https://www.mobileread.com/forums/showpost.php?p=4557691&postcount=84)
 
-# 1.0.1
+# 1.0.1 · 2026-01-03
 
 [Full change logs](https://www.mobileread.com/forums/showpost.php?p=4556415&postcount=78)
 
-# 1.0.0
+# 1.0.0 · 2026-01-03
 
 [Full change logs](https://www.mobileread.com/forums/showpost.php?p=4556114&postcount=66)
 
-# v0.2.0
+# v0.2.0 · 2024-09-02
 
 KOReader Bluetooth Page Turner Plugin for Kobo Devices
 

@@ -1,4 +1,4 @@
-# v1.0.0
+# v1.0.0 · 2026-08-16
 
 The first public release of Bookdrop for KOReader.
 

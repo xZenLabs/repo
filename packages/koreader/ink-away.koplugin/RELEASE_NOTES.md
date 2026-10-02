@@ -1,4 +1,4 @@
-# v3.2.0
+# v3.2.0 · 2026-10-02
 
 Everything since 3.1.0 in one stable release.
 
@@ -25,7 +25,7 @@ Everything since 3.1.0 in one stable release.
 - Typing no longer zooms the page when you tap away, and a new text box no longer starts with a stray letter.
 - Toolbar taps no longer lag after closing a menu.
 
-# v3.1.0
+# v3.1.0 · 2026-09-25
 
 The big new thing this release: you can add pictures to your drawings.
 
@@ -45,7 +45,7 @@ The big new thing this release: you can add pictures to your drawings.
 - Smoother colour panel, more reliable palm rejection, and menus that no longer stick around after you close them.
 - Fixed the notebook bottom-bar font.
 
-# v3.0.0
+# v3.0.0 · 2026-09-22
 
 A big release: reliable palm rejection, a top-to-bottom redesign of the drawing interface, and a lot of work to keep everything fast.
 
@@ -71,7 +71,7 @@ Rest your hand on the screen while you write — only the pen marks the page.
 - Consistent notebook UI and a fix for a crash in Settings.
 - Tool menus now update in place when you switch tools instead of flickering.
 
-# v2.2.0
+# v2.2.0 · 2026-09-17
 
 - Add images (as many as you want) with move, resize, rotate, flip, duplicate and send-to-front.
 - Shape assist snaps rough strokes into clean lines, rectangles, circles and triangles that stay fully editable.
@@ -79,7 +79,7 @@ Rest your hand on the screen while you write — only the pen marks the page.
 - Paint-bucket fill now sticks to its shape
 - Faster shape and image dragging, no image-move flash, cleaner triangle snapping, and no black corner on free rotation.
 
-# v2.1.1
+# v2.1.1 · 2026-09-13
 
 Bug fix
 

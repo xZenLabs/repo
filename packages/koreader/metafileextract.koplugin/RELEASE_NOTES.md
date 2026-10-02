@@ -1,12 +1,12 @@
-# v1.5.6
+# v1.5.6 · 2026-06-20
 
 #v1.5.6 — Change in the Mihon hash extraction method
 
-# v1.5.5
+# v1.5.5 · 2026-06-20
 
 #v1.5.5 — Change in the Mihon hash extraction method
 
-# v1.5.4
+# v1.5.4 · 2026-06-18
 
 #v1.5.4 — Extract Preview & UX Improvements
 
@@ -34,7 +34,7 @@ Both previews use the same consistent navigation pattern:
 - **← Back** / **Cancel** on the left
 - **Next →** / **Extract All** (or **Rename All**) on the right
 
-# v1.5.3
+# v1.5.3 · 2026-06-11
 
 ## MetaFileExtract v1.5.3
 
@@ -63,7 +63,7 @@ Both previews use the same consistent navigation pattern:
 **Title After:** `6.5.cbz` → `6.5`  
 **Series Number After:** `6.5.cbz` → `6.5`
 
-# v1.5.2
+# v1.5.2 · 2026-06-10
 
 ## MetaFileExtract v1.52
 

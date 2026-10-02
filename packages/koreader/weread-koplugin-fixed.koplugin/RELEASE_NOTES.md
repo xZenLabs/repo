@@ -1,6 +1,6 @@
-# v0.9.9-migration
+# v0.9.9-migration · 2026-07-18
 
-# v0.3.5
+# v0.3.5 · 2026-07-15
 
 本项目基于原作 weread.koplugin v0.2.1 继续开发，在保留书架浏览、书籍下载、划线和想法等基础功能的同时，重点增强了登录方式、阅读时间同步、OTA 更新、下载稳定性以及不同书籍内容格式的兼容性。
 v0.3.5：功能增强与时间同步修复
@@ -74,7 +74,7 @@ v0.3.5 主要解决插件的基础使用体验和阅读时间上传问题。
 •	正式发布包不包含 config.lua、Cookie、API Key、日志和用户缓存。
 •	OTA 更新不会主动覆盖用户账号设置。
 
-# v0.3.2
+# v0.3.2 · 2026-07-10
 
 ## WeRead KOReader Plugin v0.3.2
 
@@ -124,7 +124,7 @@ koreader/plugins/
 
 然后重启 KOReader
 
-# v0.3.1
+# v0.3.1 · 2026-07-10
 
 ## WeRead KOReader Plugin Modified Version v0.3.1
 
@@ -174,4 +174,4 @@ Download the attached full installation package. Do not use GitHub's automatical
 
 This is an unofficial modified version based on the original WeRead KOReader plugin. It is intended for personal learning and technical research.
 
-# v0.2.5-test-versionfix
+# v0.2.5-test-versionfix · 2026-07-09

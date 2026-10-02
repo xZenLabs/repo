@@ -1,18 +1,18 @@
-# v6.14.6
+# v6.14.6 · 2026-10-02
 
 ### Changed
 
 The Reading insights popup header now has its own translation key in all languages, so the Tools menu entry stays "Reading insights" while the popup shows the localised title. The "Show Reading insights" menu item now uses the same translated wording and also the popup header.
 
-# v6.14.5
+# v6.14.5 · 2026-10-02
 
 Fixed some more date formatting inconsistency.
 
-# v6.14.4
+# v6.14.4 · 2026-10-02
 
 Fixed date formatting some cases.
 
-# v6.14.3
+# v6.14.3 · 2026-10-02
 
 ### Fixed
 
@@ -21,7 +21,7 @@ Fixed date formatting some cases.
   Applies to the monthly/yearly book lists and the editable book lists.
 - Some text and their translations changed
 
-# v6.14.2
+# v6.14.2 · 2026-09-30
 
 ### New
 - Book info: book description added under the author/series. Can be turned off, and change font.

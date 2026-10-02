@@ -1,4 +1,4 @@
-# v1.6.0
+# v1.6.0 · 2026-09-08
 
 **New formats**
 - FB2 and MOBI books now work. Glimpse finds the images inside them the same way that it does in an EPUB. ([#3](https://github.com/Fank1/glimpse/issues/3))
@@ -31,7 +31,7 @@
 **Translations**
 - "Show Mini Map" is corrected in 15 languages.
 
-# v1.5.1
+# v1.5.1 · 2026-08-29
 
 ## Since 1.5.0
 
@@ -51,7 +51,7 @@
 **Other**
 - Settings reorganised into clearer groups.
 
-# v1.5.0
+# v1.5.0 · 2026-08-28
 
 ### Major
 - **Choose where Glimpse opens.** Portrait can slide in from the left/right edge or open as a top/bottom band, with a live preview in the Layout dialog.
@@ -65,7 +65,7 @@
 - **Snappier zoom and image switching**, plus much smoother panning with the mini map on.
 - Fixes: top-band corners and margins, ⋯ menu centring, caption behind a bookmark label, a stuck ⋯ button state, and update-checker freezes/retries.
 
-# v1.3.0
+# v1.3.0 · 2026-08-15
 
 # Glimpse 1.3.0
 
@@ -117,7 +117,7 @@ As always, please feedback and preferably post them in Issues on Github. And yes
 - A stray long-press on an image no longer flashes the whole screen.
 - On a book with no reference images, the Gallery's Back button reliably closes Glimpse.
 
-# v1.2.0
+# v1.2.0 · 2026-07-29
 
 ## What's new since 1.0.0
 

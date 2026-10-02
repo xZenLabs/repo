@@ -1,4 +1,4 @@
-# v0.4
+# v0.4 · 2026-09-30
 
 KindleFetch now searches Library Genesis, as Anna's Archive blocks the plugin. Covers load in the background and can be tapped to see them full size, finished downloads can be opened straight away, Wi-Fi turns on when needed, and update checks can be turned off. Plus many fixes.
 
@@ -96,7 +96,7 @@ Changes since v0.3:
 - Check formatting and lint in CI (49e7699)
 - Leave the Lua that CI installs out of linting (da19045)
 
-# v0.3
+# v0.3 · 2026-07-19
 
 UX upgrades all around thanks to community feedback
 
@@ -107,7 +107,7 @@ UX upgrades all around thanks to community feedback
 - **Extend search caches**: search caches now expire after 2 weeks and have max 1000 entries
 - **Prompt updates**: plugin and curl updates will prompt the user first rather than being triggered automatically
 
-# v0.2
+# v0.2 · 2026-07-12
 
 Big update this one
 
@@ -119,6 +119,6 @@ Big update this one
 - **Automatic Retry Logic**: Fallback to other available urls if connection fails
 - **Safe File Handling**: Automatic filename sanitisation and directory management
 
-# v0.1
+# v0.1 · 2026-07-06
 
 **Initial release** - it works, but don't expect much else. And don't expect it to always work.

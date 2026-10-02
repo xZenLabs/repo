@@ -1,4 +1,4 @@
-# v6.2.0
+# v6.2.0 · 2026-09-23
 
 **WHAT'S NEW**
 
@@ -29,12 +29,12 @@
 
 - Display mode (Personal / Minimal / Full / Language learner), including its menu entry and its effect on the footer. Footer visibility is now controlled only by "Buttons shown in preview" and "Other plugins". The old floatingdictionary_display_mode setting is simply ignored.
 
-# v6.1.1
+# v6.1.1 · 2026-09-22
 
 Fixed:
 A crash triggered when using the small selection menu (the quick menu shown when you select text). A misreferenced variable in getSmallMenuButtonIds/showFloatingActionMenuForSelection caused KOReader to crash on that action. No changes to dictionaries, fonts, or settings.
 
-# v6.1.0
+# v6.1.0 · 2026-09-22
 
 **New**
 Buttons added by other dictionary plugins ([Assistant](https://github.com/omer-faruq/assistant.koplugin), etc.) now get the same customization as the built-in buttons: order, show/hide, custom text, and custom icon, all from `Buttons shown in preview`. Closes #17.
@@ -42,7 +42,7 @@ Buttons added by other dictionary plugins ([Assistant](https://github.com/omer-f
 **Fixed**
 Tapping Wikipedia and closing its window no longer leaves the highlight stuck in the text or triggers a stray new dictionary popup. Closes #19.
 
-# v6.0.0
+# v6.0.0 · 2026-09-21
 
 **Fixed:**
 - Very long press menu now works with Smart Highlight on multi-word selections (issue #16). Before, selecting 2+ words with Smart Highlight enabled always created a highlight, so the very long press never opened the menu. Now:

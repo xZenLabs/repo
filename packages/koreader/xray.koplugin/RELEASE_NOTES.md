@@ -1,4 +1,4 @@
-# 26.9.30.1
+# 26.9.30.1 · 2026-09-30
 
 ## What's Changed
 - Add gpt-6-luna support by @abs3ntdev in https://github.com/ultimatejimmy/xray.koplugin/pull/141
@@ -15,7 +15,7 @@
 
 **Full Changelog**: https://github.com/ultimatejimmy/xray.koplugin/compare/26.9.30...26.9.30.1
 
-# 26.9.17
+# 26.9.17 · 2026-09-17
 
 ## What's New
 
@@ -33,20 +33,20 @@
 
 **Full Changelog**: https://github.com/ultimatejimmy/xray.koplugin/compare/26.9.11.2...26.9.17
 
-# 26.9.11.2
+# 26.9.11.2 · 2026-09-12
 
 - Fix welcome screen bug.
 
 **Full Changelog**: https://github.com/ultimatejimmy/xray.koplugin/compare/26.9.11.1...26.9.11.2
 
-# 26.9.11.1
+# 26.9.11.1 · 2026-09-12
 
 - Fix bug with mentions when access from the menu
 - Fix bug with sorting options
 
 **Full Changelog**: https://github.com/ultimatejimmy/xray.koplugin/compare/26.9.11...26.9.11.1
 
-# 26.9.11
+# 26.9.11 · 2026-09-11
 
 - Fix bug in the update release notes dialog https://github.com/ultimatejimmy/xray.koplugin/issues/125
 - Update catchup logic to be more detailed with more triggers. Thanks to @mrpops2ko for getting started on this.

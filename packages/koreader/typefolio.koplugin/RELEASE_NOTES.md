@@ -1,4 +1,4 @@
-# v3.1.0
+# v3.1.0 · 2026-08-30
 
 # Release v3.1.0
 
@@ -20,7 +20,7 @@
 - **Menu Preview & Lifecycle Enhancements**: Added full-screen live preview with touch dismissal and improved window cleanup on document close.
 - **Packaging & Compliance**: Added root AGPL-3.0 LICENSE file, expanded test specifications, and improved build packaging filters.
 
-# v3.0.5
+# v3.0.5 · 2026-08-17
 
 # Release v3.0.5
 
@@ -46,7 +46,7 @@
 - **Full-page HTML Precheck & Blockquote Skipping**: Unified page-level and line-level blockquote tag matching; introduced full-page HTML precheck to reduce native engine calls by ~95% on non-quote pages with graceful fallback for older KOReader versions.
 - **Testing & Packaging**: Added 6 automated regression specs covering preset application, codec schemas, health check diagnostics, and dialogue offsets; included automated Python packaging script.
 
-# v2.1.2
+# v2.1.2 · 2026-08-06
 
 # Release v2.1.2
 
@@ -64,7 +64,7 @@
 - **Mode Switching & Input Validation**: Automatically resets CSS-only underline styles when switching to direct paint mode. Added positive number range validation (max 20px) for custom line thickness input dialogs.
 - **Menu Interaction & i18n Completion**: Preserved menu open state (`keep_menu_open`) across popup dialogs, preset management, and help guides. Fully updated README feature matrix and filled missing bilingual translation keys for UI buttons.
 
-# v2.1.1
+# v2.1.1 · 2026-08-05
 
 # Release v2.1.1
 
@@ -91,7 +91,7 @@
 * `main.lua`: Added `keep_menu_open = true` across all preset callbacks, help topics, and input dialog triggers.
 * `locales/` & `README.md`: Synchronized robust multi-nesting Calibre title matching regex across `zh_CN.lua`, `en.lua`, and `README.md`.
 
-# v2.1.0
+# v2.1.0 · 2026-08-04
 
 # Release v2.1.0
 

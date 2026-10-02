@@ -1,4 +1,4 @@
-# v0.0.7
+# v0.0.7 · 2026-08-06
 
 ## [0.0.7](https://github.com/KORComic/comicreader.koplugin/compare/v0.0.6...v0.0.7) (2026-08-06)
 
@@ -7,7 +7,7 @@
 
 * crash opening Book Map, Page Browser, or X-Ray mentions ([18a885e](https://github.com/KORComic/comicreader.koplugin/commit/18a885e6f76f1f659269251330a7e7a96bfbc333)), closes [#92](https://github.com/KORComic/comicreader.koplugin/issues/92)
 
-# v0.0.6
+# v0.0.6 · 2026-07-28
 
 ## [0.0.6](https://github.com/KORComic/comicreader.koplugin/compare/v0.0.5...v0.0.6) (2026-05-30)
 
@@ -16,7 +16,7 @@
 
 * updated for saturation support ([#83](https://github.com/KORComic/comicreader.koplugin/issues/83)) ([b5be3f0](https://github.com/KORComic/comicreader.koplugin/commit/b5be3f04d0545ba14579e0aa5f563a66fe83c915))
 
-# v0.0.5
+# v0.0.5 · 2026-01-05
 
 ## [0.0.5](https://github.com/KORComic/comicreader.koplugin/compare/v0.0.4...v0.0.5) (2026-01-05)
 
@@ -26,7 +26,7 @@
 * _mate.lua name field ([#69](https://github.com/KORComic/comicreader.koplugin/issues/69)) ([9dac837](https://github.com/KORComic/comicreader.koplugin/commit/9dac83758239099eed0b864d37fd0e6f1b1d9e64)), closes [#66](https://github.com/KORComic/comicreader.koplugin/issues/66)
 * add version field ([#73](https://github.com/KORComic/comicreader.koplugin/issues/73)) ([b798ef0](https://github.com/KORComic/comicreader.koplugin/commit/b798ef05a681b26bfbd7418fb008e4a6317a42dc)), closes [#72](https://github.com/KORComic/comicreader.koplugin/issues/72)
 
-# v0.0.4
+# v0.0.4 · 2025-12-15
 
 ## [0.0.4](https://github.com/KORComic/comicreader.koplugin/compare/v0.0.3...v0.0.4) (2025-12-15)
 
@@ -36,7 +36,7 @@
 * guard against nils and patch ReaderUI ([d103821](https://github.com/KORComic/comicreader.koplugin/commit/d1038211a740608ddc52f0db60325d283ca7e3af))
 * guard against nils during init ([#58](https://github.com/KORComic/comicreader.koplugin/issues/58)) ([d103821](https://github.com/KORComic/comicreader.koplugin/commit/d1038211a740608ddc52f0db60325d283ca7e3af))
 
-# v0.0.3
+# v0.0.3 · 2025-11-14
 
 ## [0.0.3](https://github.com/KORComic/comicreader.koplugin/compare/v0.0.2...v0.0.3) (2025-11-14)
 

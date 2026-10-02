@@ -1,10 +1,10 @@
-# v1.2.5
+# v1.2.5 · 2026-03-02
 
 KoDashboard v1.2.5 (retry release)
 
 Asset is minimal and includes only: _meta.lua, main.lua, dataloader.lua, api.lua, and web/.
 
-# v1.2.4
+# v1.2.4 · 2026-03-02
 
 KoDashboard v1.2.4
 
@@ -14,7 +14,7 @@ KoDashboard v1.2.4
 
 Release asset includes only: _meta.lua, main.lua, dataloader.lua, api.lua, and web/.
 
-# v1.2.3
+# v1.2.3 · 2026-03-01
 
 KoDashboard v1.2.3
 
@@ -29,10 +29,10 @@ Performance and stability improvements focused on mobile stats loading:
 Packaging:
 - Minimal release zip excludes screenshots.
 
-# v1.2.2
+# v1.2.2 · 2026-02-28
 
 README clarification, optional Pull Covers workflow, WebP cover storage, skipped-no-upload fix, and non-GIF upload restriction.
 
-# v1.2.1
+# v1.2.1 · 2026-02-26
 
 Add QR menu shortcut and remove auto-start

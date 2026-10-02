@@ -1,4 +1,4 @@
-# v1.4.5
+# v1.4.5 · 2026-08-28
 
 ## KOReader Plugin
 
@@ -38,7 +38,7 @@
 
 See README for usage instructions.
 
-# v1.4.4
+# v1.4.4 · 2026-07-22
 
 ## KOReader Plugin
 
@@ -71,7 +71,7 @@ See README for usage instructions.
 
 See README for usage instructions.
 
-# v1.4.3
+# v1.4.3 · 2026-07-20
 
 ## KOReader Plugin
 
@@ -103,7 +103,7 @@ See README for usage instructions.
 
 See README for usage instructions.
 
-# v1.4.2
+# v1.4.2 · 2026-07-19
 
 ## KOReader Plugin
 
@@ -136,7 +136,7 @@ See README for usage instructions.
 
 See README for usage instructions.
 
-# v1.4.1
+# v1.4.1 · 2026-07-13
 
 ## KOReader Plugin
 

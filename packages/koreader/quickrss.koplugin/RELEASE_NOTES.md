@@ -1,10 +1,10 @@
-# v0.2.1
+# v0.2.1 · 2026-03-03
 
 **QuickRSS v0.2.1-beta-hotfix**
 
 - Reverted back to using LuaSec for fetching instead of wget as it caused hard to track issues
 
-# v0.2.0
+# v0.2.0 · 2026-03-02
 
 **QuickRSS v0.2.0-beta**
 
@@ -43,7 +43,7 @@ Thanks for giving it a spin!
 - **Faster & more reliable image downloads** — smarter handling of flaky network connections on e-readers, automatically skips broken hosts instead of waiting for timeouts
 - **Dedicated data folder** — plugin data now lives in its own quickrss/ directory instead of cluttering KOReader's settings folder (note: you'll need to re-fetch articles after updating)
 
-# v0.1.0
+# v0.1.0 · 2026-03-02
 
 **QuickRSS v0.1.0-beta**
 

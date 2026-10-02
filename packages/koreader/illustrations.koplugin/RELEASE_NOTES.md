@@ -1,4 +1,4 @@
-# v0.5.2
+# v0.5.2 · 2026-04-25
 
 ## Critical Memory Leak & Disable Fixes
 
@@ -7,7 +7,7 @@
 - **Critical Memory Leak**: Fixed an issue where images were not properly released from memory during pagination and gallery viewing, causing "high memory usage" warnings and crashes on low-RAM devices.
 - **Plugin Management**: Fixed a bug where the plugin could not be disabled in KOReader settings (KOReader would restart but the plugin would remain enabled) due to an ID casing mismatch.
 
-# v0.5.1
+# v0.5.1 · 2025-12-17
 
 ## Critical Cache Fix & About Dialog
 
@@ -17,7 +17,7 @@
 ### Added
 - **About**: Added "About" dialog in Settings showing version info and paths.
 
-# v0.5
+# v0.5 · 2025-12-13
 
 ## Gallery Overhaul & CBZ Support
 
@@ -29,7 +29,7 @@
 - **Gallery**: Completely rewritten gallery engine with pagination support. Now opens instantly even with 200+ images and handles large collections smoothly.
 - **Gesture Menus**: Fixed actions ("Show Gallery", "Show Illustrations") to be reliably visible in the General gesture menu.
 
-# v0.4
+# v0.4 · 2025-12-09
 
 ## [0.4] - 2025-12-09 - Favorites & Update Checker
 
@@ -47,7 +47,7 @@
 - **Update Notifications**: Improved notification clarity (shows "Remote" vs "Local" version) and identifying plugin name.
 - **Performance**: Improved network checks to prevent crashes if offline.
 
-# v0.3
+# v0.3 · 2025-11-21
 
 ## [v0.3] - 2025-11-21 - Gallery Mode & Updated settings
 

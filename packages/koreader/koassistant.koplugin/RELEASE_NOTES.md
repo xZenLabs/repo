@@ -1,4 +1,4 @@
-# v0.23.0
+# v0.23.0 · 2026-09-30
 
 # KOAssistant v0.23.0 Release Notes
 
@@ -118,7 +118,7 @@ Run any action with another model in one long-press, X-Ray marking and book sear
 - **Translations**: review passes on [Weblate](https://hosted.weblate.org/engage/koassistant/).
 - **Bug reports and feature requests.**
 
-# v0.22.1
+# v0.22.1 · 2026-09-07
 
 # KOAssistant v0.22.1 Release Notes
 
@@ -299,7 +299,7 @@ Some providers count the answer budget a request *asks for* against a per-minute
 - **Translations**: review passes on [Weblate](https://hosted.weblate.org/engage/koassistant/).
 - **Bug reports and feature requests.**
 
-# v0.22.0
+# v0.22.0 · 2026-09-07
 
 # KOAssistant v0.22.0 Release Notes
 
@@ -466,7 +466,7 @@ Some providers count the answer budget a request *asks for* against a per-minute
 - **Translations**: review passes on [Weblate](https://hosted.weblate.org/engage/koassistant/).
 - **Bug reports and feature requests.**
 
-# v0.21.2
+# v0.21.2 · 2026-08-18
 
 # KOAssistant v0.21.2 Release Notes
 
@@ -682,7 +682,7 @@ Setting expectations for the new surfaces:
 
 **Full Changelog**: https://github.com/zeeyado/koassistant.koplugin/compare/v0.20.0...v0.21.2
 
-# v0.21.1
+# v0.21.1 · 2026-08-17
 
 # KOAssistant v0.21.1 Release Notes
 

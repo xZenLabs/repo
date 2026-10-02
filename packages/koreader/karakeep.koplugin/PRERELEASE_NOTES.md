@@ -1,4 +1,4 @@
-# v0.0.3-dev-9d310ab
+# v0.0.3-dev-9d310ab · 2025-08-26
 
 Development pre-release of karakeep.koplugin
 
@@ -13,7 +13,7 @@ Development pre-release of karakeep.koplugin
 2. Extract it to your KOReader plugins directory
 3. Restart KOReader and enable the plugin
 
-# v0.0.2-dev-99c1d9a
+# v0.0.2-dev-99c1d9a · 2025-08-22
 
 Development pre-release of karakeep.koplugin
 
@@ -28,7 +28,7 @@ Development pre-release of karakeep.koplugin
 2. Extract it to your KOReader plugins directory
 3. Restart KOReader and enable the plugin
 
-# v0.0.2-dev-7106452
+# v0.0.2-dev-7106452 · 2025-08-17
 
 Development pre-release of karakeep.koplugin
 
@@ -43,7 +43,7 @@ Development pre-release of karakeep.koplugin
 2. Extract it to your KOReader plugins directory
 3. Restart KOReader and enable the plugin
 
-# v0.0.2-dev
+# v0.0.2-dev · 2025-08-14
 
 Automated pre-release of karakeep.koplugin v0.0.2-dev
 

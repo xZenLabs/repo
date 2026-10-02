@@ -1,4 +1,4 @@
-# v0.4.11
+# v0.4.11 · 2026-09-15
 
 ## What's Changed
 * Burrow 0.4.11 beta 1: prewarm opposite EPUB tone by @richbeatty in https://github.com/richbeatty/burrow.koplugin/pull/65
@@ -10,7 +10,7 @@
 
 **Full Changelog**: https://github.com/richbeatty/burrow.koplugin/compare/v0.4.10...v0.4.11
 
-# v0.4.10
+# v0.4.10 · 2026-09-12
 
 ## What's Changed
 * Burrow 0.4.10 beta 1: hero-to-books spacing by @richbeatty in https://github.com/richbeatty/burrow.koplugin/pull/61
@@ -20,7 +20,7 @@
 
 **Full Changelog**: https://github.com/richbeatty/burrow.koplugin/compare/v0.4.9...v0.4.10
 
-# v0.4.9
+# v0.4.9 · 2026-09-11
 
 ## What's Changed
 * Burrow 0.4.9 beta 1: refresh library after Store downloads by @richbeatty in https://github.com/richbeatty/burrow.koplugin/pull/57
@@ -31,7 +31,7 @@
 
 **Full Changelog**: https://github.com/richbeatty/burrow.koplugin/compare/v0.4.8...v0.4.9
 
-# v0.4.8
+# v0.4.8 · 2026-09-11
 
 ## What's Changed
 * Burrow 0.4.8 beta 1: simplified cover spacing by @richbeatty in https://github.com/richbeatty/burrow.koplugin/pull/47
@@ -48,7 +48,7 @@
 
 **Full Changelog**: https://github.com/richbeatty/burrow.koplugin/compare/v0.4.7...v0.4.8
 
-# v0.4.7
+# v0.4.7 · 2026-09-02
 
 ## What's Changed
 * Fix OPDS sync persistence across restarts by @richbeatty in https://github.com/richbeatty/burrow.koplugin/pull/44

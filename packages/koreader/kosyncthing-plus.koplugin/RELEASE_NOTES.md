@@ -1,4 +1,4 @@
-# v1.2.2
+# v1.2.2 · 2026-07-31
 
 ## What's Changed
 * fix: use POSIX arithmetic in start-syncthing by @Philantrop in https://github.com/d0nizam/kosyncthing_plus.koplugin/pull/8
@@ -8,7 +8,7 @@
 
 **Full Changelog**: https://github.com/d0nizam/kosyncthing_plus.koplugin/compare/v1.2.1...v1.2.2
 
-# v1.2.1
+# v1.2.1 · 2026-07-23
 
 ## [v1.2.1] — 2026-07-23
 
@@ -44,7 +44,7 @@
 
 **Full Changelog**: https://github.com/d0nizam/kosyncthing_plus.koplugin/compare/v1.2.0...v1.2.1
 
-# v1.2.0
+# v1.2.0 · 2026-07-18
 
 ## [v1.2.0] — 2026-07-18
 
@@ -53,7 +53,7 @@
 
 **Full Changelog**: https://github.com/d0nizam/kosyncthing_plus.koplugin/compare/v1.1.9...v1.2.0
 
-# v1.1.9
+# v1.1.9 · 2026-06-20
 
 ## [v1.1.9] — 2026-06-21
 
@@ -79,7 +79,7 @@
   key in `_meta.lua`; removing it silences that warning with no change to the
   plugin's identity.
 
-# v1.1.8
+# v1.1.8 · 2026-06-15
 
 ## [v1.1.8] — 2026-06-15
 

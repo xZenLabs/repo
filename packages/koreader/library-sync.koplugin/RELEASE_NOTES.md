@@ -1,4 +1,4 @@
-# v0.7.0
+# v0.7.0 · 2026-08-30
 
 ## What's new
 
@@ -10,11 +10,11 @@
 
 Both ZIP assets are included for new and legacy OTA installations.
 
-# v0.6.12
+# v0.6.12 · 2026-08-28
 
 Fixes the BookOrbit reconciliation confirmation crash caused by a Lua gettext name collision. Also adds a regression guard preventing ignored return values from shadowing the translation function. Existing batched registration and reading-status protection remain unchanged.
 
-# v0.6.11
+# v0.6.11 · 2026-08-28
 
 ## BookOrbit reconciliation crash hotfix
 - Limit BookOrbit state transactions to batches of 100 files to avoid large transient allocations on Android.
@@ -26,7 +26,7 @@ Fixes the BookOrbit reconciliation confirmation crash caused by a Lua gettext na
 - Lua and LuaJIT provider contract tests.
 - Full Lua syntax validation and both OTA ZIP integrity checks.
 
-# v0.6.10
+# v0.6.10 · 2026-08-28
 
 ## BookOrbit file registration
 - Automatically register verified EPUB downloads and metadata replacements in the BookOrbit plugin state.
@@ -39,7 +39,7 @@ Fixes the BookOrbit reconciliation confirmation crash caused by a Lua gettext na
 - Full Lua syntax validation.
 - OTA ZIP integrity and directory-layout validation for both current and legacy plugin names.
 
-# v0.6.9
+# v0.6.9 · 2026-08-28
 
 ## Metadata refresh safety hotfix
 - Stop metadata refresh before replacing files when configured BookOrbit/Grimmory API metadata cannot be loaded.

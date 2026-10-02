@@ -1,4 +1,4 @@
-# v0.5.0
+# v0.5.0 · 2026-09-04
 
 This update mainly is made up of features and bug fixes made by @JayBigGuy10 on their fork. I'd like to thank them so much for submitting all these code requests to this version of the plugin.
 
@@ -26,7 +26,7 @@ This update mainly is made up of features and bug fixes made by @JayBigGuy10 on 
 
 **Full Changelog**: https://github.com/IntrovertedMage/AO3Downloader.koplugin/compare/v0.4.0...v0.5.0
 
-# v0.4.0
+# v0.4.0 · 2025-12-28
 
 ## What's Changed
 * Fix cookie parsing by @IntrovertedMage in https://github.com/IntrovertedMage/AO3Downloader.koplugin/pull/15
@@ -43,7 +43,7 @@ Move the folder `AO3Downloader.koplugin` inside the extracted folder to your dev
 
 The menu option to open the plugins menu should then be found under the search tab while the filemanger is open.
 
-# v0.3.2
+# v0.3.2 · 2025-11-23
 
 ## What's Changed
 * Fix searching works by & relationship tag by @IntrovertedMage in https://github.com/IntrovertedMage/AO3Downloader.koplugin/pull/13
@@ -51,7 +51,7 @@ The menu option to open the plugins menu should then be found under the search t
 
 **Full Changelog**: https://github.com/IntrovertedMage/AO3Downloader.koplugin/compare/v0.3.1...v0.3.2
 
-# v0.3.1
+# v0.3.1 · 2025-11-23
 
 ## What's Changed
 * Update filename generation in UpdateFanfic to extract from fanfic path, also fixes update bug by @IntrovertedMage in https://github.com/IntrovertedMage/AO3Downloader.koplugin/pull/12
@@ -59,7 +59,7 @@ The menu option to open the plugins menu should then be found under the search t
 
 **Full Changelog**: https://github.com/IntrovertedMage/AO3Downloader.koplugin/compare/v0.3.0...v0.3.1
 
-# v0.3.0
+# v0.3.0 · 2025-11-22
 
 ## What's Changed
 * Add filename template setting by @IntrovertedMage in https://github.com/IntrovertedMage/AO3Downloader.koplugin/pull/7
