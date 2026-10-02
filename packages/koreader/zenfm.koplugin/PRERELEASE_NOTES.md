@@ -1,3 +1,9 @@
+# v1.2.1-beta1 · 2026-10-02
+
+## What's Changed
+
+- Add setting in Web UI to overwrite files without confirmation
+
 # v1.2.0-beta6 · 2026-10-02
 
 ## What's Changed
@@ -34,15 +40,6 @@
 - Default startup directory to koreader home
 
 # v1.2.0-beta3 · 2026-09-21
-
-## What's Changed
-
-- Direct p2p sharing over https locally (like localsend)
-- Add scroll to bottom button for long files
-- Allow changing device name
-- Show device name in browser tab
-
-# v1.2.0-beta2 · 2026-09-21
 
 ## What's Changed
 
