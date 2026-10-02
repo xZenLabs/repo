@@ -1,3 +1,9 @@
+# v0.2.3
+
+This update adds relevance sorting to the search results.
+
+The fallback implemented in the last version doesn't natively support sorting of the results so its added in this version on device.
+
 # v0.2.2
 
 Fix No results with direct Libgen fallback.
@@ -39,7 +45,3 @@ Please note that the associated plugins dispatcher action was renamed in this pr
 # v0.1.7
 
 This update fixes an issue causing crashes when AA is not responding.
-
-# v0.1.6
-
-This update fixes issues with the version number in the packaging.
