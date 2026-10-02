@@ -17,12 +17,66 @@ other stylus-capable e-ink devices. It does not patch KOReader.
 
 ## Install
 
-1. Download the latest `notebook.koplugin-<version>.zip` from
-   [Releases](https://github.com/pierspad/notebook.koplugin/releases/latest).
-2. Extract `notebook.koplugin` into KOReader's plugin directory
-3. Restart KOReader, then open **Tools → More tools → Notebook**.
+### From the release ZIP
 
-Notebooks are stored in `koreader/notebook/`.
+1. Download `notebook.koplugin-<version>.zip` from
+   [Releases](https://github.com/pierspad/notebook.koplugin/releases/latest).
+   Use the attached plugin ZIP, rather than GitHub's **Source code (zip)** archive.
+2. Exit KOReader. Extract the ZIP and copy its `notebook.koplugin` folder into
+   your device's `koreader/plugins/` directory. On Kobo, this is usually
+   `.adds/koreader/plugins/`; on Kindle, `koreader/plugins/` on the exposed storage.
+3. Check that `plugins/notebook.koplugin/main.lua` exists directly inside the
+   plugin folder; there should be no extra nested `notebook.koplugin` directory.
+4. Restart KOReader, then open **Tools → More tools → Notebook**.
+
+### From source, without a ZIP
+
+No compilation is needed to install the Lua plugin directly.
+
+1. Clone the stable branch, or download and extract GitHub's source archive:
+
+   ```bash
+   git clone --branch main --depth 1 https://github.com/pierspad/notebook.koplugin.git
+   cd notebook.koplugin
+   ```
+
+   If you already have a checkout from `contrib`, use its `notebook.koplugin`
+   directory instead. A detached HEAD at a release tag is normal for a submodule.
+2. Exit KOReader. Create a folder named `notebook.koplugin` inside the device's
+   `koreader/plugins/` directory. Copy the **contents of `lua/`** into that folder,
+   including `icons/` and `locale/`. The `spec/` test directory can be omitted.
+   Copy `main.lua`, `_meta.lua` and all other runtime files directly into the
+   plugin folder: do not copy the outer repository or nest `lua/` inside it.
+3. Check for `plugins/notebook.koplugin/main.lua`, then restart KOReader and open
+   **Tools → More tools → Notebook**.
+
+For either method, when replacing an existing installation, first move the old
+plugin folder outside `plugins/` as a backup, then copy the complete new folder.
+Notebooks are stored separately in `koreader/notebook/`; keep that directory.
+All icons and translations are included in both methods. Git is only needed for
+cloning, and developer tools (`make`, LuaJIT, luacheck, gettext) are only needed
+for verification or packaging, not for copying the source plugin to a device.
+
+After installation, **Updates → Check update** offers newer stable releases.
+Restart KOReader after installing an update so it loads the new code.
+
+## Compatibility
+
+- **Kindle Scribe** is the primary hardware target; native KOReader checks
+  have also been run on the device. Stylus input, pressure and button support
+  depend on KOReader's device driver and the device firmware.
+- **KOReader desktop emulator (Linux)** is used for automated checks and native
+  offscreen rendering/layout tests. Mouse input can exercise the interface.
+- **Other devices** are not confirmed by these tests. A stylus-capable screen
+  alone does not establish compatibility; please report your model, firmware
+  and KOReader version when testing another device.
+- LocalSend is optional and only needed for wireless sharing. SimpleUI is
+  optional; Notebook is also available from KOReader's normal Tools menu.
+
+The source repository keeps the installable plugin in `lua/`. A source checkout
+or a contrib submodule is **not** the ready-to-install plugin directory: use the
+release ZIP or copy the contents of `lua/` as described above. Developers can
+also run `make package` to build their own installable ZIP in `build/`.
 
 ## Features
 
@@ -112,6 +166,8 @@ regression limits; see the [current maintenance audit](docs/audits/2026-10-01-ma
 for commands, coverage, raw results and measurement limits.
 The [1.6.0 release audit](docs/audits/2026-10-01-release-1.6.0.md) adds the mixed
 edit/page/zoom/save workflow and records the release verification.
+The [1.6.3 eraser audit](docs/audits/2026-10-02-release-1.6.3.md) covers continuous
+rubbing of dense markers, discontinuous input and shared 1×/2× batching.
 
 ## Contributing
 
