@@ -3,15 +3,31 @@
 
 import base64
 import hashlib
+import http.client
 import json
 import os
 import tempfile
 import unittest
+from unittest import mock
 
 import scrape_common
 
 
 class CachedPackageMetadataTests(unittest.TestCase):
+    def test_http_json_retries_dropped_connections(self):
+        response = mock.MagicMock()
+        response.__enter__.return_value.status = 200
+        response.__enter__.return_value.read.return_value = b'{"ok": true}'
+        response.__enter__.return_value.headers = {"X-Test": "yes"}
+        disconnect = http.client.RemoteDisconnected("connection closed")
+        with mock.patch.object(scrape_common.urllib.request, "urlopen",
+                               side_effect=[disconnect, disconnect, response]) as urlopen, \
+             mock.patch.object(scrape_common.time, "sleep") as sleep:
+            self.assertEqual(scrape_common.http_json("https://api.github.com/test"),
+                             (200, {"ok": True}, {"X-Test": "yes"}))
+        self.assertEqual(urlopen.call_count, 3)
+        self.assertEqual(sleep.call_args_list, [mock.call(1), mock.call(2)])
+
     def setUp(self):
         self.repo_root = scrape_common.REPO_ROOT
         self.koreader_dir = scrape_common.KOREADER_DIR

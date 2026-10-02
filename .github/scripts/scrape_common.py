@@ -105,17 +105,22 @@ def http_json(url):
     tok = token()
     if tok:
         req.add_header("Authorization", "Bearer " + tok)
-    try:
-        with urllib.request.urlopen(req) as resp:
-            data = resp.read().decode("utf-8")
-            return resp.status, json.loads(data), dict(resp.headers)
-    except urllib.error.HTTPError as e:
-        body = e.read().decode("utf-8", "replace")
+    for attempt in range(3):
         try:
-            parsed = json.loads(body)
-        except ValueError:
-            parsed = None
-        return e.code, parsed, dict(e.headers or {})
+            with urllib.request.urlopen(req) as resp:
+                data = resp.read().decode("utf-8")
+                return resp.status, json.loads(data), dict(resp.headers)
+        except urllib.error.HTTPError as e:
+            body = e.read().decode("utf-8", "replace")
+            try:
+                parsed = json.loads(body)
+            except ValueError:
+                parsed = None
+            return e.code, parsed, dict(e.headers or {})
+        except (urllib.error.URLError, ConnectionError, TimeoutError):
+            if attempt == 2:
+                raise
+            time.sleep(2 ** attempt)
 
 
 def respect_rate_limit(headers):
