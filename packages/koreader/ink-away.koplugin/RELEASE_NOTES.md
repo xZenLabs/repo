@@ -1,3 +1,30 @@
+# v3.2.0
+
+Everything since 3.1.0 in one stable release.
+
+## New
+- **Landscape mode.** Remembered between sessions, and exports come out landscape.
+- **Paste and copy in text boxes.** Long-press for a Paste bubble; Copy / Cut / Paste in the format menu. Uses KOReader's clipboard.
+- **Background remover** for images, plus refreshed text controls.
+
+## Pen
+- Small handwriting no longer turns into straight lines.
+- Kindle Scribe: strokes no longer join up when your hand rests on the screen.
+- Quick writing no longer connects neighbouring letters.
+
+## PDF
+- Exporting long PDFs no longer crashes. Pages are saved one at a time, with a progress bar you can stop.
+- Faster page turns, with fewer flashes.
+
+## Colour screens
+- Much faster drawing: ink shows instantly in black and settles to colour when you pause. Coloured pens no longer slow down at larger sizes.
+
+## Fixes and speed
+- The eraser no longer removes notebook lines.
+- Menus open around 40% faster, strokes draw with far less work, and landscape is as fast as portrait.
+- Typing no longer zooms the page when you tap away, and a new text box no longer starts with a stray letter.
+- Toolbar taps no longer lag after closing a menu.
+
 # v3.1.0
 
 The big new thing this release: you can add pictures to your drawings.
@@ -59,28 +86,3 @@ Bug fix
 Fixes toolbar icons appearing as danger/triangle placeholders on some devices (notably a first install on Kindle Scribe). The toolbar now loads its icons directly from the plugin instead of relying on KOReader's shared icon folder, which on a first run was not yet registered when KOReader looked for the icons. This was intermittent because it depended on whether that folder already existed from a previous run, which is why reinstalling appeared to fix it.
 
 No other changes. If anything looks off with the toolbar, please comment.
-
-# v2.1.0
-
-Install by unzipping into your KOReader `plugins` folder.
-
-## New: text notes
-- Add text boxes anywhere on a drawing or notebook page and type with the on screen keyboard.
-- Rich formatting on the word under the cursor or a selection: bold, italic, underline, strikethrough, highlight, larger or smaller size, and bullet or numbered lists.
-- Font picker that previews every installed font in its own typeface, plus a default text size.
-- Grid line snapping on ruled notebook pages and on the drawing grid: each line sits on the ruling, and the text size follows the line spacing so lines are never skipped.
-- Word level undo and redo while editing, and word by word undo of a finished box.
-- Long words wrap instead of overflowing, and the box grows to fit its text.
-- Move and resize boxes, tap to place the caret, drag to select.
-- Protect text from the eraser: optional toggle so the eraser clears ink but leaves your text, both on screen and in exports.
-- Text saves in projects and exports to PNG, JPEG and PDF.
-
-## Toolbar and notebook
-- Redesigned toolbar with clean vector icons instead of text labels.
-- New Redo button next to Undo.
-- Notebook page strip now uses arrow buttons and a dedicated add page icon that tracks the page number width.
-- Notebook ruling style, spacing and strength are remembered for the next notebook.
-
-## Fixes
-- Reopening a text box no longer shifts it down.
-- Eraser and text now render the same on screen and in exported PDF and PNG.
