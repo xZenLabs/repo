@@ -1,6 +1,8 @@
 name: Scrape KOReader plugins, patches, and fonts
 
 on:
+  push:
+    branches: [main]
   schedule:
     # Every hour.
     - cron: '0 * * * *'
@@ -103,8 +105,8 @@ jobs:
           echo "sha=$COMMIT_SHA" >> "$GITHUB_OUTPUT"
 
       - name: Dispatch GitHub Pages deployment
-        if: ${{ steps.scrape.outputs.added_count != '0' || steps.scrape.outputs.updated_count != '0' }}
+        if: ${{ github.event_name == 'push' || steps.scrape.outputs.added_count != '0' || steps.scrape.outputs.updated_count != '0' }}
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SOURCE_REF: ${{ steps.commit.outputs.sha }}
-        run: gh workflow run pages-deploy.yml --ref main --field source_ref="$SOURCE_REF"
+        run: gh workflow run pages-deploy.yml --ref main --field source_ref="${SOURCE_REF:-$(git rev-parse HEAD)}"
