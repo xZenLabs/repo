@@ -343,6 +343,9 @@ def cache_release_notes(releases, package_dir, dry_run=False,
     for release in matching:
         title = str(release.get("tag_name") or release.get("name") or "Release")
         title = title.replace("\r", " ").replace("\n", " ").strip()
+        published_at = str(release.get("published_at") or release.get("created_at") or "")
+        if published_at:
+            title += f" · {published_at[:10]}"
         sections.append(f"# {title}\n\n{release.get('body') or ''}".rstrip())
     content = "\n\n".join(sections) + "\n"
     release_notes_hash = hashlib.sha256(content.encode("utf-8")).hexdigest()

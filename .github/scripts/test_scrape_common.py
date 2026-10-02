@@ -123,7 +123,7 @@ class CachedPackageMetadataTests(unittest.TestCase):
              "published_at": "2026-07-08T00:00:00Z"},
         ])
         expected = "\n\n".join(
-            f"# v{i}\n\nNotes {i}" for i in range(6, 1, -1)
+            f"# v{i} · 2026-07-{i:02d}\n\nNotes {i}" for i in range(6, 1, -1)
         ) + "\n"
 
         url, notes_hash, changed, resolved = scrape_common.cache_release_notes(
@@ -173,7 +173,16 @@ class CachedPackageMetadataTests(unittest.TestCase):
         with open(
             os.path.join(self.package_dir, "PRERELEASE_NOTES.md"), encoding="utf-8"
         ) as fh:
-            self.assertEqual(fh.read(), "# v2-beta\n\n## Beta\n")
+            self.assertEqual(fh.read(), "# v2-beta · 2026-07-02\n\n## Beta\n")
+
+    def test_release_notes_dates_fall_back_to_created_at_and_allow_missing_dates(self):
+        releases = [
+            {"tag_name": "v2", "body": "New", "created_at": "2026-07-02T12:00:00Z"},
+            {"tag_name": "v1", "body": "Old"},
+        ]
+        scrape_common.cache_release_notes(releases, self.package_dir)
+        with open(os.path.join(self.package_dir, "RELEASE_NOTES.md"), encoding="utf-8") as fh:
+            self.assertEqual(fh.read(), "# v2 · 2026-07-02\n\nNew\n\n# v1\n\nOld\n")
 
     def test_unavailable_release_keeps_existing_release_notes(self):
         os.makedirs(self.package_dir)
