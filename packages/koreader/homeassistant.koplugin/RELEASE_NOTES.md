@@ -1,3 +1,30 @@
+# v26.10.03 · 2026-10-03
+
+## What's Changed
+* Add network check before calling Home Assistant API by @moritz-john in https://github.com/moritz-john/homeassistant.koplugin/pull/26
+* Handle missing config.lua with a Getting Started menu entry by @moritz-john in https://github.com/moritz-john/homeassistant.koplugin/pull/27
+
+**Two big changes this version:**
+
+1) Thanks to @mehalter `homeassistant.koplugin` now enables Wi-Fi when performing a request and then _tries_ to rerun the request after Wi-Fi is enabled.  
+This feature works well combined with the KOReader setting: "Settings > Network > "Action when Wi-Fi off: turn on".
+
+2) `homeassistant.koplugin` now ships with `example_config.lua` instead of `config.lua`.
+
+	**This doesn't affect existing users.** The change ensures that updating the plugin no longer overwrites your personalized `config.lua`.
+
+	If no `config.lua` exists, the plugin now shows a single "Getting Started" menu entry. This helps users who skipped the README or installed the plugin through something like `storefront.koplugin` without realizing they need to create their own `config.lua`.
+
+	If you previously used `debug_config.lua` - this file must now also be named `config.lua`!
+
+Getting Started message:	
+<img width="500" alt="2026-10-03 at 11 39 40 Screenshot@2x" src="https://github.com/user-attachments/assets/1098cc8a-e7b2-4e84-92cd-a09ee43ac3fa" />
+
+
+
+
+**Full Changelog**: https://github.com/moritz-john/homeassistant.koplugin/compare/v26.03.19...v26.10.03
+
 # v26.03.19 · 2026-03-19
 
 - The "Heartbeat" / Home Assistant sensor feature now lives in a different plugin: https://github.com/moritz-john/heartbeat.koplugin
@@ -49,22 +76,3 @@ Kobo devices may require a slightly longer delay.
 [^1]: Battery information was removed because it only makes sense when the `koreader_status` sensor is updated periodically (e.g. every 5 minutes), which is not currently the case (and I don't see an use case for this feature at the moment).
 
 <img width="1840" height="542" alt="2026-02-02 at 17 33 24 Screenshot" src="https://github.com/user-attachments/assets/e9981525-72e5-4274-a35c-f2a89bc849be" />
-
-# v26.01.24 · 2026-01-24
-
-- Add toggle in Tools → Home Assistant to enable or disable sendHeartbeat (disabled by default)
-- Change hearbeat status sensor from type `sensor` to `binary_sensor`
-- Add attributes to sensor: `device_model`, `battery_level`, `is_charging` and `last_seen`
-- Add ability to rename the sensor via `config.lua`
-- Prevent potential sendHeartbeat state inconsistency
-- Change version naming scheme (mainly because features/bug fixes get just released, when ready)
-
-[README: KOReader Home Assistant status sensor](https://github.com/moritz-john/homeassistant.koplugin#koreader-home-assistant-status-sensor)
-
-<img src="assets/heartbeat_toggle.png" style="width:60%; height:auto;" />
-<img width="1750" height="337" alt="2026-01-24 at 17 38 10 Screenshot" src="https://github.com/user-attachments/assets/4c65c74d-5a63-430a-950e-2ddfe78f13b4" />
-
-
-
-
-**Full Changelog**: https://github.com/moritz-john/homeassistant.koplugin/compare/v2.7.1...v26.01.24
