@@ -4,7 +4,9 @@
 * Add network check before calling Home Assistant API by @moritz-john in https://github.com/moritz-john/homeassistant.koplugin/pull/26
 * Handle missing config.lua with a Getting Started menu entry by @moritz-john in https://github.com/moritz-john/homeassistant.koplugin/pull/27
 
-**Two big changes this version:**
+**If you previously used `debug_config.lua` - this file must be renamed to `config.lua`**
+
+Two big changes this version:
 
 1) Thanks to @mehalter `homeassistant.koplugin` now enables Wi-Fi when performing a request and then _tries_ to rerun the request after Wi-Fi is enabled.  
 This feature works well combined with the KOReader setting: "Settings > Network > "Action when Wi-Fi off: turn on".
@@ -14,8 +16,6 @@ This feature works well combined with the KOReader setting: "Settings > Network 
 	**This doesn't affect existing users.** The change ensures that updating the plugin no longer overwrites your personalized `config.lua`.
 
 	If no `config.lua` exists, the plugin now shows a single "Getting Started" menu entry. This helps users who skipped the README or installed the plugin through something like `storefront.koplugin` without realizing they need to create their own `config.lua`.
-
-	If you previously used `debug_config.lua` - this file must now also be named `config.lua`!
 
 Getting Started message:	
 <img width="500" alt="2026-10-03 at 11 39 40 Screenshot@2x" src="https://github.com/user-attachments/assets/1098cc8a-e7b2-4e84-92cd-a09ee43ac3fa" />

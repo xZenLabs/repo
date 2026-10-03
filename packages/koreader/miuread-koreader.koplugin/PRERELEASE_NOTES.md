@@ -1,3 +1,20 @@
+# v5.9.0-beta.12 · 2026-10-03
+
+- 修复精确位置 recovery 的“假网络刷新”：本地 exact/legacy source cache 已经无法定位 anchor 时，network recovery 会显式绕过旧缓存并重新获取当前章节 `coord_html`，成功后覆盖 exact cache；若新源仍无法定位则继续 fail closed，不上传近似位置。
+- 修复 reading-time writer 抢占的 zombie/未 reap 判定：在 `kill(pid, 0)` 之外使用 KOReader `FFIUtil.isSubProcessDone(pid, false)` 确认子进程已经完成，减少已退出 writer 被误判为存活而触发 `time_writer_preempt_timeout`。
+- 保留 beta.11 的统一手动 progress recovery、wake online-ready gate、pending/verify 安全语义、rollback/fence、translation 与 Release 流程；不采用 immediate time-writer detach。
+- Schema 保持 136。
+
+# v5.9.0-beta.11 · 2026-10-03
+
+- 以 beta.10 为基线，主页短按“同步”、同步状态“全部重新同步”和进度失败页“全部重新同步”统一进入 `_sync_progress_full_recovery()`；入口 `source` 只用于诊断，不再因为 UI 路径不同而改变 progress recovery。
+- 所有手动同步在进入共享 progress recovery 前统一执行登录与 Wi-Fi radio gate；保留 `pending_send / submitted_unverified`、verify-first、安全重传和冲突保护，不通过 UI 路径绕过现有安全条件。
+- 手动同步即使主页缓存暂时显示 0 个失败项，也会先执行同一 progress verification/recovery pass，再依次处理 SAFE 阅读时间与批注，减少“主页单击无动作、二级菜单可恢复”的路径差异。
+- Kindle/设备唤醒后的阅读进度 reconcile 增加 online readiness gate：`NetworkConnected` 不再等同于 API 已可用，优先等待 `online=true`，无显式 online 字段时仅在稳定 `connected` 状态并经过额外 grace 后继续。
+- `network_restored` 与 `resume_recheck` 共用 `reader-progress-online` waiter，并增加 `[MiuRead][ResumeSync] waiting_network / network_online / reconcile_started / network_wait_timeout` 诊断日志。
+- 暂不采用另一个 beta.9 分支的 time-writer detach/SIGKILL 立即接管方案；`miuread/sync.lua` 保持 beta.10/beta.8 字节不变，继续保留现有 `time_writer_preempt_timeout` 防并发 writer 保护。
+- 完整保留 beta.10 的 translation 纯 Lua 顶层、数字 bookId 支持、先测试后建 tag 的 Release workflow 与 CHANGELOG 标题兼容。Schema 仍为 136。
+
 # v5.9.0-beta.5 · 2026-10-03
 
 - 重构开书进度对账为非阻塞轻量流程：先立即恢复本机页面，后台只读取一次云端 position metadata；已有精确本地快照时不再先跑完整 source mapping，同一本书 60 秒内仅对“已精确对齐”的缓存结果做读取 debounce。
@@ -25,24 +42,3 @@
 - Schema 136 新增 position_state 双写迁移。
 - 微信书架默认云端顺序；读完状态与当前位置分离解析。
 - 保持 chapter_uid + co 精确验收，不恢复 percent-equivalent。
-
-# v5.8.0-beta.22 · 2026-09-08
-
-- 正式纳入 jerry-shao 的 PR #73「复用微信读书连接，整本下载耗时下降约四分之一」：下载任务中的目录、阅读页上下文和章节正文分片可复用同一 WeRead TCP/TLS 连接，减少连续请求反复握手带来的等待；请求顺序、节奏与现有限流预算保持不变。
-- Keep-Alive 继续严格限定在下载链路，并且只有调用方显式传入 `keepalive=true` 才启用；登录、书架、阅读进度、阅读时长、批注与评论点赞等非下载请求继续使用原有一请求一连接行为。
-- 连接复用保持保守边界：仅当响应具有明确长度/分块边界、对端没有要求 `Connection: close`、且当前交换没有异常跳转时才回池；空闲 25 秒自动淘汰，单连接最多复用 64 次，取用前检测陈旧连接。
-- 复用连接在空闲期间被服务器关闭时，仅 GET / HEAD 可在确认尚未收到响应字节后透明重建一次；POST 不在连接池层自动重放，继续交给原有上层 retry，避免写请求结果不确定时重复提交。
-- 下载正常完成、用户取消或异常退出都会主动关闭连接池；限流冷却和网络恢复探测前也会清理空闲连接。流式图片/大文件继续走原有独立连接，不纳入本次复用。
-- 保留 `Config.HTTP_KEEPALIVE=false` 的完整回退开关，并新增 Keep-Alive 专项回归测试与静态验证，覆盖下载链路显式启用、非下载隔离、响应边界、陈旧连接、64 次上限、任务结束清理以及 POST 不透明重放。
-- PR 提供的 Kindle Oasis 2 A/B 数据中，同一本 36 章书籍由约 962 秒降至 729 秒，连接数由 272 降至 79；实际收益仍取决于设备、网络和书籍资源结构。
-- beta.21 在线评论点赞、beta.20 Issue #105 书架恢复与 100 本无分组提醒、beta.19 阅读时长热路径与 SAFE pending、精确阅读进度、后台下载/熄屏恢复等既有行为全部保持。
-
-# v5.8.0-beta.21 · 2026-09-08
-
-- 合入 mao135308 的 PR #72「为划线评论添加在线点赞」：在阅读评论弹窗中可选显示 `♡ / ♥`，支持在线点赞与取消点赞；功能默认关闭，可在“划线与评论 → 在线评论点赞”单独开启。
-- 点赞保持为独立即时 Web 操作，不进入本地批注同步队列，不建立离线待上传任务，也不在请求结果不确定时盲目重放；首次状态未知时先读取微信读书官方状态，避免把已经点过的赞误操作成取消。
-- 继续以服务器 `succ` 和 `likesCount` 为准；同一评论请求完成前禁止重复提交，旧弹窗会话的异步返回不会更新新弹窗，登录/账号变化会隔离点赞状态，确认 Web 会话失效后按 `auth_revision` 熔断并提示重新扫码。
-- 修复 PR 合并时 `store.lua` 遗留的重复 `preferences` 默认表：只保留 beta.20 的完整设置结构，并在真正生效的 `thoughts` 默认值中加入 `online_likes=false`；Schema 继续保持 135，不引入无意义迁移或启动完整保存。
-- 点赞内存缓存由单独的 `is_liked` 扩展为同时保存 `is_liked + likesCount`，关闭后立即重新打开评论弹窗时不会出现爱心已经变成 `♥`、点赞数却暂时回到旧值的状态；两者也共同进入弹窗缓存签名。
-- 在线点赞关闭时，评论弹窗打开/关闭恢复 beta.20 原有 `partial` 刷新行为；只有用户主动开启在线点赞时才使用 PR 为交互爱心适配的 `ui` waveform，点赞成功仍优先局部刷新赞区域，避免新功能改变未开启用户的阅读体验。
-- 新增在线点赞专项自动回归，验证官方状态读取、点赞/取消点赞 wire 参数、无盲目网络重试、认证恢复边界以及默认关闭；总体验证继续覆盖 beta.20 的 Issue #105 书架恢复、100 本无分组提醒，以及 beta.19 的阅读时长热路径、SAFE pending、精确进度和后台任务稳定性。

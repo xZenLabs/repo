@@ -1,6 +1,8 @@
-# MiuRead · WeRead Assistant
+# MiuRead
 
-MiuRead（觅阅 · 微信读书助手）是面向 KOReader 的非官方微信读书客户端。
+> **5.9.0 · 正式版**
+
+MiuRead（觅阅 · 微信读书助手）是面向 KOReader 的非官方微信读书客户端。5.9.0 将 5.9 beta 阶段验证完成的多设备进度对账、精确位置保护、同步恢复、外文翻译与扩展中心改进正式收口到稳定通道。
 
 本仓库同时维护正式版与内测版：
 
@@ -11,10 +13,19 @@ MiuRead（觅阅 · 微信读书助手）是面向 KOReader 的非官方微信�
 
 ## Versions
 
+- 当前正式基线：`5.9.0`，Schema `136`。
 - 正式版：以 GitHub Releases 中最新的非 Pre-release 为准。
 - 内测版：以 GitHub Releases 中最新的 Pre-release 为准。
 
 完整版本记录见 [`CHANGELOG.md`](CHANGELOG.md)。
+
+## 5.9.0 highlights
+
+- 多设备阅读进度使用 verified anchor、真实阅读事件时间与精确 `chapter_uid + co` 进行无感对账；无法安全裁决时保持 conflict/fence，不让旧位置覆盖新云端位置。
+- 主页快捷同步、同步状态与进度失败恢复统一使用同一 progress recovery；设备唤醒后等待网络真正 online-ready 再进行云端 reconcile。
+- 精确位置 recovery 在旧 source cache 失效后可真正刷新目标章节源数据；reading-time writer 抢占使用 KOReader 子进程完成状态，减少误判超时。
+- 外文书支持原文、双语、仅译文显示与官方译文生成；数字 bookId 同样可尝试官方翻译能力，失败时保留原文与原 EPUB。
+- 保留 5.8 系列的下载、书架恢复、扩展中心、批注/评论及后台稳定性改进。
 
 ## Installation
 
@@ -23,25 +34,18 @@ MiuRead（觅阅 · 微信读书助手）是面向 KOReader 的非官方微信�
 3. 完整重启 KOReader。
 4. 支持双更新通道的版本可在“觅阅设置 → 更新与关于 → 更新通道”中选择正式通道或内测通道。
 
-## 外文翻译
-
-微信读书上传书可在阅读工具栏的“外文翻译”中选择原文、双语或仅译文。生成译文使用微信读书官方服务，需要当前账号为付费会员；请求限定在当前章及下一章，不批量生成整本译文。
-
-- 当前章已有本地译文时，切换只调整显示，无需下载。尚无译文的段落继续显示原文；无法安全分离原文和译文的书籍可使用双语。
-- 需要生成时，更新会先保存为待安装文件。关闭本书，等待“新版本已安装”后重新打开；章节、图片或阅读位置与划线迁移验证失败时保留原文件。
-- “外文翻译 → 译文正文大小”可在 80%–180% 调节，并按书籍记忆。PDF 上传后转换的正文会匹配对应英文的相对字号，跟随阅读字号变化。
-
 ## Release Process
 
 - Stable tag：`vX.Y.Z`
 - Beta tag：`vX.Y.Z-beta.N`
 - 正式版发布到 `stable-channel`
 - 内测版发布到 `beta-channel`
-- 创建 Tag 后，发布工作流会自动同步分支源码中的版本号、发布通道与 `CHANGELOG.md`，再把 Tag 指向同步后的提交。
-- Beta Tag 必须创建在 `beta` 最新提交；Stable Tag 必须创建在 `main` 最新提交。
+- 发布前源码中的版本号、更新通道与 `CHANGELOG.md` 必须已经与目标版本一致。
+- Release workflow 先完成身份校验与回归测试，再确保对应 Tag 并生成安装包和 OTA 清单。
+- Beta Tag 必须对应 `beta` 最新提交；Stable Tag 必须对应 `main` 最新提交。
 - 最终分支源码、Tag 源码、Release 安装包与 OTA 清单保持同一版本。
 
-仓库根目录 `update.json` 仅保留为旧正式版 OTA 桥接入口，不作为当前正式版实时更新清单。
+仓库根目录 `update.json` 仅保留为旧正式版 OTA 桥接入口；实时正式更新清单发布在 `stable-channel/update.json`。
 
 ## Origin and License
 
