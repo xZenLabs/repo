@@ -1,3 +1,11 @@
+# v1.2.1 · 2026-10-03
+
+## What's Changed
+
+- Add setting in Web UI to overwrite files without confirmation
+- Use Ctrl/Cmd + A to select all in any file
+- Zen search in preview
+
 # v1.2.0 · 2026-10-02
 
 ## What's Changed
@@ -34,11 +42,3 @@
 - Use white favicon for dark mode browser
 - Add show IP/QR code to ZenOS settings
 - Fix showing entire filesystem
-
-# v1.0.4 · 2026-09-04
-
-## What's Changed
-
-- Add QR code
-- Keep ZenFM icons visible in dark mode
-- Reorganize settings
