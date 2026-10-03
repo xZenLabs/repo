@@ -1,3 +1,11 @@
+# v1.2.1-beta2 · 2026-10-03
+
+## What's Changed
+
+- Add setting in Web UI to overwrite files without confirmation
+- Use Ctrl/Cmd + A to select all in any file
+- Zen search in preview
+
 # v1.2.1-beta1 · 2026-10-02
 
 ## What's Changed
@@ -38,12 +46,3 @@
 - Show device name in browser tab
 - Move startup directory to web ui settings
 - Default startup directory to koreader home
-
-# v1.2.0-beta3 · 2026-09-21
-
-## What's Changed
-
-- Direct p2p sharing over https locally (like localsend)
-- Add scroll to bottom button for long files
-- Allow changing device name
-- Show device name in browser tab
