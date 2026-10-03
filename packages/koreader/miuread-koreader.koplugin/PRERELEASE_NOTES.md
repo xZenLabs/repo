@@ -1,3 +1,22 @@
+# v5.9.0-beta.14 · 2026-10-03
+
+- 以 beta.12 为代码基线，撤销 beta.13 的跳转前精确 preflight 与主动 idle exact-cache 设计；恢复已经在真机验证有效的“近似落点 → exact verify → text-anchor rescue → 再验证”主链。
+- 将远端定位最终失败拆成 hard/soft 两类：落入错误章节继续安全 rollback；已经进入目标章节但章节内 `wr_data_co` 未能精确确认时保留当前章节位置，不再自动跳回，同时继续阻止近似坐标写回云端。
+- OpenSync 的 late-remote 保护扩展到实际用户位置操作；云端结果返回前用户已经翻页/跳转时，本轮只保留 `remote_newer_pending`，不再突然抢占阅读位置。
+- 阅读结束首先独立保存 KOReader `local_display_progress` 与 XPointer；微信 exact `chapterUid + wr_data_co` 解析失败只进入 `local_coordinate_unresolved`，不再让主页本地进度一起失效。
+- 首页/书架引入 `progress_known`：未知进度保持 `nil` 并显示“—”，不再用 `nil → 0%`；RecentHero 优先保留本次 reader-close 的较新本地显示进度。
+- exact cache 改为纯被动：只在既有流程已经成功获得原生 `wr_data_co` 时顺手保存，并且仅在退出时 XPointer 完全一致才复用；失败位置仅保存 unresolved snapshot，不启动周期性精确定位。
+- 完整保留 beta.12 的 source force-refresh、KOReader subprocess completion、pending/verify recovery、严格 exact co 校验与 fail-closed 云端写入策略。Schema 保持 136。
+
+# v5.9.0-beta.13 · 2026-10-03
+
+- 云端较新位置改为跳转前预验证：候选 XPointer 先在后台反算为 `chapterUid + wr_data_co`，通过 exact / content-gated `verified_near` 后才执行一次可见跳转；预验证失败保持当前页，不再自动“跳过去再 rollback”。
+- 本地→微信 source 映射保留长匹配优先；长 anchor `not_found/ambiguous` 后增加边界短 anchor 的唯一匹配 recovery。云端→本地文本搜索也在 56 字符 anchor 失败后按 40/28/18 字符前缀有界降级，仍限定目标章节并由最终 `chapter/co` 预验证兜底；补充 `[ProgressSourceRecovery]` 诊断，严格 exact co 容差不放宽。
+- 修复 late-remote 竞态：预验证期间不再屏蔽真实用户翻页；用户已经开始阅读后，即使云端候选随后验证成功，本轮也不会自动抢占当前位置。
+- 阅读过程中在页面稳定后异步缓存最近一次可信 `chapter/co + source_xpointer`；退出时即时 resolver 失败且 XPointer 完全一致时复用该缓存，继续走现有 pending/upload/cloud-verify 流程。
+- 微信服务器 raw percent 明确作为 protocol metadata；beta.13 新的候选跳转只使用 canonical progress，权威同步仍以 `chapterUid + wr_data_co` 为准。
+- 保留 beta.12 的失败 source cache 强制刷新、KOReader 子进程完成确认、单 writer、安全 fence 与云端回读验证；Schema 保持 136。
+
 # v5.9.0-beta.12 · 2026-10-03
 
 - 修复精确位置 recovery 的“假网络刷新”：本地 exact/legacy source cache 已经无法定位 anchor 时，network recovery 会显式绕过旧缓存并重新获取当前章节 `coord_html`，成功后覆盖 exact cache；若新源仍无法定位则继续 fail closed，不上传近似位置。
@@ -25,20 +44,3 @@
 - 收敛 exact-co 定位：优先复用已验证 `chapter_uid + co -> XPointer` 缓存；普通跳转未精确命中后使用微信正文短 text anchor 在对应本地章节恢复 XPointer，再做 exact verify；percent correction 仅保留一次 bounded fallback，避免 964 -> 144 -> 759 一类振荡。
 - 阅读时间改为 best-effort：正常尝试一次，运行期空闲后最多再尝试一次；仍失败直接 drop，不再跨重启保存 SAFE time debt，也不再让阅读时间失败污染主页总体同步状态。beta.5 首启会清理 beta.4 遗留的 reading-time retry/failure 状态。
 - Schema 继续保持 136；beta.4 的 position-state 标量化与启动 StoreRepair 完整保留。翻译、Extension Center、下载系统、#117/#118 等非同步功能不做行为改动。
-
-# v5.9.0-beta.4 · 2026-10-02
-
-- 修复 5.9 自动续读的崩溃：云端位置对象中的 `sources` 诊断图可能形成自引用，进入 `position_state` 后在下一次 `U.merge()` 触发 LuaJIT stack overflow；现在所有持久化位置状态都压缩为纯标量坐标，并在 merge 前清理旧状态。
-- 增加启动自愈：beta.1–beta.3 已写入的循环/膨胀 position snapshot 会在启动时自动压缩，Schema 继续保持 136，不要求用户清空设置或重新登录。
-- 修复首次/无共同锚点时的 latest-wins 误判：刚读取到的 `remote_observed` 不再被当成 `verified_anchor`；只有经过精确确认的历史坐标才能作为共同锚点，避免把旧本机位置错误上传覆盖更新的云端位置。
-- 开书同步保护的默认本机 fallback 从 2.5 秒延长到 6 秒，更符合“先确认最新位置再开始翻页”的交互；超时文案改为“云端响应较慢，已先使用本机位置；后台继续确认”。
-- 保留 beta.3 的 #120 外文翻译、Extension Center UX、#117/#118 增强修复和 `chapter_uid + co` 精确验收，不改变翻译/扩展安装协议。
-
-# v5.9.0-beta.1 · 2026-10-02
-
-- 新增无感 latest-wins 阅读位置解析，取消普通开书的本机/云端选择框。
-- 新增开书同步遮罩、2.5 秒本机 fallback、10 秒 late-remote 安全窗口与用户交互保护。
-- 新增 8 秒自动定位撤回。
-- Schema 136 新增 position_state 双写迁移。
-- 微信书架默认云端顺序；读完状态与当前位置分离解析。
-- 保持 chapter_uid + co 精确验收，不恢复 percent-equivalent。

@@ -1,3 +1,41 @@
+# v7.7.1 · 2026-10-03
+
+### Bug Fix
+- Fixed a crash when tapping the AI button with AI Assistant v1.18 (thanks @DerailleurAgile, #N).
+
+**Installation:** download "Source code (zip)", unzip it, rename the folder to `page_scrubber.koplugin`, and copy it to `koreader/plugins/`.
+
+# v7.7.0 · 2026-10-03
+
+## What's new
+
+### System font selector
+Page Scrubber can now change KOReader's system (UI) font from **⚙ Configuration → Appearance → System Font**. The list shows each available family and flags the ones without a bold variant ("no bold"), that only ship bold ("bold only"), or that only ship italics ("italic only"). The change applies after a restart.
+
+**How it works:** the first time you open the selector (or pick a font), the plugin copies a small file, `ui_font_patch.lua`, to `patches/2--page-scrubber-font.lua`. After a plugin update, the patch is refreshed the next time you open the selector, and the new version takes effect on the following restart.
+
+**Why a patch:** KOReader's widgets fix their font when they load, and plugins load after the core interface. Applying the font from the plugin would only reach part of the UI. A patch runs before everything else, so the font covers the whole interface.
+
+**Why the patch also works on its own:** it has its own **System font** entry in KOReader's native Settings menu (file manager and reader), where you can enable/disable the replacement and pick a font. If you ever remove the plugin, you can still manage or turn off the font from there. Both use the same settings.
+
+**Compatibility**
+- **SimpleUI:** if SimpleUI's custom font is active, Page Scrubber doesn't touch the font and discards its own choice. The option stays visible and tells you the font is managed by SimpleUI.
+- **ZenOS:** the option is disabled when ZenOS is detected.
+
+> To remove the font patch completely, delete `patches/2--page-scrubber-font.lua`.
+
+### Menu tweaks
+- Small polish to our entries in KOReader's native menus so they look more consistent with the rest of the system (⚙ icon and separators).
+
+### Fixes
+- Fixed Wiki and Search buttons doing nothing in the dictionary pop-up and selection menu (thanks @DerailleurAgile, #6).
+- Fixed ghosting on the bottom bar of the index.
+
+### Translations
+- Spanish updated with the new strings and updated more languages.
+
+[page_scrubber.koplugin.zip](https://github.com/user-attachments/files/33009934/page_scrubber.koplugin.zip)
+
 # v7.6.0 · 2026-09-30
 
 ### What's New
@@ -77,35 +115,3 @@ Improvements on Dictionary Pop-Up
 * **Clean Navigation Controls:** Chapter list jump buttons (`<<`, `<`, `>`, `>>`) dynamically hide at list boundaries.
 
 [page_scrubber.koplugin.zip](https://github.com/user-attachments/files/32694557/page_scrubber.koplugin.zip)
-
-# v7.4.4 · 2026-09-26
-
-### **Table of Contents (ToC) Improvements**
- * **Dynamic Chapter Page Count:** Added a book-open-text metric in the footer displaying total pages for the active chapter, with full physical page label (pagemap) support.
- * Hierarchical Page Counts: Parent sections calculate the cumulative page count of all nested subchapters instead of stopping at the first child entry.
- * Decoupled Same-Page Entries: Removed inline title merging (Parent Chapter · Child Chaoter); items sharing the same starting page now appear as distinct rows with proper indentation.
- * Streamlined Footer Layout: Grouped bookmarks and annotations on the right side to balance the new chapter page stats on the left, fully integrated across Portrait and Landscape views.
-
-[page_scrubber.koplugin.zip](https://github.com/user-attachments/files/32688160/page_scrubber.koplugin.zip)
-
-# v7.4.0 · 2026-09-25
-
-v7.4- What's New
-### Custom Dictionary Text Sizes: 
-Added a setting with 5 preset font sizes (Very Small, Small, Normal, Large, Very Large) for the floating dictionary. The Normal preset preserves the default 1:1 ratio with the book font size.
-
-### Full-Screen Table of Contents Action: 
-Added "Page Scrubber: Index (Table of Content)" to Dispatcher actions, allowing gestures, corner taps, and shortcuts to open the Index directly with the shutter fully lowered.
-
-Bug Fixes & Improvements
--Index Touch Hitbox Fix: Resolved an issue where tapping lower chapter entries with the shutter down triggered the invisible preview hitbox and navigated back to the previous chapter.
--Index E-ink Stability & Preview Scaling: Stabilized E-ink ghosting during slider dragging and ensured the blank preview card maintains consistent dimensions without visual jumping.
-
-**Simple** **Grid** Refresh Bounds: Fixed refresh coordinate calculations in Simple Grid mode to prevent clipping and visual artifacts.
-
-**Localization**:
--Added Turkish (tr) translation.
--Added Brazilian Portuguese (pt_BR) translation.
--Updated existing translations across supported languages.
-
-[page_scrubber.koplugin.zip](https://github.com/user-attachments/files/32639901/page_scrubber.koplugin.zip)

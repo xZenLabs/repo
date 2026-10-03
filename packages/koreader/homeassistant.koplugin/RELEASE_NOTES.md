@@ -8,7 +8,7 @@
 
 Two big changes this version:
 
-1) Thanks to @mehalter `homeassistant.koplugin` now enables Wi-Fi when performing a request and then _tries_ to rerun the request after Wi-Fi is enabled.  
+1) Thanks to @mehalter `homeassistant.koplugin` now enables Wi-Fi when performing an action and then _tries_ to rerun the action after Wi-Fi is enabled.  
 This feature works well combined with the KOReader setting: "Settings > Network > "Action when Wi-Fi off: turn on".
 
 2) `homeassistant.koplugin` now ships with `example_config.lua` instead of `config.lua`.

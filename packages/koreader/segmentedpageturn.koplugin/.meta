@@ -1,0 +1,23 @@
+# Segmentedpageturn plugin for KOReader
+# https://github.com/Termynat0r/segmentedpageturn.koplugin
+# zenpm:auto-scraped
+id=segmentedpageturn
+name=Segmentedpageturn
+version=1.2.0
+description=Segmented page turns adds a directional, stepped wipe animation to ordinary page turns in KOReader
+author=Termynat0r
+category=utility
+platforms=koreader
+dependencies=
+source=https://github.com/Termynat0r/segmentedpageturn.koplugin
+stars=5
+updated_at=2026-10-03T20:42:21Z
+published_at=2026-10-03T13:33:23Z
+readme_url=packages/koreader/segmentedpageturn.koplugin/README.md
+readme_hash=b5317fceb4a51306e26c4c64853b619c741ee194
+release_notes_url=packages/koreader/segmentedpageturn.koplugin/RELEASE_NOTES.md
+release_notes_hash=00740b2ab5b30fb85f77dc70832e137ed36021b8807490a326a1147bd1d53e60
+releases=[{"tag_name":"v1.2.0","assets":[{"name":"segmentedpageturn.koplugin.zip","url":"https://github.com/Termynat0r/segmentedpageturn.koplugin/releases/download/v1.2.0/segmentedpageturn.koplugin.zip","size":18669,"digest":"sha256:67b295a99d77801704c44a8f461651d9e30e33cabd5e4b436c5b41fc1023afe4"}],"name":"v1.2.0"},{"tag_name":"v1.1.1","assets":[{"name":"segmentedpageturn.koplugin.zip","url":"https://github.com/Termynat0r/segmentedpageturn.koplugin/releases/download/v1.1.1/segmentedpageturn.koplugin.zip","size":18043,"digest":"sha256:8847d9cb9e9b4f1199b00a567419542b81545d4244c0075538d6d76bf288afcb"}],"name":"v1.1.1"},{"tag_name":"v1.1.0","assets":[{"name":"segmentedpageturn.koplugin.zip","url":"https://github.com/Termynat0r/segmentedpageturn.koplugin/releases/download/v1.1.0/segmentedpageturn.koplugin.zip","size":18066,"digest":"sha256:af3cc450cf3a6b4574de026a50621c72236b3399325b1034ecfd50356bb3236c"}],"name":"v1.1.0"},{"tag_name":"v1.0.0","assets":[{"name":"segmentedpageturn.koplugin.zip","url":"https://github.com/Termynat0r/segmentedpageturn.koplugin/releases/download/v1.0.0/segmentedpageturn.koplugin.zip","size":18070,"digest":"sha256:f48e8df56ba9b8d8d8f536e06eecdbbaa4860d2e6824591c83995ae8bcfacf26"}],"name":"v1.0.0"}]
+source_type=release
+source_asset=segmentedpageturn.koplugin.zip
+size=18669
