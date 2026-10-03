@@ -1,3 +1,16 @@
+# 1.5.0 · 2026-10-02
+
+- Add Hardcover OAuth device-code sign-in, based on [hardcoverapp.koplugin PR #70](https://github.com/Billiam/hardcoverapp.koplugin/pull/70). OAuth is used when signed in; the configured API token remains available as a fallback.
+- Confirm Hardcover journal writes using the mutation ID, without requiring journal-read access.
+- Redact credentials, search terms, and personal content from logs while retaining safe request and error diagnostics.
+- Prevent Goodreads session cookies from being sent if a request redirects to another host or an unencrypted URL.
+- Reduce reader stalls when the GitHub version check encounters a slow or unreachable connection by adding short request timeouts ([#16](https://github.com/Lyfts/ShelfSync/pull/16)).
+
+
+---
+
+Full changelog: [CHANGELOG.md](https://github.com/Lyfts/ShelfSync/blob/main/CHANGELOG.md#150)
+
 # 1.4.4 · 2026-10-01
 
 ##### Plugin
@@ -44,16 +57,3 @@ Full changelog: [CHANGELOG.md](https://github.com/Lyfts/ShelfSync/blob/main/CHAN
 ---
 
 Full changelog: [CHANGELOG.md](https://github.com/Lyfts/ShelfSync/blob/main/CHANGELOG.md#141)
-
-# 1.4.0 · 2026-09-29
-
-##### Plugin
-- Prevent title auto-linking from selecting unrelated search results by checking title and author similarity. Wikipedia and WikiReader EPUBs are excluded from linking and syncing.
-- Add Pagebound sync support with email/password login, book linking, status updates, and page/percentage progress sync.
-- Pagebound notes are published to the linked book's forum with a title showing progress and page position.
-- Fixed on-demand Wi-Fi shutting off while provider requests were still running; restored Wi-Fi now stays on until all queued operations finish.
-
-
----
-
-Full changelog: [CHANGELOG.md](https://github.com/Lyfts/ShelfSync/blob/main/CHANGELOG.md#140)

@@ -1,3 +1,42 @@
+# v5.3.0 · 2026-10-02
+
+- Theme packs: a pack can now bring its own wallpaper, planks and colours as well as ornaments. Choose a whole look from the new Shelf theme row in the Bookshelf menu, above Wallpaper, ornaments and colors (which was Background and colors): under Auto, Light and Dark it lists No theme pack and each theme pack you have installed. Choosing one sets its wallpaper, plank, colours, light or dark, and its ornaments, switching other packs' ornaments off. No theme pack puts your own look back, and anything you changed in the meantime stays as you left it. A pack you copy in shows the next time you open the menu, and Add theme… says where its folder goes and where to find ready-made ones.
+- Long-press an ornament on the shelf to adjust it: Size, Padding (below zero it tucks behind the books beside it), Anchor (bottom stands it on its shelf, top hangs it from the shelf above, or from the top panel on a page's top shelf), Height from that anchor, Mirror, and a Tap action. Place moves it earlier or later in the order, Swap picks another piece for that spot, and Shuffle all (or a gesture set to "Bookshelf: shuffle ornaments") deals a new order. Changes follow the ornament onto every shelf.
+- Zoom, a tap action for ornaments: shows the piece full screen, with a note about it when it has one.
+- Ornaments stand in a fixed pattern for each frequency setting and come round in the same order every time, so your shelf stays put when you add books or restart. Wide pieces are no longer left out: they are sized to fit and the books move over to make room.
+- Ornaments you add go to the front of the order so you see them, and show up within a few seconds without leaving the shelf. Set Wallpaper, ornaments and colors > New ornaments to Last to keep your shelf as it is.
+- A new wallpaper picker, with a large preview of each wallpaper and tabs for yours and each pack's. A tap shows it on the shelf behind straight away.
+- A built-in oak plank, used unless you've picked a plank colour of your own, and a Shelf plank picker under Wallpaper, ornaments and colors: Plain color, Oak, or any plank a pack brings, each shown as the shelf draws it. If plank designs are slow on your device, switch them off under Settings > Advanced > Performance tweaks.
+- A Color theme row at the top of Accent colors: your own colours, or a pack's.
+- Softer shadows around the books on spine shelves, and rounded corners where face-out covers meet the shelf.
+- Everything of yours is now in one folder, koreader/settings/bookshelf: settings, page counts, Hardcover links, wallpapers and ornaments, so backing up that folder backs up bookshelf. Your files (ornaments in icons/bookshelf.ornaments too) move there by themselves on the first start. Caches go to koreader/cache/bookshelf.
+- Swipe down on the top panel for a bigger panel and one shelf row fewer; swipe up to give the row back (#465).
+- Two more Face out reasons for spine shelves: Unread standalone (unread books in no series) and In a collection (the books in a collection you choose, such as a To read list) (#470).
+- Extract page counts for one folder: long-press it (or a series, author, genre or collection stack) and choose Extract page counts… (#459).
+- Shelf labels can use icons from your koreader/icons folder, as the start menu already could: Insert icon… when naming a shelf now offers the SVG icon folder (#469).
+- The quote of the day draws from every book's highlights, not only the 25 books you opened last. Scan library for highlights, in its settings, counts them all at once.
+- The reading goal can add books you read outside KOReader to the year's count, under its settings. Coming from SimpleUI, your physical books number comes across.
+- Settings > Behavior > Bookshelf gestures: switch off any of bookshelf's own gestures, or all of them. "Swipe down leaves full screen shelves" has moved in there.
+- OPDS books show their series in the top panel and on their covers when the catalogue sends it (Grimmory, BookLore and OPDS 2.0 catalogues) (#478).
+- Calibre metadata is also found in the folder above your home folder, where Calibre puts it at the root of the device (#475).
+- Tap empty space on a spine shelf to put a lifted book back.
+- The Ornament collection shows ornaments only, with a tick box on each and Select all and Select none for the tab you're on, and is quicker when switching lots on and off.
+- For pack makers: a pack can include an ornaments.json to arrive placed, and a theme folder with a theme.json, wallpaper, planks and colours to make it a theme pack. Details in the README.
+- Fix: an edge swipe along the top or bottom, or a corner long-press, that you've given an action in KOReader's gestures now runs that action on the shelf (#476).
+- Fix: a new book's spine shows its title and colours once its details are read, instead of its file name (with authors switched off, OPDS downloads showed the author) (#477).
+- Fix: on a filtered shelf, a collection (or series, author and so on) you come back to from a book no longer shows books the filter leaves out (#479).
+- Fix: on a Series shelf showing standalone books too, sorting by author mixes the standalone books in with the series instead of putting them all at the end (#351).
+- Fix: tapping a Book stack folder with HW dithering on no longer leaves a noisy strip beside the stack on colour screens (#448).
+- Fix: the daily reading goal's "min" is now translated (#474).
+- Fix: the device no longer goes to sleep in the middle of Extract page counts (#459).
+- Fix: soft edges of PNG ornaments no longer come out darker than drawn.
+- Fix: the reading goal counts a book in the month and year you marked it finished, not when you last opened it, so a book finished in December no longer counts towards the new year.
+- Fix: time left, reading time and speed for a book whose title or author changed (a Calibre resend, say) now match KOReader's, instead of coming from the book's old statistics.
+- Fix: Disable spine mode shadows now takes effect straight away instead of on the next page.
+- Fix: uninstalling bookshelf along with its settings no longer deletes the Hardcover sync plugin's settings too.
+- Fix: on a KOReader older than v2025.08, bookshelf shows one menu line saying to update KOReader instead of crashing.
+- Fix: Full screen shelves image set to None now says None, instead of Same as default.
+
 # v5.2.3 · 2026-09-28
 
 - Fix: A very large PNG ornament no longer crashes KOReader when you open the ornaments browser. Ornaments over 8 megapixels are now left out, with a note in the log; 1000-2000 px on the longest side is plenty (#471).
@@ -45,21 +84,3 @@
 - Fix: On a spine shelf, choosing a second genre or tag from the top panel shows its own books instead of the first one's.
 - Fix: Switching shelves in full screen with the status line off no longer leaves the old shelf button's fill behind.
 - Fix: Tapping a shelf button over a wallpaper no longer flashes it black and white.
-
-# v5.1.5 · 2026-09-23
-
-- Collection shelves can sort by "Collection order", the order you've arranged the collection in KOReader, and an "Edit collection order" button beside it opens KOReader's arrange screen (#441).
-- Spine titles too long for a thick spine wrap onto a second line (#440).
-- "Ignore The, A, An when sorting" in Library & search: turn it off to sort titles and series exactly as written (#428).
-- A spine's thickness no longer changes once you've read the book in a large or small font. Run "Extract page counts" once to update books you've already opened (#387).
-- New in the accent colours: "Micro-module border" (#424) and "Transparent shelf menu", which lets the wallpaper show behind the shelf buttons.
-- Page chevron taps now use the page-turn animation, like swipes (from @imanubdesigner's PR #447).
-- On a spine shelf, opening a folder spills its books onto the shelf in labelled runs instead of showing subfolders as thin book spines (#420).
-- "First in series" and "First unread in series" follow each book's own series on author shelves, and books there show their series numbers again (#444).
-- The gap under a lifted spine book blends into the shelf instead of showing as a black bar (#446).
-- Expanding a short shelf, or zooming out on it, no longer leaves the first books unreachable (#369).
-- Collapsing an expanded spine shelf keeps your place instead of going back to page 1.
-- Switching shelves no longer leaves part of the old top panel on screen (#423).
-- The wallpaper follows night mode when it's switched by another plugin that doesn't broadcast the change correctly, and switching no longer flashes the old colours first (#426).
-- Bold and italic are kept on wrapped title lines in list view (#379).
-- With "Flash buttons and menu items" on, the page buttons no longer flash a patch of the wallpaper when tapped.

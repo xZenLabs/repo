@@ -19,7 +19,7 @@ A friendly home screen for KOReader. Browse your library by series, author, genr
 
 ## Install
 
-> **Bookshelf needs KOReader v2026.03 or newer.** Older versions are missing drawing features Bookshelf relies on, and on colour screens it can crash. To check yours, open KOReader's menu and go to **Help > Version**. If it's older, update KOReader first.
+> **Bookshelf needs KOReader v2025.08 or newer, and works best on v2026.03 or newer.** On a version older than v2025.08 it shows a single menu line asking you to update, instead of running. On v2025.08 to v2026.02 it works, with a few small differences: corners on covers and folder cards come out square, staged bulk-edit buttons show no highlight, and opening a book from the quote of the day doesn't jump to the quote. To check your version, open KOReader's menu and go to **Help > Version**.
 
 1. Download the latest **bookshelf.koplugin.zip** from [Releases](https://github.com/AndyHazz/bookshelf.koplugin/releases).
 2. Unzip it onto your device's KOReader plugins folder:
@@ -161,25 +161,40 @@ Each book is drawn from what Bookshelf already knows about it:
 
 Long-press a shelf and pick **Spines** under Show as, or hold the page range in the footer to cycle to it. The same dialog has the settings below it.
 
-**Face out.** Some books turn to show their cover, the way a shop dresses a shelf. Choose which: favourites, the first in each series, what you are currently reading, all books, or none.
+Tap a spine and the book lifts off the shelf (and shows in the top panel); tap it again to open it, or tap empty space anywhere on the shelf to put it back.
+
+**Face out.** Some books turn to show their cover, the way a shop dresses a shelf. Tick as many reasons as you like: unread books, unread books that are in no series, what you are currently reading, favourites, the first (or first unread) in each series, the newest few added, or the books in one collection you choose (a To read list, say). Or all books, or none.
 
 **Grouping.** On a grouped shelf (series, authors, genres) there are no folders to drill into -- the groups are flattened onto the shelf and each run gets a label at the shelf's edge. Everything is out where you can see it.
 
 **Spine text direction.** Which way a title runs down a spine: **Top to bottom** (the default, how British and American books are printed) or **Bottom to top** (Continental European). Set it once for the whole library under **menu -> Settings -> Library & search**.
 
-**Ornaments.** Drop PNG or SVG files into KOReader's `icons/bookshelf.ornaments` folder and they turn up in the gaps, standing on the plank like the books. A potted plant and a cactus are seeded there to start you off; delete them if you would rather not see them and they stay deleted.
+**Ornaments.** Drop PNG or SVG files into the `koreader/settings/bookshelf/ornaments` folder (beside the wallpapers) and they turn up in the gaps, standing on the plank like the books. A potted plant and a cactus are seeded there to start you off; delete them if you would rather not see them and they stay deleted. Ornaments from before 5.3, in `koreader/icons/bookshelf.ornaments`, move here by themselves on the first start.
 
-A folder of ornaments inside `bookshelf.ornaments` is a **pack**, which you can switch on and off as one. **menu -> Background and colours -> Ornaments** opens a browser of everything in the folder, with **All** and a tab per pack: tap an ornament to switch it off or on, long-press it to switch it or delete it, and use the footer button on a pack's tab to switch the whole pack. Switched-off ornaments are faded, and **Add ornaments…** on the All tab shows where the folder is on your device.
+A folder of ornaments inside `ornaments` is a **pack**, with a tab of its own. **menu > Wallpaper, ornaments and colours > Ornament collection** opens a browser of everything in the folder, with **All** and a tab per pack: tap an ornament to switch it off or on (the box in its corner is ticked while it is on), long-press it to switch it or delete it, and use **Select all** or **Select none** in the footer to switch every ornament on the tab. A theme pack switches its own ornaments on, and the other packs off, when you choose it as your Shelf theme. Switched-off ornaments are faded, and **Add ornaments…** on the All tab shows where the folder is on your device.
 
-Ready-made ornament packs, drawn to sit on the plank at the right size on colour and black and white screens, are in the [Ko-fi shop](https://ko-fi.com/andyhazz/shop). Unzip a pack's folder into `bookshelf.ornaments` and it gets its own tab. Packs need Bookshelf 5.2 or later.
+**Theme packs.** A pack can also bring a wallpaper, planks and colours. Each is chosen where its kind is chosen: the pack's wallpaper appears in the wallpaper picker, its planks in the **Shelf plank** picker, and its colours as a **Color theme** at the top of Accent colours. A **theme pack** (one with a `theme/theme.json`) also appears in the Bookshelf menu's **Shelf theme** row (just above Wallpaper, ornaments and colours), under Auto, Light and Dark: choosing it uses all of its parts at once, and its ornaments in place of other packs'. **No theme pack** puts your own look back, and anything you changed in the meantime stays as you left it. A pack copied in shows there the next time you open the menu.
 
-How often they appear is per shelf, next to **Author on spine** in the shelf's style dialog: **None**, **Rarely**, **Often** or **Always**. Above None, every so often a page is promised a piece whether or not a wide enough gap happens to fall there, so a densely packed shelf still gets some.
+Ready-made ornament packs, drawn to sit on the plank at the right size on colour and black and white screens, are in the [Ko-fi shop](https://ko-fi.com/andyhazz/shop). Unzip a pack's folder into `ornaments` and it gets its own tab. Packs need Bookshelf 5.2 or later.
 
-Shape is up to you. A row end offers as much width as the row can spare once it has kept room for one book, so a broad ornament stands at full height rather than being shrunk away, and a row that cannot fit a book beside one simply carries the ornament alone. Pieces take turns, so everything in the folder gets its share rather than the same two recurring.
+How often they appear is per shelf, next to **Author on spine** in the shelf's style dialog: **None**, **Rarely**, **Often** or **Always**. **Rarely** puts a piece at the end of one shelf in four, **Often** at the end of every other shelf and in one section gap in four, and **Always** at the end of every shelf and in every other section gap. The ends alternate, and the books always move over to make room.
 
-For a PNG, the bottom edge of the image is the plank surface and the whole image is scaled to one fixed height against the books, so transparent space above the picture makes it stand smaller, and space at the sides keeps it off the books. `template.svg` carries the SVG conventions in its comments: the bottom of the viewBox is the plank surface, `bookshelf:overhang=N` lets part of the shape hang over the front edge, and the renderer is small, so bold solid shapes work and text, filters and masks do not.
+Shape is up to you. A piece stands at 80% of the books' height and no wider than the books are tall; a wider one is scaled down to fit, never left out. Pieces come round in a fixed order, one of each before any repeats, so a shelf looks the same every time you come back to it, even after you add books. **Shuffle all** in an ornament's long-press menu, or a gesture set to **Bookshelf: shuffle ornaments**, picks a new order. Ornaments you add show up on their own within a few seconds while the shelf is open (the same check that finds new books, so with Wi-Fi on), and join the front of the order, so you see them straight away; to keep your shelf as it is instead, set **Wallpaper, ornaments and colors > New ornaments** to **Last**.
 
-**Shelf plank colour** is under **Settings -> Background and colours -> Accent colours**. The lit top surface and the shaded front edge are both tinted from that one colour; the default is light oak.
+**Long-press an ornament** on the shelf to adjust it where it stands: its size (up to the whole row), the padding either side of it (below zero it tucks behind the books beside it), whether it is mirrored (always, or every other time it comes round), its anchor (**bottom** stands it on its shelf; **top** hangs it from the shelf above, the top of the drawing against its underside at any size, which is how to hang a bat), its height from that anchor (the arrows raise and lower it, in steps of the shelf's height, so a big piece moves as far as a small one; below the plank it dangles in front of its shelf, above the shelf above it goes behind it), and an action to run when you tap it: any action, or **Zoom**, which shows the ornament full screen with its name (and, for pieces that come with one, a note about it). **Swap** opens the ornament browser so you can choose what stands there instead: the two pieces trade places in the order. The shelf redraws under the menu as you go; tap a value to reset it. Your changes follow the ornament onto every shelf, and are kept in an `ornaments.json` in the ornaments folder.
+
+**For pack makers:** a pack can carry its own `ornaments.json`, keyed by file name, to arrive placed. Fields: `scale` (1 = the default size), `anchor` (`"bottom"`, the default, stands it on its shelf; `"top"` hangs it from the shelf above), `lift` (its height from the anchor, in the shelf's height: 0.1 a tenth of it up, -0.1 down), `pad` (in the books' height, each side, - tightens), `night` (`"invert"` to draw it in chalk in dark mode), `mirror` (`"off"`, `"always"` or `"alternate"`), `tap` (`"zoom"` to show the piece full screen when it is tapped), `info` (text shown under the piece in the zoom view, in a scrolling panel: a title, an artist, notes; without it the view shows the piece's name). A reader's own changes are kept separately and win.
+
+```json
+{ "owl.png": { "scale": 1.2, "lift": -0.05 },
+  "bunting.png": { "lift": 1, "tap": "zoom" } }
+```
+
+For a PNG, the bottom edge of the image is the plank surface and the whole image is scaled to one fixed height against the books, so transparent space above the picture makes it stand smaller, and space at the sides keeps it off the books. `template.svg` carries the SVG conventions in its comments: the bottom of the viewBox is the plank surface, and the renderer is small, so bold solid shapes work and text, filters and masks do not.
+
+A pack's theme lives in a `theme` folder inside the pack: `wallpaper.png` (or `.jpg`), with optional `wallpaper.full.png` for full screen shelves, `wallpaper.dark.png` for dark mode and `wallpaper.full.dark.png` for both; a plank as `plank.<Name>.middle.png` (repeated along the shelf) with optional `plank.<Name>.left.png` and `plank.<Name>.right.png` for its ends, and as many named planks as you like; and `colours.json`, with `day` and `night` sets of the accent colours.
+
+**Shelf plank** is in **menu > Wallpaper, ornaments and colours**, and in **Accent colours**. It opens the plank picker, each plank shown as the shelf draws it: **Plain color** (it opens the colour dialog as well, and the lit top surface and the shaded front edge are both tinted from that one colour), the built-in **Oak** (the default), then any planks your packs bring, with a tab per pack. The one in use is marked.
 
 Spines are not available for OPDS catalogues, which have no local page counts or cover art to measure.
 
@@ -237,7 +252,7 @@ Micro-modules are small live panels. Add them to the start menu through **Add ne
 - **Clock** -- digital (12- or 24-hour) or analogue.
 - **Battery** -- the battery level with KOReader's own battery icon and a level bar, plus the cover battery on devices that have one. Tap it for KOReader's battery statistics.
 - **Quote of the day** -- a highlight drawn from your own books, refreshed daily or on every open. Tapping it can roll a new quote, open that book's bookmark list, or open the book at the highlight. Its settings choose where quotes come from (your highlights, quote files in SimpleUI's format from `settings/bookshelf/quotes` or SimpleUI's own folder, or both), and can leave out particular books or highlight colours. For an example quote file, see [civ6_quotes.lua](assets/quotes/civ6_quotes.lua): 233 quotes from Civilization V and VI, shared by [@Mattson42](https://github.com/Mattson42) in [#464](https://github.com/AndyHazz/bookshelf.koplugin/issues/464).
-- **Reading goal** -- progress towards a daily reading target.
+- **Reading goal** -- progress towards daily, weekly, monthly and yearly targets; tap to cycle. A book counts in the month and year you marked it finished. Its settings can add books you read outside KOReader to the year's count (moving from SimpleUI, your "physical books" number comes across).
 - **Reading stats** -- time and pages read today and this week (needs the `statistics` plugin).
 - **Reading streak** -- your current and best reading streak, in days and weeks (needs the `statistics` plugin).
 - **Random book** -- rolls an unread book from the current shelf (or your whole library) into the top panel card; tap the dice for another.
@@ -445,7 +460,7 @@ Each cover can show small badges and bars at the corners. Configure them under *
 - **Show page count** -- a page-count pill in the bottom-right ("123 p"). An EPUB you have never opened has no count until you run [Extract page counts](#page-counts).
 - **Show series #** -- a "#3" badge on covers in a series. Tri-state: Always, Within series folder (so mixed shelves stay clean), or Never.
 
-The colours of these elements are set separately under **menu -> Background and colours -> Accent colours** (see below).
+The colours of these elements are set separately under **menu -> Wallpaper, ornaments and colours -> Accent colours** (see below).
 
 The same **Cover display** menu also has **True cover aspect ratio**. Off by default, Bookshelf fits every cover to a uniform book rectangle; turn this on to show each cover at its real shape instead. Covers keep the same width but vary in height -- on the shelf they sit along the bottom shelf line, in the top panel they align to the top -- so wide or square covers stop being cropped or stretched.
 
@@ -453,31 +468,33 @@ Two more rows in that menu change how a cover is drawn rather than how it is siz
 
 ---
 
-## Background and colours
+## Wallpaper, ornaments and colours
 
-Everything that decides how the shelf looks now lives in one place: **menu -> Background and colours**, one level up from Settings. It used to be split between a Colours menu and a separate Wallpaper menu, which put the theme, the background colour and the panel shading in three different places.
+Everything that decides how the shelf looks now lives in one place: **menu -> Wallpaper, ornaments and colours**, one level up from Settings. It used to be split between a Colours menu and a separate Wallpaper menu, which put the theme, the background colour and the panel shading in three different places.
 
 ### Wallpaper
 
-- **Default wallpaper image** -- a picture behind the whole shelf. Drop your own into `koreader/settings/bookshelf/wallpapers` (the menu tells you the path and offers to create it) and they appear in the list. One is bundled: **Leafy wallpaper**.
+- **Default wallpaper image** -- a picture behind the whole shelf, chosen in a picker that shows each one large, a page at a time, with **All**, **Yours** and a tab per pack that brings a wallpaper. Drop your own into `koreader/settings/bookshelf/wallpapers` (the picker's **None** page tells you the path) and they appear there. One is bundled: **Leafy wallpaper**.
 - **Wallpaper folder** -- a folder of your own to take pictures from as well, for wallpapers you already keep somewhere else. Its pictures are listed alongside the standard folder's, and nothing in it is changed. Long-press the row to stop using it.
 - **Full screen shelves image** -- a different picture for full screen shelves. That view is wall-to-wall covers and spines, where a backdrop that reads well behind the top panel is often too busy.
 - **Background colour** -- the page ground. Useful on its own with no wallpaper at all, and it is what shows through anywhere the picture is kept out.
-- **Panel shading** -- how much the top panel and the footer are shaded so their buttons stay legible over a picture: **Transparent**, **Light**, **Heavy** (the default) or **Solid**. Transparent reads well over a plain texture and poorly over a busy photograph; Solid hides the picture behind those strips entirely.
+- **Panel shading** -- how much the top panel and the footer are shaded so their buttons stay legible over a picture: **Transparent**, **Low**, **Moderate**, **Heavy** (the default) or **Solid**. Transparent reads well over a plain texture and poorly over a busy photograph; Solid hides the picture behind those strips entirely.
 
-### Ornaments
+### Ornaments and planks
 
-**Ornaments** opens the ornament browser -- see [Spines](#spines).
+**Ornament collection** opens the ornament browser, and **Shelf plank** the plank picker -- see [Spines](#spines).
 
 ### Shelf theme
 
 **Light**, **Dark**, or **Auto (follow device)** -- light or dark colours for the shelf independently of KOReader's night mode, so you can keep the reader dark and the shelf light, or the other way round.
 
+It is a row of its own at the top of the Bookshelf menu. Below the three, **No theme pack** and each theme pack you have installed: choosing one uses its wallpaper, plank, colours and ornaments together, and No theme pack puts your own back. **Add theme…** says where a theme pack's folder goes.
+
 **Text ink** sets the colour of the shelf's own text: black by default in the light theme, white in the dark one. Covers, wallpaper and accent colours are unaffected.
 
 ### Accent colours
 
-The rest of the palette sits under **Accent colours**, grouped by what it affects. Bookshelf keeps **independent day-mode and night-mode palettes** -- the top row shows which one you're editing ("Editing day-mode colours" / "Editing night-mode colours") and tapping it flips night mode so you can set each theme. Anything you leave unset uses a sensible default for that mode.
+The rest of the palette sits under **Accent colours**, grouped by what it affects. At the top, **Color theme** is **Your own** or a pack's colours; while a pack's are in use the rows show them and cannot be changed, and choosing Your own brings yours back as they were. Bookshelf keeps **independent day-mode and night-mode palettes** -- the top row shows which one you're editing ("Editing day-mode colours" / "Editing night-mode colours") and tapping it flips night mode so you can set each theme. Anything you leave unset uses a sensible default for that mode.
 
 Each colour is chosen as a "% black on screen" value (so it reads the same way in both modes), and long-pressing a row resets just that colour. The pickers:
 
@@ -488,7 +505,7 @@ Each colour is chosen as a "% black on screen" value (so it reads the same way i
 - **Border color** -- one shared colour for cover frames, badge borders, the bookmark/star halos, the cardboard edge on folder and stack cards, and placeholder (no-image) covers.
 - **Folder overlay background** -- the cardboard fill behind folder and stack cards.
 - **Folder text color** -- the label text on those cards (the card outline follows Border colour).
-- **Shelf plank colour** -- the plank the Spines style stands its books on; the lit top surface and the shaded front edge are both tinted from it.
+- **Shelf plank** -- the plank the Spines style stands its books on: plain colour, Oak or a pack's (see [Spines](#spines)).
 - **Shelf menu background** -- the solid bar behind the shelf menu. White by day and black at night unless you change it.
 - **Micro-module background** -- the card behind each micro-module.
 - **Reset to default colors** -- restore the whole palette for the current mode.
@@ -513,7 +530,7 @@ Long-press an image-set folder or stack and tap *Clear … image* to revert to t
 
 ## Calibre metadata (beta)
 
-For libraries managed by Calibre. Turn on **menu > Settings > Advanced > BETA: Read calibre metadata.calibre** and Bookshelf reads the `metadata.calibre` file Calibre writes when it syncs books to a device or manages a folder. The file must sit **directly in your KOReader home folder** (the folder Bookshelf scans for books), so point Calibre's device sync at that folder, or set your home folder to wherever Calibre already syncs. Its fields are read alongside each book's embedded metadata.
+For libraries managed by Calibre. Turn on **menu > Settings > Advanced > BETA: Read calibre metadata.calibre** and Bookshelf reads the `metadata.calibre` file Calibre writes when it syncs books to a device or manages a folder. The file must sit **directly in your KOReader home folder** (the folder Bookshelf scans for books) **or the folder above it**, which covers Calibre's usual place at the root of the device when your home folder is a folder inside it. Its fields are read alongside each book's embedded metadata.
 
 What it adds:
 
@@ -633,7 +650,9 @@ Reflowable formats like EPUB have no fixed page count until something lays them 
 - **Which books** -- **Only books without a page count**, or **Every book, replacing earlier counts**.
 - **Delete scanned page counts…** -- clears counts from earlier scans. Counts for books you have opened, and page counts in file names, are kept.
 
-Progress shows in the top panel's status line ("Counting pages in book 30 of 41") with a **Stop** button, and the shelf stays usable while it runs. It pauses while the device sleeps and carries on after.
+To count just one folder's books, long-press the folder on the shelf and choose **Extract page counts…**: the same dialog, for the books in that folder and the folders inside it. It works on a series, author, genre or collection stack too.
+
+Progress shows in the top panel's status line ("Counting pages in book 30 of 41") with a **Stop** button, and the shelf stays usable while it runs. The device doesn't go to sleep on its own while it runs; if you put it to sleep, the scan pauses and carries on after.
 
 Two things worth knowing about the numbers:
 
@@ -941,18 +960,20 @@ This matches [Bookends](https://github.com/AndyHazz/bookends.koplugin), so a lin
 </details>
 
 <details>
-<summary><strong>Settings file (advanced)</strong></summary>
+<summary><strong>Where bookshelf keeps its files (and backing up)</strong></summary>
 
-Bookshelf stores its settings in a dedicated file alongside KOReader's other plugin data, separate from `settings.reader.lua`:
+Everything of yours is in one folder, so backing it up (or copying it to another device) backs up bookshelf:
 
-| Platform | Path |
-|----------|------|
-| Linux / dev | `~/.config/koreader/settings/bookshelf.lua` |
-| Kindle | `/mnt/us/koreader/settings/bookshelf.lua` |
-| Kobo | `/mnt/onboard/.adds/koreader/settings/bookshelf.lua` |
-| Android | `<koreader-dir>/settings/bookshelf.lua` |
+| Platform | Folder |
+|----------|--------|
+| Linux / dev | `~/.config/koreader/settings/bookshelf/` |
+| Kindle | `/mnt/us/koreader/settings/bookshelf/` |
+| Kobo | `/mnt/onboard/.adds/koreader/settings/bookshelf/` |
+| Android | `<koreader-dir>/settings/bookshelf/` |
 
-Existing v1 settings migrate automatically on first launch -- legacy keys are read from `settings.reader.lua`, copied across with the `bookshelf_` prefix stripped, and removed from the global file.
+It holds your settings (`settings.lua`), micro-module data, Hardcover links and cache, page counts (`book_facts.sqlite3`), and the `wallpapers`, `ornaments`, `quotes` and `micromodules` folders. Caches that rebuild themselves (cover images, the OPDS feed cache, update downloads) are in `koreader/cache/bookshelf/`, which you don't need to keep.
+
+Until 5.3 these files sat loose in `koreader/settings/` (`bookshelf.lua` and `bookshelf_*`); they move into the folder by themselves on the first start of 5.3. Existing v1 settings migrate automatically on first launch -- legacy keys are read from `settings.reader.lua`, copied across with the `bookshelf_` prefix stripped, and removed from the global file.
 
 #### Selected keys
 
@@ -988,7 +1009,9 @@ Existing v1 settings migrate automatically on first launch -- legacy keys are re
 | `start_menu_seeded` / `start_menu_next_id` | One-shot seed flag for the default menu, and the counter behind generated entry ids. |
 | `micromodule_<key>_*` | Per-micro-module settings (e.g. `micromodule_clock_format`, `micromodule_random_unread_source`). Each module owns its own keys. |
 | `wallpaper_folder` | Extra folder the wallpaper list also reads from. |
-| `ornaments_off` / `ornament_packs_off` | Ornaments and packs switched off in the ornament browser, keyed by path within `bookshelf.ornaments` / by pack folder name. |
+| `ornaments_off` / `ornament_packs_off` | Ornaments and packs switched off in the ornament browser, keyed by path within the ornaments folder / by pack folder name. |
+| `ornament_deck` | The order ornaments come round in, by path within the ornaments folder. **Swap** and **Shuffle all** change it. |
+| `ornament_new_at` | `"start"` (default) or `"end"`: where ornaments you add join that order. |
 | `search_include_genres` | Include genres and tags in search. Default on. |
 | `migrated` | One-shot flag; presence indicates v1 -> v2 migration has run. |
 

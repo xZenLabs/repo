@@ -1,3 +1,10 @@
+# v1.4.0 · 2026-10-02
+
+- Home button inside a private book now just closes it and returns to the private library. Home button in the library still takes you back to the public library.
+- ZenOS: the Home tab (and home button) now locks the private library as expected.
+- ZenOS: the Home screen no longer keeps showing the other library's last read book after locking or unlocking.
+- README: Added info on how to move a book into the private library with ZenOS.
+
 # v1.3.0 · 2026-10-02
 
 Bookshelf: if your Home tab is pinned to a fixed folder (or turned off), unlocking now opens the private folder on the shelf, showing every private book.
