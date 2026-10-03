@@ -1,3 +1,12 @@
+# v1.6.1-beta5 · 2026-10-03
+
+## What's Changed
+
+- Fix a bug matching version to GH tag in direct to github fetch
+- Update top menu tap zone
+- Better wifi edge case handling (no IP/no DNS)
+- Bug fixes
+
 # v1.6.1-beta4 · 2026-10-03
 
 ## What's Changed
@@ -25,18 +34,3 @@
 ## What's Changed
 
 _No changelog entries for this version._
-
-# v1.6.0-beta29 · 2026-09-17
-
-## What's Changed
-
-- Add wallpapers/screensavers sections from ReaderBackdrop
-- Set & configure screensaver/wallpaper directly from ZenPM
-- Add status bar from ZenOS
-- Fix absolute vs relative plugin path on some devices
-- Update settings layout
-- Merge Changes tab into Discover
-- Add alpha support
-- Allow using Github token and direct requests
-- Bug fixes
-- Performance improvements
