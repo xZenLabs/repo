@@ -1,3 +1,12 @@
+# v1.6.1 · 2026-10-03
+
+## What's Changed
+
+- Fix a bug matching version to GH tag in direct to github fetch
+- Update top menu tap zone
+- Better wifi edge case handling (no IP/no DNS)
+- Bug fixes
+
 # v1.6.0 · 2026-09-18
 
 ## What's Changed
@@ -36,10 +45,3 @@
 
 - Fix an edge case on android where backend can close while a package is updating
 - Fix android permissions
-
-# v1.4.0 · 2026-08-15
-
-## What's Changed
-
-- ZenOS migration
-- Update icon
