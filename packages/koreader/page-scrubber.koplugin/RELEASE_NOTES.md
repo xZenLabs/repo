@@ -1,9 +1,14 @@
 # v7.7.1 · 2026-10-03
 
 ### Bug Fix
-- Fixed a crash when tapping the AI button with AI Assistant v1.18 (thanks @DerailleurAgile, #N).
+- Fixed a crash when tapping the AI button with AI Assistant v1.18 (thanks @DerailleurAgile, #7).
 
-**Installation:** download "Source code (zip)", unzip it, rename the folder to `page_scrubber.koplugin`, and copy it to `koreader/plugins/`.
+## Installation
+1. Download `page_scrubber.koplugin-vX.Y.Z.zip` from the [latest release](../../releases/latest) (under Assets, not "Source code").
+2. Unzip it and copy the `page_scrubber.koplugin` folder into `koreader/plugins/`.
+3. Restart KOReader.
+
+To update, replace the folder. To uninstall, delete it (and `koreader/patches/2--page-scrubber-font.lua` if you used the system font).
 
 # v7.7.0 · 2026-10-03
 
