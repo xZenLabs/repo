@@ -1,3 +1,15 @@
+# v6.14.9 · 2026-10-04
+
+On Book progress: "Started" tap now always shows the full date with weekday, matching the "Expected finish" format.
+
+# v6.14.8 · 2026-10-04
+
+More translation fixes
+
+# v6.14.7 · 2026-10-04
+
+Fixed some Hungarian translations.
+
 # v6.14.6 · 2026-10-02
 
 ### Changed
@@ -7,21 +19,3 @@ The Reading insights popup header now has its own translation key in all languag
 # v6.14.5 · 2026-10-02
 
 Fixed some more date formatting inconsistency.
-
-# v6.14.4 · 2026-10-02
-
-Fixed date formatting some cases.
-
-# v6.14.3 · 2026-10-02
-
-### Fixed
-
-- Book lists: a long title (e.g. "September 2026: 5 books read (27:30:01)")
-  now shrinks its font to fit the title bar instead of being cut off with "...".
-  Applies to the monthly/yearly book lists and the editable book lists.
-- Some text and their translations changed
-
-# v6.14.2 · 2026-09-30
-
-### New
-- Book info: book description added under the author/series. Can be turned off, and change font.

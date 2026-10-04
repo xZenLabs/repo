@@ -1,3 +1,7 @@
+# v1.5.12 · 2026-10-04
+
+Small Hungarian translation fix
+
 # v1.5.11 · 2026-10-01
 
 ### Changed
@@ -19,8 +23,3 @@ The highlighted quote can now take up to 1–5 lines (default: 2) via the new **
 **Added**
 - New "Invert wallpaper in night mode" toggle under Background → Wallpaper.
   When enabled, the wallpaper picture is inverted in night mode
-
-# v1.5.7 · 2026-09-25
-
-**Added**
-- Two "Chapter" stats: Chapters remaining reading time  and Chapters remaining pages. #9
