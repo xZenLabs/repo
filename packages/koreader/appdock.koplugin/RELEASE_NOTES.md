@@ -1,3 +1,8 @@
+# v6.6.3 · 2026-10-04
+
+# Hotfix: Open DApps on eInk devices now refreshes the screen
+## Thx to "00nly1" (DChat Username) for the issue report :)
+
 # v6.6.2 · 2026-09-20
 
 # v6.6.0 · 2026-09-20
@@ -29,15 +34,3 @@ AppDock bündelt jetzt fünf geprüfte, offline-first DApps aus dem Repository `
 | **Status Message** | Testet lokale AppDock-Benachrichtigungen |
 
 Die Apps werden beim Start über einen sicheren, pluginrelativen Pfad geladen und nur dann registriert, wenn sie den erwarteten DApp-Vertrag mit `id`, `title` und `buildPane` erfüllen. Bestehende Store-Installationen und gespeicherte DApp-Zustände bleiben kompatibel.
-
-# v6.5.11 · 2026-09-14
-
-# AppDock 6.5.11
-
-## UI-Überarbeitung
-
-AppDock erhält eine ruhigere Launcher-Hierarchie, die drei Einflüsse verbindet: die zurückhaltende, informationsorientierte ZenOS-Anmutung, die klare Lesbarkeit von SimpleUI und die pillen- und flächenbasierte Informationsstruktur von Android 12. Die Darstellung bleibt für E-Ink optimiert und verwendet weiterhin keine unnötigen Animationen, Unschärfen oder Transparenzeffekte.
-
-Der normale Homescreen zeigt oberhalb des App-Rasters nun eine eindeutige App-Sektion mit der aktuell sichtbaren Anzahl. Dadurch werden Widgets, Suche und Launcher visuell klarer getrennt. Die bestehende Material-Palette, die großen Touch-Flächen und die E-Ink-freundlichen Abstände bleiben erhalten.
-
-Die Änderung ist rein präsentational: App-Reihenfolge, Simple-Mode-Schutz, DApps, Widgets und bestehende Navigation bleiben kompatibel.

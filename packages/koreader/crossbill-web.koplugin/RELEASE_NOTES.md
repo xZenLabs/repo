@@ -1,3 +1,25 @@
+# v0.32.0 · 2026-10-04
+
+## Docker Image
+```bash
+docker pull tumetsu/crossbill:v0.32.0
+```
+
+
+## What's Changed
+* UI proximity tweaks by @Tumetsu in https://github.com/Crossbill-App/crossbill-web/pull/926
+* Set up react-i18next with typed, per-area English copy by @Tumetsu in https://github.com/Crossbill-App/crossbill-web/pull/937
+* UI tweaks by @Tumetsu in https://github.com/Crossbill-App/crossbill-web/pull/938
+* Consistent list card style for notes, flashcards and sessions by @Tumetsu in https://github.com/Crossbill-App/crossbill-web/pull/939
+* Update frontend dependencies from open Dependabot PRs by @Tumetsu in https://github.com/Crossbill-App/crossbill-web/pull/940
+* Assert response bodies in status-only API tests by @Tumetsu in https://github.com/Crossbill-App/crossbill-web/pull/945
+* Rewrite docs in plain language by @Tumetsu in https://github.com/Crossbill-App/crossbill-web/pull/946
+* Bump the uv group across 2 directories with 3 updates by @dependabot[bot] in https://github.com/Crossbill-App/crossbill-web/pull/943
+* Fix the Docker install setup and its docs by @Tumetsu in https://github.com/Crossbill-App/crossbill-web/pull/947
+
+
+**Full Changelog**: https://github.com/Crossbill-App/crossbill-web/compare/v0.31.1...v0.32.0
+
 # v0.31.1 · 2026-09-26
 
 ## Docker Image
@@ -134,42 +156,3 @@ docker pull tumetsu/crossbill:v0.30.0
 
 
 **Full Changelog**: https://github.com/Crossbill-App/crossbill-web/compare/v0.29.0...v0.30.0
-
-# v0.29.0 · 2026-09-06
-
-Major UI changes. New landing page and library page, sessions page replaced by statistics page in books, lots of minor UI/UX consistency fixes etc.
-
-## Docker Image
-```bash
-docker pull tumetsu/crossbill:v0.29.0
-```
-
-
-## What's Changed
-* Settle one list-length strategy, and place every highlight in a chapter by @Tumetsu in https://github.com/Crossbill-App/crossbill-web/pull/688
-* Bump backend/uv.lock in the release workflow, and guard it in CI by @Tumetsu in https://github.com/Crossbill-App/crossbill-web/pull/690
-* Remove AI summaries from reading sessions by @Tumetsu in https://github.com/Crossbill-App/crossbill-web/pull/700
-* Replace the sessions listing with a compact SessionCard by @Tumetsu in https://github.com/Crossbill-App/crossbill-web/pull/701
-* Share the compact-viewport test helper by @Tumetsu in https://github.com/Crossbill-App/crossbill-web/pull/702
-* Change sessions page into statistics page by @Tumetsu in https://github.com/Crossbill-App/crossbill-web/pull/703
-* Add a reading-activity grid to the book statistics tab by @Tumetsu in https://github.com/Crossbill-App/crossbill-web/pull/706
-* Use SectionTitles in the Settings page by @Tumetsu in https://github.com/Crossbill-App/crossbill-web/pull/707
-* Split library browsing into its own page by @Tumetsu in https://github.com/Crossbill-App/crossbill-web/pull/708
-* Add library-wide reading activity grid endpoint by @Tumetsu in https://github.com/Crossbill-App/crossbill-web/pull/709
-* Serve the reader's latest highlights and notes on one timeline by @Tumetsu in https://github.com/Crossbill-App/crossbill-web/pull/712
-* Stop related content from repeating one book, and hide weak matches by @Tumetsu in https://github.com/Crossbill-App/crossbill-web/pull/714
-* Give the search results room to breathe by @Tumetsu in https://github.com/Crossbill-App/crossbill-web/pull/719
-* Add bulk book summary regeneration by @Tumetsu in https://github.com/Crossbill-App/crossbill-web/pull/720
-* List books matched by name on top of global search results by @Tumetsu in https://github.com/Crossbill-App/crossbill-web/pull/721
-* Commit every search field on Enter, never while typing by @Tumetsu in https://github.com/Crossbill-App/crossbill-web/pull/723
-* Move the global search read from /semantic/search to /search by @Tumetsu in https://github.com/Crossbill-App/crossbill-web/pull/722
-* Search books from the app bar without embeddings by @Tumetsu in https://github.com/Crossbill-App/crossbill-web/pull/725
-* Show empty state instead of hiding sections for new readers by @Tumetsu in https://github.com/Crossbill-App/crossbill-web/pull/726
-* chore(deps-dev): Bump eslint from 10.8.0 to 10.9.1 by @dependabot[bot] in https://github.com/Crossbill-App/crossbill-web/pull/691
-* chore(deps): Bump axios from 1.19.0 to 1.20.0 by @dependabot[bot] in https://github.com/Crossbill-App/crossbill-web/pull/692
-* chore(deps): Bump @mui/material from 9.3.1 to 9.4.0 by @dependabot[bot] in https://github.com/Crossbill-App/crossbill-web/pull/693
-* chore(deps-dev): Bump @types/luxon from 3.7.3 to 3.7.5 by @dependabot[bot] in https://github.com/Crossbill-App/crossbill-web/pull/694
-* Show the app with screenshots on the README and the site frontpage by @Tumetsu in https://github.com/Crossbill-App/crossbill-web/pull/728
-
-
-**Full Changelog**: https://github.com/Crossbill-App/crossbill-web/compare/v0.28.1...v0.29.0

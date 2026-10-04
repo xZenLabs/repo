@@ -1,8 +1,8 @@
 # MiuRead
 
-> **5.9.0 · 正式版**
+> **5.9.0 · Stable Release**
 
-MiuRead（觅阅 · 微信读书助手）是面向 KOReader 的非官方微信读书客户端。5.9.0 将 5.9 beta 阶段验证完成的多设备进度对账、精确位置保护、同步恢复、外文翻译与扩展中心改进正式收口到稳定通道。
+5.9.0 开始把“本机/云端冲突需要用户判断”改为无感云端镜像：打开书籍时自动按同步因果和更新时间选择最新阅读状态，在定位完成前短暂保护翻页；精确 `chapter_uid + co` 仍是最终验收依据。账号书架默认使用微信云端顺序，已读完状态与当前位置分离解析，自动云端跳转可以短时撤回。
 
 本仓库同时维护正式版与内测版：
 
@@ -13,19 +13,22 @@ MiuRead（觅阅 · 微信读书助手）是面向 KOReader 的非官方微信�
 
 ## Versions
 
-- 当前正式基线：`5.9.0`，Schema `136`。
 - 正式版：以 GitHub Releases 中最新的非 Pre-release 为准。
 - 内测版：以 GitHub Releases 中最新的 Pre-release 为准。
 
 完整版本记录见 [`CHANGELOG.md`](CHANGELOG.md)。
 
+当前正式版：`5.9.0`。本版本由 `5.9.0-beta.19` 收口而来，以 5.8.0-beta.26 为兼容基线，Schema 为 136；正式版保留 5.9 beta 阶段已经完成验证的多设备 latest-wins、精确进度与安全恢复模型。
+
+
 ## 5.9.0 highlights
 
-- 多设备阅读进度使用 verified anchor、真实阅读事件时间与精确 `chapter_uid + co` 进行无感对账；无法安全裁决时保持 conflict/fence，不让旧位置覆盖新云端位置。
-- 主页快捷同步、同步状态与进度失败恢复统一使用同一 progress recovery；设备唤醒后等待网络真正 online-ready 再进行云端 reconcile。
-- 精确位置 recovery 在旧 source cache 失效后可真正刷新目标章节源数据；reading-time writer 抢占使用 KOReader 子进程完成状态，减少误判超时。
-- 外文书支持原文、双语、仅译文显示与官方译文生成；数字 bookId 同样可尝试官方翻译能力，失败时保留原文与原 EPUB。
-- 保留 5.8 系列的下载、书架恢复、扩展中心、批注/评论及后台稳定性改进。
+- 多设备续读以可信 verified anchor、真实阅读事件与云端更新时间判断 `LOCAL_NEWER / REMOTE_NEWER / ALIGNED / CONFLICT`，并用 write fence 防止旧位置误写回云端。
+- 精确同步以 `chapter_uid + co` 为最终验收；本地映射使用多级双向唯一正文锚点、fresh source recovery 和严格 fail-closed 策略。
+- 云端唯一 text anchor 命中后保留正文落点，不再让 percent correction 覆盖已经成功的精确导航。
+- 阅读时间保持 best-effort 与 fresh-GET-before-POST，和阅读进度写入相互隔离；失败恢复采用 verify-first，避免不确定写请求被重复提交。
+- 微信读书外文书支持原文、双语、仅译文三态以及安全译文 EPUB 替换。
+- 主页刷新/同步入口、扩展中心、下载、锁屏和本地书库能力继续继承并整合 5.8 后期改进。
 
 ## Installation
 
@@ -40,12 +43,11 @@ MiuRead（觅阅 · 微信读书助手）是面向 KOReader 的非官方微信�
 - Beta tag：`vX.Y.Z-beta.N`
 - 正式版发布到 `stable-channel`
 - 内测版发布到 `beta-channel`
-- 发布前源码中的版本号、更新通道与 `CHANGELOG.md` 必须已经与目标版本一致。
-- Release workflow 先完成身份校验与回归测试，再确保对应 Tag 并生成安装包和 OTA 清单。
-- Beta Tag 必须对应 `beta` 最新提交；Stable Tag 必须对应 `main` 最新提交。
+- 创建 Tag 后，发布工作流会自动同步分支源码中的版本号、发布通道与 `CHANGELOG.md`，再把 Tag 指向同步后的提交。
+- Beta Tag 必须创建在 `beta` 最新提交；Stable Tag 必须创建在 `main` 最新提交。
 - 最终分支源码、Tag 源码、Release 安装包与 OTA 清单保持同一版本。
 
-仓库根目录 `update.json` 仅保留为旧正式版 OTA 桥接入口；实时正式更新清单发布在 `stable-channel/update.json`。
+仓库根目录 `update.json` 仅保留为旧正式版 OTA 桥接入口，不作为当前正式版实时更新清单。
 
 ## Origin and License
 
