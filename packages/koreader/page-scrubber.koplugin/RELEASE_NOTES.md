@@ -1,3 +1,16 @@
+# v7.7.2 · 2026-10-04
+
+## Bug Fixes in dictionary 
+- Fixed the Highlight button doing nothing in the dictionary pop-up.
+- Fixed plugin buttons in the dictionary pop-up (text mode) not receiving the selected text.
+
+## Installation
+1. Download the zip named `page_scrubber.koplugin-<version>.zip` from the **Assets** section below (not "Source code").
+2. Unzip it and copy the `page_scrubber.koplugin` folder into `koreader/plugins/`.
+3. Restart KOReader.
+
+To update, replace the folder. To uninstall, delete it (and `koreader/patches/2--page-scrubber-font.lua` if you used the system font).
+
 # v7.7.1 · 2026-10-03
 
 ### Bug Fix
@@ -94,29 +107,3 @@ Improvements on Dictionary Pop-Up
  * Stability & Touch Fixes: Isolated modal menus to eliminate ghost touches and accidental window closures, keeping menus properly layered during transitions.
 
 [page_scrubber.koplugin.zip](https://github.com/user-attachments/files/32747242/page_scrubber.koplugin.zip)
-
-# v7.4.9 · 2026-09-27
-
-### Stable pages should be more... stable
-
-**Stable Pages (*Pagemap*)**
-* **Pinpoint Accuracy (Zero Drift):** Eliminated the 1 to 5-page drift from earlier math estimations; stable pages now map with exact 1:1 precision against the physical print edition.
-* **Correct Page Totals:** Synchronized page counts so Roman numeral front matter no longer inflates the total (e.g., displaying `879 / 879` instead of `879 / 905`).
-* **Instant Mid-Screen Updates:** When a new physical page begins mid-screen, the label updates immediately rather than waiting for the next page turn.
-
-**Six Grid Mode**
-* **Fixed RTL Traversal:** Left and right buttons turn pages in the correct direction when reading right-to-left.
-* **Boundary Auto-Hide:** Block jump buttons automatically disappear upon reaching the start or end of the book.
-* **Simplified Return Button:** Removed extra arrows from the origin button in landscape, standardizing it to a clean `Page X` label matching portrait mode.
-
-**Landscape & Views**
-* **Auto-Hiding Chapter Controls:** Chapter jump buttons cleanly disappear when reaching the first or last chapter across all landscape layouts (Six Grid, Grid, Split, and Simple Grid).
-* **UI Glitch Fix:** Anchored slider geometry to fixed margins, preventing the bottom bar from turning completely blank when chapter buttons hide.
-* **No More Ghost Cards:** Eliminated empty white placeholder cards with loading dots beyond book boundaries in Landscape Grid.
-
-**Table of Contents (ToC)**
-* **Clean Scrubbing State:** The chapter page counter hides its number and displays only the icon while dragging the slider; the exact count appears instantly upon release over the active chapter.
-* **Adaptive Landscape Pagination:** If chapter list pages overflow toward side buttons (✕ and shutter), pagination dots automatically convert into a compact numeric pill (`X / Y`) matching portrait mode.
-* **Clean Navigation Controls:** Chapter list jump buttons (`<<`, `<`, `>`, `>>`) dynamically hide at list boundaries.
-
-[page_scrubber.koplugin.zip](https://github.com/user-attachments/files/32694557/page_scrubber.koplugin.zip)
