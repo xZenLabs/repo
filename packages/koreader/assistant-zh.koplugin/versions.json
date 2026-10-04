@@ -1,0 +1,3 @@
+{
+  "releases": [{"tag_name":"v1.14-zh","assets":[{"name":"assistant_zh.koplugin-v1.14.zip","url":"https://github.com/Kerwin75631591/assistant_zh.koplugin/releases/download/v1.14-zh/assistant_zh.koplugin-v1.14.zip","size":928441,"digest":"sha256:3cdd30d90739fd13770d0229c617453ebc7af68ab985cac03f5437d0aafc8d89"}],"name":"assistant_zh.koplugin v1.14-zh（中文适配版）"}]
+}

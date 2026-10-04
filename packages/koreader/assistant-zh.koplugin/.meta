@@ -1,0 +1,23 @@
+# Assistant Zh plugin for KOReader
+# https://github.com/Kerwin75631591/assistant_zh.koplugin
+# zenpm:auto-scraped
+id=assistant-zh
+name=Assistant Zh
+version=1.14-zh
+description=KOReader AI 助手中文适配版：提示词全中文，联网搜索走 DeepSeek 原生服务端搜索，内置中文分词语境分析。Chinese-localized AI assistant for KOReader: Chinese prompts, DeepSeek native web search.
+author=Kerwin75631591
+category=media
+platforms=koreader
+dependencies=
+source=https://github.com/Kerwin75631591/assistant_zh.koplugin
+stars=5
+updated_at=2026-10-04T22:50:23Z
+published_at=2026-08-13T17:13:36Z
+readme_url=packages/koreader/assistant-zh.koplugin/README.md
+readme_hash=540bd80d48a9e5a946252a2a7a021ec3fc499525
+release_notes_url=packages/koreader/assistant-zh.koplugin/RELEASE_NOTES.md
+release_notes_hash=6f2cfcfe74b417a4e4ba83ab1d7e8507e985e044a57fadd5dff5e794d4304ece
+releases=[{"tag_name":"v1.14-zh","assets":[{"name":"assistant_zh.koplugin-v1.14.zip","url":"https://github.com/Kerwin75631591/assistant_zh.koplugin/releases/download/v1.14-zh/assistant_zh.koplugin-v1.14.zip","size":928441,"digest":"sha256:3cdd30d90739fd13770d0229c617453ebc7af68ab985cac03f5437d0aafc8d89"}],"name":"assistant_zh.koplugin v1.14-zh（中文适配版）"}]
+source_type=release
+source_asset=assistant_zh.koplugin-v1.14.zip
+size=928441

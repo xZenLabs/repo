@@ -1,3 +1,11 @@
+# v1.7.0-dev.1 · 2026-10-04
+
+## [1.7.0-dev.1](https://github.com/pierspad/notebook.koplugin/compare/v1.6.3...v1.7.0-dev.1) (2026-10-04)
+
+### Features
+
+* add autosaved notebook workflows, embedded images and paper controls ([8e3a274](https://github.com/pierspad/notebook.koplugin/commit/8e3a2742384d1881f55fee8ab3fdf8d07cc0b16e))
+
 # v1.5.0-dev.3 · 2026-09-30
 
 ## [1.5.0-dev.3](https://github.com/pierspad/notebook.koplugin/compare/v1.5.0-dev.2...v1.5.0-dev.3) (2026-09-30)
@@ -29,11 +37,3 @@
 ### Bug Fixes
 
 * defer zoom cleanup and preserve clipped ink redraws ([835e7fb](https://github.com/pierspad/notebook.koplugin/commit/835e7fb73f3a901796bd8bf96ffeff53fab14101))
-
-# v1.3.0-dev.8 · 2026-09-27
-
-## [1.3.0-dev.8](https://github.com/pierspad/notebook.koplugin/compare/v1.3.0-dev.7...v1.3.0-dev.8) (2026-09-27)
-
-### Bug Fixes
-
-* prevent notebook shutdown when changing tool colors ([07c1688](https://github.com/pierspad/notebook.koplugin/commit/07c168822bdb1217247abb055ccf0d001722df96))
