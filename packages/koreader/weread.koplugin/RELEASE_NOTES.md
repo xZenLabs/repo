@@ -1,3 +1,29 @@
+# v1.6.0 · 2026-10-05
+
+## 新功能与改进
+
+- 支持多设备登录。
+- 新增版本更新弹窗，支持立即更新、稍后提醒和跳过版本。
+- 新增手势操作：立即同步阅读进度、查看阅读时长上报状态。
+- 优化想法弹窗排版，修复翻页留白和文字重复问题。
+- 脚注显示交由 KOReader 原生设置控制，移除“隐藏脚注文本”选项；已有书籍需重新下载以应用调整。
+- 微信读书入口默认前移至工具菜单首位。
+- 修复插件语言跟随和封面清晰度问题。
+
+## What's Changed
+* 修复 s_ 类型封面未升级为高清封面的问题 by @finlater in https://github.com/finlater/weread.koplugin/pull/186
+* fix: 跟随 KOReader 自动识别的界面语言 by @finlater in https://github.com/finlater/weread.koplugin/pull/187
+* fix: let readers control book footnotes by @finlater in https://github.com/finlater/weread.koplugin/pull/188
+* feat: place WeRead first in the tools menu by @finlater in https://github.com/finlater/weread.koplugin/pull/189
+* docs: remove added footnote explanation by @finlater in https://github.com/finlater/weread.koplugin/pull/190
+* refactor: remove footnote hiding option by @finlater in https://github.com/finlater/weread.koplugin/pull/191
+* feat: prompt users when plugin updates are available by @finlater in https://github.com/finlater/weread.koplugin/pull/192
+* fix: refine thought popup layout by @finlater in https://github.com/finlater/weread.koplugin/pull/193
+* feat: add progress sync and report status gestures by @finlater in https://github.com/finlater/weread.koplugin/pull/194
+
+
+**Full Changelog**: https://github.com/finlater/weread.koplugin/compare/v1.5.3...v1.6.0
+
 # v1.5.3 · 2026-10-01
 
 ## 新功能与改进
@@ -61,13 +87,3 @@
 * @IswordSun made their first contribution in https://github.com/finlater/weread.koplugin/pull/160
 
 **Full Changelog**: https://github.com/finlater/weread.koplugin/compare/v1.4.2...v1.5.0
-
-# v1.4.2 · 2026-09-06
-
-## 新功能与改进
-
-- 优化划线和想法的拉取速度与进度显示，减少网络请求。
-- 提升显示划线和想法时的翻页流畅度。
-- 修复清理想法不彻底，以及重新打开书籍后重复匹配的问题。
-
-**Full Changelog**: https://github.com/finlater/weread.koplugin/compare/v1.4.1...v1.4.2

@@ -1,36 +1,39 @@
+# v7.2.0 · 2026-10-05
+
+# AppDock 7.2.0 „Keyboard Plus“
+
+Die AppDock-Tastatur ist jetzt über die gesamte Bildschirmbreite gespannt und sitzt am unteren Bildschirmrand. Ihre Tasten passen sich der verfügbaren Breite an.
+
+Über **?123** lässt sich eine eigene Seite mit Satzzeichen, Symbolen, Währungszeichen und deutschen Sonderbuchstaben öffnen; **ABC** führt zurück zur Buchstabenseite. Shift passt auch die Groß-/Kleinschreibung der deutschen Sonderbuchstaben an. Die Rücktaste entfernt vollständige UTF-8-Zeichen.
+
+Tastatureingaben und Feedback verwenden schnelle partielle Bildschirmaktualisierungen, damit Tasten spürbarer reagieren. Numerische Eingaben und maskierte PIN-Felder bleiben erhalten. DChat 1.4.17 kann weiterhin die AppDock-Tastatur verwenden; Dialoge außerhalb AppDocks bleiben unangetastet.
+
+# v7.1.0 · 2026-10-05
+
+# AppDock 7.1.0 „Keyboard Everywhere“
+
+## Eigene Tastatur für alle AppDock-Texteingaben
+
+- Die AppDock-Tastatur steht jetzt bei AppDock-eigenen Texteingaben bereit, darunter Homescreen-, AppStore- und Hilfesuche, Browser-Adress- und Webformularfelder, DApp-Editoren und AppDock-Einstellungen.
+- Die Buchstabentasten zeigen den aktiven Shift-Zustand direkt als Groß- oder Kleinbuchstaben; die Umschalttaste wird zusätzlich hervorgehoben.
+- Tastendrücke erhalten ein kurzes invertiertes Feedback. Tasten, Beschriftungen und Eingabefläche sind etwas größer.
+- Zahlenfelder verwenden ein numerisches Layout. PIN-Eingaben werden während der Eingabe maskiert.
+- KOReader-Dialoge außerhalb AppDocks bleiben unverändert.
+
+# v7.0.0 · 2026-10-05
+
+# The Homescreen Update
+## DockHome gets a complete visual overhaul...
+- Android style app grid (full-sized!) 
+- hotbar with recent used apps
+- (Simple mode kept 1:1)
+- More in official release
+***
+Report Bugs via GHI/DChat
+
 # v6.6.3 · 2026-10-04
 
 # Hotfix: Open DApps on eInk devices now refreshes the screen
 ## Thx to "00nly1" (DChat Username) for the issue report :)
 
 # v6.6.2 · 2026-09-20
-
-# v6.6.0 · 2026-09-20
-
-# v6.5.13 · 2026-09-14
-
-# AppDock 6.5.13
-
-## Korrektur
-
-Die fünf DApps werden nicht mehr in AppDock gebündelt. Sie verbleiben ausschließlich im offiziellen Repository [arduinodude456/DApps](https://github.com/arduinodude456/DApps) und werden dort über den bestehenden AppStore-Katalog `dapps.txt` angeboten.
-
-Der vorherige Bundle-Commit wurde vollständig zurückgenommen.
-
-# v6.5.12 · 2026-09-14
-
-# AppDock 6.5.12
-
-## Fünf integrierte DApps
-
-AppDock bündelt jetzt fünf geprüfte, offline-first DApps aus dem Repository `arduinodude456/DApps`, damit eine neue Installation sofort mehr als die Kernwerkzeuge bietet und nicht zuerst den AppStore öffnen muss.
-
-| App | Funktion |
-|---|---|
-| **Calc** | Wissenschaftlicher Taschenrechner und Funktionsplotter |
-| **Calendar** | Lokaler Monatskalender mit Terminen |
-| **Snake** | E-Ink-freundliches Snake-Spiel |
-| **2048** | Lokales 2048-Kachelspiel |
-| **Status Message** | Testet lokale AppDock-Benachrichtigungen |
-
-Die Apps werden beim Start über einen sicheren, pluginrelativen Pfad geladen und nur dann registriert, wenn sie den erwarteten DApp-Vertrag mit `id`, `title` und `buildPane` erfüllen. Bestehende Store-Installationen und gespeicherte DApp-Zustände bleiben kompatibel.

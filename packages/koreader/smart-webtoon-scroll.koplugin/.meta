@@ -1,0 +1,23 @@
+# Smart Webtoon Scroll plugin for KOReader
+# https://github.com/QQRush/smart-webtoon-scroll.koplugin
+# zenpm:auto-scraped
+id=smart-webtoon-scroll
+name=Smart Webtoon Scroll
+version=0.2.7.24
+description=Smart Webtoon Scroll for KOReader — intelligent panel-aware scrolling, auto fit, cross-image continuity and preloading for a smoother webtoon reading experience.
+author=QQRush
+category=media
+platforms=koreader
+dependencies=
+source=https://github.com/QQRush/smart-webtoon-scroll.koplugin
+stars=5
+updated_at=2026-10-05T08:32:31Z
+published_at=2026-09-30T08:39:50Z
+readme_url=packages/koreader/smart-webtoon-scroll.koplugin/README.md
+readme_hash=e8b819bd84dbf08d3e8d28488fdadd06ba1d0dce
+release_notes_url=packages/koreader/smart-webtoon-scroll.koplugin/RELEASE_NOTES.md
+release_notes_hash=a0a4f72c9c6b1071dc6c5a4ffea5005f9c072134c12c8e3f4842ef2eb3d468cf
+releases=[{"tag_name":"v0.2.7.24","assets":[{"name":"smartwebtoonscroll-v0.2.7.24-full-viewport-background.koplugin.zip","url":"https://github.com/QQRush/smart-webtoon-scroll.koplugin/releases/download/v0.2.7.24/smartwebtoonscroll-v0.2.7.24-full-viewport-background.koplugin.zip","size":10455,"digest":"sha256:c2a9d749cfd822be96a54b63d8f029ac0cdba6410d549ce5d67deb7ae1620337"}],"name":"Smart Webtoon Scroll v0.2.7.24"},{"tag_name":"v0.2.7.21","assets":[{"name":"smartwebtoonscroll-v0.2.7.21.koplugin.zip","url":"https://github.com/QQRush/smart-webtoon-scroll.koplugin/releases/download/v0.2.7.21/smartwebtoonscroll-v0.2.7.21.koplugin.zip","size":10095,"digest":"sha256:af47a48b1b11d61c129d97779e0440cd3180beb148b538ddf86b39cc685ea788"}],"name":"Release v0.2.7.21"},{"tag_name":"v0.2.7.10","assets":[{"name":"smartwebtoonscroll-v0.2.7.10.koplugin.zip","url":"https://github.com/QQRush/smart-webtoon-scroll.koplugin/releases/download/v0.2.7.10/smartwebtoonscroll-v0.2.7.10.koplugin.zip","size":8946,"digest":"sha256:4ddad4482acc1b43872a6b526107061943c5ff3c1f7415658c5d5d92bb17d965"}],"name":"Release v0.2.7.10"}]
+source_type=release
+source_asset=smartwebtoonscroll-v0.2.7.24-full-viewport-background.koplugin.zip
+size=10455

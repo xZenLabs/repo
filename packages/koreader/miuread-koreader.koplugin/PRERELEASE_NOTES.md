@@ -1,3 +1,11 @@
+# v5.9.1-beta.1 · 2026-10-05
+
+- 修复 beta.19 `passive_exact_cache` 的原生 `chapterUid + wr_data_co` 快照遗漏 `safe=true`：此前同一精确位置可能先记录 `final_position_captured`，Reader 关闭后又被 `upload_progress()` 判成 `position_unavailable`，并留下“有失败记录但没有可执行动作”的 pending；本版统一恢复 `safe / coordinate_safe / precise` 语义，并在启动时一次性修复现有 beta.19 精确 pending。
+- 新增 ReadingEnd `Progress Recovery Capsule`：精确 source mapping 失败时，把 Reader 仍存活时捕获的 immutable source anchor、XPointer、显示进度、sequence/epoch 持久化；Home 可直接用保存的锚点重跑本地 source cache / fresh Web Reader source，无需为了新产生的失败记录重新打开书。
+- `pending_unresolved_position` 正式进入进度恢复状态机：Home/“全部重新同步”优先执行 saved-anchor recovery，再补全整书坐标、fresh GET 云端、按既有 latest-wins 规则发送或验证；失败详情新增“恢复精确位置”。任何旧记录若缺少安全重放坐标和恢复锚点，会明确作为可清理失效记录，不再出现 `items=1` 但 send/verify/resubmit/coordinate 全为 0 的无解释状态。
+- ReadReport 生命周期区分主动停止与真实异常退出：ReadingEnd/进度优先抢占后 worker 正常退出不再记为 `unexpected`，也不会被无意义拉起；Reader 活跃期间真实异常退出仍保留一次自动重启。
+- 不改变 beta.19 的多锚点精确映射、beta.18 fresh context、beta.17 progress epoch/conflict lifecycle、beta.15/16 `remote_wire_anchor + fresh GET before POST`、exact cloud readback、remote-first freshness resolver、ProgressFence 与 rollback。网络或 source mapping 暂不可用时继续 fail closed：最多延迟同步，不允许用近似百分比或未知远端状态覆盖云端。Schema 保持 136。
+
 # v5.9.0-beta.14 · 2026-10-03
 
 - 以 beta.12 为代码基线，撤销 beta.13 的跳转前精确 preflight 与主动 idle exact-cache 设计；恢复已经在真机验证有效的“近似落点 → exact verify → text-anchor rescue → 再验证”主链。
@@ -33,14 +41,3 @@
 - `network_restored` 与 `resume_recheck` 共用 `reader-progress-online` waiter，并增加 `[MiuRead][ResumeSync] waiting_network / network_online / reconcile_started / network_wait_timeout` 诊断日志。
 - 暂不采用另一个 beta.9 分支的 time-writer detach/SIGKILL 立即接管方案；`miuread/sync.lua` 保持 beta.10/beta.8 字节不变，继续保留现有 `time_writer_preempt_timeout` 防并发 writer 保护。
 - 完整保留 beta.10 的 translation 纯 Lua 顶层、数字 bookId 支持、先测试后建 tag 的 Release workflow 与 CHANGELOG 标题兼容。Schema 仍为 136。
-
-# v5.9.0-beta.5 · 2026-10-03
-
-- 重构开书进度对账为非阻塞轻量流程：先立即恢复本机页面，后台只读取一次云端 position metadata；已有精确本地快照时不再先跑完整 source mapping，同一本书 60 秒内仅对“已精确对齐”的缓存结果做读取 debounce。
-- 修复 beta.4 的危险 latest-wins 分支：`user_interacted` / 晚到云端不再直接变成 `local wins`。开书冻结 `open_local_snapshot`，优先依据可信 verified anchor 判断哪一端发生变化；双方都变化或无可靠 anchor 时再比较真实阅读事件时间，120 秒 clock-skew grace 内无法安全裁决则进入 conflict。
-- 新增持久化 progress write fence：remote fetch 未完成、remote newer、conflict、remote exact unresolved 等状态一律禁止周期、结束阅读和后台 retry 把本机位置写回云端；只有明确 `LOCAL_NEWER`、重新 aligned，或用户显式手动选择本机上传时才解除。
-- 本地 freshness 与阅读时长功能解耦：第一页恢复只建立 page baseline，不算新的阅读事件；之后真实翻页/跳转才更新本地阅读事件时间，即使用户关闭阅读时间同步也仍可正确参与 latest-wins。
-- `server_raw_percent` 从 canonical position 彻底降级：CloudAnchor、ReadReport 和 finished 判断优先使用 `chapter_uid + co` 映射得到的 canonical progress；服务器异常 `raw_percent=100` 不再把中间章节污染成 100%/finished。
-- 收敛 exact-co 定位：优先复用已验证 `chapter_uid + co -> XPointer` 缓存；普通跳转未精确命中后使用微信正文短 text anchor 在对应本地章节恢复 XPointer，再做 exact verify；percent correction 仅保留一次 bounded fallback，避免 964 -> 144 -> 759 一类振荡。
-- 阅读时间改为 best-effort：正常尝试一次，运行期空闲后最多再尝试一次；仍失败直接 drop，不再跨重启保存 SAFE time debt，也不再让阅读时间失败污染主页总体同步状态。beta.5 首启会清理 beta.4 遗留的 reading-time retry/failure 状态。
-- Schema 继续保持 136；beta.4 的 position-state 标量化与启动 StoreRepair 完整保留。翻译、Extension Center、下载系统、#117/#118 等非同步功能不做行为改动。

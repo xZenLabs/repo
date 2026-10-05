@@ -1,3 +1,10 @@
+# v6.16.0 · 2026-10-05
+
+### Changed
+- Achievements and Reading Goal are now two separate sections and can be turned off individually.
+  - Achievements have a new cell for the latest achievement earned.
+  - Reading Goal now has a second cell showing the completion percentage.
+
 # v6.15.0 · 2026-10-04
 
 ### New
@@ -15,9 +22,3 @@ More translation fixes
 # v6.14.7 · 2026-10-04
 
 Fixed some Hungarian translations.
-
-# v6.14.6 · 2026-10-02
-
-### Changed
-
-The Reading insights popup header now has its own translation key in all languages, so the Tools menu entry stays "Reading insights" while the popup shows the localised title. The "Show Reading insights" menu item now uses the same translated wording and also the popup header.
