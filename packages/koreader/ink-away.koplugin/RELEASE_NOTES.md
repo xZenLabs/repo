@@ -1,3 +1,64 @@
+# v3.3.0 · 2026-10-05
+
+The biggest update so far: Ink Away is now a proper notebook app, with a library, a binder-style browser, search, a trash, links and a contents page, and handwriting you can turn into text on the device.
+
+## Your notes, organized
+- No more Save button: every drawing and notebook is its own file and saves itself as you go. The File menu has rename, duplicate, export and new.
+- A library with folders (and folders inside folders), thumbnails and + Drawing / + Notebook / + Folder buttons. Rename, move, duplicate or delete without a computer.
+- Browse: a folder's notebooks as colored tabs beside their pages, like a binder. Star pages, filter by stars, move or copy pages between notebooks.
+- Search by name, or inside pages for typed text, converted handwriting included. Results are remembered, so the next search is instant.
+- A trash: deleted notebooks, drawings, folders and pages wait 30 days and come back exactly where they were.
+- Choose what Ink Away opens on: the last document, the library or your notebooks.
+- Old drawing and notebook project folders move into the library on their own.
+
+## Notebooks
+- Pages can have titles, stars and their own paper.
+- New papers with previews: blank, lined, grid, dotted, isometric, margin ruled and Cornell, plus planners (handwriting practice, checklist, two columns, storyboard, music, daily, weekly, week columns, monthly, meeting notes, habit tracker).
+- Save a page as a template and start new pages from it.
+- Links: link anything to a page in this or another notebook; tap to jump, Back to return.
+- Contents page: built from your titled pages in one tap, every line a link, updated whenever you like.
+- PDF export: titled pages become bookmarks, links keep working, and a whole folder can be exported as one PDF.
+- Drawings can include their grid when exported.
+
+## Writing and editing
+- Convert to text: lasso printed handwriting and it becomes a text box, read by a small model on the device. Nothing is sent anywhere. English letters and digits for now.
+- One selection for everything: lasso strokes, shapes, pictures and text, then move, resize, rotate, flip, duplicate, recolor or change opacity and thickness from one small menu. Cut, copy and paste across pages and notebooks.
+- Hold to straighten: hold the pen still at the end of a stroke and a rough line, box, ellipse or triangle snaps clean. Writing is left alone. Replaces Shape assist.
+- Eraser mode that removes whole strokes.
+- A more forgiving lasso: overlapping ends, grazed writing, text and pictures are picked up.
+- Lasso has its own toolbar button with a new icon; Pan is a round button above the zoom control (tap again to return to your tool).
+- The pen can tap the toolbar and menus.
+
+## Gestures
+- Two-finger tap: undo. Two-finger double tap: redo.
+- Two-finger swipe: turn pages. Long two-finger swipe up: open your notebooks (or the library from a drawing).
+- Hold Prev or Next: jump to the first or last page.
+- With palm rejection on, "Finger on the page" makes a finger navigate or do nothing while the pen writes.
+- Zooming out stops at the page width.
+
+## Color screens
+- A theme color, Ink Away green by default, or black, a preset or any color.
+- Color ink shows in color while you draw; a toggle brings back the black preview.
+- Colored binder tabs.
+
+## Faster, with fewer flashes
+- Saving big notebooks about 90% faster (only changed pages are written).
+- Closing a 120-page notebook practically instant; the page overview opens about a third faster.
+- Drawing 12-28% faster per point.
+- Page turns refresh only the page and the bar; a stroke is no longer refreshed again on lift.
+- Fewer flashes in the library and browser, none on color screens.
+- Dragging a selection follows the finger smoothly.
+- Android (Boox and others): drawing, erasing, shapes, the lasso and panning no longer refresh the screen for every pen sample, which made writing slow there. Not yet tried on a real Boox, so feedback is welcome. Kindle and Kobo work as before.
+
+## Fixes
+- Undo puts a moved lasso selection back.
+- Moving no longer picks up shapes you had erased.
+- Long menus on small or landscape screens slide over the toolbar instead of scrolling.
+
+## For developers
+- The canvas, once one 11,500-line file, is now 27 feature files with shared helpers, so a feature can be changed or added in one small file. A good time to fork it.
+- A test suite of around 2,300 automated checks (including pixel-exact tests on KOReader's real drawing code), performance benchmarks and an e-ink refresh audit. Tests are not part of the download.
+
 # v3.2.0 · 2026-10-02
 
 Everything since 3.1.0 in one stable release.
@@ -78,11 +139,3 @@ Rest your hand on the screen while you write — only the pen marks the page.
 - Any shape can be tapped or held to move, rotate, flip, duplicate, recolour, resize or delete.
 - Paint-bucket fill now sticks to its shape
 - Faster shape and image dragging, no image-move flash, cleaner triangle snapping, and no black corner on free rotation.
-
-# v2.1.1 · 2026-09-13
-
-Bug fix
-
-Fixes toolbar icons appearing as danger/triangle placeholders on some devices (notably a first install on Kindle Scribe). The toolbar now loads its icons directly from the plugin instead of relying on KOReader's shared icon folder, which on a first run was not yet registered when KOReader looked for the icons. This was intermittent because it depended on whether that folder already existed from a previous run, which is why reinstalling appeared to fix it.
-
-No other changes. If anything looks off with the toolbar, please comment.

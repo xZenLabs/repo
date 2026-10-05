@@ -1,3 +1,23 @@
+# v1.7.1 · 2026-10-05
+
+## [1.7.1](https://github.com/pierspad/notebook.koplugin/compare/v1.7.0...v1.7.1) (2026-10-05)
+
+### Bug Fixes
+
+* preserve marker opacity and finish mouse drawing gestures ([5b05e67](https://github.com/pierspad/notebook.koplugin/commit/5b05e67c71eec636afa45eead2483a5797c9e57e))
+
+# v1.7.0 · 2026-10-05
+
+## [1.7.0](https://github.com/pierspad/notebook.koplugin/compare/v1.6.3...v1.7.0) (2026-10-05)
+
+### Features
+
+* add autosaved notebook workflows, embedded images and paper controls ([8e3a274](https://github.com/pierspad/notebook.koplugin/commit/8e3a2742384d1881f55fee8ab3fdf8d07cc0b16e))
+
+### Bug Fixes
+
+* polish notebook menus, previews and translations ([3258b82](https://github.com/pierspad/notebook.koplugin/commit/3258b828322da01cc85818898934c55d2da16e79))
+
 # v1.6.3 · 2026-10-01
 
 ## [1.6.3](https://github.com/pierspad/notebook.koplugin/compare/v1.6.2...v1.6.3) (2026-10-01)
@@ -21,28 +41,3 @@
 ### Bug Fixes
 
 * accelerate marker erasing and clarify export selection and update notes ([cf9faae](https://github.com/pierspad/notebook.koplugin/commit/cf9faaecce7bd578153997f13575ee4e1f15c5f5))
-
-# v1.6.0 · 2026-10-01
-
-## [1.6.0](https://github.com/pierspad/notebook.koplugin/compare/v1.5.0...v1.6.0) (2026-10-01)
-
-### Features
-
-* improve visual page export, eraser performance and component boundaries ([7b54536](https://github.com/pierspad/notebook.koplugin/commit/7b54536cbf3b6b2b164b6ea3be5f3ba26d42b6f5))
-
-# v1.5.0 · 2026-10-01
-
-## [1.5.0](https://github.com/pierspad/notebook.koplugin/compare/v1.4.0...v1.5.0) (2026-10-01)
-
-### Features
-
-* add stable self-updates and selective page export ([fd68014](https://github.com/pierspad/notebook.koplugin/commit/fd680146afe315045fe208eceb5d3e78cf9b958f))
-* improve notebook page navigation and undo responsiveness ([8a5b418](https://github.com/pierspad/notebook.koplugin/commit/8a5b4180df33c6948f665a6a4d9ee190055a1ce8))
-
-### Bug Fixes
-
-* show plugin version only in gallery header ([38fcfd5](https://github.com/pierspad/notebook.koplugin/commit/38fcfd52213e1f5b60dd2bbe9d107c3b37ef49c8))
-
-### Performance Improvements
-
-* optimize lasso, cached page rendering and XOPP checksums ([c5300cb](https://github.com/pierspad/notebook.koplugin/commit/c5300cbb64092517727026f1288a592042c34325))

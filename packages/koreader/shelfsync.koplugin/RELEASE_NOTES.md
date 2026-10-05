@@ -1,3 +1,20 @@
+# 1.6.0 · 2026-10-05
+
+- (feat) 🌟 Add a unified review composer to write a rating and/or review once and submit it to selected linked providers. 🌟
+- (feat) Show the link method at the start of linked-book labels in provider menus.
+- (feat) Turn on "Confirm changes to book read status" by default, so choosing a status or Remove from a provider's Update status menu asks first, and so do Hardcover OAuth sign-out and Fable and Pagebound log out. If you never changed this setting, turn it off under ShelfSync > Settings to keep single-tap changes.  
+- (fix) Keep a Hardcover book's own privacy when its status changes, instead of resetting it to the account default. If ShelfSync can't read your Hardcover account or the book's current privacy, the status change is skipped instead of being sent as Public. Journal entries fall back to Private when the account default can't be read.
+- (fix) Retry Goodreads automatic Currently Reading updates when a status read or CSRF bootstrap temporarily fails, instead of stopping after the book page is found.
+- (fix) Allow Hardcover automatic linking to accept matching books even when extra contributor credits (such as narrators or translators) lower the author match score.
+- (fix) Reconcile Fable status writes against system-list membership when book-detail status is missing or a write returns HTTP 409.
+- (fix) Skip redundant Fable status writes when the selected status is already active, and run status-menu requests through KOReader's Trapper coroutine.
+- (fix) Save the selected version check frequency correctly and allow intervals of 1–30 days.
+
+
+---
+
+Full changelog: [CHANGELOG.md](https://github.com/Lyfts/ShelfSync/blob/main/CHANGELOG.md#160)
+
 # 1.5.0 · 2026-10-02
 
 - Add Hardcover OAuth device-code sign-in, based on [hardcoverapp.koplugin PR #70](https://github.com/Billiam/hardcoverapp.koplugin/pull/70). OAuth is used when signed in; the configured API token remains available as a fallback.
@@ -43,17 +60,3 @@ Full changelog: [CHANGELOG.md](https://github.com/Lyfts/ShelfSync/blob/main/CHAN
 ---
 
 Full changelog: [CHANGELOG.md](https://github.com/Lyfts/ShelfSync/blob/main/CHANGELOG.md#142)
-
-# 1.4.1 · 2026-09-30
-
-##### Plugin
-- Refresh Fable and Pagebound account labels immediately after logging in or out.
-- Improve Pagebound login feedback with separate sign-in and token-exchange stages, a longer bounded timeout for Pagebound's token exchange, and clearer transport errors. Explain why automatic tracking is unavailable and label the locally saved account without implying its session was just verified.
-- Fix Hardcover sometimes failing to mark a newly linked book as Currently Reading automatically.
-- Fix Hardcover note syncing.
-- Prevent automatic book-status caching from using a document after it is closed or replaced while Wi-Fi is restoring.
-
-
----
-
-Full changelog: [CHANGELOG.md](https://github.com/Lyfts/ShelfSync/blob/main/CHANGELOG.md#141)

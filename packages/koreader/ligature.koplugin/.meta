@@ -1,0 +1,23 @@
+# Ligature plugin for KOReader
+# https://github.com/Pixxel123/ligature.koplugin
+# zenpm:auto-scraped
+id=ligature
+name=Ligature
+version=1.0.0
+description=Swipe typing for KOReader, tuned for e-ink and one-handed use. Learns your words and where your thumb lands.
+author=Pixxel123
+category=utility
+platforms=koreader
+dependencies=
+source=https://github.com/Pixxel123/ligature.koplugin
+stars=5
+updated_at=2026-10-05T18:02:19Z
+published_at=2026-10-05T14:05:24Z
+readme_url=packages/koreader/ligature.koplugin/README.md
+readme_hash=3c04bb6776e96b554590b96b2c8c513b24b44e71
+release_notes_url=packages/koreader/ligature.koplugin/RELEASE_NOTES.md
+release_notes_hash=e8db99aad40e1ed4a3687ad38cbecdf927026c23a8f47be335d97230d4b206c0
+releases=[{"tag_name":"v1.0.0","assets":[{"name":"ligature.koplugin.zip","url":"https://github.com/Pixxel123/ligature.koplugin/releases/download/v1.0.0/ligature.koplugin.zip","size":2133491,"digest":"sha256:09f628e6b31f2c7eb468400c5394d7bf0a886a9f1753c73ec04998a9e733576e"}],"name":"Ligature 1.0.0"}]
+source_type=release
+source_asset=ligature.koplugin.zip
+size=2133491

@@ -1,0 +1,3 @@
+{
+  "releases": [{"tag_name":"v1.0.0","assets":[{"name":"ligature.koplugin.zip","url":"https://github.com/Pixxel123/ligature.koplugin/releases/download/v1.0.0/ligature.koplugin.zip","size":2133491,"digest":"sha256:09f628e6b31f2c7eb468400c5394d7bf0a886a9f1753c73ec04998a9e733576e"}],"name":"Ligature 1.0.0"}]
+}

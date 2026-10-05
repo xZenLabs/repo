@@ -1,39 +1,55 @@
-# v7.2.0 · 2026-10-05
+# v7.4.9 · 2026-10-05
 
-# AppDock 7.2.0 „Keyboard Plus“
+# AppDock 7.4.9
 
-Die AppDock-Tastatur ist jetzt über die gesamte Bildschirmbreite gespannt und sitzt am unteren Bildschirmrand. Ihre Tasten passen sich der verfügbaren Breite an.
+Die PNG-Logo-Bibliothek enthält jetzt zusätzlich textfreie, transparente Rasterlogos für dChat, DockUpdate und Minecraft. Die DApp-Definitionen verwenden die neuen Logo-IDs `dchat`, `dockupdate` und `minecraft`; die klassische thematische FrameContainer-Darstellung bleibt unverändert.
 
-Über **?123** lässt sich eine eigene Seite mit Satzzeichen, Symbolen, Währungszeichen und deutschen Sonderbuchstaben öffnen; **ABC** führt zurück zur Buchstabenseite. Shift passt auch die Groß-/Kleinschreibung der deutschen Sonderbuchstaben an. Die Rücktaste entfernt vollständige UTF-8-Zeichen.
+# v7.4.8 · 2026-10-05
 
-Tastatureingaben und Feedback verwenden schnelle partielle Bildschirmaktualisierungen, damit Tasten spürbarer reagieren. Numerische Eingaben und maskierte PIN-Felder bleiben erhalten. DChat 1.4.17 kann weiterhin die AppDock-Tastatur verwenden; Dialoge außerhalb AppDocks bleiben unangetastet.
+# AppDock 7.4.8
 
-# v7.1.0 · 2026-10-05
+Die experimentellen Surface- und Liquid-Glass-Bilder sowie die zugehörige Surface-Schicht wurden vollständig entfernt. AppDock verwendet wieder die klassischen thematischen FrameContainer-Flächen.
 
-# AppDock 7.1.0 „Keyboard Everywhere“
+Die PNG-Logo-Bibliothek wurde um echte, textfreie Rasterlogos für Kalender, Rechner, Dokumente, Musik und Batterie erweitert. Das Batterie-Logo wird zusätzlich im WidgetGenerator neben dem Batteriestand angezeigt.
 
-## Eigene Tastatur für alle AppDock-Texteingaben
+# v7.4.7 · 2026-10-05
 
-- Die AppDock-Tastatur steht jetzt bei AppDock-eigenen Texteingaben bereit, darunter Homescreen-, AppStore- und Hilfesuche, Browser-Adress- und Webformularfelder, DApp-Editoren und AppDock-Einstellungen.
-- Die Buchstabentasten zeigen den aktiven Shift-Zustand direkt als Groß- oder Kleinbuchstaben; die Umschalttaste wird zusätzlich hervorgehoben.
-- Tastendrücke erhalten ein kurzes invertiertes Feedback. Tasten, Beschriftungen und Eingabefläche sind etwas größer.
-- Zahlenfelder verwenden ein numerisches Layout. PIN-Eingaben werden während der Eingabe maskiert.
-- KOReader-Dialoge außerhalb AppDocks bleiben unverändert.
+# AppDock 7.4.7
 
-# v7.0.0 · 2026-10-05
+Dies ist der vollständige Liquid-Glass-Fix aus dem aktuellen Main-Stand. Die alten farbigen FrameContainer-Füllungen bleiben unsichtbar, die echten PNG-Flächen werden flexibel auf Breite und Höhe gestreckt und formmaskierte Liquid-Glass-Varianten verhindern Überstand an Kreis-, Kachel-, Container- und Pill-Rändern.
 
-# The Homescreen Update
-## DockHome gets a complete visual overhaul...
-- Android style app grid (full-sized!) 
-- hotbar with recent used apps
-- (Simple mode kept 1:1)
-- More in official release
-***
-Report Bugs via GHI/DChat
+# v7.4.6 · 2026-10-05
 
-# v6.6.3 · 2026-10-04
+## AppDock 7.4.6 — DockUpdate Asset Fix
 
-# Hotfix: Open DApps on eInk devices now refreshes the screen
-## Thx to "00nly1" (DChat Username) for the issue report :)
+### Fixes
 
-# v6.6.2 · 2026-09-20
+- Resized all generated PNG surface assets to DockUpdate-compatible dimensions.
+- Kept the assets as real RGBA raster images; no SVGs were added.
+- Moved the liquid-glass texture off the homescreen background.
+- Liquid glass is now applied only inside AppDock buttons, app tiles, cards, pills and Quick Settings containers, underneath the active theme color.
+
+### Validation
+
+- Lua 5.1 syntax check passed for all plugin Lua files.
+- PNG assets are RGBA and no larger than 1024 pixels on their longest side.
+
+# v7.4.5 · 2026-10-05
+
+## AppDock 7.4.5 — Raster Surfaces & Liquid Glass
+
+### Highlights
+
+- Replaced rigid homescreen cards and launcher surfaces with real AI-generated RGBA PNG overlays.
+- Added a dedicated circular raster overlay for round app tiles and round navigation buttons.
+- Added a text-free liquid-glass background texture for the homescreen.
+- Applied raster surfaces to homescreen cards, app tiles, search/header pills, quick-access containers and Quick Settings tiles.
+- Theme colors remain dynamic: the PNGs provide only neutral texture, highlights and depth while the active AppDock theme supplies the actual surface color.
+- Added `appdock_surface.lua` as the shared surface-layer implementation.
+- No SVG artwork was introduced.
+
+### Validation
+
+- Lua 5.1 syntax check passed for all plugin Lua files.
+- Keyboard and browser regression tests passed.
+- DApp regression test remains dependent on the external `lfs` Lua module in the test environment.
