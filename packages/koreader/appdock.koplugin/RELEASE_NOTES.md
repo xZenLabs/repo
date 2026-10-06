@@ -1,3 +1,27 @@
+# v7.4.10 · 2026-10-06
+
+# AppDock 7.4.10 — Live keyboard input
+
+## Live text entry
+
+- The AppDock keyboard now reports every edit immediately through a live-change callback.
+- AppDock-owned input flows no longer leave a KOReader `InputDialog` visible behind the AppDock keyboard.
+- The original action callbacks remain compatible: `Search`, `Save`, `Unlock`, and similar actions still receive the current value when `Done` is pressed.
+- The AppDock homescreen search bar now displays and filters the entered text while typing.
+- Secure numeric fields remain masked.
+
+## dChat compatibility
+
+- dChat is integrated as an external KOReader plugin through AppDock's optional Beta plugin host, not as a built-in AppDock DApp.
+- Standard dChat input dialogs captured by the host now use the same dialog-free AppDock editor and receive the value live through the original plugin input object.
+- Complex standalone dChat windows that do not expose a standard KOReader input dialog remain outside AppDock's interception scope.
+
+## Verification
+
+- Lua 5.1 syntax validation passed for the plugin and tests.
+- AppDock keyboard regression test passed, including live target updates and native-dialog closure.
+- Browser regression test passed.
+
 # v7.4.9 · 2026-10-05
 
 # AppDock 7.4.9
@@ -33,23 +57,3 @@ Dies ist der vollständige Liquid-Glass-Fix aus dem aktuellen Main-Stand. Die al
 
 - Lua 5.1 syntax check passed for all plugin Lua files.
 - PNG assets are RGBA and no larger than 1024 pixels on their longest side.
-
-# v7.4.5 · 2026-10-05
-
-## AppDock 7.4.5 — Raster Surfaces & Liquid Glass
-
-### Highlights
-
-- Replaced rigid homescreen cards and launcher surfaces with real AI-generated RGBA PNG overlays.
-- Added a dedicated circular raster overlay for round app tiles and round navigation buttons.
-- Added a text-free liquid-glass background texture for the homescreen.
-- Applied raster surfaces to homescreen cards, app tiles, search/header pills, quick-access containers and Quick Settings tiles.
-- Theme colors remain dynamic: the PNGs provide only neutral texture, highlights and depth while the active AppDock theme supplies the actual surface color.
-- Added `appdock_surface.lua` as the shared surface-layer implementation.
-- No SVG artwork was introduced.
-
-### Validation
-
-- Lua 5.1 syntax check passed for all plugin Lua files.
-- Keyboard and browser regression tests passed.
-- DApp regression test remains dependent on the external `lfs` Lua module in the test environment.

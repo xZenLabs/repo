@@ -1,3 +1,25 @@
+# v7.7.3 · 2026-10-06
+
+# Update 7.7.3
+
+##  Multi Grid: Now you can select 9 pages!
+
+- New option under **Layout → Multi Grid: Show 9 pages**. Shows 9 pages (3x3) instead of 6, with the current page in the center. Works in both portrait and landscape.
+- Small visual tweak to the index: added a dithering effect for a nicer look (based on `hatching.lua` from ZenOS).
+- Added visual feedback when pressing the `<`, `>` and `X` buttons in Simple UI mode.
+
+## Fixes:
+
+- **Multi Grid and Simple Grid:** CBZ and PDF pages now respect their true size more accurately and no longer shrink or stretch awkwardly to fit the grid.
+- The same fix was applied to the 3-page Grid in **Landscape** mode.
+
+## Installation
+1. Download the zip named `page_scrubber.koplugin-<version>.zip` from the **Assets** section below (not "Source code").
+2. Unzip it and copy the `page_scrubber.koplugin` folder into `koreader/plugins/`.
+3. Restart KOReader.
+
+To update, replace the folder. To uninstall, delete it (and `koreader/patches/2--page-scrubber-font.lua` if you used the system font).
+
 # v7.7.2 · 2026-10-04
 
 ## Bug Fixes in dictionary 
@@ -85,25 +107,3 @@ Page Scrubber can now change KOReader's system (UI) font from **⚙ Configuratio
 * **Dictionary Text Bounds**: Fixed font size calculation in the dictionary to ensure "shrink to fit" renders and paints text properly.
 
 [page_scrubber.koplugin.zip](https://github.com/user-attachments/files/32851569/page_scrubber.koplugin.zip)
-
-# v7.5.0 · 2026-09-28
-
-### FastDict Engine
- * **Instant Dictionary** Lookups: Added an in-memory StarDict lookup engine for significantly faster word searches.
- * Reliable Fallback: Retained full compatibility with the native dictionary engine for missing or advanced queries.
-Improvements on Dictionary Pop-Up
- * **Dynamic Window Sizing (Shrink-to-Fit)**: The popup automatically shrinks to fit short definitions, getting rid of awkward empty space.
- * **Reorderable Dictionary Buttons:** Custom order and visibility toggles for all bottom actions directly from settings.
- * X-Ray Integration: Integrated X-Ray directly into the dictionary action bar (set to the end by default and if not just move it with the chevron wherever you like).
- 
-### Improvements on Selection Menu
- * **Custom Action Ordering**: Added full sorting and toggle support for every tool in the text selection toolbar.
- * Smart "More" Button: Easily move the expansion button (...) to appear either first or last on the bar.
- * X-Ray in Selection: Enabled sorting and toggling for X-Ray alongside standard selection tools.
-
-### Scrubber Actions & Settings UI
- * **Reorderable Quick Actions**: Easily rearrange custom launcher actions with up/down arrows or delete them using the trash icon.
- * Adaptive SVG Chevrons: Replaced plain text arrows with native chevron icons that dynamically hide when an item cannot move further.
- * Stability & Touch Fixes: Isolated modal menus to eliminate ghost touches and accidental window closures, keeping menus properly layered during transitions.
-
-[page_scrubber.koplugin.zip](https://github.com/user-attachments/files/32747242/page_scrubber.koplugin.zip)
