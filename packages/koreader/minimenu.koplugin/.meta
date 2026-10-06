@@ -1,0 +1,23 @@
+# Minimenu plugin for KOReader
+# https://github.com/vishnumad/minimenu.koplugin
+# zenpm:auto-scraped
+id=minimenu
+name=Minimenu
+version=1.0.1
+description=Create popup menus you can open from a tap, gesture, or another plugin.
+author=vishnumad
+category=utility
+platforms=koreader
+dependencies=
+source=https://github.com/vishnumad/minimenu.koplugin
+stars=6
+updated_at=2026-10-06T00:38:19Z
+published_at=2026-10-05T02:24:13Z
+readme_url=packages/koreader/minimenu.koplugin/README.md
+readme_hash=9ed0ae2d9b065ff975f7daf54078af5663c29358
+release_notes_url=packages/koreader/minimenu.koplugin/RELEASE_NOTES.md
+release_notes_hash=5cb9cd7cbfcc343b3b92ca2df7c12fa1971758443120da73672b5eb714b7017c
+releases=[{"tag_name":"v1.0.1","assets":[{"name":"minimenu.koplugin.zip","url":"https://github.com/vishnumad/minimenu.koplugin/releases/download/v1.0.1/minimenu.koplugin.zip","size":97379,"digest":"sha256:63ef131cd4fa792adbef743b3e9fb33ec7a492fcdbdc2b515a11820d05d48ecd"}],"name":"v1.0.1"},{"tag_name":"v1.0.0","assets":[{"name":"minimenu.koplugin.zip","url":"https://github.com/vishnumad/minimenu.koplugin/releases/download/v1.0.0/minimenu.koplugin.zip","size":95045,"digest":"sha256:0b82fe5458a3c3cb2f585ea325e44aa60e13de0b5a2962b34470e09605afd342"}],"name":"v1.0.0"}]
+source_type=release
+source_asset=minimenu.koplugin.zip
+size=97379

@@ -1,3 +1,42 @@
+# v0.5 · 2026-10-05
+
+KindleFetch no longer holds KOReader up while it searches: pages arrive several times faster, compressed, and a tap cancels a search. Downloads ask before replacing a book, go to a `.part` file until they finish, and download completely in the background so they can be found again from the new Downloads menu entry. Load more stays where you were, settings change without flashing the screen and can clear the cache, errors stay on screen until dismissed, and you're told when every result was in a language or file type you haven't chosen. Plus speed-ups and fixes throughout.
+
+**How much faster?** Library Genesis now sends each page of results compressed, about 29 kB where it used to send 267 kB. A page that takes 13–29 seconds to arrive in v0.4 now takes 3–6 seconds (about 4x faster!). A search reads up to 5 pages, so one that used to freeze KOReader for over a minute now finishes in well under half that, and KOReader stays usable the whole time.
+
+Changes since v0.4:
+
+- Read the settings file once, and only write it when a setting changes (10095d6)
+- Read each cache once, save covers together, and keep at most 100 searches (e6189a9)
+- Give up on a site that doesn't answer after 10 seconds, rather than a minute (c9bcc0e)
+- Check for updates in the background, once a day, without repeating offers that were turned down (a61eb7d)
+- Read a book's size from its download, rather than asking for it first (2757f21)
+- Refresh only the part of the screen that changed, without flashing it (3b78a60)
+- Fix Read now crashing once the book the download was started from has closed (06b6eb0)
+- Ask before downloading over a book that's already there (870d853)
+- Download books to a .part file, and give up on downloads that stall (d11bee4)
+- Remove the files of covers dropped from the cache, and of downloads KOReader closed during (30ef2ed)
+- Show titles as they're written, shortened to fit the screen rather than to 50 bytes (c26b3ef)
+- Don't let a mirror add options to curl, and search without Wikipedia's list of mirrors (2bfc030)
+- Say when a download fails because curl isn't installed (acb78a9)
+- Say when Library Genesis is too busy to send a book (ebef7c3)
+- Fetch pages with curl where it's up to it, compressed (e14f4c3)
+- Search without holding KOReader up, and let a tap call the search off (ac2d717)
+- Get the next page's covers ahead, and give up on covers that stall (9da141b)
+- Search when enter is pressed on the keyboard (c38cefe)
+- Show what went wrong in a message that stays until it's dismissed (4231522)
+- Add more books to the list where Load more was tapped, rather than going back to its first page (0ecc773)
+- Say when books were found, but none in the languages and file types chosen (1feb0a3)
+- List the downloads in progress in the menu, to show a hidden one again (0504a17)
+- Change settings in the menu that's open, on the page it's on, and add a way to clear the cache (fb78a6a)
+- Say above the books what was searched for, and how many were found (6d510f8)
+- Check that cancelling a download leaves nothing of it behind in the end-to-end tests (8553b5a)
+- Say when Library Genesis' servers fail to send a book, and which HTTP error stopped a download (68dd06f)
+- Fix the edge of KOReader's menu showing in the corners of the settings (3c0218d)
+- Put the comment on searching above the function it describes (d8e34d2)
+- Update README screenshots (e7576ad)
+- Show README screenshots side by side (f06ac89)
+
 # v0.4 · 2026-09-30
 
 KindleFetch now searches Library Genesis, as Anna's Archive blocks the plugin. Covers load in the background and can be tapped to see them full size, finished downloads can be opened straight away, Wi-Fi turns on when needed, and update checks can be turned off. Plus many fixes.
