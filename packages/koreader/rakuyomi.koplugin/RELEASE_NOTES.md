@@ -1,3 +1,12 @@
+# v1.43.0 · 2026-10-06
+
+# [1.43.0](https://github.com/tachibana-shin/rakuyomi/compare/v1.42.2...v1.43.0) (2026-10-06)
+
+
+### Features
+
+* add optional black manga reader background ([#1](https://github.com/tachibana-shin/rakuyomi/issues/1)) ([#372](https://github.com/tachibana-shin/rakuyomi/issues/372)) ([11f672b](https://github.com/tachibana-shin/rakuyomi/commit/11f672b4d9f484f1786ff2c853a03802782887ac))
+
 # v1.42.2 · 2026-09-30
 
 ## [1.42.2](https://github.com/tachibana-shin/rakuyomi/compare/v1.42.1...v1.42.2) (2026-09-30)
@@ -39,13 +48,3 @@
 ### Bug Fixes
 
 * **aidoku:** sync process_page_image on lazy boot ([#342](https://github.com/tachibana-shin/rakuyomi/issues/342)) ([82087f7](https://github.com/tachibana-shin/rakuyomi/commit/82087f74f42d88ebbb12b3df388df61f7c46874c))
-
-# v1.41.7 · 2026-09-08
-
-## [1.41.7](https://github.com/tachibana-shin/rakuyomi/compare/v1.41.6...v1.41.7) (2026-09-08)
-
-
-### Bug Fixes
-
-* apply cookies.json to wasm image requests ([#338](https://github.com/tachibana-shin/rakuyomi/issues/338)) ([#340](https://github.com/tachibana-shin/rakuyomi/issues/340)) ([2dbcbbc](https://github.com/tachibana-shin/rakuyomi/commit/2dbcbbc78d2f1d0ce9543ac872c23f83cd985c5a))
-* **ui:** reconnect to Wi-Fi before retrying source list fetch ([#334](https://github.com/tachibana-shin/rakuyomi/issues/334)) ([#341](https://github.com/tachibana-shin/rakuyomi/issues/341)) ([ccdeaac](https://github.com/tachibana-shin/rakuyomi/commit/ccdeaac140c7fbfb60ee89a17f99ac9e6a8a53bf))
