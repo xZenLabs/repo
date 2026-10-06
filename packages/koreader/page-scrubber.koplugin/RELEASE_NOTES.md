@@ -3,10 +3,12 @@
 # Update 7.7.3
 
 ##  Multi Grid: Now you can select 9 pages!
-
 - New option under **Layout → Multi Grid: Show 9 pages**. Shows 9 pages (3x3) instead of 6, with the current page in the center. Works in both portrait and landscape.
 - Small visual tweak to the index: added a dithering effect for a nicer look (based on `hatching.lua` from ZenOS).
 - Added visual feedback when pressing the `<`, `>` and `X` buttons in Simple UI mode.
+
+##  <-- Library button
+The Library button now it redirects you to the path you have asigned as 'Start With' instead of simply going to the file browser. That means: Simple UI Homescreen, Bookshelf, or history... 
 
 ## Fixes:
 

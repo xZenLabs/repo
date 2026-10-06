@@ -1,3 +1,14 @@
+# v5.30.0 · 2026-10-06
+
+**Fixed**
+
+- With Bookshelf 5.3 or later, Bookends leaves room for Bookshelf's status line again. Bookshelf 5.3 moved the status line's settings, so Bookends stopped finding them.
+- Typing in the token library's search box and then picking a token, or tapping Close, while the keyboard was still open left the keyboard behind. KOReader then stopped responding to taps until it was restarted.
+
+**New**
+
+- Calibre metadata is now also looked for in the folder above your home folder. Calibre puts `metadata.calibre` in the root of the device, so it's now found when home is a Books folder inside that root.
+
 # v5.29.1 · 2026-09-29
 
 Submitting a preset to the gallery now always asks who to credit and for its description, pre-filled so you can check them. Before, a preset installed from the gallery and then changed could go out under the original author's name without asking.
@@ -20,19 +31,3 @@ Submitting a preset to the gallery now always asks who to credit and for its des
 
 - The background fill can now be set separately for the top and bottom of the screen. In the preset menu, *Top background* and *Bottom background* replace the single background colour, so you can fill just one of them or give each its own colour. Presets that used one background colour keep it on both.
 - Slovak translation, thanks to @misko903.
-
-# v5.26.0 · 2026-09-24
-
-**New**
-
-- `%genre` and `%genres` show a book's genres, taken from its keywords (the field in KOReader's Book information). `%genres` lists them all, separated by commas, and `%genre` shows the first. `[if:genres]` hides a line for books that have none.
-- `[if:chap_page=odd]` lets a line alternate on the page within the chapter, so the pattern starts again at every chapter. `[if:page=odd]` still follows the book's own page.
-- `%session_pages_advanced` shows how far you've got this session, counted in stable page numbers when the book has them. It starts at 0 and only goes up when you pass the furthest page you've reached, so paging back doesn't count. `%session_pages` is unchanged.
-
-**Fixes**
-
-- The book page no longer draws over part of KOReader's menu when a status bar updates while the menu is open, for example when toggling Wi-Fi from the menu.
-- Fixed an error box when opening a book on Kindles with a warm light, if the warmth couldn't be read at startup.
-- Calibre columns (`%calibre{...}`) now survive KOReader's wireless Calibre sync, which was wiping them.
-- Calibre columns now also work in large libraries, where they could go missing, and when KOReader's home folder is set with a trailing slash.
-- Whole-number Calibre columns, such as a word count, now print in full rather than as `1.23457e+06`.

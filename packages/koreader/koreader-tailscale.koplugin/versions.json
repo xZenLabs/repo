@@ -1,0 +1,3 @@
+{
+  "releases": [{"tag_name":"v1.0.0","assets":[{"name":"tailscale.koplugin.zip","url":"https://github.com/TimmyKug/koreader-tailscale/releases/download/v1.0.0/tailscale.koplugin.zip","size":6181,"digest":"sha256:aed27d4114d18215940108b4f4085f7af1535588ab7abdbe42d7bed707a70062"}],"name":"v1.0.0"}]
+}

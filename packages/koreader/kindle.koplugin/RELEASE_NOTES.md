@@ -1,3 +1,16 @@
+# v0.0.11 · 2026-10-06
+
+### Fixed
+
+* Fixed a crash when opening Kindle Library with long author metadata.
+* Fixed duplicate Kindle Library entries caused by stale ZenOS directory caches after upgrading.
+
+### Changed
+
+* Kindle Library now uses the active file browser and its display mode instead of a separate library list.
+
+Thanks to @jake01756 for the report in #20.
+
 # v0.0.10 · 2026-10-01
 
 ### Fixed
@@ -48,15 +61,5 @@ also updated the bundled kfx converter and did a pretty significant cleanup of t
 still very much a work in progress, but this should be substantially more reliable than v0.0.4.
 
 python remains slow
-
-please make github issues for any problems you run into
-
-# v0.0.4 · 2026-07-24
-
-v0.0.4 - Processing now works on older Kindle firmware
-
-still very much a work in progress and python is very slow for this task. should be mostly functional, at least
-
-tested on PW6 running 5.18.5.0.1
 
 please make github issues for any problems you run into

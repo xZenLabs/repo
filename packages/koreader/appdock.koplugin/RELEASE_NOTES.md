@@ -1,59 +1,50 @@
-# v7.4.10 · 2026-10-06
+# v7.7.0 · 2026-10-06
 
-# AppDock 7.4.10 — Live keyboard input
+# AppDock 7.7.0
 
-## Live text entry
+## Intuitivere Homescreen-Bearbeitung
 
-- The AppDock keyboard now reports every edit immediately through a live-change callback.
-- AppDock-owned input flows no longer leave a KOReader `InputDialog` visible behind the AppDock keyboard.
-- The original action callbacks remain compatible: `Search`, `Save`, `Unlock`, and similar actions still receive the current value when `Done` is pressed.
-- The AppDock homescreen search bar now displays and filters the entered text while typing.
-- Secure numeric fields remain masked.
+- Ein dauerhaft sichtbarer **Edit**-Knopf startet den Editmodus direkt im normalen und im Simple-Modus.
+- Langes Drücken auf eine App startet die Bearbeitung sofort statt zunächst ein separates Verwaltungsmenü zu öffnen. Während der Bearbeitung bleibt das App-Menü über langes Drücken erreichbar.
+- Die ausgewählte App wird hervorgehoben; kurze Hinweise erklären Ziehen, Verschieben und Beenden.
+- Widget-Größenregler sind größere Touch-Ziele und zeigen den aktuellen Maßstab, zum Beispiel **125 %**.
+- **Fertig** beendet den Editmodus. Regressionstests prüfen den sichtbaren Einstieg, den direkten Langdruck, Größenanzeige und Abschluss.
 
-## dChat compatibility
+# v7.6.1 · 2026-10-06
 
-- dChat is integrated as an external KOReader plugin through AppDock's optional Beta plugin host, not as a built-in AppDock DApp.
-- Standard dChat input dialogs captured by the host now use the same dialog-free AppDock editor and receive the value live through the original plugin input object.
-- Complex standalone dChat windows that do not expose a standard KOReader input dialog remain outside AppDock's interception scope.
+# AppDock 7.6.1
 
-## Verification
+## Hotfix: App-Verschieben im Homescreen-Editor
 
-- Lua 5.1 syntax validation passed for the plugin and tests.
-- AppDock keyboard regression test passed, including live target updates and native-dialog closure.
-- Browser regression test passed.
+Fixes a crash when moving pinned apps in the homescreen editor. The app-order helper is now loaded at plugin scope, where `AppDock:movePinned()` can access it. A regression test exercises the real `movePinned` method and verifies persistence of the new order.
 
-# v7.4.9 · 2026-10-05
+# v7.6.0 · 2026-10-06
 
-# AppDock 7.4.9
+# AppDock 7.6.0
 
-Die PNG-Logo-Bibliothek enthält jetzt zusätzlich textfreie, transparente Rasterlogos für dChat, DockUpdate und Minecraft. Die DApp-Definitionen verwenden die neuen Logo-IDs `dchat`, `dockupdate` und `minecraft`; die klassische thematische FrameContainer-Darstellung bleibt unverändert.
+## Visueller Homescreen-Editmodus
+- Langes Drücken auf eine angeheftete App öffnet den Manager; **Homescreen bearbeiten** startet den Editmodus direkt am Homescreen.
+- Das gerasterte Layout erlaubt, Apps per Drag-and-drop in eine andere Zelle zu verschieben. Die neue Reihenfolge wird gespeichert.
+- Store-Widgets lassen sich im Editmodus per Drag-and-drop neu anordnen. Plus-/Minus-Aktionen skalieren einzelne Widgets unabhängig voneinander zwischen 75 % und 150 %; die Einstellung bleibt erhalten und der Standardmaßstab wird beim Zurücksetzen nicht als unnötiger Konfigurationswert gespeichert.
+- **Fertig** beendet den Modus. Die Bedienung funktioniert sowohl im normalen als auch im Simple-Modus.
+- Regressionstests decken den Einstieg, die App-Verschiebung, das Widget-Reordering, individuelle Widget-Skalierung und den Abschluss des Editmodus ab.
 
-# v7.4.8 · 2026-10-05
+# v7.5.2 · 2026-10-06
 
-# AppDock 7.4.8
+# AppDock 7.5.2
 
-Die experimentellen Surface- und Liquid-Glass-Bilder sowie die zugehörige Surface-Schicht wurden vollständig entfernt. AppDock verwendet wieder die klassischen thematischen FrameContainer-Flächen.
+## Scroll- und Suchaktualisierung
 
-Die PNG-Logo-Bibliothek wurde um echte, textfreie Rasterlogos für Kalender, Rechner, Dokumente, Musik und Batterie erweitert. Das Batterie-Logo wird zusätzlich im WidgetGenerator neben dem Batteriestand angezeigt.
+- Der AppStore-Scroller reserviert seine Scrollbarbreite zusätzlich zur nutzbaren Zeilenbreite. Dadurch bleiben Karten- und Installationsaktionen beim Scrollen sichtbar statt unter der Scrollbar abgeschnitten zu werden.
+- Nach einer über die DuckDuckGo-Homescreenleiste gestarteten Suche wird nach dem Browser-Neuaufbau ein vollständiger E-Ink-Bildschirmrefresh eingeplant.
+- Regressionstests prüfen den Full-Refresh-Pfad; AppStore- und DApp-Tests berücksichtigen die reservierte Scrollbar.
 
-# v7.4.7 · 2026-10-05
+# v7.5.1 · 2026-10-06
 
-# AppDock 7.4.7
+# AppDock 7.5.1
 
-Dies ist der vollständige Liquid-Glass-Fix aus dem aktuellen Main-Stand. Die alten farbigen FrameContainer-Füllungen bleiben unsichtbar, die echten PNG-Flächen werden flexibel auf Breite und Höhe gestreckt und formmaskierte Liquid-Glass-Varianten verhindern Überstand an Kreis-, Kachel-, Container- und Pill-Rändern.
+## AppDock Store identity
 
-# v7.4.6 · 2026-10-05
-
-## AppDock 7.4.6 — DockUpdate Asset Fix
-
-### Fixes
-
-- Resized all generated PNG surface assets to DockUpdate-compatible dimensions.
-- Kept the assets as real RGBA raster images; no SVGs were added.
-- Moved the liquid-glass texture off the homescreen background.
-- Liquid glass is now applied only inside AppDock buttons, app tiles, cards, pills and Quick Settings containers, underneath the active theme color.
-
-### Validation
-
-- Lua 5.1 syntax check passed for all plugin Lua files.
-- PNG assets are RGBA and no larger than 1024 pixels on their longest side.
+- Replaced the external Play mark and “Google Play” wordmark in the store header with AppDock’s existing AppStore logo and the **AppDock Store** wordmark.
+- Updated the AppStore regression test to require the AppDock identity and reject the old external branding.
+- Clarification: current catalog rows use the catalog-declared AppDock logo kind and AppDock’s logo renderer; they do not currently load per-app PNG artwork directly from the remote catalog. The logo renderer can use bundled PNG assets for supported built-in logo kinds, with a procedural fallback when no bundled image exists.
