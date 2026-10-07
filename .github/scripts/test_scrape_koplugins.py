@@ -13,6 +13,66 @@ import scrape_kopatches
 
 
 class PluginScraperTests(unittest.TestCase):
+    def test_icon_pack_topic_discovers_release_zips_and_reclassifies_plugins(self):
+        repo = {
+            "owner": {"login": "owner"}, "name": "solar.koplugin",
+            "full_name": "owner/solar.koplugin",
+            "html_url": "https://github.com/owner/solar.koplugin",
+            "topics": ["Zen-Icon-Pack"], "stargazers_count": 0,
+        }
+        self.assertIn("topic:zen-icon-pack fork:true", scrape_koplugins.PLUGIN_QUERIES)
+        self.assertTrue(scrape_koplugins.is_eligible_koplugin(repo, False))
+        mixed = repo | {"topics": ["zen-icon-pack", "koreader-user-patch"], "stargazers_count": 5}
+        self.assertTrue(scrape_koplugins.is_eligible_koplugin(mixed, False))
+        self.assertFalse(scrape_kopatches.is_eligible_patch_repo(mixed, False))
+        self.assertFalse(scrape_koplugins.is_eligible_koplugin(repo | {"archived": True}, False))
+        release = {
+            "tag_name": "v1.0.0", "assets": [{
+                "name": "solar-arm.zip", "size": 123,
+                "browser_download_url": "https://example.com/solar-arm.zip",
+            }],
+        }
+        for existing, releases, collision in ((False, [release], False), (True, [release], False), (False, [], False), (False, [release], True)):
+            with self.subTest(existing=existing, releases=bool(releases)), tempfile.TemporaryDirectory() as temp_dir:
+                koreader_dir = os.path.join(temp_dir, "packages", "koreader")
+                folder = "solar.koplugin" if existing else "solar-2.iconpack" if collision else "solar.iconpack"
+                meta_path = os.path.join(koreader_dir, folder, ".meta")
+                if existing:
+                    os.makedirs(os.path.dirname(meta_path))
+                    with open(meta_path, "w", encoding="utf-8") as meta:
+                        meta.write(
+                            "# zenpm:auto-scraped\nid=solar\nname=Solar\nversion=source\n"
+                            "category=utility\nplatforms=koreader\n"
+                            "source=https://github.com/owner/solar.koplugin\n"
+                        )
+                with mock.patch.object(scrape_common, "REPO_ROOT", temp_dir), mock.patch.object(
+                    scrape_common, "KOREADER_DIR", koreader_dir
+                ), mock.patch.multiple(
+                    scrape_koplugins, KOREADER_DIR=koreader_dir, EXTRA_PLUGIN_REPOS={},
+                    discover=mock.Mock(return_value={repo["full_name"]: repo}),
+                    existing_repo_refs=mock.Mock(return_value=(set(), {"solar"} if collision else set())),
+                    fetch_repo=mock.Mock(return_value=repo),
+                    fetch_releases=mock.Mock(return_value=releases),
+                    cache_readme=mock.Mock(return_value=(None, None, False, True)),
+                    cache_release_notes=mock.Mock(return_value=(None, None, False, True)),
+                    load_blacklist=mock.Mock(return_value=set()),
+                    load_category_cache=mock.Mock(return_value={"owner/solar.koplugin": "utility"}),
+                    save_category_cache=mock.Mock(), write_results=mock.Mock(),
+                ), mock.patch.object(sys, "argv", ["scrape_koplugins.py"]):
+                    self.assertEqual(scrape_koplugins.main(), 0)
+                if not releases:
+                    self.assertFalse(os.path.exists(meta_path))
+                    continue
+                with open(meta_path, encoding="utf-8") as meta:
+                    content = meta.read()
+                self.assertIn("category=iconpacks\n", content)
+                self.assertIn("tags=zen-icon-pack,zenos\n", content)
+                self.assertIn("source_type=release\n", content)
+                self.assertIn("assets.0.arch=any\n", content)
+                self.assertIn("assets.0.asset=solar-arm.zip\n", content)
+                self.assertIn("assets.0.url=https://example.com/solar-arm.zip\n", content)
+                self.assertNotIn("source_url=", content)
+
     def test_five_star_minimum_for_plugins_and_patches(self):
         repo = {"name": "myclippings.koplugin", "stargazers_count": 5}
         self.assertTrue(scrape_koplugins.is_eligible_koplugin(repo, False))

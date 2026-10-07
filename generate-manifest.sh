@@ -93,6 +93,7 @@ for meta_file in $meta_files; do
     platforms=$(grep '^platforms=' "$tmp" 2>/dev/null | sed 's/^platforms=//' | head -1)
     incompatible_platforms=$(grep '^incompatible_platforms=' "$tmp" 2>/dev/null | sed 's/^incompatible_platforms=//' | head -1)
     dependencies=$(grep '^dependencies=' "$tmp" 2>/dev/null | sed 's/^dependencies=//' | head -1)
+    tags=$(grep '^tags=' "$tmp" 2>/dev/null | sed 's/^tags=//' | head -1)
     conflicts=$(grep '^conflicts=' "$tmp" 2>/dev/null | sed 's/^conflicts=//' | head -1)
     install_url=$(grep '^install_url=' "$tmp" 2>/dev/null | sed 's/^install_url=//' | head -1)
     uninstall_url=$(grep '^uninstall_url=' "$tmp" 2>/dev/null | sed 's/^uninstall_url=//' | head -1)
@@ -143,7 +144,7 @@ for meta_file in $meta_files; do
     } > "$versions_url"
 
     case "$category" in
-        utility|games|productivity|reference|media|theme|patches|fonts|wallpapers|screensavers) ;;
+        utility|games|productivity|reference|media|theme|patches|fonts|wallpapers|screensavers|iconpacks) ;;
         *)
             echo "Invalid or missing category in $meta_file: $category" >&2
             rm -f "$tmp"
@@ -188,6 +189,7 @@ for meta_file in $meta_files; do
     } >> "$OUTPUT"
 
     [ -n "$conflicts" ] && printf ',\n      "conflicts": %s' "$(csv_to_json_array "$conflicts")" >> "$OUTPUT"
+    [ -n "$tags" ] && printf ',\n      "tags": %s' "$(csv_to_json_array "$tags")" >> "$OUTPUT"
     [ -n "$incompatible_platforms" ] && printf ',\n      "incompatible_platforms": %s' "$(csv_to_json_array "$incompatible_platforms")" >> "$OUTPUT"
 
     # Optional string fields

@@ -1,4 +1,4 @@
-name: Scrape KOReader plugins, patches, and fonts
+name: Scrape KOReader plugins, patches, icon packs, and fonts
 
 on:
   push:
@@ -9,7 +9,7 @@ on:
   workflow_dispatch:
     inputs:
       package:
-        description: Existing plugin package ID to refresh (leave blank for a full scrape)
+        description: Existing plugin or icon pack ID to refresh (leave blank for a full scrape)
         required: false
         type: string
 
@@ -30,7 +30,7 @@ jobs:
           ref: main
           fetch-depth: 0
 
-      - name: Run plugin scraper
+      - name: Run plugin and icon pack scraper
         id: scrape_plugins
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

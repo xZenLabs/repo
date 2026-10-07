@@ -25,6 +25,7 @@ from scrape_common import (
     is_inactive,
     load_blacklist,
     looks_like_koreader_patch_repo,
+    looks_like_zen_icon_pack_repo,
     make_id,
     newest_prerelease,
     newest_stable_release,
@@ -119,6 +120,8 @@ def main():
                   file=sys.stderr)
             continue
 
+        if looks_like_zen_icon_pack_repo(repo):
+            continue
         canonical_ref = normalize_repo_ref(repo.get("full_name", record["ref"]))
         if canonical_ref:
             known_refs.add(canonical_ref)

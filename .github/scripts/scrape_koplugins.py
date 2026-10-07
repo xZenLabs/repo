@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Scrape GitHub for KOReader plugins and generate package .meta files."""
+"""Scrape GitHub for KOReader plugins and ZenOS icon packs."""
 
 import argparse
 import os
@@ -7,6 +7,7 @@ import sys
 
 from scrape_common import (
     KIND_PLUGIN,
+    KIND_ICON_PACK,
     KOREADER_DIR,
     MIN_STARS,
     VALID_CATEGORIES,
@@ -25,6 +26,7 @@ from scrape_common import (
     load_blacklist,
     load_category_cache,
     looks_like_koreader_patch_repo,
+    looks_like_zen_icon_pack_repo,
     make_id,
     newest_prerelease,
     newest_alpha_release,
@@ -39,6 +41,7 @@ from scrape_common import (
 )
 
 PLUGIN_QUERIES = (
+    "topic:zen-icon-pack fork:true",
     f"topic:koplugin stars:>={MIN_STARS} fork:true",
     f"topic:koreader-plugin stars:>={MIN_STARS} fork:true",
     f"topic:koreader-plugins stars:>={MIN_STARS} fork:true",
@@ -52,6 +55,8 @@ EXTRA_PLUGIN_REPOS = {
 
 
 def is_koplugin(repo):
+    if looks_like_zen_icon_pack_repo(repo):
+        return True
     if normalize_repo_ref(repo.get("full_name", "")) in EXTRA_PLUGIN_REPOS:
         return True
     name = repo.get("name", "").lower()
@@ -68,7 +73,7 @@ def is_koplugin(repo):
 def is_eligible_koplugin(repo, exclude_forks):
     extra = normalize_repo_ref(repo.get("full_name", "")) in EXTRA_PLUGIN_REPOS
     return (
-        (extra or repo.get("stargazers_count", 0) >= MIN_STARS)
+        (extra or looks_like_zen_icon_pack_repo(repo) or repo.get("stargazers_count", 0) >= MIN_STARS)
         and not repo.get("archived")
         and (not exclude_forks or not repo.get("fork"))
         and not is_inactive(repo)
@@ -78,7 +83,7 @@ def is_eligible_koplugin(repo, exclude_forks):
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Scrape KOReader plugins.")
+    parser = argparse.ArgumentParser(description="Scrape KOReader plugins and ZenOS icon packs.")
     parser.add_argument("--dry-run", action="store_true",
                         help="Print planned .meta files without writing.")
     parser.add_argument("--exclude-forks", action="store_true",
@@ -134,7 +139,7 @@ def main():
 
     updated = []
     for record in records:
-        if record["ref"] in blacklist or record["category"] == "patches":
+        if record["ref"] in blacklist:
             continue
         repo = fetch_repo(record["ref"])
         if not repo:
@@ -142,6 +147,8 @@ def main():
                   file=sys.stderr)
             continue
 
+        if record["category"] == "patches" and not looks_like_zen_icon_pack_repo(repo):
+            continue
         repo_norm = normalize_repo_ref(repo.get("full_name", record["ref"]))
         category = (
             category_cache.get(record["ref"])
@@ -149,6 +156,9 @@ def main():
             or (record["category"] if record["category"] in VALID_CATEGORIES else "")
             or classify_category(repo)
         )
+        kind = KIND_ICON_PACK if looks_like_zen_icon_pack_repo(repo) or record["category"] == "iconpacks" else KIND_PLUGIN
+        if kind == KIND_ICON_PACK:
+            category = "iconpacks"
         category_cache[repo_norm] = category
 
         full_name = repo.get("full_name", record["ref"])
@@ -158,6 +168,8 @@ def main():
                   file=sys.stderr)
             continue
         release = newest_stable_release(releases)
+        if kind == KIND_ICON_PACK and not any(asset.get("name", "").lower().endswith(".zip") for asset in (release or {}).get("assets", [])):
+            continue
         prerelease = newest_prerelease(releases)
         alpha = newest_alpha_release(releases) if record["id"] == "zen-ui" else None
         package_dir = os.path.dirname(record["path"])
@@ -184,7 +196,7 @@ def main():
             continue
         _meta_id, meta_text, summary = build_meta(
             repo, release, known_ids, category, meta_id=record["id"],
-            kind=KIND_PLUGIN, name_override=record["name"],
+            kind=kind, name_override=record["name"],
             readme_url=readme_url, readme_hash=readme_hash,
             release_notes_url=release_notes_url, release_notes_hash=release_notes_hash,
             prerelease=prerelease, prerelease_notes_url=prerelease_notes_url,
@@ -238,13 +250,16 @@ def main():
             continue
 
         extra = EXTRA_PLUGIN_REPOS.get(norm)
-        candidate_id = extra["id"] if extra else make_id(repo.get("name", ""), set())
+        kind = KIND_ICON_PACK if looks_like_zen_icon_pack_repo(repo) else KIND_PLUGIN
+        candidate_id = extra["id"] if extra else make_id(
+            repo.get("name", ""), known_ids if kind == KIND_ICON_PACK else set()
+        )
         candidate_identity = repository_identity(repo.get("full_name", full_name))
         if candidate_id in known_ids or candidate_identity in known_repository_identities:
             print(f"Skipping duplicate package {full_name}", file=sys.stderr)
             continue
 
-        category = category_cache.get(norm) or classify_category(repo)
+        category = "iconpacks" if kind == KIND_ICON_PACK else category_cache.get(norm) or classify_category(repo)
         category_cache[norm] = category
 
         releases = fetch_releases(full_name)
@@ -252,17 +267,19 @@ def main():
             print(f"Could not add {full_name}: releases unavailable", file=sys.stderr)
             continue
         release = newest_stable_release(releases)
+        if kind == KIND_ICON_PACK and not any(asset.get("name", "").lower().endswith(".zip") for asset in (release or {}).get("assets", [])):
+            continue
         prerelease = newest_prerelease(releases)
         meta_id, meta_text, summary = build_meta(
             repo, release, known_ids, category, meta_id=candidate_id,
-            kind=KIND_PLUGIN, name_override=extra["name"] if extra else None,
+            kind=kind, name_override=extra["name"] if extra else None,
             releases=releases, scraped_at=scraped_at
         )
         known_refs.add(norm)
         if candidate_identity:
             known_repository_identities.add(candidate_identity)
 
-        dest_dir = os.path.join(KOREADER_DIR, package_dir_name(meta_id, KIND_PLUGIN))
+        dest_dir = os.path.join(KOREADER_DIR, package_dir_name(meta_id, kind))
         dest = os.path.join(dest_dir, ".meta")
         release_notes_url, release_notes_hash, _release_notes_changed, _release_notes_resolved = cache_release_notes(
             releases, dest_dir, args.dry_run
@@ -275,7 +292,7 @@ def main():
         )
         meta_id, meta_text, summary = build_meta(
             repo, release, known_ids, category, meta_id=meta_id,
-            kind=KIND_PLUGIN, name_override=extra["name"] if extra else None,
+            kind=kind, name_override=extra["name"] if extra else None,
             readme_url=readme_url, readme_hash=readme_hash,
             release_notes_url=release_notes_url, release_notes_hash=release_notes_hash,
             prerelease=prerelease, prerelease_notes_url=prerelease_notes_url,

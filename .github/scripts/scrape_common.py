@@ -26,6 +26,7 @@ MAX_INACTIVE_DAYS = 730
 
 KIND_PLUGIN = "plugin"
 KIND_PATCH = "patch"
+KIND_ICON_PACK = "iconpack"
 
 DEFAULT_PLUGIN_PLATFORMS = "koreader"
 
@@ -42,7 +43,7 @@ PLUGIN_IDENTITY_FIELDS = (
     "source_asset_aliases",
 )
 
-VALID_CATEGORIES = ("utility", "games", "productivity", "reference", "media", "theme", "patches", "fonts", "wallpapers", "screensavers")
+VALID_CATEGORIES = ("utility", "games", "productivity", "reference", "media", "theme", "patches", "fonts", "wallpapers", "screensavers", "iconpacks")
 DEFAULT_CATEGORY = "utility"
 PATCH_CATEGORY = "patches"
 
@@ -404,11 +405,17 @@ def repository_identity(ref):
 
 
 def looks_like_koreader_patch_repo(repo):
+    if looks_like_zen_icon_pack_repo(repo):
+        return False
     name = repo.get("name", "").lower()
     topics = [topic.lower() for topic in repo.get("topics", [])]
     if "koreader-user-patch" in topics:
         return True
     return name == "koreader.patches" or "koreader.patches" in name
+
+
+def looks_like_zen_icon_pack_repo(repo):
+    return "zen-icon-pack" in [topic.lower() for topic in repo.get("topics", [])]
 
 
 def load_blacklist():
@@ -526,6 +533,8 @@ def display_name(repo_name):
 
 
 def package_dir_name(meta_id, kind):
+    if kind == KIND_ICON_PACK:
+        return f"{meta_id}.iconpack"
     if kind == KIND_PATCH:
         return f"{meta_id}.kopatch"
     return f"{meta_id}.koplugin"
@@ -641,7 +650,7 @@ def build_meta(repo, release, existing_ids, category, meta_id=None, kind=KIND_PL
     alpha_published_at = alpha.get("published_at") if isinstance(alpha, dict) else ""
     description = clean_description(repo.get("description"))
     default_branch = repo.get("default_branch", "main")
-    package_label = "patch" if kind == KIND_PATCH else "plugin"
+    package_label = "icon pack" if kind == KIND_ICON_PACK else "patch" if kind == KIND_PATCH else "plugin"
     platforms = (preserved_fields or {}).get(
         "platforms", DEFAULT_PLUGIN_PLATFORMS if kind == KIND_PLUGIN else "koreader"
     )
@@ -679,6 +688,8 @@ def build_meta(repo, release, existing_ids, category, meta_id=None, kind=KIND_PL
         f"dependencies={dependencies}",
         f"source={repo['html_url']}",
     ])
+    if kind == KIND_ICON_PACK:
+        lines.append("tags=zen-icon-pack,zenos")
 
     for field in PLUGIN_IDENTITY_FIELDS:
         value = (preserved_fields or {}).get(field, "")
@@ -769,7 +780,7 @@ def build_meta(repo, release, existing_ids, category, meta_id=None, kind=KIND_PL
             lines.append(f"assets.{i}.url={asset['url']}")
             lines.append(f"assets.{i}.size={asset.get('size', 0)}")
         summary["assets"] = len(patch_assets)
-    elif len(zip_assets) >= 2:
+    elif len(zip_assets) >= 2 or (kind == KIND_ICON_PACK and zip_assets):
         lines.append("source_type=release")
         if len(canonical_zip_assets) == 1:
             canonical_asset = canonical_zip_assets[0]
@@ -777,7 +788,7 @@ def build_meta(repo, release, existing_ids, category, meta_id=None, kind=KIND_PL
             lines.append(f"size={canonical_asset.get('size', 0)}")
         for i, asset in enumerate(zip_assets):
             aname = asset.get("name", "")
-            lines.append(f"assets.{i}.arch={detect_arch(aname)}")
+            lines.append(f"assets.{i}.arch={'any' if kind == KIND_ICON_PACK else detect_arch(aname)}")
             lines.append(f"assets.{i}.asset={aname}")
             lines.append(f"assets.{i}.url={asset.get('browser_download_url', '')}")
             lines.append(f"assets.{i}.size={asset.get('size', 0)}")

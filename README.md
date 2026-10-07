@@ -4,14 +4,15 @@
 
 ## Requirements for automatic inclusion
 
-KOReader plugins and user patches are discovered from GitHub every hour.
+KOReader plugins, user patches, and ZenOS icon packs are discovered from GitHub every hour.
 To get a new package added automatically, meet **all the common requirements**
-and the **plugin or patch requirements** below. No pull request to this repo is
+and the **plugin, patch, or icon pack requirements** below. No pull request to this repo is
 needed for automatic discovery. Other package types are outside this process.
 
 ### Common requirements
 
-- **Public GitHub repository with at least 5 stars.** Forks are eligible too.
+- **Public GitHub repository.** Plugins and patches require at least 5 stars;
+  repositories tagged `zen-icon-pack` have no star minimum. Forks are eligible too.
 - **Not archived.**
 - **Recent activity:** the scraper rejects repositories whose GitHub
   `pushed_at` timestamp is more than 730 whole days old. It does not reject a
@@ -20,7 +21,9 @@ needed for automatic discovery. Other package types are outside this process.
   generated package ID must not already be taken, and its normalized
   owner/repository identity must not match an existing package. Package IDs
   are derived from repository names, so a name collision can prevent addition
-  even when the repositories have different owners.
+  even when the repositories have different owners. Icon packs receive a numeric
+  suffix when their generated ID is already taken, allowing a converted pack
+  to coexist with its original plugin.
 
 ### Plugin requirements
 
@@ -56,6 +59,19 @@ no release or ZIP is required.
 
 Patch discovery rejects repositories containing a directory ending in
 `.koplugin`; mixed plugin/patch repositories are not supported by that scanner.
+
+### ZenOS icon pack requirements
+
+- Add the **`zen-icon-pack` GitHub topic** to your repository. This topic
+  classifies the package as **Icon Packs** (`category=iconpacks`), including
+  repositories whose names contain `koplugin`.
+- Publish a **stable GitHub release with at least one uploaded `.zip` asset**.
+  Each ZIP is listed separately for installation, like individual user patches.
+  Source-code archives are not used for icon packs.
+- Each ZIP must contain one `<pack-id>/` folder with a schema version 1
+  `pack.json` whose `id` matches the folder, and root-level SVG or PNG icons.
+  ZenPM validates the pack before installing it under
+  `koreader/icons/zen/<pack-id>/`. Restart KOReader and select the pack in ZenOS.
 
 ### Exceptions and scan results
 
@@ -174,6 +190,7 @@ Each package metadata file must include a `category` set to one of:
 - `fonts`
 - `wallpapers`
 - `screensavers`
+- `iconpacks`
 
 ### Plain KOReader images
 
@@ -230,10 +247,10 @@ All files are served as static content — no server-side logic required. ZenPM 
 
 ## Contributing
 
-### KOReader plugins and patches
+### KOReader plugins, patches, and ZenOS icon packs
 
 See [Requirements for automatic inclusion](#requirements-for-automatic-inclusion)
-for the exact rules for getting a new KOReader plugin or patch added.
+for the exact rules for getting a new KOReader plugin, patch, or icon pack added.
 
 During each scan, the
 repository README, the five latest stable and non-alpha prerelease notes, and up
