@@ -1,4 +1,4 @@
-# Solariconpack Zen icon pack for KOReader
+# Solar Icons icon pack for KOReader
 # https://github.com/xZenLabs/solariconpack-zen
 # zenpm:auto-scraped
 id=solariconpack-zen
@@ -12,7 +12,7 @@ dependencies=
 source=https://github.com/xZenLabs/solariconpack-zen
 tags=zen-icon-pack,zenos
 stars=0
-updated_at=2026-10-07T21:21:56Z
+updated_at=2026-10-07T21:24:55Z
 published_at=2026-10-07T21:16:34Z
 readme_url=packages/koreader/solariconpack-zen.iconpack/README.md
 readme_hash=0b557b86a125e8d57725ce25e77bf0bf0392b2fa
