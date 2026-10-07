@@ -1,3 +1,12 @@
+# v1.43.1 · 2026-10-07
+
+## [1.43.1](https://github.com/tachibana-shin/rakuyomi/compare/v1.43.0...v1.43.1) (2026-10-07)
+
+
+### Bug Fixes
+
+* closing custom dialog ([#375](https://github.com/tachibana-shin/rakuyomi/issues/375)) ([e5c3b37](https://github.com/tachibana-shin/rakuyomi/commit/e5c3b37b94c53f93fe4c8575936f6fbfd78c307a))
+
 # v1.43.0 · 2026-10-06
 
 # [1.43.0](https://github.com/tachibana-shin/rakuyomi/compare/v1.42.2...v1.43.0) (2026-10-06)
@@ -39,12 +48,3 @@
 ### Features
 
 * support downloading specific chapters and ranges ([#355](https://github.com/tachibana-shin/rakuyomi/issues/355)) ([3620d55](https://github.com/tachibana-shin/rakuyomi/commit/3620d559e5be2b54b4e593a9bafe3ff3c242fcf6)), closes [#344](https://github.com/tachibana-shin/rakuyomi/issues/344) [#344](https://github.com/tachibana-shin/rakuyomi/issues/344)
-
-# v1.41.8 · 2026-09-08
-
-## [1.41.8](https://github.com/tachibana-shin/rakuyomi/compare/v1.41.7...v1.41.8) (2026-09-08)
-
-
-### Bug Fixes
-
-* **aidoku:** sync process_page_image on lazy boot ([#342](https://github.com/tachibana-shin/rakuyomi/issues/342)) ([82087f7](https://github.com/tachibana-shin/rakuyomi/commit/82087f74f42d88ebbb12b3df388df61f7c46874c))

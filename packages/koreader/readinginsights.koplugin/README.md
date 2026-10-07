@@ -28,7 +28,7 @@ A full-screen overview of your whole reading history.
   see the separate [Reading streak](#-reading-streak) popup below).
 - **Yearly & monthly** — hours/days read and pages, navigable by year; a
   monthly bar chart you can tap to see the books behind each month.
-- **All-time totals** — cumulative hours and pages. Tap the "Total read"
+- **All-time totals** — cumulative hours and pages. Tap the "All time"
   header for a GitHub-style **heatmap** and a **time-of-day** breakdown of when
   you read (shown as a bar chart or an hour × weekday grid).
 - **Reading goal** — this year's finished books over your target (e.g. 24/30)
@@ -116,10 +116,17 @@ top of the cover, the **title**, the **author(s)** (several authors are
 joined with a language-appropriate "and") and the **series** with the book's
 number in it, when the book is part of one.
 
+Above the title sit the book's **star rating** (long-press the stars to set,
+change or clear it; it is written into the book's own sidecar, so a book that
+had no stars in the file manager gets them), and above the description the
+**pages read** (left) and the **reading time** (right). Without a cover (switched
+off, or the book has none) the popup is only as wide as its longest line needs.
+
 Open it from *Tools → Reading insights → Show Book info*, from a gesture
 ("Reading insights: book info"), or by tapping the "This book" title in the
 Book progress popup (closing it then brings the Book progress popup back).
-Book view only.
+Book view only. In the book lists (e.g. the books behind a month) a **tap** on a
+book opens its Book info popup, a **long press** opens its statistics.
 
 ## 😴 Sleep screen
 
