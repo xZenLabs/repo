@@ -1,3 +1,11 @@
+# v1.6.2-beta1 · 2026-10-07
+
+## What's Changed
+
+- Update screensaver tags and categories sections
+- Add sort by date to screensavers
+- Add ZenOS button feedback
+
 # v1.6.1-beta6 · 2026-10-07
 
 ## What's Changed
@@ -31,9 +39,3 @@
 
 - Fix a bug matching version to GH tag in direct to github fetch
 - Update top menu tap zone
-
-# v1.6.1-beta2 · 2026-09-20
-
-## What's Changed
-
-- Fix a bug matching version to GH tag in direct to github fetch
