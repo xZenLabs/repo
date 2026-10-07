@@ -1,0 +1,28 @@
+# Zen Icon Pack icon pack for KOReader
+# https://github.com/xZenLabs/zen-icon-pack
+# zenpm:auto-scraped
+id=zen-icon-pack
+name=Zen Icon Pack
+version=1.0.0
+description=An example repo for custom Zen UI icon packs in KOReader
+author=xZenLabs
+category=iconpacks
+platforms=koreader
+dependencies=
+source=https://github.com/xZenLabs/zen-icon-pack
+tags=zen-icon-pack,zenos
+stars=3
+updated_at=2026-10-07T20:46:03Z
+published_at=2026-07-30T04:09:45Z
+readme_url=packages/koreader/zen-icon-pack.iconpack/README.md
+readme_hash=e4a049c2797344783677b9f87533eff0f1b043c5
+release_notes_url=packages/koreader/zen-icon-pack.iconpack/RELEASE_NOTES.md
+release_notes_hash=22e5bafda82425241d4864277d06a755657a9d23cc4de9f7e0513f1599cd0ca2
+releases=[{"tag_name":"v1.0.0","assets":[{"name":"zen-icon-pack.zip","url":"https://github.com/xZenLabs/zen-icon-pack/releases/download/v1.0.0/zen-icon-pack.zip","size":83901,"digest":"sha256:2d7e4eb7996976d941ed83b5b42ea5de5b570b7c960e8a61fb1d6e6e31881640"}],"name":"v1.0.0"}]
+source_type=release
+source_asset=zen-icon-pack.zip
+size=83901
+assets.0.arch=any
+assets.0.asset=zen-icon-pack.zip
+assets.0.url=https://github.com/xZenLabs/zen-icon-pack/releases/download/v1.0.0/zen-icon-pack.zip
+assets.0.size=83901

@@ -1,0 +1,3 @@
+{
+  "releases": [{"tag_name":"v1.0.0","assets":[{"name":"zen-solar-colour.zip","url":"https://github.com/xZenLabs/solariconpack-zen/releases/download/v1.0.0/zen-solar-colour.zip","size":124349,"digest":"sha256:b8033f97dcbf189563fd49e1d1653a332e29d5b09da2bfa60c8ef5283783fe3c"},{"name":"zen-solar-mono.zip","url":"https://github.com/xZenLabs/solariconpack-zen/releases/download/v1.0.0/zen-solar-mono.zip","size":121869,"digest":"sha256:a73ba0fabe358d780067472fe03a48d5b8244b94692e4bafb144d8eeea69fd48"}],"name":"Solar Icon Packs for Zen UI v1.0.0"}]
+}
