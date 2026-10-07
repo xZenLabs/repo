@@ -57,20 +57,61 @@ After switching away from a pack, remove it through ZenPM if ZenPM installed it,
 
 ## Building the ZenOS packs
 
-Build both release ZIPs locally with Python 3:
+Install the build dependency, then build both release ZIPs with Python 3:
 
 ```sh
+python3 -m venv .venv
+source .venv/bin/activate
+python3 -m pip install -r scripts/requirements.txt
 python3 scripts/build-zen-packs.py
 ```
 
-The build validates the source SVGs and ZIP limits, checks archive integrity, and writes the packs to `dist/`. Each ZIP contains one folder matching its `pack.json` ID and includes [icon attribution](LICENSE-ICONS.txt).
+The builder also works with other extracted SimpleUI packs:
+
+```sh
+python3 scripts/build-zen-packs.py /path/to/NightOwl --output dist --version 1.0.0
+python3 -m unittest discover -s scripts -p 'test_*.py'
+```
+
+Point it at a flat pack folder, a folder containing several packs, or a repository
+with `Pack Icons`, `KOReader Icons`, and supplementary icon folders. Extract ZIP
+inputs first. Optional `pack.lua` metadata and filename mappings are read as
+literal quoted strings without running Lua; computed Lua values are unsupported.
+Without a manifest, standard `sui_*` SVG/PNG filenames are translated to ZenOS
+names. Existing canonical icons take priority, and partial packs are supported.
+Root `pack.json` is a complete manifest example and the shared metadata source
+for builds, including schema version, version, and author. When building several
+packs, each pack gets its own ID and name from `pack.lua` or its folder name;
+a single flat pack uses root `pack.json`'s ID and name directly. Without root
+metadata, `pack.lua` supplies the available version and author. `--version`
+overrides the manifest version for release builds.
+
+The build validates SVG documents and ZenOS ZIP limits, checks archive integrity,
+and writes the packs to the output directory. Each ZIP contains one folder
+matching its `pack.json` ID and retains available source licences, including
+[icon attribution](LICENSE-ICONS.txt).
+
+Every PNG is verified, decoded, and encoded as a new RGBA PNG containing only
+pixels. Text, EXIF, ICC profiles, private chunks, and appended files are discarded;
+transparency is retained. Invalid, oversized, and animated PNGs fail the build.
+This strips non-pixel payloads; it cannot detect data encoded in the pixels and
+does not guarantee that an image decoder has no vulnerabilities. SVG artwork is
+validated but is not rewritten or sanitised.
+
+The release workflow runs on pushes to `main` and manually through **Actions →
+Release Zen icon packs → Run workflow**. It increments the patch number above
+the higher of root `pack.json`'s version and existing `vMAJOR.MINOR.PATCH` tags
+(for example, `1.0.0` → `v1.0.1` → `v1.0.2`). Update root `pack.json` to set a
+new major or minor baseline. Release runs are serialized to avoid duplicate tags.
+The workflow builds and validates all packs with the selected version, then
+creates the tag on the triggering commit and publishes the generated ZenOS ZIPs.
 
 ## Credits and licence
 
 - **Original repository:** [pxlflux/solariconpack.koplugin](https://github.com/pxlflux/solariconpack.koplugin). pxlflux adapted the Solar artwork for KOReader, recoloured the Colour version, refined the Mono outlines, and drew additional icons.
 - **Original icon set:** [Solar Icon Set](https://www.figma.com/community/file/1166831539721848736) by **480 Design**, licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
 - **ZenOS packaging:** [ZenLabs](https://github.com/xZenLabs) preserves the source SVG artwork and adds filename aliases for ZenOS's controls.
-- The icons remain under **CC BY 4.0**; the original installer plugin code remains under **AGPL-3.0**. See [LICENSE](LICENSE) and [LICENSE-ICONS.txt](LICENSE-ICONS.txt).
+- The icons remain under **CC BY 4.0**. See [LICENSE](LICENSE) and [LICENSE-ICONS.txt](LICENSE-ICONS.txt).
 
 ## Support and funding
 
