@@ -6,12 +6,31 @@ Modern, rounded replacement icons for [ZenOS](https://github.com/xZenLabs/zen-os
 
 ## What's included
 
-Each pack includes all 160 source icons plus filename aliases for ZenOS's Navbar, Controls, and supported lookup actions. Matching grids and line weights keep the artwork consistent across ZenOS and KOReader. Missing icons use the bundled ZenOS and KOReader artwork.
+Each built pack includes 227 SVG files named for ZenOS and KOReader's icon lookups. The KOReader icon folders retain all 102 original filenames and drawings in each style. Python generates additional ZenOS lookup aliases during the build. Matching grids and line weights keep the artwork consistent across ZenOS and KOReader. Missing icons use the bundled ZenOS and KOReader artwork.
 
 | Pack | Style | Made for | Release asset |
 |---|---|---|---|
 | **Solar Colour** | Soft pastel fills, 0.75 stroke | Colour e-ink screens | `zen-solar-colour.zip` |
 | **Solar Mono** | Bolder outlines, 1.0 stroke | Black & white e-ink screens | `zen-solar-mono.zip` |
+
+The additional designs cover battery levels and charging, calculator, CPU, database, compass, folders, USB, sharing, timer, warmth, sun, playback controls, dictionary, highlighting, and other shipped utilities. Restart, Bluetooth, incognito, lockdown, the app launcher, and Zen mode are included in both styles.
+
+All 23 built-in choices under **Navbar → Tabs → Add → Tab** have themed icons. Key mappings are:
+
+| Tab | ZenOS filename | Artwork |
+|---|---|---|
+| Library / Kindle Library | `library.svg` | Books on a shelf |
+| Series | `tab_series.svg` | Horizontal stack of books |
+| Stats | `tab_stats.svg` | Progress chart |
+| Languages | `tab_translate.svg` | Globe |
+| Tags | `tab_tags.svg` | Tag |
+| News | `tab_news.svg` | Article |
+| Folder | `tab_folder.svg` | Folder |
+| Archive | `archive.svg` | Archive box |
+
+Calibre and `tab_books.svg` share the Library artwork. Reading progress uses `quick_stats_progress.svg`; the statistics calendar retains its calendar icon. Battery SVGs are available for controls and icon selection; ZenOS's status-bar battery indicators and other inline font glyphs use their existing font artwork.
+
+Chess, Connections, Notion, RSS, and unmatched lookup actions keep the bundled artwork. The additions come from the [official Solar Icon Set](https://github.com/480-Design/Solar-Icon-Set/tree/44017167688b49109d88ae6a98979b23d8950db0/icons/SVG/Bold); source names and adaptation details are recorded in [icon attribution](LICENSE-ICONS.txt).
 
 ## Install with ZenPM
 
@@ -39,25 +58,30 @@ Choose another pack under **Zen Settings → Interface → Custom icons → Cust
 
 After switching away from a pack, remove it through ZenPM if ZenPM installed it, or delete its folder from `koreader/icons/zen/` if you installed it manually.
 
-## Full icon list
+## Original icon previews
 
 <details>
 <summary><strong>Solar Colour</strong></summary>
 
-![Solar Colour: every icon with its filename](Solar%20Colour/Full%20Icon%20Overview%20%28Colour%29.png)
+![Solar Colour: original icons with their filenames](Solar%20Colour/Full%20Icon%20Overview%20%28Colour%29.png)
 
 </details>
 
 <details>
 <summary><strong>Solar Mono</strong></summary>
 
-![Solar Mono: every icon with its filename](Solar%20Mono/Full%20Icon%20Overview%20%28Mono%29.png)
+![Solar Mono: original icons with their filenames](Solar%20Mono/Full%20Icon%20Overview%20%28Mono%29.png)
 
 </details>
 
 ## Building the ZenOS packs
 
-Install the build dependency, then build both release ZIPs with Python 3:
+The KOReader icon folders retain their original lookup names and artwork;
+additional source SVGs use ZenOS lookup names. Filename conversion and alias
+generation happens in `scripts/build-zen-packs.py`;
+the packs have no Lua scripts. The builder gathers each style's three icon
+folders, validates the assets, and creates both release ZIPs. Install its
+dependency, then run it with Python 3:
 
 ```sh
 python3 -m venv .venv
@@ -66,7 +90,8 @@ python3 -m pip install -r scripts/requirements.txt
 python3 scripts/build-zen-packs.py
 ```
 
-The builder also works with other extracted SimpleUI packs:
+To build just one style, pass `"Solar Colour"` or `"Solar Mono"` as the source.
+The builder's SimpleUI mappings remain available for other extracted packs:
 
 ```sh
 python3 scripts/build-zen-packs.py /path/to/NightOwl --output dist --version 1.0.0
@@ -77,12 +102,13 @@ Point it at a flat pack folder, a folder containing several packs, or a reposito
 with `Pack Icons`, `KOReader Icons`, and supplementary icon folders. Extract ZIP
 inputs first. Optional `pack.lua` metadata and filename mappings are read as
 literal quoted strings without running Lua; computed Lua values are unsupported.
-Without a manifest, standard `sui_*` SVG/PNG filenames are translated to ZenOS
+Without Lua metadata, standard `sui_*` SVG/PNG filenames are translated to ZenOS
 names. Existing canonical icons take priority, and partial packs are supported.
-Root `pack.json` is a complete manifest example and the shared metadata source
-for builds, including schema version, version, and author. When building several
-packs, each pack gets its own ID and name from `pack.lua` or its folder name;
-a single flat pack uses root `pack.json`'s ID and name directly. Without root
+Root `pack.json` is the shared metadata source for automated builds, including
+schema version, version, and author; per-style manifests supply metadata when
+building a style directly. When building several packs, each pack gets its own
+ID and name from legacy `pack.lua` metadata or its folder name; a single pack
+uses root `pack.json`'s ID and name directly. Without root
 metadata, `pack.lua` supplies the available version and author. `--version`
 overrides the manifest version for release builds.
 
@@ -110,7 +136,7 @@ creates the tag on the triggering commit and publishes the generated ZenOS ZIPs.
 
 - **Original repository:** [pxlflux/solariconpack.koplugin](https://github.com/pxlflux/solariconpack.koplugin). pxlflux adapted the Solar artwork for KOReader, recoloured the Colour version, refined the Mono outlines, and drew additional icons.
 - **Original icon set:** [Solar Icon Set](https://www.figma.com/community/file/1166831539721848736) by **480 Design**, licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
-- **ZenOS packaging:** [ZenLabs](https://github.com/xZenLabs) preserves the source SVG artwork and adds filename aliases for ZenOS's controls.
+- **ZenOS packaging:** [ZenLabs](https://github.com/xZenLabs) preserves the original SVG artwork, adapts additional Solar designs to both pack styles, and generates ZenOS lookup aliases during the Python build.
 - The icons remain under **CC BY 4.0**. See [LICENSE](LICENSE) and [LICENSE-ICONS.txt](LICENSE-ICONS.txt).
 
 ## Support and funding
