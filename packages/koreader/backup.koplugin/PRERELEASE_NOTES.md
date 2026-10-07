@@ -1,3 +1,10 @@
+# 26.10.6-beta · 2026-10-06
+
+- Fix webdav, ftp and sftp
+- update settings UX
+
+**Full Changelog**: https://github.com/ultimatejimmy/backup.koplugin/compare/26.10.3-beta...26.10.6-beta
+
 # 26.10.3-beta · 2026-10-03
 
 Add cloud backup providers:

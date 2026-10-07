@@ -1,6 +1,6 @@
 # v7.7.3 · 2026-10-06
 
-# Update 7.7.3
+# What's new!
 
 ##  Multi Grid: Now you can select 9 pages!
 - New option under **Layout → Multi Grid: Show 9 pages**. Shows 9 pages (3x3) instead of 6, with the current page in the center. Works in both portrait and landscape.

@@ -1,3 +1,9 @@
+# 26.10.6-beta · 2026-10-06
+
+- Fix font bug
+
+**Full Changelog**: https://github.com/ultimatejimmy/storefront.koplugin/compare/26.10.5-beta...26.10.6-beta
+
 # 26.10.5-beta · 2026-10-06
 
 ## What's Changed
@@ -28,10 +34,3 @@ fix bug in rating system
 - Address memory issues with lower powered devices
 
 **Full Changelog**: https://github.com/ultimatejimmy/storefront.koplugin/compare/26.10.1...26.10.2-beta
-
-# 26.9.30-beta · 2026-09-30
-
-- Update refresh button location
-- Fix refresh timestamp
-
-**Full Changelog**: https://github.com/ultimatejimmy/storefront.koplugin/compare/26.9.29-beta2...26.9.30-beta
