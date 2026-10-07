@@ -1,3 +1,10 @@
+# v6.0.0-beta.1 · 2026-10-07
+
+- 以 5.9.1-beta.4 的已收口代码作为 6.0 Beta 基线；不新增实验性认证桥接，不改变 Schema 136、同步主链路或主页结构。
+- 延续安装包减重结果：压缩 stillness 背景，发布包继续排除仅用于编译的 `native/` 源码，运行时 codec 与 Kindle/Kobo/Android 支持保持不变。
+- 延续双登录收口：主登录与书架管理授权继续独立；同账号重新扫码保留既有书架管理授权，并支持单独取消该授权。
+- 延续书城轻量整理与日志降噪；同时修正两条历史回归测试的版本硬编码，使 6.0 系列继续验证功能契约而不是旧版本号。
+
 # v5.9.1-beta.1 · 2026-10-05
 
 - 修复 beta.19 `passive_exact_cache` 的原生 `chapterUid + wr_data_co` 快照遗漏 `safe=true`：此前同一精确位置可能先记录 `final_position_captured`，Reader 关闭后又被 `upload_progress()` 判成 `position_unavailable`，并留下“有失败记录但没有可执行动作”的 pending；本版统一恢复 `safe / coordinate_safe / precise` 语义，并在启动时一次性修复现有 beta.19 精确 pending。
@@ -31,13 +38,3 @@
 - 修复 reading-time writer 抢占的 zombie/未 reap 判定：在 `kill(pid, 0)` 之外使用 KOReader `FFIUtil.isSubProcessDone(pid, false)` 确认子进程已经完成，减少已退出 writer 被误判为存活而触发 `time_writer_preempt_timeout`。
 - 保留 beta.11 的统一手动 progress recovery、wake online-ready gate、pending/verify 安全语义、rollback/fence、translation 与 Release 流程；不采用 immediate time-writer detach。
 - Schema 保持 136。
-
-# v5.9.0-beta.11 · 2026-10-03
-
-- 以 beta.10 为基线，主页短按“同步”、同步状态“全部重新同步”和进度失败页“全部重新同步”统一进入 `_sync_progress_full_recovery()`；入口 `source` 只用于诊断，不再因为 UI 路径不同而改变 progress recovery。
-- 所有手动同步在进入共享 progress recovery 前统一执行登录与 Wi-Fi radio gate；保留 `pending_send / submitted_unverified`、verify-first、安全重传和冲突保护，不通过 UI 路径绕过现有安全条件。
-- 手动同步即使主页缓存暂时显示 0 个失败项，也会先执行同一 progress verification/recovery pass，再依次处理 SAFE 阅读时间与批注，减少“主页单击无动作、二级菜单可恢复”的路径差异。
-- Kindle/设备唤醒后的阅读进度 reconcile 增加 online readiness gate：`NetworkConnected` 不再等同于 API 已可用，优先等待 `online=true`，无显式 online 字段时仅在稳定 `connected` 状态并经过额外 grace 后继续。
-- `network_restored` 与 `resume_recheck` 共用 `reader-progress-online` waiter，并增加 `[MiuRead][ResumeSync] waiting_network / network_online / reconcile_started / network_wait_timeout` 诊断日志。
-- 暂不采用另一个 beta.9 分支的 time-writer detach/SIGKILL 立即接管方案；`miuread/sync.lua` 保持 beta.10/beta.8 字节不变，继续保留现有 `time_writer_preempt_timeout` 防并发 writer 保护。
-- 完整保留 beta.10 的 translation 纯 Lua 顶层、数字 bookId 支持、先测试后建 tag 的 Release workflow 与 CHANGELOG 标题兼容。Schema 仍为 136。

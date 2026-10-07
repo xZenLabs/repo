@@ -1,3 +1,18 @@
+# v2.0.2 · 2026-10-07
+
+## Fixes
+- **Missing covers:** books now get their cover even when the file name doesn't match the title (e.g. `Author - Title.epub`, ISBN-style names), when the book is no longer in History, or when the Cover Browser plugin is turned off.
+- Covers that aren't cached yet load in the background and appear after a few seconds, instead of freezing the screen.
+- Titles on cover-less books now wrap inside their box instead of spilling over neighbouring days.
+
+## Improvements
+- Much larger touch areas for the month arrows and the close button (monthly and yearly views).
+- Page-turn buttons change month; Back closes the calendar.
+- New **Missing covers report** in the Cover Calendar menu: lists any book without a cover and why.
+
+## Updating
+You need to manually replace the cover calendar plugin as the updater in the plugin is broken
+
 # v2.0.1 · 2026-07-24
 
 ## Covers should now extract automatically

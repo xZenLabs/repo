@@ -1,3 +1,10 @@
+# v0.5.5 · 2026-10-07
+
+## 本次更新
+
+新功能：
+想法弹窗排版对齐上游 #193;评论获取子进程后台化（PR #31）
+
 # v0.5.4 · 2026-09-21
 
 ## 本次更新
@@ -55,36 +62,3 @@ Scorecard 行动固定 v2.4.4 版本标签
 上游式收纳——登录行合并账户,低频入设置抽屉
 菜单三段式重组,想法弹窗设置提级,命名统一
 日志收敛、弹窗基类收敛与菜单抽离
-
-# v0.5.0 · 2026-09-06
-
-## 本次更新
-
-新功能：
-想法评论查看与评论数懒加载（Issue #104 / PR #22/#106）
-
-问题修复：
-发布摘要识别 PR 合并提交
-
----
-
-## Contributors（本次更新的贡献者）
-
-- @Mr54233
-
----
-
-## 安装
-
-1. 下载 `pickthought.koplugin.zip` 并解压
-2. 把 `pickthought.koplugin` 目录放到 KOReader 插件目录：
-`koreader/plugins/pickthought.koplugin`
-3. 完全重启 KOReader，在「工具」菜单找到「撷思」
-
-## 环境要求
-
-KOReader ≥ v2026.03（需要内建的 `ffi/archiver` 与 `lua-ljsqlite3`）。
-
----
-
-本插件衍生自 [miuread-koreader](https://github.com/miumiupy98-art/miuread-koreader) 与 [weread.koplugin](https://github.com/finlater/weread.koplugin)，基于 AGPL-3.0 许可证发布。
