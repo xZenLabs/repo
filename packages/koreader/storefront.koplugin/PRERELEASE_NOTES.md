@@ -1,3 +1,9 @@
+# 26.10.6-beta2 · 2026-10-07
+
+Update screensaver sorting logic
+
+**Full Changelog**: https://github.com/ultimatejimmy/storefront.koplugin/compare/26.10.6-beta...26.10.6-beta2
+
 # 26.10.6-beta · 2026-10-06
 
 - Fix font bug
@@ -28,9 +34,3 @@ fix bug in rating system
 - Add check for RB catalog to not download/refresh if there are no changes
 
 **Full Changelog**: https://github.com/ultimatejimmy/storefront.koplugin/compare/26.10.2-beta...26.10.2-beta2
-
-# 26.10.2-beta · 2026-10-01
-
-- Address memory issues with lower powered devices
-
-**Full Changelog**: https://github.com/ultimatejimmy/storefront.koplugin/compare/26.10.1...26.10.2-beta
