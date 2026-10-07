@@ -1,3 +1,10 @@
+# 26.10.7-beta · 2026-10-07
+
+- Add browser beam option
+- Support redirects with webdav
+
+**Full Changelog**: https://github.com/ultimatejimmy/backup.koplugin/compare/26.10.6-beta...26.10.7-beta
+
 # 26.10.6-beta · 2026-10-06
 
 - Fix webdav, ftp and sftp

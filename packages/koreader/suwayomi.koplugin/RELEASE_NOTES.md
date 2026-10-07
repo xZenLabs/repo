@@ -1,3 +1,39 @@
+# v1.4.0 · 2026-10-07
+
+Suwayomi Client v1.4.0 makes Library updates follow your saved scanlator filters and remembers your preferred Library order.
+
+## Library updates for your scanlators
+
+**Server unread**, **Latest found**, and **Latest arrivals** now use each manga's saved scanlator filter. Manga without a restriction retain the All scanlators view.
+
+- Releases from an excluded group no longer increase the filtered unread count or move a manga upward. Matching discoveries affect the arrival date even when already read.
+- A confirmed empty matching set shows zero unread and an unknown arrival date. Missing or unsupported filtered information stays unknown; failed or malformed responses can retain previously confirmed information for the same endpoint, manga, and filter.
+- Confirmed filtered counts and dates remain available offline and after restart. Changing or removing a filter does not reuse information from a different restriction.
+- Counts remain server observations. **Sync pending** identifies local read choices awaiting synchronization without subtracting them from the displayed count. Refresh reads known server information; it does not discover source chapters or start downloads.
+
+## Clearer Library controls
+
+- Compact status moves into the native title subtitle, leaving the list for categories and manga. **About Library** explains counts, discovery dates, retained information, and refresh behavior.
+- Manga lists offer **Sort by latest arrivals** and **Sort by title**, with one checkmark showing the displayed order. Every explicit sort selection returns to the first page; ordinary Refresh keeps the current page when possible.
+- Your chosen order survives Library reopening, reader return, and KOReader restart, including offline. Failed or unconfirmed saves report that persistence could not be confirmed while keeping the current order usable.
+- Older servers without discovery metadata temporarily use Title without overwriting your saved preference. A supported refresh restores the requested arrivals order.
+- **Latest found** clarifies that dates describe server discovery, including imported older chapters. Row layout keeps dates, unread counts, and pending status visible in narrow rows, including four-digit counts and long titles.
+
+## Updating
+
+### KOReader App Store
+
+With the [KOReader App Store plugin](https://github.com/omer-faruq/appstore.koplugin), open **Tools > App Store**, select **Check plugin updates**, then **Check all updates**. Update `suwayomi.koplugin` and restart KOReader.
+
+### Manual update
+
+1. Download **`suwayomi.koplugin-v1.4.0.zip`** from the release assets, not GitHub's source archives.
+2. Quit KOReader normally. Replace the existing `koreader/plugins/suwayomi.koplugin` folder, then relaunch. Keep your KOReader settings and downloaded chapters.
+
+After updating, open **Search > Suwayomi** and Refresh Library while connected to load filtered counts and dates. Choose your preferred order from the Library title menu. Existing downloads and reading progress are preserved.
+
+**Full changelog:** [v1.3.0...v1.4.0](https://github.com/LK4D4/suwayomi.koplugin/compare/v1.3.0...v1.4.0)
+
 # v1.3.0 · 2026-10-04
 
 Suwayomi Client v1.3.0 adds Next chapter to KOReader's native finish flow and makes recent chapter discoveries easier to find in Library.
@@ -140,53 +176,3 @@ Suwayomi Client v1.1.1 fixes a regression in v1.1.0 that prevented Basic Auth co
 **Keep your existing HTTPS URL and Basic Auth credentials.** No server change, authentication-method change, or setup reset is needed. This hotfix does not change settings, downloads, or reading-state behavior.
 
 **Full changelog:** https://github.com/LK4D4/suwayomi.koplugin/compare/v1.1.0...v1.1.1
-
-# v1.1.0 · 2026-09-10
-
-Suwayomi Client v1.1.0 adds Simple Login and UI Login support, makes offline downloads more resilient, and improves how reading progress and local chapter cleanup work together.
-
-## Highlights
-
-### Connect with all three authentication methods
-
-Choose **Basic Auth**, **Simple Login**, or **UI Login** in the setup wizard or connection settings to match your Suwayomi server. Simple Login and UI Login reconnect using your saved credentials; session cookies and JWT tokens stay in memory rather than being saved to disk. UI Login can refresh a rejected access token without interrupting your workflow.
-
-### Keep your next chapters ready
-
-**Download ahead** now saves refill work and recovers it after a KOReader restart. Finishing a chapter and closing it, or manually marking chapters as read, can refill your reading buffer even when the chapter list is not open. The menu shows the saved buffer size, with clearer refill status and Retry/Stop controls.
-
-When you enable Download ahead, the plugin can offer KOReader's **Always mark as finished** setting. This is optional and applies to **all KOReader documents**, not only manga. Declining it leaves Download ahead enabled; manual read marking still works.
-
-### More resilient background downloads
-
-- Retry temporary network failures with bounded retries, and recover unfinished download jobs after restarting KOReader.
-- Keep downloads running as you move between menus and the reader. Waiting retries and stopping workers no longer unnecessarily hold up other downloads.
-- Show clearer failure details and preserve retry status. Use **Verify download** to check a suspect archive and **Redownload** to replace a damaged copy.
-- Preserve completed-download bookkeeping when cancellation races with a finished transfer.
-
-## Reading and library fixes
-
-- Load complete chapter lists for large series, rather than making bulk actions depend on an incomplete list. Download actions disclose their limit of **50 new chapters per action**.
-- Follow KOReader's finished status for automatic read completion. Reaching the last page alone no longer marks a chapter as read.
-- Preserve KOReader reading metadata, including backup-only metadata, when changing read state or removing a local archive after manual read marking.
-- Make finished-chapter cleanup durable across restarts and retry failed removals. Protect open or replaced archives, and revoke pending manual removal when the server marks a chapter unread again.
-- Save plugin state atomically and report failed writes instead of silently losing queue or reading changes.
-- Fix stale chapter actions, submenu Back navigation, saved scanlator-filter recovery, and oversized status dialogs. Reduce routine notification popups.
-
-## Translations
-
-Russian, Ukrainian, and Simplified Chinese now cover all current plugin strings. Download controls, refill status, and automatic-finish prompts have clearer localized text.
-
-## Updating and getting started
-
-1. Download **`suwayomi.koplugin-v1.1.0.zip`** from the assets below. Use this plugin ZIP, not GitHub's automatically generated source archives.
-2. Replace the existing `suwayomi.koplugin` folder under `koreader/plugins/`, then restart KOReader. Keep your KOReader settings and downloaded chapters.
-3. Open **Search > Suwayomi**. If needed, select your server's authentication method under **Settings > Connection > Login information**, then run **Test connection**.
-
-Existing Basic Auth connections do not need to switch methods. If a download fails because of authentication, correct the saved credentials and retry the download explicitly.
-
-**Security:** Use HTTPS when connecting over a network. HTTP exposes credentials and session tokens. Changing saved credentials does not cancel downloads that are already running.
-
-**Download scope:** All plugin downloads and removal policies affect device-local CBZ files. The plugin does not queue or delete server downloads. For faster transfers, predownload chapters through Suwayomi's WebUI; the plugin can copy a complete server archive instead of fetching each page separately.
-
-**Full changelog:** https://github.com/LK4D4/suwayomi.koplugin/compare/v1.0.6...v1.1.0

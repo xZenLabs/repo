@@ -3,7 +3,7 @@
 # zenpm:auto-scraped
 id=customtapzones
 name=Customtapzones
-version=1
+version=1.1
 description=This plugin allows users to configure custom tap zones for page turning. It provides the ability to replace the default tap zones with a user-defined grid, where each cell can be configured to perf...
 author=ura23
 category=utility
@@ -11,13 +11,13 @@ platforms=koreader
 dependencies=
 source=https://github.com/ura23/customtapzones.koplugin
 stars=5
-updated_at=2026-10-07T14:17:12Z
-published_at=2026-07-19T13:03:22Z
+updated_at=2026-10-07T20:26:27Z
+published_at=2026-10-07T16:11:41Z
 readme_url=packages/koreader/customtapzones.koplugin/README.md
 readme_hash=cd973cc64a65ae9be506baeff6844a08b80297af
 release_notes_url=packages/koreader/customtapzones.koplugin/RELEASE_NOTES.md
-release_notes_hash=05168ee3206ffa7bf9eb5855221f9f383bfa9c0577086a69538e9da45167fd24
-releases=[{"tag_name":"v1","assets":[{"name":"customtapzones.koplugin.zip","url":"https://github.com/ura23/customtapzones.koplugin/releases/download/v1/customtapzones.koplugin.zip","size":33470,"digest":"sha256:dbe567183cbfc9132229bc73f56368a6b9ab37b4ec150b1f17314d79c2b4e38a"}]}]
+release_notes_hash=b7d9ad4884872ed6d7de6549554cf3a0b9ee5730b13d31ca380df312cf04c60b
+releases=[{"tag_name":"1.1","assets":[{"name":"customtapzones.koplugin.zip","url":"https://github.com/ura23/customtapzones.koplugin/releases/download/1.1/customtapzones.koplugin.zip","size":38258,"digest":"sha256:48eb328a25dbc28791603d164a3232acf9878d6d034237ac2f3e0c0e9836a15d"}],"name":"1.1"},{"tag_name":"v1","assets":[{"name":"customtapzones.koplugin.zip","url":"https://github.com/ura23/customtapzones.koplugin/releases/download/v1/customtapzones.koplugin.zip","size":33470,"digest":"sha256:dbe567183cbfc9132229bc73f56368a6b9ab37b4ec150b1f17314d79c2b4e38a"}]}]
 source_type=release
 source_asset=customtapzones.koplugin.zip
-size=33470
+size=38258

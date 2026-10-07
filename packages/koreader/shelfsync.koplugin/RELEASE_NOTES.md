@@ -1,3 +1,22 @@
+# 1.7.0 · 2026-10-07
+
+- (feat) 🌟 Keep progress and finished status from KOReader that can't be sent (e.g. with Wi-Fi off) for up to 4 weeks, and send them once the network is back, even after the book is closed or from the file browser. On Goodreads and Fable, progress is only sent within a day. 🌟
+- (fix) Run ShelfSync's handling when a book is closed, which never ran. Closing a book now sends or queues progress that hadn't been sent yet.
+- (fix) Send each provider's updates one at a time, so a late response can't undo a newer status or progress change.
+- (fix) Say when a status change or removal from the status menu fails, instead of failing silently.
+- (fix) Show the review result when a provider rejects a review without giving a reason, instead of stopping without a message.
+- (fix) Keep Goodreads finished dates accurate while preserving existing reviews and retrying date saves that fail.
+- (fix) Wait for the Goodreads browser cookie refresher to return before retrying requests after WAF challenges.
+- (fix) Let interrupted Goodreads requests retry after the reader handles the touch that interrupted them.
+- (fix) Don't show a progress mismatch warning just after ShelfSync marks a book as Read.
+- (fix) Linking a book no longer tries to mark it as Currently Reading after a failed status lookup (all providers).
+- (fix) Opening a linked Goodreads book no longer does so when its shelf can't be read or is one ShelfSync doesn't track.
+
+
+---
+
+Full changelog: [CHANGELOG.md](https://github.com/Lyfts/ShelfSync/blob/main/CHANGELOG.md#170)
+
 # 1.6.1 · 2026-10-06
 
 - (feat) Add a Goodreads account connection check that verifies the cookie and uses the configured cookie refresher when the cookie is missing or expired.
@@ -51,13 +70,3 @@ Full changelog: [CHANGELOG.md](https://github.com/Lyfts/ShelfSync/blob/main/CHAN
 ---
 
 Full changelog: [CHANGELOG.md](https://github.com/Lyfts/ShelfSync/blob/main/CHANGELOG.md#144)
-
-# 1.4.3 · 2026-09-30
-
-##### Plugin
-- Fix Pagebound progress updates so page-based sync sends the absolute percentage with the current edition page, matching Pagebound's own request format. Keep both values updated when syncing by percentage too.
-
-
----
-
-Full changelog: [CHANGELOG.md](https://github.com/Lyfts/ShelfSync/blob/main/CHANGELOG.md#143)

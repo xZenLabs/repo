@@ -1,3 +1,11 @@
+# v0.4.12-beta.8 · 2026-10-07
+
+## What's Changed
+* Burrow 0.4.12 beta 8: add Kindle idle soak maintenance by @richbeatty in https://github.com/richbeatty/burrow.koplugin/pull/77
+
+
+**Full Changelog**: https://github.com/richbeatty/burrow.koplugin/compare/v0.4.12-beta.7...v0.4.12-beta.8
+
 # v0.4.12-beta.7 · 2026-09-26
 
 ## What's Changed
@@ -29,11 +37,3 @@
 
 
 **Full Changelog**: https://github.com/richbeatty/burrow.koplugin/compare/v0.4.12-beta.3...v0.4.12-beta.4
-
-# v0.4.12-beta.3 · 2026-09-19
-
-## What's Changed
-* Burrow 0.4.12 beta 3: make Bionic Reading interactive sooner by @richbeatty in https://github.com/richbeatty/burrow.koplugin/pull/72
-
-
-**Full Changelog**: https://github.com/richbeatty/burrow.koplugin/compare/v0.4.12-beta.2...v0.4.12-beta.3

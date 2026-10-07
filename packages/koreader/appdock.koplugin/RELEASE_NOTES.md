@@ -1,123 +1,157 @@
-# v7.8.2 · 2026-10-07
+# v7.8.10 · 2026-10-07
 
-# AppDock 7.8.2
+# AppDock 7.8.10
 
 ## Deutsch
 
-### Settings-App
-- Die Settings-App wurde fast vollständig an die Android-Settings-Optik angepasst.
-- Neue linke Kategoriennavigation mit Icons, Untertiteln und hervorgehobener aktiver Kategorie.
-- Neues Suchfeld zum Filtern der AppDock-Einstellungen.
-- Einstellungen erscheinen jetzt als gruppierte, scrollbarere Android-/Material-Präferenzzeilen.
-- Zeilen enthalten Chevron-Navigation, verständliche Icons und native wirkende Ein-/Aus-Schalter.
-- Der Bereich **Display** zeigt eine klickbare Hell-/Dunkelmodus-Vorschau.
-- Bestehende Settings-Aktionen, Persistenz und KOReader-Nativeinstellungen bleiben erhalten.
+### Helligkeit und Bildschirmschoner
+
+- Die Blättertasten ändern die Helligkeit jetzt in **10er-Schritten** statt in Einerschritten.
+- Beim Start des animierten Bildschirmschoners wird die Frontlight-Helligkeit vollständig ausgeschaltet.
+- Beim Beenden des Bildschirmschoners wird die vorherige Helligkeit automatisch wiederhergestellt.
+- Die Wiederherstellung ist defensiv abgesichert und verändert das Verhalten auf Geräten ohne verfügbare Frontlight-Steuerung nicht.
 
 ### Qualitätssicherung
+
 - Lua-Syntax aller Plugin-Dateien geprüft.
-- Regressionstests für Keyboard, AppStore, Browser, DApps, Reihenfolge und Setup-Assistent erfolgreich ausgeführt.
-- Neue Regressionen prüfen Suchfeld, Kategorien, Präferenzzeilen, Scroll-Layout, Display-Vorschau und Switches.
+- Keyboard-, AppStore-, Browser-, DApp-, Ordering- und Setup-Assistant-Regressionstests erfolgreich ausgeführt.
 
 ## English
 
-### Settings app
-- The Settings app is now closely aligned with the Android Settings visual language.
-- Added icon-based left category navigation with subtitles and an active category state.
-- Added a settings search field for filtering AppDock preferences.
-- Preferences are rendered as grouped, scrollable Android-/Material-style rows.
-- Rows include chevron navigation, semantic icons, and native-looking on/off switches.
-- **Display** now includes a clickable light/dark appearance preview.
-- Existing Settings actions, persistence, and KOReader-native controls remain intact.
+### Brightness and screensaver
+
+- Page keys now change brightness in **10-step increments** instead of single steps.
+- The frontlight is fully switched off when the animated screensaver starts.
+- The previous brightness is restored automatically when the screensaver closes.
+- Restoration is guarded defensively and does not change behavior on devices without frontlight control.
 
 ### Quality assurance
+
 - Lua syntax checked for all plugin files.
-- Keyboard, AppStore, Browser, DApps, ordering, and setup-assistant regression tests pass.
-- New regressions cover the search field, categories, preference rows, scroll layout, display preview, and switches.
+- Keyboard, AppStore, Browser, DApp, ordering, and setup-assistant regression tests pass.
 
-# v7.8.1 · 2026-10-07
+# v7.8.9 · 2026-10-07
 
-# AppDock 7.8.1
-
-## Deutsch
-
-### Schnelleinstellungen
-
-- Das Dropdown hat jetzt eine klar umrandete Fläche und im normalen Modus einen sichtbaren Griff.
-- Die Schnellkacheln verwenden aussagekräftige AppDock-Symbole statt Buchstaben-Platzhaltern.
-- Die Schließen-Schaltfläche in der Kopfzeile funktioniert jetzt tatsächlich.
-- Der Helligkeitsregler zeigt einen eigenen Schieberknopf; Touchpositionen werden korrekt relativ zur Bildschirmposition des Reglers ausgewertet.
-- Der kompakte Simple Mode bleibt erhalten und bekommt ebenfalls Symbole, einen Schließen-Zugang und einen klar erkennbaren Helligkeitsregler.
-
-### Qualitätssicherung
-
-- Regressionen prüfen Symbole, Griff, Schließen-Aktion und Helligkeits-Touchpositionen in den relevanten Modi.
-- Lua-Syntax und alle sechs verfügbaren Regressionstests erfolgreich geprüft. Der optionale BWR-Video-Testdatensatz war in der Testumgebung nicht vorhanden.
-
-## English
-
-### Quick Settings
-
-- The dropdown now has a clearly outlined sheet and a visible grab handle in the normal mode.
-- Quick tiles use meaningful AppDock icons instead of letter placeholders.
-- The close control in the header now works as expected.
-- The brightness slider displays its own thumb, and touch positions are correctly mapped relative to the slider's screen position.
-- Simple Mode remains compact and also receives icons, a close action, and a clearly visible brightness thumb.
-
-### Quality assurance
-
-- Regression tests cover icons, the grab handle, the close action, and brightness touch positioning in the relevant modes.
-- Lua syntax and all six available regression tests pass. The optional BWR Video test fixture was not present in the test environment.
-
-# v7.8.0 · 2026-10-07
-
-# AppDock 7.8.0
+# AppDock 7.8.9
 
 ## Deutsch
 
-### Android-inspirierter Homescreen
+### Bildschirmschoner speicherschonend gemacht
 
-- Der normale Homescreen wurde mit einer kompakten Statuszeile und einer breiten, einzeiligen DuckDuckGo-Suchleiste neu aufgebaut.
-- Zuletzt verwendete Apps erscheinen als beschriftungsfreies Icon-Dock am unteren Rand. Ein gezeichnetes Raster-/Suchsymbol öffnet **Alle Apps**; die AppDock-Oberfläche verwendet keine Google-Logos oder -Marken.
-- Geräte- und Lesekarten stehen als ruhige, abgerundete Info-Karten nebeneinander.
-- Store-Widgets werden bei mehreren Installationen zweispaltig angeordnet. Eine vergrößerte Karte kann die gesamte Zeile einnehmen; die übrigen Widgets fließen darunter weiter.
-- Im Editmodus werden nicht editierbare Blickfang-Karten vorübergehend ausgeblendet. Widget-Ziele berücksichtigen nun sowohl die horizontale als auch die vertikale Position.
+Die Bildschirmschoner-Frames waren komprimiert jeweils ungefähr 1,6 MB groß, benötigten beim Dekodieren jedoch etwa 13,5 MB Speicher pro Bild. Beim Animieren mehrerer Frames konnte KOReader deshalb mit `not enough storage` abbrechen.
+
+Die vier Frames wurden auf 816 × 1088 Pixel und 8-Bit-Graustufen optimiert. Der dekodierte Speicherbedarf sinkt dadurch auf unter 1 MB pro Frame. Zusätzlich werden animierte Frames nicht mehr im globalen `ImageWidget`-Cache gesammelt, und sie werden direkt in der benötigten Zielgröße geladen.
 
 ### Qualitätssicherung
 
-- Regressionen für Suchleiste, Icon-Dock, Widget-Spalten, Größenänderung, Zeilenumbruch und zweidimensionales Widget-Verschieben ergänzt.
-- Lua-Syntax und alle sechs verfügbaren Regressionstests erfolgreich geprüft.
+- Lua-Syntax aller Plugin-Dateien geprüft.
+- Keyboard-, AppStore-, Browser-, DApp-, Ordering- und Setup-Assistant-Regressionstests erfolgreich ausgeführt.
+- Screensaver-Frames von insgesamt etwa 6,5 MB auf unter 1 MB komprimierte Asset-Größe reduziert.
 
 ## English
 
-### Android-inspired homescreen
+### Screensaver memory usage reduced
 
-- Rebuilt the normal homescreen around a compact status row and a wide, single-line DuckDuckGo search pill.
-- Recently used apps appear in a label-free icon dock at the bottom. A custom drawn grid-and-search glyph opens **All apps**; the AppDock UI uses no Google logos or marks.
-- Device and reading cards sit side by side as calm, rounded glance cards.
-- Multiple Store widgets use a two-column layout. Enlarged cards can span the full row, with remaining widgets reflowing below.
-- Non-editable glance cards temporarily yield space in edit mode. Widget drop targets now use both horizontal and vertical position.
+The screensaver frames were only about 1.6 MB each when compressed, but required approximately 13.5 MB of memory per image when decoded. Animating multiple frames could therefore make KOReader fail with `not enough storage`.
+
+All four frames are now optimized to 816 × 1088 pixels and 8-bit grayscale. Decoded memory usage is reduced to under 1 MB per frame. Animated frames are also excluded from the global `ImageWidget` cache and loaded directly at the required target size.
 
 ### Quality assurance
 
-- Added regression coverage for the search pill, icon dock, widget columns, resizing, reflow, and two-dimensional widget dragging.
-- Lua syntax and all six available regression tests pass.
+- Lua syntax checked for all plugin files.
+- Keyboard, AppStore, Browser, DApp, ordering, and setup-assistant regression tests pass.
+- Screensaver frames reduced from approximately 6.5 MB to under 1 MB of compressed assets in total.
 
-# v7.7.0 · 2026-10-06
+# v7.8.8 · 2026-10-07
 
-# AppDock 7.7.0
+# AppDock 7.8.8
 
-## Intuitivere Homescreen-Bearbeitung
+## Deutsch
 
-- Ein dauerhaft sichtbarer **Edit**-Knopf startet den Editmodus direkt im normalen und im Simple-Modus.
-- Langes Drücken auf eine App startet die Bearbeitung sofort statt zunächst ein separates Verwaltungsmenü zu öffnen. Während der Bearbeitung bleibt das App-Menü über langes Drücken erreichbar.
-- Die ausgewählte App wird hervorgehoben; kurze Hinweise erklären Ziehen, Verschieben und Beenden.
-- Widget-Größenregler sind größere Touch-Ziele und zeigen den aktuellen Maßstab, zum Beispiel **125 %**.
-- **Fertig** beendet den Editmodus. Regressionstests prüfen den sichtbaren Einstieg, den direkten Langdruck, Größenanzeige und Abschluss.
+### Framebuffer-Crash endgültig behoben
 
-# v7.6.1 · 2026-10-06
+Der vollständige Stacktrace zeigte die konkrete Ursache in `framecontainer.lua:55`: Der schwarze Füllbalken des Helligkeitsindikators war ein `FrameContainer` ohne Kind. KOReader rief deshalb `self[1]:getSize()` auf einem leeren Container auf.
 
-# AppDock 7.6.1
+Der Füllbalken besitzt jetzt ein echtes `HorizontalSpan`-Kind. Damit ist der Container gültig und der Fehler `attempt to index a nil value` beim Drücken der Blättertasten beseitigt.
 
-## Hotfix: App-Verschieben im Homescreen-Editor
+### Qualitätssicherung
 
-Fixes a crash when moving pinned apps in the homescreen editor. The app-order helper is now loaded at plugin scope, where `AppDock:movePinned()` can access it. A regression test exercises the real `movePinned` method and verifies persistence of the new order.
+- Lua-Syntax aller Plugin-Dateien geprüft.
+- Keyboard-, AppStore-, Browser-, DApp-, Ordering- und Setup-Assistant-Regressionstests erfolgreich ausgeführt.
+
+## English
+
+### Framebuffer crash definitively fixed
+
+The complete stack trace identified the exact cause at `framecontainer.lua:55`: the black fill bar of the brightness indicator was a `FrameContainer` without a child. KOReader therefore called `self[1]:getSize()` on an empty container.
+
+The fill bar now has a real `HorizontalSpan` child. The container is valid and the `attempt to index a nil value` error when pressing page keys is fixed.
+
+### Quality assurance
+
+- Lua syntax checked for all plugin files.
+- Keyboard, AppStore, Browser, DApp, ordering, and setup-assistant regression tests pass.
+
+# v7.8.7 · 2026-10-07
+
+# AppDock 7.8.7
+
+## Deutsch
+
+### Helligkeitsanzeige stabilisiert
+
+- Der Helligkeitsindikator verwendet jetzt einen direkten, garantiert nicht-leeren `FrameContainer` mit einem direkten `VerticalGroup`-Kind.
+- Die unnötige Verschachtelung aus `WidgetContainer`, `CenterContainer` und zusätzlichem `FrameContainer` wurde entfernt.
+- Dadurch wird der fragile Paint-Pfad beseitigt, der auf manchen Geräten weiterhin den Fehler `framebuffer.lua: attempt to index a nil value` auslösen konnte.
+- Die seitliche Prozent- und Balkenanzeige bleibt erhalten.
+
+### Qualitätssicherung
+
+- Lua-Syntax aller Plugin-Dateien geprüft.
+- Keyboard-, AppStore-, Browser-, DApp-, Ordering- und Setup-Assistant-Regressionstests erfolgreich ausgeführt.
+
+## English
+
+### Brightness indicator stabilized
+
+- The brightness indicator now uses a direct, guaranteed non-empty `FrameContainer` with a direct `VerticalGroup` child.
+- The unnecessary `WidgetContainer` → `CenterContainer` → `FrameContainer` nesting has been removed.
+- This removes the fragile paint path that could still trigger `framebuffer.lua: attempt to index a nil value` on some devices.
+- The side percentage and bar indicator remain available.
+
+### Quality assurance
+
+- Lua syntax checked for all plugin files.
+- Keyboard, AppStore, Browser, DApp, ordering, and setup-assistant regression tests pass.
+
+# v7.8.6 · 2026-10-07
+
+# AppDock 7.8.6
+
+## Deutsch
+
+### Blättertasten und Framebuffer-Stabilität
+
+- Die Helligkeitsanzeige wird nach einem Blättertasten-Ereignis erst im nächsten KOReader-UI-Zyklus aufgebaut.
+- Dadurch wird ein Race Condition zwischen physischer Tastaturverarbeitung und Framebuffer-Neuzeichnung vermieden, die auf manchen Geräten den Fehler `framebuffer.lua: attempt to index a nil value` auslösen konnte.
+- Der native Helligkeitswechsel bleibt erhalten; ein temporär nicht verfügbarer Framebuffer kann die Tastaturaktion nicht mehr zum Absturz bringen.
+- Aufbau und Ausblenden der Anzeige sind zusätzlich defensiv abgesichert.
+
+### Qualitätssicherung
+
+- Lua-Syntax aller Plugin-Dateien geprüft.
+- Keyboard-, AppStore-, Browser-, DApp-, Ordering- und Setup-Assistant-Regressionstests erfolgreich ausgeführt.
+
+## English
+
+### Page keys and framebuffer stability
+
+- The brightness indicator is now rebuilt in the next KOReader UI cycle after a page-key event.
+- This avoids a race between physical-key processing and framebuffer repainting that could cause `framebuffer.lua: attempt to index a nil value` on some devices.
+- Native brightness changes remain available; a temporarily unavailable framebuffer can no longer crash the key action.
+- Showing and hiding the indicator are additionally guarded defensively.
+
+### Quality assurance
+
+- Lua syntax checked for all plugin files.
+- Keyboard, AppStore, Browser, DApp, ordering, and setup-assistant regression tests pass.
