@@ -1,3 +1,31 @@
+# 26.10.8 · 2026-10-08
+
+This release focuses on memory optimizations and stability to keep X-Ray running smoothly, especially on older or lower-RAM e-ink devices like earlier Kindles and Kobos, along with new language support and several bug fixes.
+
+### Memory & Performance Improvements
+
+* **Low-memory protection**: X-Ray now monitors available device RAM. When free memory is critically low, non-essential background tasks (like automatic chapter fetches and update checks) quietly pause to prevent crashes and freezes. Manual lookups from the menu continue to work as usual.
+* **Smoother book opening**: Background tasks and unit scans are deferred for a few moments after opening a book, giving KOReader room to render pages and load fonts without competing for resources.
+* **Unit scanner memory cleanup**: Searching books for units now releases temporary search data in stages, noticeably reducing peak memory usage.
+* **Leaner network handling**: Background network requests now clean up raw download buffers and temporary structures immediately after parsing book details.
+
+### New Features & Improvements
+
+* **Slovak and Czech translations**: Added Slovak and Czech language support with declension-aware lookups ([#138](https://github.com/ultimatejimmy/xray.koplugin/pull/138)) by [@misko903](https://github.com/misko903).
+
+### Bug Fixes
+
+* **Unit underlines**: Restored unit underlines from cache when reopening books ([#147](https://github.com/ultimatejimmy/xray.koplugin/pull/147)) by [@Gargoyle-Gecko](https://github.com/Gargoyle-Gecko).
+* **Ukrainian unit conversion**: Fixed unit conversion handling for Ukrainian ([#146](https://github.com/ultimatejimmy/xray.koplugin/pull/146)) by [@Gargoyle-Gecko](https://github.com/Gargoyle-Gecko).
+* Resolved issues [#143](https://github.com/ultimatejimmy/xray.koplugin/issues/143), [#144](https://github.com/ultimatejimmy/xray.koplugin/issues/144), and [#145](https://github.com/ultimatejimmy/xray.koplugin/issues/145).
+
+### New Contributors
+
+Thanks to our new contributors for helping improve the plugin:
+* [@misko903](https://github.com/misko903) in [#138](https://github.com/ultimatejimmy/xray.koplugin/pull/138)
+* [@Gargoyle-Gecko](https://github.com/Gargoyle-Gecko) in [#146](https://github.com/ultimatejimmy/xray.koplugin/pull/146)
+**Full Changelog**: https://github.com/ultimatejimmy/xray.koplugin/compare/26.9.30.1...26.10.8
+
 # 26.9.30.1 · 2026-09-30
 
 ## What's Changed
@@ -45,12 +73,3 @@
 - Fix bug with sorting options
 
 **Full Changelog**: https://github.com/ultimatejimmy/xray.koplugin/compare/26.9.11...26.9.11.1
-
-# 26.9.11 · 2026-09-11
-
-- Fix bug in the update release notes dialog https://github.com/ultimatejimmy/xray.koplugin/issues/125
-- Update catchup logic to be more detailed with more triggers. Thanks to @mrpops2ko for getting started on this.
-- Fix back to reading button in mentions bar
-- Fix image jump bug
-
-**Full Changelog**: https://github.com/ultimatejimmy/xray.koplugin/compare/26.9.9...26.9.11
