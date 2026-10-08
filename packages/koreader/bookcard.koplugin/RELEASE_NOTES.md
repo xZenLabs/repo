@@ -1,3 +1,9 @@
+# v1.6.0 · 2026-10-08
+
+### Added
+- New "Stats per row (centered cover only)" setting (Advanced Settings → Layout) that controls how many statistics appear side by side in the centered-cover layout's grid. Range is 1–5, default 2 (the previous fixed behavior).
+- The setting is greyed out unless the "Cover centered, statistics grid below" layout is selected.
+
 # v1.5.12 · 2026-10-04
 
 Small Hungarian translation fix
@@ -17,9 +23,3 @@ The highlighted quote can now take up to 1–5 lines (default: 2) via the new **
 
 **Fixed**
 - Today's reading time (per-book `today_time` and all-books `all_books_time`) now matching Reading Insights' time.
-
-# v1.5.8 · 2026-09-26
-
-**Added**
-- New "Invert wallpaper in night mode" toggle under Background → Wallpaper.
-  When enabled, the wallpaper picture is inverted in night mode

@@ -121,7 +121,7 @@ This plugin is developed with AI assistance using (mostly) [Claude Code](https:/
   - [Web Search](#web-search): AI searches the web for current information (Anthropic, Gemini, OpenAI, OpenAI Subscription, xAI, Perplexity, OpenRouter, Z.AI, Qwen)
 - [Supported Providers + Settings](#supported-providers--settings) - Choose your model, etc
   - [Free Tier Providers](#free-tier-providers)
-  - [Using a Subscription Instead of API Credits](#using-a-subscription-instead-of-api-credits): ChatGPT-plan login available now; coding-plan subscriptions planned
+  - [Using a Subscription Instead of API Credits](#using-a-subscription-instead-of-api-credits): ChatGPT-plan login and the API credits in Claude Max and Team plans available now; coding-plan subscriptions planned
   - [Adding Custom Providers](#adding-custom-providers): Local provider presets (LM Studio, llama.cpp, Jan, vLLM, KoboldCpp, LocalAI)
   - [Adding Custom Models](#adding-custom-models)
   - [Favorite Models](#favorite-models)
@@ -234,7 +234,7 @@ KOAssistant stores the OAuth access/refresh tokens in its settings and never dis
 
 See [Supported Providers](#supported-providers--settings) for full list with links to get API keys.
 
-> **Free Options Available:** Don't want to pay? Groq, Gemini, and Ollama offer free tiers, and a **free ChatGPT account** works via OpenAI Subscription (device login, experimental). See [Free Tier Providers](#free-tier-providers). Already paying for ChatGPT? Use it here instead of API credits (Option C above) -- see [Using a Subscription Instead of API Credits](#using-a-subscription-instead-of-api-credits).
+> **Free Options Available:** Don't want to pay? Groq, Gemini, and Ollama offer free tiers, and a **free ChatGPT account** works via OpenAI Subscription (device login, experimental). See [Free Tier Providers](#free-tier-providers). Already paying for ChatGPT? Use it here instead of API credits (Option C above) -- see [Using a Subscription Instead of API Credits](#using-a-subscription-instead-of-api-credits). On a Claude Max or Team plan? It includes monthly Claude API credits that work here (same section).
 
 ### 3. Restart KOReader
 
@@ -401,7 +401,7 @@ See detailed sections below for each feature.
 
 - **Good document metadata** improves AI responses. Use Calibre or similar tools to ensure titles, authors, and identifiers (including DOI for academic papers) are correct. DOI triggers [Research Mode](#research-mode) with academic X-Ray categories and web-enriched analysis.
 - **Shorter tap duration** makes text selection in KOReader easier: Settings → Taps and Gestures → Long-press interval
-- **Choose models wisely**: Fast models (like Haiku 4.5, Gemini 3.5-flash) for quick queries; powerful models (like Sonnet 5, Opus 4.8) for deeper analysis. You can set different models for different actions, see [Tuning Built-in Actions](#tuning-built-in-actions).
+- **Choose models wisely**: Fast models (like Haiku 5.5, Gemini 3.5-flash) for quick queries; powerful models (like Sonnet 5, Opus 4.8) for deeper analysis. You can set different models for different actions, see [Tuning Built-in Actions](#tuning-built-in-actions).
 - **Try different behavior styles**: 24 built-in behaviors include provider-inspired styles (Claude, GPT, Gemini, Grok, DeepSeek, Perplexity), all work with any provider. Change via Quick Settings or Settings → Actions & Prompts → Manage Behaviors.
 - **Combine behaviors with domains**: Behavior controls *how* the AI communicates; Domain provides *what* context. Try Perplexity Style + a research domain for source-focused academic analysis.
 
@@ -1393,7 +1393,7 @@ Don't like how a built-in action behaves? Clone and customize it:
      - **Fast/cheap models** for Dictionary, Quick Define, Translate (speed matters, task is simple)
      - **Standard models** for Explain, Summarize, ELI5 (balanced quality and cost)
      - **Reasoning models** for Deep Analysis, Key Arguments, academic tasks (complex thinking)
-   - **Examples:** claude-haiku-4-5-20251001/gpt-5.4-nano/llama3.2:3b for lookups; claude-sonnet-5/gpt-5.4-mini/llama3.3 for general use; claude-opus-4-8/gpt-5.5/deepseek-v4-pro for analysis
+   - **Examples:** claude-haiku-5-5/gpt-5.4-nano/llama3.2:3b for lookups; claude-sonnet-5/gpt-5.4-mini/llama3.3 for general use; claude-opus-4-8/gpt-5.5/deepseek-v4-pro for analysis
 
 3. **Want action without domain/language?**
    - **Example:** Translate action giving unexpected results due to your domain
@@ -3641,8 +3641,7 @@ The max extraction setting is a safety cap, not a target. The default (4M chars)
 | Provider | Context Window | Max English Text (~4 chars/token) |
 |----------|---------------|----------------------------------|
 | Gemini 2.5/3 (Pro & Flash) | 1M tokens | ~4M chars — handles any book |
-| Claude (Sonnet 5.5, Sonnet 5, Sonnet 4.6) | 1M tokens | ~4M chars — handles any book |
-| Claude (Haiku 4.5) | 200k tokens | ~800k chars — most novels |
+| Claude (Sonnet 5.5, Haiku 5.5, Sonnet 5, Sonnet 4.6) | 1M tokens | ~4M chars — handles any book |
 | OpenAI (GPT-5.6 family) | ~1M tokens | ~4M chars |
 | OpenAI (GPT-5.5, GPT-5.4) | 400k tokens | ~1.6M chars |
 | DeepSeek (V4) | 1M tokens | ~4M chars — handles any book |
@@ -3656,12 +3655,14 @@ The max extraction setting is a safety cap, not a target. The default (4M chars)
 |-------|----------------------|----------------------|---------------------|
 | Gemini 2.5 Flash | $0.02 | $0.04 | $0.08 |
 | DeepSeek V4 | $0.02 | $0.04 | $0.07 |
-| Claude Haiku 4.5 | $0.06 | $0.13 | exceeds context |
+| Claude Haiku 5.5 | $0.01 | $0.06 | $0.13 |
 | GPT-5.4-mini | $0.16 | $0.31 | $0.63 |
 | Claude Sonnet 5 / 4.6 | $0.19 | $0.38 | $0.75 |
 | Gemini 2.5 Pro | $0.08 | $0.16 | $0.38 |
 | Claude Opus 4.8 | $0.31 | $0.63 | $1.25 |
 | GPT-5.5 | $0.63 | $1.25 | $2.50 |
+
+> Claude Haiku 5.5 bills a request at five times its base rate (input and output, the whole request) once the prompt passes 100K tokens, hence the jump between its first two columns.
 
 > Prompt caching reduces repeated costs by 50-90% on cached portions (see [Prompt Caching](#prompt-caching)). Each follow-up in a conversation resends the full history, but providers cache the stable prefix (system prompt + prior messages), so you pay reduced rates for previously seen content. New content each turn (your latest question + the AI's response from the previous turn) is charged at full rate.
 
@@ -3709,12 +3710,11 @@ The Reasoning chip in the Quick Settings panel shows the **effective** state for
 | Model family | Nature | Control |
 |---|---|---|
 | Claude Sonnet 5.5 | Adaptive, **on** by default (thinks on harder questions) | Off (Anthropic's lowest setting) / effort (low…max, incl. xhigh) |
-| Claude Sonnet 5, Opus 5 | Adaptive, **on** by default | Off / effort (low…max, incl. xhigh) |
+| Claude Sonnet 5, Opus 5, Haiku 5.5 | Adaptive, **on** by default | Off / effort (low…max, incl. xhigh) |
 | Claude Opus 5.5 | Adaptive, **on** by default | Effort (low…max, incl. xhigh); can't be fully disabled |
 | Claude Fable 5.1 | Adaptive, off by default (thinks when asked) | Off / effort (low…max, incl. xhigh) |
 | Claude Fable 5 | Adaptive, always on | Effort (low…max, incl. xhigh); can't be fully disabled |
 | Claude Opus 4.8 / 4.7 / 4.6, Sonnet 4.6 | Adaptive, off by default | Off / effort (low…high; Opus adds xhigh, max) |
-| Claude Haiku 4.5 | Extended thinking, off by default | Off / budget level (low…max) |
 | Gemini 3 (3.8/3.7/3.6/3.5-flash, 3.1-pro) | Thinks by default | Effort/depth (minimal…high); can't be fully disabled |
 | Gemini 3 flash-lite (3.5, 3.1) | Off by default | Off / effort (minimal…high) |
 | Gemini 2.5-flash | Thinks by default | Off / budget (dynamic…max) |
@@ -3732,7 +3732,7 @@ The Reasoning chip in the Quick Settings panel shows the **effective** state for
 | Fireworks models | Reason by default | Off / effort (GLM-5.3 and gpt-oss: effort only) |
 | Mistral Magistral | Always reasons, no control | — (thinking is extracted and viewable) |
 
-> Temperature is forced to 1.0 automatically where a model's reasoning requires it (Claude adaptive/extended, Z.AI thinking). Sonnet 5.5, Opus 5.5, Opus 5, Fable 5.1, Fable 5, Sonnet 5, Opus 4.8, and Opus 4.7 reject sampling parameters entirely; the plugin strips them.
+> Temperature is forced to 1.0 automatically where a model's reasoning requires it (Claude adaptive/extended, Z.AI thinking). Sonnet 5.5, Opus 5.5, Haiku 5.5, Opus 5, Fable 5.1, Fable 5, Sonnet 5, Opus 4.8, and Opus 4.7 reject sampling parameters entirely; the plugin strips them. Google deprecated them for every Gemini 3 model, so those requests carry none either.
 
 **Viewing reasoning:** When a model returns its thinking (Anthropic, Gemini, DeepSeek, Z.AI, Mistral, and R1-style `<think>`-tag models on Groq/Together/Fireworks/SambaNova/Ollama/Perplexity), it's captured and viewable via the **Show Reasoning** button in the chat viewer gear menu. A "*[Reasoning was used]*" indicator appears in chat when enabled (Settings → Advanced → Reasoning → Show Indicator in Chat); dictionary windows leave it out.
 
@@ -3804,7 +3804,7 @@ KOAssistant supports **32 built-in AI providers** — a **curated set** the main
 
 | Provider | Description | Status | Get API Key |
 |----------|-------------|--------|-------------|
-| **Anthropic** | Claude models (primary focus) | Tested | [console.anthropic.com](https://console.anthropic.com/) |
+| **Anthropic** | Claude models (primary focus). Claude Max and Team plans include monthly API credits ([how](#using-a-subscription-instead-of-api-credits)) | Tested | [console.anthropic.com](https://console.anthropic.com/) |
 | **OpenAI** | GPT models | Tested | [platform.openai.com](https://platform.openai.com/) |
 | **OpenAI Subscription** | GPT models via your ChatGPT plan's Codex access (device login; no API key, no API credits; unofficial) | Tested | [Quick Setup, Option C](#2-add-your-api-key) |
 | **DeepSeek** | Cost-effective reasoning models | Tested | [platform.deepseek.com](https://platform.deepseek.com/) |
@@ -3854,7 +3854,7 @@ KOAssistant supports **32 built-in AI providers** — a **curated set** the main
 > - **OpenRouter**: rotating `:free` models -- 50 requests/day, or 1,000/day after a one-time $10 top-up
 > - **Z.AI**: GLM-4.7-Flash is free
 > - **NVIDIA**: free developer program, email only -- no card, no identity check (~1,000 inference credits)
-> - Already paying for ChatGPT? Use your plan here instead of API credits -- see [Using a Subscription](#using-a-subscription-instead-of-api-credits)
+> - Already paying for ChatGPT? Use your plan here instead of API credits. On Claude Max or Team? Your plan includes monthly API credits -- see [Using a Subscription](#using-a-subscription-instead-of-api-credits)
 >
 > See details below.
 
@@ -3890,8 +3890,13 @@ If you already pay for an AI subscription, you may be able to use it in KOAssist
 
 - **Available now -- OpenAI Subscription**: sign in with a device code and chat on your ChatGPT account's quota instead of API billing -- works with paid plans AND free ChatGPT accounts (verified August 2026). No API key needed. See [Quick Setup, Option C](#2-add-your-api-key). This is an unofficial integration: KOAssistant identifies itself honestly and it may stop working if OpenAI changes the Codex service.
 - **Available now -- OpenCode Go**: OpenCode's monthly subscription has its own model list and is a built-in provider (see the [table](#supported-providers--settings)); enter your OpenCode account key under `opencode_go`. GPT, Claude and Gemini through OpenCode are not supported yet.
+- **Available now -- Claude Max and Team plans include monthly API credits**: Max 5x gets $100 a month, Max 20x $200, and Team plans $20 per Standard seat and $100 per Premium seat (pooled, at most $500 a month). **Pro and Free plans are not included.** This is the regular Claude API with your own key, so KOAssistant uses it like any Anthropic key:
+  1. On claude.ai in a web browser (not the app), open **Settings → Billing** (Team: **Organization settings → Billing**, as Owner or Primary Owner) and choose **Link organization** under **API credits**. Pick an existing Claude Console organization or create one; sign in to the Console with the same email.
+  2. In that organization on [console.anthropic.com](https://console.anthropic.com/), create an API key and enter it as your Anthropic key ([Quick Setup](#2-add-your-api-key)). No card is needed.
+
+  The credits arrive each billing month, are spent before any credits you bought, and expire at the end of the month (no rollover). When they run out, requests stop until the next month unless the organization has bought credits or turned on auto-reload. New subscribers can claim after seven days on the plan. Details: [Anthropic's help article](https://support.claude.com/en/articles/17154008-monthly-api-credits-for-max-and-team-plans).
 - **Planned -- coding-plan subscriptions** (Kimi Code, Z.AI GLM Coding Plan, MiniMax Coding Plan): these plans expose standard API endpoints that a subscriber's own plan key can use, so no technical circumvention is involved -- but their terms generally permit only a short list of named coding tools, and KOAssistant is not on those lists. Support is planned as a strictly opt-in feature behind an explicit warning you must acknowledge: it is against the plan's terms of service, it may stop working at any time, and in principle the provider could restrict your account. KOAssistant will always identify itself honestly and will never impersonate an allowlisted client -- if a provider blocks third-party clients, the integration stops working rather than sneaking around it.
-- **Not planned -- Claude (Anthropic), Google, GitHub Copilot subscriptions**: these providers ban third-party subscription use and enforce it server-side, so supporting them would require actively impersonating their official clients. That is out of scope permanently (barring a policy change on their side).
+- **Not planned -- signing in with a Claude (Anthropic), Google or GitHub Copilot subscription**: these providers ban third-party subscription use and enforce it server-side, so supporting them would require actively impersonating their official clients. That is out of scope permanently (barring a policy change on their side). Claude Max and Team plans can use their monthly API credits instead (above).
 
 ### Adding Custom Providers
 
@@ -4010,7 +4015,7 @@ The first model in each provider's list is its default. Current defaults (subjec
 
 | Provider | Default | Notable alternatives |
 |----------|---------|----------------------|
-| **Anthropic** | `claude-sonnet-5-5` | `claude-opus-5-5` (deep reasoning), `claude-fable-5-1` (most capable, premium price), `claude-sonnet-5` (previous default), `claude-haiku-4-5` (fast), `claude-sonnet-4-6` (1M context) |
+| **Anthropic** | `claude-sonnet-5-5` | `claude-opus-5-5` (deep reasoning), `claude-fable-5-1` (most capable, premium price), `claude-sonnet-5` (previous default), `claude-haiku-5-5` (fast), `claude-sonnet-4-6` (1M context) |
 | **OpenAI** | `gpt-5.6-terra` | `gpt-6.1-sol` (most capable, can't turn reasoning off), `gpt-6-sol` (previous sol, reasons by default), `gpt-6-luna` (cost-saver), `gpt-6-astra` (frontier, premium price), `gpt-5.6-sol`, `gpt-5.6-luna`, `gpt-5.5` |
 | **DeepSeek** | `deepseek-flash` | `deepseek-v4-pro` (most capable; both 1M context, thinking on by default). `deepseek-flash` is DeepSeek's new name for the V4 flash model |
 | **Gemini** | `gemini-3.8-flash` | `gemini-3.7-flash`, `gemini-3.1-pro-preview` (paid only), `gemini-3.5-flash-lite` (ultrafast), `gemini-2.5-flash/pro` (older accounts only) |
@@ -4029,9 +4034,9 @@ The first model in each provider's list is its default. Current defaults (subjec
 
 ### Provider Quirks
 
-- **Anthropic**: Temperature capped at 1.0; Extended/adaptive thinking forces temp to exactly 1.0; Opus 4.7/4.8 and Sonnet 5/5.5 reject all sampling params (temperature is stripped entirely); Sonnet 5.5 cannot switch thinking fully off, so Off sends Anthropic's lowest setting; explicit prompt caching gives up to 90% savings on repeated context
+- **Anthropic**: Temperature capped at 1.0; Extended/adaptive thinking forces temp to exactly 1.0; Opus 4.7/4.8, Sonnet 5/5.5 and Haiku 5.5 reject all sampling params (temperature is stripped entirely); Sonnet 5.5 cannot switch thinking fully off, so Off sends Anthropic's lowest setting; explicit prompt caching gives up to 90% savings on repeated context
 - **OpenAI**: Reasoning models (GPT-5.x) force temp to 1.0; newer models use `max_completion_tokens`; **native web search** rides the Responses API (`/v1/responses`) for capable models — Chat Completions has no native search, so a web-search request on an unsupported model simply runs without it
-- **Gemini**: Uses "model" role instead of "assistant"; thinking uses camelCase REST API format; 2.5 models use `thinkingBudget` (0=off, -1=dynamic, 128-24576=specific), 3.x models use `thinkingLevel`; web search uses Google Search grounding; streaming may arrive in larger chunks than other providers (cosmetic); Google's content filter is relaxed for book passages by default (Settings → Advanced → Provider Settings → Gemini Content Filter)
+- **Gemini**: Uses "model" role instead of "assistant"; thinking uses camelCase REST API format; 2.5 models use `thinkingBudget` (0=off, -1=dynamic, 128-24576=specific), 3.x models use `thinkingLevel` and get no temperature (Google deprecated sampling parameters for Gemini 3); web search uses Google Search grounding; streaming may arrive in larger chunks than other providers (cosmetic); Google's content filter is relaxed for book passages by default (Settings → Advanced → Provider Settings → Gemini Content Filter)
 - **Ollama**: Local only; NDJSON streaming (not SSE); for remote instances, set the endpoint via Settings → Model: … → Quick setup: Local provider, or in `configuration.lua`
 - **OpenRouter**: Requires HTTP-Referer header (handled automatically); web search uses OpenRouter's own Exa integration via the `:online` suffix
 - **Requesty**: OpenAI-compatible model router; uses `provider/model` naming (e.g. `openai/gpt-4o-mini`); sends optional HTTP-Referer/X-Title headers (handled automatically)

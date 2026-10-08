@@ -4,14 +4,14 @@
 id=backgammon
 name=Backgammon
 version=1.4.0
-description=Classic backgammon plugin on KOReader
+description=A full-featured backgammon game for KOReader, with five AI levels ranging from beginner heuristics to GNU Backgammon's neural network.
 author=EmirErtorer
 category=utility
 platforms=koreader
 dependencies=
 source=https://github.com/EmirErtorer/backgammon.koplugin
 stars=7
-updated_at=2026-10-08T07:03:07Z
+updated_at=2026-10-08T15:17:52Z
 published_at=2026-09-26T00:10:59Z
 readme_url=packages/koreader/backgammon.koplugin/README.md
 readme_hash=977d6496da130e8af7276beb86eec55270ea052a

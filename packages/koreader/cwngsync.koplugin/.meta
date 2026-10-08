@@ -3,7 +3,7 @@
 # zenpm:auto-scraped
 id=cwngsync
 name=Cwngsync
-version=4.1.45
+version=4.1.46
 description=CWNGSync plugin for KOReader — reading progress and highlight sync with Calibre-Web-NextGen. Published automatically from the CWNG release train.
 author=new-usemame
 category=productivity
@@ -11,11 +11,11 @@ platforms=koreader
 dependencies=
 source=https://github.com/new-usemame/cwngsync.koplugin
 stars=7
-updated_at=2026-10-08T07:03:07Z
-published_at=2026-09-29T21:36:59Z
+updated_at=2026-10-08T15:17:52Z
+published_at=2026-10-08T12:16:29Z
 release_notes_url=packages/koreader/cwngsync.koplugin/RELEASE_NOTES.md
-release_notes_hash=a7d7f8385863f5d48b4bb9d10cafb6cbc624f02c06cd45bb597c9d41283d20f9
-releases=[{"tag_name":"v4.1.45","assets":[{"name":"cwngsync.koplugin.zip","url":"https://github.com/new-usemame/cwngsync.koplugin/releases/download/v4.1.45/cwngsync.koplugin.zip","size":97877,"digest":"sha256:2ec72efc0051160ab0ecab6dd6ca61eb56888dfa23e4d3125f34a3408721e79c"}],"name":"NextGen Progress Sync v4.1.45"},{"tag_name":"v4.1.44","assets":[{"name":"cwngsync.koplugin.zip","url":"https://github.com/new-usemame/cwngsync.koplugin/releases/download/v4.1.44/cwngsync.koplugin.zip","size":95342,"digest":"sha256:364d10fa982c2424a819de5987eab24416244ac64362c7e7d603c34edd17c25d"}],"name":"NextGen Progress Sync v4.1.44"}]
+release_notes_hash=4197cbb907b2525fce2c68f6d69ee5a47b66ca9f8724714b066432dde68a8478
+releases=[{"tag_name":"v4.1.46","assets":[{"name":"cwngsync.koplugin.zip","url":"https://github.com/new-usemame/cwngsync.koplugin/releases/download/v4.1.46/cwngsync.koplugin.zip","size":100062,"digest":"sha256:96e6bda188d59bb54161fea6350f916515349778aa5e1392f60a486b7d792290"}],"name":"NextGen Progress Sync v4.1.46"},{"tag_name":"v4.1.45","assets":[{"name":"cwngsync.koplugin.zip","url":"https://github.com/new-usemame/cwngsync.koplugin/releases/download/v4.1.45/cwngsync.koplugin.zip","size":97877,"digest":"sha256:2ec72efc0051160ab0ecab6dd6ca61eb56888dfa23e4d3125f34a3408721e79c"}],"name":"NextGen Progress Sync v4.1.45"},{"tag_name":"v4.1.44","assets":[{"name":"cwngsync.koplugin.zip","url":"https://github.com/new-usemame/cwngsync.koplugin/releases/download/v4.1.44/cwngsync.koplugin.zip","size":95342,"digest":"sha256:364d10fa982c2424a819de5987eab24416244ac64362c7e7d603c34edd17c25d"}],"name":"NextGen Progress Sync v4.1.44"}]
 source_type=release
 source_asset=cwngsync.koplugin.zip
-size=97877
+size=100062

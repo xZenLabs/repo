@@ -1,3 +1,20 @@
+# v7.2.1 · 2026-10-08
+
+### Fixed
+- **Book progress calendar:** the daily "+%" now shows how far that day moved you in the book (position change since the previous reading day), so it matches the Book progress popup and the daily values add up to it. Today uses the live reading position.
+
+# v7.2.0 · 2026-10-08
+
+### New
+- 12-month option for the reading heatmap range.
+- "Days of the week" bar chart (reading time per weekday).
+- "You read most around HH:MM" peak-hour line.
+- Tap the "When you read" / "Days of the week" charts to switch between time and percent.
+
+### Changed
+- Heatmap sections renamed: "Reading calendar" and "When you read" (translated in all languages).
+- Legend aligned to the right; thin separators between sections.
+
 # v7.1.4 · 2026-10-07
 
 ### Fixes
@@ -25,34 +42,3 @@
 **Manual books**
 - Tapping a book opens its Book info popup, long-press opens Edit/Delete.
 - The book editor no longer opens the keyboard automatically; it appears when you tap a field.
-
-# v7.1.1 · 2026-10-07
-
-### Changed
-Improved wording across the Insights popup: shorter and clearer labels such as "daily avg time", "daily avg pages", "Reading time per month", "All time" and "Books per month". The book lists now say "No books" and "All books: %1" instead of the misleading "books read", and wording and word order were also fixed.
-
-# v7.1.0 · 2026-10-07
-
-### Changed
-
-**Book lists**
-
-- Tap on a book now opens its Book info popup; long-press opens its statistics page (previously the other way round).
-- Removed long-press rating editing from the period book lists. Rating is now edited from Book info.
-- Hand-added finished books open Book info too (title, author, rating; the rating is saved in the manual list).
-- Removed the * marker next to the date of hand-added books in the finished-books list.
-
-**Book info popup**
-
-- Star rating shown above the title; long-press the stars to set, change or clear it.
-- Ratings are written to the book's own sidecar (summary.rating), so books unrated in the file manager get stars there too. If the book's file can't be located, the rating falls back to the plugin's own file.
-- Next to rating the finished date shown.
-- New pages/time line pinned to the bottom of the popup, e.g. 860 pages · 12:56 reading time. It is level with the bottom of the cover and shadow, or one large padding below the text when the cover is off. The description gets correspondingly fewer lines.
-- Without a cover (switched off in settings) the popup shrinks to the width of its longest line, including the stars and the stats line.
-- A book without a cover image shows an empty frame with a diagonal line through it.
-- Works for any book in a list, not only the open one: metadata, cover and description are read from the book's file. Author and series fall back to the statistics database.
-- Long-press on the popup while the cover is missing shows a diagnostic message with the md5, the file found and the cover error.
-
-**Manual book dialog**
-
-- Added optional "Series" and "Book number in series" fields under Author (accepts 2 / 2.5 / 2,5), shown as a "Series / #N" line under the title in the manual list, with translations for all locales.

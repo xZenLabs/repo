@@ -1,5 +1,7 @@
 # Dead Reckoning
 
+> **Status: complete and stable.** Bug reports welcome; feature development is closed.
+
 A [Bookends](https://github.com/AndyHazz/bookends.koplugin) preset for [KOReader](https://github.com/koreader/koreader): a navigation-themed reading cockpit that surfaces session speed, a finish-date projection, and chapter ETA, with chapter waypoints ticked along the progress bar. Text renders in grey ink so the telemetry stays out of the way of the book.
 
 <img width="1264" height="1680" alt="Dead Reckoning preset shown on a KOReader page" src="https://github.com/user-attachments/assets/73f2291d-1fa5-47da-a78e-3a85ba82b157" />
