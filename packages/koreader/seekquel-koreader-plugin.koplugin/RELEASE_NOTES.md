@@ -1,3 +1,13 @@
+# v1.14.0 · 2026-10-08
+
+### What's new
+
+- **Pair by scanning a QR code.** The pairing screen now shows a QR code above the code. Scan it with your phone and Seekquel opens with the code already filled in, so all that is left is to tap Connect. Typing the code still works as before.
+
+### Install
+
+Download `seekquel.koplugin-v1.14.0.zip`, unzip it, and copy the `seekquel.koplugin` folder into KOReader's `plugins` folder on your e-reader. Restart KOReader, then open the Seekquel menu to pair. If the add-on is already installed and paired, it updates itself and you do not need to do anything.
+
 # v1.13.0 · 2026-09-27
 
 ### What's new
@@ -41,13 +51,3 @@ New install: download `seekquel.koplugin-v1.12.0.zip`, unzip it into KOReader's 
 ### Install
 
 If the add-on is already installed, it updates itself from Seekquel. For a new install, download seekquel.koplugin-v1.11.0.zip, unzip it, and copy the seekquel.koplugin folder into KOReader's plugins folder, then restart KOReader.
-
-# v1.10.1 · 2026-09-20
-
-### What's new
-
-Today's reading summary now says when it's showing your current page rather than what was last saved, so the numbers underneath it are never unlabeled.
-
-### Install
-
-Download `seekquel.koplugin-v1.10.1.zip` below, unzip it, and copy the `seekquel.koplugin` folder into your KOReader `plugins/` directory. If you already have the add-on installed, use its own updater (Seekquel menu → Check for update) instead — it verifies every file before replacing anything.

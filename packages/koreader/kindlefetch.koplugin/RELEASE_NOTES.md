@@ -1,3 +1,33 @@
+# v0.6 · 2026-10-08
+
+Searches say what they're looking for, and are called off with a Cancel button rather than any tap, keeping the books found so far. The search box offers your last 10 searches and books you've downloaded already are marked in the results. Covers now show up as each one arrives, and a page of them arrives in about a third of the time. Downloads look up their link without holding KOReader up, say what they're waiting for and when they've stalled, and carry on from where a stalled download stopped rather than starting the book again. Kindles with an older curl are offered curl 8.21.0, and told how to update it when theirs is too old to download books, and KOReader offers to restart once Kindle Fetch has updated. Plus a clearer download prompt and settings.
+
+Changes since v0.5:
+
+- Update koreader (81def27)
+- Ask curl for its version once, and again once it has been updated (5c0f5ec)
+- Open a connection for each cover at once, so a page of them arrives sooner (37f123e)
+- Show each cover as soon as it has downloaded, rather than once the slowest on its page has (53c3a4a)
+- Carry on from where a stalled download stopped, rather than starting the book again (7e58080)
+- Look a book's download link up without holding KOReader up, and let Cancel call it off (8aa11e6)
+- Try the mirror that last worked first (2a8f307)
+- Say what a download is waiting for before the book starts to arrive, and when it has stalled (36de778)
+- Show the books a search had found when it's called off, rather than none (bc2cb8b)
+- Say when a Kindle's curl is too old to download books, and how to update it (232e96c)
+- Install curl 8.21.0, the latest static build, on Kindles with an older one (392b65d)
+- Show the name a book is saved as on its own line in the download prompt, rather than cut off after a long folder (fbe93ea)
+- Say Not now rather than Cancel once a book has downloaded (d99a804)
+- Offer to restart KOReader once Kindle Fetch has updated (53103ba)
+- Show the languages and book types chosen by name in the settings, All when every one is, and the end of a long folder (38ed3e6)
+- Don't say a setting has changed when the settings show it has (28281dd)
+- Make room for the download's status on screens with more dots to the inch (c1d1a98)
+- Call a search off with a Cancel button, rather than any tap, and say what's being searched for (184e95b)
+- Mark the books that have been downloaded already in the results (3fd2bff)
+- Offer the last 10 searches from the search box, to search for again (13d3cc7)
+- Wrap a book's details beside its cover, rather than off the edge of the screen (68c863d)
+- Update README screenshots (1684e9e)
+- Update README (7665f85)
+
 # v0.5 · 2026-10-05
 
 KindleFetch no longer holds KOReader up while it searches: pages arrive several times faster, compressed, and a tap cancels a search. Downloads ask before replacing a book, go to a `.part` file until they finish, and download completely in the background so they can be found again from the new Downloads menu entry. Load more stays where you were, settings change without flashing the screen and can clear the cache, errors stay on screen until dismissed, and you're told when every result was in a language or file type you haven't chosen. Plus speed-ups and fixes throughout.
@@ -157,7 +187,3 @@ Big update this one
 - **Automatic Curl Updates**: Ensures a compatible curl version (8.17.0+) is available
 - **Automatic Retry Logic**: Fallback to other available urls if connection fails
 - **Safe File Handling**: Automatic filename sanitisation and directory management
-
-# v0.1 · 2026-07-06
-
-**Initial release** - it works, but don't expect much else. And don't expect it to always work.
