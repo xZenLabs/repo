@@ -1,157 +1,76 @@
-# v7.8.10 · 2026-10-07
+# v7.8.26 · 2026-10-09
 
-# AppDock 7.8.10
+# AppDock 7.8.26
 
-## Deutsch
+## YouTube-Progressbars werden während des Jobs neu gezeichnet
 
-### Helligkeit und Bildschirmschoner
+Der Setup-Fortschritt und die Fortschrittsanzeigen von Download und Videokonvertierung werden jetzt bei aktivem YouTube-Pane in gedrosselten Abständen durch einen partiellen Pane-Neuaufbau aktualisiert. Dabei werden aktueller Prozentwert, Phasenpuls und Statuszeile aus dem laufenden Jobzustand erneut gerendert. Ein manueller Screen-Refresh ist nicht mehr nötig. Die Aktualisierung wird nicht per Vollbild-Refresh und nicht bei jedem einzelnen Frame ausgelöst.
 
-- Die Blättertasten ändern die Helligkeit jetzt in **10er-Schritten** statt in Einerschritten.
-- Beim Start des animierten Bildschirmschoners wird die Frontlight-Helligkeit vollständig ausgeschaltet.
-- Beim Beenden des Bildschirmschoners wird die vorherige Helligkeit automatisch wiederhergestellt.
-- Die Wiederherstellung ist defensiv abgesichert und verändert das Verhalten auf Geräten ohne verfügbare Frontlight-Steuerung nicht.
+Beim Neuaufbau bleibt außerdem die aktuelle Position des indeterminierten Setup-Fortschritts erhalten, statt auf den Anfang zurückzuspringen.
 
-### Qualitätssicherung
+## Verifikation
 
-- Lua-Syntax aller Plugin-Dateien geprüft.
-- Keyboard-, AppStore-, Browser-, DApp-, Ordering- und Setup-Assistant-Regressionstests erfolgreich ausgeführt.
+Regressionstests prüfen, dass Setup- und Videojobs einen partiellen Pane-Neuaufbau anfordern und dass dabei aktueller Status beziehungsweise Prozentwert erneut in die sichtbaren Widgets übernommen werden. Die vollständige lokale Regressionstestsuite und die Lua-Syntaxprüfung aller Plugin-Dateien liefen erfolgreich.
 
-## English
+# v7.8.25 · 2026-10-09
 
-### Brightness and screensaver
+# AppDock 7.8.25
 
-- Page keys now change brightness in **10-step increments** instead of single steps.
-- The frontlight is fully switched off when the animated screensaver starts.
-- The previous brightness is restored automatically when the screensaver closes.
-- Restoration is guarded defensively and does not change behavior on devices without frontlight control.
+## YouTube-Player lädt das ausgewählte Video korrekt
 
-### Quality assurance
+Beim Starten der Wiedergabe lud AppDock die BWR1-Datei zunächst erfolgreich. Der anschließende Neuaufbau der DApp-Ansicht deaktivierte jedoch das bisherige Bibliothekspane, dessen Aufräumcode den gerade geladenen Player wieder stoppte. Deshalb zeigte der Player „No BWR1 file is loaded“ und sein Play-Knopf „No video is loaded“.
 
-- Lua syntax checked for all plugin files.
-- Keyboard, AppStore, Browser, DApp, ordering, and setup-assistant regression tests pass.
+Die Bibliotheksansicht schließt den Player jetzt nicht mehr, wenn der Wechsel gerade in die Wiedergabe führt. Beim Verlassen der Player-Ansicht wird die Wiedergabe weiterhin ordnungsgemäß beendet.
 
-# v7.8.9 · 2026-10-07
+## Verifikation
 
-# AppDock 7.8.9
+Die YouTube-Regression simuliert jetzt ausdrücklich die Deaktivierung der alten Bibliotheksansicht nach dem Laden eines gültigen BWR1-Videos. Der Player muss danach weiterhin einen geladenen Engine-Zustand besitzen. Die vollständige Regressionstestsuite und die Lua-Syntaxprüfung aller Plugin-Dateien liefen erfolgreich.
 
-## Deutsch
+# v7.8.24 · 2026-10-09
 
-### Bildschirmschoner speicherschonend gemacht
+# AppDock 7.8.24
 
-Die Bildschirmschoner-Frames waren komprimiert jeweils ungefähr 1,6 MB groß, benötigten beim Dekodieren jedoch etwa 13,5 MB Speicher pro Bild. Beim Animieren mehrerer Frames konnte KOReader deshalb mit `not enough storage` abbrechen.
+## YouTube-Fortschritt aktualisiert sich live
 
-Die vier Frames wurden auf 816 × 1088 Pixel und 8-Bit-Graustufen optimiert. Der dekodierte Speicherbedarf sinkt dadurch auf unter 1 MB pro Frame. Zusätzlich werden animierte Frames nicht mehr im globalen `ImageWidget`-Cache gesammelt, und sie werden direkt in der benötigten Zielgröße geladen.
+Die Video-Fortschrittsleiste übernimmt während des Jobs jetzt die jeweils neu gemeldeten Prozentwerte. Beim erstmaligen Einrichten der Werkzeuge bewegt sich eine Ladeanzeige, solange die Installation keinen verlässlichen Gesamtfortschritt liefern kann. Fortschrittsänderungen verwenden E-Ink-schonende Teilaktualisierungen.
 
-### Qualitätssicherung
+## Video-Konvertierung beschleunigt
 
-- Lua-Syntax aller Plugin-Dateien geprüft.
-- Keyboard-, AppStore-, Browser-, DApp-, Ordering- und Setup-Assistant-Regressionstests erfolgreich ausgeführt.
-- Screensaver-Frames von insgesamt etwa 6,5 MB auf unter 1 MB komprimierte Asset-Größe reduziert.
+Die Konvertierung war zuvor künstlich auf höchstens zwei Frames pro Sekunde begrenzt: Pro UI-Tick wurden zwei Frames gelesen, danach wartete der Job eine volle Sekunde. Beide Dither-Pfade – FFmpeg `monow` und AppDocks Bayer-Konverter – lesen jetzt bis zu sechs Frames pro kurzem Tick, begrenzt durch ein kleines CPU-Zeitbudget. So kann FFmpeg kontinuierlich ausgeben, statt durch den UI-Poller ausgebremst zu werden; die Oberfläche bleibt dabei responsiv. Die tatsächliche Geschwindigkeit hängt weiterhin vom Reader, Video-Codec und der gewählten Auflösung/Bildrate ab.
 
-## English
+## Verifikation
 
-### Screensaver memory usage reduced
+Die vollständige lokale Regressionstestsuite lief erfolgreich. Der YouTube-Integrationstest prüft beide Dither-Pfade an einer erzeugten Videodatei, den kurzen Tick-Takt, die gebündelte Frame-Verarbeitung und die Fortschrittsaktualisierung. Die optionale externe BWR-Video-Fixture war in der lokalen Umgebung nicht vorhanden.
 
-The screensaver frames were only about 1.6 MB each when compressed, but required approximately 13.5 MB of memory per image when decoded. Animating multiple frames could therefore make KOReader fail with `not enough storage`.
+# v7.8.23 · 2026-10-09
 
-All four frames are now optimized to 816 × 1088 pixels and 8-bit grayscale. Decoded memory usage is reduced to under 1 MB per frame. Animated frames are also excluded from the global `ImageWidget` cache and loaded directly at the required target size.
+# AppDock 7.8.23
 
-### Quality assurance
+## YouTube-Downloads korrigiert
 
-- Lua syntax checked for all plugin files.
-- Keyboard, AppStore, Browser, DApp, ordering, and setup-assistant regression tests pass.
-- Screensaver frames reduced from approximately 6.5 MB to under 1 MB of compressed assets in total.
+Die YouTube-DApp verwendet jetzt ausdrücklich den Android-Player-Client von yt-dlp. Damit umgeht sie bei unterstützten Videos die zuletzt häufiger abgewiesenen Browser-Client-Streams. Die Einstellung betrifft Video-Downloads; Suche und lokale Konvertierung bleiben unverändert.
 
-# v7.8.8 · 2026-10-07
+Bei Fehlern nennt die Fortschrittsansicht jetzt die erkannte Ursache – darunter Bot-/Anmeldeprüfungen, HTTP 403, fehlende kompatible Formate, PO-Token-Anforderungen und Netzwerkprobleme. Die yt-dlp-Ausgabe bleibt als Diagnose sichtbar. Anmelde- oder Bot-Prüfungen werden nicht umgangen.
 
-# AppDock 7.8.8
+## Verifikation
 
-## Deutsch
+Die Lua-Syntax aller 26 Plugin-Dateien und die vollständige lokale Regressionstestsuite liefen erfolgreich. Der YouTube-Test deckt die Client-Auswahl und die verständlichen Fehlermeldungen ab. Die optionale externe BWR-Video-Fixture war in der lokalen Umgebung nicht vorhanden. Die Netzwerk-Reproduktion zeigte außerdem, dass YouTube je nach Sitzung die Anmeldung zur Bot-Prüfung verlangen kann; dies kann ein Clientwechsel nicht beheben.
 
-### Framebuffer-Crash endgültig behoben
+# v7.8.22 · 2026-10-09
 
-Der vollständige Stacktrace zeigte die konkrete Ursache in `framecontainer.lua:55`: Der schwarze Füllbalken des Helligkeitsindikators war ein `FrameContainer` ohne Kind. KOReader rief deshalb `self[1]:getSize()` auf einem leeren Container auf.
+# AppDock 7.8.22
 
-Der Füllbalken besitzt jetzt ein echtes `HorizontalSpan`-Kind. Damit ist der Container gültig und der Fehler `attempt to index a nil value` beim Drücken der Blättertasten beseitigt.
+## Kobo-Entpackfehler behoben
 
-### Qualitätssicherung
+Auf dem Kobo konnte `tar` den v7.8.21-Runtime-Tarball laden, aber nicht entpacken: das Dateisystem verweigerte das Anlegen von `python-runtime/etc/ssl/cert.pem` als Symlink (`Operation not permitted`).
 
-- Lua-Syntax aller Plugin-Dateien geprüft.
-- Keyboard-, AppStore-, Browser-, DApp-, Ordering- und Setup-Assistant-Regressionstests erfolgreich ausgeführt.
+Das ARMHF-Runtime-Archiv enthält jetzt Kopien der verlinkten Bibliotheken und Zertifikate statt Symlinks. Der Installer lädt dieses neue Asset und prüft dessen neue SHA-256-Prüfsumme. Es ist rund 17 MB groß und belegt entpackt etwa 44 MB.
 
-## English
+## Verifikation
 
-### Framebuffer crash definitively fixed
+Das veröffentlichungsfertige Archiv enthält keine Symlinks oder Hardlinks. Frisch entpackt starteten CPython/yt-dlp unter ARM-QEMU; yt-dlp meldete Version 2026.08.19 und die YouTube-Suche lieferte acht Treffer. Ein Test auf dem physischen Kobo steht noch aus.
 
-The complete stack trace identified the exact cause at `framecontainer.lua:55`: the black fill bar of the brightness indicator was a `FrameContainer` without a child. KOReader therefore called `self[1]:getSize()` on an empty container.
+**Für betroffene Geräte:** AppDock zuerst auf 7.8.22 aktualisieren, KOReader neu starten und dann in der YouTube-App **Retry setup** wählen.
 
-The fill bar now has a real `HorizontalSpan` child. The container is valid and the `attempt to index a nil value` error when pressing page keys is fixed.
-
-### Quality assurance
-
-- Lua syntax checked for all plugin files.
-- Keyboard, AppStore, Browser, DApp, ordering, and setup-assistant regression tests pass.
-
-# v7.8.7 · 2026-10-07
-
-# AppDock 7.8.7
-
-## Deutsch
-
-### Helligkeitsanzeige stabilisiert
-
-- Der Helligkeitsindikator verwendet jetzt einen direkten, garantiert nicht-leeren `FrameContainer` mit einem direkten `VerticalGroup`-Kind.
-- Die unnötige Verschachtelung aus `WidgetContainer`, `CenterContainer` und zusätzlichem `FrameContainer` wurde entfernt.
-- Dadurch wird der fragile Paint-Pfad beseitigt, der auf manchen Geräten weiterhin den Fehler `framebuffer.lua: attempt to index a nil value` auslösen konnte.
-- Die seitliche Prozent- und Balkenanzeige bleibt erhalten.
-
-### Qualitätssicherung
-
-- Lua-Syntax aller Plugin-Dateien geprüft.
-- Keyboard-, AppStore-, Browser-, DApp-, Ordering- und Setup-Assistant-Regressionstests erfolgreich ausgeführt.
-
-## English
-
-### Brightness indicator stabilized
-
-- The brightness indicator now uses a direct, guaranteed non-empty `FrameContainer` with a direct `VerticalGroup` child.
-- The unnecessary `WidgetContainer` → `CenterContainer` → `FrameContainer` nesting has been removed.
-- This removes the fragile paint path that could still trigger `framebuffer.lua: attempt to index a nil value` on some devices.
-- The side percentage and bar indicator remain available.
-
-### Quality assurance
-
-- Lua syntax checked for all plugin files.
-- Keyboard, AppStore, Browser, DApp, ordering, and setup-assistant regression tests pass.
-
-# v7.8.6 · 2026-10-07
-
-# AppDock 7.8.6
-
-## Deutsch
-
-### Blättertasten und Framebuffer-Stabilität
-
-- Die Helligkeitsanzeige wird nach einem Blättertasten-Ereignis erst im nächsten KOReader-UI-Zyklus aufgebaut.
-- Dadurch wird ein Race Condition zwischen physischer Tastaturverarbeitung und Framebuffer-Neuzeichnung vermieden, die auf manchen Geräten den Fehler `framebuffer.lua: attempt to index a nil value` auslösen konnte.
-- Der native Helligkeitswechsel bleibt erhalten; ein temporär nicht verfügbarer Framebuffer kann die Tastaturaktion nicht mehr zum Absturz bringen.
-- Aufbau und Ausblenden der Anzeige sind zusätzlich defensiv abgesichert.
-
-### Qualitätssicherung
-
-- Lua-Syntax aller Plugin-Dateien geprüft.
-- Keyboard-, AppStore-, Browser-, DApp-, Ordering- und Setup-Assistant-Regressionstests erfolgreich ausgeführt.
-
-## English
-
-### Page keys and framebuffer stability
-
-- The brightness indicator is now rebuilt in the next KOReader UI cycle after a page-key event.
-- This avoids a race between physical-key processing and framebuffer repainting that could cause `framebuffer.lua: attempt to index a nil value` on some devices.
-- Native brightness changes remain available; a temporarily unavailable framebuffer can no longer crash the key action.
-- Showing and hiding the indicator are additionally guarded defensively.
-
-### Quality assurance
-
-- Lua syntax checked for all plugin files.
-- Keyboard, AppStore, Browser, DApp, ordering, and setup-assistant regression tests pass.
+Asset: `appdock-youtube-armhf-musl-python-3.12.15.tar.gz`  
+SHA-256: `5348e11472e5ca6c07d7b0ec75a2f1df1d181be7eb52d9e3cafb43267b1f916c`

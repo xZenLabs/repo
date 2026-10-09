@@ -1,3 +1,15 @@
+# v1.8.0 · 2026-10-09
+
+## [1.8.0](https://github.com/pierspad/notebook.koplugin/compare/v1.7.2...v1.8.0) (2026-10-09)
+
+### Features
+
+* allow explicit opt-in to prerelease plugin updates ([47757a3](https://github.com/pierspad/notebook.koplugin/commit/47757a396283963562af134899af7dd3c732d0ab))
+
+### Bug Fixes
+
+* reject mislabeled Scribe 2 palm slots without losing stylus fallback ([fdbad4f](https://github.com/pierspad/notebook.koplugin/commit/fdbad4f5397715ea13065f5b47ee1048d50d56c6)), closes [#4](https://github.com/pierspad/notebook.koplugin/issues/4)
+
 # v1.7.2 · 2026-10-07
 
 ## [1.7.2](https://github.com/pierspad/notebook.koplugin/compare/v1.7.1...v1.7.2) (2026-10-07)
@@ -41,11 +53,3 @@ The intermittent Scribe issue where library titles reappear around handwriting h
 ### Bug Fixes
 
 * prevent eraser bridges and overlapping marker geometry growth ([d48e26e](https://github.com/pierspad/notebook.koplugin/commit/d48e26e3d09574939905a959cd974732e91c5746))
-
-# v1.6.2 · 2026-10-01
-
-## [1.6.2](https://github.com/pierspad/notebook.koplugin/compare/v1.6.1...v1.6.2) (2026-10-01)
-
-### Bug Fixes
-
-* render update notes with native Markdown and document source installation ([d097c4e](https://github.com/pierspad/notebook.koplugin/commit/d097c4e3a3144fe503a3f7515e7e08a3fb6d7256))

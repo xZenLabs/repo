@@ -1,3 +1,11 @@
+# v0.2.4 · 2026-10-09
+
+Correctly switch to next mirror if unavailable, fix error message.
+
+This release changes to the next mirror of LibGen when the current one is unavailable. Additionally the error messages reported on failure are improved.
+
+Thanks to @prBigBrother for the help.
+
 # v0.2.3 · 2026-10-02
 
 This update adds relevance sorting to the search results.
@@ -41,7 +49,3 @@ Please note that the associated plugins dispatcher action was renamed in this pr
 * @DerSchmachtin made their first contribution in https://github.com/fischer-hub/annas.koplugin/pull/5
 
 **Full Changelog**: https://github.com/fischer-hub/annas.koplugin/compare/v0.1.7...v0.1.8
-
-# v0.1.7 · 2025-10-06
-
-This update fixes an issue causing crashes when AA is not responding.

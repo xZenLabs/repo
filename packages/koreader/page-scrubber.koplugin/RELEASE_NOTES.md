@@ -1,3 +1,37 @@
+# v7.7.7 · 2026-10-09
+
+## New Features
+
+### Split Menu
+* **Color filter:** Now, in the Highlights and Notes tab, if there are annotations with more than one color, a new triangle icon will appear allowing you to filter entries by color.
+* **Individual color selector:** A new circular button was added to the highlight type editing row. This button allows you to directly change the color of a specific annotation (works for all styles except invert).
+
+### Selection Menu
+* **Quick color menu:** By long-pressing any highlight style (Highlight, Underline, or Strikethrough), the new color menu will now unfold to let you choose which color to paint the annotation with.
+
+---
+
+## Fixes & Improvements
+
+### Interface & Behavior
+* **DPI pagination fix:** Fixed a critical bug where changing the screen DPI caused selecting an annotation in the Split Menu to take you to the wrong page.
+* **Optimized Split Menu loading:** The plugin now uses the same logic as KOReader's native listing. This fixes the excessive loading times when opening the menu after rotating the screen between portrait and landscape.
+* **Native notes integration:** Tapping the button to add text notes will now directly invoke KOReader's native menu.
+* **Visual refinement:** Slightly reduced the thickness of the buttons within the Split Menu and refined the SVG icons overall for a more polished look.
+
+### Performance
+* **Reduced lag when turning pages:** Rewrote the pagination logic to prevent bottlenecks and extreme slowdowns.
+  * **Preload queue optimization:** Each new tap now cancels older preload tasks that were still in the queue. Additionally, the engine now prioritizes loading pages in the direction you are navigating.
+  * **Concurrency control (Semaphore):** Implemented a semaphore system. If the current page hasn't finished rendering, page turns are blocked, preventing background processes from piling up and freezing the device.
+
+
+## Installation
+1. Download the zip named `page_scrubber.koplugin-<version>.zip` from the **Assets** section below (not "Source code").
+2. Unzip it and copy the `page_scrubber.koplugin` folder into `koreader/plugins/`.
+3. Restart KOReader.
+
+To update, replace the folder. To uninstall, delete it (and `koreader/patches/2--page-scrubber-font.lua` if you used the system font).
+
 # v7.7.3 · 2026-10-06
 
 # What's new!
@@ -77,35 +111,3 @@ Page Scrubber can now change KOReader's system (UI) font from **⚙ Configuratio
 - Spanish updated with the new strings and updated more languages.
 
 [page_scrubber.koplugin.zip](https://github.com/user-attachments/files/33009934/page_scrubber.koplugin.zip)
-
-# v7.6.0 · 2026-09-30
-
-### What's New
-
-#### Quick Menu Enhancements
-* **Typography Tab**: Added a dedicated Typography tab to the Quick Menu. You can now select your favorite fonts, adjust font size, and fine-tune line spacing on the fly.
-* **Gesture Support**: The Quick Menu can now be assigned to a gesture (via Dispatcher) to open it directly while reading.
-* **Toggleable Quick Menu**: Added a new setting to enable or disable the Quick Menu entirely, keeping things clean for Page Scrubber purists who only want page scrubbing.
-* **Default Starting Tab**: Added an option in settings to choose whether the Quick Menu opens by default on the standard actions tab or the new Typography tab.
-* **Instant Style Switching**: Changing styles and typography options via the Quick Menu now updates almost instantaneously without loading screens.
-
-#### Selection & Highlights Menu
-* **Instant Highlight Style Changes**: Changing highlight styles in the selection/split menu is now seamless—no more loading screens, refreshing almost instantly.
-
-#### Appearance & Settings Polish
-* **Top Bar Separator Line**: Added a new toggle in the Appearance menu to draw an optional separator line beneath the top bar.
-* **Visual Improvements**: Refreshed the settings menu layout and visual styling for a cleaner, more intuitive look.
-
-#### Localization & Languages
-* **New Languages**: Added full translations for Norwegian (`nb`) and Ukrainian (`uk`).
-* **Translation Updates**: Updated all existing translation catalogs (German, Spanish, French, Hindi, Italian, Japanese, Dutch, Polish, Portuguese, Russian, Turkish, and Simplified Chinese) to cover the new menus and settings strings.
-
----
-
-### Bug Fixes
-
-* **TOC Page Count**: Fixed inaccurate page count calculations when opening the Table of Contents via the Dispatcher.
-* **Dictionary Double Pop-Up**: Fixed a bug where long-pressing a word occasionally triggered the dictionary pop-up twice.
-* **Dictionary Text Bounds**: Fixed font size calculation in the dictionary to ensure "shrink to fit" renders and paints text properly.
-
-[page_scrubber.koplugin.zip](https://github.com/user-attachments/files/32851569/page_scrubber.koplugin.zip)
