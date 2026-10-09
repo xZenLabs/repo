@@ -1,3 +1,15 @@
+# v1.8.0-dev.1 · 2026-10-09
+
+## [1.8.0-dev.1](https://github.com/pierspad/notebook.koplugin/compare/v1.7.2...v1.8.0-dev.1) (2026-10-09)
+
+### Features
+
+* allow explicit opt-in to prerelease plugin updates ([47757a3](https://github.com/pierspad/notebook.koplugin/commit/47757a396283963562af134899af7dd3c732d0ab))
+
+### Bug Fixes
+
+* reject mislabeled Scribe 2 palm slots without losing stylus fallback ([fdbad4f](https://github.com/pierspad/notebook.koplugin/commit/fdbad4f5397715ea13065f5b47ee1048d50d56c6)), closes [#4](https://github.com/pierspad/notebook.koplugin/issues/4)
+
 # v1.7.0-dev.1 · 2026-10-04
 
 ## [1.7.0-dev.1](https://github.com/pierspad/notebook.koplugin/compare/v1.6.3...v1.7.0-dev.1) (2026-10-04)
@@ -29,11 +41,3 @@
 ### Features
 
 * improve notebook page navigation and undo responsiveness ([8a5b418](https://github.com/pierspad/notebook.koplugin/commit/8a5b4180df33c6948f665a6a4d9ee190055a1ce8))
-
-# v1.3.1-dev.1 · 2026-09-27
-
-## [1.3.1-dev.1](https://github.com/pierspad/notebook.koplugin/compare/v1.3.0...v1.3.1-dev.1) (2026-09-27)
-
-### Bug Fixes
-
-* defer zoom cleanup and preserve clipped ink redraws ([835e7fb](https://github.com/pierspad/notebook.koplugin/commit/835e7fb73f3a901796bd8bf96ffeff53fab14101))

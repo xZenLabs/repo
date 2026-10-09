@@ -1,3 +1,76 @@
+# v1.19 · 2026-10-09
+
+## v1.19
+
+This release centers on the result viewer: text layout controls, custom
+fonts, file manager integration, and a reorganized settings menu.
+
+### Result viewer
+
+- The result viewer is now a chat transcript: user turns and answers share
+  one scrollable conversation. Bubbles size by turn length: one-liners keep
+  a compact shape, long selections take the full page, and caption-only
+  action labels hug the right edge instead of reading as a wide empty box.
+- Recursive queries: select text in any answer and run another prompt on it;
+  viewers stack so each follow-up keeps its own context. The acted-on
+  selection can move out of the caption into its own muted band above the
+  question (Response Settings > Show Highlighted Text), so the original is
+  easy to compare with the follow-up answer.
+- Turns show book identity (title/author) in the bubble; minimalist mode
+  keeps only the answer actions for a quieter layout.
+- Streaming dialog shows a reasoning/answer status row, and the reasoning
+  switch now applies to turns already on screen.
+- Mixed-direction replies render per block (code stays LTR), and a Response
+  Font picker lists installed KOReader fonts and registers the choice with
+  MuPDF.
+
+### Settings menu
+
+- Response Settings is reorganized around display: a Text Appearance submenu
+  groups Text Size, Text Direction (Auto/RTL/LTR), and Response Font; the
+  old RTL checkbox in the language dialog is gone.
+- New Minimalist Mode master switch shows the answer alone and takes over
+  Reasoning Text and Follow-up Questions while active.
+- New Show Highlighted Text switch gives the acted-on selection its own
+  block above the question.
+- Dictionary settings gain Auto Add Word to Vocabulary Builder.
+
+### File browser
+
+- Book Info (AI) and Recap (AI) run directly from the file manager
+  long-press menu on unopened books (FileManager, History, Collections,
+  File Searcher), no need to open the book first.
+
+### Dictionary and Vocabulary Builder
+
+- Dictionary lookups can auto-add to the Vocabulary Builder; the builder
+  button is always offered and a failed auto-add is reported on both paths.
+
+### Safety
+
+- An unrecognized web-search key now fails closed instead of silently
+  enabling search; each search tool stores only the credential it declares.
+
+### Fixes
+
+- Default prompts include KOReader context.
+- Web search is preserved on feature follow-ups.
+- Recap reads last-read time from history (with sidecar mtime fallback)
+  instead of unreliable file atime.
+- Model picker no longer shows a false selection after paging; the staged
+  pick survives page changes.
+- API connection tests use a larger token budget so reasoning models return
+  a usable answer.
+- Text direction label refreshes without closing the options menu.
+- Search keyword line is flush left.
+
+### l10n
+
+- The localization pipeline no longer ships wrong-language or misplaced
+  strings (some locales carried text in the wrong language); wordless
+  markup-only templates are out of the msgids. Catalogues refreshed in this
+  cycle.
+
 # v1.18 · 2026-09-23
 
 #### Highlights
@@ -135,30 +208,3 @@ Special thanks to contributors in this cycle:
 - @Craftwork2720 — `thinking` parameter forwarding (#188)
 
 And everyone who helped with translations, feedback, and testing.
-
-# v1.14 · 2026-08-08
-
-## v1.14 Release Notes
-
-### Changes since v1.13
-
-#### New Features
-- **Bold dialog labels and status verbs via PTF** — Error dialogs, OTA update dialogs, and search info dialogs now use bold formatting for key labels, making them easier to scan at a glance.
-- **Gemini 3 thinking budget auto-conversion** — The `thinking_budget` setting now automatically converts to Gemini 3's expected format. Disabled by default in the sample config.
-
-#### Bug Fixes
-- **Dictionary popup AI buttons** — AI buttons in the dictionary popup no longer disappear after customizing the dict button layout (#187).
-- **Gemini thinking config** — Fixed `thinkingConfig` to use camelCase (required by Gemini API), and fixed a bug where `thinking_budget=0` was silently ignored instead of disabling thinking.
-- **Server error messages** — Non-200 HTTP responses now surface the server's actual error message instead of a generic "fetchJSON: failed to parse" message.
-- **Error dialog polish** — Error messages are now formatted with bold labels and clearer structure.
-- **Silenced noise logs** — Unprocessed SSE event logs for `web_search_call` lifecycle events and Responses API annotation events are now suppressed.
-- **OTA and search info dialogs** — Polished the layout and text of OTA update and search tool info dialogs.
-- **PO file format** — Normalized `.po` file format to 1-space alignment, eliminating diff noise from `msgattrib -i` misuse.
-
-#### Internal Improvements
-- `assistant_utils` is now imported as `ASUtils` consistently across the codebase.
-- String concatenation loops replaced with `string.buffer` / `table.concat` for better performance.
-- OTA updater path construction routed through `FFIUtil.joinPath` for cross-platform safety.
-- Gemini `thinking_budget` handling consolidated into a single handler.
-- Bold formatting centralized through `bold_format` helper, keeping translatable strings contiguous.
-- Removed unused shell translation script.

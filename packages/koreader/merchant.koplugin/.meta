@@ -3,7 +3,7 @@
 # zenpm:auto-scraped
 id=merchant
 name=Merchant
-version=2.0.0
+version=2.0.1
 description=Merchant, a turn-based trading game for KOReader.  Buy low and sell high across six trading posts over 30 days
 author=omer-faruq
 category=games
@@ -11,13 +11,13 @@ platforms=koreader
 dependencies=
 source=https://github.com/omer-faruq/merchant.koplugin
 stars=7
-updated_at=2026-10-09T01:46:58Z
-published_at=2026-07-11T05:35:39Z
+updated_at=2026-10-09T08:35:00Z
+published_at=2026-10-09T05:49:35Z
 readme_url=packages/koreader/merchant.koplugin/README.md
 readme_hash=daa07aaebdd53447342a0990392b9351c7427307
 release_notes_url=packages/koreader/merchant.koplugin/RELEASE_NOTES.md
-release_notes_hash=c564def3dd0db57a6b4788c08d33ca889131885fa612bce561d9f062e4d5edc3
-releases=[{"tag_name":"v2.0.0","assets":[{"name":"merchant.koplugin.zip","url":"https://github.com/omer-faruq/merchant.koplugin/releases/download/v2.0.0/merchant.koplugin.zip","size":59839,"digest":"sha256:624cce26b37a44152e2d2b2de082eed57bbf83474c87c0517facd5600d4f7a8f"}],"name":"v2.0.0"}]
+release_notes_hash=b86ffd92338557d99e8c0367d1f149e4b8963d1160234bfbe14dd5f8ce2527a4
+releases=[{"tag_name":"v2.0.1","assets":[{"name":"merchant.koplugin.zip","url":"https://github.com/omer-faruq/merchant.koplugin/releases/download/v2.0.1/merchant.koplugin.zip","size":59851,"digest":"sha256:cbaf3d42ce05128384766785f20b6909d2d8a57b34580e38d7b58de82761bd92"}],"name":"v2.0.1"},{"tag_name":"v2.0.0","assets":[{"name":"merchant.koplugin.zip","url":"https://github.com/omer-faruq/merchant.koplugin/releases/download/v2.0.0/merchant.koplugin.zip","size":59839,"digest":"sha256:624cce26b37a44152e2d2b2de082eed57bbf83474c87c0517facd5600d4f7a8f"}],"name":"v2.0.0"}]
 source_type=release
 source_asset=merchant.koplugin.zip
-size=59839
+size=59851

@@ -1,3 +1,22 @@
+# v7.3.0 · 2026-10-09
+
+### Changed
+
+**Reading streak popup**
+
+- Added a **Last read** line (left-aligned) right under the calendar, followed by the divider line. It shows the most recent reading day, also when the current streak has lapsed.
+- Removed the date-range row under the "Current streak" / "Best streak" headers, because it only described the daily streak and was misleading when only the weekly streak was alive.
+- Tapping the **days | weeks** cells of the current or best streak now shows both the daily and the weekly length with their date ranges. A weekly range ends on the last day of its final week.
+- Tapping the streak title still opens the streak history popup.
+- New "Last read: %1" string translated in all bundled locales; README updated.
+
+**Achievements**
+
+- Achievements now show the **date they were actually earned**, instead of the date the achievement check last ran.
+- Earn dates are computed by replaying the reading history in a single chronological pass, so newly earned achievements get their real date.
+- Dates saved by older versions are corrected once, on the next full reload (long press on the title bar). Dates are only ever moved earlier, never later.
+- The long-press reload now keeps the "Reloading data..." message visible for the whole reload and ends with a "Data reloaded" message. If new achievements were earned, the message shows how many.
+
 # v7.2.1 · 2026-10-08
 
 ### Fixed
@@ -28,17 +47,3 @@
 **Manual books**
 - The series and its number are now entered in a single field, written as `Dune #2` (or `Dune #2.5`). Existing entries are shown in the same format when edited and need no migration.
 - The date field now comes before the series field, so it stays visible when the on-screen keyboard is open.
-
-# v7.1.2 · 2026-10-07
-
-### Changed
-
-**Wording**
-- Clearer English labels in the Insights popup: "daily avg time", "daily avg pages", "Reading time per month", "All time", "Books per month".
-- Book lists no longer say "books read" where they actually show books you read from, not only finished ones ("No books", "All books: %1", "%1: %2 books").
-- Matching label fixes and shorter forms in German, French, Portuguese, Ukrainian, Chinese and Hungarian. The German list title no longer repeats the count.
-- Removed unused all-caps strings from the language files.
-
-**Manual books**
-- Tapping a book opens its Book info popup, long-press opens Edit/Delete.
-- The book editor no longer opens the keyboard automatically; it appears when you tap a field.
