@@ -1,3 +1,7 @@
+# v2.3 · 2026-10-08
+
+-One new style (diagonal lines)
+
 # v2.2 · 2026-09-24
 
 **What's New**
