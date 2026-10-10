@@ -1,3 +1,22 @@
+# v7.5.0 · 2026-10-10
+
+### Added
+- **Daily goal | Weekly goal** section above "Last week", showing time read today and this calendar week against your goals (e.g. `0:23 / 0:30`). Durations follow KOReader's duration format setting.
+  - Long press the section to set a goal with an hours/minutes picker.
+  - Tap it to see how many days / weeks in a row you have met the goal (today or this week doesn't break the run while it is still in progress).
+  - The streak is cached: closed days/weeks never change, so the next tap only checks the periods since the last one. The cache is reset when you change the goal or the week start, and on **Reload data** (long press the title bar). Opening the popup itself is not slowed down.
+  - Defaults: 30 minutes a day, 5 hours a week.
+  - The week starts on the day set in the plugin's week start setting.
+  - Can be turned off in Advanced settings ▸ Reading insight popup ▸ **Daily / weekly goal**.
+- **Last week layout** setting (Advanced settings ▸ Reading insight popup): *Compact* (default) or *Full* (the previous layout).
+
+### Changed
+- **Last week** now shows a single row by default: total and daily average for either reading time or pages read. Tap the "Last week" header to switch between the two views; the choice is remembered between openings.
+- Tapping a value still opens the 8-week trend popup.
+
+### Notes
+- The goal streak applies the currently set goal to the whole history. If you edit or delete reading data in the statistics database, use **Reload data** to refresh the cached streak.
+
 # v7.4.5 · 2026-10-09
 
 ### Changed
@@ -33,7 +52,3 @@ Book progress: show "27 / 88 chapters" instead of "chapters read"
 ### Changed
 - "chapters read" and "chapters left" labels in the Book progress popup now
   use singular/plural forms (e.g. "1 chapter left"), in all supported languages.
-
-# v7.4.1 · 2026-10-09
-
-Small fix for hungarian translation for text: chapters read

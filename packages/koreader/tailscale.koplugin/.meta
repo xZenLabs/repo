@@ -1,0 +1,23 @@
+# Tailscale plugin for KOReader
+# https://github.com/jadehawk/tailscale.koplugin
+# zenpm:auto-scraped
+id=tailscale
+name=Tailscale
+version=1.3.0
+description=A koreader plugin for Tailscale VPN to get around the pesky local network requirements of many sync tools and services.
+author=jadehawk
+category=productivity
+platforms=koreader
+dependencies=
+source=https://github.com/jadehawk/tailscale.koplugin
+stars=5
+updated_at=2026-10-10T06:44:51Z
+published_at=2026-08-16T20:53:07Z
+readme_url=packages/koreader/tailscale.koplugin/README.md
+readme_hash=8231d489c987cdab199e72e8c1e962d5c3b32cc9
+release_notes_url=packages/koreader/tailscale.koplugin/RELEASE_NOTES.md
+release_notes_hash=62bb85ff7c209b1dae2f78eb117e239b29c118f098ffb3eb81c74daec87c2103
+releases=[{"tag_name":"v1.3.0","assets":[{"name":"tailscale.koplugin-v1.3.0.zip","url":"https://github.com/jadehawk/tailscale.koplugin/releases/download/v1.3.0/tailscale.koplugin-v1.3.0.zip","size":9539,"digest":"sha256:e5e3a2741e9cf768702b89f52e16f1d7eda87cd90757bfc67c976252faa6487c"}],"name":"v1.3.0"}]
+source_type=release
+source_asset=tailscale.koplugin-v1.3.0.zip
+size=9539

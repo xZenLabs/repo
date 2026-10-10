@@ -1,0 +1,3 @@
+{
+  "releases": [{"tag_name":"v1.3.0","assets":[{"name":"tailscale.koplugin-v1.3.0.zip","url":"https://github.com/jadehawk/tailscale.koplugin/releases/download/v1.3.0/tailscale.koplugin-v1.3.0.zip","size":9539,"digest":"sha256:e5e3a2741e9cf768702b89f52e16f1d7eda87cd90757bfc67c976252faa6487c"}],"name":"v1.3.0"}]
+}

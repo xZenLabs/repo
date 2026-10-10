@@ -1,3 +1,17 @@
+# v1.5.3 · 2026-10-10
+
+**Full Changelog**: https://github.com/Craftwork2720/meguru/compare/v1.5.2...v1.5.3
+
+# v1.5.2 · 2026-10-10
+
+# New features
+
+- **Derainbow** — removes the rainbow shimmer on colour e-ink screens. All credit goes to [Euphoriyy](https://github.com/Euphoriyy) and his [derainbowify.koplugin](https://github.com/Euphoriyy/derainbowify.koplugin). Off by default, shown only on colour screens
+- **Show in OPDS** — opens the OPDS browser on the book's series, from its Info popup or the on hold **file** menu (.meguru)
+- **ComicInfo.xml switch** — Settings → *Read metadata from ComicInfo.xml*. On by default; off = local `.cbz` titled by file name
+
+**Full Changelog**: https://github.com/Craftwork2720/meguru/compare/v1.4.0...v1.5.2
+
 # v1.4.0 · 2026-10-03
 
 ## New features
@@ -51,16 +65,3 @@
 new: **Contrast**, **Saturation** and **Dithering** in the bottom menu
 
 **Full Changelog**: https://github.com/Craftwork2720/meguru/compare/v1.1.1...v1.2.0
-
-# v1.1.1 · 2026-09-19
-
-fix: Pan & Zoom stops on every panel, not only the ones the window happens to cover.
-The bottom menu is hidden in all three views — tap the bottom of the screen, or swipe up, to bring it back.
-
-**Full Changelog**: https://github.com/Craftwork2720/meguru/compare/v1.1.0...v1.1.1
-
-# v1.1.0 · 2026-09-18
-
- Add: Meguru→ Komga progress sync
-
-**Full Changelog**: https://github.com/Craftwork2720/meguru/compare/v1.0.1...v1.1.0
