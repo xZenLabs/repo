@@ -1,3 +1,110 @@
+# v4.0.0 · 2026-10-10
+
+**Updating from 3.3.0 or older:** download `ink-away.koplugin-v4.0.0.zip` below and put the `ink-away.koplugin` folder in KOReader's plugins folder, as before. From 4.0.0 on, Ink Away can update itself: Settings, Updates.
+
+The biggest update yet: write on your books, a whole new set of pens, layers,
+dark mode, paper colours, a guide and updates from inside Ink Away.
+
+## Added
+
+#### Write on your books
+- Annotate any book KOReader opens (EPUB, MOBI, FB2, PDF, DjVu, CBZ and more):
+  pen, eraser, shapes, text and pictures right on the page.
+- Ink follows the text: on a reflowing book each stroke is anchored to the words
+  it was written beside, so it stays with them when you change the font size,
+  margins or orientation. On PDFs and comics it keeps its place on the page.
+- Smart highlighter: a highlighter stroke over text becomes KOReader's own
+  highlight, in the pen's colour, and shows in your highlights list. Strokes that
+  run into the margin, wobble or cross lines still snap; over empty space it
+  stays ink.
+- Book notes: a notebook for each book, with a page per chapter, in a window
+  over the page that expands to full screen.
+- The annotation toolbar can sit on any side of the screen and folds away.
+- Erasing over a book cuts strokes where you rub; "Erase whole strokes" brings
+  the old eraser back.
+- Annotations live beside the book's own KOReader data and follow the book when
+  it is moved or renamed. KOReader's Reset keeps them; deleting a book, or
+  "Delete all annotations on this book", puts them in the trash for 30 days.
+- The book gestures are set up for you (swipe up or down the right edge, or
+  two-finger swipes when those are taken), with a notice saying which you got.
+
+#### Pens
+- Pen pressure on pen readers (Kindle Scribe, Kobo stylus): the line follows
+  how hard you press. Switch it in Pen and input.
+- New pens: Ballpoint, Fountain and Calligraphy (with its own nib angle).
+- See-through pens that blend with the page: Highlighter (text stays black on
+  top), Marker and Watercolor.
+- Smudge, which moves ink (and only ink) and mixes colours the way paint does.
+- A compact pen case: up to 20 saved pens, each shown at its real size, "+" for
+  a new pen of any kind, and hold to move, copy or remove one. New readers start
+  with Fineliner, Ballpoint, Pencil, Calligraphy, Highlighter, Watercolor and
+  Smudge.
+- A floating pen strip with your first saved pens, and the pen's colour under
+  the Pen button.
+
+#### Layers
+- Drawings can be drawn in layers, up to five. File, Layers turns them on, and
+  what is drawn so far becomes the first layer.
+- A small strip at the right, shown only while layers are on, adds a layer and
+  picks the one to draw on; tap that one to show or hide it, rename, move,
+  merge down or delete it. Turning layers off merges them into one drawing.
+- Only the layer you draw on is touched: the lasso, both erasers and the paint
+  bucket leave the others alone, and the eraser shows the layers under it as
+  it goes. A stroke under other layers stays under them while it is drawn.
+- Hidden layers are left out of exports and thumbnails.
+- No layer is kept as a picture of its own, so drawing stays as fast as on a
+  plain page.
+
+#### Gestures and pen buttons
+- Choose what each gesture and pen button does, from one list of actions, with
+  a warning when two would clash.
+- By default, holding the pen's side button turns it into a highlighter.
+
+#### Look
+- Dark mode for Ink Away's toolbars, menus and library: Light, Dark or
+  following KOReader's night mode. Your page and colours are never changed.
+- Paper colours: twelve papers on colour screens (cream, sandpaper, legal pad,
+  kraft, blueprint, chalkboard and more) and white or black on grey ones. The
+  ruling and grid take the paper's shade so they always show, black ink and text
+  turn white on a dark paper, and exports come out on the same paper.
+
+#### Help
+- A guide: short cards on what a glance doesn't show, by topic, each with
+  "Show me".
+- A notice the first time Ink Away opens, with the book gestures you got.
+- Test pen and touch, in Settings: shows how your pen, its buttons and your hand
+  arrive, handy for bug reports.
+- Check for updates: Settings, Updates shows the latest release and, apart from
+  it, any newer prerelease, with their notes, and installs them after checking
+  the download. Once a day, only on Wi-Fi that is already on, Ink Away looks by
+  itself and puts a dot on the Settings button when there is something new. You
+  can always go from a prerelease back to the latest release, never to an older
+  one.
+
+#### Android and Boox
+- On a Boox, Ink Away asks the screen for its fast refresh while you draw.
+- On Android readers whose pen KOReader still reports as a finger (before
+  KOReader 2026.08), the pen draws again instead of scrolling the page, and a
+  tip explains slow drawing on readers that need a setting changed.
+
+## Changed
+- Settings are tidier: pen settings live in Pen and input, every setting is in
+  one place, and Settings fits a Paperwhite without scrolling.
+- Watercolor is smoother and three times faster.
+- See-through pens on grey e-ink refresh only what changed as you draw.
+
+## Removed
+- Acrylic and Stipple are no longer in the pen picker (drawings that use them
+  still show them).
+
+## Fixed
+- A stroke ends exactly where the pen lifted (it could stop short).
+- A quick drag on a slider no longer moves the whole menu.
+
+## For developers
+- The code passes luacheck, and the tests (about 3,800 checks, many on
+  KOReader's real drawing, zip and network code) run on every push.
+
 # v3.3.0 · 2026-10-05
 
 The biggest update so far: Ink Away is now a proper notebook app, with a library, a binder-style browser, search, a trash, links and a contents page, and handwriting you can turn into text on the device.
@@ -131,11 +238,3 @@ Rest your hand on the screen while you write — only the pen marks the page.
 ## Fixes
 - Consistent notebook UI and a fix for a crash in Settings.
 - Tool menus now update in place when you switch tools instead of flickering.
-
-# v2.2.0 · 2026-09-17
-
-- Add images (as many as you want) with move, resize, rotate, flip, duplicate and send-to-front.
-- Shape assist snaps rough strokes into clean lines, rectangles, circles and triangles that stay fully editable.
-- Any shape can be tapped or held to move, rotate, flip, duplicate, recolour, resize or delete.
-- Paint-bucket fill now sticks to its shape
-- Faster shape and image dragging, no image-move flash, cleaner triangle snapping, and no black corner on free rotation.

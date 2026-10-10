@@ -1,3 +1,32 @@
+# v26.10.10 · 2026-10-10
+
+## What's Changed
+* Merge: improve_code_quality by @moritz-john in https://github.com/moritz-john/homeassistant.koplugin/pull/28
+* Delay willRerunWhenOnline callback by 0.5s by @moritz-john in https://github.com/moritz-john/homeassistant.koplugin/pull/29
+
+**If you previously used debug_config.lua - this file must be renamed to config.lua**
+
+From the previous release:
+1) Thanks to @mehalter, the plugin now enables Wi-Fi when performing an action and then _tries_ to rerun it once Wi-Fi is on. Works well with KOReader's "Settings > Network > Action when Wi-Fi off: turn on".
+2) The plugin now ships `example_config.lua` instead of `config.lua`, so updating no longer overwrites your personalized `config.lua`. **This doesn't affect existing users.** If no `config.lua` exists, a "Getting Started" menu entry explains what to do.
+
+**New this release:**
+
+- Delay the re-run after Wi-Fi connects by 0.5s, since the device may not be online yet and the re-run would be skipped (seen on KindleBasic5)
+
+Small bug fixes:
+```
+- Give entities without a label a visible placeholder to prevent the menu and dispatcher from crashing
+- Switch from (has_error, response_data) to (result, err)
+- Default missing host/token to "" and make port optional, so config  problems surface as request errors instead of crashes
+- Validate that action is in domain.service format and return a error otherwise
+- Use socketutil timeouts and table_sink instead of the global http.TIMEOUT
+- Use rapidjson.decode's own (decoded, err) return instead of pcall
+- Document statesAsTemplate with an example entity and output
+```
+
+**Full Changelog**: https://github.com/moritz-john/homeassistant.koplugin/compare/v26.10.03...v26.10.10
+
 # v26.10.03 · 2026-10-03
 
 ## What's Changed
@@ -62,17 +91,3 @@ Kobo devices may require a slightly longer delay.
 - Re-add battery information to Home Assistant sensor
 
 **Full Changelog**: https://github.com/moritz-john/homeassistant.koplugin/compare/v26.02.02...v26.02.03
-
-# v26.02.02 · 2026-02-02
-
-- Added title and author metadata to the `koreader_status` Home Assistant sensor attributes
-- Removed battery information from the sensor[^1]
-- Expanded sensor state updates to also trigger on document open and close
-- Added error logging when sending sensor state fails
-- Introduced an `isConnected()` network check for the `sendHeartbeat` feature
-
-**Full Changelog**: https://github.com/moritz-john/homeassistant.koplugin/compare/v26.01.24...v26.02.02
-
-[^1]: Battery information was removed because it only makes sense when the `koreader_status` sensor is updated periodically (e.g. every 5 minutes), which is not currently the case (and I don't see an use case for this feature at the moment).
-
-<img width="1840" height="542" alt="2026-02-02 at 17 33 24 Screenshot" src="https://github.com/user-attachments/assets/e9981525-72e5-4274-a35c-f2a89bc849be" />

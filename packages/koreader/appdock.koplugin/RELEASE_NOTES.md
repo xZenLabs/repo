@@ -1,70 +1,79 @@
-# v7.9.3 · 2026-10-10
+# v7.9.12 · 2026-10-10
 
-# AppDock 7.9.3 — Stabilität und Bedienbarkeit
+# AppDock 7.9.12
 
-## Fehlerkorrekturen
+## Echter Vollbildmodus für YouTube
 
-- Das Page-Key-Hold-Verhalten aus **7.8.51** bleibt erhalten. Powerdialog und Screensaver werden erst im nächsten UI-Zyklus geöffnet, nachdem KOReader den aktuellen Hardware-Tastenwiederholungs-Callback abgeschlossen hat. Dialog und Screensaver verbrauchen verbleibende Wiederholungen der gehaltenen Taste.
-- AppDock-eigene Auswahl-, Eingabe-, Bestätigungs- und Statusdialoge verwenden ihre eigene Tap-Geometrie korrekt. Das beseitigt den Absturz beim Zeichnen eines Dialogs, der entstehen konnte, wenn KOReader eine GestureRange-Callbackfunktion als Geometrie behandelte. AppDock-WLAN-Statusmeldungen bleiben im eigenen Overlay.
-- Draw startet auch auf Geräten, deren Screen-API `getSize()` statt `getWidth()`/`getHeight()` anbietet. Außerdem folgen Canvas und Werkzeug-Buttons mit ihren Touch-Bereichen jetzt den tatsächlichen Bildschirmkoordinaten.
-- Die fehlerhafte **Draw**-Schnellkachel ist durch **Rotate** ersetzt. Die neue Kachel wechselt die von KOReader unterstützten Bildschirmausrichtungen; vorhandene gespeicherte Draw-Kacheln werden bei der nächsten Konfiguration einmalig in eine Rotate-Kachel umgewandelt.
-- Farbvideos stürzten beim Schreiben der BRC2-Frames ab, weil ein KOReader-`ColorRGB32`-Struct über einen `uint32_t*` gespeichert wurde. Der Decoder schreibt nun durch den korrekten Struct-Zeigertyp in das RGB32-BlitBuffer; die fünf reinen Palettenfarben bleiben unverändert.
+Die YouTube-Wiedergabe kann jetzt die gesamte AppDock-Displayfläche nutzen. AppDock-Kopf- und Navigationsleisten werden ausgeblendet, und der Videoplayer erhält den vollständigen Bildschirmbereich.
 
-## Prüfung
+Eine eingeblendete Steuerleiste bietet die Rückkehr zur Bibliothek, Zurück-/Vorwärtsspringen um fünf Sekunden, Wiedergabe/Pause und Neustart. Beim Zurückkehren zur Bibliothek läuft das Video im MiniPlayer weiter. Das zuvor verwendete AppDock-Layout beziehungsweise die Fenstergröße wird beim Verlassen des Vollbildmodus wiederhergestellt.
 
-Alle 12 Lua-Regressionsdateien liefen erfolgreich. Die Tests enthalten jetzt gezielte Prüfungen für den echten Draw-DApp-Hoststart, getSize-only-Geräte, absolute Touch-Geometrie, eigene Dialogaktionen und Tastatureingabe, die Migration der Kachel, den `SetRotationMode`-Event sowie das KOReader-`ColorRGB32`-Pixelformat. Alle Lua-Quelldateien lassen sich mit LuaJIT kompilieren; `git diff --check` ist sauber.
+## Validierung
 
-# v7.9.2 · 2026-10-10
+Alle 12 Lua-Regressionstests bestehen; alle Plugin-Lua-Module und Testskripte kompilieren mit LuaJIT. Der DApp-Test meldet zusätzlich, dass sein optionales externes BWR-Video-Fixture in dieser Umgebung nicht installiert ist.
 
-# AppDock 7.9.2 — Draw-Zeichenfläche korrigiert
+# v7.9.11 · 2026-10-10
 
-## Fehlerkorrektur
+# AppDock 7.9.11
 
-- Die Draw-Werkzeuge und das Zeichen-Canvas werden jetzt in einem KOReader-`OverlapGroup` anhand ihrer vorgesehenen Offsets angeordnet. Das behebt die fehlerhafte Darstellung beim Öffnen der Mal-App, bei der Inhalte am oberen linken Bildschirmrand überlagert werden konnten.
-- Die Zeichenfläche wird im Regressionstest nun über die vollständige Pane-Geometrie aufgebaut; der Test prüft die tatsächliche Toolbar-/Canvas-Positionierung und den weißen Start-Hintergrund.
+## Deutlich schnellere YouTube-Farbkonvertierung
 
-## Prüfung
+Die Farbpackung ersetzt die pixelweise Fehlerdiffusion durch vorberechnete 8×8-Muster. Dadurch muss Lua pro Pixel keine drei Farbfehler mehr berechnen und weitergeben. Farben innerhalb des darstellbaren Palettenbereichs können weiterhin mit mehreren – bei Bedarf allen fünf – exakten Farben Weiß, Schwarz, Rot, Grün und Blau gemischt werden. Neutrale Grautöne und Farben außerhalb des Palettenbereichs behalten die bisherige Paarzuordnung.
 
-Alle 11 Lua-Regressionsdateien liefen erfolgreich. Sämtliche AppDock-Lua-Quelldateien ließen sich mit LuaJIT kompilieren; `git diff --check` meldete keine Formatfehler.
+Das neue geordnete Muster ersetzt die serpentinische Floyd–Steinberg-Textur durch ein regelmäßiges 8×8-Dithermuster. Im isolierten LuaJIT-Benchmark der Farbpackstufe sank die Bearbeitungszeit eines 632×840-Frames in der Entwicklungsumgebung von 28,9 ms auf 1,1 ms (25,6× schneller, nach einmaligem Aufbau der Lookup-Tabellen). Das ist kein End-to-End-Wert für Download, FFmpeg-Decodierung und Dateischreiben; deren Laufzeit hängt weiterhin von Quelle und Gerät ab.
 
-# v7.9.1 · 2026-10-10
+## Lesbare Draw-Werkzeugleiste
 
-# AppDock 7.9.1 — YouTube MiniPlayer, schnellere Farbe und Draw-Kachel
+Die Mal-App verwendet jetzt KOReaders natives Button-Widget statt selbst gezeichneter Kleinstbeschriftungen. Größere, fette Schrift auf einer hellgrauen Fläche verbessert den Kontrast; die Werkzeugaktionen und Touchbereiche bleiben erhalten.
 
-## Änderungen
+## Validierung
 
-- **YouTube-Oberfläche:** Stellt das Watch-Layout aus 7.8.51 wieder her. Videos aus der Bibliothek und „Up next“ öffnen standardmäßig im MiniPlayer; Vollbild bleibt über die ausdrückliche Vollbild-Aktion verfügbar.
-- **Schnellere Farbumwandlung:** Der optionale Fünf-Farben-Pfad nutzt vor der Palette-Ditherung FFmpegs `fast_bilinear`-Scaler statt des rechenintensiveren Lanczos-Filters. Auflösung und Bildrate bleiben unverändert; die Ausgabe enthält weiterhin ausschließlich reines Rot, Grün, Blau, Schwarz und Weiß. Der schnellere Skalierer kann etwas weniger fein wirken.
-- **Draw in Quick Settings:** Eine semantisch gezeichnete Draw-Kachel startet die integrierte Mal-DApp. Sie ist konfigurierbar und auch im Simple Mode verfügbar. Bestehende Kachel-Listen erhalten Draw einmalig; nach einer bewussten Entfernung wird die Kachel nicht automatisch wieder hinzugefügt.
-- Die Wiedergabe-Timing-Verbesserung aus 7.9.0 bleibt erhalten; Änderungen an der MiniPlayer-UI setzen das unmittelbare Video-Startverhalten nicht zurück.
+Alle 12 Lua-Regressionstests bestehen; alle Plugin-Lua-Module kompilieren mit LuaJIT. Der DApp-Test meldet zusätzlich, dass sein optionales externes BWR-Video-Fixture in dieser Umgebung nicht installiert ist.
 
-## Prüfung
+# v7.9.10 · 2026-10-10
 
-Alle 11 Lua-Regressionsdateien liefen erfolgreich; sämtliche AppDock-Lua-Quelldateien ließen sich mit LuaJIT kompilieren und `git diff --check` meldete keine Formatfehler. Ein lokaler synthetischer FFmpeg-Skalierungstest (1280×720 → 600×800, 12 fps, 12 Sekunden) lief mit `fast_bilinear` in 0,174 s gegenüber 0,228 s mit Lanczos (rund 24 % schneller auf dieser Sandbox-CPU; tatsächliche Reader-Hardware kann abweichen).
+# AppDock 7.9.10
 
-# v7.9.0 · 2026-10-10
+## YouTube-Farbvideos mit Mehrfarben-Fehlerdiffusion
 
-# AppDock 7.9.0 — Draw, YouTube-Farbe und Dialoge
+Die Farbkonvertierung mischt nun über benachbarte Pixel mehr als zwei der fünf erlaubten Palettefarben. Zuvor wurde für jeden Quellpixel unabhängig nur das beste Farbpaar ausgewählt; Farbreste wurden nicht an Nachbarpixel weitergegeben. Ein serpentinischer Floyd–Steinberg-Schritt diffundiert diese Reste jetzt räumlich, sodass passende Bildbereiche beispielsweise Schwarz, Rot und Grün gemeinsam nutzen können. Die tatsächlichen Ausgabepixel bleiben weiterhin exakt Weiß, Schwarz, Rot, Grün oder Blau.
 
-## Neu in 7.9.0
+Die Palette begrenzt weiterhin den darstellbaren Farbumfang: Farben außerhalb ihres Mischbereichs – etwa leuchtendes Vollgelb – können nur angenähert werden, nicht exakt dargestellt werden.
 
-- **Eigene AppDock-Dialoge:** Auswahl-, Eingabe-, Bestätigungs- und Statusdialoge der AppDock-Oberfläche verwenden jetzt ein gemeinsames, kontrastreiches AppDock-Overlay. WLAN-Schaltvorgänge zeigen AppDock-eigenen Verbindungsstatus statt KOReaders transienter Ein-/Ausschalt-Popups.
-- **Optionale YouTube-Farbwiedergabe:** Der neue BRC2-Framepfad nutzt eine feste Palette aus Weiß, Schwarz sowie reinem Rot, Grün und Blau. Geordnetes Dithering kann räumlich zwischen diesen Palettenfarben wechseln; RGB-Mischpixel werden nicht ausgegeben. Monochromes BWR1/BWR2 bleibt abwärtskompatibel.
-- **Draw-DApp:** Schnelle Zeichenfläche mit Stift, Radierer, vier Pinselgrößen, Linie, Rechteck, Kreis, Füllwerkzeug und bis zu sechs Ebenen.
-- Zeichnungen lassen sich als begrenztes, nicht ausführbares `.adraw`-Projekt speichern und laden oder über ein bereits vorhandenes `ffmpeg` als JPEG exportieren.
-- Optionales Dithering für die fünf reinen Farben. Druck- und Stylus-Tastenfelder werden genutzt, sofern KOReader sie im Eingabeereignis bereitstellt; Geräteunterstützung variiert.
-- Bestehende Installationen erhalten Draw bei der Layoutmigration einmalig als Launcher-Kachel hinter YouTube. Eine später manuell entfernte Kachel wird nicht erneut angelegt.
+## Audio endet beim Verlassen der App
 
-## Umfangsgrenze
+AppDock signalisiert nun direkt die PID des laufenden GStreamer-Players, statt sich auf die möglicherweise abweichende Prozessgruppen-PID von `setsid` zu verlassen. Dadurch wird die Wiedergabe beim Verlassen der YouTube-App zuverlässig gestoppt; der PCM-Datenlieferant beendet sich anschließend ebenfalls.
 
-AppDock-eigene Oberflächen verwenden nun AppDock-Dialoge. Eigenständige Ansichten und Dialoge, die KOReader selbst oder fremde Plugins außerhalb der AppDock-Oberfläche öffnen, bleiben unter deren Kontrolle; AppDock verändert diese nicht global.
+## Validierung
 
-# v7.8.51 · 2026-10-10
+Alle 12 Lua-Regressionstests bestehen; die Lua-Module kompilieren mit LuaJIT. Neue Farbtests prüfen eine tatsächliche Dreifarbmischung aus Schwarz, Rot und Grün.
 
-# AppDock 7.8.51
+# v7.9.9 · 2026-10-10
 
-## Flüssigere Wiedergabe auf E-Ink-Geräten
+# AppDock 7.9.9
 
-Beim Start der YouTube-Wiedergabe deaktiviert der Player KOReaders Einstellung `color_rendering` temporär. Dadurch verwendet KOReader während der Wiedergabe den schnelleren Rendering-Pfad, was besonders auf Kobo-MTK-Geräten zu flüssigerem Video führt.
+## Draw-Absturz auf Farbgeräten behoben
 
-Beim Stoppen des Players wird der vorherige Wert exakt wiederhergestellt. Das gilt auch dann, wenn die Einstellung vorher nicht in der KOReader-Konfiguration vorhanden war. Die Änderung wird über `ColorRenderingUpdate` sofort an KOReader gemeldet.
+Die Draw-Zeichenfläche vergleicht Farbwerte des BlitBuffers nicht mehr mit einem `nil`-Sentinel. Auf Farbgeräten sind diese Werte FFI-CData; ihr Vergleich konnte beim Start einen Fehler in der Gleichheits-Metamethode auslösen. Ein Regressionstest deckt diesen Farbpfad ab.
+
+## Natürlichere YouTube-Farben durch Dithering
+
+Die BRC2-Palettenzuordnung bewertet Kandidaten nun in einem farbempfindlichen YUV-Farbraum. So werden Mischfarben wie Gelb, Cyan und Magenta durch Dithering mit den passenden reinen Grundfarben dargestellt, statt überwiegend in Schwarzweiß oder mit unpassenden Farbtönen zu erscheinen. Die Ausgabe bleibt auf die fünf erlaubten Farben beschränkt.
+
+## Kobo-MTK-Audiowiedergabe wiederhergestellt
+
+Der MediaTek-GStreamer-Pfad verwendet wieder rohe PCM-Daten über `fdsrc`, wie im funktionierenden Release 7.8.51, statt vom optionalen `wavparse`-Plugin abzuhängen. Der tatsächliche WAV-Datenoffset wird auch bei zusätzlichen RIFF-Metadaten berücksichtigt; das PCM-Kanal-Layout ist explizit angegeben. Pause und Stopp steuern die zugehörige Prozessgruppe.
+
+## Validierung
+
+Alle 12 Lua-Regressionstests bestehen. Die Plugin-Module kompilieren mit LuaJIT; außerdem wurde die GStreamer-PCM-Pipeline mit einem Test-Sink und einer WAV-Datei mit zusätzlichem `LIST`-Chunk geprüft.
+
+# v7.9.8 · 2026-10-10
+
+# AppDock 7.9.8
+
+## Fix: lesbarer Text in AppDock-Dialogen
+
+Korrigiert den Kontrast der neuen AppDock-eigenen Dialoge. Titel, Aktionsbeschriftungen und Seitennavigation verwenden nun schwarze Schrift auf weißen oder hellgrauen Flächen. Schwarze Flächen hinter Text wurden entfernt, damit die Beschriftungen auch auf KOReader-Renderpfaden mit invertierter Textdarstellung erkennbar bleiben.
+
+Ein Regressionstest prüft die Textfarbe und die hellen Dialogflächen.

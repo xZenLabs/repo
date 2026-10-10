@@ -1,3 +1,10 @@
+# v7.5.4 · 2026-10-10
+
+Changed
+- "Typical chapter length": Books with very many short chapters no longer have half of their
+  real chapters discarded, and books where a few huge chapters hold most of the
+  text are no longer dragged down by a pile of tiny entries.
+
 # v7.5.3 · 2026-10-10
 
 ### Changed
@@ -48,16 +55,3 @@
 
 ### Notes
 - The goal streak applies the currently set goal to the whole history. If you edit or delete reading data in the statistics database, use **Reload data** to refresh the cached streak.
-
-# v7.4.5 · 2026-10-09
-
-### Changed
-- Average length replaced with **"Typical length":**
-  It is the median length of the real chapters, not a mean over all TOC entries. Entries that aren't real chapters are filtered out first:
-  1. Entries of 1 page are dropped (title page, dedication, part dividers).
-  2. Entries under 1% of the whole book's pages are dropped, however many there are, so stubs can't dominate even when they outnumber chapters.
-  3. Entries under 20% of the median of what's left are dropped, repeated until nothing more falls out (max 8 passes).
-  4. The result is the median of the remaining entries. In time mode it is multiplied by the average time per page.
-  If filtering would leave nothing, all entries count.
-  Example: chapters of 1, 2, 132, 139, 12, 2, 1 min now give about 2:15
-  instead of a value dragged down by the short entries.

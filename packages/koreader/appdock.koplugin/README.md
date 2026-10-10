@@ -1,6 +1,6 @@
 # AppDock Homescreen für KOReader
 
-**AppDock** ist ein KOReader-Plugin für einen anpassbaren Homescreen *innerhalb* von KOReader. Version **7.9.3** erhält das in 7.8.51 behobene Verhalten bei gehaltenen Blättertasten, repariert Dialoge, Draw-Start und Farbvideo-Wiedergabe und ersetzt die Draw-Schnellkachel durch **Rotate**. [Details](RELEASE_NOTES_7.9.3.md).
+**AppDock** ist ein KOReader-Plugin für einen anpassbaren Homescreen *innerhalb* von KOReader. Version **7.9.12** ergänzt einen echten YouTube-Vollbildmodus mit Bildschirmfüllung, Player-Steuerung und Rückkehr zum weiterlaufenden MiniPlayer. [Details](RELEASE_NOTES_7.9.12.md).
 
 > **E-Ink-Ansatz:** AppDock übernimmt bewusst Androids Formensprache, nicht dessen Daueranimationen, Unschärfen oder Transparenzeffekte. Auf E-Ink wechseln App-Seiten und Recently-used-Drawer direkt und ohne Zwischenanimation. Damit bleibt die Darstellung auf monochromen Readern kontrastreich, sparsam und frei von unnötigem Ghosting.
 
@@ -28,6 +28,14 @@
 
 > **7.5.0:** Die erste Homescreen-Seite erhielt eine gebrandete **DuckDuckGo-Suchleiste**; der AppStore wurde mit Suchfeld, Empfehlungskarten, Installationsaktionen und unterer Kategorienavigation neu gestaltet. Angezeigt werden weiterhin nur echte Katalogdaten, ohne erfundene Bewertungen oder Screenshots. Details stehen in [`RELEASE_NOTES_7.5.0.md`](RELEASE_NOTES_7.5.0.md).
 
+> **7.9.11:** Beschleunigt YouTube-Farbvideos mit vorberechneten Mehrfarben-Dithermustern und verbessert die Lesbarkeit der Draw-Schaltflächen. [Details](RELEASE_NOTES_7.9.11.md).
+> **7.9.10:** YouTube-Farbvideos kombinieren nun durch Fehlerdiffusion mehr als zwei Palettefarben; der Audioprozess wird beim Verlassen der App zuverlässig beendet. [Details](RELEASE_NOTES_7.9.10.md).
+> **7.9.9:** Behebt den Draw-Absturz auf Farbgeräten, verbessert das Dithering für YouTube-Mischfarben und stellt den bewährten rohen PCM-Audiopfad für Kobo-MTK wieder her. [Details](RELEASE_NOTES_7.9.9.md).
+> **7.9.8:** Korrigiert den Kontrast der neuen AppDock-Dialoge: Titel, Aktionslabels und Seitennavigation erscheinen mit schwarzer Schrift auf hellen Flächen, damit die Beschriftungen auf allen KOReader-Renderpfaden lesbar bleiben. [Details](RELEASE_NOTES_7.9.8.md).
+> **7.9.7:** Beschleunigt die S/W- und BRC2-Farbkonvertierung, stärkt AppDock-eigene Dialoge und Meldungen, härtet Draw gegen unvollständige Displaywerte und ergänzt verschiebbare sowie skalierbare DApp-Fenster als Beta. Blättertasten ändern die Helligkeit jetzt in allen AppDock-Hauptoberflächen; ihre gedrückt gehaltenen Power-/Bildschirmschoner-Aktionen bleiben erhalten. [Details](RELEASE_NOTES_7.9.7.md).
+> **7.9.6:** Setzt die BWR2/BRC2-Decodierung bei übersprungenen Frames im selben Keyframe-Block am letzten Cache-Frame fort, statt bereits decodierte Pakete erneut zu verarbeiten. [Details](RELEASE_NOTES_7.9.6.md).
+> **7.9.5:** Zieht Renderzeit vom nächsten Frameintervall ab und verwendet den Decoder-Framebuffer wieder, statt pro Frame einen neuen anzulegen. [Details](RELEASE_NOTES_7.9.5.md).
+> **7.9.4:** Beschleunigt die BRC2-Farbframe-Expansion durch vorberechnete FFI-Paletteneinträge und direkten Zugriff auf Pixelindizes; Farbpalette und Graustufen-Fallback bleiben unverändert. [Details](RELEASE_NOTES_7.9.4.md).
 > **7.9.3:** Bewahrt das Page-Key-Hold-Verhalten aus 7.8.51; repariert AppDock-eigene Dialoge, Draw-Start/Touchbereiche und BRC2-Farbvideo-Wiedergabe; ersetzt die Draw-Schnellkachel durch **Rotate** und migriert gespeicherte Kacheleinstellungen einmalig. [Details](RELEASE_NOTES_7.9.3.md).
 > **7.9.2:** Korrigiert die Draw-Zeichenfläche: Werkzeugleiste und Canvas werden nun von einem `OverlapGroup` anhand ihrer absoluten Offsets platziert, statt am oberen linken Ursprung zu überlagern. [Details](RELEASE_NOTES_7.9.2.md).
 > **7.9.1:** Stellt die YouTube-Oberfläche aus 7.8.51 mit MiniPlayer für alle Videos als Standard wieder her; Vollbild bleibt eine bewusste Aktion. Die Farbkonvertierung verwendet für schnellere Skalierung `fast_bilinear`, ohne den reinen Fünf-Farben-Ausgabepfad oder die eingestellte Auflösung/FPS zu ändern. Draw erhält eine konfigurierbare Quick-Settings-Kachel, die bei vorhandenen Installationen einmalig ergänzt wird. [Details](RELEASE_NOTES_7.9.1.md).
@@ -360,3 +368,5 @@ Die Version-1.0-Oberfläche konzentrierte sich auf eine **ruhige, zusammenhänge
 [7] [KOReader: File-Manager-Hilfsfunktionen und Bibliotheksordner](https://github.com/koreader/koreader/blob/master/frontend/apps/filemanager/filemanagerutil.lua)
 
 [8] [KOReader: ReaderUI und sicherer Dokumentstart](https://github.com/koreader/koreader/blob/master/frontend/apps/reader/readerui.lua)
+> **7.9.12:** YouTube kann jetzt den gesamten AppDock-Bildschirm nutzen; die Steuerleiste bietet Wiedergabeaktionen und kehrt ohne Unterbrechung zum MiniPlayer zurück. [Details](RELEASE_NOTES_7.9.12.md).
+> **7.9.11:** Beschleunigt YouTube-Farbvideos mit vorberechneten Mehrfarben-Dithermustern und verbessert die Lesbarkeit der Draw-Schaltflächen. [Details](RELEASE_NOTES_7.9.11.md).

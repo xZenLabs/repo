@@ -1,0 +1,18 @@
+# Handwrite plugin for KOReader
+# https://github.com/tigeregreat/handwrite.koplugin
+# zenpm:auto-scraped
+id=handwrite
+name=Handwrite
+version=source
+description=About ： Handwrite directly on book pages in KOReader — finger-only inking with stroke beautification, sidecar persistence and e-ink-aware refresh scheduling. Tuned for Kindle Paperwhite 5 (1236×164...
+author=tigeregreat
+category=media
+platforms=koreader
+dependencies=
+source=https://github.com/tigeregreat/handwrite.koplugin
+stars=5
+updated_at=2026-10-10T18:15:22Z
+readme_url=packages/koreader/handwrite.koplugin/README.md
+readme_hash=30bf476b8ec04bc9cfce2da4d91d7c4a8dca2052
+source_type=source
+source_url=https://codeload.github.com/tigeregreat/handwrite.koplugin/zip/refs/heads/main

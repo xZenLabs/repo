@@ -146,6 +146,48 @@ The tap action setting also applies to stories in the reading list:
 - **Open directly** – Opens the story immediately
 - **Save only** – Downloads the story to your save folder and removes it from the list
 
+## Offline Mode
+Download the stories of the feeds you choose in one go, then read them with Wi-Fi off. This is made for devices that are slow to get online. Open it from the **Offline** row of the account list; the number next to it is how many downloaded stories are still unread.
+
+### Choosing Feeds
+- **Offline** → **Choose feeds…** lists your accounts, local ones included. Open an account and its folders, and tap a feed to tick (✓) or untick it. Virtual feeds such as **★ All Unread**, FreshRSS's special feeds and CommaFeed tags can be picked too
+- Folders and accounts show how many feeds are ticked inside them
+- Long-press a folder to **Tick all feeds** or **Untick all feeds** in it, subfolders included. Tick all leaves out the folder's virtual feeds (★ All Feeds / ★ All Unread), which would only download the same stories twice
+- The selection is saved on every tap and kept for next time. **Selected feeds** lists everything ticked (tap one to untick it), and **Clear all** starts over
+- Picking from a remote account needs a connection, since its feed list is loaded from the server
+
+### Downloading
+**Download last selection** (in Offline) or **Download…** (in the picker) shows the options before starting. Tapping a row changes its value. Every row opens with the value you used last time:
+- **Stories per feed**: 5, 10, 20 or 50
+- **Only unread**: skip stories already read on the server, or read in Offline Mode
+- **Content**: *full article* goes through your sanitizers, like opening a story. *Feed text only* saves the text the feed itself carries: much faster, no page fetch, but some feeds only carry a summary
+- **Download images**: on or off. With images off, the article is saved without them
+- **Previous downloads**: *Delete all*, *Delete read only* or *Keep all*. Old stories are only deleted once the feed's new story list has loaded, so a feed that fails keeps what it had
+- **Turn Wi-Fi off when done** (devices that can toggle Wi-Fi)
+
+With *full article*, a feed's articles are first fetched three at a time in the background ("Fetching articles: 4 / 20"), then saved one by one with their images. Instaparser calls stay at least 2 s apart across the workers (`seconds_between_calls`). Diffbot and FiveFilters on RapidAPI never run in parallel (Diffbot's free plan allows about one call per 10 seconds, and RapidAPI counts a monthly quota): a story that needs them is fetched afterwards, one at a time, through your whole sanitizer chain as usual. For the most speed, put Instaparser before Diffbot in your sanitizer order.
+
+The progress message shows the feed and story being downloaded; tap it to cancel. Whatever was already downloaded is kept.
+
+### Reading Offline
+- Tap a feed in **Offline** to see its downloaded stories (bold = unread), and tap a story to open it. It works without any connection
+- The way back from an article (button, Back key, end of the article) returns to this list, and **Next** opens the next downloaded story
+- Long-press a story to mark it read or unread, or delete it. Long-press a feed to mark all its stories read, delete all its downloads, or remove it from the selection
+
+### Syncing Read States
+Stories you read or mark in Offline Mode are marked on the server too:
+- **Read-state sync: automatic** (default): it happens when the device comes online, before a download, and before you open the account. It runs quietly and shows a short message. It asks first only when it would take more than 20 requests to the server
+- **Read-state sync: manual**: nothing is sent until you tap **Sync read states (N pending)** in Offline
+- Changes that could not be sent stay pending and are tried again next time
+- CommaFeed, FreshRSS, Miniflux, NewsBlur and Feedbin send up to 100 stories per request; Fever API sends one request per story
+- Local feeds need no sync: reading the downloaded copy marks the story read in the feed too
+
+### Gestures and Profiles
+Three actions can be assigned to a gesture or used in a Profile:
+- **RSS Reader: offline list** opens Offline Mode
+- **RSS Reader: download selected feeds** starts a download without the dialog, with the values used last time. Together with *Turn Wi-Fi off when done*, a single gesture connects, downloads and disconnects
+- **RSS Reader: sync offline read states** sends the pending read states
+
 ## Tap Action on Feed Items
 Configure what happens when you tap a story in the feed list:
 - Open **RSS Reader** → **Settings** → **Tap action on feed items**
@@ -239,7 +281,7 @@ asset cache — so richer metadata never costs an extra request.
 Sanitizers fetch and normalize full-page article HTML before it is shown in KOReader. When you open a story the plugin iterates over the active sanitizers in the order configured under `sanitizers` in `rssreader_configuration.lua`. Each sanitizer tries to produce cleaned HTML; if it fails (for example, by returning empty content or hitting an error) the plugin automatically falls back to the next sanitizer in the list, and eventually to the original feed content if none succeed.
 
 - **Feedbin** – `type = "feedbin"`. Uses the full-article extraction Feedbin runs for every entry (Mercury Parser), through a pre-signed link that comes with each story, so it needs **no token and has no quota**. It only applies to stories from a Feedbin account; for any other story it is skipped without a request and the next sanitizer is tried. Like the other sanitizers it ships inactive: set `active = true` on its entry, which has `order = 0` so Feedbin stories try it first; in testing an extraction took about **0.2 s**. Since it counts as a successful sanitize, images follow `download_images_when_sanitize_successful`
-- **Instaparser** – Uses the Instaparser Article API to extract clean article content. Requires an API token from [instaparser.com](https://instaparser.com/). The free tier provides **1,000 requests per month**. Set the token in the sanitizer configuration entry. In measurements over Turkish news and blog feeds it answered in **1.4–4.4 s** (median 2.9 s) and tolerated back-to-back calls without rate limiting, which makes it a good first entry.
+- **Instaparser** – Uses the Instaparser Article API to extract clean article content. Requires an API token from [instaparser.com](https://instaparser.com/). The free tier provides **1,000 requests per month**. Set the token in the sanitizer configuration entry. In measurements over Turkish news and blog feeds it answered in **1.4–4.4 s** (median 2.9 s), which makes it a good first entry. The Trial plan allows **1 call per second**; one article at a time never gets there, but Offline Mode's parallel downloads would, so the plugin spaces Instaparser calls **2 s** apart across all of them. Set `seconds_between_calls` in the Instaparser entry to change that (for a paid plan, say), or `0` to turn the spacing off. A call that is rate-limited anyway is retried once.
 - **Diffbot** – Uses the Diffbot Analyze API to extract article bodies. Diffbot requires a token tied to a work e-mail domain and the free tier currently grants **10,000 credits per month**. Set the token in the sanitizer configuration entry.
   Diffbot extracts server-side and sends nothing until it is finished, so it is considerably slower than Instaparser: measured over the same Turkish feeds it took **3.6–23.4 s** (median 9.1 s) per article. It is also rate-limited far below its credit budget — the free `kgfree` plan allows roughly one call every 10 s and answers `429` with a `Retry-After` — so six back-to-back articles produced one success and five rejections. The plugin honours `Retry-After` once (up to 12 s) before falling through to the next sanitizer.
   Two knobs matter here. `timeout` (milliseconds, default **30000**) is Diffbot's own budget for fetching the target page; without enough of it Diffbot gives up and returns `errorCode 500` on slow sites. The socket budget is derived from it automatically. Both are ceilings, not delays: a page Diffbot extracts in 3 s still opens in 3 s.

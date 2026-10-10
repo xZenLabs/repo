@@ -1,3 +1,42 @@
+# v1.20.0 · 2026-10-10
+
+# RSS Reader v1.20.0
+
+## ✨ New: Offline Mode
+
+Download the stories of the feeds you choose in one go, then read them with Wi-Fi off. Built for devices that are slow to get online. Open it from the new **Offline** row in the account list. The number next to it is how many downloaded stories are still unread.
+
+### Choosing feeds
+- Pick feeds from any account, local ones included. You can also pick virtual feeds such as **★ All Unread**, FreshRSS special feeds and CommaFeed tags.
+- Long-press a folder to **Tick all** or **Untick all** feeds in it, subfolders included. Tick all skips virtual feeds, so no story is downloaded twice.
+- Your selection is saved on every tap and stays ticked for next time.
+
+### Downloading
+- Options: stories per feed (5/10/20/50), only unread, full article or feed text only, images on or off, what to do with previous downloads, and turn Wi-Fi off when done.
+- Every option opens with the value you used last time.
+- Full articles are fetched three at a time in the background. Diffbot and FiveFilters (RapidAPI) never run in parallel, so their rate limits and quotas are respected.
+- Tap the progress message to cancel. Stories already downloaded are kept.
+
+### Reading offline
+- Downloaded stories open without any connection. **Next** at the end of an article opens the next downloaded story.
+- Long-press a story to mark it read or unread, or to delete it. Long-press a feed to mark all its stories read, delete its downloads, or remove it from the selection.
+
+### Syncing read states
+- Read states from offline reading are sent to the server automatically: when the device comes online, before a download, and before you open the account. A manual mode is also available.
+- Changes that could not be sent stay pending and are retried next time.
+- CommaFeed, FreshRSS, Miniflux, NewsBlur and Feedbin send up to 100 stories per request.
+
+### Gestures and Profiles
+Three new actions:
+- **RSS Reader: offline list**
+- **RSS Reader: download selected feeds**: starts a download with your last options and no dialog
+- **RSS Reader: sync offline read states**
+
+Combined with *Turn Wi-Fi off when done*, a single gesture connects, downloads and disconnects.
+
+## 🐛 Fixes
+- A restored feed that comes back empty (for example **All Unread** after you read its last story) no longer leaves only "No stories available." on screen. The plugin now forgets that feed and returns to where you opened it from.
+
 # v1.19.0 · 2026-10-09
 
 ## v1.19.0
@@ -123,16 +162,3 @@ the plugin falls back to that automatically.
 - The README documents the measured speed gap: Diffbot is ~3× slower than
   Instaparser and rate-limited on the free plan, so listing Instaparser first
   is usually the better default.
-
-# v1.17.0 · 2026-09-21
-
-## What's new
-
-- **Faster article downloads.** Images in an article are now fetched in parallel
-  (4 at a time) instead of one after another, so opening an image-heavy article
-  is noticeably quicker. You can still cancel mid-download.
-- **FreshRSS favourites.** Star and unstar articles from FreshRSS, and browse
-  everything you've starred in its own list — the same way the other backends
-  already worked.
-- **Fixed: FreshRSS showed no feeds.** Opening a feed or folder returned a 404,
-  which left the feed list empty. Feed and folder browsing works again.
