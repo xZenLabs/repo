@@ -1,3 +1,11 @@
+# v1.9.0-dev.1 · 2026-10-10
+
+## [1.9.0-dev.1](https://github.com/pierspad/notebook.koplugin/compare/v1.8.0...v1.9.0-dev.1) (2026-10-10)
+
+### Features
+
+* add clickable gallery folder breadcrumbs and direct home navigation ([97c0507](https://github.com/pierspad/notebook.koplugin/commit/97c05075596ad6740d186ced55b38af293787b25))
+
 # v1.8.0-dev.1 · 2026-10-09
 
 ## [1.8.0-dev.1](https://github.com/pierspad/notebook.koplugin/compare/v1.7.2...v1.8.0-dev.1) (2026-10-09)
@@ -33,11 +41,3 @@
 ### Bug Fixes
 
 * show plugin version only in gallery header ([38fcfd5](https://github.com/pierspad/notebook.koplugin/commit/38fcfd52213e1f5b60dd2bbe9d107c3b37ef49c8))
-
-# v1.5.0-dev.1 · 2026-09-28
-
-## [1.5.0-dev.1](https://github.com/pierspad/notebook.koplugin/compare/v1.4.0...v1.5.0-dev.1) (2026-09-28)
-
-### Features
-
-* improve notebook page navigation and undo responsiveness ([8a5b418](https://github.com/pierspad/notebook.koplugin/commit/8a5b4180df33c6948f665a6a4d9ee190055a1ce8))

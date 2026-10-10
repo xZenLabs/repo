@@ -1,5 +1,10 @@
 # v1.5.3 · 2026-10-10
 
+## Bug fixes
+
+- **No more crash on Android while the file browser builds covers.** Opening a folder of local `.cbz` files or `.meguru` streams could close the app: KOReader builds covers in a background process, and that process was asking Android two questions only the main one may ask — the answer it got was an abort. Both are gone; those answers are now taken in the main process ([#4](https://github.com/Craftwork2720/meguru/issues/4))
+- Everything else is untouched: reading, panel view, two-page view and streaming are unchanged, and covers outside Android are fetched exactly as before
+
 **Full Changelog**: https://github.com/Craftwork2720/meguru/compare/v1.5.2...v1.5.3
 
 # v1.5.2 · 2026-10-10

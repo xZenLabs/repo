@@ -1,3 +1,36 @@
+# v5.4.0 · 2026-10-10
+
+- Each shelf can now have its own theme (#495). Choose one in the new Theme library: a card for each theme, and the shelf behind changes as you tap. Shelves you leave alone use your Default theme.
+- Any theme can be edited. Change its wallpaper, plank, colours or ornaments and the changes stay with that theme; Reset in the Theme library puts it back.
+- Your own wallpaper, plank and colours are now a theme of their own, Custom theme, and choosing a pack no longer overwrites them. There is also a new built-in Plain theme: no wallpaper, Oak plank, default colours.
+- Every ornament pack can be chosen as a theme.
+- Your shelf looks the same after updating: a pack you were using becomes your Default theme, and your own settings become Custom theme.
+- One Theme menu replaces Shelf theme and Wallpaper, ornaments and colours. Shelf style (long-press a shelf) also starts with a Theme row.
+- Shelf of shelves: a new shelf source that holds other shelves, as many levels deep as you like, each with all the options of any shelf. On Spines it shows the books from all of them (#489).
+- Taking a face-out book off a spine shelf now shows it in 3D, pulled off the shelf and turned so you see its pages and boards.
+- Ornaments no longer stand in the same places on every page, and each shelf keeps its own ornaments in its own order. Swap and Shuffle this shelf only change the shelf you're on.
+- Custom text below covers: Settings > Cover display > Show text below covers > Custom… builds the line from tokens, e.g. %book_pct · %size for how far you've read and the file size.
+- Show text below groups: a separate line under series and other stacks, so you can have titles under books and the author under series (#486). Choose None, Author or Custom… in Settings > Cover display.
+- Panel shading is now in Theme > Wallpaper and part of the theme, so a pack can bring its own. Two new options sit with it: Blur wallpaper behind panels, and Panel behind Covers shelves for the same solid panel list view has (#483).
+- The shelf editor applies each change as you make it, so Close replaces Cancel and Save.
+- The Kobo shelf is now a shelf source: add a shelf and choose Kobo library. The Kobo setting under Advanced is gone.
+- Other plugins can now add their own shelf sources (#452). See SOURCE_API.md.
+- Moved: Extra wallpaper folder is now under Settings. Colours > Colours for: Light | Dark switches the set you're editing without turning on night mode. Transparent is now a choice in Colours > Shelf menu background.
+- For pack makers: plank_solid plank ends; in theme.json a "hero" ornament for the pack's card and panel_shading, panel_blur and covers_panel; a per-piece "trim" in pack.json.
+- Fix: on a shelf with a filter, opening a series or other stack shows all its matching books, not only the first (#485).
+- Fix: in list view, a book marked finished without being opened shows a full progress bar (#487).
+- Fix: books from Calibre-Web no longer start their description with its RATING, TAGS and SERIES lines, books already downloaded included (#490).
+- Fix: on a new KOReader install with no home folder set, Home shows the device's books instead of none.
+- Fix: closing a picker while its search keyboard was open no longer leaves the keyboard behind with KOReader looking frozen.
+- Fix: an ornament in the bottom-left corner no longer takes taps meant for the start menu button.
+- Fix: Transparent panel shading no longer makes the shelf menu transparent too. If you had that look, it is kept as Shelf menu background: Transparent.
+- Fix: with a plank design, hanging ornaments stay on the wall instead of overlapping a plank, and plank ends are no longer cut short after an animated page turn.
+- Fix: switching a shelf to another style and back no longer changes the size of the top panel.
+- Fix: covers added by a fallback cover patch no longer disappear after the first draw (#500).
+- Fix: under Most recently read on a series shelf, adding a book no longer counts as reading it: unread books, and the series they join, no longer jump to the front.
+- Fix: every top panel progress bar style (Rounded, Metro, Wave, Pacman) now draws without Bookends installed; the default Rounded bar was square without it.
+- Fix: a UI font with no italic file no longer fills the log with font errors (#501, thanks @Tsukumi233).
+
 # v5.3.1 · 2026-10-03
 
 - Fix: a series, author, genre or collection opened from book details shows all of its books again, instead of only those matching the shelf you opened it from (#480).
@@ -60,11 +93,3 @@
 - Fix: Brackets in Chinese titles on spines are now turned to match the vertical text (#462).
 - Fix: The clock and battery in the full screen micro-modules view now keep up with the time instead of staying as they were when it opened.
 - Slovak translation now says "doplnok" instead of "plugin", matching KOReader (from @misko903's PR #467).
-
-# v5.2.1 · 2026-09-26
-
-- New option under the wallpaper image pickers: Invert wallpaper in night mode (off by default), so a light wallpaper turns dark when the shelf is in night mode.
-- Fix: Colours you pick for the progress bar, shelf menu background, badges, bookmarks, the selected shelf button and text now show in colour on colour screens instead of grey.
-- Fix: A colour picked in night mode, or with the shelf theme pinned to light or dark, now shows as the colour you picked rather than its opposite.
-- Fix: Titles on generated covers no longer get cut short when they would fit at a slightly smaller size (#457).
-- Fix: "First unread in series" on spine shelves no longer faces out a second book when a series runs across a page break (#458).

@@ -1,0 +1,23 @@
+# Cozyhome plugin for KOReader
+# https://github.com/thekimberleyann/cozyhome.koplugin
+# zenpm:auto-scraped
+id=cozyhome
+name=Cozyhome
+version=1.2.0
+description=Custom KOReader plugin for Kobo e-readers. Cozy home screen, highlight browser, and flashcard review with spaced repetition similar to anki.
+author=thekimberleyann
+category=theme
+platforms=koreader
+dependencies=
+source=https://github.com/thekimberleyann/cozyhome.koplugin
+stars=5
+updated_at=2026-10-10T13:20:22Z
+published_at=2026-02-24T02:27:16Z
+readme_url=packages/koreader/cozyhome.koplugin/README.md
+readme_hash=0f4c1160b822b7187ad2bb9bf6a67f85125bb519
+release_notes_url=packages/koreader/cozyhome.koplugin/RELEASE_NOTES.md
+release_notes_hash=d39716f60bb40a25feb7a453de339106b40aa27ddc0adf4531007a2c5f569d00
+releases=[{"tag_name":"v1.2.0","assets":[{"name":"cozyhome.koplugin-v1.2.0.zip","url":"https://github.com/thekimberleyann/cozyhome.koplugin/releases/download/v1.2.0/cozyhome.koplugin-v1.2.0.zip","size":130832,"digest":"sha256:d84a9649fc9aa7b8b79c1b5688f145a89d518b298f80561bee392153bbe42762"}]},{"tag_name":"v1.1.1","assets":[{"name":"cozyhome.koplugin-v1.1.1.zip","url":"https://github.com/thekimberleyann/cozyhome.koplugin/releases/download/v1.1.1/cozyhome.koplugin-v1.1.1.zip","size":315083,"digest":"sha256:b46da7e1fa22d79b9010e2afc0613c99a3d7bfc2787ab9019d76cafc2ec3ec9f"}],"name":"v1.1.1"},{"tag_name":"v1.1.0","assets":[{"name":"cozyhome.koplugin-v1.1.0.zip","url":"https://github.com/thekimberleyann/cozyhome.koplugin/releases/download/v1.1.0/cozyhome.koplugin-v1.1.0.zip","size":128848,"digest":"sha256:c2932cbd328b1e4526a3590c58ed6a2a7a0a42a931f55881b766d5a6a038e582"}],"name":"v1.1.0"},{"tag_name":"v1.0.0","assets":[{"name":"cozyhome.koplugin-v1.0.0.zip","url":"https://github.com/thekimberleyann/cozyhome.koplugin/releases/download/v1.0.0/cozyhome.koplugin-v1.0.0.zip","size":119825,"digest":"sha256:5fb4d7a39c26973f5a2bb682bdaa81ba222b3563ce4b918de407cee0050b59b3"}],"name":"Cozy Home v1.0.0"}]
+source_type=release
+source_asset=cozyhome.koplugin-v1.2.0.zip
+size=130832
