@@ -1,3 +1,16 @@
+# v6.3.5 · 2026-10-30
+
+- feat(readtime): preserve complete offline reading-time upload implementation
+- fix(readtime): adapt Web outbox to upstream and preserve close tails
+- fix(readtime): preserve upstream Web reporting and isolate E-Ink outbox
+- 修复弹窗空白和美化评论获取进度条
+- 实现 Web/E-Ink 智能阅读时间同步与离线补传，修复授权和同步稳定性问题，并全面优化菜单交互逻辑及黑白 SVG 图标体系
+- 整合优化阅读时间记录与同步、评论下载及下一章自动预载，统一主页快捷操作和多级菜单，并新增 KOReader 原生锁屏支持
+- 修复评论菜单调整后导致的发布测试失败，完善版本验证，保留此前阅读时间、评论下载及界面优化
+- 阅读进度修复
+- 稳定性修复
+- 打包流程修复
+
 # v6.2.1 · 2026-10-29
 
 - 评论下载提醒优化
@@ -40,14 +53,3 @@
 - 主登录与书架管理授权继续使用两套独立凭证；同账号主登录刷新保留书架管理凭证，允许单独撤销书架管理授权。不声称已经完成真正的单凭证统一。
 - 保留外文翻译原文/双语/仅译文、书内链接修复、连接复用、扩展中心与 Kindle/Kobo/Android 兼容路径。
 - 发布包切换为正式版 6.0.0，默认 OTA 指向 stable-channel/update.json；Beta 发布配置仍只用于内测分支。
-
-# v5.9.0 · 2026-10-04
-
-- 正式版基于 5.9.0-beta.19 收口，不改变 beta.19 已验证的运行逻辑；插件版本切换为 `5.9.0`，默认更新通道切换为 `stable-channel/update.json`，Schema 保持 136。
-- 完成 5.9 多设备阅读进度模型：开书按可信锚点、同步因果与真实阅读事件判断本机/云端新旧，保留冲突保护、晚到云端结果防突跳、撤回与 write fence，避免旧设备位置静默覆盖更新云端。
-- 精确进度继续以原生 `chapter_uid + co` 为最终验收依据；本地→云端加入 forward/backward 24/16/12 多级唯一正文锚点、fresh Web Reader source recovery、有限标题/邻章候选与格式字符归一化，坐标冲突或无法唯一确认时 fail closed。
-- 云端→本地在唯一正文 text anchor 已命中正确章节时保留真实落点，不再因反向 co 暂未验证而错误回退或用 percent correction 覆盖；只有真正只能定位到章节附近时才显示近似定位提示。
-- 完成 progress failure lifecycle、progress epoch、clean-state migration、ghost-write guard、verify-first recovery，以及“以云端为准 / 以本机为准”显式冲突处理；ReadReport v30 继续在阅读时间写入前 fresh GET 云端位置。
-- 纳入 5.9 外文翻译能力：支持原文 / 双语 / 仅译文三态、官方译文生成、当前章与下一章有界生成、安全 EPUB 替换及阅读位置/划线迁移；非会员或不支持时不破坏原书。
-- 主页“刷新 / 同步”与同步失败恢复入口统一，未知进度不再显示为 0%；扩展中心、下载链路、锁屏与本地书库继续继承 5.8 后期稳定能力。
-- 正式安装包继续只包含一个 `miuread.koplugin/` 根目录，并保留 AGPL-3.0-only、第三方声明、Lua 语法检查及既有 beta 回归测试资产。
