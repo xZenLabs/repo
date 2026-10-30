@@ -1,0 +1,23 @@
+# Silverfish Koreader plugin for KOReader
+# https://github.com/theusmaoliveiras/silverfish-koreader
+# zenpm:auto-scraped
+id=silverfish-koreader
+name=Silverfish Koreader
+version=1.0.0
+description=Lives in your e-reader. Eats what you read. Judges your taste.
+author=theusmaoliveiras
+category=media
+platforms=koreader
+dependencies=
+source=https://github.com/theusmaoliveiras/silverfish-koreader
+stars=5
+updated_at=2026-10-30T22:00:57Z
+published_at=2026-10-30T15:21:05Z
+readme_url=packages/koreader/silverfish-koreader.koplugin/README.md
+readme_hash=52437bb0060cf712f2e9aa883f9d4590b51c51e3
+release_notes_url=packages/koreader/silverfish-koreader.koplugin/RELEASE_NOTES.md
+release_notes_hash=0abb56aa4df67aa93afbf19f3c4c26fb122582e9a318b946e66012ed8eceb382
+releases=[{"tag_name":"v1.0.0","assets":[{"name":"silverfish-v1.0.0.zip","url":"https://github.com/theusmaoliveiras/silverfish-koreader/releases/download/v1.0.0/silverfish-v1.0.0.zip","size":622831,"digest":"sha256:f64f83857859015b575475e8f534998c9d2be36760e71a939ed8ebafc6945fec"}],"name":"Silverfish 1.0.0"}]
+source_type=release
+source_asset=silverfish-v1.0.0.zip
+size=622831
