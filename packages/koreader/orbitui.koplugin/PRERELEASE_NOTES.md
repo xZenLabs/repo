@@ -1,3 +1,53 @@
+# v0.1.0-beta.18 · 2026-10-30
+
+## Svenska
+
+Beta 18 rättar snabbkontrollerna från Beta 17:
+
+- Tryck på Hems statusfält öppnar rätt snabbkontroll i stället för att fångas av toppmenyn.
+- Valet att aktivera statusfältens snabbkontroller börjar gälla direkt.
+- Dialogerna behåller sin ursprungliga identitet, så flikar, Uppdatera status, Stäng och Wi-Fi-åtgärder inte blockeras av SimpleUI.
+
+Öppna **OrbitUI-inställningar > Navigation och gränssnitt > Snabbkontroller**.
+Statusfältstryck är fortsatt valfritt. Egna gester, sparade knappar, profiler/chip,
+Androids säkra omslagshantering och snabbstängning behålls.
+
+Alla tidigare Beta 17-funktioner och granskade upstream-ändringar ingår. Ingen ny
+upstream-merge eller ljusdrivrutin ingår. Bigmes valfria ljuspatch är redan
+publicerad separat i [Ereader-patchpaketet](https://github.com/komadorirobin/Ereader)
+och [sin egen repo](https://github.com/komadorirobin/koreader-bigme-frontlight).
+
+Uppdatera via förhandsversionskanalen och **starta om KOReader**. Ingen
+inställningsåterställning eller mellanversion behövs. Detta är fortsatt beta;
+bekräfta tryck, dialogstängning och återgång från Androids Wi-Fi-inställningar
+på enheten. Automatiska tester är inte fysisk enhetsverifiering.
+
+## English
+
+Beta 18 fixes the quick-control input regressions reported in Beta 17:
+
+- Home's current status targets receive taps before the parent top menu.
+- Enabling/disabling status-field quick controls takes effect immediately.
+- Quick-control dialogs retain native identity, allowing tabs, Refresh, Close and Wi-Fi actions to pass the existing owner guards.
+
+Open **OrbitUI settings > Navigation & interface > Quick controls**. Status taps
+remain opt-in. Custom gestures, saved bars, profiles/chips, Android safe-mode
+covers and fast reader return remain intact. All Beta 17 features and reviewed
+upstreams are included; no new upstream import or hardware light driver.
+The optional Bigme userpatch remains separately distributed through the links above.
+
+Update on the preview channel and **restart KOReader**. Existing supported betas
+can update directly. Bootstrap/API 1, the same 2,000 installed paths, artwork,
+fonts and languages are retained. Previous releases remain immutable; code
+rollback does not restore old reading progress or later settings.
+
+This is a prerelease. Automated Lua/LuaJIT, package and native-boundary/OTA
+checks do not establish physical Boox/Bigme touch, rendering, hardware controls,
+Android system return, rotation or suspend acceptance. Please retest those.
+
+Download **orbitui.koplugin.zip**, not GitHub's source-code archives.
+Keep KOReader's Cover browser enabled; disable standalone SimpleUI/Bookshelf.
+
 # v0.1.0-beta.17 · 2026-10-30
 
 # OrbitUI Beta 17 — snabbkontroller och tydligare inställningar
@@ -118,84 +168,3 @@ Uppdatera via OrbitUI:s förhandsversionskanal och starta om KOReader. Bootstrap
 - Existing Home/Bento layouts, Android cover fix, profiles, ornaments, links, reading data and external sync owners are preserved.
 
 Use OrbitUI's preview update channel and restart KOReader. Bootstrap/API 1 and the installed path inventory remain unchanged; no resources or older notes were removed to fit. Previous releases/assets are immutable. Physical device acceptance remains outstanding; automated tests are not device or measured-performance claims.
-
-# v0.1.0-beta.13 · 2026-10-27
-
-# OrbitUI 0.1.0-beta.13
-
-## Svenska
-
-Tydligare OrbitUI-inställningar på svenska och engelska. Experimentell beta,
-publicerad på uttrycklig begäran. SimpleUI av doctorhetfield-cmd och Bookshelf
-av AndyHazz, med respektive bidragsgivare, ingår i denna fristående kombination;
-detta är inte en officiell release från något av originalprojekten.
-
-- Fem tydliga områden: Hem (SimpleUI), Bookshelf, Navigation och gränssnitt,
-  Integrationer samt System och underhåll. Avancerade originalinställningar
-  finns kvar. Boksökning ligger under Bookshelf, separat från inställningssökning.
-- Lokal inställningssökning förstår svenska och engelska oavsett valt menyspråk.
-  Den söker i fasta menytexter, inte privata inställningsvärden eller nätkonton.
-- Omfattningen visas tydligare: gemensamma Bookshelf-inställningar, ett visst
-  bibliotek/en viss hylla, delat tema eller SimpleUI-skärmar.
-- Direktreglage för bokpanelens innehåll, bland annat genre och andra etiketter.
-  Håll på bokpanelen för att anpassa den; originalets bokåtgärd finns också kvar.
-  Hyllans långtrycksmeny har en tydligare genväg till dess anpassning.
-- Tillbaka går till föregående inställningsnivå och sökningen minns söktexten.
-  Fördröjda inställningssidor får inte täcka en nyare destination.
-
-Starta om KOReader efter uppdateringen. Använd OrbitUI:s gemensamma uppdaterare
-med förhandsversioner aktiverade, eller hela **orbitui.koplugin.zip** (inte
-källkodsarkivet). Följ verifierings-/omstartsanvisningar vid extern installation.
-För att dölja genren: Bookshelf → Bokpanelen överst → stäng av Visa genrer.
-Du kan också hålla på bokpanelen och välja Anpassa bokpanelen.
-
-Sparade layouter, profiler/chip, typsnitt, teman, bokdata och länkar behålls;
-ingen inställningsåterställning, cachetömning eller ny indexering görs.
-Omslagsfixen från Beta 12 och Android safe mode-skydden finns kvar. Ingen ny
-upstream-merge. Kodåterställning rullar inte tillbaka läsframsteg eller inställningar.
-
-## English
-
-Clearer OrbitUI settings in Swedish and English. Experimental prerelease,
-published on explicit request. Includes and adapts SimpleUI by doctorhetfield-cmd
-and Bookshelf by AndyHazz, with their contributors; this independent combined
-plugin is not an official release from either upstream project.
-
-- Five areas: Home (SimpleUI), Bookshelf, Navigation & interface, Integrations,
-  and System & maintenance. Native advanced controls remain available. Book
-  search is under Bookshelf, separate from settings search.
-- Local settings search understands Swedish and English independently of the
-  UI language. It indexes static labels, not private setting values/accounts.
-- Scope headers distinguish shared Bookshelf settings, individual libraries/
-  shelves, the shared theme, and SimpleUI screens.
-- Direct book-panel visibility controls, including genres and other labels.
-  Hold the book panel to customize it or use the original book action. Shelf
-  long-press retains its actions with a clearer customization shortcut.
-- Back returns to the previous settings level; search retains its query.
-  Stale deferred settings pages cannot cover a newer destination.
-
-Restart KOReader after updating. Use the common OrbitUI updater with preview
-releases enabled, or the complete **orbitui.koplugin.zip**, not a source archive.
-Follow external-install verification/restart prompts. To hide the genre:
-Bookshelf → Book panel at the top → turn off Show genres.
-Alternatively, hold the book panel and choose Customize book panel.
-
-Existing layouts, profiles/chips, fonts, themes, reading data and links remain
-intact. No preference reset, cache wipe or reindexing is performed. Beta 12's
-cover fix and Android safe-mode guards remain. No new upstream merge. Code
-rollback does not restore older reading progress or settings.
-
-## Verification / verifiering
-
-Release gates cover both complete Lua/LuaJIT suites, translations, sealed bytes,
-native older-installer upgrade/rollback, history/artwork/secrets, CI and exact
-draft/public asset verification. These are not physical-reader tests. Actual
-SV/EN pagination, touch/hold, SimpleUI custom-screen return, shared themes,
-reader return, rotation and sleep/wake still need Boox/Bigme acceptance.
-
-Bootstrap/API 1 and older releases stay unchanged. This release uses all 2,000
-installed API 1 file slots, including its manifest; future packages require a
-reviewed compatibility plan before adding runtime files.
-
-Bookshelf `c37580a1ca5040d2423e45b9bdd429776117f3c1` (6.0.3),
-SimpleUI `b1580f90b2e17cf03a66c744c323a1df66d77100` (3.0 follow-ups).

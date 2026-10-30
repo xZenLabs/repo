@@ -1,3 +1,15 @@
+# v1.1.2 · 2026-10-30
+
+Tomedown 1.1.2.
+
+- The row that rebuilds every file is now called *Repair all files*, which is what it does.
+- The About window wears the new logo.
+- The README has a front page and reference pages now: settings, file formats, keeping notes, and developing. Menu screenshots are refreshed there.
+
+Install it from *Check for updates*, or the zip below.
+
+Questions or feedback on the menu? [Join the discussion](https://github.com/imanubdesigner/tomedown.koplugin/discussions).
+
 # v1.1.1 · 2026-10-27
 
 Tomedown 1.1.1.
@@ -159,41 +171,3 @@ New to Tomedown: download the zip below and install it as a KOReader plugin.
 All 758 test assertions green.
 
 *Remotely Save users: set **Abort Sync If Modification Above Percentage** to **100 (disable the protection)** — Tomedown re-exports notes in bulk, which trips the default 50% guard.*
-
-# v0.7.1 · 2026-10-01
-
-## v0.7.1
-
-### **Fixed**
-
--	Closing a book no longer runs the export **twice**. The plugin was
-  registering itself in KOReader's event chain in addition to KOReader's
-  own registration, so `CloseDocument` (and suspend/network events)
-  reached it twice: the first run exported and toasted
-  `Closing · 1 file exported locally`, the second one — a second later,
-  finding nothing changed — stayed silent and overwrote the outcome
-  recorded for the Status panel, which then read
-  `Last export: … — 0 exported, 1 skipped` right after the toast. The
-  same overwrite hid real suspend exports.
-
--	With this fix the Status panel's *Last export* always matches what
-  the last run actually did: the toast and the panel report the same
-  numbers.
-
-### **Documentation**
-
--	Menu screenshots refreshed for 0.7: Tomedown on top of the reader's
-  *Navigation* tab and of the file browser's menu, the submenu with the
-  new *Status* row; the stale `NEW:` screenshot is gone. *Status* is
-  documented in the Usage list.
-
-### **Zip contents**
-
-`main.lua`, `_meta.lua`, `tomedown_i18n.lua`, `tomedown_render.lua`,
-`tomedown_update.lua`, `languages/it.po`, `LICENSE`,
-`assets/logo.svg` - no tests, no README.
-
-### **Upgrading**
-
--	Drop-in, no re-export needed. After updating, the next close exports
-  once and *Last export* reflects that run.
