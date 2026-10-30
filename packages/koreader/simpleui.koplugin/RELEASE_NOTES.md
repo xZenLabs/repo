@@ -1,3 +1,18 @@
+# 3.0.2 · 2026-10-30
+
+What's New in Simple UI v3.0.2
+
+- Tiny Critter Updates: Introduce Hazel (a little witch companion), add mini-games and quotes on request, implement richer per-character voice phrases, enable quick settings access from both the module and status bar, and document all 12 custom phrase moods;
+- Add optional full-screen flash on every page turn for the Home Screen;
+- Add grid layout support to the Quick Actions Row;
+- Add "Style > Hidden Menu Items" settings to hide specific menu entries with live application and per-submenu control;
+- Show Bluetooth status on additional supported devices;
+- Boost startup performance by deferring library listings, and automatically disable conflicting user patches on boot;
+- Reduce Home Screen ghosting and enable dithering when active wallpapers or covers are displayed;
+- Auto-close action sheets when toast widgets appear on top, and make long messages scrollable instead of overflowing;
+- Fix pagination chevron visibility issues during UI resizes and restyling;
+- Fix Library hold-dialog column layout, preserve folder readability flags, and allow Dispatcher actions from Custom Screens to reach the File Manager;
+
 # 3.0.1 · 2026-10-27
 
 What's New in Simple UI v3.0.1
@@ -51,14 +66,4 @@ What's New in Simple UI v2.7.1
 - The D-Pad row selector in the Settings windows only shows up when you press a button;
 - Fix bug preventing "Currently Reading" from refreshing on book close;
 - Fix bug blocking Library access after using the Quick Settings Bar to head home;
-- General bug fixes and quality-of-life optimizations.
-
-# 2.7.0 · 2026-08-30
-
-What's New in Simple UI v2.7.0
-
-- Homescreen & Layouts: Added a new "Dashboard" homescreen preset and per-module column width (Bento Grid) options;
-- Hardware Controls: Enabled the physical Home button to open the Simple UI Home Screen on all devices with a Home key;
-- Reading Goals: Introduced new visual display rings for reading goals;
-- Backup & Restore: Added a native backup and restore system;
 - General bug fixes and quality-of-life optimizations.

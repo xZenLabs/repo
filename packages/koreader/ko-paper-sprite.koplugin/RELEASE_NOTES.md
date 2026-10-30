@@ -1,3 +1,14 @@
+# v1.3.2 · 2026-10-30
+
+阿页的阁楼（ko-paper-sprite）KOReader 插件 / 月读扩展 v1.3.2
+
+安装：解压 paper-sprite.koplugin-版本号.zip，把 paper-sprite.koplugin 目录复制到 KOReader 的 plugins/ 下并重启。
+作为月读扩展：同一个插件即可；月读首页「添加组件」里会出现「阿页」「阿页的阁楼」「阿页的明信片」「纪念物柜」。
+
+纯离线。代码、文案与美术均为原创（MIT）。
+
+- 月读设置：从「系统」迁到根页「游戏」分组（需月读带该分组的版本）。
+
 # v1.3.1 · 2026-10-28
 
 阿页的阁楼（ko-paper-sprite）KOReader 插件 / 月读扩展 v1.3.1
@@ -55,15 +66,3 @@
 - 多语言：界面与数据文案走 `papersprite.l10n`，提供 English / 繁體中文。
 - 自更新：月读设置「系统」里新增「阿页的阁楼」页，可检查并安装 GitHub Release 新版，首页组件出现后每天最多自动检查一次。
 - 工程：版本号改由 `papersprite/version.lua` 打包注入；打包脚本 `tools/package.sh`；测试入口改为 `spec/run.lua`；发布包名改为 `paper-sprite.koplugin-<版本>.zip`。
-
-# v1.0.1 · 2026-10-17
-
-阿页的阁楼（ko-paper-sprite）KOReader 插件 / 月读扩展 v1.0.1
-
-安装：解压 paper-sprite.koplugin.zip，把 paper-sprite.koplugin 目录复制到 KOReader 的 plugins/ 下并重启。
-作为月读扩展：同一个插件即可；月读首页「添加组件」里会出现「阿页」「阿页的阁楼」「阿页的明信片」「纪念物柜」。
-
-纯离线。代码、文案与美术均为原创（MIT）。
-
-- 存档改放到 KOReader 数据目录下的 `.moon/game/paper-sprite/`（`save.lua` / `reading.lua`），KOReader 与月读共用一份。第一次打开时自动从旧位置复制（旧文件保留作备份）；两边都有存档时取进度多的。
-- 修复：去掉 `goto`，兼容 Lua 5.1 语法检查（CI 失败原因）。
