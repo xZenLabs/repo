@@ -3,7 +3,7 @@
 # zenpm:auto-scraped
 id=tarot
 name=Tarot
-version=6.2.4
+version=6.2.5
 description=Tarot: draw random cards with meanings, navigate between them and configure reversed cards.
 author=hluiz2628-blip
 category=utility
@@ -11,13 +11,13 @@ platforms=koreader
 dependencies=
 source=https://github.com/hluiz2628-blip/tarot.koplugin
 stars=9
-updated_at=2026-10-30T12:00:58Z
-published_at=2026-10-30T04:13:36Z
+updated_at=2026-10-30T13:00:58Z
+published_at=2026-10-30T12:25:19Z
 readme_url=packages/koreader/tarot.koplugin/README.md
 readme_hash=19ed1e3565d256c3fa483d231e5c3b4122fb6aac
 release_notes_url=packages/koreader/tarot.koplugin/RELEASE_NOTES.md
-release_notes_hash=c5d6dabf394e325f648fd60dd45175c78b8c717c40275ff4b785f60724f61f25
-releases=[{"tag_name":"6.2.4","assets":[{"name":"tarot.koplugin.zip","url":"https://github.com/hluiz2628-blip/tarot.koplugin/releases/download/6.2.4/tarot.koplugin.zip","size":8828773,"digest":"sha256:98f6d086686ae792974bc1c16c08cf8935dd63e3602bec36b1eb6b31ef756de7"}],"name":"Arcana II - Cartas e Luas v6.2.4"},{"tag_name":"v5.12.3","assets":[{"name":"tarot.koplugin.zip","url":"https://github.com/hluiz2628-blip/tarot.koplugin/releases/download/v5.12.3/tarot.koplugin.zip","size":8536209,"digest":"sha256:39dbfc5155b100c034f2de86a816410f7f83926575b8fe2e490f5c601ab5b346"}],"name":"Arcana v5.12.3"}]
+release_notes_hash=26608b35d76284a71fbe9d99720e3e2e8bb86a44cdbca9dfa5f85e0e75590ce3
+releases=[{"tag_name":"6.2.5","assets":[{"name":"tarot.koplugin.zip","url":"https://github.com/hluiz2628-blip/tarot.koplugin/releases/download/6.2.5/tarot.koplugin.zip","size":8832244,"digest":"sha256:b1c81facd7a9c7503aed7b39e611b14b40f6d382eb29b97d85a7acec940664c8"}],"name":"Arcana II - Cartas e Luas v6.2.5"},{"tag_name":"6.2.4","assets":[{"name":"tarot.koplugin.zip","url":"https://github.com/hluiz2628-blip/tarot.koplugin/releases/download/6.2.4/tarot.koplugin.zip","size":8828773,"digest":"sha256:98f6d086686ae792974bc1c16c08cf8935dd63e3602bec36b1eb6b31ef756de7"}],"name":"Arcana II - Cartas e Luas v6.2.4"},{"tag_name":"v5.12.3","assets":[{"name":"tarot.koplugin.zip","url":"https://github.com/hluiz2628-blip/tarot.koplugin/releases/download/v5.12.3/tarot.koplugin.zip","size":8536209,"digest":"sha256:39dbfc5155b100c034f2de86a816410f7f83926575b8fe2e490f5c601ab5b346"}],"name":"Arcana v5.12.3"}]
 source_type=release
 source_asset=tarot.koplugin.zip
-size=8828773
+size=8832244

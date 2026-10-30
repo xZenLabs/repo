@@ -1,3 +1,7 @@
+# 6.2.5 · 2026-10-30
+
+- Correções diversas.
+
 # 6.2.4 · 2026-10-30
 
 **Mudanças da nova versão:**
