@@ -1,3 +1,20 @@
+# v1.12.0 · 2026-10-30
+
+## modern_menu 1.12.0
+
+Menu search opens again, toggles stay intact while a long list scrolls, and the Files tab is back when Kobold is installed.
+
+### Changes
+- **Menu search** under Home → Help opens the text box. A result can be opened, or the menu can walk to that entry
+- In a long list such as User plugins, the switch thumb stays inside the track while you scroll. The scrollbar responds as soon as the list is open
+- With Kobold installed, the **Files** tab is in the menu again. It closes Kobold and, from a book, leaves the book on the file list
+
+### Install
+1. Download **modern_menu.koplugin-v1.12.0.zip**
+2. Extract into your KOReader `plugins/` directory
+3. Restart KOReader and enable **Modern Menu**
+4. Install Kobold, Simple UI, Quick Menu, Neo Quick Settings, or Shortcuts Toolbar as well if you use those
+
 # v1.11.0 · 2026-10-26
 
 ## modern_menu 1.11.0
@@ -71,21 +88,3 @@ Modern Menu now complements [Kobold](https://github.com/unitreign/kobold): the s
 2. Extract into your KOReader `plugins/` directory
 3. Restart KOReader and enable **Modern Menu**
 4. Install Kobold, Simple UI, Quick Menu, Neo Quick Settings, or Shortcuts Toolbar as well if you use those
-
-# v1.7.0 · 2026-10-14
-
-## modern_menu 1.7.0
-
-Shortcuts Toolbar custom actions run from this menu, and the file-browser status bar is optional.
-
-### Changes
-- Custom Shortcuts Toolbar buttons run from the reader row: system actions, menu-path actions, and a shortcut that opens a submenu
-- Choosing **Menu action** records a tap in this menu, including items inside a submenu
-- The file-browser shortcut row is present when KOReader starts in the file browser
-- **Status bar in file browser** is in **Modern Menu** settings and is off until you turn it on. The switch is no longer in the menu header
-
-### Install
-1. Download **modern_menu.koplugin-v1.7.0.zip**
-2. Extract into your KOReader `plugins/` directory
-3. Restart KOReader and enable **Modern Menu**
-4. Install Simple UI, Quick Menu, Neo Quick Settings, or Shortcuts Toolbar as well if you use those
