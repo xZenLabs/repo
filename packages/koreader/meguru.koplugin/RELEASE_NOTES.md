@@ -1,3 +1,13 @@
+# v1.7.1 · 2026-10-30
+
+## Bug fixes
+
+- Fixed turned panels appearing upside down on a landscape screen.
+- Fixed **Meguru this series** missing on KOReader nightly builds ([koreader/koreader@dad1ad4](https://github.com/koreader/koreader/commit/dad1ad44335fafb1070d524c9ffd2fa2ce2da81d)).
+- Fixed books opened from a just-added OPDS catalog not creating their series folder.
+
+**Full Changelog**: https://github.com/Craftwork2720/meguru/compare/v1.7.0...v1.7.1
+
 # v1.7.0 · 2026-10-25
 
 ## Meguru v1.7.0
@@ -66,13 +76,3 @@ Two new optional integrations.
 - Everything else is untouched: reading, panel view, two-page view and streaming are unchanged, and covers outside Android are fetched exactly as before
 
 **Full Changelog**: https://github.com/Craftwork2720/meguru/compare/v1.5.2...v1.5.3
-
-# v1.5.2 · 2026-10-10
-
-# New features
-
-- **Derainbow** — removes the rainbow shimmer on colour e-ink screens. All credit goes to [Euphoriyy](https://github.com/Euphoriyy) and his [derainbowify.koplugin](https://github.com/Euphoriyy/derainbowify.koplugin). Off by default, shown only on colour screens
-- **Show in OPDS** — opens the OPDS browser on the book's series, from its Info popup or the on hold **file** menu (.meguru)
-- **ComicInfo.xml switch** — Settings → *Read metadata from ComicInfo.xml*. On by default; off = local `.cbz` titled by file name
-
-**Full Changelog**: https://github.com/Craftwork2720/meguru/compare/v1.4.0...v1.5.2
