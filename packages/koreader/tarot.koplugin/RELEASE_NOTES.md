@@ -1,10 +1,6 @@
 # 6.2.5 · 2026-10-30
 
-- Correções diversas.
-
-# 6.2.4 · 2026-10-30
-
-**Mudanças da nova versão:**
+**Mudanças do Arcana II:**
 
 - Transformação da página inicial em **hub com módulos e troca de baralho**.
 - Calendário integrado a cartas diárias, reflexões, acompanhamentos e fases da lua.
@@ -16,9 +12,3 @@
 - Padronização visual, traduções e correções de navegação, transições e rolagem.
 
 <img width="661" height="932" alt="Arcana II" src="https://github.com/user-attachments/assets/90c6a322-f97b-4d84-91e2-5acf89e4b241" />
-
-# v5.12.3 · 2026-08-01
-
-Mudanças:
-
-* Correções de bugs.

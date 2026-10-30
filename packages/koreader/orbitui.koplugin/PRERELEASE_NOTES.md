@@ -1,3 +1,31 @@
+# v0.1.0-beta.19 · 2026-10-30
+
+## Svenska
+
+- Förbättrad gemensam sökning: tio senaste lokala sökningar med vald avgränsning, rensningsbar historik och sortering efter relevans, titel, författare eller serie. Profiler och aktuell hylla behåller sin avgränsning.
+- Enklare samlingshantering: välj en egen samling under **Hantera samlingar → Hantera böcker…**. Sök, lägg till/ta bort medlemskap, granska ändringar och välj **Spara** eller **Avbryt**. Inga bokfiler raderas. Favoriter och mappstyrda samlingar behåller KOReaders vanliga hantering.
+- Senaste granskade SimpleUI-ändringarna ingår: månadsdiagram för böcker/sidor i läsinsikterna, separat årsväljare samt säkrare statistikcache och återförsök. Läsöversiktens layout ersätts inte.
+- Separat inspirationsbevakning på GitHub för utvalda delar av sex UI-projekt. Ingen automatisk merge/import och ingenting som körs på läsplattan.
+
+Hardcover, utgåvekoppling, BookOrbit/MAL/patch-integrationer, profiler/chip och snabbstängning lämnas oförändrade. Inga nya upstream-importer görs för denna release: SimpleUI `7a605bbc`, Bookshelf `ee84a8fe`.
+
+Uppdatera via **förhandsversionskanalen** och starta om KOReader. Ingen återställning eller mellanversion behövs. Inställningar, läsprogression och metadata behålls; kodåterställning återställer inte senare användardata.
+
+Fortsatt beta: automatiska tester ersätter inte fysisk testning på Boox/Bigme. Prova sökning/historik/avgränsning, samlingarnas vyväljare/sökning/paging/Spara/Avbryt, läsinsikternas årsväljare samt rotation, viloläge och återgång från boken. Ingen uppmätt prestandavinst påstås.
+
+## English
+
+- Shared search now has ten local recent query/scope pairs, explicit history clearing and relevance/title/author/series sorting. Current-shelf and profile restrictions are preserved.
+- Custom collection contents can be edited through **Manage collections → select a collection → Manage books…**. Search, stage membership additions/removals, review changes and Save or Cancel. Book files are never deleted. Favourites and folder-managed collections retain native KOReader controls.
+- Includes the already-reviewed SimpleUI changes: monthly books/pages charts in Reading Insights, an independent year selector and safer statistics caching/retries. The existing Home/dashboard layout is preserved.
+- A separate GitHub inspiration watcher monitors selected parts of six UI projects, never auto-merges/imports and does not run on the reader.
+
+Hardcover, edition linking, BookOrbit/MAL/patch integrations, profiles/chips and fast close are unchanged. No additional upstream is imported for this release: SimpleUI `7a605bbc`, Bookshelf `ee84a8fe`.
+
+Update through the **preview channel** and restart KOReader. No reset or bridge release is needed. Existing settings, reading progress and metadata remain; code rollback does not roll back later user data. All 2,000 installed paths, bootstrap/API, artwork, fonts and languages are retained.
+
+Still a prerelease: automated tests are not physical Boox/Bigme acceptance. Retest search/history/scopes, collection views/search/paging/Save/Cancel, the Insights year picker, rotation, sleep and reader return. No measured performance gain is claimed.
+
 # v0.1.0-beta.18 · 2026-10-30
 
 ## Svenska
@@ -146,25 +174,3 @@ Automated Lua/LuaJIT, translation/package/source/history and native older-instal
 Install **orbitui.koplugin.zip**, not GitHub's source archive. Existing supported betas can update on the preview channel; restart KOReader. Bootstrap/API 1, installer limits and the complete 2,000-file installed path set are unchanged. No settings, progress, links, caches or artwork are reset. Code rollback preserves later data/settings changes; older builds ignore the new scoped colour choice.
 
 This is a **prerelease**. Automated Lua/LuaJIT, contrast/native-UI-boundary, package and native archive/OTA checks are not physical display acceptance. Actual Boox/Bigme colour strength, night-mode rendering, ghosting, responsiveness and touch/rotation/sleep checks remain outstanding. SVG schematics use synthetic covers and approximate text; they are not device screenshots or performance measurements.
-
-# v0.1.0-beta.14 · 2026-10-27
-
-## Svenska
-
-- Arkivskåpsknappen i läsmenyn använder nu OrbitUI:s snabba återgång till rätt Bookshelf-hylla/profil. Säker vanlig stängning används när en förberedd hylla saknas. Går att stänga av under Navigation och gränssnitt → Öppna böcker och återgå.
-- Tydligare profil- och chipinställningar: källa/mapp inne i respektive chip, gemensamma biblioteksmappar under Avancerat och separata numrerade ordningsvyer som uppdateras direkt. Svenska och engelska ingår.
-- SimpleUI uppdaterad med bättre Unicode-sökning/sortering, en startguidefix och spanska/kinesiska översättningar. Äldre KOReader-versioner behåller en kompatibel Unicode-reservväg.
-- Fel vid läsning av metadatacachen fångas utan upstreams automatiska radering av databasen. Detta är inte automatisk reparation av en korrupt databas.
-- Home/Bento, omslagsfixen för Android, bibliotek/profiler, ornament och externa integrationer behålls. Inga böcker flyttas och inga inställningar eller läsdata återställs.
-
-Uppdatera via OrbitUI:s förhandsversionskanal och starta om KOReader. Bootstrap/API 1 är oförändrat och äldre stödda installerare kan uppdatera direkt. Säkerhetskopiera inställningar separat; kodåterställning återställer inte senare inställningsändringar. Detta är en förhandsversion: fysiska Boox/Bigme-tester av de nya funktionerna återstår.
-
-## English
-
-- The reading menu's cabinet/file-browser button now uses OrbitUI's fast return to the original shelf or matching Bookshelf profile, with safe normal-close fallback and a bilingual opt-out.
-- Clearer profile/chip settings: source and folder inside each chip, library-wide roots under Advanced, and separate live numbered library/chip ordering screens.
-- Reviewed SimpleUI update: Unicode-aware search/sorts, onboarding preset-list fix, Spanish/Chinese translations, and compatibility fallback for older supported KOReader versions. Bookshelf stays at 6.0.3.
-- Recognized metadata-cache read faults are contained without automatically deleting the database/WAL or resetting shared connections. This does not automatically repair corrupt databases.
-- Existing Home/Bento layouts, Android cover fix, profiles, ornaments, links, reading data and external sync owners are preserved.
-
-Use OrbitUI's preview update channel and restart KOReader. Bootstrap/API 1 and the installed path inventory remain unchanged; no resources or older notes were removed to fit. Previous releases/assets are immutable. Physical device acceptance remains outstanding; automated tests are not device or measured-performance claims.
