@@ -2,7 +2,7 @@
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="assets/banner-dark.png">
     <source media="(prefers-color-scheme: light)" srcset="assets/banner-light.png">
-    <img src="assets/banner-light.png" alt="tomedown: one Markdown file per book, straight into your notes" width="60%">
+    <img src="assets/banner-light.png" alt="tomedown: one Markdown file per book, straight into your notes" width="625">
   </picture>
 </p>
 
@@ -78,12 +78,15 @@ verified online merge, the offline round trip and the Obsidian edits on beta
 hardware.
 
 1. Plug the Kindle in via USB mass storage.
+
 2. Download `tomedown.koplugin-v*.zip` from the
    [Releases](https://github.com/imanubdesigner/tomedown.koplugin/releases)
    page and unzip it *into* `/mnt/us/koreader/plugins/`: the zip already
    contains the `tomedown.koplugin/` directory.
+
 3. Unplug the Kindle and restart KOReader (or: ☰ menu → *Plugin management* →
    enable *Tomedown*).
+
 4. **Tomedown** is the first entry of KOReader's menu: on top of the
    *Navigation* tab (right before *Table of Contents*) while reading, and on
    top of the first tab in the file browser (right before *Display mode*).
@@ -184,17 +187,17 @@ From the file browser the menu has seven rows:
 With a book open it has nine: *Export this book* and *Current book* are added
 on top.
 
-| Row | What it does |
-|---|---|
-| **Export this book** | the open book alone |
-| **Export new and changed books** | only the books whose highlights changed since the last export (per-book hash) |
-| **Repair all files** | writes every file again from KOReader's reading history: for a file deleted by mistake or a sync that went wrong |
-| **Choose books…** | a list with checkboxes: tick the volumes and export just those |
-| **Current book** | the rows that name the open book: *Keep my notes in this book*, *Notes heading: %1* and *Backup copies…*, explained in [Keep my notes](docs/keep-my-notes.md) |
-| **Upload all files again** | re-uploads every file already in the local folder, after comparing each one with its cloud copy |
-| **Last export** | a wide popup, one line per entry: network, server, pending uploads, the last export and upload with timestamp and outcome |
-| **Settings** | the five groups, described in [Settings](docs/settings.md) |
-| **About** | a popup with the logo, the installed version, the description and the GitHub link |
+| Row                              | What it does                                                                                                                                                  |
+| -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Export this book**             | the open book alone                                                                                                                                           |
+| **Export new and changed books** | only the books whose highlights changed since the last export (per-book hash)                                                                                 |
+| **Repair all files**             | writes every file again from KOReader's reading history: for a file deleted by mistake or a sync that went wrong                                              |
+| **Choose books…**                | a list with checkboxes: tick the volumes and export just those                                                                                                |
+| **Current book**                 | the rows that name the open book: *Keep my notes in this book*, *Notes heading: %1* and *Backup copies…*, explained in [Keep my notes](docs/keep-my-notes.md) |
+| **Upload all files again**       | re-uploads every file already in the local folder, after comparing each one with its cloud copy                                                               |
+| **Last export**                  | a wide popup, one line per entry: network, server, pending uploads, the last export and upload with timestamp and outcome                                     |
+| **Settings**                     | the five groups, described in [Settings](docs/settings.md)                                                                                                    |
+| **About**                        | a popup with the logo, the installed version, the description and the GitHub link                                                                             |
 
 ![The Last export popup: every entry on its own line, the labels in bold](assets/menu/settings/new_status_popup_messages.png)
 
@@ -269,16 +272,16 @@ merge and the two copies, step by step.
 
 ## Reference
 
-| Page | What is in it |
-|---|---|
-| [Settings](docs/settings.md) | every group and row: Files, Cloud, My notes, Highlights, Updates, Beta |
-| [Keep my notes](docs/keep-my-notes.md) | zones, switches, `.bak` and `.bak.1`, two devices, edits from Obsidian |
-| [File format](docs/file-format.md) | frontmatter, the whole file, covers, index, link IDs |
-| [Developing](docs/developing.md) | tests, project structure, debug, languages |
-| [Tutorial](TUTORIAL.md) | cloud account, Koofr, Remotely Save, first export, troubleshooting |
-| [Obsidian guide](OBSIDIAN.md) | the files as they sit in the vault, and the Remotely Save setup |
-| [Sync direction](SYNC-DIRECTION.md) | which Remotely Save direction to pick, and where your edits live |
-| [Releases](https://github.com/imanubdesigner/tomedown.koplugin/releases) | zips and release notes |
+| Page                                                                     | What is in it                                                          |
+| ------------------------------------------------------------------------ | ---------------------------------------------------------------------- |
+| [Settings](docs/settings.md)                                             | every group and row: Files, Cloud, My notes, Highlights, Updates, Beta |
+| [Keep my notes](docs/keep-my-notes.md)                                   | zones, switches, `.bak` and `.bak.1`, two devices, edits from Obsidian |
+| [File format](docs/file-format.md)                                       | frontmatter, the whole file, covers, index, link IDs                   |
+| [Developing](docs/developing.md)                                         | tests, project structure, debug, languages                             |
+| [Tutorial](TUTORIAL.md)                                                  | cloud account, Koofr, Remotely Save, first export, troubleshooting     |
+| [Obsidian guide](OBSIDIAN.md)                                            | the files as they sit in the vault, and the Remotely Save setup        |
+| [Sync direction](SYNC-DIRECTION.md)                                      | which Remotely Save direction to pick, and where your edits live       |
+| [Releases](https://github.com/imanubdesigner/tomedown.koplugin/releases) | zips and release notes                                                 |
 
 ## Support
 
