@@ -1,3 +1,19 @@
+# v0.33.1 · 2026-10-30
+
+## Docker Image
+```bash
+docker pull tumetsu/crossbill:v0.33.1
+```
+
+
+## What's Changed
+* Pin the recent-captures day test to a zone without DST by @Tumetsu in https://github.com/Crossbill-App/crossbill-web/pull/966
+* Stop trusting the compromised eMudhra CAs by @Tumetsu in https://github.com/Crossbill-App/crossbill-web/pull/967
+* Combine Dependabot updates (Oct 2026) by @Tumetsu in https://github.com/Crossbill-App/crossbill-web/pull/968
+
+
+**Full Changelog**: https://github.com/Crossbill-App/crossbill-web/compare/v0.33.0...v0.33.1
+
 # v0.33.0 · 2026-10-07
 
 ## Docker Image
@@ -85,20 +101,3 @@ docker pull tumetsu/crossbill:v0.31.0
 
 
 **Full Changelog**: https://github.com/Crossbill-App/crossbill-web/compare/v0.30.1...v0.31.0
-
-# v0.30.1 · 2026-09-21
-
-## Docker Image
-```bash
-docker pull tumetsu/crossbill:v0.30.1
-```
-
-
-## What's Changed
-* Update logo by @Tumetsu in https://github.com/Crossbill-App/crossbill-web/pull/887
-* Typography: rebuild the scale on Lora's real axis, add a UI sans for eyebrows by @Tumetsu in https://github.com/Crossbill-App/crossbill-web/pull/888
-* Keep the swipe that turns a page from opening a highlight by @Tumetsu in https://github.com/Crossbill-App/crossbill-web/pull/890
-* Give a highlight a colour of its own, apart from its label's by @Tumetsu in https://github.com/Crossbill-App/crossbill-web/pull/891
-
-
-**Full Changelog**: https://github.com/Crossbill-App/crossbill-web/compare/v0.30.0...v0.30.1
