@@ -4,14 +4,14 @@
 id=koreader-physical-page-sync
 name=Koreader Physical Page Sync
 version=2.0
-description=!!!INSTALLATION FROM HERE IS NOT POSSIBLE due to being a system app!!! A custom modification for the official KOReader statistics.koplugin that synchronizes e-reader page turns with the actual phys...
+description=A non-destructive KOReader User Patch that synchronizes e-reader page turns with the actual physical pages of a printed book. If you care about reading statistics and tracking the real number of pa...
 author=yanllsama
 category=media
 platforms=koreader
 dependencies=
 source=https://github.com/yanllsama/koreader-physical-page-sync
-stars=28
-updated_at=2026-10-31T16:00:59Z
+stars=29
+updated_at=2026-10-31T17:00:59Z
 published_at=2026-10-31T15:45:43Z
 readme_url=packages/koreader/koreader-physical-page-sync.koplugin/README.md
 readme_hash=60923dc981bc55432ae728bd7ad0812fc7667dd8
