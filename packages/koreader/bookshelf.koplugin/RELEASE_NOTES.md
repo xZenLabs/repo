@@ -1,3 +1,7 @@
+# v6.1.1 · 2026-10-31
+
+- Fix: Minor layout issue with some nested library windows
+
 # v6.1.0 · 2026-10-31
 
 - A new look for Bookshelf's menus: the book menu, shelf editor, pickers and ornament menu share one style and the Bookshelf UI font, with cards, a close X on the title, and sub-menus that open as pages inside the menu, with Back and a breadcrumb.
@@ -43,10 +47,3 @@
 
 - Fix: Refresh metadata (#552)
 - New functions for module authors
-
-# v6.0.1 · 2026-10-25
-
-- Fix: cover shadows on colour screens (#550).
-- Fix: top panel flicker under other plugins' windows (#549).
-- Smaller status line refresh.
-- Fix: keyboard access to the module editor.
