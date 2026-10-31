@@ -10,6 +10,7 @@
 - **Indicadores de novas atualizações** nos botões de versão e Sobre.
 - Aprimoramento da centralização dos títulos, divisórias e elementos visuais.
 - Correções de navegação, gestos, botões e adaptação a diferentes tamanhos de tela.
+<img width="556" height="720" alt="simplescreenrecorder-2026-10-31_00 40 03" src="https://github.com/user-attachments/assets/abfb18e0-3ae7-4d60-8007-b0b2b74222e1" />
 
 # 6.2.8 · 2026-10-31
 
