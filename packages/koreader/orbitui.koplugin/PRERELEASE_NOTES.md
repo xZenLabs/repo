@@ -1,3 +1,25 @@
+# v0.1.0-beta.21 · 2026-10-31
+
+Beta 21 fixes the KOReader crash when selecting **Book details** in the book panel.
+
+The tab passed no header to a renderer that requires one. It now uses the modal's native headerless HTML scroller, preserving CSS, dimensions, per-tab zoom, scrolling gestures and native replacement/close ownership.
+
+The regression test now selects the actual tab through native modal switching, assembly, scrolling, zoom, resize and close paths. It reproduces the nil-header failure on Beta 20 and passes after the fix. Render primitives remain stubbed; physical device testing is still required.
+
+### Svenska
+
+Beta 21 rättar kraschen när du väljer **Bokdetaljer**. Fliken använde fel renderingshjälp utan den rubrikdel som den krävde. Nu används dialogens vanliga HTML-yta med rätt textstorlek, scrollning och stängning.
+
+Det nya regressionstestet växlar verkligen till fliken och kontrollerar zoom, storleksändring, upprepade flikbyten och frigöring av ersatta vyer. Du behöver inte indexera om eller ändra några inställningar.
+
+### Update / uppdatering
+
+Update through OrbitUI's preview channel and restart KOReader. For manual installation use **orbitui.koplugin.zip**, not GitHub's source-code archive. / Uppdatera via förhandsversionskanalen och starta om KOReader.
+
+Earlier betas can update directly. All Beta 20 night/search/shelf improvements remain. No source pins, bootstrap/API-1, installed paths, assets, reading data, metadata, links, collections or sync owners are changed. No earlier public release or asset is overwritten. BookOrbit tag navigation is being assessed separately and is not included in this crash hotfix.
+
+Still a prerelease: retest Book details scrolling, independent zoom, repeated tab switches, close and reader/shelf return on Bigme/Boox. / Fortsatt beta: automatiska tester ersätter inte fysisk provning på enheten.
+
 # v0.1.0-beta.20 · 2026-10-31
 
 Beta 20 combines the reviewed SimpleUI update with the approved night-mode and shared-interface refinements.
@@ -155,33 +177,3 @@ light/warmth, Android return, colour/night/underlay and lifecycle acceptance
 remains open. Automated checks are not a measured device-speed/RAM claim.
 
 [Full bilingual notes and recovery guidance](https://github.com/komadorirobin/orbitui.koplugin/blob/v0.1.0-beta.17/docs/OTA.md#orbitui-010-beta17).
-
-# v0.1.0-beta.16 · 2026-10-28
-
-## Svenska
-
-- Läsöversikt begär nu bara statistik, bokräkning och senaste-böcker-data för kort som behöver dem.
-- Nya frivilliga **Adaptiv minneshantering** och **Snabbhetsläge** under **OrbitUI-inställningar → System och underhåll → Snabbhet, minne och diagnostik**. Befintligt beteende är standard. Snabbhetsläget stänger av svepanimationer och spekulativ förladdning; kalla sidladdningar kan därför ta längre tid.
-- Lokal prestandamätning och kopierbar rapport utan boknamn, sökvägar, konton eller uppladdning. Mätningarna gäller synkrona anrop, inte skärmens totala svarstid.
-- Ny snabbguide för Hem (SimpleUI), Bookshelf-profiler, chip, navigationsknapp och snabb återgång från en bok. Alla nya kontroller och hjälptexter finns på svenska och engelska.
-- Mindre releasepaket: bara utvecklarnas fil-/radreferenser utelämnas ur översättningsfilerna. Alla språk, texter, bilder, typsnitt och licensuppgifter behålls.
-- Säkrare lagringsstädning: efter verifierad start kan högst en gammal, oanvänd kodkopia tas bort. Fabrikskopia, aktiv version, återställningsversion och okända/ändrade filer behålls. Inställningar, läsdata, omslagscache och tilläggsbilder rörs inte.
-
-Android safe mode, omslagskvalitet och snabb återgång till rätt profil/chip/hyllposition behålls. Inga nya upstream-importer; samma granskade Bookshelf 6.0.4 och SimpleUI 3.0.1-uppföljning som Beta 15 ingår.
-
-**Uppdatera via förhandskanalen och starta om KOReader.** För manuell installation: välj `orbitui.koplugin.zip`, inte GitHubs källkodsarkiv. Ta en separat säkerhetskopia av KOReaders data. Detta är en förhandsversion; fysisk Boox/Bigme-kontroll av snabbhet, minne, skärm och lagringsbeteende återstår. Ingen uppmätt enhetsvinst utlovas.
-
-## English
-
-- Reading dashboard data demands follow visible cards and the selected goal owner; hidden cards no longer request unnecessary statistics, book counts or recent-book candidates.
-- Optional **Adaptive memory** and **Responsive** profiles: **OrbitUI settings → System & maintenance → Speed, memory & diagnostics**. Existing behaviour remains the default. Responsive skips Bookshelf wipe animations and speculative next-page/chip preload; cold page loads may take longer.
-- Opt-in, bounded local call timings and a viewable/copyable performance report. No book names, paths, accounts, raw errors or upload. Synchronous call timings are not end-to-end display latency; Lua heap is not total RAM.
-- Bilingual Home/Bookshelf quick guide for library profiles, chip sources, navigation and reader return.
-- Smaller package without removing languages, messages, images, fonts or licenses: only developer source-location comments are omitted from packaged translation catalogs.
-- After healthy startup, at most one verified strictly older unused code snapshot can be collected. Factory/current/rollback, pending/newer code and unknown/modified files stay protected. No books, settings, reading data, cover caches or add-on artwork are cleanup targets.
-
-Keeps Android safe mode, cover quality, fast profile/chip/page return and external sync ownership. No new upstream import; retains Bookshelf `d07905ba` (6.0.4) and SimpleUI `22d5a3d2` (3.0.1 follow-up).
-
-**Update on the preview channel and restart KOReader.** Use `orbitui.koplugin.zip` for manual installation, not GitHub's source archive. Bootstrap/API 1 and all 2,000 installed paths are unchanged. Earlier public releases remain immutable. Code rollback retains later settings and reading progress; keep an independent data backup.
-
-Automated Lua/LuaJIT, translation/package/source/history and native older-installer upgrade/rollback checks are separate from physical-reader acceptance. Boox/Bigme performance, native image pressure, UI/display and storage acceptance remain outstanding; no measured device speed/RAM improvement is claimed.

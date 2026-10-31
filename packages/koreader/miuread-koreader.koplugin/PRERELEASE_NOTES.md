@@ -1,3 +1,11 @@
+# v6.5.0-beta.5 · 2026-10-31
+
+- Fix final reading-end snapshot losing its genuine page-event sequence between pending save and upload guard; leave guarded, unsent progress intact when no evidence of reading exists.
+- Persist real page-event IDs across Reader/Home instances; merge durable event watermarks independently of cloud progress transaction sequence.
+- Verify trusted Web chapter coordinates with a pragmatic ±100-unit same-chapter tolerance (not a claim of identical rendering pages). Reject unresolved zero coordinates and stale/missing post-POST timestamps.
+- Keep reading-time session coordinate behavior, EInk/Web routing, source backfill, pending verification-first recovery and existing release workflows unchanged.
+- Add beta.5 regression coverage for blocked-then-read upload, 76/101 co mismatches, cross-instance event merging, and safe verification.
+
 # v6.5.0-beta.4 · 2026-10-31
 
 - 修复真实翻页后被无坐标 ProgressFence 提前拦截的问题，保留精准坐标上传与云端回读验证
@@ -21,11 +29,3 @@
 - 阅读进度修复
 - 稳定性修复
 - 打包流程修复
-
-# v6.3.0-beta.7 · 2026-10-29
-
-- 统一阅读时长菜单语义：设置入口与开关分离，E-Ink 授权进入独立管理页，支持扫码、验证及取消授权。
-- 为主页、阅读器、同步、下载、账号、扩展与维护菜单增加统一的黑白 SVG 图标映射；阅读器列表现在也可渲染图标。
-- 智能模式 Web→E-Ink 切换等待现有 Worker 写入屏障的非阻塞确认，拒绝重叠计时；保留 Web 精确进度同步。
-- 网络恢复可提前唤醒 E-Ink 队列；仅清除授权失败对应的重试时间，保留限流和 unknown 安全边界。
-- 设置模式变更仅停止阅读时间服务，不再取消阅读进度相关异步任务。
