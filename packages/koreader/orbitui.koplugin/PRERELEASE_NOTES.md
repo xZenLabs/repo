@@ -1,3 +1,64 @@
+# v0.1.0-beta.23 · 2026-10-31
+
+# OrbitUI 0.1.0-beta.23
+
+Optional BookOrbit integration controls and clearer local/server reading lists.
+This is a prerelease; physical Bigme/Boox acceptance remains open.
+
+## English
+
+- New **OrbitUI settings > Integrations > BookOrbit** page with a master switch
+  and separate controls for Want to Read, manual status actions and online tags.
+- Explicit **Want to read [BookOrbit]** and **Want to read [Local]** source names.
+  The local source uses the existing KOReader To Be Read collection. Add either
+  or both through **Home (SimpleUI) > Layout & modules**, or select a Reading
+  dashboard source. Disabling one never replaces it with the other.
+- Explicit refresh feedback and a durable last-successful list timestamp,
+  including unchanged lists. Opening settings does not test a connection.
+- Deferred requests retire when a feature is disabled, including rapid off/on.
+  Already-sent server mutations cannot be unsent; late results are not adopted.
+- English/Swedish help explains manual read-status writes, optional server
+  requirements and the separate [BookOrbit Extras](https://github.com/komadorirobin/bookorbit-extras)
+  package. Its reviewed exact official 3.6.0 source can combine tags and undo.
+  Never reuse the old 3.2.0 compiled overlay on a newer server; old custom
+  databases need a separately reviewed upgrade.
+
+Offline EPUB tags remain independent. BookOrbit's own reading-progress sync,
+credentials, links, cached lists, memberships, module/source IDs, custom headings
+and layouts are retained. OrbitUI does not install or deploy external patches.
+Resolve protected openings and pending cleanup before removing undo support.
+
+## Svenska
+
+- Ny sida: **OrbitUI-inställningar > Integrationer > BookOrbit**, med huvudbrytare
+  och separata val för Vill läsa, manuella lässtatusval och taggar via nätet.
+- Tydliga källor: **Vill läsa [BookOrbit]** och **Vill läsa [Lokalt]**. Den lokala
+  använder KOReaders befintliga samling To Be Read. Lägg till båda via **Hem
+  (SimpleUI) > Layout och moduler**, eller välj källa i Läsöversikt. Listorna byts
+  aldrig ut mot varandra när BookOrbit stängs av.
+- Tydlig uppdateringsstatus och sparad tid för senast lyckade listuppdatering.
+  Väntande svar från avstängda funktioner får inte skriva över lokal cache.
+- Hjälpen förklarar synk och versionsbundna serverkrav. BookOrbits egen synk,
+  sparade listor, kopplingar och layouter behålls. EPUB-taggar fungerar offline.
+  Server- och enhetspatchar installeras inte av denna OrbitUI-uppdatering.
+
+## Update and limits
+
+Update via OrbitUI's preview channel and restart KOReader, or install this
+release's **orbitui.koplugin.zip**, not GitHub's source archive. Back up first.
+Standalone SimpleUI and Bookshelf must remain disabled; keep their data/files.
+
+Full Lua/LuaJIT, translation, sealed-package, native OTA and source/history/
+artwork/secret checks precede publication. These are headless checks, not physical
+acceptance or proof that an optional API is deployed on your BookOrbit server.
+Retest SV/EN layout, touch/keyboard, refresh, off/on, source selection, long help,
+Back, rotation/sleep and reader return on Bigme/Boox.
+
+No new upstream merge, artwork, runtime path, language removal, bootstrap/API
+limit change or production server update. Previous public assets stay immutable;
+rollback changes code, not reading data. See [OTA notes](https://github.com/komadorirobin/orbitui.koplugin/blob/v0.1.0-beta.23/docs/OTA.md)
+for details.
+
 # v0.1.0-beta.22 · 2026-10-31
 
 ## Svenska
@@ -101,53 +162,3 @@ Hardcover, edition linking, BookOrbit/MAL/patch integrations, profiles/chips and
 Update through the **preview channel** and restart KOReader. No reset or bridge release is needed. Existing settings, reading progress and metadata remain; code rollback does not roll back later user data. All 2,000 installed paths, bootstrap/API, artwork, fonts and languages are retained.
 
 Still a prerelease: automated tests are not physical Boox/Bigme acceptance. Retest search/history/scopes, collection views/search/paging/Save/Cancel, the Insights year picker, rotation, sleep and reader return. No measured performance gain is claimed.
-
-# v0.1.0-beta.18 · 2026-10-30
-
-## Svenska
-
-Beta 18 rättar snabbkontrollerna från Beta 17:
-
-- Tryck på Hems statusfält öppnar rätt snabbkontroll i stället för att fångas av toppmenyn.
-- Valet att aktivera statusfältens snabbkontroller börjar gälla direkt.
-- Dialogerna behåller sin ursprungliga identitet, så flikar, Uppdatera status, Stäng och Wi-Fi-åtgärder inte blockeras av SimpleUI.
-
-Öppna **OrbitUI-inställningar > Navigation och gränssnitt > Snabbkontroller**.
-Statusfältstryck är fortsatt valfritt. Egna gester, sparade knappar, profiler/chip,
-Androids säkra omslagshantering och snabbstängning behålls.
-
-Alla tidigare Beta 17-funktioner och granskade upstream-ändringar ingår. Ingen ny
-upstream-merge eller ljusdrivrutin ingår. Bigmes valfria ljuspatch är redan
-publicerad separat i [Ereader-patchpaketet](https://github.com/komadorirobin/Ereader)
-och [sin egen repo](https://github.com/komadorirobin/koreader-bigme-frontlight).
-
-Uppdatera via förhandsversionskanalen och **starta om KOReader**. Ingen
-inställningsåterställning eller mellanversion behövs. Detta är fortsatt beta;
-bekräfta tryck, dialogstängning och återgång från Androids Wi-Fi-inställningar
-på enheten. Automatiska tester är inte fysisk enhetsverifiering.
-
-## English
-
-Beta 18 fixes the quick-control input regressions reported in Beta 17:
-
-- Home's current status targets receive taps before the parent top menu.
-- Enabling/disabling status-field quick controls takes effect immediately.
-- Quick-control dialogs retain native identity, allowing tabs, Refresh, Close and Wi-Fi actions to pass the existing owner guards.
-
-Open **OrbitUI settings > Navigation & interface > Quick controls**. Status taps
-remain opt-in. Custom gestures, saved bars, profiles/chips, Android safe-mode
-covers and fast reader return remain intact. All Beta 17 features and reviewed
-upstreams are included; no new upstream import or hardware light driver.
-The optional Bigme userpatch remains separately distributed through the links above.
-
-Update on the preview channel and **restart KOReader**. Existing supported betas
-can update directly. Bootstrap/API 1, the same 2,000 installed paths, artwork,
-fonts and languages are retained. Previous releases remain immutable; code
-rollback does not restore old reading progress or later settings.
-
-This is a prerelease. Automated Lua/LuaJIT, package and native-boundary/OTA
-checks do not establish physical Boox/Bigme touch, rendering, hardware controls,
-Android system return, rotation or suspend acceptance. Please retest those.
-
-Download **orbitui.koplugin.zip**, not GitHub's source-code archives.
-Keep KOReader's Cover browser enabled; disable standalone SimpleUI/Bookshelf.
