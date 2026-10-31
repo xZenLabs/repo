@@ -1,3 +1,70 @@
+# v0.1.0-beta.24 · 2026-10-31
+
+# OrbitUI 0.1.0-beta.24
+
+Bookshelf 6.1.0, clearer shelf/book controls and improved image-cache reuse.
+This is a prerelease; physical Bigme/Boox acceptance remains open.
+
+## English
+
+- The reviewed **Bookshelf 6.1.0** integration adds page-based shelf editing
+  for source, view, sort, filters, themes, modules and order, with breadcrumbs
+  and coalesced live previews.
+- Clearer book dialogs use rounded action cards, segmented choices, an editable
+  action layout and a persistent Tags edit strip. Review spoilers are optional.
+  OrbitUI's minimal header, lazy Book details and offline/online tag sections remain.
+- Filters gain genre AND/NOT and excluded collections. Themes can sort by
+  newest or last use. These controls do not edit book files or reading status.
+- Separate cover/ornament disk budgets and last-use recency improve reuse after
+  restart, retaining OrbitUI's bounded cancelable maintenance. Expected benefits
+  are not measured device speedups.
+- SimpleUI fixes cached bold-font sizing under global UI text scaling.
+
+Our profiles/chips, fast close/return, face-out shelves, cover size/captions,
+bindings, Android safe covers, night contrast, folder/MAL actions and BookOrbit
+features are retained. New labels have Swedish/English equivalents. No additional
+upstream is imported during release preparation, and no external patch, hardware
+driver, server, credential or reading data is changed.
+
+## Svenska
+
+- **Bookshelf 6.1.0** ger sidindelad hyllredigering med tydligare val för källa,
+  visningsläge, sortering, filter, tema, moduler och ordning.
+- Bokdialogerna får tydligare åtgärdskort och valknappar. Åtgärder kan ordnas om
+  och Taggar får en fast redigeringsrad. Våra bokdetaljer och taggkällor behålls.
+- Fler genre-/samlingsfilter och sortering av teman efter nyast/senast använd.
+- Omslag och ornament får separata cachegränser och senast använda bilder
+  prioriteras. Rensningen sker fortfarande avbrytbart i små steg. Ingen fysisk
+  snabbhetsvinst är uppmätt.
+- SimpleUI rättar storleken på fet text vid skalning av gränssnittets text.
+
+Våra profiler, snabbstängning, bokbindningar, omslagskontroller och
+BookOrbit-funktioner behålls. Inga böcker, läsdata eller inställningar återställs.
+Server- och enhetspatchar installeras inte av den här uppdateringen.
+
+## Update and limits
+
+Update through OrbitUI's preview channel and **restart KOReader**, or install
+this release's **orbitui.koplugin.zip**, not GitHub's source archive. Back up
+settings first. Standalone SimpleUI/Bookshelf must remain disabled.
+
+Bootstrap API 1 and all 2,000 installed paths remain unchanged. Existing languages,
+fonts and artwork are retained. Earlier public tags/assets are never replaced.
+Code rollback retains user data, but older code may ignore new filters/action
+layouts; review shelf scope after rollback rather than restoring old reading data.
+
+Full Lua/LuaJIT, translation, sealed/native OTA and source/history/artwork/secret
+checks precede publication. They are not physical e-ink/font/touch acceptance.
+Retest new dialog/editor/Back/Close paths, profiles, Tags/Book details, cache reuse,
+day/night, rotation/sleep and reader return on Bigme/Boox.
+
+Svenska: Uppdatera via förhandsversionskanalen och starta om KOReader. Fortsatt
+beta: prova de nya vyerna på enheten. Äldre kod kan ignorera nya filter efter
+kodåterställning; kontrollera då hyllans avgränsning.
+
+See [OTA notes](https://github.com/komadorirobin/orbitui.koplugin/blob/v0.1.0-beta.24/docs/OTA.md)
+for details and rollback limitations.
+
 # v0.1.0-beta.23 · 2026-10-31
 
 # OrbitUI 0.1.0-beta.23
@@ -134,31 +201,3 @@ Older supported betas can update directly. Same 2,000 installed paths and unchan
 Reviewed upstream: SimpleUI `5631ce1035286803d7586979c75993671ff022cb`; Bookshelf unchanged at `ee84a8fe1621171c00df91c41dee76b9ed07028c`. Thanks to both upstream projects and their contributors.
 
 Still a prerelease: physical Bigme/Boox acceptance remains outstanding. Retest day/night/day, tilted/ordinary covers, fonts/touch/keyboard, compact views and saved defaults, settings navigation, detail tabs/zoom, reader return, rotation/sleep and OTA. / Fortsatt beta: automatiska tester ersätter inte provning på enheten och innebär ingen uppmätt snabbhetsvinst.
-
-# v0.1.0-beta.19 · 2026-10-30
-
-## Svenska
-
-- Förbättrad gemensam sökning: tio senaste lokala sökningar med vald avgränsning, rensningsbar historik och sortering efter relevans, titel, författare eller serie. Profiler och aktuell hylla behåller sin avgränsning.
-- Enklare samlingshantering: välj en egen samling under **Hantera samlingar → Hantera böcker…**. Sök, lägg till/ta bort medlemskap, granska ändringar och välj **Spara** eller **Avbryt**. Inga bokfiler raderas. Favoriter och mappstyrda samlingar behåller KOReaders vanliga hantering.
-- Senaste granskade SimpleUI-ändringarna ingår: månadsdiagram för böcker/sidor i läsinsikterna, separat årsväljare samt säkrare statistikcache och återförsök. Läsöversiktens layout ersätts inte.
-- Separat inspirationsbevakning på GitHub för utvalda delar av sex UI-projekt. Ingen automatisk merge/import och ingenting som körs på läsplattan.
-
-Hardcover, utgåvekoppling, BookOrbit/MAL/patch-integrationer, profiler/chip och snabbstängning lämnas oförändrade. Inga nya upstream-importer görs för denna release: SimpleUI `7a605bbc`, Bookshelf `ee84a8fe`.
-
-Uppdatera via **förhandsversionskanalen** och starta om KOReader. Ingen återställning eller mellanversion behövs. Inställningar, läsprogression och metadata behålls; kodåterställning återställer inte senare användardata.
-
-Fortsatt beta: automatiska tester ersätter inte fysisk testning på Boox/Bigme. Prova sökning/historik/avgränsning, samlingarnas vyväljare/sökning/paging/Spara/Avbryt, läsinsikternas årsväljare samt rotation, viloläge och återgång från boken. Ingen uppmätt prestandavinst påstås.
-
-## English
-
-- Shared search now has ten local recent query/scope pairs, explicit history clearing and relevance/title/author/series sorting. Current-shelf and profile restrictions are preserved.
-- Custom collection contents can be edited through **Manage collections → select a collection → Manage books…**. Search, stage membership additions/removals, review changes and Save or Cancel. Book files are never deleted. Favourites and folder-managed collections retain native KOReader controls.
-- Includes the already-reviewed SimpleUI changes: monthly books/pages charts in Reading Insights, an independent year selector and safer statistics caching/retries. The existing Home/dashboard layout is preserved.
-- A separate GitHub inspiration watcher monitors selected parts of six UI projects, never auto-merges/imports and does not run on the reader.
-
-Hardcover, edition linking, BookOrbit/MAL/patch integrations, profiles/chips and fast close are unchanged. No additional upstream is imported for this release: SimpleUI `7a605bbc`, Bookshelf `ee84a8fe`.
-
-Update through the **preview channel** and restart KOReader. No reset or bridge release is needed. Existing settings, reading progress and metadata remain; code rollback does not roll back later user data. All 2,000 installed paths, bootstrap/API, artwork, fonts and languages are retained.
-
-Still a prerelease: automated tests are not physical Boox/Bigme acceptance. Retest search/history/scopes, collection views/search/paging/Save/Cancel, the Insights year picker, rotation, sleep and reader return. No measured performance gain is claimed.

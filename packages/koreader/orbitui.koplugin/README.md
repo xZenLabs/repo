@@ -133,7 +133,7 @@ by the code license. See [add-on instructions](docs/ADDONS.md).
 ## Installation
 
 **Requirements:** KOReader **v2025.08 or newer**; v2026.03 or newer is recommended
-by Bookshelf. Keep KOReader's **Cover browser** plugin enabled. Beta 23 is a
+by Bookshelf. Keep KOReader's **Cover browser** plugin enabled. Beta 24 is a
 prerelease, not a promise of compatibility with every device or user patch.
 
 1. **Back up first.** Keep a copy of your KOReader settings, user patches,
@@ -143,7 +143,7 @@ prerelease, not a promise of compatibility with every device or user patch.
    manager and restart KOReader.** Disable both if you have both. Do not delete
    their settings or plugin folders.
 3. Download **`orbitui.koplugin.zip`** from the
-   [Beta 23 release](https://github.com/komadorirobin/orbitui.koplugin/releases/tag/v0.1.0-beta.23).
+   [Beta 24 release](https://github.com/komadorirobin/orbitui.koplugin/releases/tag/v0.1.0-beta.24).
    Do **not** use **Code > Download ZIP** or GitHub's **Source code** archives.
 4. Fully exit KOReader. Extract the ZIP and copy its **`orbitui.koplugin`**
    folder into your KOReader **`plugins/`** directory.
@@ -183,7 +183,7 @@ OrbitUI. Their local catalogs may need refreshing.
 after the backup and predecessor-disable steps above, find
 `komadorirobin/orbitui.koplugin`. In its download options, choose
 **Other releases...**, uncheck **Filter pre-releases**, select
-**v0.1.0-beta.23**, then select **`orbitui.koplugin.zip`**. Restart KOReader
+**v0.1.0-beta.24**, then select **`orbitui.koplugin.zip`**. Restart KOReader
 after installation. Preview builds are not returned by GitHub's "latest stable release"
 endpoint, so the default latest-release lookup may report that none exists.
 Do not choose **Direct download from repo**, **Source code**, the checksum
@@ -192,7 +192,7 @@ file, or the add-on-only **ornaments-1** release.
 **[Storefront by ultimatejimmy](https://github.com/ultimatejimmy/storefront.koplugin):**
 use **26.10.20 or newer**, which includes the
 [embedded-plugin detection fix](https://github.com/ultimatejimmy/storefront.koplugin/releases/tag/26.10.20).
-Find `komadorirobin/orbitui.koplugin` and choose **v0.1.0-beta.23** and
+Find `komadorirobin/orbitui.koplugin` and choose **v0.1.0-beta.24** and
 **`orbitui.koplugin.zip`** from its versions/releases options if the cached
 catalog still shows an older beta. Disable the predecessor plugins first as
 described above. Older affected installers (including **26.10.17-beta2**) can
@@ -240,6 +240,20 @@ re-enabling your old plugins**. Never restore stale reading-progress files just
 to undo a UI change.
 
 ## Beta status and feedback
+
+**0.1.0-beta.24** publishes the reviewed **Bookshelf 6.1.0** integration:
+page-based shelf editing, clearer book dialogs/actions, richer genre/collection
+filters and improved cover/ornament cache reuse. SimpleUI fixes bold-font sizing
+under UI scaling. OrbitUI's profile, navigation, binding, caption, Android/night
+and BookOrbit adaptations remain, with new English/Swedish labels. No settings,
+reading data, external patch or server is reset or deployed. Physical Bigme/Boox
+acceptance remains open; cache benefits are not measured device speedups.
+See [Beta 24 notes](docs/OTA.md#orbitui-010-beta24), including rollback caveats.
+
+**Svenska:** Beta 24 innehåller Bookshelf 6.1 med tydligare bokdialoger,
+sidindelad hyllredigering, fler filter och förbättrad cache för omslag/ornament.
+Våra profiler, snabbstängning och BookOrbit-funktioner behålls. Fortsatt beta;
+prova de nya vyerna på enheten efter uppdatering och omstart.
 
 **0.1.0-beta.23** adds the BookOrbit integration settings, explicit local/server
 Want to Read source names, independent feature switches and guarded pending

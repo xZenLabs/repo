@@ -1,3 +1,10 @@
+# v2.4.0-beta.7 · 2026-10-31
+
+## 🐛 Fixes
+- Fix opening a book without reading resetting Hardcover's page, and the notice covering the conflict question (#273)
+
+**Full changelog**: https://github.com/CaptainCamin/HardcoverSync.koplugin/compare/v2.4.0-beta.6...v2.4.0-beta.7
+
 # v2.4.0-beta.6 · 2026-10-31
 
 ## 🐛 Fixes
@@ -101,9 +108,3 @@ Not yet tried on a device: the new hooks into KOReader's book-status screen and 
 No pull requests were merged since the last release.
 
 **Full changelog**: https://github.com/CaptainCamin/HardcoverSync.koplugin/compare/v2.4.0-beta.2...v2.4.0-beta.3
-
-# v2.4.0-beta.2 · 2026-10-28
-
-No pull requests were merged since the last release.
-
-**Full changelog**: https://github.com/CaptainCamin/HardcoverSync.koplugin/compare/v2.4.0-beta.1...v2.4.0-beta.2
