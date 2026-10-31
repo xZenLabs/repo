@@ -2,7 +2,7 @@
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="assets/banner-dark.png">
     <source media="(prefers-color-scheme: light)" srcset="assets/banner-light.png">
-    <img src="assets/banner-light.png" alt="tomedown: one Markdown file per book, straight into your notes" width="625">
+    <img src="assets/banner-light.png" alt="tomedown: one Markdown file per book, straight into your notes" width="480">
   </picture>
 </p>
 
@@ -297,5 +297,7 @@ with it.
 Something wrong or missing? [Open an issue](https://github.com/imanubdesigner/tomedown.koplugin/issues).
 
 ## License
+
+Copyright (C) 2026 Manuel B.
 
 GNU Affero General Public License v3.0, see [LICENSE](LICENSE).
