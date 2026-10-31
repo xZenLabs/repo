@@ -1,3 +1,16 @@
+# v6.3.8 · 2026-10-31
+
+- 修复时间同步智能切换
+- 修复eink下载书籍坐标丢失
+- 阅读进度修复
+- 阅读进度稳定靶点，时间暂有问题
+- 阅读进度/时间 稳定锚点
+- 部分功能回归，可作为中段基线
+- 美化回归，时间进度稳固
+- 进度安全测试
+- 进度/时间稳定
+- 第三方元数据请求的限流隔离
+
 # v6.3.5 · 2026-10-30
 
 - feat(readtime): preserve complete offline reading-time upload implementation
@@ -44,12 +57,3 @@
 - 能看到一部分，但**这份 crash 不能严格证明“单击快捷同步失败，而长按→全部重新同步成功”**。原因是当前日志对“单击主页同步”没有单独的事件标记。 能明确看到的是长按路径。比如 beta.7 后段： ```text 20:50:30 ActionSheet fresh key=home_action_functions_sync 20:50:35 item tapped 阅读进度 20:50:39 item tapped 全部重新同步 20:50:43 login renewal completed 20:50:44 remote progress ... 20:50:44 ProgressRecovery freshness checked ... ``` 也就是说，“全部重新同步”之后确实立即进入了完整的认证 → 读取云端 → `ProgressRecovery` 流程。crash 但这里的： ```text ActionSheet fresh key=home_action_functions_sync ``` **不是“单击同步执行了”的证据**，而是同步快捷键的二级 ActionSheet 被构建出来，也就是长按菜单。因此不能拿它来代表单击。 另外一次 16:51:15 也只是记录： ```text ActionSheet fresh key=home_action_functions_sync ``` 之后没有“全部重新同步”，然后你切换了主页栏目。它同样只能证明菜单被打开，不能说明单击同步到底执行了什么。crash 所以目前最准确的结论是： > **你的观察很可能是真的，但当前 crash 的日志粒度不够，不能把这个 A/B 差异直接坐实。** 不过这个问题下一版很好处理。我建议做两件事： ```text 单击主页「同步」 ↓ 和 长按 → 阅读进度 → 全部重新同步 ↓ 强制调用完全同一个 recovery 函数 ``` 同时加明确日志： ```text [SyncAction] source=home_quick action=full_recovery [SyncAction] source=progress_menu_all action=full_recovery ``` 以及结束： ```text [SyncAction] source=home_quick result=success ``` 这样下一份 crash 一眼就能知道两个入口到底有没有走同一条路径。 所以这次我不会说“日志已经证明快捷同步坏了”；**它只明确证明“全部重新同步”确实会启动完整 recovery，而单击快捷同步在当前日志里不可辨认。**这本身就说明下一版需要把两个入口真正硬性统一，而不是继续假设它们等价。
 - 修复生包bug
 - 统一主页快捷同步与“全部重新同步”的进度恢复流程，并增强设备唤醒后的网络就绪判断。 Description
-
-# v6.0.0 · 2026-10-08
-
-- 正式版基于 6.0.0-beta.1 收口，继承 5.9.1-beta.4 的功能与修复；Schema 保持 136，不把 Beta 发布通道变成正式版通道。
-- 保留 5.9 多设备精确阅读进度、云端/本地新旧判断、冲突保护、断线恢复、Progress Recovery Capsule 以及严格的 fail-closed 行为。
-- 纳入微信读书书城、搜索与推荐、书架添加/移除、后台书架进度更新、已读完状态双向同步和书架管理授权。
-- 主登录与书架管理授权继续使用两套独立凭证；同账号主登录刷新保留书架管理凭证，允许单独撤销书架管理授权。不声称已经完成真正的单凭证统一。
-- 保留外文翻译原文/双语/仅译文、书内链接修复、连接复用、扩展中心与 Kindle/Kobo/Android 兼容路径。
-- 发布包切换为正式版 6.0.0，默认 OTA 指向 stable-channel/update.json；Beta 发布配置仍只用于内测分支。

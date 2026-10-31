@@ -85,10 +85,25 @@ Panels+ is a KOReader plugin that improves manga and comic reading by replacing 
 
 ## 🧩 Compatibility
 
+### Devices
 <div align="center">
-<img width="100%" height="auto" alt="image" src="https://github.com/user-attachments/assets/9a1643e5-1b29-40f8-8eea-2ce1950972b2" />
+<img width="95%" height="auto" alt="image" src="https://github.com/user-attachments/assets/9a1643e5-1b29-40f8-8eea-2ce1950972b2" />
 </div>
 
+### KOReader Plugins Ecosystem
+*Panels+*, only focuses in Panels from mangas & comics (and soon manhwas) as you can see. It won't include outer-futures non-related
+to panels, but still, mangas and comics aren't 100% panels right?. 
+
+To improve your experience, this plugin has tested/garanteed compatibility with the following:
+
+<div align="center">
+    <img width="95%" height="auto" alt="image" src="https://github.com/user-attachments/assets/a8c14718-5a51-4e4e-8e5a-8f262921c8cd" />
+</div>
+
+Download/Repos:
+- Ink-away: https://github.com/EmirErtorer/ink-away.koplugin
+- Meguru: https://github.com/Craftwork2720/meguru
+- kobo.koplugin: https://github.com/OGKevin/kobo.koplugin
 
 ### KOReader versions
 
