@@ -4,14 +4,14 @@
 id=orbitui
 name=Orbitui
 version=source
-description=A unified KOReader Home and visual library built on SimpleUI (doctorhetfield-cmd) and Bookshelf (AndyHazz), with shared navigation and optional add-ons.
+description=A unified KOReader Home and visual library built on SimpleUI and Bookshelf, with shared navigation, optional BookOrbit lists/tags and local-first reading tools.
 author=komadorirobin
 category=theme
 platforms=koreader
 dependencies=
 source=https://github.com/komadorirobin/orbitui.koplugin
 stars=7
-updated_at=2026-10-31T13:00:58Z
+updated_at=2026-10-31T14:00:59Z
 prerelease_version=0.1.0-beta.22
 prerelease_published_at=2026-10-31T12:14:47Z
 readme_url=packages/koreader/orbitui.koplugin/README.md

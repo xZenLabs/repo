@@ -1,3 +1,11 @@
+# v1.1.1 · 2026-10-31
+
+## Fixed
+- Choosing a folder no longer ends in "Something went wrong" and a crash. This hit
+  Statistics scope (Add a folder), Library opens in, and moving books to a folder.
+
+Thanks to everyone who reported it.
+
 # v1.1.0 · 2026-10-31
 
 
