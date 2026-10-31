@@ -1,3 +1,35 @@
+# v0.1.0-beta.20 · 2026-10-31
+
+Beta 20 combines the reviewed SimpleUI update with the approved night-mode and shared-interface refinements.
+
+### Highlights
+
+- **Night mode:** clearer dark backgrounds over retained wallpaper, consistent rounded RGB card corners on Android and a readable navigation bar. Day preferences and original cover colours are preserved.
+- **Tilted Cover Deck covers:** upstream matches warped images to the screen format before night inversion and correctly accounts for their cache memory. Conversion never frees the original cached cover. Polish translations are updated.
+- **Search:** optional typo-tolerant matching for accents, prefixes and transposed letters, with exact Swedish spelling ranked first. Existing scopes, genre preference, recent searches and the 400-hit cap remain.
+- **Shelf controls:** tap the page counter marked **▾** for **Sort, filter & view**, including compact one-/two-column lists and relative dates. Choices are remembered per profile/chip/opened group. **Use shelf defaults here** restores the original grouping, layout and sorting. Filters never write reading status or remote progress.
+- **Settings:** **You are here** offers direct jumps to parent settings levels.
+- **Book details:** a simpler cover/title/author/progress header, lazy technical-information tab with independent zoom and **Read now** using the original reader action. Existing tabs and plugin actions remain.
+- **Diagnostics:** additional opt-in local scalar timings; no queries, titles or paths are logged. The developer CPU benchmark is not a measured reader-performance claim.
+
+### Svenska
+
+Beta 20 innehåller nattlägesfixen för ljusa bakgrunder, felaktiga korthörn och svårläst navigationsrad. SimpleUI rättar även bildformatet för lutade omslag i Cover Deck vid nattläge samt deras minnesräkning. Bookshelf har inget nytt upstream.
+
+**Stavfelstålig sökning** kan hitta böcker trots stavfel och omkastade bokstäver. Exakt svensk stavning prioriteras; funktionen kan stängas av. Tryck på hyllans sidräknare med **▾** för **Sortering, filter och vy**. Kompaktlistor visar titel, författare, läsprocent och datum. Valen sparas per profil/chip/grupp, och **Använd hyllans standard här** återställer ursprunglig gruppering, vy och sortering. Filtren ändrar aldrig lässtatus eller fjärrsynk.
+
+Inställningarnas **Du är här** gör det enklare att gå tillbaka genom nivåerna. Bokpanelen får en renare header, teknisk information under **Bokdetaljer** och **Läs nu** med samma läsaröppning som tidigare. Nya egna texter finns på svenska och engelska.
+
+### Install / installation
+
+Download **orbitui.koplugin.zip**, not GitHub's source-code archive, or update through OrbitUI's preview channel. Restart KOReader afterward. / Uppdatera via förhandsversionskanalen och starta om KOReader.
+
+Older supported betas can update directly. Same 2,000 installed paths and unchanged API-1 bootstrap; no bridge, settings reset or automatic metadata scan. Existing profiles, chips, fast book closing, Android-safe cover handling, BookOrbit/Hardcover/MAL and external patches retain their owners. The prose bookmark patch is distributed separately through Ereader Patch Manager. No prior public release or asset is replaced.
+
+Reviewed upstream: SimpleUI `5631ce1035286803d7586979c75993671ff022cb`; Bookshelf unchanged at `ee84a8fe1621171c00df91c41dee76b9ed07028c`. Thanks to both upstream projects and their contributors.
+
+Still a prerelease: physical Bigme/Boox acceptance remains outstanding. Retest day/night/day, tilted/ordinary covers, fonts/touch/keyboard, compact views and saved defaults, settings navigation, detail tabs/zoom, reader return, rotation/sleep and OTA. / Fortsatt beta: automatiska tester ersätter inte provning på enheten och innebär ingen uppmätt snabbhetsvinst.
+
 # v0.1.0-beta.19 · 2026-10-30
 
 ## Svenska
@@ -153,24 +185,3 @@ Keeps Android safe mode, cover quality, fast profile/chip/page return and extern
 **Update on the preview channel and restart KOReader.** Use `orbitui.koplugin.zip` for manual installation, not GitHub's source archive. Bootstrap/API 1 and all 2,000 installed paths are unchanged. Earlier public releases remain immutable. Code rollback retains later settings and reading progress; keep an independent data backup.
 
 Automated Lua/LuaJIT, translation/package/source/history and native older-installer upgrade/rollback checks are separate from physical-reader acceptance. Boox/Bigme performance, native image pressure, UI/display and storage acceptance remain outstanding; no measured device speed/RAM improvement is claimed.
-
-# v0.1.0-beta.15 · 2026-10-28
-
-## Svenska
-
-- **Färg i Läsöversikt:** välj Av, Accenter eller Tonade kort under **OrbitUI-inställningar > Hem (SimpleUI) > Läsöversikt > Kortfärger**, eller i modulens egna inställningar. Tonade kort ger pastellbakgrunder och färgade ramar/indikatorer. Valet gäller den aktuella läsöversikten, inte hela gränssnittet.
-- **Omslagsfärgat Fortsätt läsa-kort:** ett färgat omslag kan ge kortet en passande mörk nyans. Mörkt/ljust kort, rubriker, layout, bokkällor, öppna/långtryck och oberoende bläddring behålls. Svartvita skärmar och avstängd färgrendering behåller gråskalan; nattläget får egna nyanser.
-- **Senaste granskade upstream:** Bookshelf 6.0.4 med färgfixar, mindre onödiga helskärmsblinkningar och sökbar samlingshantering. SimpleUI får rättningar av minnesläckor/sidpilar, uppskjuten fillistning, färre onödiga omslagsuppdateringar, bakgrundsdithering, valfri sidblinkning och Hazel.
-- Våra profil-/snabbstängningsfixar, Android safe mode/omslagsfixen, Home/Bento, serieboxar/ornament och BookOrbit/MAL-kopplingar är kvar.
-
-**Befintliga installationer behåller Av tills du väljer färg.** Uppdatera via OrbitUI med förhandsversioner tillåtna och starta om KOReader. Ingen återställning eller ny indexering krävs för färgerna.
-
-## English
-
-- **Reading dashboard card colours:** Off, Accents or Tinted cards, scoped to each Home/Custom Screen. Existing installations remain Off until explicitly changed. Find it in **OrbitUI settings > Home (SimpleUI) > Reading dashboard > Card colours**, or the module's own settings.
-- Optional cover-derived continue-reading colour, native monochrome fallback and day/night palettes. Existing dark/light hero, layout, headings, sources, independent row paging and book actions are retained. This is an independent OrbitUI implementation inspired by BookOrbit's colour-board options; no BookOrbit code, palette or artwork is imported.
-- Includes reviewed **Bookshelf 6.0.4** through `d07905ba932e09044827aadf480c188a5d324b96` and **SimpleUI 3.0.1 follow-up** through `22d5a3d2dd7be4651e718eb49027d82f68b3ace7`. Fast profile return, settings improvements, safe Android covers, Home/Bento and external sync owners remain intact.
-
-Install **orbitui.koplugin.zip**, not GitHub's source archive. Existing supported betas can update on the preview channel; restart KOReader. Bootstrap/API 1, installer limits and the complete 2,000-file installed path set are unchanged. No settings, progress, links, caches or artwork are reset. Code rollback preserves later data/settings changes; older builds ignore the new scoped colour choice.
-
-This is a **prerelease**. Automated Lua/LuaJIT, contrast/native-UI-boundary, package and native archive/OTA checks are not physical display acceptance. Actual Boox/Bigme colour strength, night-mode rendering, ghosting, responsiveness and touch/rotation/sleep checks remain outstanding. SVG schematics use synthetic covers and approximate text; they are not device screenshots or performance measurements.
