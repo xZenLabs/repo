@@ -1,3 +1,11 @@
+# v1.1.0 · 2026-10-31
+
+- New: a Silverfish card for the [Bookshelf](https://github.com/AndyHazz/bookshelf.koplugin) plugin. Put it in the top panel or stand it on a shelf among your books. Narrow, it's just the silverfish; wider, it gets a speech bubble with what it's thinking. Tap it to open its screen. Tested with Bookshelf 6.0.4.
+
+Your silverfish keeps its progress: to update, replace the `silverfish.koplugin` folder (see "Updating and backups" in the README), or update from Storefront.
+
+**Install:** download `silverfish-v1.1.0.zip` below, unzip it, and copy the `silverfish.koplugin` folder into KOReader's `plugins` folder.
+
 # v1.0.0 · 2026-10-30
 
 **Lives in your e-reader. Eats what you read. Judges your taste.**

@@ -38,7 +38,7 @@ It runs on your e-reader with **no AI and no internet**. Everything it says is p
 
 **Before you start:** you need KOReader on your e-reader. On a Kindle, that means a jailbroken Kindle with KOReader installed, usually opened from KUAL. KOReader's own guide explains how: [KOReader wiki](https://github.com/koreader/koreader/wiki).
 
-1. Download `silverfish-v1.0.0.zip` from [Releases](../../releases) and unzip it. Inside there is a folder called `silverfish.koplugin`.
+1. Download `silverfish-v1.1.0.zip` from [Releases](../../releases) and unzip it. Inside there is a folder called `silverfish.koplugin`.
 2. Connect your e-reader to your computer and copy `silverfish.koplugin` into KOReader's `plugins` folder:
    - **Kindle:** `koreader/plugins/`
    - **Kobo:** `.adds/koreader/plugins/`
@@ -57,6 +57,11 @@ It runs on your e-reader with **no AI and no internet**. Everything it says is p
 - **Optional:** with the [Simple UI](https://github.com/doctorhetfield-cmd/simpleui.koplugin) plugin (by doctorhetfield-cmd) installed, it shows up as a card on your home screen.
 
 <img src="media/simple-ui.png" alt="A Kindle showing KOReader's home screen with the Simple UI plugin: the book being read, and below it the elder silverfish saying: chiming. Ate it. Nobody uses that word anymore.">
+
+- **Optional:** with the [Bookshelf](https://github.com/AndyHazz/bookshelf.koplugin) plugin (by AndyHazz) installed, it can live on your home screen or stand on a shelf among your books. Bookshelf doesn't add cards by itself, so add it once:
+  - **Top panel:** in Bookshelf's settings, set **Behavior → Top panel starts with** to **Micro modules**. Then long-press the panel, tap **+ Add** and pick **Silverfish**.
+  - **On a shelf:** long-press the shelf's tab, tap **Add a module to this shelf…** and pick **Silverfish**.
+  - Narrow, it's just the silverfish. Wider, it gets a speech bubble with what it's thinking. Tap it to open its screen.
 
 ## Sleep screen
 
