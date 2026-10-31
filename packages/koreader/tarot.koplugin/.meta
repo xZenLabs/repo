@@ -3,7 +3,7 @@
 # zenpm:auto-scraped
 id=tarot
 name=Tarot
-version=6.2.15
+version=6.2.24
 description=Draw tarot cards, reveal meanings, save reflections, and explore the cards directly on your device.
 author=hluiz2628-blip
 category=utility
@@ -11,13 +11,13 @@ platforms=koreader
 dependencies=
 source=https://github.com/hluiz2628-blip/tarot.koplugin
 stars=9
-updated_at=2026-10-31T05:01:00Z
-published_at=2026-10-31T03:46:49Z
+updated_at=2026-10-31T06:00:58Z
+published_at=2026-10-31T05:47:26Z
 readme_url=packages/koreader/tarot.koplugin/README.md
 readme_hash=9d8dbabf81224d62b25d5dcc6c30f312b0922f33
 release_notes_url=packages/koreader/tarot.koplugin/RELEASE_NOTES.md
-release_notes_hash=535907e29f71f14fe42421a2dd86bdc7d7d5f81c5878add303438240e0246349
-releases=[{"tag_name":"6.2.15","assets":[{"name":"tarot.koplugin.zip","url":"https://github.com/hluiz2628-blip/tarot.koplugin/releases/download/6.2.15/tarot.koplugin.zip","size":8858806,"digest":"sha256:e0922b3c10d5f82b36d6c81a1c00cb8e6bb755cc055cd67d8bffbfefe2fe21b5"}],"name":"Arcana II - Cartas e Luas v6.2.15"},{"tag_name":"6.2.8","assets":[{"name":"tarot.koplugin.zip","url":"https://github.com/hluiz2628-blip/tarot.koplugin/releases/download/6.2.8/tarot.koplugin.zip","size":8846711,"digest":"sha256:d31ae0892e722a09abfcdcba9f3a2075735169ab3487e912cdd74e5811c7a78b"}],"name":"Arcana II - Cartas e Luas v6.2.8"}]
+release_notes_hash=5c62616463e9d2a466bb1e76d3240b27be5570041457938504eaf95c72db70c4
+releases=[{"tag_name":"6.2.24","assets":[{"name":"tarot.koplugin.zip","url":"https://github.com/hluiz2628-blip/tarot.koplugin/releases/download/6.2.24/tarot.koplugin.zip","size":8857038,"digest":"sha256:63678b7ccc990b66162c2d54259254f3290e226942f59b248c988d44799f3355"}],"name":"Arcana II - Cartas e Luas v6.2.24"},{"tag_name":"6.2.15","assets":[{"name":"tarot.koplugin.zip","url":"https://github.com/hluiz2628-blip/tarot.koplugin/releases/download/6.2.15/tarot.koplugin.zip","size":8858806,"digest":"sha256:e0922b3c10d5f82b36d6c81a1c00cb8e6bb755cc055cd67d8bffbfefe2fe21b5"}],"name":"Arcana II - Cartas e Luas v6.2.15"},{"tag_name":"6.2.8","assets":[{"name":"tarot.koplugin.zip","url":"https://github.com/hluiz2628-blip/tarot.koplugin/releases/download/6.2.8/tarot.koplugin.zip","size":8846711,"digest":"sha256:d31ae0892e722a09abfcdcba9f3a2075735169ab3487e912cdd74e5811c7a78b"}],"name":"Arcana II - Cartas e Luas v6.2.8"}]
 source_type=release
 source_asset=tarot.koplugin.zip
-size=8858806
+size=8857038
