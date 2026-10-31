@@ -102,8 +102,8 @@ files and the guide artwork; the logo stays, the About popup shows it):
 ```
 rsync -a --exclude tests --exclude .git --exclude .github \
       --exclude .gitattributes --exclude .gitignore \
-      --exclude README.md --exclude README.codeberg.md \
-      --exclude TUTORIAL.md --exclude TUTORIAL.codeberg.md \
+      --exclude README.md \
+      --exclude TUTORIAL.md \
       --exclude OBSIDIAN.md --exclude SYNC-DIRECTION.md \
       --exclude docs \
       --exclude assets/menu --exclude assets/obsidian \
