@@ -1,3 +1,14 @@
+# v2.0 · 2026-10-31
+
+MAJOR ARCHITECTURAL CHANGE: Starting with this release, the project has been completely decoupled from modifying KOReader's builtin statistics plugin files. It is now a standalone, update-proof KOReader User Patch that dynamically hooks into memory without touching any core files.
+
+What's New?
+Plugin to User Patch Migration: No longer overwrites statistics.koplugin files. Installs cleanly into patches/ and injects via runtime hooks (userpatch, PluginLoader, ReaderUI), surviving all KOReader updates.
+Instant 0-Second Startup (Smart CPP Cache): Replaced repetitive binary search calculations on book open with smart CPP caching, eliminating the 5–10 second startup freeze.
+Font Size Lock & Protection Engine: Prevents accidental font size alterations while physical page sync is active by hooking ReaderFont and configuration dialogs.
+Book Map Widget Synchronization: Fully maps Book Map tick marks 1:1 to physical pages; chapters (TOC), bookmarks, and reading pointers scale accurately, with seamless tap-to-screen navigation.
+Completed Books & Sleep Timer Fixes: Fixed stats freezing on books previously marked complete and resolved ghost time increments after device sleep/resume cycles.
+
 # v1.30 · 2026-07-09
 
 **API and Limits: Switched to Open Library due to Google Books API restrictions, and HTTP errors when fetching page counts have been fixed.
