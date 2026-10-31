@@ -1,3 +1,45 @@
+# v0.4.8 · 2026-10-31
+
+## 月读 v0.4.8
+
+KOReader 插件包：`book.koplugin-v0.4.8.zip`
+
+输入法词库（整库，手动 sideload）：`dictionary.sqlite3 dictionary-wubi.sqlite3 dictionary-cangjie.sqlite3 dictionary-zhuyin.sqlite3`
+
+安装：解压后将 `book.koplugin` 复制到 KOReader 的 `plugins` 目录，然后重启。
+
+词库 sideload：下载对应布局的词库，直接放入 KOReader 数据目录下的
+`.moon/`（与 `book.sqlite3` 同级）。附件已使用最终文件名，无需重命名。
+
+### 更新内容
+
+相对上一版本 `v0.4.7`：
+
+#### 新功能
+
+- :sparkles: (rare): 行间标注颜色可在灰色与黑色间切换 (bd108fca)
+- :sparkles: (source): 书架分类可选自定义分组，不再与题材混用 (d322122a)
+- :sparkles: (subscribe): 网页在线源增加精选全文与合集 (389e644c)
+
+#### 修复
+
+- :bug: (reader): 恢复位置抛错也清标志；补齐 LuaLS 与 l10n 缺项 (007e1f5b)
+- :bug: (home): 最近阅读卡片圆角不再露白，立体侧封面补回阴影 (0e935e9f)
+- :bug: (source): ext.kavita / ext.bookorbit 并入内置源时一次性迁移旧数据 (a58bb316)
+- :bug: (desktop): 后台同步只把本机不可达当离线，补齐过期的分类用例 (62e2bbb2)
+- :bug: (ui): raised 卡片右下角不再露出白色矩形 (b4c1c46d)
+- :bug: (desktop): 唤醒半联网时后台同步不再弹 Could not connect (3057e4a1)
+- :bug: (ui): Box 圆角裁切对 cdata 像素也做 RGB32 快照 (48df8978)
+
+#### 变更
+
+- :label: (lint): 清掉最后 7 条 LuaLS 警告 (e4a5ec5b)
+- :white_check_mark: (source): 补分类开关的离线用例 (283911a1)
+
+### 完整对比
+
+https://github.com/AnkioTomas/moon/compare/v0.4.7...v0.4.8
+
 # v0.4.7 · 2026-10-30
 
 ## 月读 v0.4.7
@@ -151,40 +193,3 @@ KOReader 插件包：`book.koplugin-v0.4.3.zip`
 ### 完整对比
 
 https://github.com/AnkioTomas/moon/compare/v0.4.2...v0.4.3
-
-# v0.4.2 · 2026-10-29
-
-## 月读 v0.4.2
-
-KOReader 插件包：`book.koplugin-v0.4.2.zip`
-
-输入法词库（整库，手动 sideload）：`dictionary.sqlite3 dictionary-wubi.sqlite3 dictionary-cangjie.sqlite3 dictionary-zhuyin.sqlite3`
-
-安装：解压后将 `book.koplugin` 复制到 KOReader 的 `plugins` 目录，然后重启。
-
-拓展书源（可选，需同时安装月读）：`moonsource-kavita.koplugin-v0.4.2.zip`（Kavita）、
-`moonsource-bookorbit.koplugin-v0.4.2.zip`（BookOrbit）。解压后同样放进 `plugins` 目录。
-
-词库 sideload：下载对应布局的词库，直接放入 KOReader 数据目录下的
-`.moon/`（与 `book.sqlite3` 同级）。附件已使用最终文件名，无需重命名。
-
-### 更新内容
-
-相对上一版本 `v0.4.1`：
-
-#### 修复
-
-- :bug: (xray): 有进展的全书分析不再误报失败 (#77) (07b454af)
-- :bug: (insight): 显隐配置缺失时不再崩溃 (fca11c3d)
-- :bug: (xray): 显式重新生成时释放已删实体的墓碑 (693216ba)
-- :bug: (kavita): 卷行不全时不按「缺行=未读」聚合，退回服务端比例 (de45eb95)
-- :bug: (kavita): 起始页只把云端位置当提示，合并交给 kamare (2a94d5f4)
-- :bug: (kavita): 漫画进度跨设备取更靠后，书架百分比与打开位置同源 (d5234162)
-
-#### 重构
-
-- :recycle: (toc): 目录不做保鲜，开书与临近章末静默刷新 (0e7726a8)
-
-### 完整对比
-
-https://github.com/AnkioTomas/moon/compare/v0.4.1...v0.4.2

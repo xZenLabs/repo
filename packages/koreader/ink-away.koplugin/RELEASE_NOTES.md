@@ -1,3 +1,20 @@
+# v4.4.0 · 2026-10-31
+
+Ink Away 4.4.0 is the stable release of everything since 4.3.0. The big one is Export: your annotations now leave the reader as an editable PDF, a PDF of any book, or images. Plus Ink Away in ten languages, a toolbar you can move to the left or right, PDFs opened as notebooks from KOReader's own menus, and KOReader's gestures working inside Ink Away.
+
+Highlights:
+- **Editable PDF.** Annotate a PDF while you read, then export it: you get a copy of the original with your ink and highlights as real PDF annotations. The text stays selectable, the file stays about the size of the original, and any PDF viewer can edit or remove your annotations. Text boxes, pictures and fills can't be annotations, so Ink Away lists them first and either leaves them out or keeps the ink of just those pages as a picture over the page.
+- **Any book as a PDF.** Export an EPUB, MOBI or other book you annotated as a fixed PDF, laid out as you read it now, with your ink, shapes and highlights where they are on the screen. The text sits under each page, so you can search, select and copy it. Export the pages with ink, a range or the whole book. Pages are pictures, so long books make big files.
+- **Images.** Save pages as PNGs (the page you are on, the pages with ink or a range, one file each in a folder), or only your ink on white or transparent pages. A progress bar shows the way and Stop ends an export and deletes what it wrote. Find Export in Book ink settings, or under Tools, Ink Away.
+- German, Greek, Spanish, French, Italian, Polish, Brazilian Portuguese, Portuguese, Russian and Turkish. Set KOReader to the language and restart. Spanish and the translation system are by Sebas Moran.
+- Settings, Toolbar side: top, left or right on the canvas, for palms that kept hitting the toolbar.
+- Long-press a PDF in KOReader's file browser, or open it and use Tools, Ink Away: Open as Ink Away notebook. New, From a PDF now uses KOReader's own file list, without the .sdr folders.
+- KOReader's gestures (the light, a refresh, a screenshot) work inside Ink Away. Hold Back in the library to jump to the top folder.
+- A small coffee button beside the dark mode button in Settings, for anyone who wants to say thanks.
+- A highlighter over a page picture no longer covers the text under it in exports.
+
+To update from inside Ink Away: Settings, Updates, Install. Or download `ink-away.koplugin-v4.4.0.zip` below and put the `ink-away.koplugin` folder in KOReader's plugins folder.
+
 # v4.3.0 · 2026-10-24
 
 Ink Away 4.3.0 is the stable release of everything since 4.2.0: the 4.2.1 and 4.2.2 prereleases, plus the pen's eraser end and side button while reading, Convert to text online, and fixes for the Kobo Elipsa, Elipsa 2E and Sage.
@@ -498,64 +515,3 @@ dark mode, paper colours, a guide and updates from inside Ink Away.
 ## For developers
 - The code passes luacheck, and the tests (about 3,800 checks, many on
   KOReader's real drawing, zip and network code) run on every push.
-
-# v3.3.0 · 2026-10-05
-
-The biggest update so far: Ink Away is now a proper notebook app, with a library, a binder-style browser, search, a trash, links and a contents page, and handwriting you can turn into text on the device.
-
-## Your notes, organized
-- No more Save button: every drawing and notebook is its own file and saves itself as you go. The File menu has rename, duplicate, export and new.
-- A library with folders (and folders inside folders), thumbnails and + Drawing / + Notebook / + Folder buttons. Rename, move, duplicate or delete without a computer.
-- Browse: a folder's notebooks as colored tabs beside their pages, like a binder. Star pages, filter by stars, move or copy pages between notebooks.
-- Search by name, or inside pages for typed text, converted handwriting included. Results are remembered, so the next search is instant.
-- A trash: deleted notebooks, drawings, folders and pages wait 30 days and come back exactly where they were.
-- Choose what Ink Away opens on: the last document, the library or your notebooks.
-- Old drawing and notebook project folders move into the library on their own.
-
-## Notebooks
-- Pages can have titles, stars and their own paper.
-- New papers with previews: blank, lined, grid, dotted, isometric, margin ruled and Cornell, plus planners (handwriting practice, checklist, two columns, storyboard, music, daily, weekly, week columns, monthly, meeting notes, habit tracker).
-- Save a page as a template and start new pages from it.
-- Links: link anything to a page in this or another notebook; tap to jump, Back to return.
-- Contents page: built from your titled pages in one tap, every line a link, updated whenever you like.
-- PDF export: titled pages become bookmarks, links keep working, and a whole folder can be exported as one PDF.
-- Drawings can include their grid when exported.
-
-## Writing and editing
-- Convert to text: lasso printed handwriting and it becomes a text box, read by a small model on the device. Nothing is sent anywhere. English letters and digits for now.
-- One selection for everything: lasso strokes, shapes, pictures and text, then move, resize, rotate, flip, duplicate, recolor or change opacity and thickness from one small menu. Cut, copy and paste across pages and notebooks.
-- Hold to straighten: hold the pen still at the end of a stroke and a rough line, box, ellipse or triangle snaps clean. Writing is left alone. Replaces Shape assist.
-- Eraser mode that removes whole strokes.
-- A more forgiving lasso: overlapping ends, grazed writing, text and pictures are picked up.
-- Lasso has its own toolbar button with a new icon; Pan is a round button above the zoom control (tap again to return to your tool).
-- The pen can tap the toolbar and menus.
-
-## Gestures
-- Two-finger tap: undo. Two-finger double tap: redo.
-- Two-finger swipe: turn pages. Long two-finger swipe up: open your notebooks (or the library from a drawing).
-- Hold Prev or Next: jump to the first or last page.
-- With palm rejection on, "Finger on the page" makes a finger navigate or do nothing while the pen writes.
-- Zooming out stops at the page width.
-
-## Color screens
-- A theme color, Ink Away green by default, or black, a preset or any color.
-- Color ink shows in color while you draw; a toggle brings back the black preview.
-- Colored binder tabs.
-
-## Faster, with fewer flashes
-- Saving big notebooks about 90% faster (only changed pages are written).
-- Closing a 120-page notebook practically instant; the page overview opens about a third faster.
-- Drawing 12-28% faster per point.
-- Page turns refresh only the page and the bar; a stroke is no longer refreshed again on lift.
-- Fewer flashes in the library and browser, none on color screens.
-- Dragging a selection follows the finger smoothly.
-- Android (Boox and others): drawing, erasing, shapes, the lasso and panning no longer refresh the screen for every pen sample, which made writing slow there. Not yet tried on a real Boox, so feedback is welcome. Kindle and Kobo work as before.
-
-## Fixes
-- Undo puts a moved lasso selection back.
-- Moving no longer picks up shapes you had erased.
-- Long menus on small or landscape screens slide over the toolbar instead of scrolling.
-
-## For developers
-- The canvas, once one 11,500-line file, is now 27 feature files with shared helpers, so a feature can be changed or added in one small file. A good time to fork it.
-- A test suite of around 2,300 automated checks (including pixel-exact tests on KOReader's real drawing code), performance benchmarks and an e-ink refresh audit. Tests are not part of the download.
