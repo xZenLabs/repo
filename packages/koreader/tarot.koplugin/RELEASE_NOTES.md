@@ -1,3 +1,16 @@
+# 6.2.15 · 2026-10-31
+
+**Mudanças do Arcana II 6.2.15:**
+
+- **Novo cabeçalho retrátil**, com abertura por toque ou gesto, mantendo o conteúdo da página fixo.
+- Painel de acesso rápido com Wi-Fi, luz frontal e modo noturno.
+- Exibição de horário, bateria e porcentagem de carga no cabeçalho expandido.
+- **Reformulação dos menus e pop-ups**, com espaçamento, posicionamento e bordas padronizados.
+- Reorganização das notificações na página inicial.
+- **Indicadores de novas atualizações** nos botões de versão e Sobre.
+- Aprimoramento da centralização dos títulos, divisórias e elementos visuais.
+- Correções de navegação, gestos, botões e adaptação a diferentes tamanhos de tela.
+
 # 6.2.8 · 2026-10-31
 
 **Mudanças do Arcana II:**
