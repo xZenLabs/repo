@@ -1,3 +1,25 @@
+# v0.1.0-beta.22 · 2026-10-31
+
+## Svenska
+
+- Klickbara taggar finns i den befintliga **Taggar-fliken**. Välj **EPUB-taggar (offline) > Läs EPUB-taggar** och tryck sedan på en tagg för fler böcker med exakt samma tagg på enheten.
+- EPUB 2/3-taggar som BookOrbit har skrivit in i filen fungerar helt lokalt, utan BookOrbit-plugin, konto, koppling, nätverk eller API-tillägg. Vanliga EPUB-ämnesord ligger fortfarande under Genrer; samlingar hålls separata.
+- Träfflistan söker i konfigurerade biblioteksprofiler och hemmabiblioteket, med bibliotekets vanliga skanningsdjup. Den går att avbryta och behåller normal boköppning. Uppdatera läser om filerna; oläsbara EPUB-filer och gränsen på 400 träffar visas tydligt.
+- Valfri hämtning av taggar från BookOrbit finns separat. Nätbaserad taggsökning kräver serverstödet som förberetts lokalt men **inte driftsätts här**. Det behövs inte för EPUB-taggarna.
+- Ny upstream-kontroll: SimpleUI och Bookshelf är redan helt ikapp. Inga ytterligare upstream-ändringar i denna beta. Bokdetalj-fixen från Beta 21 och tidigare nattläge-, omslags- och navigationsanpassningar behålls.
+
+Uppdatera via förhandsversionskanalen och starta om KOReader. Inga bokfiler, läsdata, kopplingar eller inställningar återställs. Fortsatt beta: fysisk provning på Bigme/Boox återstår.
+
+## English
+
+- Clickable tags live in the existing **Tags** tab. Choose **EPUB tags (offline) > Read EPUB tags**, then tap a tag for local books with the exact same tag.
+- EPUB 2/3 `bookorbit:tags` metadata works entirely offline: no BookOrbit plugin, account, link, network or API addition required. Standard EPUB subjects remain Genres; collections stay separate.
+- Results cover configured library profiles and the home library, respecting native scan depth. Scanning is cancelable and normal reader actions are retained. Refresh rereads files; unreadable EPUBs and the 400-match limit are disclosed.
+- Optional online BookOrbit tag loading is separate. Online tag search needs the separately prepared server endpoint, **not deployed by this release** and not needed for embedded tags.
+- Fresh upstream check: SimpleUI and Bookshelf are already current. No additional upstream imports. Beta 21's Book details crash fix and earlier night-mode, cover and navigation adaptations remain.
+
+Update through the preview channel and restart KOReader. No books, reading data, links or settings are reset. Still a prerelease: physical Bigme/Boox layout, input, scan latency, cancellation and lifecycle acceptance remain open.
+
 # v0.1.0-beta.21 · 2026-10-31
 
 Beta 21 fixes the KOReader crash when selecting **Book details** in the book panel.
@@ -129,51 +151,3 @@ Android system return, rotation or suspend acceptance. Please retest those.
 
 Download **orbitui.koplugin.zip**, not GitHub's source-code archives.
 Keep KOReader's Cover browser enabled; disable standalone SimpleUI/Bookshelf.
-
-# v0.1.0-beta.17 · 2026-10-30
-
-# OrbitUI Beta 17 — snabbkontroller och tydligare inställningar
-
-Förhandsversion för test på Boox/Bigme. Ingen ny upstream-import i själva releasen;
-de redan granskade ändringarna från 30 oktober ingår.
-
-- Fem stora inställningskort med förklaringar, sökning och alternativ listvy.
-- Små snabbmenyer för ljus/färgtemperatur, Wi-Fi, batteri och klocka. Kontroller
-  visas efter enhetens stöd; Android Wi-Fi går till systemets inställningar.
-- Valfria upstream-funktioner: rutnät för snabbåtgärder, upp till sex omslag per
-  rad på Hem, menyfiltrering, bläddringsstatistik och fler Tiny Critter-val.
-- Egna patchar stängs inte av. Profiler/chip, omslagsfixen, snabbstängning och
-  BookOrbit/MAL-integrationer behålls. Svenska och engelska finns för nya egna UI.
-
-Uppdatera via förhandskanalen och **starta om KOReader**. Öppna sedan
-**OrbitUI-inställningar → Navigation och gränssnitt → Snabbkontroller**.
-Slå vid behov på **Tryck på statusfält för snabbkontroller**, eller lägg till
-**Snabbkontroller** som navigationsknapp. Tryckfunktionen är av från början;
-sparade navigationsrader ersätts inte. Ta gärna bilder från Hem och Bookshelf.
-
-## English
-
-Beta 17 adds large bilingual settings-category cards and shared anchored quick
-controls. Open **OrbitUI settings → Navigation & interface → Quick controls**.
-Status-field taps are opt-in; the same action can be added to a bar without
-replacing saved buttons. Native light ranges/warmth conversions, existing
-statistics/calendar owners and Android's system Wi-Fi settings are reused.
-Opening status does not start scans, network connections or polling.
-
-Also includes the already-reviewed October 30 changes through Bookshelf
-`ee84a8fe` and SimpleUI `257c26d6`: optional grid quick actions/six-cover rows,
-protected menu hiding, page-turn statistics, Tiny Critter enhancements, guarded
-startup work and scrollable long messages. Automatic patch disabling is blocked.
-
-Download **orbitui.koplugin.zip**, not the source-code archives. Update through
-the preview channel and restart KOReader. Stable bootstrap/API 1, all 2,000
-installed paths, languages, fonts and artwork are retained. Earlier betas can
-update directly. Previous public releases/assets are unchanged.
-
-Back up KOReader's data independently. Rollback changes code, not later settings
-or reading progress; remove/reselect the optional Quick controls bar action if
-rolling back to code that does not recognize it. Physical font/touch/focus,
-light/warmth, Android return, colour/night/underlay and lifecycle acceptance
-remains open. Automated checks are not a measured device-speed/RAM claim.
-
-[Full bilingual notes and recovery guidance](https://github.com/komadorirobin/orbitui.koplugin/blob/v0.1.0-beta.17/docs/OTA.md#orbitui-010-beta17).
