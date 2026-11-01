@@ -65,6 +65,20 @@ explains the extra controls and where to find them.
 
 ### Local books first, online services optional
 
+**Beta 29:** reviewed Bookshelf 6.2.0 adds optional image/wallpaper contrast,
+Show/Hide/Invisible footer controls, reduced menu/theme flashing and picker
+swipe improvements. Existing night-mode fixes, custom footer geometry and
+Home/Manga/integration settings remain. Defaults are unchanged. Update through
+the preview channel and restart KOReader; this is still a prerelease, with
+new physical Bigme/Boox contrast/footer/swipe checks outstanding.
+[Release details](docs/OTA.md#orbitui-010-beta29).
+
+**Svenska:** Beta 29 innehåller Bookshelf 6.2.0 med valfri bild-/bakgrundskontrast,
+visad/dold/osynlig knapprad och färre avsedda blinkningar vid meny-/temabyten.
+Egna nattlägesfixar, marginaler, Hem/Manga och integrationer behålls.
+Standardutseendet ändras inte. Uppdatera via förhandskanalen och starta om
+KOReader. Nya enhetskontroller på Bigme/Boox återstår; detta är fortsatt beta.
+
 You can use OrbitUI with ordinary local books, KOReader collections, local
 reading goals and no online account. BookOrbit, Hardcover and MyAnimeList are
 optional integrations, not requirements.

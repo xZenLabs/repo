@@ -1,3 +1,37 @@
+# v0.1.0-beta.29 · 2026-11-01
+
+## Svenska
+
+Beta 29 innehåller den granskade **Bookshelf 6.2.0**-uppdateringen. SimpleUI är redan uppdaterat. Inga ytterligare upstream-ändringar hämtas i detta publiceringssteg.
+
+- **Bildkontrast:** valfri kontrastökning för omslag, ornament och bokryggar samt separat kontrast/ljusstyrka för bakgrunden. Standardutseendet ändras inte. Originalbilder och rå bildcache skrivs inte om. Bakgrundsreglagen finns också under **Tema → Bakgrund**.
+- **Beteende → Nederkantens knapprad:** Visa, Dölj eller Osynliga knappar. Dölj frigör utrymmet; osynliga knappar behåller sina tryckytor. Markering/tangentfokus visar kontrollerna igen. OrbitUI:s egna storlekar, marginaler och navigationsfält behålls.
+- **Mindre blinkande:** meny- och temabyten använder färre helskärmsuppdateringar. Svep på hyllan utanför en dialog kan byta sida bakom dialogen. Ett tryck utanför ett reglage sparar värdet; kryss/Bakåt ångrar fortfarande.
+- **Android-nattläge:** jämnare runda färgade hörn, med bibehållen mjukvarureservväg och våra egna bakgrunds-/navigationsfixar. Fixar även felaktig bakgrund, fastnad menyåterställning och skuggor när böcker öppnas.
+- Valda hyllmoduler får minutuppdateringar när rätt hylla visas. Sena återanrop får inte rita om en stängd eller annan hylla; delade menykrokar frigörs när deras ägare avslutas.
+
+Hem/Bento, Manga-profiler, serielådornas omslag/proportioner, taggar/indexering, ornament och BookOrbit/Hardcover/MAL/patch-kopplingar behålls. BookOrbit-statusimporten är fortfarande avstängd som standard och kräver separat servertillägg. Ingen server driftsätts eller enhet uppdateras av själva publiceringen.
+
+Svenska och engelska kontroller/hjälptexter ingår. Samma 2 000 installationsfiler och oförändrad API-1-bootstrap. Tidigare releaser, taggar och filer ändras inte. Uppdatera via förhandskanalen och starta om KOReader.
+
+Fortsatt beta: de senaste kontrast-/knapprads-/svep-/menyändringarna är automatiskt testade men ännu inte visuellt accepterade på Bigme/Boox. Ingen ny uppmätt hastighetsförbättring utlovas. Se TESTING för exakta resultat och kvarvarande enhetskontroller.
+
+## English
+
+Beta 29 publishes the reviewed **Bookshelf 6.2.0** merge. SimpleUI is already current. No additional upstream revision is imported during publication.
+
+- **Image contrast:** optional contrast boost for covers, ornaments and spines, with separate wallpaper contrast/brightness. Defaults stay unchanged; original artwork and raw disk images are not rewritten. Wallpaper controls also appear under **Theme → Wallpaper**.
+- **Behavior → Footer bar:** Show, Hide or Invisible buttons. Hide reclaims space; Invisible retains hitboxes. Selection/key focus reveals the controls. OrbitUI's adjustable footer dimensions, margins and dock geometry remain.
+- Fewer intended full-screen flashes on menu/theme changes. Side swipes on the shelf outside a picker can turn its page without closing the picker. Tapping outside a slider commits its value; X/Back still cancel.
+- Android night-mode rounded RGB paints keep consistent corners, including software fallback and OrbitUI's existing backdrop/dock fixes. Fixes stale wallpaper/menu restoration and face-out opening shadows.
+- Explicitly configured shelf modules can update every minute. Late callbacks cannot repaint hidden/replaced/closed shelves. Shared menu hooks are released with their host.
+
+Existing Home/Bento, Manga profiles, aspect-preserving series artwork, tags/indexing, ornament add-ons and external BookOrbit/Hardcover/MAL/patch ownership stay intact. BookOrbit status import remains OFF by default and requires its separate server extension. This release deploys no server and installs nothing on a device by itself.
+
+Swedish/English controls/help; the same 2,000 installed paths and unchanged API-1 bootstrap. Previous public releases, tags and assets are immutable. Update through the preview channel and restart KOReader.
+
+Still a prerelease: latest contrast/footer/swipe/menu changes have automated verification but no fresh physical Bigme/Boox visual acceptance or measured speedup. See TESTING for exact results and remaining device checks.
+
 # v0.1.0-beta.28 · 2026-11-01
 
 ## Svenska
@@ -223,64 +257,3 @@ kodåterställning; kontrollera då hyllans avgränsning.
 
 See [OTA notes](https://github.com/komadorirobin/orbitui.koplugin/blob/v0.1.0-beta.24/docs/OTA.md)
 for details and rollback limitations.
-
-# v0.1.0-beta.23 · 2026-10-31
-
-# OrbitUI 0.1.0-beta.23
-
-Optional BookOrbit integration controls and clearer local/server reading lists.
-This is a prerelease; physical Bigme/Boox acceptance remains open.
-
-## English
-
-- New **OrbitUI settings > Integrations > BookOrbit** page with a master switch
-  and separate controls for Want to Read, manual status actions and online tags.
-- Explicit **Want to read [BookOrbit]** and **Want to read [Local]** source names.
-  The local source uses the existing KOReader To Be Read collection. Add either
-  or both through **Home (SimpleUI) > Layout & modules**, or select a Reading
-  dashboard source. Disabling one never replaces it with the other.
-- Explicit refresh feedback and a durable last-successful list timestamp,
-  including unchanged lists. Opening settings does not test a connection.
-- Deferred requests retire when a feature is disabled, including rapid off/on.
-  Already-sent server mutations cannot be unsent; late results are not adopted.
-- English/Swedish help explains manual read-status writes, optional server
-  requirements and the separate [BookOrbit Extras](https://github.com/komadorirobin/bookorbit-extras)
-  package. Its reviewed exact official 3.6.0 source can combine tags and undo.
-  Never reuse the old 3.2.0 compiled overlay on a newer server; old custom
-  databases need a separately reviewed upgrade.
-
-Offline EPUB tags remain independent. BookOrbit's own reading-progress sync,
-credentials, links, cached lists, memberships, module/source IDs, custom headings
-and layouts are retained. OrbitUI does not install or deploy external patches.
-Resolve protected openings and pending cleanup before removing undo support.
-
-## Svenska
-
-- Ny sida: **OrbitUI-inställningar > Integrationer > BookOrbit**, med huvudbrytare
-  och separata val för Vill läsa, manuella lässtatusval och taggar via nätet.
-- Tydliga källor: **Vill läsa [BookOrbit]** och **Vill läsa [Lokalt]**. Den lokala
-  använder KOReaders befintliga samling To Be Read. Lägg till båda via **Hem
-  (SimpleUI) > Layout och moduler**, eller välj källa i Läsöversikt. Listorna byts
-  aldrig ut mot varandra när BookOrbit stängs av.
-- Tydlig uppdateringsstatus och sparad tid för senast lyckade listuppdatering.
-  Väntande svar från avstängda funktioner får inte skriva över lokal cache.
-- Hjälpen förklarar synk och versionsbundna serverkrav. BookOrbits egen synk,
-  sparade listor, kopplingar och layouter behålls. EPUB-taggar fungerar offline.
-  Server- och enhetspatchar installeras inte av denna OrbitUI-uppdatering.
-
-## Update and limits
-
-Update via OrbitUI's preview channel and restart KOReader, or install this
-release's **orbitui.koplugin.zip**, not GitHub's source archive. Back up first.
-Standalone SimpleUI and Bookshelf must remain disabled; keep their data/files.
-
-Full Lua/LuaJIT, translation, sealed-package, native OTA and source/history/
-artwork/secret checks precede publication. These are headless checks, not physical
-acceptance or proof that an optional API is deployed on your BookOrbit server.
-Retest SV/EN layout, touch/keyboard, refresh, off/on, source selection, long help,
-Back, rotation/sleep and reader return on Bigme/Boox.
-
-No new upstream merge, artwork, runtime path, language removal, bootstrap/API
-limit change or production server update. Previous public assets stay immutable;
-rollback changes code, not reading data. See [OTA notes](https://github.com/komadorirobin/orbitui.koplugin/blob/v0.1.0-beta.23/docs/OTA.md)
-for details.

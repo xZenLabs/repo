@@ -1,3 +1,14 @@
+# 1.1.1 · 2026-11-01
+
+Fixes:
+- %ao3_review could wrap onto a second list line when the saved note's
+  first line was long, since Bookshelf 6.1.1 lets any line wrap into
+  spare row height. The token now caps its output at 60 UTF-8
+  characters, trimming to the last whole word and appending an
+  ellipsis so it reliably renders as a single list line.
+- Renamed the token's description to "review snippet" to reflect that
+  it is now a shortened preview rather than the untruncated first line.
+
 # 1.1.0 · 2026-11-01
 
 Fixes:
