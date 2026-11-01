@@ -1,3 +1,19 @@
+# v6.2.0 · 2026-11-01
+
+- Image contrast (Settings > Image contrast): Covers and ornaments contrast boost deepens the darks and lifts the lights of covers, spines and ornaments, which can help on screens with few greys. Wallpaper contrast and brightness adjust the wallpaper on its own, and are also in Theme > Wallpaper. All off by default.
+- Swipe left or right on the shelf behind a Bookshelf menu or slider to turn its page, so a change can be seen on more books without closing it.
+- A tap outside a slider closes it and keeps the value.
+- Footer bar (Settings > Behavior): Show, Hide (the shelf uses the space), or Invisible buttons (the buttons still work where they were, and moving into them with the keys shows them).
+- Fewer full-screen flashes: closing KOReader's menu over the shelf, closing the Theme library, and moving between shelves with different themes.
+- OPDS: a catalog book's publication year is available in %calibre{pubdate} (#569, thanks @amycardoso).
+- Modules on a shelf can update every minute (on_minute), and a plugin adding a card to the home shelf works with modules switched off.
+- Read calibre metadata.calibre is no longer marked beta.
+- Fix: menu options added to a shortcuts folder disappeared after being switched on or off (#571)
+- Fix: KOReader's menu could get stuck open after using a Bookshelf slider or the Theme library
+- Fix: a shelf with no wallpaper could show the wallpaper of another shelf
+- Fix: opening a face-out book on a spines shelf lost the shadow of the plank above, and is quicker
+- Fix: select rings had black corners on Android in night mode
+
 # v6.1.1 · 2026-10-31
 
 - Fix: Minor layout issue with some nested library windows
@@ -42,8 +58,3 @@
 - Fix: Paint shelf after sleep resume on some devices (#551)
 - Fix: Status line tap keeps full screen when swipe back is off (#554)
 - New: Micro modules > On the shelf switch
-
-# v6.0.2 · 2026-10-25
-
-- Fix: Refresh metadata (#552)
-- New functions for module authors

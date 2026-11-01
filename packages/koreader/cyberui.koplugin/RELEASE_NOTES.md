@@ -1,3 +1,15 @@
+# v1.1.2 · 2026-11-01
+
+## Fixed
+- **Night mode no longer crashes KOReader on colour screens.** On a Kindle Colorsoft or a Kobo Clara Colour, turning on night mode (or going home from a book while it was on) closed KOReader, and it kept closing at every start. Covers are now drawn in the screen's own pixel type.
+- **No more freeze on phones.** CyberUI no longer follows linked folders or Android's own data folder while it looks for books, and stops after a few thousand folders.
+- **ZenOS:** its Home tab in the toolbar now goes to CyberUI home when CyberUI is the chosen home screen.
+
+## Changed
+- A list of choices too long for the screen (the collections when adding a book to one, filters, and the like) is now split into pages with previous and next buttons, so every entry can be reached.
+
+Thanks to everyone who reported these.
+
 # v1.1.1 · 2026-10-31
 
 ## Fixed

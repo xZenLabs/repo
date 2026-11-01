@@ -1,3 +1,5 @@
+# v8.9.0 · 2026-11-01
+
 # v8.8.0 · 2026-11-01
 
 # SwipeToType 
@@ -12,8 +14,3 @@ fixed some issues
 55555
 
 # v8.7.4 · 2026-11-01
-
-# v8.7.3 · 2026-11-01
-
-- added online picture browser
-- added Handwriting to text convertor
