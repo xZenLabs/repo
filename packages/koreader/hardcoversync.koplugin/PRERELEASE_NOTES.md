@@ -1,3 +1,14 @@
+# v2.4.0-beta.8 · 2026-11-01
+
+## 🐛 Fixes
+- Fix offline status ordering, date queued changes, and show waiting status changes in the Journal (#275)
+
+## Other
+- Keep the progress queue by Hardcover book instead of by file (#276)
+- Keep shelf changes in the progress queue and remove the shelf queue (#277)
+
+**Full changelog**: https://github.com/CaptainCamin/HardcoverSync.koplugin/compare/v2.4.0-beta.7...v2.4.0-beta.8
+
 # v2.4.0-beta.7 · 2026-10-31
 
 ## 🐛 Fixes
@@ -102,9 +113,3 @@
 Not yet tried on a device: the new hooks into KOReader's book-status screen and End of document action menu. If either misbehaves, please report it.
 
 **Full changelog**: https://github.com/CaptainCamin/HardcoverSync.koplugin/compare/v2.4.0-beta.3...v2.4.0-beta.4
-
-# v2.4.0-beta.3 · 2026-10-28
-
-No pull requests were merged since the last release.
-
-**Full changelog**: https://github.com/CaptainCamin/HardcoverSync.koplugin/compare/v2.4.0-beta.2...v2.4.0-beta.3
