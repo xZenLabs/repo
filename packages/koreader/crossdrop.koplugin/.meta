@@ -1,0 +1,23 @@
+# Crossdrop plugin for KOReader
+# https://github.com/SkyWalker541/CrossDrop
+# zenpm:auto-scraped
+id=crossdrop
+name=Crossdrop
+version=2.0.0
+description=Send books from KOReader to your Xteink (CrossPoint) over Wi-Fi. Four tabs: Connections (IP + reachability), Send A File (pick files, choose folder), Collections (create/manage/send collections), D...
+author=SkyWalker541
+category=games
+platforms=koreader
+dependencies=
+source=https://github.com/SkyWalker541/CrossDrop
+stars=5
+updated_at=2026-11-01T23:00:55Z
+published_at=2026-09-26T16:59:46Z
+readme_url=packages/koreader/crossdrop.koplugin/README.md
+readme_hash=d6a26d23da6978684bafea2e6ae0fcfad3ab0ee6
+release_notes_url=packages/koreader/crossdrop.koplugin/RELEASE_NOTES.md
+release_notes_hash=aa86b5335ddd392df02c4c4597507516dccb2aa287367f3968317e7023471201
+releases=[{"tag_name":"v2.0.0","assets":[{"name":"CrossDrop-Plugin.zip","url":"https://github.com/SkyWalker541/CrossDrop/releases/download/v2.0.0/CrossDrop-Plugin.zip","size":105936,"digest":"sha256:963eb1ffb1f3185f4ad80c6ce573652e27fa934650e9a99104601d777d030830"}],"name":"CrossDrop 2.0.0"},{"tag_name":"v1.6.0","assets":[{"name":"CrossDrop-Plugin.zip","url":"https://github.com/SkyWalker541/CrossDrop/releases/download/v1.6.0/CrossDrop-Plugin.zip","size":130343,"digest":"sha256:33576d5dc58a41d666d2aa99c216211642fc5e79d64061b1341ddcf43ae8e6da"}],"name":"CrossDrop 1.6.0"},{"tag_name":"v1.5.0","assets":[{"name":"CrossDrop-Plugin.zip","url":"https://github.com/SkyWalker541/CrossDrop/releases/download/v1.5.0/CrossDrop-Plugin.zip","size":144526,"digest":"sha256:30b056a629c142303fc2562cde2d02894587e01ea2f456cd0cf037a226b94549"}],"name":"CrossDrop 1.5.0"},{"tag_name":"v1.4.3","assets":[{"name":"CrossDrop-Plugin.zip","url":"https://github.com/SkyWalker541/CrossDrop/releases/download/v1.4.3/CrossDrop-Plugin.zip","size":139974,"digest":"sha256:222214601c9a440d05e2397338f38ae055782da092e31a6af25f095b479833e8"}],"name":"CrossDrop 1.4.3"},{"tag_name":"v1.4.1","assets":[{"name":"CrossDrop-Plugin.zip","url":"https://github.com/SkyWalker541/CrossDrop/releases/download/v1.4.1/CrossDrop-Plugin.zip","size":135116,"digest":"sha256:1628d68c8d8a3ee43b3749616c7f8bfded9b9c724b3ef2d5dcb8f01d1823c89d"}],"name":"CrossDrop 1.4.1"},{"tag_name":"v1.4.0","assets":[{"name":"CrossDrop-Plugin.zip","url":"https://github.com/SkyWalker541/CrossDrop/releases/download/v1.4.0/CrossDrop-Plugin.zip","size":136039,"digest":"sha256:b9c0930d4e2c1c5b665cdfcc7d37dd6e6e23d79a2e836b3ade2a3e24e3b0635b"}],"name":"CrossDrop 1.4.0"}]
+source_type=release
+source_asset=CrossDrop-Plugin.zip
+size=105936

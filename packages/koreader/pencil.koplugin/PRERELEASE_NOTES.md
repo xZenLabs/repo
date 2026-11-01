@@ -1,3 +1,20 @@
+# 0.6.0-beta.2 · 2026-11-01
+
+**This is a pre-release for testing.** Please try it and tell me how it goes! If something's wrong, [open an issue](https://github.com/mysticknits/pencil.koplugin/issues) and mention `0.6.0-beta.2`.
+
+It has everything from [0.6.0-beta.1](https://github.com/mysticknits/pencil.koplugin/releases/tag/0.6.0-beta.1), plus one fix. If you're coming from 0.5.0 or earlier, read beta.1's **Before you install** first: it needs KOReader 2026.07 or newer, and you should back up your books' `.sdr` folders.
+
+## What's new since beta.1
+
+- A side-button highlight can now cross pages in EPUBs. Drag into the bottom-right corner to carry on onto the next page, or into the top-left corner to go back. When you lift the pen, the highlight is saved and you're back on the page you started on. This uses KOReader's "Auto-scroll when selection reaches a corner" setting, which is on by default. (#105, fixes #104)
+
+## What to test
+
+- Holding the side button and highlighting a passage that runs onto the next page.
+- Everything on beta.1's list, if you haven't yet.
+
+**Full changelog**: https://github.com/mysticknits/pencil.koplugin/compare/0.6.0-beta.1...0.6.0-beta.2
+
 # 0.6.0-beta.1 · 2026-10-29
 
 **This is a pre-release for testing.** Please try it and tell me how it goes! If something's wrong, [open an issue](https://github.com/mysticknits/pencil.koplugin/issues) and mention `0.6.0-beta.1`.
