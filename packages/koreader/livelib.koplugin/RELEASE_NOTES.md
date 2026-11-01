@@ -1,3 +1,12 @@
+# v0.7.1 · 2026-11-01
+
+
+### Fixed
+- Finished / status toasts no longer fire twice after Book Status + returning to
+  the file manager (Reader and FileManager both received the same event).
+- Background work after a Wi-Fi wait does not use the document if that book was
+  closed or replaced.
+
 # v0.7.0 · 2026-09-27
 
 
@@ -33,10 +42,3 @@
 
 ### Fixed
 - Auto-track sets **Currently reading** as soon as the book is linked (and on the first pages). It no longer waits for 1% progress. Opening an unlinked book no longer burns the 2s ensure before search/link finishes.
-
-# v0.3.4 · 2026-08-28
-
-
-### Fixed
-- Auto-track sets **Currently reading** as soon as the book is linked (and on the first pages). It no longer waits for 1% progress.
-  Opening an unlinked book no longer burns the 2s ensure before search/link finishes.

@@ -1,3 +1,15 @@
+# v1.5.2 · 2026-11-01
+
+
+### Added
+- Slovak (`sk`) and Czech (`cs`) translations.
+
+# v1.5.1 · 2026-11-01
+
+
+### Fixed
+- Cap daily reading-time credits per page turn with KOReader's **Max. read time per page** (`statistics.max_sec`, default 120 s) instead of a hard-coded 45 minutes, so idle time with an open book no longer inflates the daily time target ([#19](https://github.com/advokatb/readingstreak.koplugin/issues/19)).
+
 # v1.5.0 · 2026-09-09
 
 
@@ -24,15 +36,3 @@
 
 ### Fixed
 - Fixed reading time continuing to run when the device was suspended (thanks to @jandamm, #17).
-
-# v1.3.6 · 2026-05-27
-
-
-### Added
-- Added KOReader uninstall hook `deletePluginSettings()` to remove plugin settings when users check **"Also delete plugin settings"** in plugin management ([#15](https://github.com/advokatb/readingstreak.koplugin/issues/15)).
-
-# v1.3.5 · 2026-04-06
-
-
-### Fixed
-- Improve dateDiffDays function to use Julian day calculation

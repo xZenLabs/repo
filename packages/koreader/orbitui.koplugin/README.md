@@ -106,6 +106,51 @@ igen. Funktionen ingår i Beta 26.
 
 ### Optional BookOrbit features
 
+**Beta 27 — smart offline tag chips:** long-press a local
+EPUB tag in the book's **Tags** tab to create a named smart chip in an existing
+library. Combine up to 16 exact tags with **AND** or **OR**, within that library
+or all local libraries. Opening a chip checks cached tags only; the **Indexed**
+footer is not a claim of complete indexing. Swipe down or use **Update tag
+matches…** in its settings to read missing/changed EPUB tags, with progressive
+results and Stop. The first 400 matches are shown; a capped chip says **400+**.
+Chips retain normal rename/order/remove and Home-pinning controls. No book is
+copied, moved or edited, and no BookOrbit account/server patch is needed.
+
+**Svenska, Beta 27 — smarta lokala taggchip:** långtryck på en
+lokal EPUB-tagg i bokens **Tags/Taggar**-flik för att skapa ett namngivet chip.
+Kombinera högst 16 exakta taggar med **OCH/ELLER** i valt bibliotek eller alla
+lokala bibliotek. Chipet visar **Indexerade** träffar utan att automatiskt läsa
+alla EPUB-filer. Svep nedåt eller välj **Uppdatera taggträffar…** för att läsa
+saknade/ändrade taggar. Sökningen kan stoppas; gränsen är 400 träffar och markeras
+med **400+**. Vanliga chipinställningar och visning på Hem fungerar även här.
+Inga böcker flyttas/redigeras och inget BookOrbit-konto eller servertillägg krävs.
+
+**Index all EPUB tags:** open **OrbitUI settings > Bookshelf > Tags and
+indexing**. **Update tag index** reads new/changed files and retries failures;
+**Reread all EPUB tags…** confirms a fresh read of every configured EPUB, useful
+after bulk retagging. Unlike a search result list, this job has **no 400-file
+limit**. Pause/Continue works across KOReader restarts; closing the page pauses
+the job and keeps completed reads. Resume rediscovers the inventory and
+revalidates file stamps, so its current-pass counter restarts without discarding
+successful same-run reads. Keep KOReader open on this page while indexing;
+pause before replacing EPUBs. It uses configured library roots and scan depth,
+not every EPUB elsewhere on the device. Read/reused/failed counts distinguish
+unreadable files from untagged books. Tag searches/chips still show at most 400
+matches (400+ is disclosed); indexing more books does not remove that view cap.
+
+**Indexera alla EPUB-taggar:** öppna **OrbitUI-inställningar > Bookshelf >
+Taggar och indexering**. **Uppdatera taggindex** läser nya/ändrade filer och
+försöker igen med misslyckade. **Läs om alla EPUB-taggar…** startar efter
+bekräftelse en ny omläsning av alla konfigurerade EPUB-filer — lämpligt när du
+har taggat om hela biblioteket. Indexeringen har **ingen gräns på 400 filer**.
+Du kan pausa och fortsätta efter omstart; stängning pausar och behåller färdiga
+läsningar. Fortsätt räknar om det aktuella beståndet från början men återanvänder
+oförändrade filer som redan lästs i samma jobb. Låt KOReader vara öppet på
+sidan medan jobbet körs, och pausa innan du ersätter EPUB-filerna. Bibliotekens
+mappar och sökdjup gäller. Räknare visar lästa, återanvända och misslyckade
+filer; oläsbara filer blir inte falska tomträffar. Sökningar/chip behåller sin
+visningsgräns på 400 träffar, även om fler böcker är indexerade.
+
 **OrbitUI settings > Integrations > BookOrbit** has a master switch and
 independent controls for the BookOrbit list, manual status actions and online
 tags, available from Beta 23. They do not disable the separate BookOrbit plugin's
@@ -174,7 +219,7 @@ prerelease, not a promise of compatibility with every device or user patch.
    manager and restart KOReader.** Disable both if you have both. Do not delete
    their settings or plugin folders.
 3. Download **`orbitui.koplugin.zip`** from the
-   [Beta 26 release](https://github.com/komadorirobin/orbitui.koplugin/releases/tag/v0.1.0-beta.26).
+   [Beta 27 release](https://github.com/komadorirobin/orbitui.koplugin/releases/tag/v0.1.0-beta.27).
    Do **not** use **Code > Download ZIP** or GitHub's **Source code** archives.
 4. Fully exit KOReader. Extract the ZIP and copy its **`orbitui.koplugin`**
    folder into your KOReader **`plugins/`** directory.

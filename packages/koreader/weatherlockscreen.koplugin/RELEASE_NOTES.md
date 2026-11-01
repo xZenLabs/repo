@@ -1,3 +1,19 @@
+# v1.1.0 · 2026-11-01
+
+New Features
+
+* Thanks to @oldman63 WeatherLockscreen plugin is now available in Hungarian.
+* WeatherLockscreen will now prefer its own translations over those from KoReader.
+
+## What's Changed
+* Add Hungarian localization by @oldman63 in https://github.com/loeffner/WeatherLockscreen/pull/39
+* Fix plugin translation priority and preserve KOReader fallback by @oldman63 in https://github.com/loeffner/WeatherLockscreen/pull/40
+
+## New Contributors
+* @oldman63 made their first contribution in https://github.com/loeffner/WeatherLockscreen/pull/39
+
+**Full Changelog**: https://github.com/loeffner/WeatherLockscreen/compare/v1.0.0...v1.1.0
+
 # v1.0.0 · 2026-09-19
 
 ## New Features
@@ -107,21 +123,3 @@ Well, here we go:
 * @moyencourt made their first contribution in https://github.com/loeffner/WeatherLockscreen/pull/23
 
 **Full Changelog**: https://github.com/loeffner/WeatherLockscreen/compare/v0.9.5-beta.1...v0.9.6-beta.1
-
-# v0.9.5-beta.1 · 2025-12-29
-
-### This is a beta release.
-
-## New Features
-<img width="222" height="88" alt="image" src="https://github.com/user-attachments/assets/5612a89c-e793-44d0-bdc2-c7cde8ed292f" />
-
-## Active Sleep Mode
-- Now available to Kobo (thanks to a contribution by @omer-faruq)
-- Active Sleep will now be disabled, when the battery falls below a configurable threshold  (idea and implementation by @omer-faruq)
-
-
-
-## New Contributors
-* @omer-faruq made their first contribution in https://github.com/loeffner/WeatherLockscreen/pull/16
-
-**Full Changelog**: https://github.com/loeffner/WeatherLockscreen/compare/v0.9.4-beta.1...v0.9.5-beta.1

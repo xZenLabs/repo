@@ -1,3 +1,25 @@
+# v0.5.0 · 2026-11-01
+
+
+### Added
+- **Waiting to sync** in Settings: list queued progress/status updates, **Sync now**, **Retry failed**, **Clear failed**. Failed items stay after a few attempts instead of vanishing.
+- Progress POST that still returns **404** after a CSRF refresh adds the book to
+  **Currently reading** and retries once (unshelved book).
+- Warning when auto-track opens a book whose exclusive shelf on the site is not
+  Currently reading, with a one-tap fix.
+
+### Changed
+- Queue flush sends a few POSTs per pass so a long burst cannot freeze the reader;
+  the rest drain on a timer. Sync and flush do not run at the same time.
+- Background work after a Wi-Fi wait ignores the document if that book was closed
+  or replaced.
+
+### Fixed
+- **Status removed** is no longer radio-selected when a linked book simply has no
+  exclusive shelf yet (empty ≠ destroy).
+- Finished / status toasts no longer fire twice after Book Status + returning to
+  the file manager (Reader and FileManager both received the same event).
+
 # v0.4.0 · 2026-09-24
 
 
@@ -54,40 +76,3 @@
 - After Kobo resume, do not show a blocking “no network” dialog while Wi-Fi
   is up but DHCP has not finished. Background sync waits for a real
   connection and retries once; a leftover network error is a 3s toast.
-
-# v0.1.0 · 2026-08-27
-
-
-First public release: link a Goodreads edition to the open KOReader book,
-sync exclusive-shelf status, rating, date finished, and reading percent.
-Session cookies only (no official API).
-
-### Added
-- Search via `GET /book/auto_complete` (JSON) and link to sidecar key `goodreads`.
-- Autolink by embedded `GOODREADS` / `goodreads:` identifier (on by default).
-- Autolink by ISBN when no GOODREADS id is present (on by default; not by title).
-- Status: Want to read / Currently reading / Finished / Status removed.
-  Extra exclusive shelves from ShelfChooser (e.g. Did not finish, Paused).
-  Non-exclusive tag shelves are not listed.
-- Rating 1–5★ from KOReader Book Status (`POST /review/rate/{book_id}`).
-- Date finished (today) on Finished via reading sessions; skip if a session
-  already exists.
-- Reading percent via `POST /user_status.json` (`user_status[percent]`; never
-  page and percent together). Auto-tracking posts at most once a minute while
-  Currently reading. Toggle: Settings → Sync reading progress.
-- Auto-tracking: ≥1% → Currently reading; ~100% / Book Status / EndOfBook →
-  Finished (+ rating + date). Abandoned → DNF if that exclusive shelf exists.
-- CSRF from `GET /`, cookie rotation from `Set-Cookie`, session-expired
-  detection. `jwt_token` is stripped (stale JWT breaks requests).
-- Settings: cookies, autolink, sync rating/progress, Wi-Fi on demand, confirm
-  dialogs. Dispatcher actions for link / status / rating / auto-tracking.
-- i18n (`locale/ru.po`, `locale/uk.po`).
-
-### Fixed
-- `POST /review/rate` HTTP **204 No Content** treated as success.
-- Status removed uses `POST /review/destroy/{book_id}` (exclusive `a=remove`
-  is 404). Sidecar `shelf` is actually cleared after remove (no double radio).
-- GET without `Origin` (avoids self-redirect hangs). Comma-folded `Set-Cookie`
-  merged on redirect hops.
-- `add_to_shelf` success parsing when `read_status` is JS-string-escaped.
-- HTTP 429/5xx retried twice; parse errors surface instead of failing silently.

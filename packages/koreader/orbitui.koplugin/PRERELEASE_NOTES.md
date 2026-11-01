@@ -1,3 +1,31 @@
+# v0.1.0-beta.27 · 2026-11-01
+
+## Svenska
+
+Beta 27 samlar våra senaste taggfunktioner och Android-fixar. Ingen ny upstream-import: Bookshelf 6.1.1 och SimpleUI-baslinjen är oförändrade.
+
+- **OrbitUI-inställningar → Bookshelf → Taggar och indexering**: Uppdatera läser nya/ändrade EPUB-filer och försöker igen med fel. **Läs om alla EPUB-taggar…** läser efter bekräftelse om hela det konfigurerade biblioteket. Ingen gräns på 400 filer. Pausa/Fortsätt fungerar efter omstart; stängning pausar och behåller färdiga läsningar. Fortsätt räknar om beståndet men återanvänder oförändrade filer från samma jobb. Låt KOReader vara öppet medan jobbet körs, och pausa innan du ersätter EPUB-filer.
+- **Smarta taggchip**: långtryck på en lokal EPUB-tagg i Tags/Taggar, namnge chipet och kombinera upp till 16 taggar med **OCH/ELLER**, i valt eller alla lokala bibliotek. Vanlig sortering, visning och Hem-pinning behålls. Chip/sökresultat visar högst 400 träffar med tydlig **400+**-markering; den separata indexeringen har ingen sådan filgräns.
+- **Snabbare återanvändning av taggar** via ett separat lokalt index, med synliga framsteg och fungerande Stopp/Fortsätt. Saknade/ändrade/oläsbara filer hoppas inte tyst över.
+- **Android-fixar** för appmodulens sidpilar, native-inläsningsrutor och omslagsbevarande vid manuell metadatauppdatering. Din inställning för automatiskt säkerhetsläge ändras inte.
+
+Offline-taggar kräver `bookorbit:tags` i EPUB-filen, men inget BookOrbit-konto, plugin eller servertillägg. Vanliga EPUB-ämnesord förblir genrer. Inga EPUB-filer, läsdata, externa synkägare eller gamla releaser ändras. Allt nytt har svenska och engelska texter.
+
+Uppdatera via förhandskanalen och starta om KOReader. Fortsatt beta: riktade Bigme-tester och automatiska/native-tester är inte fullständig enhets- eller 1.0-validering. Första läsningen av tusentals arkiv, särskilt Manga, kan fortfarande ta tid. Rotation, suspend/resume, alla läsarvägar och Boox behöver fortsatt bredare provning.
+
+## English
+
+Beta 27 publishes the offline tag-index/search and smart-chip work, plus the Android acceptance fixes since Beta 26. No additional upstream import; Bookshelf 6.1.1 and the SimpleUI baseline remain unchanged.
+
+- **OrbitUI settings → Bookshelf → Tags and indexing**: Update reuses unchanged entries and checks new/changed files and failures. Confirmed **Reread all EPUB tags…** reads every configured EPUB afresh, without a 400-file cap. Pause/Continue survives restart; closing pauses and keeps completed reads. Resume recounts current inventory while reusing unchanged successful files from that run. Keep KOReader open while indexing; pause before replacing EPUB files.
+- **Smart tag chips**: hold a local EPUB tag in Tags, name the chip and combine up to 16 literal tags with **AND/OR**, scoped to one library or all local libraries. Retain native sorting/filtering/views and Home pins. Match views still show at most 400 results and disclose **400+**; the separate indexer is not capped.
+- A separate disposable SQLite index and bounded input-aware batches support progressive, stoppable local tag search. Failed files stay retryable, not false empty results.
+- Fix Android app-page navigation, explicitly native progress-dialog ownership, and transactional cover preservation during manual metadata refresh without changing the automatic safe-mode preference.
+
+Offline tags mean embedded `bookorbit:tags` JSON, not ordinary EPUB subjects/genres or KOReader collections. No BookOrbit account/plugin/API extension is required. No book/reading-data edits, cache reset, server deployment, sync-owner change, new installed path or bootstrap/API-1 change. Swedish/English controls and help are included. Previous releases and assets remain immutable.
+
+Update through the preview channel and restart KOReader. Still a prerelease: focused Bigme and automated native-boundary checks are not whole-library cold completion, physical-panel benchmarking, Boox compatibility or 1.0 acceptance. See TESTING for evidence and remaining gates.
+
 # v0.1.0-beta.26 · 2026-11-01
 
 
@@ -250,25 +278,3 @@ Uppdatera via förhandsversionskanalen och starta om KOReader. Inga bokfiler, l�
 - Fresh upstream check: SimpleUI and Bookshelf are already current. No additional upstream imports. Beta 21's Book details crash fix and earlier night-mode, cover and navigation adaptations remain.
 
 Update through the preview channel and restart KOReader. No books, reading data, links or settings are reset. Still a prerelease: physical Bigme/Boox layout, input, scan latency, cancellation and lifecycle acceptance remain open.
-
-# v0.1.0-beta.21 · 2026-10-31
-
-Beta 21 fixes the KOReader crash when selecting **Book details** in the book panel.
-
-The tab passed no header to a renderer that requires one. It now uses the modal's native headerless HTML scroller, preserving CSS, dimensions, per-tab zoom, scrolling gestures and native replacement/close ownership.
-
-The regression test now selects the actual tab through native modal switching, assembly, scrolling, zoom, resize and close paths. It reproduces the nil-header failure on Beta 20 and passes after the fix. Render primitives remain stubbed; physical device testing is still required.
-
-### Svenska
-
-Beta 21 rättar kraschen när du väljer **Bokdetaljer**. Fliken använde fel renderingshjälp utan den rubrikdel som den krävde. Nu används dialogens vanliga HTML-yta med rätt textstorlek, scrollning och stängning.
-
-Det nya regressionstestet växlar verkligen till fliken och kontrollerar zoom, storleksändring, upprepade flikbyten och frigöring av ersatta vyer. Du behöver inte indexera om eller ändra några inställningar.
-
-### Update / uppdatering
-
-Update through OrbitUI's preview channel and restart KOReader. For manual installation use **orbitui.koplugin.zip**, not GitHub's source-code archive. / Uppdatera via förhandsversionskanalen och starta om KOReader.
-
-Earlier betas can update directly. All Beta 20 night/search/shelf improvements remain. No source pins, bootstrap/API-1, installed paths, assets, reading data, metadata, links, collections or sync owners are changed. No earlier public release or asset is overwritten. BookOrbit tag navigation is being assessed separately and is not included in this crash hotfix.
-
-Still a prerelease: retest Book details scrolling, independent zoom, repeated tab switches, close and reader/shelf return on Bigme/Boox. / Fortsatt beta: automatiska tester ersätter inte fysisk provning på enheten.

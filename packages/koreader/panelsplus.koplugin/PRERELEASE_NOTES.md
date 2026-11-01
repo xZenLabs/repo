@@ -12,8 +12,10 @@ I think Panels+ is good enough as is, but what about its surrounding KOReader ec
 
 <video width="100%" height="auto" src="https://github.com/user-attachments/assets/fdf3ef83-c7df-48f4-bb30-ca32a2305b90"></video>
 
-Yep, if ink-reader is installed along with Panels+, now you can use Ink-away annotations while panning!, it means that all rendered annotations made by ink-reader are renderer in Panels+ custom viewer, including the smooth transitions and drawing outside the panel when using no-crop mode. 
-I'd say is 20% experimental and 80% stable, but this requires changes in ink-away internal code. So i need to create a PR to its github repo first.... 
+Yep, if *Ink-Away* is installed along with Panels+, you'll be able to use Ink-away annotations while panning!, it means that all rendered annotations made by ink-reader are renderer in Panels+ custom viewer, including the smooth transitions and drawing outside the panel when using no-crop mode.
+
+I'd say is 10% experimental and 90% stable, but this requires changes in ink-away internal code.
+So i need to create a PR to its github repo first.... 
 
 ---
 
