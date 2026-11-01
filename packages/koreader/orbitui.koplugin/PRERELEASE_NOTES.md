@@ -1,3 +1,106 @@
+# v0.1.0-beta.26 · 2026-11-01
+
+
+Beta 26 publishes the previously local Beta 25 changes and the reviewed
+Bookshelf **6.1.1** import through `c686f5a3`. Self-sizing picker cards use their
+own height when opened as an editor page, while remaining within the display.
+SimpleUI stays at `fdf83c7d`; no new SimpleUI commits were available. Beta 25
+was never publicly released: using 26 also permits upgrades from that installed
+local test version. All earlier public release assets remain immutable.
+
+Svenska: Beta 26 publicerar de tidigare lokala Beta 25-ändringarna och
+Bookshelf **6.1.1**. Valkort får sin egen höjd inne i hyllredigeraren utan att
+gå utanför skärmen. SimpleUI är oförändrat. Beta 25 släpptes aldrig offentligt;
+26 gör att även den lokala testversionen kan uppdateras.
+
+The release fixes the Android crash after long-pressing a book and choosing
+**Refresh metadata**. OrbitUI's Android safety check read the settings editor
+instead of the preference store and called a missing `nilOrTrue` function.
+It now reads the existing store without changing the safety preference.
+
+Regression coverage reproduces the original failure before the fix, uses the
+real component loader/preference store/storage adapter, and checks unset,
+enabled, disabled and non-Android behavior. The cover queue tests no longer
+give the editor an invented store API. Both source and sealed-package paths
+are covered. Existing cover preservation, bounded no-fork extraction and
+cancellation remain; no cache reset or full reindex is required for this fix.
+
+Svenska: Beta 26 rättar kraschen vid **långtryck på en bok > Uppdatera metadata**
+på Android. Säkerhetskontrollen läste från inställningsmenyn i stället för
+inställningslagret. Befintligt säkerhetsläge behålls och ett regressionstest
+använder det riktiga lagret. Du behöver inte radera omslagscachen eller indexera
+om biblioteket för att rätta den här kraschen.
+
+The SimpleUI **App Launcher** module also gains **Settings shortcut > Android
+settings / Developer options**. Normal Android Settings remains the default
+on all devices. The explicit device-local alternative opens Android's public
+Developer options entry, useful where a vendor Settings homepage crashes
+entering Wireless debugging. It does not directly open private Android pages,
+enable debugging, grant permissions or change any system setting. The Settings
+icon and other app buttons remain unchanged.
+
+Svenska: SimpleUI-modulen **App Launcher** får valet **Inställningar-genväg >
+Android-inställningar / Utvecklaralternativ**. Standardvalet är oförändrat;
+det nya målet väljs separat på varje enhet. Det kan kringgå en felande
+inställningsstartsida hos tillverkaren. Inga Android-inställningar eller
+behörigheter ändras och felsökning aktiveras inte. Från Utvecklaralternativ
+öppnar du själv Trådlös felsökning. Ikonen och de andra appknapparna behålls.
+
+The release additionally makes **Android apps**
+(previously App Launcher) configurable through long-press > **Apps**. Add a
+device launcher app, rename, move before/after a named neighbour, or confirm
+removal of its shortcut without uninstalling it. Extra apps receive responsive
+page arrows; an empty module remains configurable. Existing enabled modules
+keep their choices; newly enabled ones start empty, not with personal defaults.
+Only explicit edits save the device-local list. Discovery runs on Add app only;
+manual package-name entry is available if Android filters/fails the query.
+Removing/re-adding Settings does not reset its destination choice.
+
+Svenska: Du kan långtrycka på
+**Android-appar > Appar** för att lägga till, byta namn, flytta och ta bort
+genvägar. Flyttvalen namnger grannen och visar platsen direkt. Att ta bort en
+genväg avinstallerar inte Android-appen. Fler appar får sidpilar och en tom
+modul går fortfarande att konfigurera. Befintliga aktiva moduler behåller
+sina val; nya börjar tomma. Applistan och Inställningar-målet sparas lokalt.
+Långtryck, riktig applista och avbryt är nu provade på Bigme. Ändringar av
+applistan är ännu bara automatiskt testade.
+
+The release also reuses bounded text metadata between library
+scopes and makes layout probes skip unused folder-cover work. First Manga
+profile visits measured about 5–7 seconds versus 15–17 before on the test Bigme;
+warm Manga did not improve, and metadata refresh can still pause for a fresh
+derivation. Own quiet update work forwards its canceling input rather than
+dropping it; visible download cancellation is unchanged. One-page category
+cards no longer fall back to the old list when native pagination is a stateless
+span. Full tests and focused device checks pass, not complete device acceptance.
+
+Svenska: Versionen återanvänder textmetadata mellan biblioteksvyer
+och undviker onödigt omslagsarbete vid layoutmätning. Första Manga-besök tog
+cirka 5–7 sekunder mot tidigare 15–17 på test-Bigmen. Redan laddad Manga blev
+inte snabbare och metadatauppdatering kan fortfarande ge en paus. OrbitUIs
+tysta uppdateringsarbete släpper nu vidare trycket som avbryter det. Kategorikort
+på en sida fungerar även med KOReaders enkla sidavstånds-widget. Detta är
+testat på Bigmen, men är inte ett godkännande av alla enhetsflöden.
+
+All Beta 24 Bookshelf/SimpleUI behavior remains alongside the reviewed 6.1.1
+picker fix. No bootstrap/API-1 or installed-path change, settings migration, resource removal,
+external patch or BookOrbit/Hardcover synchronization change. Previous public
+releases/assets remain immutable. Update through the preview channel and
+restart KOReader. Still a prerelease: the exact final merged package has not
+been tested on a physical device. Broader Bigme/Boox acceptance, app-edit
+persistence and metadata-refresh extraction/filter-result acceptance remain
+open. The user's new explicit publication request approves this beta with
+those limits; it is not a claim that all earlier device gates have passed.
+
+The separately published Undo-opening fix is **BookOrbit Extras 0.2.1** /
+the Ereader Patch Manager catalogue, not an embedded OrbitUI patch. Update
+that patch separately and restart KOReader. No server is deployed and no
+already committed reading history is restored by either update.
+Svenska: Ångra-fixen uppdateras separat via Ereader Patch Manager eller
+BookOrbit Extras 0.2.1. OrbitUI installerar ingen serverpatch. Befintlig
+läshistorik ändras inte. Slutpaketet och kvarstående app-/metadataflöden
+behöver fortfarande provas på enheten.
+
 # v0.1.0-beta.24 · 2026-10-31
 
 # OrbitUI 0.1.0-beta.24
@@ -169,35 +272,3 @@ Update through OrbitUI's preview channel and restart KOReader. For manual instal
 Earlier betas can update directly. All Beta 20 night/search/shelf improvements remain. No source pins, bootstrap/API-1, installed paths, assets, reading data, metadata, links, collections or sync owners are changed. No earlier public release or asset is overwritten. BookOrbit tag navigation is being assessed separately and is not included in this crash hotfix.
 
 Still a prerelease: retest Book details scrolling, independent zoom, repeated tab switches, close and reader/shelf return on Bigme/Boox. / Fortsatt beta: automatiska tester ersätter inte fysisk provning på enheten.
-
-# v0.1.0-beta.20 · 2026-10-31
-
-Beta 20 combines the reviewed SimpleUI update with the approved night-mode and shared-interface refinements.
-
-### Highlights
-
-- **Night mode:** clearer dark backgrounds over retained wallpaper, consistent rounded RGB card corners on Android and a readable navigation bar. Day preferences and original cover colours are preserved.
-- **Tilted Cover Deck covers:** upstream matches warped images to the screen format before night inversion and correctly accounts for their cache memory. Conversion never frees the original cached cover. Polish translations are updated.
-- **Search:** optional typo-tolerant matching for accents, prefixes and transposed letters, with exact Swedish spelling ranked first. Existing scopes, genre preference, recent searches and the 400-hit cap remain.
-- **Shelf controls:** tap the page counter marked **▾** for **Sort, filter & view**, including compact one-/two-column lists and relative dates. Choices are remembered per profile/chip/opened group. **Use shelf defaults here** restores the original grouping, layout and sorting. Filters never write reading status or remote progress.
-- **Settings:** **You are here** offers direct jumps to parent settings levels.
-- **Book details:** a simpler cover/title/author/progress header, lazy technical-information tab with independent zoom and **Read now** using the original reader action. Existing tabs and plugin actions remain.
-- **Diagnostics:** additional opt-in local scalar timings; no queries, titles or paths are logged. The developer CPU benchmark is not a measured reader-performance claim.
-
-### Svenska
-
-Beta 20 innehåller nattlägesfixen för ljusa bakgrunder, felaktiga korthörn och svårläst navigationsrad. SimpleUI rättar även bildformatet för lutade omslag i Cover Deck vid nattläge samt deras minnesräkning. Bookshelf har inget nytt upstream.
-
-**Stavfelstålig sökning** kan hitta böcker trots stavfel och omkastade bokstäver. Exakt svensk stavning prioriteras; funktionen kan stängas av. Tryck på hyllans sidräknare med **▾** för **Sortering, filter och vy**. Kompaktlistor visar titel, författare, läsprocent och datum. Valen sparas per profil/chip/grupp, och **Använd hyllans standard här** återställer ursprunglig gruppering, vy och sortering. Filtren ändrar aldrig lässtatus eller fjärrsynk.
-
-Inställningarnas **Du är här** gör det enklare att gå tillbaka genom nivåerna. Bokpanelen får en renare header, teknisk information under **Bokdetaljer** och **Läs nu** med samma läsaröppning som tidigare. Nya egna texter finns på svenska och engelska.
-
-### Install / installation
-
-Download **orbitui.koplugin.zip**, not GitHub's source-code archive, or update through OrbitUI's preview channel. Restart KOReader afterward. / Uppdatera via förhandsversionskanalen och starta om KOReader.
-
-Older supported betas can update directly. Same 2,000 installed paths and unchanged API-1 bootstrap; no bridge, settings reset or automatic metadata scan. Existing profiles, chips, fast book closing, Android-safe cover handling, BookOrbit/Hardcover/MAL and external patches retain their owners. The prose bookmark patch is distributed separately through Ereader Patch Manager. No prior public release or asset is replaced.
-
-Reviewed upstream: SimpleUI `5631ce1035286803d7586979c75993671ff022cb`; Bookshelf unchanged at `ee84a8fe1621171c00df91c41dee76b9ed07028c`. Thanks to both upstream projects and their contributors.
-
-Still a prerelease: physical Bigme/Boox acceptance remains outstanding. Retest day/night/day, tilted/ordinary covers, fonts/touch/keyboard, compact views and saved defaults, settings navigation, detail tabs/zoom, reader return, rotation/sleep and OTA. / Fortsatt beta: automatiska tester ersätter inte provning på enheten och innebär ingen uppmätt snabbhetsvinst.
