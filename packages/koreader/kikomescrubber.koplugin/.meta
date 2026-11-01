@@ -3,7 +3,7 @@
 # zenpm:auto-scraped
 id=kikomescrubber
 name=Kikomescrubber
-version=1.0.0
+version=1.1.0
 description=A calm Home UI for KoReader.
 author=lautaroelkin
 category=theme
@@ -11,13 +11,13 @@ platforms=koreader
 dependencies=
 source=https://github.com/lautaroelkin/KiKomeScrubber.koplugin
 stars=8
-updated_at=2026-11-01T00:00:58Z
-published_at=2026-10-28T18:49:13Z
+updated_at=2026-11-01T01:00:56Z
+published_at=2026-11-01T00:22:41Z
 readme_url=packages/koreader/kikomescrubber.koplugin/README.md
 readme_hash=fda7f9f3698a85a536c17c79d1fb91303ac35f6b
 release_notes_url=packages/koreader/kikomescrubber.koplugin/RELEASE_NOTES.md
-release_notes_hash=c564af950435f07eff3f0956f5a1260ee3b66f8e5bd4df1dbd5bb6fda7bbe4b4
-releases=[{"tag_name":"v1.0.0","assets":[{"name":"KiKomeScrubber.koplugin.zip","url":"https://github.com/lautaroelkin/KiKomeScrubber.koplugin/releases/download/v1.0.0/KiKomeScrubber.koplugin.zip","size":215076,"digest":"sha256:8c386263da46b21b753ac27eb5c613bdee7f3157327b03fd3a4c4f54f1b9699c"}],"name":"Kikome Scrubber UI"}]
+release_notes_hash=e617d49d25d210b5a0abd26b2f264c34fc83d02209a22959bef0c09da52d80cb
+releases=[{"tag_name":"v1.1.0","assets":[{"name":"KiKomeScrubber.koplugin.zip","url":"https://github.com/lautaroelkin/KiKomeScrubber.koplugin/releases/download/v1.1.0/KiKomeScrubber.koplugin.zip","size":283827,"digest":"sha256:edd742aab3769d4e304b2fb53d46b00d604525197cace728f8c51eb9cfce8c6b"}],"name":"1.1"},{"tag_name":"v1.0.0","assets":[{"name":"KiKomeScrubber.koplugin.zip","url":"https://github.com/lautaroelkin/KiKomeScrubber.koplugin/releases/download/v1.0.0/KiKomeScrubber.koplugin.zip","size":215076,"digest":"sha256:8c386263da46b21b753ac27eb5c613bdee7f3157327b03fd3a4c4f54f1b9699c"}],"name":"Kikome Scrubber UI"}]
 source_type=release
 source_asset=KiKomeScrubber.koplugin.zip
-size=215076
+size=283827
