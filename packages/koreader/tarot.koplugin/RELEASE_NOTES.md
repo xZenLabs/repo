@@ -1,3 +1,15 @@
+# 6.2.26 · 2026-10-31
+
+Versão 6.2.26
+
+- Corrigidos os botões que não executavam suas ações.
+- Corrigidos toques duplicados nos menus.
+- Cabeçalho expandido com data, hora, notificações, fase lunar e bateria.
+- Pílula expandida com notificações, controle de luminosidade e informações da Lua.
+- Correção dos itens na página inicial de Configurações.
+- Melhorias na paginação do Diário e do calendário.
+- Ajustes nos filtros do Diário e na disposição dos pop-ups.
+
 # 6.2.24 · 2026-10-31
 
 **Mudanças do Arcana II - 6.2.24:**
