@@ -2,7 +2,7 @@
 
 # KiKome 1.1.0
 
-KiKome 1.1.0 brings a Library with easier-to-manage folders and collections, allowing you to create them directly from books, as well as add or remove multiple books in batches. The Home screen now features filters by status, alphabetical order, and language, supporting up to 12 chips (including collections and a new genres chip) alongside a customizable Genres tab that you can reorder or disable. Additionally, the plugin is faster on startup, when opening Home from a book, and when loading covers, introducing partial keyboard refreshes, reduced screen flashing, and improved landscape support.
+KiKome 1.1.0 brings a Library with easier-to-manage folders and collections, allowing you to create them directly from books, as well as add or remove multiple books in batches. The Home screen now features filters by status, alphabetical order, and language, supporting up to 12 chips (including collections and a new genres chip) alongside a customizable Genres tab that you can reorder or disable. Additionally, the plugin is faster on startup, when opening Home from a book, and when loading covers, introducing a new keyboard, reduced screen flashing, and improved landscape support.
 
 ## New in Library
 
