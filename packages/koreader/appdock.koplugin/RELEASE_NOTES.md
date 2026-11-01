@@ -1,3 +1,13 @@
+# v8.7.0 · 2026-11-01
+
+- Vector graphics
+- STYLUS **PRESSURE** driver
+- Stylus driver
+- Different brushes
+- lasso
+- Moveable, resizeable canvas
+- etc.
+
 # v8.6.2 · 2026-11-01
 
 Fixed major issue with color pallette on Homescreen when using a store theme
@@ -21,11 +31,3 @@ Damit scheitern Updates nicht mehr an vorhandenen Dateien aus der zuvor installi
 Der separate `unzip -tq`-Vorabtest wurde entfernt. Auf dem Kobo schlug genau dieser Test fehl, obwohl der Installer anschließend die normale Extraktion hätte ausführen können. Der Game-Installer prüft das ZIP weiterhin vor dem Entpacken auf unsichere Pfade; maßgeblich für die Integrität ist jetzt der Exit-Status der tatsächlichen Extraktion, die ZIP-Daten und CRCs dabei ebenfalls überprüft.
 
 Die kurze, stufenspezifische Fehlermeldung aus 8.5.9 bleibt erhalten, falls die eigentliche Extraktion nach diesem Fix weiterhin fehlschlägt.
-
-# v8.5.9 · 2026-10-26
-
-# AppDock 8.5.9 — Lesbare Game-Installationsfehler
-
-Fehler beim Installieren eines Games erscheinen jetzt mit kurzer Überschrift und einem kompakten, stufenspezifischen Grund auf einer eigenen Zeile. Das verhindert, dass der lange, doppelte Dialogtext den entscheidenden Teil der Meldung abschneidet.
-
-Die neue Meldung unterscheidet unter anderem ZIP-Auflistung, Integritätsprüfung, Entpacken nach `.adds`, fehlenden Launcher und fehlende Ausführungsrechte. Damit lässt sich der konkrete Gerätefehler beim nächsten Installationsversuch gezielt beheben.
