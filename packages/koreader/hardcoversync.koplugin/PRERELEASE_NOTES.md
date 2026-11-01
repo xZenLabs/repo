@@ -1,3 +1,10 @@
+# v2.4.0-beta.9 · 2026-11-01
+
+## 🎨 Improved
+- Show pages read offline in the Journal (#278)
+
+**Full changelog**: https://github.com/CaptainCamin/HardcoverSync.koplugin/compare/v2.4.0-beta.8...v2.4.0-beta.9
+
 # v2.4.0-beta.8 · 2026-11-01
 
 ## 🐛 Fixes
@@ -96,20 +103,3 @@
 - Report an error when an approved sign-in holds no usable tokens (#256)
 
 **Full changelog**: https://github.com/CaptainCamin/HardcoverSync.koplugin/compare/v2.4.0-beta.4...v2.4.0-beta.5
-
-# v2.4.0-beta.4 · 2026-10-29
-
-## ✨ New
-- Finishing a book now reaches Hardcover (#209)
-  - Switching a book to Finished on KOReader's book-status screen is sent to Hardcover when the screen closes. It used to be missed.
-  - Staying on the last page for 20 seconds asks "Mark as Read?", once per book per session. A new setting, "Mark as Read automatically on the last page", skips the question. The question is off by default when another end page (Hardcover's or ZenOS's) is chosen, and has its own setting.
-  - A new "Hardcover end page" choice in KOReader's End of document action list shows the book, its status, your rating, a review link and Mark as Read. Offline, the change waits in Pending changes.
-  - Read is never overwritten, and Did not finish still asks first.
-
-## 🛠 For developers
-- Run the emulator on KOReader 2026.07.1 (#209)
-- Fold the Tracking section too in the settings emulator scenario
-
-Not yet tried on a device: the new hooks into KOReader's book-status screen and End of document action menu. If either misbehaves, please report it.
-
-**Full changelog**: https://github.com/CaptainCamin/HardcoverSync.koplugin/compare/v2.4.0-beta.3...v2.4.0-beta.4

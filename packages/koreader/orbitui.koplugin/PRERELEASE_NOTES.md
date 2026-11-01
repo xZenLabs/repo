@@ -1,3 +1,31 @@
+# v0.1.0-beta.28 · 2026-11-01
+
+## Svenska
+
+Beta 28 innehåller senaste granskade Bookshelf-upstream och den valfria BookOrbit-statusimporten. SimpleUI är redan uppdaterat.
+
+- **OPDS-kataloger:** utgivningsår kan nu visas med `%calibre{pubdate}` för både OPDS 1.x och 2.0. Publiceringsdatum prioriteras framför datum då boken lades till; första kända året behålls när utgåvor slås ihop.
+- **Experimentell statusimport:** **Integrationer → BookOrbit → Hämta lässtatus från BookOrbit**. Avstängd som standard. Kontrollerar redan kopplade böcker på enheten högst var 15:e minut efter att Hem/hyllan visas; manuell uppdatering och senaste lyckade kontroll finns på samma sida.
+- Importen kräver det separata servertillägget **read-statuses v1 för exakt BookOrbit 3.6.0**. Det är byggt/testat lokalt men **ännu inte publicerat eller driftsatt**. Enbart OrbitUI-uppdateringen ger alltså inte serverstödet. Ingen server ändras i denna release.
+- Öppna böcker, väntande ångring, nyare lokala ändringar och osäkra konflikter samma dag skyddas. Oläst/Vill läsa återställer aldrig lokal läsning. Sidposition, historik, betyg, recensioner och BookOrbits egna synkinställningar behålls. Ingen ny skrivare till servern eller Hardcover.
+
+Hem/Bento, Manga-profiler, snabbretur, taggchip, indexering, ornament och externa patchar behålls. Inga nya installerade filer eller bootstrap-/API-1-ändringar. Svenska och engelska texter ingår. Tidigare releaser och deras filer ändras inte.
+
+Uppdatera via förhandskanalen och starta om KOReader. Fortsatt beta: senaste OPDS-/statusändringarna är automatiskt testade men ännu inte provade på Bigme/Boox. Ingen ny uppmätt prestandaförbättring utlovas. Se TESTING för testresultat och återstående enhetskontroller.
+
+## English
+
+Beta 28 includes the latest reviewed Bookshelf upstream and optional BookOrbit reading-status import. SimpleUI is already current.
+
+- OPDS 1.x/2.0 catalog books expose their publication year through `%calibre{pubdate}`, preferring publication-specific dates and preserving the first known year when editions merge.
+- **Experimental, OFF by default:** **Integrations → BookOrbit → Import reading status from BookOrbit** checks already matched device books after Home/a shelf is visible, at most every 15 minutes. Update now and the last successful check are available there.
+- Requires the separate **read-statuses v1 extension for exact BookOrbit 3.6.0**, currently built/tested locally but **NOT published or deployed**. This OrbitUI update alone does not provide server support and deploys nothing.
+- Protects open/parked books, pending Undo, newer local changes and ambiguous same-day conflicts. Unread/Want to Read never reset a read. Position, history, ratings/reviews and native sync preferences remain unchanged. GET-only server access; no new remote/Hardcover writer or forced Manga rebuild.
+
+Existing Home, shelves, profiles, fast return, offline tags/indexing, ornaments and external patch behavior remain. No new installed path, bootstrap/API-1 change, cache reset or server deployment. Previous releases/assets are immutable. Swedish/English controls and help are included.
+
+Update through the preview channel and restart KOReader. Still a prerelease: latest OPDS/status changes have no fresh physical Bigme/Boox acceptance or measured latency gain. See TESTING for automated/sealed/native OTA evidence and remaining device gates.
+
 # v0.1.0-beta.27 · 2026-11-01
 
 ## Svenska
@@ -256,25 +284,3 @@ No new upstream merge, artwork, runtime path, language removal, bootstrap/API
 limit change or production server update. Previous public assets stay immutable;
 rollback changes code, not reading data. See [OTA notes](https://github.com/komadorirobin/orbitui.koplugin/blob/v0.1.0-beta.23/docs/OTA.md)
 for details.
-
-# v0.1.0-beta.22 · 2026-10-31
-
-## Svenska
-
-- Klickbara taggar finns i den befintliga **Taggar-fliken**. Välj **EPUB-taggar (offline) > Läs EPUB-taggar** och tryck sedan på en tagg för fler böcker med exakt samma tagg på enheten.
-- EPUB 2/3-taggar som BookOrbit har skrivit in i filen fungerar helt lokalt, utan BookOrbit-plugin, konto, koppling, nätverk eller API-tillägg. Vanliga EPUB-ämnesord ligger fortfarande under Genrer; samlingar hålls separata.
-- Träfflistan söker i konfigurerade biblioteksprofiler och hemmabiblioteket, med bibliotekets vanliga skanningsdjup. Den går att avbryta och behåller normal boköppning. Uppdatera läser om filerna; oläsbara EPUB-filer och gränsen på 400 träffar visas tydligt.
-- Valfri hämtning av taggar från BookOrbit finns separat. Nätbaserad taggsökning kräver serverstödet som förberetts lokalt men **inte driftsätts här**. Det behövs inte för EPUB-taggarna.
-- Ny upstream-kontroll: SimpleUI och Bookshelf är redan helt ikapp. Inga ytterligare upstream-ändringar i denna beta. Bokdetalj-fixen från Beta 21 och tidigare nattläge-, omslags- och navigationsanpassningar behålls.
-
-Uppdatera via förhandsversionskanalen och starta om KOReader. Inga bokfiler, läsdata, kopplingar eller inställningar återställs. Fortsatt beta: fysisk provning på Bigme/Boox återstår.
-
-## English
-
-- Clickable tags live in the existing **Tags** tab. Choose **EPUB tags (offline) > Read EPUB tags**, then tap a tag for local books with the exact same tag.
-- EPUB 2/3 `bookorbit:tags` metadata works entirely offline: no BookOrbit plugin, account, link, network or API addition required. Standard EPUB subjects remain Genres; collections stay separate.
-- Results cover configured library profiles and the home library, respecting native scan depth. Scanning is cancelable and normal reader actions are retained. Refresh rereads files; unreadable EPUBs and the 400-match limit are disclosed.
-- Optional online BookOrbit tag loading is separate. Online tag search needs the separately prepared server endpoint, **not deployed by this release** and not needed for embedded tags.
-- Fresh upstream check: SimpleUI and Bookshelf are already current. No additional upstream imports. Beta 21's Book details crash fix and earlier night-mode, cover and navigation adaptations remain.
-
-Update through the preview channel and restart KOReader. No books, reading data, links or settings are reset. Still a prerelease: physical Bigme/Boox layout, input, scan latency, cancellation and lifecycle acceptance remain open.
