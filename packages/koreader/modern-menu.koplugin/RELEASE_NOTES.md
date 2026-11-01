@@ -1,3 +1,20 @@
+# v1.13.0 · 2026-11-01
+
+## modern_menu 1.13.0
+
+A swipe steps back through the menu, the breadcrumbs can sit at the bottom, and the book's own navigation screens open on their own.
+
+### Changes
+- A right-to-left swipe returns to the parent menu. On the top menu, the same swipe closes it. This still works when the list is long enough to scroll
+- **Breadcrumbs at the bottom** in Modern Menu settings moves the trail under the list. On a full-screen menu that row keeps its own space at the bottom
+- Table of contents, Bookmarks, Book map, Page browser, Go to page, and Skim document close the menu, so KOReader's own screens are what you use to move through the book
+
+### Install
+1. Download **modern_menu.koplugin-v1.13.0.zip**
+2. Extract into your KOReader `plugins/` directory
+3. Restart KOReader and enable **Modern Menu**
+4. Install Kobold, Simple UI, Quick Menu, Neo Quick Settings, or Shortcuts Toolbar as well if you use those
+
 # v1.12.0 · 2026-10-30
 
 ## modern_menu 1.12.0
@@ -63,28 +80,6 @@ The status bar can be hidden, and the battery can show as a percentage.
 
 ### Install
 1. Download **modern_menu.koplugin-v1.9.0.zip**
-2. Extract into your KOReader `plugins/` directory
-3. Restart KOReader and enable **Modern Menu**
-4. Install Kobold, Simple UI, Quick Menu, Neo Quick Settings, or Shortcuts Toolbar as well if you use those
-
-# v1.8.0 · 2026-10-15
-
-## modern_menu 1.8.0
-
-Modern Menu now complements [Kobold](https://github.com/unitreign/kobold): the same type and spacing, and a menu that stays available on Kobold’s screens.
-
-### Changes
-- The pull-down menu opens on the file browser and on Kobold’s Home, My Books, and More screens, including after you open Kobold from the reader
-- A **Kobold** tab, when that plugin is installed, sits after any quick-action tabs and before Library, and opens Kobold Home
-- The file-browser shortcut row is pinned at the bottom of the menu, the same way the reader shortcut row is
-- Header aligned with the clock: title on the same inset, close with the status icons, back only inside a submenu
-- Dialogs opened from the menu stay on top of it. Battery, Wi‑Fi, brightness, and Kobold navigation close the menu first
-- Tab icons are centered on their labels and evenly spaced. The selected tab is bold, without an underline, and the labels sit clear of the rule below them
-- Defaults match a compact Kobold-style sheet: option padding −4, tab label 12, tab icon 20, height fit to content, and Noto Sans when KOReader includes that face
-- Tab label size can go down to 8 and tab icon size down to 10. **Reset to defaults** writes these values
-
-### Install
-1. Download **modern_menu.koplugin-v1.8.0.zip**
 2. Extract into your KOReader `plugins/` directory
 3. Restart KOReader and enable **Modern Menu**
 4. Install Kobold, Simple UI, Quick Menu, Neo Quick Settings, or Shortcuts Toolbar as well if you use those

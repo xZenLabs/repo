@@ -1,3 +1,7 @@
+# v8.6.1 · 2026-11-01
+
+Oh man...
+
 # v8.5.11 · 2026-10-26
 
 # AppDock 8.5.11 — Game-Updates über bereits installierte Pakete
@@ -29,11 +33,3 @@ Die neue Meldung unterscheidet unter anderem ZIP-Auflistung, Integritätsprüfun
 Der Game-Installer unterstützt jetzt sowohl Info-ZIP als auch BusyBox `unzip`. Für die sichere Archivprüfung wird die portable Listenoption `-lq` statt der Info-ZIP-spezifischen Option `-Z1` verwendet; der Installer prüft außerdem, dass tatsächlich ZIP-Einträge gelesen wurden.
 
 Nach dem Entpacken setzt AppDock den erwarteten Launcher unter `<game>/bin/<game>` auf ausführbar (`0755`). Damit werden beide Hürden abgedeckt: Archive ohne Unix-Ausführungsbits und Geräte, die nur BusyBox statt eines separaten `unzip` bereitstellen.
-
-# v8.5.7 · 2026-10-26
-
-# AppDock 8.5.7 — Game-Installer-Fix
-
-Der Game-Installer setzt nach dem Entpacken das erwartete Programm unter `<game>/bin/<game>` explizit auf ausführbar (`0755`). Damit starten Spiele auch dann, wenn das ZIP-Archiv – etwa durch Erstellung auf einem FAT-/Windows-Dateisystem – keine Unix-Ausführungsrechte enthält.
-
-Der Installer prüft außerdem, ob die erwartete Binärdatei im Archiv vorhanden ist, und meldet einen verständlichen Fehler, wenn sie fehlt oder nicht ausführbar gemacht werden kann. Die ZIP-Dateien von Midless und Geometry Rush sind intakt; ihr bisher fehlendes Ausführungsbit war die Ursache dafür, dass die Spiele nach dem Installieren nicht starteten.
