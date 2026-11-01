@@ -110,9 +110,11 @@ igen. Funktionen ingår i Beta 26.
 status from BookOrbit** adds an off-by-default, deferred GET-only importer for
 saved device matches. Automatic attempts are throttled to 15 minutes; Update
 now and the last successful check are available in the same page. Requires
-the separate `read-statuses v1` extension for exact BookOrbit 3.6.0, built
-locally in BookOrbit Extras. That server extension is not yet published or
-deployed; the OrbitUI beta alone cannot enable it on an unextended server.
+the separate `read-statuses v1` extension for exact BookOrbit 3.6.0, now
+published in [BookOrbit Extras 0.3.0](https://github.com/komadorirobin/bookorbit-extras/releases/tag/v0.3.0).
+An administrator must install it separately; the OrbitUI beta alone cannot
+enable it on an unextended server. The separately reviewed Littex installation
+has server support, but this does not change the client's off-by-default choice.
 No EPUB indexing, cover work, downloads or new remote writer. Open/parked
 books, pending Undo and newer/ambiguous same-day local changes are protected.
 Unread/Want to Read do not reset local reading. Position, history, ratings and
@@ -126,8 +128,11 @@ acceptance remains pending; headless tests are not device measurements.
 från BookOrbit** finns en avstängd bakgrundsfunktion för redan kopplade böcker.
 Den kontrollerar status högst var 15:e minut efter att Hem/hyllan visas, med
 manuell uppdatering och tid för senaste lyckade kontroll. Kräver det nya
-servertillägget `read-statuses v1`, som ännu inte publicerats eller driftsatts.
-Enbart OrbitUI-uppdateringen ger inte serverstödet. Ingen indexering,
+servertillägget `read-statuses v1`, publicerat i
+[BookOrbit Extras 0.3.0](https://github.com/komadorirobin/bookorbit-extras/releases/tag/v0.3.0).
+Det separat granskade Littex-bygget är driftsatt; på andra servrar måste
+administratören installera tillägget. Enbart OrbitUI-uppdateringen ger inte
+serverstödet och funktionen aktiveras aldrig automatiskt. Ingen indexering,
 omslagshämtning eller ny skrivare till server/Hardcover. Öppna böcker, väntande
 ångring och nyare/osäkra ändringar samma dag skyddas. Position och historik
 ändras inte. Oförändrad status kräver ingen läsning av lokala bokinställningar.
@@ -191,7 +196,7 @@ reading-progress sync, erase its credentials, or replace your saved layouts.
 | **Manual BookOrbit menu actions** | Explicitly add/remove a linked book from Want to Read. These actions change the server's read status; they are not a second automatic progress sync. |
 | **EPUB tags (offline)** | Read embedded `bookorbit:tags` metadata and find matching local EPUBs across profiles. No BookOrbit installation or API patch required. Standard EPUB subjects remain genres. Available in Beta 22. |
 | **Online BookOrbit tags** | Explicit load/refresh in the Tags tab. Exact matches among linked local files need the optional server API addition. No server-only results or automatic metadata writes. |
-| **Import reading status (experimental, Beta 28)** | Opt-in GET-only import for linked device books. Requires the separate read-statuses v1 server extension, currently local/unpublished. No position sync or new remote writer. |
+| **Import reading status (experimental, Beta 28)** | Opt-in GET-only import for linked device books. Requires the separately installed read-statuses v1 server extension, published in BookOrbit Extras 0.3.0. No position sync or new remote writer. |
 | **Undo accidental opening** | Separate device patch plus a version-compatible server extension. Not bundled or controlled by OrbitUI. |
 | **Hardcover single-writer compatibility** | Optional device patch keeps BookOrbit as the automatic Hardcover writer while retaining the separate Hardcover plugin's linking/edition/metadata tools. |
 
