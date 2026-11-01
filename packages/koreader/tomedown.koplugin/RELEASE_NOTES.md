@@ -1,3 +1,16 @@
+# v1.1.3 · 2026-11-01
+
+- Updates unpack into a new folder first, check it, and only then replace the installed one. A failed download, unpack or check leaves your current version untouched.
+- The check looks for main.lua and _meta.lua, compiles every Lua module, and compares the version inside with the release.
+- The old folder stays as tomedown.koplugin.previous until the next update, and files that the new version no longer ships go away with it.
+- An archive entry that points outside the plugin folder is refused, and the update stops before it can touch the installed copy.
+- The curl fallbacks quote the address and accept only https addresses with safe characters.
+- Release notes and the changelog are plain text from this version on, so the layout is the same on every device.
+- The About window now shows the licence, GNU Affero General Public License v3.0.
+- The test suite runs on LuaJIT, the interpreter KOReader ships, as well as on Lua 5.4.
+
+Coming from 1.1.2 or earlier, this release is installed by the previous updater; the new install steps start with the next update.
+
 # v1.1.2 · 2026-10-30
 
 Tomedown 1.1.2.
@@ -132,42 +145,3 @@ Things we would like to try next. No promises, no dates, and nothing here is dec
 
 README, full tutorial, quickstart sheets and Obsidian guide sheets:
 https://github.com/imanubdesigner/tomedown.koplugin
-
-# v0.8.0 · 2026-10-03
-
-> **The Vault release is here: book covers, callouts, a new index and an export layout that reads like a note vault instead of a dump of quotes.**
-
-
-https://github.com/user-attachments/assets/d4eb3e01-4b22-4947-ab4f-ed8c080bb7d5
-
-
-
-## Highlights
-
-- **Book covers** — *Include book covers* (off by default): every export saves the book's cover as an 800×1200 JPEG in full colour (quality 50) under `covers/`, embeds it in the book note and in the index. The `covers/` folder is created on the server on the first upload (WebDAV, FTP, Dropbox); the file leaves the device once the upload has confirmed it, stays queued while offline and goes away on the next flush. Obsidian 1.8.1+ renders the plain `<img>` tags — no snippet to install.
-
-- **Callouts** — *All highlights as Special Highlights* (off by default): every highlight becomes an `> [!highlight]` callout instead of a plain quote; when the toggle is off, only *Special Highlight* marks turn into callouts.
-
-- **Special Highlight** — one tap on a fresh selection (right under *Highlight*) creates and flags a highlight; the compact edit menu of an existing highlight carries the same dynamic row, *Special Highlight* / *Remove Special Highlight*. The mark lives on the annotation, is part of the book hash, and is always exported as a callout.
-
-- **Index v2** — the book index gains cover, book, author, series, status, highlight count and last export per row, wiki links, and a stats line above the table. Existing vaults are backfilled on the next export.
-
-- **Clean export layout** — every file opens with a rule right after the frontmatter, the book cover is centered and framed by rules before the `# **HIGHLIGHTS**` heading, and the index leads with `*9 books · 53 highlights — click a title to open its note.*` (singular agrees too: `*1 book · 1 highlight …*`).
-
-- **Menu renames** — *Generate the 00 - Index.md (for Obsidian)* and *All highlights as Special Highlights*: same behavior, clearer names.
-
-- **Status popup** — widened to 90% of the screen, smallest font, one line per entry with the labels in bold.
-
-- **Keywords are always valid Obsidian tags** — a whitelist sanitizer keeps only letters, numbers, `-`, `_`, `/` and every non-ASCII character (accents, emoji); whitespace becomes `-`, everything else is dropped (`Horror tales; American` → `Horror-tales-American`). Books whose keywords change re-export automatically.
-
-- **Automatic rewrite** — the render format is part of the stored book hash, so the first export after updating rewrites every note once. No *Import all books from history* needed.
-
-## Updating
-
-Update and run one export: notes, covers and the index regenerate themselves. Running one of the betas? Update as usual and switch **Beta Releases** off again if you don't want prereleases any more.
-
-New to Tomedown: download the zip below and install it as a KOReader plugin.
-
-All 758 test assertions green.
-
-*Remotely Save users: set **Abort Sync If Modification Above Percentage** to **100 (disable the protection)** — Tomedown re-exports notes in bulk, which trips the default 50% guard.*

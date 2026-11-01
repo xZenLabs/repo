@@ -1,3 +1,7 @@
+# v8.6.2 · 2026-11-01
+
+Fixed major issue with color pallette on Homescreen when using a store theme
+
 # v8.6.1 · 2026-11-01
 
 Oh man...
@@ -25,11 +29,3 @@ Die kurze, stufenspezifische Fehlermeldung aus 8.5.9 bleibt erhalten, falls die 
 Fehler beim Installieren eines Games erscheinen jetzt mit kurzer Überschrift und einem kompakten, stufenspezifischen Grund auf einer eigenen Zeile. Das verhindert, dass der lange, doppelte Dialogtext den entscheidenden Teil der Meldung abschneidet.
 
 Die neue Meldung unterscheidet unter anderem ZIP-Auflistung, Integritätsprüfung, Entpacken nach `.adds`, fehlenden Launcher und fehlende Ausführungsrechte. Damit lässt sich der konkrete Gerätefehler beim nächsten Installationsversuch gezielt beheben.
-
-# v8.5.8 · 2026-10-26
-
-# AppDock 8.5.8 — Game-Paketinstallation auf KOReader-Geräten
-
-Der Game-Installer unterstützt jetzt sowohl Info-ZIP als auch BusyBox `unzip`. Für die sichere Archivprüfung wird die portable Listenoption `-lq` statt der Info-ZIP-spezifischen Option `-Z1` verwendet; der Installer prüft außerdem, dass tatsächlich ZIP-Einträge gelesen wurden.
-
-Nach dem Entpacken setzt AppDock den erwarteten Launcher unter `<game>/bin/<game>` auf ausführbar (`0755`). Damit werden beide Hürden abgedeckt: Archive ohne Unix-Ausführungsbits und Geräte, die nur BusyBox statt eines separaten `unzip` bereitstellen.
