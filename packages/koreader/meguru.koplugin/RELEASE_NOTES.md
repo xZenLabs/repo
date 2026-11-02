@@ -1,3 +1,20 @@
+# v1.7.3 · 2026-11-02
+
+## New features
+
+- **ZenPM support**: Meguru can now be installed and updated from [ZenPM](https://github.com/xZenLabs/zen-pm). Search for `meguru`. (#10)
+
+## Bug fixes
+
+- **Derainbow works on Android again**: the native libraries are now copied into the app's private files directory, since shared storage is mounted `noexec`. Refs #9.
+- **Compatible with KOReader's new OPDS dialog**: the *Meguru this series* row now appears in both the old `showDownloads` and the new `getDownloadButtons` dialog. Refs koreader/koreader#16311.
+
+
+## New Contributors
+* @KristanLaimon made their first contribution in https://github.com/Craftwork2720/meguru/pull/10
+
+**Full Changelog**: https://github.com/Craftwork2720/meguru/compare/v1.7.1...v1.7.3
+
 # v1.7.1 · 2026-10-30
 
 ## Bug fixes
@@ -67,12 +84,3 @@ Two new optional integrations.
 - **Komga: series covers now use the full-size image**.
 
 **Full Changelog**: https://github.com/Craftwork2720/meguru/compare/v1.5.3...v1.5.4
-
-# v1.5.3 · 2026-10-10
-
-## Bug fixes
-
-- **No more crash on Android while the file browser builds covers.** Opening a folder of local `.cbz` files or `.meguru` streams could close the app: KOReader builds covers in a background process, and that process was asking Android two questions only the main one may ask — the answer it got was an abort. Both are gone; those answers are now taken in the main process ([#4](https://github.com/Craftwork2720/meguru/issues/4))
-- Everything else is untouched: reading, panel view, two-page view and streaming are unchanged, and covers outside Android are fetched exactly as before
-
-**Full Changelog**: https://github.com/Craftwork2720/meguru/compare/v1.5.2...v1.5.3
