@@ -1,3 +1,9 @@
+# 26.11.2-beta · 2026-11-02
+
+- Address network check potential issue: #161 
+
+**Full Changelog**: https://github.com/ultimatejimmy/xray.koplugin/compare/26.10.28-beta...26.11.2-beta
+
 # 26.10.28-beta · 2026-10-28
 
 ### New Features
@@ -48,9 +54,3 @@ You can now jump straight into X-Ray details when selecting a character, locatio
 - Fix bug with highlighted text.
 
 **Full Changelog**: https://github.com/ultimatejimmy/xray.koplugin/compare/26.10.18-beta...26.10.19-beta
-
-# 26.10.18-beta · 2026-10-19
-
-Gesture now opens normal x-ray menu
-
-**Full Changelog**: https://github.com/ultimatejimmy/xray.koplugin/compare/26.10.16-beta...26.10.18-beta
