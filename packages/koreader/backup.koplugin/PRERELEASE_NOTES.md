@@ -1,3 +1,12 @@
+# 26.11.2-beta · 2026-11-02
+
+- Show hidden folders in the file picker
+- add snooze feature
+- add option to backup books
+
+
+**Full Changelog**: https://github.com/ultimatejimmy/backup.koplugin/compare/26.10.29-beta...26.11.2-beta
+
 # 26.10.29-beta · 2026-10-29
 
 - Settings from manual backups now persist
@@ -35,10 +44,3 @@ update eink refresh logic on loading toast
 * **Automatic Cloud Upload**: If you already have cloud storage configured (Google Drive, WebDAV, Dropbox, OneDrive, FTP, or SFTP), you can have your scheduled or regular backups automatically upload to the cloud whenever Wi-Fi is active.
 
 **Full Changelog**: https://github.com/ultimatejimmy/backup.koplugin/compare/26.10.8...26.10.16-beta
-
-# 26.10.7-beta · 2026-10-07
-
-- Add browser beam option
-- Support redirects with webdav
-
-**Full Changelog**: https://github.com/ultimatejimmy/backup.koplugin/compare/26.10.6-beta...26.10.7-beta
