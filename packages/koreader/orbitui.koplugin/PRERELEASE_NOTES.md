@@ -1,3 +1,33 @@
+# v1.0.0-rc.2 · 2026-11-02
+
+## OrbitUI 1.0.0-rc.2 — release candidate, not stable 1.0
+
+Feature freeze continues. This release publishes the tested tag lifecycle fix and the explicitly requested shelf-preview navigation change. Bookshelf stays at `b512cd90`; SimpleUI stays at `fdf83c7d`. No new upstream import or synchronization owner.
+
+- Fixes the reproduced tag-search/index dialog retirement bug: Close remains usable after background-work ownership expires, and stale work releases busy/index state without adopting stale results. A changed view explains that it must be reopened instead of leaving enabled no-op actions.
+- Sleep pauses offline tag search/indexing without painting or automatically restarting on wake. Completed tag reads are kept. Use Continue/Refresh when ready; reopen the page first if navigation changed.
+- Tapping a title in offline or BookOrbit tag results now selects the actual book on its Bookshelf profile/folder/page with cover/description, without opening ReaderUI. Repeated selection cannot start reading. Long-press still opens book details. Missing/filtered targets fail safely, and unrelated search/reader actions are unchanged.
+
+Existing settings, cache schemas, reading progress/history, artwork/languages and external BookOrbit/Hardcover/MAL/patch ownership remain. BookOrbit status import stays experimental, OFF by default, with unchanged protection rules. No server is deployed. Bootstrap API 1 and exactly 2,000 installed paths are retained; previous public releases/tags, including RC1, are not replaced.
+
+**Testing limitation:** automated/sealed/native installer checks are not physical device acceptance. Sleep/wake during all 3,341 files, pause/continue/Close, actual selected-cover/description layout, cold/warm/parked transitions and on-device update/recovery still need Bigme/Boox testing. The synthetic reproduction does not prove the exact trigger on the user's device. This is not stable-1.0 sign-off.
+
+Install `orbitui.koplugin.zip` (not GitHub's source archive), or update through the **preview channel**, then restart KOReader. Keep an independent backup. The stable channel must ignore RC2. See `docs/TESTING.md` for the remaining RC acceptance checklist.
+
+## Svenska
+
+**1.0.0-rc.2 är en testkandidat, inte stabil 1.0.** Funktionsfrysen fortsätter. RC2 innehåller den testade fixen och den önskade ändringen av titeltryck i taggträffar. Bookshelf/SimpleUI är kvar på granskade versioner; ingen ny upstream-merge eller synkägare.
+
+- Fixar den återskapade låsningen i taggsökning/indexering: Stäng fungerar även när bakgrundsarbetet blivit inaktuellt. Gammalt arbete släpper upptaget tillstånd utan att ta över träfflistan. En ändrad vy förklarar att den behöver öppnas igen.
+- Vila pausar lokal taggsökning/indexering utan automatisk återstart. Redan lästa taggar behålls. Välj Fortsätt/Uppdatera när du vill; öppna sidan igen först om navigationen ändrats.
+- Titeltryck i lokala eller BookOrbit-taggträffar markerar boken på rätt profil/mapp/sida i bokhyllan och visar omslag/beskrivning utan att öppna läsvyn. Upprepade tryck startar inte läsning. Långtryck öppnar fortfarande bokdetaljer. Saknade/filtrerade mål hanteras säkert; övriga sök- och läsåtgärder är oförändrade.
+
+Inställningar, cacheformat, läsdata, bilder, språk och externa plugin-/patchkopplingar behålls. BookOrbit-statusimport är fortsatt experimentell och avstängd som standard, med samma skyddsregler. Ingen server driftsätts. API-1 och 2 000 installationsfiler är kvar. RC1 och äldre releaser skrivs inte över.
+
+**Återstår:** fysiska Bigme/Boox-tester av vila under indexering av alla 3 341 filer, paus/fortsätt/Stäng, markerat omslag/beskrivning, kall/varm/parkering och riktig uppdatering/återställning. Automattester bevisar inte exakt vad som utlöste felet på enheten och är inte godkännande för stabil 1.0.
+
+Installera `orbitui.koplugin.zip` eller uppdatera via **förhandskanalen** och starta om KOReader. Behåll en separat säkerhetskopia. RC2 ska inte väljas av stabila kanalen.
+
 # v1.0.0-rc.1 · 2026-11-02
 
 ## OrbitUI 1.0.0-rc.1 — release candidate, not stable 1.0
@@ -113,106 +143,3 @@ Beta 27 publishes the offline tag-index/search and smart-chip work, plus the And
 Offline tags mean embedded `bookorbit:tags` JSON, not ordinary EPUB subjects/genres or KOReader collections. No BookOrbit account/plugin/API extension is required. No book/reading-data edits, cache reset, server deployment, sync-owner change, new installed path or bootstrap/API-1 change. Swedish/English controls and help are included. Previous releases and assets remain immutable.
 
 Update through the preview channel and restart KOReader. Still a prerelease: focused Bigme and automated native-boundary checks are not whole-library cold completion, physical-panel benchmarking, Boox compatibility or 1.0 acceptance. See TESTING for evidence and remaining gates.
-
-# v0.1.0-beta.26 · 2026-11-01
-
-
-Beta 26 publishes the previously local Beta 25 changes and the reviewed
-Bookshelf **6.1.1** import through `c686f5a3`. Self-sizing picker cards use their
-own height when opened as an editor page, while remaining within the display.
-SimpleUI stays at `fdf83c7d`; no new SimpleUI commits were available. Beta 25
-was never publicly released: using 26 also permits upgrades from that installed
-local test version. All earlier public release assets remain immutable.
-
-Svenska: Beta 26 publicerar de tidigare lokala Beta 25-ändringarna och
-Bookshelf **6.1.1**. Valkort får sin egen höjd inne i hyllredigeraren utan att
-gå utanför skärmen. SimpleUI är oförändrat. Beta 25 släpptes aldrig offentligt;
-26 gör att även den lokala testversionen kan uppdateras.
-
-The release fixes the Android crash after long-pressing a book and choosing
-**Refresh metadata**. OrbitUI's Android safety check read the settings editor
-instead of the preference store and called a missing `nilOrTrue` function.
-It now reads the existing store without changing the safety preference.
-
-Regression coverage reproduces the original failure before the fix, uses the
-real component loader/preference store/storage adapter, and checks unset,
-enabled, disabled and non-Android behavior. The cover queue tests no longer
-give the editor an invented store API. Both source and sealed-package paths
-are covered. Existing cover preservation, bounded no-fork extraction and
-cancellation remain; no cache reset or full reindex is required for this fix.
-
-Svenska: Beta 26 rättar kraschen vid **långtryck på en bok > Uppdatera metadata**
-på Android. Säkerhetskontrollen läste från inställningsmenyn i stället för
-inställningslagret. Befintligt säkerhetsläge behålls och ett regressionstest
-använder det riktiga lagret. Du behöver inte radera omslagscachen eller indexera
-om biblioteket för att rätta den här kraschen.
-
-The SimpleUI **App Launcher** module also gains **Settings shortcut > Android
-settings / Developer options**. Normal Android Settings remains the default
-on all devices. The explicit device-local alternative opens Android's public
-Developer options entry, useful where a vendor Settings homepage crashes
-entering Wireless debugging. It does not directly open private Android pages,
-enable debugging, grant permissions or change any system setting. The Settings
-icon and other app buttons remain unchanged.
-
-Svenska: SimpleUI-modulen **App Launcher** får valet **Inställningar-genväg >
-Android-inställningar / Utvecklaralternativ**. Standardvalet är oförändrat;
-det nya målet väljs separat på varje enhet. Det kan kringgå en felande
-inställningsstartsida hos tillverkaren. Inga Android-inställningar eller
-behörigheter ändras och felsökning aktiveras inte. Från Utvecklaralternativ
-öppnar du själv Trådlös felsökning. Ikonen och de andra appknapparna behålls.
-
-The release additionally makes **Android apps**
-(previously App Launcher) configurable through long-press > **Apps**. Add a
-device launcher app, rename, move before/after a named neighbour, or confirm
-removal of its shortcut without uninstalling it. Extra apps receive responsive
-page arrows; an empty module remains configurable. Existing enabled modules
-keep their choices; newly enabled ones start empty, not with personal defaults.
-Only explicit edits save the device-local list. Discovery runs on Add app only;
-manual package-name entry is available if Android filters/fails the query.
-Removing/re-adding Settings does not reset its destination choice.
-
-Svenska: Du kan långtrycka på
-**Android-appar > Appar** för att lägga till, byta namn, flytta och ta bort
-genvägar. Flyttvalen namnger grannen och visar platsen direkt. Att ta bort en
-genväg avinstallerar inte Android-appen. Fler appar får sidpilar och en tom
-modul går fortfarande att konfigurera. Befintliga aktiva moduler behåller
-sina val; nya börjar tomma. Applistan och Inställningar-målet sparas lokalt.
-Långtryck, riktig applista och avbryt är nu provade på Bigme. Ändringar av
-applistan är ännu bara automatiskt testade.
-
-The release also reuses bounded text metadata between library
-scopes and makes layout probes skip unused folder-cover work. First Manga
-profile visits measured about 5–7 seconds versus 15–17 before on the test Bigme;
-warm Manga did not improve, and metadata refresh can still pause for a fresh
-derivation. Own quiet update work forwards its canceling input rather than
-dropping it; visible download cancellation is unchanged. One-page category
-cards no longer fall back to the old list when native pagination is a stateless
-span. Full tests and focused device checks pass, not complete device acceptance.
-
-Svenska: Versionen återanvänder textmetadata mellan biblioteksvyer
-och undviker onödigt omslagsarbete vid layoutmätning. Första Manga-besök tog
-cirka 5–7 sekunder mot tidigare 15–17 på test-Bigmen. Redan laddad Manga blev
-inte snabbare och metadatauppdatering kan fortfarande ge en paus. OrbitUIs
-tysta uppdateringsarbete släpper nu vidare trycket som avbryter det. Kategorikort
-på en sida fungerar även med KOReaders enkla sidavstånds-widget. Detta är
-testat på Bigmen, men är inte ett godkännande av alla enhetsflöden.
-
-All Beta 24 Bookshelf/SimpleUI behavior remains alongside the reviewed 6.1.1
-picker fix. No bootstrap/API-1 or installed-path change, settings migration, resource removal,
-external patch or BookOrbit/Hardcover synchronization change. Previous public
-releases/assets remain immutable. Update through the preview channel and
-restart KOReader. Still a prerelease: the exact final merged package has not
-been tested on a physical device. Broader Bigme/Boox acceptance, app-edit
-persistence and metadata-refresh extraction/filter-result acceptance remain
-open. The user's new explicit publication request approves this beta with
-those limits; it is not a claim that all earlier device gates have passed.
-
-The separately published Undo-opening fix is **BookOrbit Extras 0.2.1** /
-the Ereader Patch Manager catalogue, not an embedded OrbitUI patch. Update
-that patch separately and restart KOReader. No server is deployed and no
-already committed reading history is restored by either update.
-Svenska: Ångra-fixen uppdateras separat via Ereader Patch Manager eller
-BookOrbit Extras 0.2.1. OrbitUI installerar ingen serverpatch. Befintlig
-läshistorik ändras inte. Slutpaketet och kvarstående app-/metadataflöden
-behöver fortfarande provas på enheten.

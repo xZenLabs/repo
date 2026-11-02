@@ -65,28 +65,28 @@ explains the extra controls and where to find them.
 
 ### Local books first, online services optional
 
-**1.0.0-rc.1 — release candidate, not stable 1.0.** The feature set is frozen
-for focused testing. Existing Home/Manga, profiles, tags/indexing, night mode,
-footer/contrast controls, add-ons and integrations remain. BookOrbit status
-checks now distinguish unchanged, missing-data, protected and conflicting
-entries, with read-only **Status check details**. Import safety rules and the
-off-by-default choice are unchanged. Bookshelf-OS is retired from inspiration
-monitoring, not from OrbitUI's existing settings cards or quick controls.
-Once published, RC1 uses the preview channel and requires restarting KOReader;
-it is never a stable-channel release. Physical Bigme/Boox, complete large-library
-indexing and on-device update/recovery checks remain open.
-[RC scope and test plan](docs/OTA.md#orbitui-100-rc1).
+**1.0.0-rc.2 — release candidate, not stable 1.0.** Feature freeze continues.
+Fixes the reproduced tag-search/index dialog retirement bug: Close remains
+usable, sleep pauses work without automatic restart, and completed tag reads
+are kept. Tag-result title taps now select the book on its real shelf with its
+cover/description instead of opening the reader; long-press still opens details.
+Existing Home/Manga, profiles, artwork and optional integrations remain. No
+upstream import, reading-data migration, sync change or server deployment.
+Use the **preview channel** and restart KOReader after updating. Physical
+Bigme/Boox sleep/wake, complete large-library indexing, shelf-reveal presentation
+and on-device update/recovery checks remain open.
+[RC scope and test plan](docs/OTA.md#orbitui-100-rc2).
 
-**Svenska: 1.0.0-rc.1 är en testkandidat, inte stabil 1.0.** Nya funktioner
-pausas inför riktad testning. Hem/Manga, profiler, taggar/indexering, nattläge,
-knapprad/kontrast, tillägg och integrationer behålls. BookOrbits statusrapport
-skiljer nu på oförändrat, saknade läsdata, skydd och konflikter. **Detaljer om
-statuskontrollen** visar orsaker utan att ändra något. Säkerhetsreglerna och
-standardvalet avstängt är oförändrade. Bookshelf-OS tas bort ur bevakningen;
-befintliga inställningskort och snabbkontroller är kvar. När RC1 publiceras
-används förhandskanalen och omstart av KOReader, aldrig stabila kanalen.
-Fysiska Bigme/Boox-tester, full indexering av stora bibliotek och uppdatering/
-återställning på läsplattan återstår.
+**Svenska: 1.0.0-rc.2 är en testkandidat, inte stabil 1.0.** Funktionsfrysen
+fortsätter. Fixar den återskapade låsningen i taggsökning/indexering: Stäng
+fungerar även när vyn blivit inaktuell, vila pausar utan automatisk återstart
+och redan lästa taggar behålls. Titeltryck i taggträffar markerar nu boken i rätt
+bokhylla med omslag/beskrivning i stället för att öppna läsvyn. Långtryck öppnar
+fortfarande bokdetaljer. Hem/Manga, profiler, bilder och integrationer behålls;
+ingen upstream-merge, läsdatamigrering, synkändring eller serverdriftsättning.
+Uppdatera via **förhandskanalen** och starta om KOReader. Fysiska Bigme/Boox-
+tester av vila/uppvakning, full indexering, markerad bok och uppdatering/
+återställning återstår.
 
 You can use OrbitUI with ordinary local books, KOReader collections, local
 reading goals and no online account. BookOrbit, Hardcover and MyAnimeList are
@@ -214,6 +214,22 @@ sidan medan jobbet körs, och pausa innan du ersätter EPUB-filerna. Biblioteken
 mappar och sökdjup gäller. Räknare visar lästa, återanvända och misslyckade
 filer; oläsbara filer blir inte falska tomträffar. Sökningar/chip behåller sin
 visningsgräns på 400 träffar, även om fler böcker är indexerade.
+
+**RC2:** sleep pauses offline tag
+search/indexing without automatically restarting it on wake. Completed reads
+are kept; Continue resumes the index manager. If navigation changed, Close
+still works and the page explains that it must be reopened. Tapping a title in
+either local or BookOrbit tag results selects the book on its actual shelf,
+showing its cover/description without opening it for reading. Long-press still
+opens book details; other search/reader open actions are unchanged.
+
+**RC2:** vila pausar lokal
+taggsökning/indexering utan automatisk återstart. Redan lästa taggar behålls;
+Fortsätt återupptar indexeringen. Om navigationen ändrats fungerar Stäng ändå,
+och sidan förklarar att den behöver öppnas igen. Ett titeltryck i lokala eller
+BookOrbit-taggträffar markerar boken i rätt bokhylla och visar omslag/beskrivning
+utan att öppna läsvyn. Långtryck öppnar fortfarande bokdetaljer; övriga
+sök- och läsåtgärder är oförändrade.
 
 **OrbitUI settings > Integrations > BookOrbit** has a master switch and
 independent controls for the BookOrbit list, manual status actions and online
