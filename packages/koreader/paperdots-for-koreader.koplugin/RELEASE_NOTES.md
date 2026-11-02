@@ -1,3 +1,7 @@
+# v3.1 · 2026-11-02
+
+Fixed slowness when changing orientation
+
 # v3.0 · 2026-10-28
 
 What's new:
@@ -25,7 +29,3 @@ Paints dots by writing directly to the screen buffer instead of calling KOReader
 **New options**
 - Hide dots on menus: keeps dots on the book page only, without dots on menus and dialogs.
 - Settings are now saved per style (density, size, shades, fiber length), so a value that looks good in one style doesn't affect the others.
-
-# v2.0 · 2026-09-20
-
-New styles added: linen, newspaper, fibers
