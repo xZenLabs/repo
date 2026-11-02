@@ -1,3 +1,13 @@
+# v6.5.0-beta.18 · 2026-11-02
+
+- Web 阅读时间优先，E-Ink 作为智能模式备用；阅读时间不依赖精确进度上传已验证。
+- 放宽旧的开书前 2 秒快照硬限制：使用近期且通过同书、Web 来源及目录索引校验的云端原始 `ci/co/pr`；过期则通过现有 Web 进度接口限频补取，不使用未验证的 Agent 坐标冒充 Web 数据。
+- 开启已有 SAFE 时间恢复日志：只保留 HTTP 发送前确定未发出的秒数；已发送但结果不确定的秒数不重传。适当限速清理积压时间，暂停/切换 E-Ink 不清除 Web 待发记录。
+- 智能模式在 Web 认证或位置持续不可用时安全交接给 E-Ink，后续新时间由 E-Ink 负责；Web 可用时尝试自动恢复。历史 Web 待发秒数不转换为 E-Ink 协议。
+- 同账号扫码恢复后先重新读取 Web 位置，再恢复 Web 时间；明确认证过期主动提示扫码、避免周期性重复弹窗。Web/Agent 获取状态不再互相清除。
+- 修正部分阅读同步菜单的书籍记录回退识别，单独显示 Web 及 E-Ink 待同步状态；精确进度事务及 E-Ink 批量上传协议未改动。
+- 保留 `pr=100` 位置冲突保护：协议语义和真实服务器回执仍需实机验证；下载 Web 定位补全单独后续处理。
+
 # v6.5.0-beta.17 · 2026-10-31
 
 - 将 Google Books、Open Library 的图书元数据 HTTP 429 冷却分别隔离到 `metadata-google`、`metadata-openlibrary` 作用域，避免写入微信读书沿用的 `global` 限流文件。
@@ -29,11 +39,3 @@
 - Verify trusted Web chapter coordinates with a pragmatic ±100-unit same-chapter tolerance (not a claim of identical rendering pages). Reject unresolved zero coordinates and stale/missing post-POST timestamps.
 - Keep reading-time session coordinate behavior, EInk/Web routing, source backfill, pending verification-first recovery and existing release workflows unchanged.
 - Add beta.5 regression coverage for blocked-then-read upload, 76/101 co mismatches, cross-instance event merging, and safe verification.
-
-# v6.5.0-beta.4 · 2026-10-31
-
-- 修复真实翻页后被无坐标 ProgressFence 提前拦截的问题，保留精准坐标上传与云端回读验证
-- 修复阅读事件序号回退与相同云端观察重复加锁；未知章节 UID 不再猜测跳转
-- EInk/Web 混合下载后后台逐章补齐缺少的可信 Web 坐标缓存，不改写 EPUB
-- Web 坐标任务尊重 429 冷却、退避、登录隔离与可恢复队列，避免重复抓取
-- 区分云端文本定位成功和坐标精确验证成功；新增相关回归测试
