@@ -1,3 +1,10 @@
+# v1.7.3-beta1 · 2026-11-02
+
+## What's Changed
+
+- Better DNS error handling
+- Show updates on folders (icons/wallpapers)
+
 # v1.7.2-beta3 · 2026-10-30
 
 ## What's Changed
@@ -29,9 +36,3 @@
 - Update screensaver tags and categories sections
 - Add sort by date to screensavers
 - Add ZenOS button feedback + accent colors
-
-# v1.7.1-beta1 · 2026-10-15
-
-## What's Changed
-
-- Fix categories centering
