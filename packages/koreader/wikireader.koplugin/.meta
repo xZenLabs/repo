@@ -3,7 +3,7 @@
 # zenpm:auto-scraped
 id=wikireader
 name=Wikireader
-version=2.1.0
+version=2.1.1
 description=A KOReader plugin for reading Wikipedia articles as formatted books, with a cleaner reading experience than the built-in Wikipedia lookup.
 author=chandujr
 category=reference
@@ -11,13 +11,13 @@ platforms=koreader
 dependencies=
 source=https://github.com/chandujr/wikireader.koplugin
 stars=17
-updated_at=2026-11-02T11:00:59Z
-published_at=2026-10-24T07:11:54Z
+updated_at=2026-11-02T12:00:59Z
+published_at=2026-11-02T11:47:06Z
 readme_url=packages/koreader/wikireader.koplugin/README.md
 readme_hash=749db9e3426b7b991afc10971921a7e2cf6d7940
 release_notes_url=packages/koreader/wikireader.koplugin/RELEASE_NOTES.md
-release_notes_hash=407f8c5f72b25f0e0cf021c1ed9e0072fa8dbc7839cced00943cf2b37b83cbfe
-releases=[{"tag_name":"v2.1.0","assets":[{"name":"wikireader.koplugin.zip","url":"https://github.com/chandujr/wikireader.koplugin/releases/download/v2.1.0/wikireader.koplugin.zip","size":126843,"digest":"sha256:32579d8671d7d41635fbea95968d28f779f67022253141bb97a60d242d725fa9"}],"name":"v2.1.0"},{"tag_name":"v2.0.0","assets":[{"name":"wikireader.koplugin.zip","url":"https://github.com/chandujr/wikireader.koplugin/releases/download/v2.0.0/wikireader.koplugin.zip","size":120574,"digest":"sha256:12d81526c739133203acf6d62adee777ab493b075b388de6d7c3eceefd2c9b75"}],"name":"v2.0.0"},{"tag_name":"v1.0.2","assets":[{"name":"wikireader.koplugin.zip","url":"https://github.com/chandujr/wikireader.koplugin/releases/download/v1.0.2/wikireader.koplugin.zip","size":78888,"digest":"sha256:a6cd6b7be0634f65f4074499800a45c46441c5a0464e34d0370bef2b0f4472ff"}],"name":"v1.0.2"},{"tag_name":"v1.0.1","assets":[{"name":"wikireader.koplugin.zip","url":"https://github.com/chandujr/wikireader.koplugin/releases/download/v1.0.1/wikireader.koplugin.zip","size":77718,"digest":"sha256:5ea0a829331f88b64243b24e0f5f9eb416377cc19734df118d11e3a5406506e6"}],"name":"v1.0.1"},{"tag_name":"v1.0.0","assets":[{"name":"wikireader.koplugin.zip","url":"https://github.com/chandujr/wikireader.koplugin/releases/download/v1.0.0/wikireader.koplugin.zip","size":77146,"digest":"sha256:78ce391b64fb3460d071e0d34f5b60737dd9a541f2592c2a85a3e6a8245844ea"}],"name":"v1.0.0"}]
+release_notes_hash=02383228af67a8c5e321168f4dd6b56c1701b8ca7e3c3758da5550cf5b96c978
+releases=[{"tag_name":"v2.1.1","assets":[{"name":"wikireader.koplugin.zip","url":"https://github.com/chandujr/wikireader.koplugin/releases/download/v2.1.1/wikireader.koplugin.zip","size":127050,"digest":"sha256:4486de17047675333d9ed6a2774858c9b9be70b9b41ac3a5d0feb55902218215"}],"name":"v2.1.1"},{"tag_name":"v2.1.0","assets":[{"name":"wikireader.koplugin.zip","url":"https://github.com/chandujr/wikireader.koplugin/releases/download/v2.1.0/wikireader.koplugin.zip","size":126843,"digest":"sha256:32579d8671d7d41635fbea95968d28f779f67022253141bb97a60d242d725fa9"}],"name":"v2.1.0"},{"tag_name":"v2.0.0","assets":[{"name":"wikireader.koplugin.zip","url":"https://github.com/chandujr/wikireader.koplugin/releases/download/v2.0.0/wikireader.koplugin.zip","size":120574,"digest":"sha256:12d81526c739133203acf6d62adee777ab493b075b388de6d7c3eceefd2c9b75"}],"name":"v2.0.0"},{"tag_name":"v1.0.2","assets":[{"name":"wikireader.koplugin.zip","url":"https://github.com/chandujr/wikireader.koplugin/releases/download/v1.0.2/wikireader.koplugin.zip","size":78888,"digest":"sha256:a6cd6b7be0634f65f4074499800a45c46441c5a0464e34d0370bef2b0f4472ff"}],"name":"v1.0.2"},{"tag_name":"v1.0.1","assets":[{"name":"wikireader.koplugin.zip","url":"https://github.com/chandujr/wikireader.koplugin/releases/download/v1.0.1/wikireader.koplugin.zip","size":77718,"digest":"sha256:5ea0a829331f88b64243b24e0f5f9eb416377cc19734df118d11e3a5406506e6"}],"name":"v1.0.1"},{"tag_name":"v1.0.0","assets":[{"name":"wikireader.koplugin.zip","url":"https://github.com/chandujr/wikireader.koplugin/releases/download/v1.0.0/wikireader.koplugin.zip","size":77146,"digest":"sha256:78ce391b64fb3460d071e0d34f5b60737dd9a541f2592c2a85a3e6a8245844ea"}],"name":"v1.0.0"}]
 source_type=release
 source_asset=wikireader.koplugin.zip
-size=126843
+size=127050
