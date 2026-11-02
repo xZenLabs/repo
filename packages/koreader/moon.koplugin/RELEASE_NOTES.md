@@ -1,3 +1,38 @@
+# v0.4.11 · 2026-11-02
+
+## 月读 v0.4.11
+
+KOReader 插件包：`book.koplugin-v0.4.11.zip`
+
+输入法词库（整库，手动 sideload）：`dictionary.sqlite3 dictionary-wubi.sqlite3 dictionary-cangjie.sqlite3 dictionary-zhuyin.sqlite3`
+
+安装：解压后将 `book.koplugin` 复制到 KOReader 的 `plugins` 目录，然后重启。
+
+词库 sideload：下载对应布局的词库，直接放入 KOReader 数据目录下的
+`.moon/`（与 `book.sqlite3` 同级）。附件已使用最终文件名，无需重命名。
+
+### 更新内容
+
+相对上一版本 `v0.4.10`：
+
+#### 修复
+
+- :bug: (battery): 按节点真实单位换算，Oasis 健康度不再是 0.1% (c099b4c9)
+- :bug: (waveform): kindle_waveform 加上 Kindle Basic 2 (38278cf8)
+- :bug: (waveform): kindle_waveform 只对 Kindle Basic 3 生效，删除 MTK 分支 (8b7e82d8)
+- :bug: (desktop): 彩色墨水屏换页签闪一次清残影 (3dc69ade)
+- :bug: (bluetooth,night): 守护进程掉线自动拉起、夜间刷新走夜间波形 (a27242a4)
+- :bug: (remote): 装完插件不再因全局 T 崩溃而跳过重启 (e9a700fc)
+
+#### 变更
+
+- :rewind: (desktop): 换页签改回 ui，彩色屏不再闪 (c7afbae7)
+- :rewind: (night): 撤回夜间波形改动，kindle_waveform 保持原范围 (d5080d94)
+
+### 完整对比
+
+https://github.com/AnkioTomas/moon/compare/v0.4.10...v0.4.11
+
 # v0.4.10 · 2026-11-01
 
 ## 月读 v0.4.10
@@ -210,42 +245,3 @@ KOReader 插件包：`book.koplugin-v0.4.7.zip`
 ### 完整对比
 
 https://github.com/AnkioTomas/moon/compare/v0.4.6...v0.4.7
-
-# v0.4.6 · 2026-10-30
-
-## 月读 v0.4.6
-
-KOReader 插件包：`book.koplugin-v0.4.6.zip`
-
-输入法词库（整库，手动 sideload）：`dictionary.sqlite3 dictionary-wubi.sqlite3 dictionary-cangjie.sqlite3 dictionary-zhuyin.sqlite3`
-
-安装：解压后将 `book.koplugin` 复制到 KOReader 的 `plugins` 目录，然后重启。
-
-拓展书源（可选，需同时安装月读）：`moonsource-kavita.koplugin-v0.4.6.zip`（Kavita）、
-`moonsource-bookorbit.koplugin-v0.4.6.zip`（BookOrbit）。解压后同样放进 `plugins` 目录。
-
-词库 sideload：下载对应布局的词库，直接放入 KOReader 数据目录下的
-`.moon/`（与 `book.sqlite3` 同级）。附件已使用最终文件名，无需重命名。
-
-### 更新内容
-
-相对上一版本 `v0.4.5`：
-
-#### 新功能
-
-- :sparkles: (home): 最近阅读可隐藏已读完 (02643d53)
-
-#### 修复
-
-- :bug: (reader): 库外文件不再登记接管，不弹「本书已读完」 (623e5952)
-- :bug: (bluetooth): 关 Wi-Fi 带崩后按 wanted 自动拉起 (480b5450)
-- :bug: (passcode): 横屏解锁临时竖屏，避免底行被裁 (26242322)
-
-#### 变更
-
-- :globe_with_meridians: (l10n): 补「✓ 隐藏已读完」英文与繁体翻译，修 CI (e3206237)
-- :white_check_mark: (home): 覆盖最近阅读隐藏已读完 (21bc23dd)
-
-### 完整对比
-
-https://github.com/AnkioTomas/moon/compare/v0.4.5...v0.4.6
