@@ -1,3 +1,9 @@
+# 26.11.2-beta · 2026-11-02
+
+- Update delete logic
+
+**Full Changelog**: https://github.com/ultimatejimmy/storefront.koplugin/compare/26.11.1...26.11.2-beta
+
 # 26.10.30-beta · 2026-10-30
 
 - fix bug with branch install feature
@@ -25,13 +31,3 @@
 - Add screensaver collections feature
 
 **Full Changelog**: https://github.com/ultimatejimmy/storefront.koplugin/compare/26.10.20...26.10.23-beta
-
-# 26.10.19-beta · 2026-10-19
-
-## What's Changed
-* Fix archive root detection for plugins with embedded components by @komadorirobin in https://github.com/ultimatejimmy/storefront.koplugin/pull/5078
-
-## New Contributors
-* @komadorirobin made their first contribution in https://github.com/ultimatejimmy/storefront.koplugin/pull/5078
-
-**Full Changelog**: https://github.com/ultimatejimmy/storefront.koplugin/compare/26.10.18-beta3...26.10.19-beta
