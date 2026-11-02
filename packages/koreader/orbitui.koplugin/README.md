@@ -65,19 +65,28 @@ explains the extra controls and where to find them.
 
 ### Local books first, online services optional
 
-**Beta 29:** reviewed Bookshelf 6.2.0 adds optional image/wallpaper contrast,
-Show/Hide/Invisible footer controls, reduced menu/theme flashing and picker
-swipe improvements. Existing night-mode fixes, custom footer geometry and
-Home/Manga/integration settings remain. Defaults are unchanged. Update through
-the preview channel and restart KOReader; this is still a prerelease, with
-new physical Bigme/Boox contrast/footer/swipe checks outstanding.
-[Release details](docs/OTA.md#orbitui-010-beta29).
+**1.0.0-rc.1 — release candidate, not stable 1.0.** The feature set is frozen
+for focused testing. Existing Home/Manga, profiles, tags/indexing, night mode,
+footer/contrast controls, add-ons and integrations remain. BookOrbit status
+checks now distinguish unchanged, missing-data, protected and conflicting
+entries, with read-only **Status check details**. Import safety rules and the
+off-by-default choice are unchanged. Bookshelf-OS is retired from inspiration
+monitoring, not from OrbitUI's existing settings cards or quick controls.
+Once published, RC1 uses the preview channel and requires restarting KOReader;
+it is never a stable-channel release. Physical Bigme/Boox, complete large-library
+indexing and on-device update/recovery checks remain open.
+[RC scope and test plan](docs/OTA.md#orbitui-100-rc1).
 
-**Svenska:** Beta 29 innehåller Bookshelf 6.2.0 med valfri bild-/bakgrundskontrast,
-visad/dold/osynlig knapprad och färre avsedda blinkningar vid meny-/temabyten.
-Egna nattlägesfixar, marginaler, Hem/Manga och integrationer behålls.
-Standardutseendet ändras inte. Uppdatera via förhandskanalen och starta om
-KOReader. Nya enhetskontroller på Bigme/Boox återstår; detta är fortsatt beta.
+**Svenska: 1.0.0-rc.1 är en testkandidat, inte stabil 1.0.** Nya funktioner
+pausas inför riktad testning. Hem/Manga, profiler, taggar/indexering, nattläge,
+knapprad/kontrast, tillägg och integrationer behålls. BookOrbits statusrapport
+skiljer nu på oförändrat, saknade läsdata, skydd och konflikter. **Detaljer om
+statuskontrollen** visar orsaker utan att ändra något. Säkerhetsreglerna och
+standardvalet avstängt är oförändrade. Bookshelf-OS tas bort ur bevakningen;
+befintliga inställningskort och snabbkontroller är kvar. När RC1 publiceras
+används förhandskanalen och omstart av KOReader, aldrig stabila kanalen.
+Fysiska Bigme/Boox-tester, full indexering av stora bibliotek och uppdatering/
+återställning på läsplattan återstår.
 
 You can use OrbitUI with ordinary local books, KOReader collections, local
 reading goals and no online account. BookOrbit, Hardcover and MyAnimeList are
@@ -137,6 +146,10 @@ changed statuses are published in slices, with caches refreshed on normal
 navigation rather than forcing a heavy Manga rebuild. Conflicts/ambiguous
 metadata copies are skipped, not resolved automatically. Bigme timing/UI
 acceptance remains pending; headless tests are not device measurements.
+RC1 adds **Status check details** with separate reasons/counts and up to 50
+session-only filename examples. Only counts persist; nothing is uploaded and
+no status overwrite protection is relaxed. Old reports require a new check
+for reasons; they cannot retrospectively explain previous skipped totals.
 
 **Beta 28 (experimentellt):** Under **Integrationer > BookOrbit > Hämta lässtatus
 från BookOrbit** finns en avstängd bakgrundsfunktion för redan kopplade böcker.
@@ -152,6 +165,10 @@ omslagshämtning eller ny skrivare till server/Hardcover. Öppna böcker, vänta
 ändras inte. Oförändrad status kräver ingen läsning av lokala bokinställningar.
 Visningen uppdateras vid vanlig navigering, utan en framtvingad tung
 Manga-ombyggnad. Mätning och visuell kontroll på Bigmen återstår.
+RC1 lägger till **Detaljer om statuskontrollen** med separata orsaker/antal och
+högst 50 tillfälliga filnamnsexempel. Bara antalen sparas, ingenting laddas upp
+och inget skydd luckras upp. Kör en ny kontroll för orsaker; äldre totalsiffror
+kan inte delas upp i efterhand.
 
 **Beta 27 — smart offline tag chips:** long-press a local
 EPUB tag in the book's **Tags** tab to create a named smart chip in an existing
