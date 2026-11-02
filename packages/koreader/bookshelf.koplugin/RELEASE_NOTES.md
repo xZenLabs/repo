@@ -1,3 +1,11 @@
+# v6.3.0 · 2026-11-02
+
+- New token %published: a book's publication year, from calibre, the OPDS catalog (kept when the book is downloaded) or the book file (EPUB, FB2, MOBI, AZW3, comics, PDF). For example, `%authors_short [if:published](%published)[/if]` adds the year after the author, and nothing when a book has no date (#566).
+- Delete folder… in a folder's long-press menu. Move, Rename and Delete now sit beside the book count (#456).
+- Fix: dialogs from some other plugins, opened from KOReader's menu over the shelf, were only partly drawn (#572)
+- Fix: the book menu showed a placeholder instead of the cover for books shown as plain spines (#575)
+- Fix: "Only books without a page count" counted books again that already had a count from being opened, or that had been read since their last scan (#573)
+
 # v6.2.0 · 2026-11-01
 
 - Image contrast (Settings > Image contrast): Covers and ornaments contrast boost deepens the darks and lifts the lights of covers, spines and ornaments, which can help on screens with few greys. Wallpaper contrast and brightness adjust the wallpaper on its own, and are also in Theme > Wallpaper. All off by default.
@@ -52,9 +60,3 @@
 - Fix: Black screen after waking with Sleep screen anti-ghosting on
 - Fix: Fewer full-screen flashes closing Shelf style and Filters
 - New: Search in the collection editor (#488)
-
-# v6.0.3 · 2026-10-26
-
-- Fix: Paint shelf after sleep resume on some devices (#551)
-- Fix: Status line tap keeps full screen when swipe back is off (#554)
-- New: Micro modules > On the shelf switch
