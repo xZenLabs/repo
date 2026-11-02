@@ -1,3 +1,11 @@
+# 26.11.1 · 2026-11-02
+
+- fix bug with branch install feature
+- Add cache limit feature/setting
+- Update the logic for the "Check for updates" button
+
+**Full Changelog**: https://github.com/ultimatejimmy/storefront.koplugin/compare/26.10.28...26.11.1
+
 # 26.10.28 · 2026-10-28
 
 Mostly back-end performance improvements and bug fixes:
@@ -49,11 +57,3 @@ New feature:
 * @dmaglio made their first contribution in https://github.com/ultimatejimmy/storefront.koplugin/pull/5070
 
 **Full Changelog**: https://github.com/ultimatejimmy/storefront.koplugin/compare/26.10.2...26.10.13
-
-# 26.10.2 · 2026-10-02
-
-- Address memory issues with lower powered devices
-- Add check for RB catalog to not download/refresh if there are no changes
-- fix bug in rating system
-
-**Full Changelog**: https://github.com/ultimatejimmy/storefront.koplugin/compare/26.10.1...26.10.2
