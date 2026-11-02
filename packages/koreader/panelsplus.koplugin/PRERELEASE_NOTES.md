@@ -1,21 +1,22 @@
 # v1.6.0-nightly · 2026-11-01
 
-# v1.6 | Distant Horizons
-
 > “A ship in harbor is safe, but that is not what ships are built for.”
 >
 > — John A. Shedd
 
-I think Panels+ is good enough as is, but what about its surrounding KOReader ecosystem?. It's time to sail beyond the horizons I know. Lets expand this ship (Panels+) to work together with other plugins!.
+I think Panels+ is good enough as is, but what about its surrounding KOReader ecosystem?. It's time to sail beyond the horizon. Lets expand this ship (Panels+) to work together with other plugins!.
 
 ## Ink-away compatibility (in process)
 
 <video width="100%" height="auto" src="https://github.com/user-attachments/assets/fdf3ef83-c7df-48f4-bb30-ca32a2305b90"></video>
 
-Yep, if *Ink-Away* is installed along with Panels+, you'll be able to use Ink-away annotations while panning!, it means that all rendered annotations made by ink-reader are renderer in Panels+ custom viewer, including the smooth transitions and drawing outside the panel when using no-crop mode.
+Yep, if *Ink-Away* is installed along with Panels+, you'll be able to use Ink-away annotations while panning!, it means that all rendered annotations made by ink-reader are visible from Panels+ custom viewer, including smooth transitions and drawing outside the panel when using no-crop mode.
 
 I'd say is 10% experimental and 90% stable, but this requires changes in ink-away internal code.
-So i need to create a PR to its github repo first.... 
+
+You can follow up the current state of this integration in this discussion I made to the original ink-away author:
+https://github.com/EmirErtorer/ink-away.koplugin/discussions/69
+
 
 ---
 

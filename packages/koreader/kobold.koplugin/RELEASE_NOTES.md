@@ -1,3 +1,46 @@
+# v1.5 · 2026-11-02
+
+## Kobold 1.5
+
+<!--kobold-->
+Remove books from Home or bring them back, new nav bar icons that fill in when selected, a status bar that keeps the time current, and a lot of fixes under the hood.
+<!--/kobold-->
+
+### New
+
+- **Remove from Home**, hold one of the books on Home to take it off the reading row. Its progress, status and collections stay as they are, and it comes back on its own when you open it again
+- **Show in Home**, in a book's "..." menu in My Books, for books you're reading that aren't on Home. Puts the book first on the reading row
+- **New nav bar icons**, thin outlines that fill in when their tab is selected, closer to the stock look
+
+### Improved
+
+- **Clock** in the status bar now updates every minute and right after waking the device, with Wi-Fi and battery updating along with it
+- **View switch** on Books and Series now uses Kobold's own dropdown, showing just the view to switch to: Cover view or List view
+- **Restart Kobold** now fully reloads Kobold
+- **Nav bar labels and file sizes** can now be translated
+
+### Fixed
+
+- Tapping an empty spot on Home's reading row could open a book that was no longer there
+- Changes made from the book menu could leave My Books reloading after it was closed
+- Errors reading book data or reading stats are now written to KOReader's log instead of failing silently
+
+### Under the hood
+
+- **My Books split up**, `mybooks.lua` was ~1700 lines. The screen itself stays in `kobold/ui/mybooks.lua`, with rows and grid, collections, and the Files tab moved to `kobold/ui/mybooks/`. No change in behaviour
+- **One hook for the file browser's refresh** (`kobold/ui/hooks.lua`), so screens listening to book menu changes can't stack up
+- **Shared line height helper**, screens no longer measure text by hand
+
+### Install
+
+1. Download `Kobold.koplugin.zip` below
+2. Extract it and copy the `Kobold.koplugin` folder into KOReader's `plugins` folder
+3. Restart KOReader and open Kobold, or set it under **Start with > Kobold Home**
+
+On 1.1 or newer? Use **More > Check for updates** in Kobold.
+
+To uninstall, delete the `Kobold.koplugin` folder and restart KOReader.
+
 # v1.4 · 2026-10-28
 
 ## Kobold 1.4
@@ -120,45 +163,5 @@ Fixes the search button in the status bar.
 3. Restart KOReader and open Kobold, or set it under **Start with > Kobold Home**
 
 On 1.1 already? Use **More > Check for updates** in Kobold.
-
-To uninstall, delete the `Kobold.koplugin` folder and restart KOReader.
-
-# v1.1 · 2026-10-16
-
-## Kobold 1.1
-
-<!--kobold-->
-New Files tab, grid view for Series, KOReader gestures in Kobold, a clock popup, night mode toggle, update checks from the More tab, and lots of fixes.
-<!--/kobold-->
-
-### New
-
-- **Files tab** in My Books, a simple file browser you can turn on in Settings. Hold a folder for KOReader's folder options
-- **Grid view for Series**, plus the list or grid toggle on the Series tab
-- **Series line** under each book title in My Books, like "SERIES NAME... - 1"
-- **Last opened** sort in My Books
-- **Clock popup**, tap the time to switch between 12 and 24 hour. Follows your KOReader setting by default
-- **Night mode** toggle in the brightness popup
-- **Check for updates** in the More tab, downloads and installs new versions over Wi-Fi
-- **Open books with** setting, choose single tap, double tap, or follow KOReader
-- **Add books to a collection** from a picker with checkboxes
-
-### Improved
-
-- **KOReader gestures** now work in Kobold, including edge swipes for brightness and warmth, corner taps and multiswipes
-- **Thin outline** around every book cover
-- **Settings** splits into pages on smaller screens
-- **Book info edits** made in KOReader show up in Kobold right away
-- **Opening Kobold while reading** closes the book first, so every menu works
-- **About page logo** shows properly in night mode
-- **Kobold** now sits in KOReader's Tools menu instead of More tools
-
-### Install
-
-1. Download `Kobold.koplugin.zip` below
-2. Extract it and copy the `Kobold.koplugin` folder into KOReader's `plugins` folder
-3. Restart KOReader and open Kobold, or set it under **Start with > Kobold Home**
-
-Already on 1.0? Just copy the new folder over the old one.
 
 To uninstall, delete the `Kobold.koplugin` folder and restart KOReader.
