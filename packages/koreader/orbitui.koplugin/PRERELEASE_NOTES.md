@@ -1,3 +1,29 @@
+# v1.0.0-rc.1 · 2026-11-02
+
+## OrbitUI 1.0.0-rc.1 — release candidate, not stable 1.0
+
+The feature set is frozen for focused acceptance testing. Bookshelf stays at the reviewed `b512cd90` documentation follow-up after 6.2.0; SimpleUI stays at `fdf83c7d`. No further upstream features, redesign, settings migration or new synchronization owner.
+
+- BookOrbit status checks now report unchanged, missing files/data, protected entries and real newer-local conflicts separately. Open **Integrations > BookOrbit > Import reading status > Status check details** for reasons and up to 50 session-only filename examples. Only counts persist. Existing overwrite protections, server API requirement and OFF default are unchanged; status import remains experimental.
+- The unavailable Bookshelf-OS reference is removed only from inspiration monitoring. The other five sources, historical attribution, existing settings-category cards and quick controls remain.
+- Home/Bento, Library/Manga profiles, fast return, tags/indexing, shelves/series/artwork, optional add-ons and external BookOrbit/Hardcover/MAL/patch ownership retain their behavior. The API-1 bootstrap, all assets/languages and exactly 2,000 installed paths are preserved.
+
+**Testing scope:** automated/sealed/native installer checks do not establish physical device acceptance. Fresh install, real-device update/recovery, full 3,000+ EPUB indexing, Bigme/Boox rendering/lifecycle and write-safe optional-integration checks remain open. No device or server was changed for this release. The exact RC checklist is in `docs/TESTING.md`.
+
+Install `orbitui.koplugin.zip` (not GitHub's source archive), or update through the **preview channel**, then restart KOReader. Keep an independent backup. RC1 is a prerelease and must not be selected by the stable channel. Previous public releases are not replaced.
+
+## Svenska
+
+**1.0.0-rc.1 är en testkandidat, inte stabil 1.0.** Nya funktioner pausas inför riktad testning. Bookshelf/SimpleUI är kvar på granskade versioner; ingen ny design, migrering eller synkägare.
+
+- BookOrbits statusrapport skiljer på oförändrat, saknade filer/läsdata, skydd och nyare lokal status. Under **Integrationer > BookOrbit > Hämta lässtatus > Detaljer om statuskontrollen** finns orsaker och högst 50 tillfälliga filnamnsexempel. Bara antalen sparas. Säkerhetsregler, serverkrav och standardvalet avstängt är oförändrade; statusimport är fortsatt experimentell.
+- Bookshelf-OS tas bort enbart ur inspirationsbevakningen. De andra fem källorna, historiken, inställningskorten och snabbkontrollerna behålls.
+- Hem/Manga, profiler, snabbåtergång, taggar/indexering, hyllor/serier/bilder, tillägg och externa plugin-/patchkopplingar ändras inte. API-1, samtliga bilder/språk och 2 000 installationsfiler behålls.
+
+**Återstår:** fysiska Bigme/Boox-tester, full indexering av 3 000+ EPUB-filer, riktig uppdatering/återställning och säkra integrationstester. Automattester är inte enhetsgodkännande. Ingen läsplatta eller server ändras av publiceringen. Testlistan finns i `docs/TESTING.md`.
+
+Installera `orbitui.koplugin.zip` eller uppdatera via **förhandskanalen** och starta om KOReader. Behåll en separat säkerhetskopia. RC1 ska inte väljas av stabila kanalen. Gamla releaser skrivs inte över.
+
 # v0.1.0-beta.29 · 2026-11-01
 
 ## Svenska
@@ -190,70 +216,3 @@ Svenska: Ångra-fixen uppdateras separat via Ereader Patch Manager eller
 BookOrbit Extras 0.2.1. OrbitUI installerar ingen serverpatch. Befintlig
 läshistorik ändras inte. Slutpaketet och kvarstående app-/metadataflöden
 behöver fortfarande provas på enheten.
-
-# v0.1.0-beta.24 · 2026-10-31
-
-# OrbitUI 0.1.0-beta.24
-
-Bookshelf 6.1.0, clearer shelf/book controls and improved image-cache reuse.
-This is a prerelease; physical Bigme/Boox acceptance remains open.
-
-## English
-
-- The reviewed **Bookshelf 6.1.0** integration adds page-based shelf editing
-  for source, view, sort, filters, themes, modules and order, with breadcrumbs
-  and coalesced live previews.
-- Clearer book dialogs use rounded action cards, segmented choices, an editable
-  action layout and a persistent Tags edit strip. Review spoilers are optional.
-  OrbitUI's minimal header, lazy Book details and offline/online tag sections remain.
-- Filters gain genre AND/NOT and excluded collections. Themes can sort by
-  newest or last use. These controls do not edit book files or reading status.
-- Separate cover/ornament disk budgets and last-use recency improve reuse after
-  restart, retaining OrbitUI's bounded cancelable maintenance. Expected benefits
-  are not measured device speedups.
-- SimpleUI fixes cached bold-font sizing under global UI text scaling.
-
-Our profiles/chips, fast close/return, face-out shelves, cover size/captions,
-bindings, Android safe covers, night contrast, folder/MAL actions and BookOrbit
-features are retained. New labels have Swedish/English equivalents. No additional
-upstream is imported during release preparation, and no external patch, hardware
-driver, server, credential or reading data is changed.
-
-## Svenska
-
-- **Bookshelf 6.1.0** ger sidindelad hyllredigering med tydligare val för källa,
-  visningsläge, sortering, filter, tema, moduler och ordning.
-- Bokdialogerna får tydligare åtgärdskort och valknappar. Åtgärder kan ordnas om
-  och Taggar får en fast redigeringsrad. Våra bokdetaljer och taggkällor behålls.
-- Fler genre-/samlingsfilter och sortering av teman efter nyast/senast använd.
-- Omslag och ornament får separata cachegränser och senast använda bilder
-  prioriteras. Rensningen sker fortfarande avbrytbart i små steg. Ingen fysisk
-  snabbhetsvinst är uppmätt.
-- SimpleUI rättar storleken på fet text vid skalning av gränssnittets text.
-
-Våra profiler, snabbstängning, bokbindningar, omslagskontroller och
-BookOrbit-funktioner behålls. Inga böcker, läsdata eller inställningar återställs.
-Server- och enhetspatchar installeras inte av den här uppdateringen.
-
-## Update and limits
-
-Update through OrbitUI's preview channel and **restart KOReader**, or install
-this release's **orbitui.koplugin.zip**, not GitHub's source archive. Back up
-settings first. Standalone SimpleUI/Bookshelf must remain disabled.
-
-Bootstrap API 1 and all 2,000 installed paths remain unchanged. Existing languages,
-fonts and artwork are retained. Earlier public tags/assets are never replaced.
-Code rollback retains user data, but older code may ignore new filters/action
-layouts; review shelf scope after rollback rather than restoring old reading data.
-
-Full Lua/LuaJIT, translation, sealed/native OTA and source/history/artwork/secret
-checks precede publication. They are not physical e-ink/font/touch acceptance.
-Retest new dialog/editor/Back/Close paths, profiles, Tags/Book details, cache reuse,
-day/night, rotation/sleep and reader return on Bigme/Boox.
-
-Svenska: Uppdatera via förhandsversionskanalen och starta om KOReader. Fortsatt
-beta: prova de nya vyerna på enheten. Äldre kod kan ignorera nya filter efter
-kodåterställning; kontrollera då hyllans avgränsning.
-
-See [OTA notes](https://github.com/komadorirobin/orbitui.koplugin/blob/v0.1.0-beta.24/docs/OTA.md)
-for details and rollback limitations.
