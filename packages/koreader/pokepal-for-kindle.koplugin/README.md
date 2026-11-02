@@ -27,8 +27,6 @@ More:
 
 See [what changed in 1.2.0](docs/release-v1.2.0.md).
 
-**Crystal story:** open **Explore → Story** with your chosen Tamagotchi Pokémon. Catch more with Poké Balls and build a party of six. Travel through Violet and Azalea, hatch Togepi and rescue the Slowpoke. Guide Farfetch’d home in Ilex Forest, use Cut and reach Goldenrod to challenge Whitney for your third badge. [Setup, save compatibility and current limits](docs/crystal-story.md). Included in v1.2.0. The story currently ends after Whitney’s Plain Badge.
-
 ## Screenshots
 
 | Feed your partner | Keep the nest clean |
@@ -49,15 +47,9 @@ You need KOReader installed on your Kindle.
 
 You can also find **PokePal** in [KoStore](https://github.com/ThePixelPro366/KoStore), the KOReader plugin browser. After installing, restart KOReader and open **Tools > PokePal**. See the [KoStore guide](docs/kostore.md).
 
-**Kobo and other KOReader devices (experimental):** copy `pokepal.koplugin`
-from the KOReader ZIP into your existing KOReader `plugins` directory, usually
-`.adds/koreader/plugins` on Kobo. Reading rewards use KOReader sessions; the
-native Kobo reader is not integrated. Saves use KOReader's settings folder.
-Physical touch, sleep/wake and display behaviour still need device testing.
-
 ---
 
-### KOReader integrations and discovery
+### KOReader integrations
 
 Add your partner to [Bookshelf](https://github.com/AndyHazz/bookshelf.koplugin) or [SimpleUI](https://github.com/doctorhetfield-cmd/simpleui.koplugin), and find PokePal inside KOReader with the [App Store plugin](https://github.com/omer-faruq/appstore.koplugin). Tap any image to see it full size.
 
@@ -73,13 +65,13 @@ Add your partner to [Bookshelf](https://github.com/AndyHazz/bookshelf.koplugin) 
 <td align="center" valign="top"><a href="docs/koreader-appstore-preview.png"><img src="docs/koreader-appstore-preview.png" alt="Edited preview of a PokePal search result and plugin details in KOReader's App Store" height="260"></a></td>
 </tr>
 <tr>
-<td valign="top">Add <strong>PokePal</strong> in the layout editor. Your partner sits on the shelf; tap it to play.<br><br><sub>Screenshot: <a href="https://github.com/AndyHazz">AndyHazz</a>.</sub></td>
-<td valign="top">Choose <strong>Add module → PokePal</strong>. Your selected partner appears alongside your books.<br><br><sub>Illustrative mockup with sample covers and reading progress.</sub></td>
-<td valign="top">With the <strong>App Store plugin</strong> installed, open <strong>Tools → App Store</strong> and filter for <strong>PokePal</strong>. After installing PokePal, restart KOReader and open <strong>Tools → PokePal</strong>.<br><br><sub>Edited preview based on this <a href="https://i.redd.it/x962b8nl1v2g1.png">source screenshot</a>; not a device capture of PokePal.</sub></td>
+<td valign="top">Add <strong>PokePal</strong> in the layout editor. Your partner sits on the shelf; tap it to play.<br></sub></td>
+<td valign="top">Choose <strong>Add module → PokePal</strong>. Your selected partner appears alongside your books.</td>
+<td valign="top">With the <strong>App Store plugin</strong> installed, open <strong>Tools → App Store</strong> and filter for <strong>PokePal</strong>. After installing PokePal, restart KOReader and open <strong>Tools → PokePal</strong>.<br><br><sub><a href="https://i.redd.it/x962b8nl1v2g1.png"></td>
 </tr>
 </table>
 
-SimpleUI support is included in v1.2.0 and tested with **3.0.1** and pinned main. See the [SimpleUI setup and Tiny Critter guide](docs/simpleui-tiny-critter.md).
+See the [SimpleUI setup and Tiny Critter guide](docs/simpleui-tiny-critter.md).
 
 ### KOReader shortcuts
 
@@ -93,13 +85,17 @@ You need a jailbroken touchscreen Kindle with KUAL installed. KOReader is not re
 2. Connect your Kindle by USB. Copy the `extensions` folder onto the Kindle drive, next to `documents`. Merge folders if asked.
 3. Eject your Kindle, then open **KUAL > PokePal > Play PokePal**.
 
+## Kobo and other KOReader devices
+**(Experimental):** copy `pokepal.koplugin`
+from the KOReader ZIP into your existing KOReader `plugins` directory, usually
+`.adds/koreader/plugins` on Kobo. Reading rewards use KOReader sessions; the
+native Kobo reader is not integrated. Saves use KOReader's settings folder.
+Physical touch, sleep/wake and display behaviour still need device testing.
+
 ## Saves
 
 Both editions share your save. Copy the whole `pokepal` folder to your computer before updating, and update KOReader and KUAL together if you use both.
 
-Starting Story upgrades older saves to version 13. PokePal first keeps the game and reading counter under **More > Backups > Before story upgrade**. Older builds cannot read upgraded saves. To downgrade, restore that backup using v1.2.0 before reinstalling the older build.
-
-Physical Kindle touch, e-ink refresh and power-button/cover sleep and wake still need testing in this release.
 
 [Save help](pokepal.koplugin/INSTALL.txt) · [Build and device notes](native/README.md) · [Credits](pokepal.koplugin/CREDITS.txt)
 
