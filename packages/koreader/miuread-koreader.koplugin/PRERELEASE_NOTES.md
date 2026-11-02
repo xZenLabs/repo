@@ -1,3 +1,12 @@
+# v6.5.0-beta.19 · 2026-11-02
+
+- 修复 Kindle 手动开启 Wi-Fi：使用 KOReader 原生交互式连接/网络选择流程，不再用仅开启无线电的 restoreWifiAsync 作为手动入口。
+- Wi-Fi 无线电已开启但尚未连接 SSID 时，主页/阅读器快捷按钮改为重新连接；主页仍可单独关闭无线电。
+- 自动唤醒优先经 KOReader 标准 enableWifi 后端恢复连接；保留 KOReader 的连接检查和失败回退，不自行操作底层网络服务。
+- NetworkConnected 事件后等待实际连通，才唤醒 E-Ink 待发队列、Web 优先路由、精确进度及批注恢复；断网事件取消过时恢复回调。
+- 主页手动/自动补同步先确认网络已连接，避免无线电开启但 connected=false 时误发请求；现有未发记录、unknown 防重发、Web/E-Ink 上传协议和在线更新发布工作流保持不变。
+- 需要 Kindle 实机验证 Wi-Fi 网络选择、自动重连与云端补传；不宣称服务器实际已确认。
+
 # v6.5.0-beta.18 · 2026-11-02
 
 - Web 阅读时间优先，E-Ink 作为智能模式备用；阅读时间不依赖精确进度上传已验证。
@@ -31,11 +40,3 @@
 - 恢复 KOReader 原生锁屏独立选项、主页快捷栏长按层级菜单。
 - 统一评论获取/更新入口；指定范围可选择刷新已有评论。
 - 内测发布流程恢复到 v6.5.0-beta.5 原版，手动发布仅需版本号。
-
-# v6.5.0-beta.5 · 2026-10-31
-
-- Fix final reading-end snapshot losing its genuine page-event sequence between pending save and upload guard; leave guarded, unsent progress intact when no evidence of reading exists.
-- Persist real page-event IDs across Reader/Home instances; merge durable event watermarks independently of cloud progress transaction sequence.
-- Verify trusted Web chapter coordinates with a pragmatic ±100-unit same-chapter tolerance (not a claim of identical rendering pages). Reject unresolved zero coordinates and stale/missing post-POST timestamps.
-- Keep reading-time session coordinate behavior, EInk/Web routing, source backfill, pending verification-first recovery and existing release workflows unchanged.
-- Add beta.5 regression coverage for blocked-then-read upload, 76/101 co mismatches, cross-instance event merging, and safe verification.
