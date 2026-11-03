@@ -1,3 +1,28 @@
+# v1.7.0 · 2026-11-03
+
+## 新功能与改进
+
+- 新增阅读时长上报间隔设置，可选择 30 秒或 60 秒。
+- 新增“继续匹配划线和想法”手势操作。
+- 优化章节状态显示，区分待获取、待匹配和已匹配。
+- 修复下一章预下载打断划线和想法获取的问题。
+- 修复部分扫码登录中断、登录二维码显示不完整的问题。
+
+## What's Changed
+* feat: add continue-matching gesture by @deanbear in https://github.com/finlater/weread.koplugin/pull/196
+* fix: keep annotation prefetch alive during chapter prefetch by @deanbear in https://github.com/finlater/weread.koplugin/pull/195
+* fix: retry QR login when getLoginInfo connection closes by @arislee1979-afk in https://github.com/finlater/weread.koplugin/pull/181
+* fix: delay QR login dialog display to prevent clipping on Kindle by @zhufangu in https://github.com/finlater/weread.koplugin/pull/201
+* feat(read_report): expose reporting interval presets in the menu by @yang11235 in https://github.com/finlater/weread.koplugin/pull/210
+
+## New Contributors
+* @deanbear made their first contribution in https://github.com/finlater/weread.koplugin/pull/196
+* @arislee1979-afk made their first contribution in https://github.com/finlater/weread.koplugin/pull/181
+* @zhufangu made their first contribution in https://github.com/finlater/weread.koplugin/pull/201
+* @yang11235 made their first contribution in https://github.com/finlater/weread.koplugin/pull/210
+
+**Full Changelog**: https://github.com/finlater/weread.koplugin/compare/v1.6.0...v1.7.0
+
 # v1.6.0 · 2026-10-05
 
 ## 新功能与改进
@@ -63,27 +88,3 @@
 
 
 **Full Changelog**: https://github.com/finlater/weread.koplugin/compare/v1.5.0...v1.5.1
-
-# v1.5.0 · 2026-09-18
-
-## 新功能与改进
-
-- 重做书架导航，支持书籍分组筛选，优化搜索和刷新体验。
-- 整本下载支持断点续传，降低内存占用，并改进进度反馈与取消操作。
-- 修复本地书章节匹配与划线刷新问题，减少开书和翻页时的卡顿。
-- 修复部分扫码登录失败的问题。
-- 自动检查更新的间隔缩短为 1 小时。
-
-感谢 @IswordSun、@vein-cyber 的贡献。
-
-## What's Changed
-* fix: match chapters independently of catalog order by @finlater in https://github.com/finlater/weread.koplugin/pull/161
-* fix: serialize empty QR login OTP value by @vein-cyber in https://github.com/finlater/weread.koplugin/pull/167
-* feat: resume interrupted full-book downloads by @IswordSun in https://github.com/finlater/weread.koplugin/pull/160
-* feat: redesign bookshelf navigation with cached book groups by @finlater
-
-## New Contributors
-* @vein-cyber made their first contribution in https://github.com/finlater/weread.koplugin/pull/167
-* @IswordSun made their first contribution in https://github.com/finlater/weread.koplugin/pull/160
-
-**Full Changelog**: https://github.com/finlater/weread.koplugin/compare/v1.4.2...v1.5.0
