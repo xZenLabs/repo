@@ -10,6 +10,8 @@
 
 *Em português: [LEIAME.md](LEIAME.md).*
 
+[![Support Silverfish on Ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/theusmaoliveira)
+
 Silverfish hatches from an egg after your first pages. It feeds only on pages you actually read, grows through four stages, and slowly becomes what you read. A reader of science fiction raises a paranoid little futurist. A reader of satire raises a critic who rolls her eyes at prefaces.
 
 ![The same silverfish growing up: nymph, young, adult, elder](media/growing-up.png)
@@ -118,3 +120,9 @@ Silverfish never blocks your reading. If something goes wrong, it says it trippe
 
 - In books without a table of contents, it counts a chapter every 25 pages.
 - It reads the book through its words; it doesn't understand the story like a person. Sometimes a comment about the chapter misses the point.
+
+## Support
+
+Silverfish is free. If it made your reading a little more fun, you can buy me a coffee on [Ko-fi](https://ko-fi.com/theusmaoliveira).
+
+[![Support Silverfish on Ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/theusmaoliveira)
