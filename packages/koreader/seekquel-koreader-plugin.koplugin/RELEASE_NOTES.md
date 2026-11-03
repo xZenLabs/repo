@@ -1,3 +1,15 @@
+# v1.17.0 · 2026-11-03
+
+### What's new
+
+- The stars you give a book on KOReader's status page now reach Seekquel. Rate a book there and the rating is sent with the next sync. Before this, only a rating chosen from the Seekquel menu was sent. A rating already in Seekquel is never overwritten by a star you gave earlier, and taking a star away on the device clears nothing there.
+
+### Install
+
+Already paired? The add-on updates itself: open Seekquel in KOReader's menu and accept the update when it is offered.
+
+New install: download seekquel.koplugin-v1.17.0.zip below, unzip it, and copy the seekquel.koplugin folder into KOReader's plugins folder. Restart KOReader, then open Seekquel from the menu to pair.
+
 # v1.16.0 · 2026-10-14
 
 ### What's new
@@ -43,14 +55,3 @@ Download `seekquel.koplugin-v1.15.0.zip`, unzip it, copy the `seekquel.koplugin`
 ### Install
 
 Download `seekquel.koplugin-v1.14.0.zip`, unzip it, and copy the `seekquel.koplugin` folder into KOReader's `plugins` folder on your e-reader. Restart KOReader, then open the Seekquel menu to pair. If the add-on is already installed and paired, it updates itself and you do not need to do anything.
-
-# v1.13.0 · 2026-09-27
-
-### What's new
-
-- **A new version is offered once.** When a newer add-on is ready and you are in the file browser with Wi-Fi on, KOReader asks whether to update now. Tap Later and it stays quiet until the next version; the Seekquel menu still offers the update whenever you want it. It never asks while a book is open.
-- **An update that does not install tells Seekquel why.** The e-reader sends what went wrong as soon as it happens, so a device left without a working add-on can be spotted and helped.
-
-### Install
-
-Download `seekquel.koplugin-v1.13.0.zip`, unzip it, and copy the `seekquel.koplugin` folder into KOReader's `plugins` folder on your e-reader. Restart KOReader, then open the Seekquel menu to pair. If the add-on is already installed and paired, it updates itself and you do not need to do anything.
