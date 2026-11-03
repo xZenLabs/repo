@@ -1,3 +1,55 @@
+# v1.4.6 · 2026-11-03
+
+## KOReader Plugin
+
+### New Features
+
+- **Cancel a send in progress**: Sending a file now shows a status dialog with a **Cancel** button for the whole transfer, so you can stop a send that's taking too long or going to the wrong device.
+
+### Improvements
+
+- **Stalled transfers give up instead of hanging**: If a transfer stops making progress for two minutes, LocalSend now ends it cleanly instead of waiting indefinitely. This applies to sending and receiving, over both the local network and LocalSend Web.
+- **Cleaner sleep and Wi-Fi handling while sending**: Scans and sends that are still running when your e-reader sleeps or loses Wi-Fi are now stopped properly.
+- **Protection against connection floods**: The receiver now limits how many connections it accepts at once, the same way the LocalSend app does, so a misbehaving device on your network can't overwhelm it.
+
+### Bug Fixes
+
+- **Kindle 3 (Kindle Keyboard) support**: Fixed a crash that stopped the receiver a few seconds after starting on the Kindle 3. It also fixes a networking problem on other devices with very old Linux kernels. Thanks @KayOhtie for the detailed report! (https://github.com/kaikozlov/localsend.koplugin/issues/19)
+- **No more repeated "File received" notifications**: After restarting KOReader, LocalSend no longer re-announces files you had already received, and a transfer right after a restart is no longer missed.
+- **Sending to devices on IPv6 networks**: Fixed an "Invalid URL escape" error when sending to some devices found over IPv6. Thanks @mergen3107! (https://github.com/kaikozlov/localsend.koplugin/issues/18)
+
+---
+
+## CLI Changes
+
+### New Features
+
+- **Send text messages**: `send --text "..."` sends a text message instead of files, and `--text -` reads it from stdin. LocalSend apps show it as a message, just as when you share text from your phone.
+
+### Improvements
+
+- **Updated networking stack**: Updated Go dependencies to their latest compatible releases.
+- **Connection limits**: `recv` and `send --dapi` limit simultaneous connections to match the LocalSend app.
+
+---
+
+## Installation
+
+1. Download the zip for your device's architecture:
+   - **armv7** — Kindle (all models), Kobo, reMarkable 2, PocketBook
+   - **arm64** — reMarkable Paper Pro
+   - **arm-legacy** — Kindle 3, Kindle DX, older 32-bit ARM devices
+
+   > **Not sure?** Try armv7 first. Use arm-legacy only if armv7 doesn't work on older hardware.
+
+2. Extract `localsend.koplugin` to your KOReader plugins directory:
+   - Kindle: `/mnt/us/koreader/plugins/`
+   - Kobo: `/.adds/koreader/plugins/`
+   - reMarkable: `/home/root/koreader/plugins/`
+3. Restart KOReader
+
+See README for usage instructions.
+
 # v1.4.5 · 2026-08-28
 
 ## KOReader Plugin
@@ -116,67 +168,6 @@ See README for usage instructions.
 ### Improvements
 
 - **Legacy Kindle compatibility docs**: Documented the verified firmware and syscall boundary, plus the release overlay and audit workflow used for older Amazon kernels.
-
----
-
-## Installation
-
-1. Download the zip for your device's architecture:
-   - **armv7** — Kindle (all models), Kobo, reMarkable 2, PocketBook
-   - **arm64** — reMarkable Paper Pro
-   - **arm-legacy** — Kindle 3, Kindle DX, older 32-bit ARM devices
-
-   > **Not sure?** Try armv7 first. Use arm-legacy only if armv7 doesn't work on older hardware.
-
-2. Extract `localsend.koplugin` to your KOReader plugins directory:
-   - Kindle: `/mnt/us/koreader/plugins/`
-   - Kobo: `/.adds/koreader/plugins/`
-   - reMarkable: `/home/root/koreader/plugins/`
-3. Restart KOReader
-
-See README for usage instructions.
-
-# v1.4.1 · 2026-07-13
-
-## KOReader Plugin
-
-### New Features
-
-- **Built-in troubleshooting**: A new "Troubleshooting" menu walks you through common problems. "Check LocalSend" inspects Wi-Fi, the receiver, your save folder, and network access, then suggests a next step. Additional guided helpers cover "Can't find a device?" and "Transfer failed?" — plus a one-tap **support report** generator to make filing useful bug reports easier.
-- **Quick actions and gestures**: "Send file" and "Send current book" can now be assigned to KOReader gestures, profiles, and quick-menu actions.
-- **About menu**: A dedicated "About LocalSend" dialog shows the installed version, device architecture, and project link.
-- **Compound extension routing**: Route tagged files such as `document.safari.pdf` separately from ordinary `.pdf` files. When no compound rule exists, routing falls back to the normal file extension.
-
-### Improvements
-
-- **Better update experience**: Updates now have a dedicated menu with full release notes, an available-update indicator, optional background checks, and the ability to reinstall the current version when recovering a damaged installation.
-- **Scan again from the device picker**: Refresh nearby devices without leaving the selection dialog or restarting the send flow.
-- **Graceful server shutdown**: The receiver stops more cleanly during KOReader exit and suspend, reducing leftover processes and port conflicts.
-- **Cleaner uninstall**: KOReader's plugin management can now remove LocalSend settings, certificates, routing configuration, and temporary state when deleting the plugin.
-
----
-
-## CLI Changes
-
-### New Features
-
-- **Discovery self-test**: The new `nettest` command checks multicast loopback, LocalSend announcements, HTTP registration responses, and visible network interfaces. Human-readable and JSON output are available.
-
-### Improvements
-
-- **Updated networking stack**: Updated Fiber, Pion WebRTC, DTLS, FastHTTP, and other Go dependencies to their latest compatible releases.
-
-### Bug Fixes
-
-- **Reliable LAN discovery**: The `scan` and `recv` discovery backend now listens across all eligible network interfaces, improving discovery on e-readers, constrained hardware, and multi-interface networks.
-- **Stable WebRTC transfers**: Hardened the WebRTC send queue, file pipeline, and shutdown synchronization to prevent transfer desynchronization, partial-file handling errors, and shutdown hangs.
-
-### Security
-
-- **Atomic session admission**: Receive-session checks and creation are now performed atomically, preventing concurrent transfers from bypassing the single-session limit.
-- **Mandatory V3 nonce exchange**: V3 HTTP uploads must complete the nonce exchange before preparing a transfer, preventing replay of stale handshake state.
-- **Hardened WebRTC validation**: Incoming file headers, tokens, declared sizes, checksums, control messages, and signaling payloads now receive stricter validation.
-- **Bounded request handling**: File uploads are streamed instead of buffered in memory, while JSON metadata and control messages have explicit size limits to reduce denial-of-service risk.
 
 ---
 
