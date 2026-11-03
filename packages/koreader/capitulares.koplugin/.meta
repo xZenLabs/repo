@@ -1,0 +1,23 @@
+# Capitulares plugin for KOReader
+# https://github.com/rmmr111/Capitulares.Koplugin
+# zenpm:auto-scraped
+id=capitulares
+name=Capitulares
+version=1.0
+description=Ornamental drop caps for KOReader • PT-PT / EN
+author=rmmr111
+category=utility
+platforms=koreader
+dependencies=
+source=https://github.com/rmmr111/Capitulares.Koplugin
+stars=6
+updated_at=2026-11-03T16:01:26Z
+published_at=2026-11-03T01:20:59Z
+readme_url=packages/koreader/capitulares.koplugin/README.md
+readme_hash=813a87b07ff2f7f03cb4c8571f7f2e3f9daedf1d
+release_notes_url=packages/koreader/capitulares.koplugin/RELEASE_NOTES.md
+release_notes_hash=fb3765381d2f9e3a057c963676f642b7cdf71617da837919c43500d13824062f
+releases=[{"tag_name":"v1.0","assets":[{"name":"Capitulares_v1.0.zip","url":"https://github.com/rmmr111/Capitulares.Koplugin/releases/download/v1.0/Capitulares_v1.0.zip","size":46745,"digest":"sha256:21b3b4c8f3233da884a74fd8891d924ef7ac44d0e56f53e929a7f3d38f686626"}],"name":"Capitulares v1.0"}]
+source_type=release
+source_asset=Capitulares_v1.0.zip
+size=46745
