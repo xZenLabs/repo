@@ -1,3 +1,24 @@
+# v0.0.14 · 2026-11-03
+
+**Full Changelog**: https://github.com/kaikozlov/acsm.koplugin/compare/v0.0.13...v0.0.14
+
+- **New: Adobe activation submenu with portable backups** — **Tools → More tools → ACSM → Adobe activation** shows whether an activation is saved, and lets you export it to a backup file, load a backup (e.g. to move your activation to another device), or forget it. See [#25](https://github.com/kaikozlov/acsm.koplugin/pull/25).
+- **New: optionally delete the `.acsm` file after fulfillment** — turn on **Tools → More tools → ACSM → Delete ACSM after fulfillment** (off by default). Requested in [#23](https://github.com/kaikozlov/acsm.koplugin/issues/23).
+
+---
+
+## Installation
+
+1. Download `acsm-koplugin-v0.0.14.zip` below
+2. Extract `acsm.koplugin` to your KOReader plugins directory:
+   - Kindle: `/mnt/us/koreader/plugins/`
+   - Kobo: `/.adds/koreader/plugins/`
+   - Android: `/storage/emulated/0/koreader/plugins/`
+   - reMarkable: `/home/root/koreader/plugins/`
+3. Restart KOReader
+
+See README for usage instructions.
+
 # v0.0.13 · 2026-08-24
 
 **Full Changelog**: https://github.com/kaikozlov/acsm.koplugin/compare/v0.0.12...v0.0.13
@@ -73,27 +94,6 @@ See README for usage instructions.
 ## Installation
 
 1. Download `acsm-koplugin-v0.0.10.zip` below
-2. Extract `acsm.koplugin` to your KOReader plugins directory:
-   - Kindle: `/mnt/us/koreader/plugins/`
-   - Kobo: `/.adds/koreader/plugins/`
-   - Android: `/storage/emulated/0/koreader/plugins/`
-   - reMarkable: `/home/root/koreader/plugins/`
-3. Restart KOReader
-
-See README for usage instructions.
-
-# v0.0.9 · 2026-06-16
-
-**Full Changelog**: https://github.com/kaikozlov/acsm.koplugin/compare/v0.0.8...v0.0.9
-
-- **Book Information for .acsm files** — the Book Information screen now shows metadata parsed from the ACSM (title, author, publisher, language, target format, etc.) without needing to download the book first.
-- **Fixed: ACSM appearing twice in "Open with"** — duplicate provider registration has been removed.
-  
----
-
-## Installation
-
-1. Download `acsm.koplugin-v0.0.9.zip` below
 2. Extract `acsm.koplugin` to your KOReader plugins directory:
    - Kindle: `/mnt/us/koreader/plugins/`
    - Kobo: `/.adds/koreader/plugins/`
