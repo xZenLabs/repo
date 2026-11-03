@@ -1,3 +1,10 @@
+# v6.3.1 · 2026-11-02
+
+- Design tweak to book menu header
+- Further improvements to compatibility with other plugins drawing over bookshelf (#572)
+- Performance improvements for shelf of shelves with nested filters
+- Performance improvements for page count extraction
+
 # v6.3.0 · 2026-11-02
 
 - New token %published: a book's publication year, from calibre, the OPDS catalog (kept when the book is downloaded) or the book file (EPUB, FB2, MOBI, AZW3, comics, PDF). For example, `%authors_short [if:published](%published)[/if]` adds the year after the author, and nothing when a book has no date (#566).
@@ -52,11 +59,3 @@
 - Fix: + Add shelf on a list matches the panel's colours
 - Fix: a long file path in the book menu stays on one line
 - Fix: a shelf's icon shows in the shelf editor's title instead of its [icon=...] code
-
-# v6.0.4 · 2026-10-27
-
-- Fix: Module card colours on PocketBook colour screens (#565)
-- Fix: Border colours stay in colour on colour Kobo and Kindle screens
-- Fix: Black screen after waking with Sleep screen anti-ghosting on
-- Fix: Fewer full-screen flashes closing Shelf style and Filters
-- New: Search in the collection editor (#488)
