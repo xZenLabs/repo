@@ -1,3 +1,47 @@
+# v2.0.0 · 2026-11-03
+
+## What's new
+This update turns Book Details into a place to actually work with your books. Browse every bookmark, highlight and note in one list. Edit a book's metadata, rating, status, collections and file from a single screen. And in Files, move books into any folder with the new **+**.
+
+### Book Details: Annotations
+A new bookmark button beside **Read now** opens every annotation in the book.
+- Bookmarks, highlights and notes in one list.
+- Filter by type, and by highlight style (highlight, underline, invert, strikethrough).
+- Tap an annotation to read it in full, with its date, chapter, quote and note.
+- **Show in book** jumps to its page.
+
+### Book Details: Edit
+The pencil button now opens a full editing screen for the book.
+- **Favorite, review and rating:** heart, a short review and five stars.
+- **Status:** Reading, On hold or Finished.
+- **Metadata:** edit title, authors, series, series number, language, keywords and description.
+  - You can choose to write the changes into the EPUB itself, with an optional backup copy.
+  - Restore the original metadata at any time.
+- **Collections:** add the book to any of your collections.
+- **Book settings:**
+  - Reset this document.
+  - Export its notes as a .md file.
+  - Refresh metadata.
+  - Buttons from your other plugins.
+- **File:** Rename, Copy, Cut and Delete the book's file.
+
+### Library > Files: Move to folder
+A new **+** button moves books into the folder you have open.
+- Pick from a list of your books; each one shows the folder it is in now.
+- The ticked books move into the open folder.
+
+### Also
+- Holding a book in Home, or in Library tabs other than Files and Collections, opens its details directly.
+- In Files and Collections, **KOReader menu** is now **Edit book**, and opens the Edit screen.
+- Holding a folder or collection in Home shows the same menu as in Library.
+
+## Installation
+1. Download `KiKomeScrubber.koplugin.zip` from the **Assets** section below (not "Source code").
+2. Unzip it and copy the `KiKomeScrubber.koplugin` folder into `koreader/plugins/`.
+3. Restart KOReader.
+
+To update, use **Check for updates** in KiKome's Settings, or replace the folder. To uninstall, delete it.
+
 # v1.1.0 · 2026-11-01
 
 # KiKome 1.1.0

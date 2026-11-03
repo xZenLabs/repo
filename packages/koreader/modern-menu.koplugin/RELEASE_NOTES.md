@@ -1,3 +1,18 @@
+# v1.16.0 · 2026-11-03
+
+## modern_menu 1.16.0
+
+Modern Menu stays up when another plugin also has a `settings.lua`.
+
+### Fixes
+- Plugin files load as `modern_menu.*`, so KoInsight (or any plugin that calls `require("settings")` first) can no longer replace this plugin's settings. Opening the menu, including **Modern Menu → Layout**, no longer crashes with `getMenuHeightMode` is nil
+
+### Install
+1. Download **modern_menu.koplugin-v1.16.0.zip**
+2. Extract into your KOReader `plugins/` directory
+3. Restart KOReader and enable **Modern Menu**
+4. Install Kobold, Simple UI, Quick Menu, Neo Quick Settings, or Shortcuts Toolbar as well if you use those
+
 # v1.15.0 · 2026-11-01
 
 ## modern_menu 1.15.0
@@ -60,24 +75,6 @@ Menu search opens again, toggles stay intact while a long list scrolls, and the 
 
 ### Install
 1. Download **modern_menu.koplugin-v1.12.0.zip**
-2. Extract into your KOReader `plugins/` directory
-3. Restart KOReader and enable **Modern Menu**
-4. Install Kobold, Simple UI, Quick Menu, Neo Quick Settings, or Shortcuts Toolbar as well if you use those
-
-# v1.11.0 · 2026-10-26
-
-## modern_menu 1.11.0
-
-The menu refreshes a smaller part of the screen, so an e-ink update finishes sooner.
-
-### Changes
-- Opening the menu, switching tabs, moving through a submenu, and dragging a Quick Menu slider refresh the menu sheet. The page below a short menu stays as it is
-- When the sheet grows or shrinks, the refresh covers the old and new height, so the page that was covered or uncovered is drawn
-- A check, radio, or changed label refreshes those rows as one block
-- A long list paints the rows on screen first. The rows just above and below are built after that paint, and the rows on screen stay where they are
-
-### Install
-1. Download **modern_menu.koplugin-v1.11.0.zip**
 2. Extract into your KOReader `plugins/` directory
 3. Restart KOReader and enable **Modern Menu**
 4. Install Kobold, Simple UI, Quick Menu, Neo Quick Settings, or Shortcuts Toolbar as well if you use those

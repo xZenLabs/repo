@@ -38,7 +38,9 @@ them in Obsidian. No app in the middle.
 - **One file per book**, not one file for everything: unlike *Export
   highlights and notes*, every volume stays separate;
 - **An index that ties the library together**: `00 - Index.md`, a clickable
-  table of every book;
+  table of every book, ordered by author, title, last read or highlights;
+- **Tags for the book you are reading**: add them from the open book's menu
+  and they join its frontmatter and the index, ready to filter in Obsidian;
 - **Your notes survive**: write in the file from Obsidian and the next export
   folds the new highlights in instead of overwriting them;
 - **The cloud is optional**: the local export needs no network at all.
@@ -116,6 +118,10 @@ The result should look like:
 
 ```
 /mnt/us/koreader/plugins/tomedown.koplugin/main.lua
+/mnt/us/koreader/plugins/tomedown.koplugin/tomedown_shared.lua
+/mnt/us/koreader/plugins/tomedown.koplugin/tomedown_menu.lua
+/mnt/us/koreader/plugins/tomedown.koplugin/tomedown_export.lua
+/mnt/us/koreader/plugins/tomedown.koplugin/tomedown_upload.lua
 /mnt/us/koreader/plugins/tomedown.koplugin/tomedown_i18n.lua
 /mnt/us/koreader/plugins/tomedown.koplugin/tomedown_render.lua
 /mnt/us/koreader/plugins/tomedown.koplugin/tomedown_merge.lua
@@ -123,6 +129,10 @@ The result should look like:
 /mnt/us/koreader/plugins/tomedown.koplugin/tomedown_update.lua
 /mnt/us/koreader/plugins/tomedown.koplugin/_meta.lua
 /mnt/us/koreader/plugins/tomedown.koplugin/languages/it.po
+/mnt/us/koreader/plugins/tomedown.koplugin/languages/de.po
+/mnt/us/koreader/plugins/tomedown.koplugin/languages/fr.po
+/mnt/us/koreader/plugins/tomedown.koplugin/languages/es.po
+/mnt/us/koreader/plugins/tomedown.koplugin/languages/pt_BR.po
 /mnt/us/koreader/plugins/tomedown.koplugin/assets/logo.png
 /mnt/us/koreader/plugins/tomedown.koplugin/LICENSE
 ```
@@ -193,7 +203,7 @@ on top.
 | **Export new and changed books** | only the books whose highlights changed since the last export (per-book hash)                                                                                 |
 | **Repair all files**             | writes every file again from KOReader's reading history: for a file deleted by mistake or a sync that went wrong                                              |
 | **Choose books…**                | a list with checkboxes: tick the volumes and export just those                                                                                                |
-| **Current book**                 | the rows that name the open book: *Keep my notes in this book*, *Notes heading: %1* and *Backup copies…*, explained in [Keep my notes](docs/keep-my-notes.md) |
+| **Current book**                 | the rows that name the open book: *Keep my notes in this book*, *Tags: %1*, *Notes heading: %1* and *Backup copies…*, explained in [Keep my notes](docs/keep-my-notes.md) |
 | **Upload all files again**       | re-uploads every file already in the local folder, after comparing each one with its cloud copy                                                               |
 | **Last export**                  | a wide popup, one line per entry: network, server, pending uploads, the last export and upload with timestamp and outcome                                     |
 | **Settings**                     | the five groups, described in [Settings](docs/settings.md)                                                                                                    |
@@ -258,6 +268,9 @@ Above the generated block you get a heading and two blank lines of room:
 everything you write there, and your own frontmatter properties, survives
 every export. *Keep my notes in this book*, in the open book's menu, does the
 same for one book alone, and *Keep my notes: index* for `00 - Index.md`.
+*Tags: %1*, in the same menu, adds the tags of that one book: they join
+`ebook`, `highlights` and its own keywords, and the ones you remove there
+leave the file at the next export while the tags you wrote by hand stay.
 
 Two copies sit beside the file when they are needed: `.bak` holds your notes
 when Keep my notes goes off, and `.bak.1` is the safety copy for text that

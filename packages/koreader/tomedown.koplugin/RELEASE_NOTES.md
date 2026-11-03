@@ -1,3 +1,23 @@
+# v1.2.0 · 2026-11-03
+
+**New**
+
+- Four new languages: German, French, Spanish and Brazilian Portuguese. Menus and exported notes follow KOReader's language wherever a translation exists.
+- Tags for the book you are reading: under *Current book*, Tags: %1 adds tags to that book alone. They join its frontmatter at the next export, and tags made only of numbers (1500, 1984) are ignored, with a notice that names them; 1500s and anno-1500 stay valid.
+- Tags in the index: books that carry their own tags get a Tags column, after Series and before Status, written as clickable #tag separated by a space. A book without tags shows a dash, and the column disappears when no book in the table has tags.
+- Index order: under Settings → Files, My books can be ordered by author (default), title, last read or highlights. Last read and highlights run newest and most first; series books keep their own order at whatever the setting says.
+
+**Fix**
+
+- Smaller download: the repository banners and the manual are no longer packed into the zip by mistake.
+
+**Improvement**
+
+- The plugin code is now split into small modules (shared, menu, export, upload): nothing changes for readers, but every future release is easier to check.
+- The workflows are linted in CI with actionlint, and the release zip is built by a script that checks its exact contents against an allowlist, so docs and banners cannot come back.
+
+Install it from Check for updates, or the zip below.
+
 # v1.1.3 · 2026-11-01
 
 - Updates unpack into a new folder first, check it, and only then replace the installed one. A failed download, unpack or check leaves your current version untouched.
@@ -91,57 +111,6 @@ Every screenshot is in the README: https://github.com/imanubdesigner/tomedown.ko
 **Manual**: download `tomedown.koplugin-v1.1.0.zip` from the **Assets** section at the bottom of this page (not the *Source code* archive), unzip it into `koreader/plugins/` and restart KOReader.
 
 **Coming from 1.0.0**: *Check for updates* in the plugin menu now finds this release by itself, no zip needed. **Coming from a 1.1.0 beta**: the stable release is offered the same way, or use *Settings → Updates → Beta versions → Go back to the stable version*.
-
-README, full tutorial, quickstart sheets and Obsidian guide sheets:
-https://github.com/imanubdesigner/tomedown.koplugin
-
-# v1.0.0 · 2026-10-21
-
-**Tomedown 1.0.0, the first stable release of the two-way edition.**
-
-Two betas are behind this one, both tested end to end, offline included. This is the version that stops throwing away what you write.
-
-## Highlights
-
-- **Your own notes survive the export.** *Preserve manual edits* is new in 1.0.0, off by default: switch it on and the new render folds into the file you already annotated instead of replacing it. Your words stay under their own heading, fenced by the invisible HTML comments the plugin uses as handles. In 0.8.0 there was no such thing: every export won, and anything you typed at your desk was gone on the next run.
-- **The merge works both ways now.** Before folding the new highlights in, the export fetches your copy from the cloud and, if it changed since the last upload, uses that as the base instead of the local one. Your notes come along with the fresh highlights. The setting is *Merge edits made in the cloud*, it is on by default, and it lives in Settings → Cloud right under *Upload to cloud*.
-- **Offline is a first-class case.** Export with no connection and the file is queued. When you are back online, the plugin fetches the cloud copy, compares it with the one it sent last, folds your notes in, and only then pushes. If the download fails for some transient reason the file is held back and retried at the next chance, so nothing gets lost in either direction.
-
-## Added
-
-- *Preserve manual edits* as a setting, together with *Personal notes*, the heading above your notes block. Rename it per your taste, or leave the field empty to export without a heading. The row only exists while preserve is on.
-- The settings menu is flatter, and the rows appear and disappear in place as you flip the toggles. The *Cloud* group shows only when a server is set, upload is on and preserve is on, because that is the only case where it has something to do.
-- The About popup shows both repository links.
-
-## Changed
-
-- *Reload everything to the cloud* is now *Upload everything to the cloud*, which is what it actually does. It runs the same reconciliation as the export before pushing, so notes written in Obsidian get folded in there too.
-- Reading progress bars are drawn as plain rectangles instead of glyphs, so they render the same on every device font.
-- The guide sheets, the quickstart sheets and the menu screenshots were all retouched: portable fonts, the Obsidian palette, the settings paths corrected, the cover captions reworded to match what the plugin really does.
-- The release zip now carries only what KOReader loads at runtime: the Lua modules, `languages/` and the logo.
-
-## Fixed
-
-- The flush cannot start twice over the same files. `reconcilePending` costs one network request per queued file and the flag that guards the upload was raised only after it, so a reconnect or a resume landing in the middle of that window could queue a second flush on top of the first one. The flag now stays up for the whole reconciliation, lowered on every exit including the error path, where it is wrapped in `pcall` so a failure inside it cannot leave the flush switched off until restart.
-- The open book is read from memory during the export instead of being reopened, which was both slower and able to fail on a book still in use.
-- `00 - Index.md` reports a write failure instead of failing quietly.
-
-## Upcoming
-
-Things we would like to try next. No promises, no dates, and nothing here is decided yet:
-
-- **Preserve per book.** Keep the global toggle as the default and let a single book override it, for the series you annotate by hand and the ones you do not.
-- **Stable block IDs on the highlights.** Give every exported highlight an Obsidian block ID so you can link straight to it from another note and keep that link alive after the next export. Suggested by [Tewel](https://codeberg.org/Tewel), and the one idea from this round that is not in the release yet.
-- **Spacing that matches the reader.** Let the merge respect the blank lines you leave under a heading instead of framing the zone the way the plugin prefers.
-- **Index speed**, only if a large library ever feels slow. Nothing to do there today.
-
-## Installing
-
-**If you already use a KOReader plugin store** — [Storefront](https://github.com/ultimatejimmy/storefront.koplugin) or [AppStore](https://github.com/omer-faruq/appstore.koplugin), both under *Tools* search `tomedown` and install it. They are community plugins, not part of KOReader itself; if you have neither, use the zip below.
-
-**Manual**: download `tomedown.koplugin-v1.0.0.zip` from the **Assets** section at the bottom of this page (not the *Source code* archive), unzip it into `koreader/plugins/` and restart KOReader.
-
-**Coming from 0.8.0** > *Check for updates* in the plugin menu now finds this release by itself, no zip needed.
 
 README, full tutorial, quickstart sheets and Obsidian guide sheets:
 https://github.com/imanubdesigner/tomedown.koplugin
