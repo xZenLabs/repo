@@ -1,7 +1,7 @@
 # v1.2.0 · 2026-11-01
 
 - Play the Crystal story through Goldenrod City: catch Pokémon, build a party of six and take on Falkner, Bugsy and Whitney. Open **Explore → Story** to start.
-- Add your partner to SimpleUI with live stats, short animations and optional Tiny Critter images.
+- Add your partner to SimpleUI with live stats now supported.
 
 Back up your whole `pokepal` folder before updating.
 
