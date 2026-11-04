@@ -1,28 +1,30 @@
 # v1.1 · 2026-11-04
 
-**Capitulares v1.1 — what changed /**
+**Capitulares v1.1 — what changed **
 
 English
 
-1. Custom profiles: create, save, and manage profiles containing different fonts, sizes, positions, and settings.
-2. Quick profile switching: switch profiles directly from the KOReader menu without opening the editor.
-3. Live View: size and position adjustments are reflected on the book page in real time.
-4. Editorial Premium interface: reorganized controls, improved spacing, three ornamental initial previews, and more intuitive navigation.
-5. More precise adjustments: improved directional controls with 1, 2, or 5-pixel increments.
-6. Per-book customization: apply changes to the current book or save them as a reusable profile.
-7. Stability improvements: fixes for the size slider, menu behavior, and dialogs when suspending or resuming the device.
-8. Fixed popups: profile and detection dialogs now appear above the KOReader menu, which remains open for further adjustments.
+1. Preserve font weight: new per-font option that keeps ornamental drop caps at a consistent weight, regardless of KOReader's global font-weight setting. The preference is saved individually for each font, while contrast and proportional scaling remain unaffected.
+2. Custom profiles: create, save, and manage profiles containing different fonts, sizes, positions, and settings.
+3. Quick profile switching: switch profiles directly from the KOReader menu without opening the editor.
+4. Live View: size and position adjustments are reflected on the book page in real time.
+5. Editorial Premium interface: reorganized controls, improved spacing, three ornamental initial previews, and more intuitive navigation.
+6. More precise adjustments: improved directional controls with 1, 2, or 5-pixel increments.
+7. Per-book customization: apply changes to the current book or save them as a reusable profile.
+8. Stability improvements: fixes for the size slider, menu behavior, and dialogs when suspending or resuming the device.
+9. Fixed popups: profile and detection dialogs now appear above the KOReader menu, which remains open for further adjustments.
 
 Português (PT-PT)
 
-1. Perfis personalizados: agora é possível criar, guardar e gerir perfis com diferentes fontes, tamanhos, posições e configurações.
-2. Seleção rápida de perfis: permite alternar entre perfis diretamente no menu do KOReader, sem abrir o editor.
-3. Live View: as alterações de tamanho e posição são refletidas diretamente na página do livro, em tempo real.
-4. Interface Editorial Premium: reorganização dos controlos, melhoria do espaçamento, pré-visualização de três letras ornamentais e navegação mais intuitiva.
-5. Ajustes mais precisos: controlos direcionais melhorados, com incrementos de 1, 2 ou 5 pixels.
-6. Personalização por livro: possibilidade de aplicar alterações apenas ao livro atual ou guardá-las num perfil reutilizável.
-7. Melhorias de estabilidade: correções no slider, na abertura dos menus e no comportamento das janelas ao suspender ou retomar o dispositivo.
-8. Popups corrigidos: os seletores de perfil e deteção aparecem por cima do menu do KOReader, mantendo o menu aberto para outras alterações.
+1. Preservar peso da fonte: nova opção por fonte que permite manter a espessura das capitulares ornamentais, independentemente do peso global definido no KOReader. A preferência é guardada individualmente para cada fonte, sem afetar o contraste nem a escala proporcional.
+2. Perfis personalizados: agora é possível criar, guardar e gerir perfis com diferentes fontes, tamanhos, posições e configurações.
+3. Seleção rápida de perfis: permite alternar entre perfis diretamente no menu do KOReader, sem abrir o editor.
+4. Live View: as alterações de tamanho e posição são refletidas diretamente na página do livro, em tempo real.
+5. Interface Editorial Premium: reorganização dos controlos, melhoria do espaçamento, pré-visualização de três letras ornamentais e navegação mais intuitiva.
+6. Ajustes mais precisos: controlos direcionais melhorados, com incrementos de 1, 2 ou 5 pixels.
+7. Personalização por livro: possibilidade de aplicar alterações apenas ao livro atual ou guardá-las num perfil reutilizável.
+8. Melhorias de estabilidade: correções no slider, na abertura dos menus e no comportamento das janelas ao suspender ou retomar o dispositivo.
+9. Popups corrigidos: os seletores de perfil e deteção aparecem por cima do menu do KOReader, mantendo o menu aberto para outras alterações.
 
 # v1.0 · 2026-11-03
 

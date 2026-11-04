@@ -1,3 +1,9 @@
+# diagnostic1.0 · 2026-11-04
+
+Diagnostic version. Do not install this unless you need detailed info in in your crash.log.
+
+paperdots_debug is also created inside /settings.
+
 # experimental_v1.0 · 2026-10-12
 
 Experimental option: Change pattern on page turn.
