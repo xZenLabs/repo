@@ -1,3 +1,21 @@
+# v0.0.15 · 2026-11-04
+
+**Full Changelog**: https://github.com/kaikozlov/acsm.koplugin/compare/v0.0.14...v0.0.15
+- Fixed: a failed download no longer resets saved activation
+---
+
+## Installation
+
+1. Download `acsm-koplugin-v0.0.15.zip` below
+2. Extract `acsm.koplugin` to your KOReader plugins directory:
+   - Kindle: `/mnt/us/koreader/plugins/`
+   - Kobo: `/.adds/koreader/plugins/`
+   - Android: `/storage/emulated/0/koreader/plugins/`
+   - reMarkable: `/home/root/koreader/plugins/`
+3. Restart KOReader
+
+See README for usage instructions.
+
 # v0.0.14 · 2026-11-03
 
 **Full Changelog**: https://github.com/kaikozlov/acsm.koplugin/compare/v0.0.13...v0.0.14
@@ -73,27 +91,6 @@ See README for usage instructions.
 ## Installation
 
 1. Download `acsm-koplugin-v0.0.11.zip` below
-2. Extract `acsm.koplugin` to your KOReader plugins directory:
-   - Kindle: `/mnt/us/koreader/plugins/`
-   - Kobo: `/.adds/koreader/plugins/`
-   - Android: `/storage/emulated/0/koreader/plugins/`
-   - reMarkable: `/home/root/koreader/plugins/`
-3. Restart KOReader
-
-See README for usage instructions.
-
-# v0.0.10 · 2026-07-16
-
-**Full Changelog**: https://github.com/kaikozlov/acsm.koplugin/compare/v0.0.9...v0.0.10
-
-- **Optional user patch**: open `.acsm` files launched from external apps (e.g. the PocketBook library). Only needed in specific cases — see [`patches/README.md`](https://github.com/kaikozlov/acsm.koplugin/blob/v0.0.10/patches/README.md).
-- **Bug fixes** in Adobe activation and signing.
-
----
-
-## Installation
-
-1. Download `acsm-koplugin-v0.0.10.zip` below
 2. Extract `acsm.koplugin` to your KOReader plugins directory:
    - Kindle: `/mnt/us/koreader/plugins/`
    - Kobo: `/.adds/koreader/plugins/`
