@@ -1,3 +1,7 @@
+# v1.5.0 · 2026-11-04
+
+Colour themes. On colour screens the board, dice, buttons, menus and dialogs are painted in mother of pearl and brown, with a red one on the dice. Board & colours has a Theme picker with six themes: Classic, Forest, Ocean, Rosewood, Midnight and Black & white. Black and white screens look the same as before. Dialogs are now themed too.
+
 # v1.4.0 · 2026-09-26
 
 What's new:
