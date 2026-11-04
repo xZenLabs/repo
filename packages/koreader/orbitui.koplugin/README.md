@@ -89,6 +89,20 @@ You can use OrbitUI with ordinary local books, KOReader collections, local
 reading goals and no online account. BookOrbit, Hardcover and MyAnimeList are
 optional integrations, not requirements.
 
+**1.1.0-beta.2 preview:** separately integrates Bookshelf 6.3.2 and SimpleUI's
+Cover Deck/Critter follow-ups. Adds publication-year sorting/curated local dates,
+revised book-menu layout and wallpaper scaling/previews, with metadata/cache and
+cover fixes. Automatic publication-date reads from files and the new folder-delete
+flow are deliberately deferred in OrbitUI pending safe lifecycle/recovery work.
+No 1.1 code enters stable 1.0. Physical testing of the new UI is still required.
+
+**Svenska — förhandsversion 1.1.0-beta.2:** separat merge av Bookshelf 6.3.2 och
+SimpleUI-fixar. Utgivningsår/sortering, egna visningsdatum, ny bokmenylayout,
+bakgrundsskalning/förhandsbilder samt metadata-/cache-/omslagsfixar. Automatisk
+datumläsning ur filer och den nya mappraderingen är tills vidare avstängda i
+OrbitUI i väntan på säkra livscykel-/återställningslösningar. Stabil 1.0 påverkas
+inte. Den nya vyn behöver provas på enheten.
+
 BookOrbit synchronization, MyAnimeList and Patch Manager remain separate
 plugins where used. OrbitUI does not replace them, download your whole server
 library or introduce a new synchronization engine.

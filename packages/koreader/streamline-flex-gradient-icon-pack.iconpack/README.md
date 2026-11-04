@@ -9,7 +9,7 @@ and KOReader.
 ![Streamline Flex Gradient: selected KOReader controls, library tabs, and common actions](.github/overview-streamline-flex-gradient.png)
 
 This repository contains one pack: **Streamline Flex Gradient for ZenOS**.
-Its **244 editable SVGs** use exact runtime lookup filenames and build into
+Its **358 editable SVGs** use exact runtime lookup filenames and build into
 `dist/zen-streamline-flex-gradient.zip`. It themes all **23 built-in choices under
 Navbar → Tabs → Add → Tab**.
 
@@ -25,8 +25,8 @@ retain their own artwork.
 The pack uses the open-licensed `flex/gradient` assets from
 [Streamline's free vector repository](https://github.com/webalys-hq/streamline-vectors).
 The upstream revision is pinned to `52d750c9ce051e51cb181b7a78932120c48541d0`.
-The 500-design free set supplies 107 original designs used here. There are
-100 unchanged original SVGs and 41 adaptations; additional lookup files copy
+The 500-design free set supplies 132 original designs used here. There are
+111 unchanged original SVGs and 61 adaptations; additional lookup files copy
 that artwork unchanged.
 
 - Library uses three upright books; Series uses a horizontal stack.
@@ -39,6 +39,18 @@ that artwork unchanged.
   Open and secured Wi-Fi show five distinct signal levels.
 - Settings, search, Bluetooth, incognito, AI, cloud, screenshots, statistics,
   calendar, translations, vocabulary, tools and other suitable matches are included.
+
+Reader controls include `pin.svg`, `footnote.svg`, `return.svg`, and the
+compatible `return_old.svg` lookup, alongside the highlight style, color,
+delete, filter, and sort icons.
+
+Page-browser and reader-control lookups include `annotations.svg`,
+`bookmark_outline.svg`, `document.svg`, `page.svg`, `profiles.svg`,
+`moon_outline.svg`, `history.svg`, and zoom and fullscreen controls.
+`pin_remove.svg` and `bookmark_remove.svg` draw a line through the pack's own
+pin and bookmark. Settings rows also cover the copy, cut, paste, sort, sync,
+and other `settings_*` lookups used by ZenOS context menus. Division, bottom
+dock, drag, swipe gesture, play and table-row settings keep the bundled artwork.
 
 Some designs require small adaptations to supply the correct UI symbol. Books
 reuse the original cover or page shapes. Navigation, menu lines, the X, dots,
@@ -67,6 +79,7 @@ Categories without replacement artwork can be absent:
 ├── menus/                    # Zen menu entry points
 ├── reader/                   # Page browser: TOC, vocabulary, view modes
 ├── device/
+├── settings/                 # Zen settings menu rows
 └── koreader/                 # Stock KOReader icons, including plus/info
 ```
 

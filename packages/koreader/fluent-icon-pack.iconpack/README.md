@@ -29,8 +29,8 @@ opacity. Related actions may share a design.
 
 | Pack | Source files | SVG lookups | Screen | Release asset |
 |---|---|---|---|---|
-| **Fluent Color** | 308 | 308 | Color e-ink | `zen-fluent-color.zip` |
-| **Fluent Mono** | 358 | 358 | Black & white e-ink | `zen-fluent-mono.zip` |
+| **Fluent Color** | 342 | 342 | Color e-ink | `zen-fluent-color.zip` |
+| **Fluent Mono** | 392 | 392 | Black & white e-ink | `zen-fluent-mono.zip` |
 
 Both variants cover all 50 ZenOS `quick_` controls and `tab_` icons, excluding
 the blank spacer. Color uses Fluent filled moon, snooze, tag, battery, Bluetooth,
@@ -57,6 +57,13 @@ appear. Older frontends loading their bundled icons directly keep those icons.
 Reader controls include `pin.svg`, `footnote.svg`, `return.svg`, and the
 compatible `return_old.svg` lookup, alongside the highlight style, color,
 delete, filter, and sort icons.
+
+Page-browser and reader-control lookups include `annotations.svg`,
+`bookmark_outline.svg`, `document.svg`, `page.svg`, `profiles.svg`,
+`moon_outline.svg`, `history.svg`, and zoom and fullscreen controls.
+`pin_remove.svg` and `bookmark_remove.svg` draw a line through the pack's own
+pin and bookmark. Settings rows also cover the copy, cut, paste, sort, sync,
+and other `settings_*` lookups used by ZenOS context menus.
 
 ## Install with ZenPM
 

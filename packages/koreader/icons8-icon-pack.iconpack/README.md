@@ -20,7 +20,7 @@ and packaged by [ZenLabs](https://github.com/xZenLabs) for
 | **Icons8 Colour** | Original multicolour Flat Color artwork, with supplementary UI symbols | `zen-icons8-colour.zip` |
 | **Icons8 Mono** | Native Windows 10 outlines, with matching outline adaptations | `zen-icons8-mono.zip` |
 
-Icons8 Colour has **327 editable SVGs** and Icons8 Mono has **320**, each using its exact runtime lookup filenames.
+Icons8 Colour has **356 editable SVGs** and Icons8 Mono has **349**, each using its exact runtime lookup filenames.
 Both packs theme all **23 built-in choices under Navbar → Tabs → Add → Tab**.
 KOReader and Zen icons retain their exact lookup names. Shared artwork under
 different lookup names is stored as editable source SVGs. No Lua manifests are needed.
@@ -58,6 +58,14 @@ link, and adaptation.
 Reader controls include `pin.svg`, `footnote.svg`, `return.svg`, and the
 compatible `return_old.svg` lookup, alongside the highlight style, color,
 delete, filter, and sort icons.
+
+Page-browser and reader-control lookups include `annotations.svg`,
+`bookmark_outline.svg`, `document.svg`, `page.svg`, `profiles.svg`,
+`moon_outline.svg`, `history.svg`, and fullscreen controls.
+`pin_remove.svg` and `bookmark_remove.svg` draw a line through the pack's own
+pin and bookmark. Settings rows also cover the copy, cut, paste, sort, sync,
+and other `settings_*` lookups used by ZenOS context menus. Zoom, eye, pause,
+and horizontal-dots lookups have no Icons8 source and keep the bundled artwork.
 
 ## Install
 

@@ -14,7 +14,7 @@ Modern, rounded replacement icons for [ZenOS](https://github.com/xZenLabs/zen-os
 
 ## What's included
 
-Each style contains 387 SVG files named for ZenOS, KOReader, and ZenPM's exact icon lookups, including all 102 original KOReader filenames and drawings. Every lookup is an editable source file, including names previously generated as aliases during the build. Matching grids and line weights keep the artwork consistent across the three interfaces. Missing icons use the bundled artwork.
+Each style contains 421 SVG files named for ZenOS, KOReader, and ZenPM's exact icon lookups, including all 102 original KOReader filenames and drawings. Every lookup is an editable source file, including names previously generated as aliases during the build. Matching grids and line weights keep the artwork consistent across the three interfaces. Missing icons use the bundled artwork.
 
 | Pack | Style | Made for | Release asset |
 |---|---|---|---|
@@ -53,6 +53,13 @@ actions keep the bundled artwork. The carousel icon is rotated 90 degrees clockw
 Reader controls include `pin.svg`, `footnote.svg`, `return.svg`, and the
 compatible `return_old.svg` lookup, alongside the highlight style, color,
 delete, filter, and sort icons.
+
+Page-browser and reader-control lookups include `annotations.svg`,
+`bookmark_outline.svg`, `document.svg`, `page.svg`, `profiles.svg`,
+`moon_outline.svg`, `history.svg`, and zoom and fullscreen controls.
+`pin_remove.svg` and `bookmark_remove.svg` draw a line through the pack's own
+pin and bookmark. Settings rows also cover the copy, cut, paste, sort, sync,
+and other `settings_*` lookups used by ZenOS context menus.
 
 ## Install with ZenPM
 

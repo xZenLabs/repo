@@ -1,3 +1,43 @@
+# v1.1.0-beta.2 · 2026-11-04
+
+OrbitUI 1.1.0-beta.2 — separate upstream preview / separat upstream-beta
+
+## English
+
+Beta.1 was never published: beta.2 fixes a final reproduced race where a pending page timer could override a direct wallpaper choice. Its pushed tag is preserved, not moved.
+
+Stable 1.0.0 remains the user-accepted RC2 implementation. This prerelease starts a separate 1.1 cycle with reviewed Bookshelf 6.3.2 (53 commits, d47edfcc) and SimpleUI follow-ups (five commits, 633ffbff).
+
+- Refreshed book-menu layout, publication-year sorting/token, and locally editable display dates. Cached Hardcover/calibre/OPDS/user dates remain available without a new network writer.
+- Wallpaper Stretch, Crop to fill and Fit to screen, with screen-shaped previews. Late page/tab/Close callbacks cannot save stale choices; pathological native allocations are bounded.
+- Metadata/series refresh, filtered-folder light-map efficiency, retained page facts/spine colours and missing-file/cover fixes. OrbitUI keeps its cancellable, blob-free metadata windows instead of a blocking full-table refresh. These are expected benefits, not new Bigme timing measurements.
+- Cover Deck truncates non-Latin titles more conservatively; Critter gains ground/bubble shadows while retaining embedded/custom art and cache ownership.
+
+Two deliberate hosted safety deferrals: automatic publication-date file reads use an unowned fork queue upstream, so they remain disabled in OrbitUI with an explicit explanation; cached/curated and explicit local display dates still work. The new folder-delete flow is not exposed because it purges sidecars before a fallible folder deletion. Move/rename and standalone component fallbacks remain.
+
+Existing Home/Reading dashboard, Manga/profiles/series/artwork, local tags, reader return, settings and BookOrbit/Hardcover/MAL/patch owners are retained. No books/EPUBs/reading sidecars/remote statuses are rewritten by date editing. No server/device deployment, bootstrap change, removed language/artwork or increased old-updater limit. Same 2,000 API-1 installed paths, 24 exact lazy helpers and 407 canonical identities.
+
+Preview channel only. Stable/latest remains 1.0.0; use the stable channel to stay on that accepted release. Install orbitui.koplugin.zip, back up settings/reading data and restart KOReader. New 1.1 UI/lifecycle has not been physically accepted on Bigme/Boox. Automated/native headless gates are not device tests. BookOrbit status import remains experimental and OFF by default.
+
+## Svenska
+
+Beta.1 publicerades aldrig: beta.2 rättar ett återskapat fel där en väntande sidtimer kunde skriva över ett manuellt bakgrundsval. Den pushade taggen behålls orörd.
+
+Stabil 1.0.0 behåller den användargodkända RC2-koden. Den här separata 1.1-betan tar in Bookshelf 6.3.2 och SimpleUI-fixar efter granskning.
+
+- Ny bokmenylayout, sortering/token för utgivningsår och egna lokala visningsdatum. Kända datum från Hardcover/Calibre/OPDS och användaren kan visas utan en ny synkägare.
+- Bakgrundsbilder kan sträckas ut, beskäras för att fylla eller anpassas till skärmen. Skärmformade förhandsbilder, skydd mot sena meny-anrop och begränsade extrema bildallokeringar.
+- Fixar för metadata/serier, filtrerade mappar, sparade sidfakta/bokryggsfärger och omslag. Våra avbrytbara metadatajobb behålls. Förväntade förbättringar är inte nya prestandamätningar på Bigmen.
+- Cover Deck kortar exempelvis japanska titlar säkrare. Läskompanjonen får skuggor utan ändrat ägarskap för bilder eller cache.
+
+Två medvetna säkerhetsbegränsningar i OrbitUI: automatisk datumläsning ur bokfiler är avstängd tills bakgrundskön fått rätt livscykel-/Android-skydd; kända datum och egna visningsdatum fungerar. Ny mappradering erbjuds inte eftersom misslyckad filradering kan lämna sidodata raderade. Flytta/byt namn och fristående komponentbeteende behålls.
+
+Hem/Läsöversikt, Manga/profiler/serier/bilder, lokala taggar, snabbåtergång, inställningar och externa integrationer behålls. Datumredigering skriver inte böcker, EPUB-taggar, läsdata eller serverstatus. Ingen server/enhet driftsätts; inga språk/bilder tas bort och äldre uppdaterares gränser höjs inte.
+
+Endast förhandskanalen. Stabil/latest är fortsatt 1.0.0; välj stabilkanalen för att stanna där. Hämta orbitui.koplugin.zip, säkerhetskopiera och starta om KOReader. Den nya 1.1-vyn behöver fysisk testning på Bigme/Boox; automattester ersätter inte det. BookOrbit-statusimport är fortsatt experimentell och avstängd som standard.
+
+Built on / bygger på SimpleUI by doctorhetfield-cmd and contributors, and Bookshelf by AndyHazz and contributors. See README.md, LICENSE, NOTICE and asset-specific notices.
+
 # v1.0.0-rc.2 · 2026-11-02
 
 ## OrbitUI 1.0.0-rc.2 — release candidate, not stable 1.0
@@ -115,31 +155,3 @@ Beta 28 includes the latest reviewed Bookshelf upstream and optional BookOrbit r
 Existing Home, shelves, profiles, fast return, offline tags/indexing, ornaments and external patch behavior remain. No new installed path, bootstrap/API-1 change, cache reset or server deployment. Previous releases/assets are immutable. Swedish/English controls and help are included.
 
 Update through the preview channel and restart KOReader. Still a prerelease: latest OPDS/status changes have no fresh physical Bigme/Boox acceptance or measured latency gain. See TESTING for automated/sealed/native OTA evidence and remaining device gates.
-
-# v0.1.0-beta.27 · 2026-11-01
-
-## Svenska
-
-Beta 27 samlar våra senaste taggfunktioner och Android-fixar. Ingen ny upstream-import: Bookshelf 6.1.1 och SimpleUI-baslinjen är oförändrade.
-
-- **OrbitUI-inställningar → Bookshelf → Taggar och indexering**: Uppdatera läser nya/ändrade EPUB-filer och försöker igen med fel. **Läs om alla EPUB-taggar…** läser efter bekräftelse om hela det konfigurerade biblioteket. Ingen gräns på 400 filer. Pausa/Fortsätt fungerar efter omstart; stängning pausar och behåller färdiga läsningar. Fortsätt räknar om beståndet men återanvänder oförändrade filer från samma jobb. Låt KOReader vara öppet medan jobbet körs, och pausa innan du ersätter EPUB-filer.
-- **Smarta taggchip**: långtryck på en lokal EPUB-tagg i Tags/Taggar, namnge chipet och kombinera upp till 16 taggar med **OCH/ELLER**, i valt eller alla lokala bibliotek. Vanlig sortering, visning och Hem-pinning behålls. Chip/sökresultat visar högst 400 träffar med tydlig **400+**-markering; den separata indexeringen har ingen sådan filgräns.
-- **Snabbare återanvändning av taggar** via ett separat lokalt index, med synliga framsteg och fungerande Stopp/Fortsätt. Saknade/ändrade/oläsbara filer hoppas inte tyst över.
-- **Android-fixar** för appmodulens sidpilar, native-inläsningsrutor och omslagsbevarande vid manuell metadatauppdatering. Din inställning för automatiskt säkerhetsläge ändras inte.
-
-Offline-taggar kräver `bookorbit:tags` i EPUB-filen, men inget BookOrbit-konto, plugin eller servertillägg. Vanliga EPUB-ämnesord förblir genrer. Inga EPUB-filer, läsdata, externa synkägare eller gamla releaser ändras. Allt nytt har svenska och engelska texter.
-
-Uppdatera via förhandskanalen och starta om KOReader. Fortsatt beta: riktade Bigme-tester och automatiska/native-tester är inte fullständig enhets- eller 1.0-validering. Första läsningen av tusentals arkiv, särskilt Manga, kan fortfarande ta tid. Rotation, suspend/resume, alla läsarvägar och Boox behöver fortsatt bredare provning.
-
-## English
-
-Beta 27 publishes the offline tag-index/search and smart-chip work, plus the Android acceptance fixes since Beta 26. No additional upstream import; Bookshelf 6.1.1 and the SimpleUI baseline remain unchanged.
-
-- **OrbitUI settings → Bookshelf → Tags and indexing**: Update reuses unchanged entries and checks new/changed files and failures. Confirmed **Reread all EPUB tags…** reads every configured EPUB afresh, without a 400-file cap. Pause/Continue survives restart; closing pauses and keeps completed reads. Resume recounts current inventory while reusing unchanged successful files from that run. Keep KOReader open while indexing; pause before replacing EPUB files.
-- **Smart tag chips**: hold a local EPUB tag in Tags, name the chip and combine up to 16 literal tags with **AND/OR**, scoped to one library or all local libraries. Retain native sorting/filtering/views and Home pins. Match views still show at most 400 results and disclose **400+**; the separate indexer is not capped.
-- A separate disposable SQLite index and bounded input-aware batches support progressive, stoppable local tag search. Failed files stay retryable, not false empty results.
-- Fix Android app-page navigation, explicitly native progress-dialog ownership, and transactional cover preservation during manual metadata refresh without changing the automatic safe-mode preference.
-
-Offline tags mean embedded `bookorbit:tags` JSON, not ordinary EPUB subjects/genres or KOReader collections. No BookOrbit account/plugin/API extension is required. No book/reading-data edits, cache reset, server deployment, sync-owner change, new installed path or bootstrap/API-1 change. Swedish/English controls and help are included. Previous releases and assets remain immutable.
-
-Update through the preview channel and restart KOReader. Still a prerelease: focused Bigme and automated native-boundary checks are not whole-library cold completion, physical-panel benchmarking, Boox compatibility or 1.0 acceptance. See TESTING for evidence and remaining gates.

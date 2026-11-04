@@ -13,7 +13,7 @@ by **Goran Spasojevic**. Created with GitHub's **Use this template** feature fro
 
 | Pack | Source SVGs | Built SVG lookups | Release asset |
 |---|---|---|---|
-| Glyphs Poly | 332 | 332 | `zen-glyphs-poly.zip` |
+| Glyphs Poly | 366 | 366 | `zen-glyphs-poly.zip` |
 
 The pack covers navigation, library tabs, quick actions, reader menus, chevrons,
 text alignment, column layouts, stars, open Wi-Fi signal levels, batteries,
@@ -39,6 +39,13 @@ devices display the same artwork in grayscale.
 Reader controls include `pin.svg`, `footnote.svg`, `return.svg`, and the
 compatible `return_old.svg` lookup, alongside the highlight style, color,
 delete, filter, and sort icons.
+
+Page-browser and reader-control lookups include `annotations.svg`,
+`bookmark_outline.svg`, `document.svg`, `page.svg`, `profiles.svg`,
+`moon_outline.svg`, `history.svg`, and zoom and fullscreen controls.
+`pin_remove.svg` and `bookmark_remove.svg` draw a line through the pack's own
+pin and bookmark. Settings rows also cover the copy, cut, paste, sort, sync,
+and other `settings_*` lookups used by ZenOS context menus.
 
 ## Install with ZenPM
 
