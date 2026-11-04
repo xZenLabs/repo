@@ -1,3 +1,9 @@
+# v8.7.10 · 2026-11-04
+
+### Fixed
+
+- The Achievements info dialog appearing behind the list when SimpleUI is installed #87 (Thanks: @NijatTagizada )
+
 # v8.7.9 · 2026-10-28
 
 ### Changed
@@ -32,9 +38,3 @@
 ### Fixed
 
 - ISO date format for month now '01' instead of '1'
-
-# v8.7.5 · 2026-10-23
-
-### Changed
-
-- ISO date format: yearly chart shows month numbers (1–12) instead of month names; "Last 7 days" chart shows dates (10-23) instead of Today/Yesterday/weekday. Other formats unchanged.
