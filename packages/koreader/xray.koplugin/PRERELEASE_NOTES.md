@@ -1,3 +1,16 @@
+# 26.11.4-beta2 · 2026-11-04
+
+- Do unit scanning in the background 
+
+**Full Changelog**: https://github.com/ultimatejimmy/xray.koplugin/compare/26.11.2-beta...26.11.4-beta2
+
+# 26.11.4-beta · 2026-11-04
+
+- Improve spoiler mode logic
+- Improve pre-fetch/collision logic
+
+**Full Changelog**: https://github.com/ultimatejimmy/xray.koplugin/compare/26.11.2-beta...26.11.4-beta
+
 # 26.11.2-beta · 2026-11-02
 
 - Address network check potential issue: #161 
@@ -40,17 +53,3 @@ You can now jump straight into X-Ray details when selecting a character, locatio
   * **Disabled:** Hides in-text X-Ray buttons completely.
 
 **Full Changelog**: https://github.com/ultimatejimmy/xray.koplugin/compare/26.10.22...26.10.23-beta
-
-# 26.10.21-beta2 · 2026-10-21
-
-- Change notification logic on full-book fetch
-- update logging
-
-
-**Full Changelog**: https://github.com/ultimatejimmy/xray.koplugin/compare/26.10.19-beta...26.10.21-beta2
-
-# 26.10.19-beta · 2026-10-20
-
-- Fix bug with highlighted text.
-
-**Full Changelog**: https://github.com/ultimatejimmy/xray.koplugin/compare/26.10.18-beta...26.10.19-beta
