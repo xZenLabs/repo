@@ -1,3 +1,27 @@
+# v1.2.0 · 2026-11-04
+
+Solar now has icons for ZenOS and Project: Title, in both Colour and Mono. When you install, Solar sets up KOReader and the icons for the UI you're using: SimpleUI, ZenOS or Project: Title.
+
+- **ZenOS:** a full icon pack covering ZenOS, PM and FM. Supplementary icons are added as extra choices for App Launcher shortcuts.
+- **Project: Title:** title bar icons, and its book and folder images.
+- **SimpleUI:** an icon for the new Exit Book button, so the pack covers all 48 SimpleUI icons.
+- **Supplementary icons:** up from 84 to 173, with simple names that describe each drawing.
+- **Change to plugin structure:** each drawing is now stored once, and the plugin builds the pack it needs when you install.
+
+<details>
+<summary>New icons (72)</summary>
+
+`ao3`, `atom`, `battery_charging`, `battery_half`, `battery_low`, `bell`, `bell_off`, `blocks`, `book`, `bookorbit`, `bug`, `candle`, `chart_up`, `checklist`, `clapperboard`, `clipboard`, `compass`, `connections`, `cpu`, `database`, `debug`, `downgrade`, `downloads`, `education`, `enable`, `extend`, `filter`, `font`, `forge`, `gestures`, `grid`, `incognito`, `keyboard`, `koreader`, `lightning`, `mail`, `media`, `more_vertical`, `network`, `open_box`, `open_link`, `origami`, `package`, `patches`, `pause`, `pie_chart`, `qrcode`, `queue_remove`, `remove`, `scan`, `scan_plugins`, `shield_check`, `shield_lock`, `shield_warning`, `skip_left`, `skip_right`, `sliders_horizontal`, `snowflake`, `sort`, `sort_asc`, `sort_desc`, `speed`, `spinning_top`, `theme`, `toc`, `unverified`, `update`, `upgrade`, `upload`, `verified`, `wallpaper`, `waveform`
+
+</details>
+
+### Notes
+- **Manual installs** now cover the KOReader icons only. The SimpleUI, ZenOS and Project: Title icons need the plugin.
+- **Renamed icons:** some pre-existing supplementary icons have been renamed, and you may need to reapply following this update.
+- **Known issues:** A few places in ZenOS load its own icons directly instead of through icon packs, so they keep ZenOS's icons even with Solar selected. This has been reported to ZenOS, and Solar already includes the icons for when it's fixed.
+
+Updating: Choose **Check for updates** in **Tools → Solar Icon Pack**. After KOReader restarts, choose your style again to install the new icons. For more information see the [README](https://github.com/pxlflux/solariconpack.koplugin#readme).
+
 # v1.1.0 · 2026-10-18
 
 60 new supplementary icons
