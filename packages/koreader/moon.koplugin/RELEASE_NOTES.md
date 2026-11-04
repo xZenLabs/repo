@@ -1,3 +1,41 @@
+# v0.4.16 · 2026-11-04
+
+## 月读 v0.4.16
+
+KOReader 插件包：`book.koplugin-v0.4.16.zip`
+
+输入法词库（整库，手动 sideload）：`dictionary.sqlite3 dictionary-wubi.sqlite3 dictionary-cangjie.sqlite3 dictionary-zhuyin.sqlite3`
+
+安装：解压后将 `book.koplugin` 复制到 KOReader 的 `plugins` 目录，然后重启。
+
+词库 sideload：下载对应布局的词库，直接放入 KOReader 数据目录下的
+`.moon/`（与 `book.sqlite3` 同级）。附件已使用最终文件名，无需重命名。
+
+### 更新内容
+
+相对上一版本 `v0.4.15`：
+
+#### 新功能
+
+- :sparkles: (bookorbit): 拉取书架时同步已读状态 (#90) (c5a39848)
+
+#### 修复
+
+- :bug: (remote): 同名 Cookie 有多个时逐个验令牌，不只认第一个 (58394a84)
+- :bug: (db): 书库文件损坏时挪开坏库并自动重建 (b4ac6dd5)
+
+#### 界面
+
+- :lipstick: (setting): 设置页提示行统一为 Row.note，词库手动安装改成独立入口 (136a0bfc)
+
+#### 变更
+
+- :loud_sound: (dictionary): 查词回退原生窗时记录是哪个插件按钮导致 (4ddbe6a0)
+
+### 完整对比
+
+https://github.com/AnkioTomas/moon/compare/v0.4.15...v0.4.16
+
 # v0.4.15 · 2026-11-04
 
 ## 月读 v0.4.15
@@ -202,38 +240,3 @@ KOReader 插件包：`book.koplugin-v0.4.12.zip`
 ### 完整对比
 
 https://github.com/AnkioTomas/moon/compare/v0.4.11...v0.4.12
-
-# v0.4.11 · 2026-11-02
-
-## 月读 v0.4.11
-
-KOReader 插件包：`book.koplugin-v0.4.11.zip`
-
-输入法词库（整库，手动 sideload）：`dictionary.sqlite3 dictionary-wubi.sqlite3 dictionary-cangjie.sqlite3 dictionary-zhuyin.sqlite3`
-
-安装：解压后将 `book.koplugin` 复制到 KOReader 的 `plugins` 目录，然后重启。
-
-词库 sideload：下载对应布局的词库，直接放入 KOReader 数据目录下的
-`.moon/`（与 `book.sqlite3` 同级）。附件已使用最终文件名，无需重命名。
-
-### 更新内容
-
-相对上一版本 `v0.4.10`：
-
-#### 修复
-
-- :bug: (battery): 按节点真实单位换算，Oasis 健康度不再是 0.1% (c099b4c9)
-- :bug: (waveform): kindle_waveform 加上 Kindle Basic 2 (38278cf8)
-- :bug: (waveform): kindle_waveform 只对 Kindle Basic 3 生效，删除 MTK 分支 (8b7e82d8)
-- :bug: (desktop): 彩色墨水屏换页签闪一次清残影 (3dc69ade)
-- :bug: (bluetooth,night): 守护进程掉线自动拉起、夜间刷新走夜间波形 (a27242a4)
-- :bug: (remote): 装完插件不再因全局 T 崩溃而跳过重启 (e9a700fc)
-
-#### 变更
-
-- :rewind: (desktop): 换页签改回 ui，彩色屏不再闪 (c7afbae7)
-- :rewind: (night): 撤回夜间波形改动，kindle_waveform 保持原范围 (d5080d94)
-
-### 完整对比
-
-https://github.com/AnkioTomas/moon/compare/v0.4.10...v0.4.11
