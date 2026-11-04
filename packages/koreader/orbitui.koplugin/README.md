@@ -65,28 +65,25 @@ explains the extra controls and where to find them.
 
 ### Local books first, online services optional
 
-**1.0.0-rc.2 — release candidate, not stable 1.0.** Feature freeze continues.
-Fixes the reproduced tag-search/index dialog retirement bug: Close remains
-usable, sleep pauses work without automatic restart, and completed tag reads
-are kept. Tag-result title taps now select the book on its real shelf with its
-cover/description instead of opening the reader; long-press still opens details.
-Existing Home/Manga, profiles, artwork and optional integrations remain. No
-upstream import, reading-data migration, sync change or server deployment.
-Use the **preview channel** and restart KOReader after updating. Physical
-Bigme/Boox sleep/wake, complete large-library indexing, shelf-reveal presentation
-and on-device update/recovery checks remain open.
-[RC scope and test plan](docs/OTA.md#orbitui-100-rc2).
+**1.0.0 — first stable release.** Promotes the same runtime implementation as
+the user-accepted RC2; the upstream backlog is reserved for a separate 1.1 beta.
+Home/Reading dashboard, Library/Manga, shared book details, local tags and
+optional integrations retain their behavior. No new reading-data migration,
+sync owner or server deployment. Update through **stable** or **preview** and
+restart KOReader. Back up settings and reading data before installation.
+Optional BookOrbit status import remains experimental and OFF by default.
+User acceptance is not a compatibility certification for every Bigme/Boox model
+or every recovery/large-library scenario. [Release notes](docs/OTA.md#orbitui-100).
 
-**Svenska: 1.0.0-rc.2 är en testkandidat, inte stabil 1.0.** Funktionsfrysen
-fortsätter. Fixar den återskapade låsningen i taggsökning/indexering: Stäng
-fungerar även när vyn blivit inaktuell, vila pausar utan automatisk återstart
-och redan lästa taggar behålls. Titeltryck i taggträffar markerar nu boken i rätt
-bokhylla med omslag/beskrivning i stället för att öppna läsvyn. Långtryck öppnar
-fortfarande bokdetaljer. Hem/Manga, profiler, bilder och integrationer behålls;
-ingen upstream-merge, läsdatamigrering, synkändring eller serverdriftsättning.
-Uppdatera via **förhandskanalen** och starta om KOReader. Fysiska Bigme/Boox-
-tester av vila/uppvakning, full indexering, markerad bok och uppdatering/
-återställning återstår.
+**Svenska: 1.0.0 är första stabila releasen.** Samma funktionskod som den
+användargodkända RC2; upstream-nyheterna kommer i en separat 1.1-beta.
+Hem/Läsöversikt, Bibliotek/Manga, bokdetaljer, lokala taggar och valfria
+integrationer behåller sitt beteende. Ingen ny läsdatamigrering, synkägare eller
+serverdriftsättning. Uppdatera via **stabil** eller **förhandskanalen** och starta
+om KOReader. Säkerhetskopiera inställningar och läsdata först. BookOrbits
+statusimport är fortsatt experimentell och avstängd som standard. Godkännandet
+är inte en certifiering av alla Bigme/Boox-modeller eller alla återställnings-
+och storbiblioteksscenarier.
 
 You can use OrbitUI with ordinary local books, KOReader collections, local
 reading goals and no online account. BookOrbit, Hardcover and MyAnimeList are
