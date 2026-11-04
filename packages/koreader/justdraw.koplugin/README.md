@@ -66,8 +66,12 @@ notebooks and notes stay on the device that made them.
 
 Everything below hangs off those two entries. If you would rather not go through
 the menu, KOReader's Gesture Manager lists the plugin's actions under
-*JustDraw: toggle drawing*, *toggle eraser*, *undo stroke*, *toggle toolbar*,
-*open notebooks*, *browse document notes* and *open/close drawing sheet*.
+*JustDraw: toggle drawing*, *toggle eraser*, *undo stroke*, *redo*, *toggle
+toolbar*, *open notebooks*, *open last notebook*, *browse document notes* and
+*open/close drawing sheet*. Undo, redo and the eraser reach an open notebook
+from the file browser as well as from a book; inside the notebook only a
+gesture the page does not swallow (two fingers, a multiswipe, a key) can
+fire them.
 
 ## Drawing over a document
 
@@ -128,7 +132,8 @@ are reading and starts drawing on it.
 2. The library is a grid of cards: folders first, then notebooks, each with a
    picture of its current page, its title and its number of pages. **New
    notebook** asks for a name and a paper style (*Blank*, *Ruled*, *Narrow
-   ruled*, *Squared*, *Dotted*, *Checklist*). The page takes the shape of the
+   ruled*, *Squared*, *Dotted*, *Checklist*); the style you chose last time
+   is preselected. The page takes the shape of the
    paper under the editor's controls on the screen it is created on, so it
    reaches both edges; on a Kindle Scribe in portrait that is 158 × 179 mm, and
    an export keeps that size. Every page added later has the same shape.
@@ -137,9 +142,11 @@ are reading and starts drawing on it.
    holds **Exit notebook · Pen · Eraser · Edit · Undo · Redo · Previous page ·
    Next page · More**. On the last page, **Next page** adds a new one. Hold an
    icon to see its name. The page takes the rest of the screen, so no control
-   sits under a resting hand.
-4. **More** offers *Go to page…*, *Add page at end*, *Paper style* (for this
-   page), *Export…*, *Send…* (with LocalSend, see below), *Rename*, *Delete
+   sits under a resting hand. On a device with page keys, the keys turn pages
+   too; a key never adds one.
+4. **More** offers *Go to page…*, *Add page at end*, *Add page after this
+   one*, *Paper style* (for this page), *Paper style for all pages*, *Export…*, *Send…* (with LocalSend, see below), *Rename*, *Fast
+   refresh while drawing* (the same switch as in the reader menu), *Delete
    page*, *Delete notebook* and the shared pen and refresh settings.
 
 ### The library
@@ -147,6 +154,9 @@ are reading and starts drawing on it.
 - **Folders** are one level deep. **New folder** makes one; tap a folder to open
   it, and the first card inside is **Back**. Deleting a folder puts its
   notebooks back in the library — it never deletes them.
+- **Search** filters the gallery by title across every folder; the header
+  shows what you searched, and Back (or an empty search) shows everything
+  again.
 - **Sort** orders notebooks by *Recently changed*, *Oldest first*, *Title A–Z*
   or *Title Z–A*, and remembers your choice.
 - **Hold a card** for its actions: *Rename*, *Move…*, *Duplicate*, *Export…*,
@@ -212,7 +222,8 @@ Six styles, each in **Thin**, **Medium** or **Thick**: **Round ink** (the
 default until you choose another; where only the original direct ink exists it
 draws as the ink pen), **Ink pen**, **Graphite**, **Marker**, **Highlighter** and **Textured
 graphite**. The highlighter is black at 20% opacity and leaves the text under it
-readable. Your choice is shared between notebooks and documents.
+readable. Your choice is shared between notebooks and documents, and so is
+the **Eraser** size on the same panel: **Small**, **Medium** or **Large**.
 
 Open **More → Pen settings** to change style and width together, or tap the
 **Pen** button when it is already selected. Tapping **Pen** while the eraser is
