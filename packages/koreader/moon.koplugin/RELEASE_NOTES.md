@@ -1,3 +1,37 @@
+# v0.4.15 · 2026-11-04
+
+## 月读 v0.4.15
+
+KOReader 插件包：`book.koplugin-v0.4.15.zip`
+
+输入法词库（整库，手动 sideload）：`dictionary.sqlite3 dictionary-wubi.sqlite3 dictionary-cangjie.sqlite3 dictionary-zhuyin.sqlite3`
+
+安装：解压后将 `book.koplugin` 复制到 KOReader 的 `plugins` 目录，然后重启。
+
+词库 sideload：下载对应布局的词库，直接放入 KOReader 数据目录下的
+`.moon/`（与 `book.sqlite3` 同级）。附件已使用最终文件名，无需重命名。
+
+### 更新内容
+
+相对上一版本 `v0.4.14`：
+
+#### 新功能
+
+- :sparkles: (library): 书库「更多」按钮可选关闭、进入详情或弹出菜单 (28b2a17a)
+
+#### 修复
+
+- :bug: (ai): X-Ray 大请求改用 SSE 流式，避免整包等待超时 (7dc7d55d)
+- :bug: (local): 开文档时子进程崩溃的书改按文件名入库 (fef59478)
+
+#### 变更
+
+- :loud_sound: (workers): 子进程无结果退出时记录可用内存，便于排查 OOM (7e806585)
+
+### 完整对比
+
+https://github.com/AnkioTomas/moon/compare/v0.4.14...v0.4.15
+
 # v0.4.14 · 2026-11-04
 
 ## 月读 v0.4.14
@@ -203,36 +237,3 @@ KOReader 插件包：`book.koplugin-v0.4.11.zip`
 ### 完整对比
 
 https://github.com/AnkioTomas/moon/compare/v0.4.10...v0.4.11
-
-# v0.4.10 · 2026-11-01
-
-## 月读 v0.4.10
-
-KOReader 插件包：`book.koplugin-v0.4.10.zip`
-
-输入法词库（整库，手动 sideload）：`dictionary.sqlite3 dictionary-wubi.sqlite3 dictionary-cangjie.sqlite3 dictionary-zhuyin.sqlite3`
-
-安装：解压后将 `book.koplugin` 复制到 KOReader 的 `plugins` 目录，然后重启。
-
-词库 sideload：下载对应布局的词库，直接放入 KOReader 数据目录下的
-`.moon/`（与 `book.sqlite3` 同级）。附件已使用最终文件名，无需重命名。
-
-### 更新内容
-
-相对上一版本 `v0.4.9`：
-
-#### 修复
-
-- :bug: (dictionary): 单独开词典不再弹出 KOReader 词典窗 (442a2b42)
-
-#### 重构
-
-- :recycle: (l10n): 删除已不用的「冷暖色调」词条 (dca3874a)
-
-#### 变更
-
-- :children_crossing: (panel): 灯光滑块按硬件档拖动和逐档调节 (08122a10)
-
-### 完整对比
-
-https://github.com/AnkioTomas/moon/compare/v0.4.9...v0.4.10
