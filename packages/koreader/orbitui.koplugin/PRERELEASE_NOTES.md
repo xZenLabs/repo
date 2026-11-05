@@ -1,3 +1,35 @@
+# v1.1.0-beta.3 · 2026-11-05
+
+OrbitUI 1.1.0-beta.3 — Series / Volumes · Serier / Volymer
+
+## Svenska
+
+- Taggträffar får flikarna **Serier / Volymer**. Manga visar Serier som standard; ditt uttryckliga val sparas per ursprungsbibliotek. Sökningen omfattar fortfarande samma lokala bibliotek.
+- En serie visas en gång med antal matchande respektive lokalt indexerade volymer. Fristående böcker och okänd metadata finns kvar. Varningar visas om första volymen saknas i metadata eller volymordningen är okänd. Den befintliga gränsen på 400 volymträffar förklaras även i serievyn.
+- Ett tryck markerar första tillgängliga lokalt indexerade volymen i rätt serie/bokhylla så att omslag och beskrivning visas, utan att boken öppnas. Första volymen kan sakna den sökta taggen. Flikbyte återanvänder taggträffar och cachad metadata, inte en ny EPUB-skanning.
+- Senaste SimpleUI-mergen hindrar orelaterade menyer från att rita om nederlisten. Vanlig filbläddring och menyer med egen nederlist behåller sidnavigeringen. En ny post i upstreams lista över krockande omslagspatchar följer med som källkod, men OrbitUI kan fortfarande inte ändra eller stänga av dina patchar. Bookshelf var redan ikapp.
+
+Endast förhandskanalen. **Stabil/latest är fortfarande 1.0.0.** Inga böcker, läsdata, serverstatusar eller befintliga inställningar migreras/raderas. API1/bootstrap, bilder, profiler och BookOrbit/Hardcover/MAL/patch-integrationernas ägare behålls. BookOrbit-statusimport är fortsatt experimentell och avstängd som standard.
+
+De nya serievyerna och menyfixen är automattestade men ännu inte fysiskt godkända på Bigme/Boox. Prova svenska/engelska, rotation, Stoppa/Stäng/vila under indexering och återgång från serieförhandsvisning med filter. Inga nya enhetsmätta prestandasiffror hävdas. Tidigare 1.1-skydd behålls: automatisk datumläsning ur filer och den nya mappraderingen är uppskjutna i OrbitUI.
+
+Hämta **orbitui.koplugin.zip**, inte källkodsarkivet. Säkerhetskopiera inställningar/läsdata och starta om KOReader efter installation. Ingen server eller användarenhet driftsätts av publiceringen.
+
+## English
+
+- Tag results gain **Series / Volumes** tabs. Manga defaults to Series; explicit choices are remembered per origin library without narrowing the existing local search scope.
+- One row per series shows matching versus locally indexed volumes. Standalone and unknown-metadata books remain visible, with honest cached-missing-first/unknown-order warnings and disclosure of the existing 400-volume hit cap.
+- Tap a series to select its first available locally indexed volume in the correct shelf/series preview, showing cover and description without opening the reader. That first volume may be untagged. Switching tabs reuses hits and bounded read-only cached metadata, not another EPUB scan.
+- Reviewed SimpleUI updates stop unrelated menus from refreshing the bottom bar while preserving native chooser/injected-menu pagination. The updated incompatible cover-patch catalog remains upstream source only: OrbitUI's read-only compatibility shim cannot rename or disable patches. Bookshelf was already current.
+
+**Preview only; stable/latest remains 1.0.0.** No book/reading-data migration, cache wipe, new sync owner, bootstrap/API1 change or server/device deployment. Existing artwork, profiles, settings and external integrations remain. BookOrbit status import stays experimental and OFF by default. Existing hosted automatic file-date/folder-delete safety deferrals remain.
+
+Automated/native headless gates are not physical Bigme/Boox acceptance or measured performance gains. The new SV/EN views, rotation, index/grouping Stop/Close/sleep, filtered series preview/return and real menu refresh still need device testing. Install orbitui.koplugin.zip, back up settings/reading data and restart KOReader.
+
+Reviewed source pins: Bookshelf d47edfcc7c160691417235201595ab12cdffbdfe; SimpleUI 4bf2d2c5605d4172c5283e224450854d0b72219b, full unsquashed ancestry.
+
+Built on / bygger på SimpleUI by doctorhetfield-cmd and contributors, and Bookshelf by AndyHazz and contributors. See README.md, LICENSE, NOTICE and asset-specific notices.
+
 # v1.1.0-beta.2 · 2026-11-04
 
 OrbitUI 1.1.0-beta.2 — separate upstream preview / separat upstream-beta
@@ -127,31 +159,3 @@ Existing Home/Bento, Manga profiles, aspect-preserving series artwork, tags/inde
 Swedish/English controls/help; the same 2,000 installed paths and unchanged API-1 bootstrap. Previous public releases, tags and assets are immutable. Update through the preview channel and restart KOReader.
 
 Still a prerelease: latest contrast/footer/swipe/menu changes have automated verification but no fresh physical Bigme/Boox visual acceptance or measured speedup. See TESTING for exact results and remaining device checks.
-
-# v0.1.0-beta.28 · 2026-11-01
-
-## Svenska
-
-Beta 28 innehåller senaste granskade Bookshelf-upstream och den valfria BookOrbit-statusimporten. SimpleUI är redan uppdaterat.
-
-- **OPDS-kataloger:** utgivningsår kan nu visas med `%calibre{pubdate}` för både OPDS 1.x och 2.0. Publiceringsdatum prioriteras framför datum då boken lades till; första kända året behålls när utgåvor slås ihop.
-- **Experimentell statusimport:** **Integrationer → BookOrbit → Hämta lässtatus från BookOrbit**. Avstängd som standard. Kontrollerar redan kopplade böcker på enheten högst var 15:e minut efter att Hem/hyllan visas; manuell uppdatering och senaste lyckade kontroll finns på samma sida.
-- Importen kräver det separata servertillägget **read-statuses v1 för exakt BookOrbit 3.6.0**. Det är byggt/testat lokalt men **ännu inte publicerat eller driftsatt**. Enbart OrbitUI-uppdateringen ger alltså inte serverstödet. Ingen server ändras i denna release.
-- Öppna böcker, väntande ångring, nyare lokala ändringar och osäkra konflikter samma dag skyddas. Oläst/Vill läsa återställer aldrig lokal läsning. Sidposition, historik, betyg, recensioner och BookOrbits egna synkinställningar behålls. Ingen ny skrivare till servern eller Hardcover.
-
-Hem/Bento, Manga-profiler, snabbretur, taggchip, indexering, ornament och externa patchar behålls. Inga nya installerade filer eller bootstrap-/API-1-ändringar. Svenska och engelska texter ingår. Tidigare releaser och deras filer ändras inte.
-
-Uppdatera via förhandskanalen och starta om KOReader. Fortsatt beta: senaste OPDS-/statusändringarna är automatiskt testade men ännu inte provade på Bigme/Boox. Ingen ny uppmätt prestandaförbättring utlovas. Se TESTING för testresultat och återstående enhetskontroller.
-
-## English
-
-Beta 28 includes the latest reviewed Bookshelf upstream and optional BookOrbit reading-status import. SimpleUI is already current.
-
-- OPDS 1.x/2.0 catalog books expose their publication year through `%calibre{pubdate}`, preferring publication-specific dates and preserving the first known year when editions merge.
-- **Experimental, OFF by default:** **Integrations → BookOrbit → Import reading status from BookOrbit** checks already matched device books after Home/a shelf is visible, at most every 15 minutes. Update now and the last successful check are available there.
-- Requires the separate **read-statuses v1 extension for exact BookOrbit 3.6.0**, currently built/tested locally but **NOT published or deployed**. This OrbitUI update alone does not provide server support and deploys nothing.
-- Protects open/parked books, pending Undo, newer local changes and ambiguous same-day conflicts. Unread/Want to Read never reset a read. Position, history, ratings/reviews and native sync preferences remain unchanged. GET-only server access; no new remote/Hardcover writer or forced Manga rebuild.
-
-Existing Home, shelves, profiles, fast return, offline tags/indexing, ornaments and external patch behavior remain. No new installed path, bootstrap/API-1 change, cache reset or server deployment. Previous releases/assets are immutable. Swedish/English controls and help are included.
-
-Update through the preview channel and restart KOReader. Still a prerelease: latest OPDS/status changes have no fresh physical Bigme/Boox acceptance or measured latency gain. See TESTING for automated/sealed/native OTA evidence and remaining device gates.
