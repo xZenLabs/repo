@@ -1,3 +1,23 @@
+# v0.2.5 · 2026-11-05
+
+## Added
+
+- *Render entries with the Kindle's browser (experimental)* (Kindles only, off by default): *Search → Settings → MDict dictionaries → Display*. Entries are laid out by the web browser that the Kindle's firmware ships (5.16 to 5.18, which runs it in Amazon's `/chroot`), as the WebView does on Android: with the dictionary's own CSS, vertical text, and the entry's scripts (sections that open and close, picture viewers). The first lookup starts the browser, which takes about 20 seconds on a Paperwhite 4; a message says so. It then stays open for the next lookups, also while the Kindle sleeps, and is closed after twenty minutes without one. It uses about 70 MB of memory, and starts only when 80 MB are free. Its window stays off the screen and it is kept away from the Kindle's own software, as in the *Kindle browser test*. If the browser cannot start or ends, entries are shown with KOReader's renderer for the rest of the session, with a note saying why. Sounds do not play on Kindles. If the Kindle behaves oddly, turn the option off and restart the Kindle. Reports are welcome in a GitHub issue.
+
+## Changed
+
+- Dictionaries that name Hiragino, Palatino, Georgia, Verdana and similar fonts get the Kindle's own Mincho, Gothic, Bookerly and Amazon Ember fonts in the Kindle's browser.
+- The *Kindle browser test* closes the browser right away instead of waiting five seconds for it.
+
+## Fixed
+
+- A tap on a picture viewer that an entry's script opened could fall through to the entry under it in older versions of Chromium, the Kindle's among them.
+
+## Install
+
+- From 0.2.0: *Search → Settings → MDict dictionaries → Updates → Check for updates*, or wait for the automatic offer. Then restart KOReader (on Android, exit KOReader and open it again).
+- From 0.1.0: unzip `mdict.koplugin-0.2.5.zip` into `koreader/plugins/`, replacing the `mdict.koplugin` folder, and restart KOReader.
+
 # v0.2.4 · 2026-11-04
 
 ## Added
@@ -54,22 +74,3 @@
 
 - From 0.2.0: *Search → Settings → MDict dictionaries → Updates → Check for updates*, or wait for the automatic offer. Then restart KOReader (on Android, exit KOReader and open it again).
 - From 0.1.0: unzip `mdict.koplugin-0.2.1.zip` into `koreader/plugins/`, replacing the `mdict.koplugin` folder, and restart KOReader.
-
-# v0.2.0 · 2026-11-02
-
-The plugin now updates itself: it can check for new releases, download them and install them.
-
-## New
-
-- *Search → Settings → MDict dictionaries → Updates* shows the installed version and has *Check for updates*.
-- Automatic checks, at most once a day, offer each new version when it comes out. They only run when the device is already connected (Wi-Fi is never turned on for them), stay silent otherwise, and can be turned off with *Check for updates automatically*. An offer can be skipped for that version.
-- An update is checked against the size and SHA-256 that GitHub lists, unpacked next to the plugin, and moved in when KOReader next starts, so the running plugin is never half updated. After the restart, a notification says which version is now installed.
-
-## Install
-
-This is the first version that can update itself, so install it by hand once:
-
-1. Unzip `mdict.koplugin-0.2.0.zip` into `koreader/plugins/`, replacing the `mdict.koplugin` folder.
-2. Restart KOReader.
-
-Later versions install from the plugin's menu. On Android, restart by exiting KOReader and opening it again.

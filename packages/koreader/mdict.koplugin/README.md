@@ -108,7 +108,8 @@ note; a notification says when an index you were waiting for is ready.
 
 *MDict dictionaries* in the search menu:
 
-- **Display**: render with the WebView or KOReader's renderer, text size,
+- **Display**: render with the WebView or KOReader's renderer (on Kindles, with the
+  Kindle's own browser, see below), text size,
   e-ink mode (black text, no tinted backgrounds), your own font for all text,
   Latin text only, or Japanese/Chinese text only, reversed swipes for
   vertical text, and preparing the next result in advance (on by default: while
@@ -122,8 +123,19 @@ note; a notification says when an index you were waiting for is ready.
 - **Rebuild indexes**, **Clear extracted resources**, **Rescan**.
 - **Updates**: the installed version, *Check for updates*, and *Check for updates
   automatically* (on by default).
-- **Kindle browser check** (Kindles only): a report for the Kindle renderer being
-  developed, which would use the browser that Kindle firmware 5.16.4 and later ships.
+- **Render entries with the Kindle's browser (experimental)** (Kindles only, off by
+  default, in *Display*): lays entries out with the web browser of the Kindle's
+  firmware (5.16 to 5.18, Chromium 75 in Amazon's `/chroot`), as the WebView does on
+  Android: the dictionary's CSS, vertical text and the entry's scripts. The first
+  lookup starts the browser, which takes about 20 seconds on a Paperwhite 4; it then
+  stays open, also while the Kindle sleeps, and is closed after twenty minutes without
+  a lookup. Pages come from the browser's screencast (under a second each on the
+  emulated Paperwhite), with a screenshot when no frame comes. The browser uses about
+  70 MB of memory and starts only when 80 MB are free. If it cannot start, or ends,
+  entries fall back to KOReader's renderer for the session. Turn it off and restart the
+  Kindle if anything misbehaves.
+- **Kindle browser check** (Kindles only): a report for the Kindle renderer, about the
+  browser that Kindle firmware 5.16.4 and later ships.
   It only reads system information (memory, Amazon's services, the browser's files),
   starts nothing, and saves the report as `koreader/mdict-kindle-report.txt`.
 - **Kindle browser test (experimental)** (Kindles only): starts the Kindle's own
@@ -173,7 +185,8 @@ a tag or version that differs. A release needs an asset named
 - MDict 3.0 files, and registered files whose records are encrypted, are not
   supported yet.
 - Speex audio does not play.
-- The WebView renderer is Android only. On Kindle, Kobo, PocketBook and other
+- The WebView renderer is Android only, with an experimental one on Kindles with firmware
+  5.16 to 5.18 (see *Settings*). On other Kindles, Kobo, PocketBook and other
   devices, entries are laid out by KOReader's renderer (MuPDF) with the
   dictionary's CSS, as far as MuPDF supports it (no flexbox or grid). Vertical
   text, scripts (such as buttons that open or close a section) and audio do not work.
@@ -194,10 +207,12 @@ vectors in `spec/data/kosort-1.tsv`.
   the `kosort-1` key order and the sidecar index, lookups, KOReader hooks, and the
   updater (`update.lua`, `updater.lua`).
 - `mdict.koplugin/renderers/`: the pager (pager.js/pager.css), the pager document,
-  the WebView driver and its backends (Android JNI bridge, desktop Chromium bridge).
+  the WebView driver and its backends (Android JNI bridge; a Chromium driven over its
+  DevTools pipe, `cdp_bridge.lua`, which is the Kindle's browser in
+  `kindle_browser.lua` or a desktop one; the Playwright bridge).
 - `mdict.koplugin/widgets/`: the popup widgets (KOReader's HtmlBoxWidget and
   ScrollHtmlWidget interfaces, backed by the pager).
-- `kindle/`: the library the Kindle browser test preloads into Amazon's browser (it
+- `kindle/`: the library the Kindle renderer and browser test preload into Amazon's browser (it
   opens the DevTools pipe, keeps the window off the screen and away from the Kindle's
   own software), built into `mdict.koplugin/kindle/kindle_shim.so` by `kindle/build.sh`.
 - `android/`: Java side of the Android bridge, built into
@@ -212,10 +227,10 @@ vectors in `spec/data/kosort-1.tsv`.
 
     busted --lua=luajit spec/         # unit tests
     luacheck mdict.koplugin tools spec
-    # popup widgets and menus against a KOReader checkout, rendering with headless Chromium:
-    KOREADER_FRONTEND=<koreader>/frontend MDICT_CHROMIUM_BRIDGE=$PWD/tools/chromium-bridge/bridge.js \
-        NODE_PATH=<dir with playwright> busted spec/
-    MDICT_CHROMIUM=<chromium binary> busted spec/kindletest_spec.lua  # the Kindle test, run on Chromium
+    # popup widgets and menus against a KOReader checkout, rendering with headless Chromium
+    # over its DevTools pipe (or MDICT_CHROMIUM_BRIDGE=$PWD/tools/chromium-bridge/bridge.js
+    # with NODE_PATH=<dir with playwright>, through Playwright):
+    KOREADER_FRONTEND=<koreader>/frontend MDICT_CHROMIUM=<chromium binary> busted --lua=luajit spec/
     kindle/build.sh                   # needs gcc-arm-linux-gnueabihf and libx11-dev
     ANDROID_JAR=.../android-30.jar android/build.sh
     NODE_PATH=... node tools/pager-test/run.js --res <res dir> --out <dir> entry.html
