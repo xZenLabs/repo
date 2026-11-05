@@ -1,3 +1,41 @@
+# 26.11.5 · 2026-11-05
+
+This release introduces instant X-Ray lookups directly from text highlights, dedicated support for anthologies and short story collections, background unit scanning, and several performance optimizations and bug fixes.
+
+### Instant X-Ray Popups on Highlight
+
+You can now jump straight into X-Ray details when selecting a character, location, or term on the page, skipping intermediate dictionary popups or highlight menus.
+
+* **Direct lookups on text selection**: When enabled, long-pressing or highlighting a word or phrase that matches an X-Ray entry immediately opens its profile or footnote popup.
+* **Smart fallback**: If you select an entire sentence, an ordinary word, or text without an X-Ray entry, KOReader’s standard dictionary or highlight menu opens as usual.
+* **One-tap access to the highlight menu**: When an X-Ray popup opens from a selection, a new **Highlight Menu** button appears in the action bar. Tapping it restores your text selection and opens KOReader's native highlight menu so you can create notes, highlight text, translate, or look up terms in external dictionaries without losing your place.
+* **Configurable X-Ray mode setting**: Choose how X-Ray integrates with reading under *Settings* → *X-Ray Mode Settings*:
+  * *Button in Menu* (Default): Classic behavior; adds an X-Ray button inside KOReader's dictionary and highlight menus.
+  * *Auto-Popup on Highlight*: Displays X-Ray data instantly whenever a match is highlighted.
+  * *Disabled*: Hides in-text X-Ray buttons completely.
+
+### Anthology & Short Story Collection Support
+
+If you read short story collections, anthologies, or omnibus editions, X-Ray now recognizes them and organizes content story by story instead of combining every character across the entire volume into one massive list.
+
+* **Current story focus**: While reading inside a collection, characters, locations, and timeline events for *This Story* are prioritized right at the top of the menu.
+* **Collapsible story sections**: Other stories in the collection are neatly organized into collapsible sections showing titles and page numbers.
+* **Recurring characters across stories**: Characters who return across different stories (such as recurring detectives or companions) are tracked seamlessly across story boundaries without losing story-specific descriptions.
+* **Story-aware spoiler protection**: Future story headers and their characters stay hidden until you actually reach that story in the book.
+
+### Improvements & Fixes
+
+* **Background unit conversions**: Unit scanning now runs asynchronously in the background so it never interrupts page turns or reader responsiveness.
+* **Unit converter refinements**: Fixed recurring feature prompts and eliminated redundant scans when flipping between chapters ([#159](https://github.com/ultimatejimmy/xray.koplugin/issues/159)).
+* **Timeline generation**: Fixed an issue where timeline events were not generating during full-book prefetching ([#160](https://github.com/ultimatejimmy/xray.koplugin/pull/160)).
+* **Claude thinking level**: Resolved compatibility issues with newer Claude model versions and thinking level settings ([#127](https://github.com/ultimatejimmy/xray.koplugin/issues/127)).
+* **Cache & disk optimizations**: Eliminated redundant cache saves and series file re-reads during background updates, noticeably improving speed on older e-ink devices ([#156](https://github.com/ultimatejimmy/xray.koplugin/issues/156)).
+* **Network checks**: Addressed an issue where silent network checks could temporarily stall the UI during slow DNS lookups ([#161](https://github.com/ultimatejimmy/xray.koplugin/issues/161)).
+* **List navigation**: Expanding or collapsing folded story sections on later menu pages now maintains your scroll position instead of jumping back to the first page.
+* **Spoiler & prefetch reliability**: Improved spoiler protection boundaries and prefetch collision handling to keep summaries safe and downloads reliable.
+
+**Full Changelog**: https://github.com/ultimatejimmy/xray.koplugin/compare/26.10.22...26.11.5
+
 # 26.10.22 · 2026-10-22
 
 This update brings offline prefetching so your X-Ray data is ready ahead of time, character history timelines that show how people and places evolve without spoiling what comes next, support for novellas and fractional book numbers in series, improved image extraction, expanded unit conversions for Cyrillic languages, and updated default AI models.
@@ -114,9 +152,3 @@ Thanks to our new contributors for helping improve the plugin:
 
 
 **Full Changelog**: https://github.com/ultimatejimmy/xray.koplugin/compare/26.9.11.2...26.9.17
-
-# 26.9.11.2 · 2026-09-12
-
-- Fix welcome screen bug.
-
-**Full Changelog**: https://github.com/ultimatejimmy/xray.koplugin/compare/26.9.11.1...26.9.11.2

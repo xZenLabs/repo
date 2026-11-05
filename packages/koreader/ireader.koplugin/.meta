@@ -1,0 +1,23 @@
+# Ireader plugin for KOReader
+# https://github.com/XNTEABDSC/ireader.koplugin
+# zenpm:auto-scraped
+id=ireader
+name=Ireader
+version=0.7.0
+description=
+author=XNTEABDSC
+category=utility
+platforms=koreader
+dependencies=
+source=https://github.com/XNTEABDSC/ireader.koplugin
+stars=5
+updated_at=2026-11-05T15:01:00Z
+published_at=2026-09-19T04:43:13Z
+readme_url=packages/koreader/ireader.koplugin/README.md
+readme_hash=e19cdc30839ed97de2f54bd0de1f12444fd02bdf
+release_notes_url=packages/koreader/ireader.koplugin/RELEASE_NOTES.md
+release_notes_hash=1675898315ceae39825b71d8734bf54e25ab3b4ae4be4e8c08c170f09e2ca663
+releases=[{"tag_name":"v0.7.0","assets":[{"name":"ireader.koplugin.zip","url":"https://github.com/XNTEABDSC/ireader.koplugin/releases/download/v0.7.0/ireader.koplugin.zip","size":66198,"digest":"sha256:de1ed2bb2aa936ecf53887a648b65e3eff818ebaeaa072da8d5b0468b5d0dd20"}],"name":"ireader.koplugin v0.7.0"},{"tag_name":"v0.6.0","assets":[{"name":"ireader.koplugin.zip","url":"https://github.com/XNTEABDSC/ireader.koplugin/releases/download/v0.6.0/ireader.koplugin.zip","size":65718,"digest":"sha256:cfe89dca1830fece24f5dfcfcb5c9daffbc99cf7abbab27cb39fe7bc02649b2a"}],"name":"ireader.koplugin v0.6.0"},{"tag_name":"v0.5.0","assets":[{"name":"ireader.koplugin.zip","url":"https://github.com/XNTEABDSC/ireader.koplugin/releases/download/v0.5.0/ireader.koplugin.zip","size":65250,"digest":"sha256:88e60547254bbdf06fbb337cdbdc8516b4fee74c9c7233abd0bab39e8ce8155e"}],"name":"ireader.koplugin v0.5.0"}]
+source_type=release
+source_asset=ireader.koplugin.zip
+size=66198

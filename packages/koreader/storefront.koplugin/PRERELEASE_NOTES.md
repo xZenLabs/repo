@@ -1,3 +1,9 @@
+# 26.11.5-beta · 2026-11-05
+
+- Load readme in the background without UI blocking
+
+**Full Changelog**: https://github.com/ultimatejimmy/storefront.koplugin/compare/26.11.2-beta...26.11.5-beta
+
 # 26.11.2-beta · 2026-11-02
 
 - Update delete logic
@@ -24,10 +30,3 @@
 - Update font #5082 
 
 **Full Changelog**: https://github.com/ultimatejimmy/storefront.koplugin/compare/26.10.23-beta...26.10.26-beta
-
-# 26.10.23-beta · 2026-10-23
-
-- Fix bug with suspend #5079 
-- Add screensaver collections feature
-
-**Full Changelog**: https://github.com/ultimatejimmy/storefront.koplugin/compare/26.10.20...26.10.23-beta
