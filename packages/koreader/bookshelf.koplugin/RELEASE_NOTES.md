@@ -1,3 +1,8 @@
+# v6.3.3 · 2026-11-05
+
+- Fix: tapping the page arrows in the book menu's Cover tab, after searching online for covers, crashed KOReader (#585)
+- Fix: the "Refreshing library…" message didn't show, or showed cut off, on some Kindles such as the Paperwhite 6 (#584)
+
 # v6.3.2 · 2026-11-03
 
 - Wallpaper scaling: Stretch (as before), Crop to fill, or Fit to screen, from the new Scaling button in the wallpaper picker. For pictures whose shape doesn't match your screen (#578).
@@ -40,7 +45,3 @@
 - Fix: a shelf with no wallpaper could show the wallpaper of another shelf
 - Fix: opening a face-out book on a spines shelf lost the shadow of the plank above, and is quicker
 - Fix: select rings had black corners on Android in night mode
-
-# v6.1.1 · 2026-10-31
-
-- Fix: Minor layout issue with some nested library windows
