@@ -1,3 +1,9 @@
+# v2.4.0-beta.11 · 2026-11-05
+
+No pull requests were merged since the last release.
+
+**Full changelog**: https://github.com/CaptainCamin/HardcoverSync.koplugin/compare/v2.4.0-beta.10...v2.4.0-beta.11
+
 # v2.4.0-beta.10 · 2026-11-04
 
 Bookshelf micromodules: the goal, goal-ring, stats and year cards now ship with the plugin as a module pack, alongside six new Hardcover data cards (authors read, books read, five-star books, rereads, reading memories, TBR rediscovery).
@@ -34,11 +40,3 @@ Bookshelf micromodules: the goal, goal-ring, stats and year cards now ship with 
 - Fix opening a book without reading resetting Hardcover's page, and the notice covering the conflict question (#273)
 
 **Full changelog**: https://github.com/CaptainCamin/HardcoverSync.koplugin/compare/v2.4.0-beta.6...v2.4.0-beta.7
-
-# v2.4.0-beta.6 · 2026-10-31
-
-## 🐛 Fixes
-- Fix sync conflicts when opening a book and the doubled jump question (#271)
-- Fix goal target input, accents in search, year 0 and offline wording (#272)
-
-**Full changelog**: https://github.com/CaptainCamin/HardcoverSync.koplugin/compare/v2.4.0-beta.5...v2.4.0-beta.6
