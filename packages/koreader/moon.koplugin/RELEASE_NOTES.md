@@ -1,3 +1,28 @@
+# v0.4.18 · 2026-11-05
+
+## 月读 v0.4.18
+
+KOReader 插件包：`book.koplugin-v0.4.18.zip`
+
+输入法词库（整库，手动 sideload）：`dictionary.sqlite3 dictionary-wubi.sqlite3 dictionary-cangjie.sqlite3 dictionary-zhuyin.sqlite3`
+
+安装：解压后将 `book.koplugin` 复制到 KOReader 的 `plugins` 目录，然后重启。
+
+词库 sideload：下载对应布局的词库，直接放入 KOReader 数据目录下的
+`.moon/`（与 `book.sqlite3` 同级）。附件已使用最终文件名，无需重命名。
+
+### 更新内容
+
+相对上一版本 `v0.4.17`：
+
+#### 变更
+
+- :green_heart: (ci): 隔离原生库路径避免污染发布工具 (a462eb25)
+
+### 完整对比
+
+https://github.com/AnkioTomas/moon/compare/v0.4.17...v0.4.18
+
 # v0.4.16 · 2026-11-04
 
 ## 月读 v0.4.16
@@ -195,48 +220,3 @@ KOReader 插件包：`book.koplugin-v0.4.13.zip`
 ### 完整对比
 
 https://github.com/AnkioTomas/moon/compare/v0.4.12...v0.4.13
-
-# v0.4.12 · 2026-11-02
-
-## 月读 v0.4.12
-
-KOReader 插件包：`book.koplugin-v0.4.12.zip`
-
-输入法词库（整库，手动 sideload）：`dictionary.sqlite3 dictionary-wubi.sqlite3 dictionary-cangjie.sqlite3 dictionary-zhuyin.sqlite3`
-
-安装：解压后将 `book.koplugin` 复制到 KOReader 的 `plugins` 目录，然后重启。
-
-词库 sideload：下载对应布局的词库，直接放入 KOReader 数据目录下的
-`.moon/`（与 `book.sqlite3` 同级）。附件已使用最终文件名，无需重命名。
-
-### 更新内容
-
-相对上一版本 `v0.4.11`：
-
-#### 修复
-
-- :bug: (ui): 数值弹窗太宽时缩小字号，不再截成省略号 (5f7a9c81)
-
-#### 界面
-
-- :lipstick: (insight): 本年页图表和封面墙对齐内容宽 (36056ff1)
-- :lipstick: (ui): 主题色一律当深色，主按钮用白字 (d7e32373)
-
-#### 性能
-
-- :zap: (reader): 章节书默认平面渲染，订阅不改模式 (05136332)
-
-#### 重构
-
-- :recycle: (ui): 摊像素余数的算法抽成 utils/spread，三处共用 (71a1c798)
-- :recycle: (reader): 渲染模式直接用 identity.ephemeral 判订阅源 (f8c88f2e)
-
-#### 变更
-
-- :coffin: (insight): 去掉阅读目标读取里多余的 or 0，修好设置键扫描 (509278a7)
-- :bento: (weather): 天气图标改成彩色透明并补全码表 (2f15d948)
-- :children_crossing: (insight): 阅读目标放到统计设置里 (32a0c76d)
-
-### 完整对比
-
-https://github.com/AnkioTomas/moon/compare/v0.4.11...v0.4.12

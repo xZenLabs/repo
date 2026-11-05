@@ -1,3 +1,13 @@
+# v1.2.1 · 2026-11-05
+
+Solar now replaces the Bookshelf plugin's menu icon, and uses one library icon across SimpleUI and ZenOS.
+
+- **Bookshelf:** if Bookshelf is installed and turned on, its menu icon now uses Solar's new `bookshelf` icon, in Colour or Mono. 
+- **SimpleUI:** the library icon now matches ZenOS's.
+- **Quick Actions:** the old `bookshelf` drawing is now called `library`, and `file_tray` has been removed. If you used either one, choose it again after updating.
+
+Updating: Choose **Check for updates** in **Tools → Solar Icon Pack**. After KOReader restarts, choose your style again to install the new icons. For more information see the [README](https://github.com/pxlflux/solariconpack.koplugin#readme).
+
 # v1.2.0 · 2026-11-04
 
 Solar now has icons for ZenOS and Project: Title, in both Colour and Mono. When you install, Solar sets up KOReader and the icons for the UI you're using: SimpleUI, ZenOS or Project: Title.
