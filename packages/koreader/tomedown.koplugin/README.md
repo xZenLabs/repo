@@ -52,8 +52,6 @@ report what did not work.
 The examples in this repo use **Koofr**: its free plan gives you 10 GB, more
 than enough for a whole library of `.md` files.
 
-![The Tomedown menu with a book open](assets/menu/reader/tomedown_reader_menu_1_1.png)
-
 <p align="center">
   <strong>Jump to</strong><br>
   <a href="#install">Install</a> · <a href="#first-export">First export</a> · <a href="#the-menu">The menu</a> · <a href="#special-highlights">Special highlights</a> · <a href="#cloud-upload">Cloud upload</a> · <a href="#keep-my-notes">Keep my notes</a> · <a href="#reference">Reference</a>
@@ -93,7 +91,7 @@ hardware.
    *Navigation* tab (right before *Table of Contents*) while reading, and on
    top of the first tab in the file browser (right before *Display mode*).
 
-   ![Tomedown first in the reader's Navigation tab](assets/menu/reader/tomedown_reader_menu.png)
+   ![Tomedown first in the reader's Navigation tab]()
 
 <details>
 <summary>Installing from a clone of this repo</summary>
@@ -156,7 +154,7 @@ The result should look like:
 ```
 /mnt/us/koreader/clipboard/tomedown/
 ├── 00 - Index.md
-├── Michael McDowell - Blackwater_ The Complete Saga.md
+├── Arthur Machen - The Three Impostors.md
 └── ...
 ```
 
@@ -220,8 +218,6 @@ highlight offers it at the bottom of the edit menu, with the same row in the
 full menu behind the "…" button. The flagged quote becomes a
 `> [!highlight]` callout in the file, or `> **quote**` if you pick *Bold* in
 Settings, so it always stays visually apart from the plain quotes.
-
-![The highlight menu on a fresh selection: Special Highlight sits right under Highlight](assets/menu/highlights/special_highlights_big_menu.png)
 
 [File format](docs/file-format.md#special-highlights) shows the mark in the
 file, how to take it off again, and how the callout reads in Obsidian, Notion

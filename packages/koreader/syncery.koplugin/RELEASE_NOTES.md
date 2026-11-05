@@ -1,3 +1,13 @@
+# v1.2.5 · 2026-11-05
+
+## What's Changed
+* Fix cloud reachability after DDNS IP changes by @giubba88 in https://github.com/d0nizam/syncery.koplugin/pull/26
+
+## New Contributors
+* @giubba88 made their first contribution in https://github.com/d0nizam/syncery.koplugin/pull/26
+
+**Full Changelog**: https://github.com/d0nizam/syncery.koplugin/compare/v1.2.4.1...v1.2.5
+
 # v1.2.4.1 · 2026-08-19
 
 ## [v1.2.4.1] — 2026-08-19
@@ -66,31 +76,3 @@
   would be nothing left to return to.
 
 **Full Changelog**: https://github.com/d0nizam/syncery.koplugin/compare/v1.2.1...v1.2.2
-
-# v1.2.1 · 2026-07-21
-
-## [v1.2.1] — 2026-07-21
-
-IMPORTANT:
-Due to needed changes in the plugin update logic, the "Check for plugin updates" feature may not work as intended for some users. In this case, please download the latest version directly from GitHub.
-
-### Added
-- **Progress Browser and Annotation Browser now find books that exist on
-  this device but weren't recognized.** Two related situations, both
-  previously reported as errors or silently miscounted:
-  - A book synced from another device, never opened here — you can now
-    point Syncery at the file directly ("Point to it…"), verified by
-    content match, not just filename.
-  - A book that WAS opened elsewhere, but this device's recorded path for
-    it doesn't resolve (moved, different platform, different folder
-    layout) — same "Point to it…" flow, worded for that case
-    specifically.
-  - Once you locate a book this way, Syncery remembers the folder pattern
-    (e.g. "Books/EN" → "Documents/Books/EN") and auto-resolves the next
-    book from a sibling folder (e.g. "Books/BG") without asking again.
-- **"Migrate all books to this storage mode…" now uses the same "Point to
-  it…" flow** for books it can't find automatically, instead of just
-  reporting them as "not on this device." Already-learned folder patterns
-  from Progress/Annotation Browser are tried silently first.
-
-**Full Changelog**: https://github.com/d0nizam/syncery.koplugin/compare/v1.2.0...v1.2.1
