@@ -3,7 +3,7 @@
 # zenpm:auto-scraped
 id=kikomescrubber
 name=Kikomescrubber
-version=2.0.0
+version=2.1.0
 description=A calm Home UI for KoReader.
 author=lautaroelkin
 category=theme
@@ -11,13 +11,13 @@ platforms=koreader
 dependencies=
 source=https://github.com/lautaroelkin/KiKomeScrubber.koplugin
 stars=11
-updated_at=2026-11-06T00:01:03Z
-published_at=2026-11-03T17:54:45Z
+updated_at=2026-11-06T01:01:03Z
+published_at=2026-11-06T00:33:58Z
 readme_url=packages/koreader/kikomescrubber.koplugin/README.md
 readme_hash=fda7f9f3698a85a536c17c79d1fb91303ac35f6b
 release_notes_url=packages/koreader/kikomescrubber.koplugin/RELEASE_NOTES.md
-release_notes_hash=bb7e71f6c8055b86ccc0fcc96e14f3456104495a3a5c45544fc0a60e995fd65c
-releases=[{"tag_name":"v2.0.0","assets":[{"name":"KiKomeScrubber.koplugin.zip","url":"https://github.com/lautaroelkin/KiKomeScrubber.koplugin/releases/download/v2.0.0/KiKomeScrubber.koplugin.zip","size":358914,"digest":"sha256:9f3784a3f903a916ea34a22b8675a37619c35e1c7454a0cd88319a7347c905a4"}],"name":"2.0 Edit and Annotations Menus"},{"tag_name":"v1.1.0","assets":[{"name":"KiKomeScrubber.koplugin.zip","url":"https://github.com/lautaroelkin/KiKomeScrubber.koplugin/releases/download/v1.1.0/KiKomeScrubber.koplugin.zip","size":283827,"digest":"sha256:edd742aab3769d4e304b2fb53d46b00d604525197cace728f8c51eb9cfce8c6b"}],"name":"1.1"},{"tag_name":"v1.0.0","assets":[{"name":"KiKomeScrubber.koplugin.zip","url":"https://github.com/lautaroelkin/KiKomeScrubber.koplugin/releases/download/v1.0.0/KiKomeScrubber.koplugin.zip","size":215076,"digest":"sha256:8c386263da46b21b753ac27eb5c613bdee7f3157327b03fd3a4c4f54f1b9699c"}],"name":"Kikome Scrubber UI"}]
+release_notes_hash=f1529dad5159864c65a81ac3cdb6e8b53db466ad70673ecd8b196267bf51eb10
+releases=[{"tag_name":"v2.1.0","assets":[{"name":"KiKomeScrubber.koplugin.zip","url":"https://github.com/lautaroelkin/KiKomeScrubber.koplugin/releases/download/v2.1.0/KiKomeScrubber.koplugin.zip","size":379748,"digest":"sha256:2d23e10ee42fe4d93927d0fb0a41e1f5c11ccf359a420275e87056e38d390a47"}],"name":"2.1"},{"tag_name":"v2.0.0","assets":[{"name":"KiKomeScrubber.koplugin.zip","url":"https://github.com/lautaroelkin/KiKomeScrubber.koplugin/releases/download/v2.0.0/KiKomeScrubber.koplugin.zip","size":358914,"digest":"sha256:9f3784a3f903a916ea34a22b8675a37619c35e1c7454a0cd88319a7347c905a4"}],"name":"2.0 Edit and Annotations Menus"},{"tag_name":"v1.1.0","assets":[{"name":"KiKomeScrubber.koplugin.zip","url":"https://github.com/lautaroelkin/KiKomeScrubber.koplugin/releases/download/v1.1.0/KiKomeScrubber.koplugin.zip","size":283827,"digest":"sha256:edd742aab3769d4e304b2fb53d46b00d604525197cace728f8c51eb9cfce8c6b"}],"name":"1.1"},{"tag_name":"v1.0.0","assets":[{"name":"KiKomeScrubber.koplugin.zip","url":"https://github.com/lautaroelkin/KiKomeScrubber.koplugin/releases/download/v1.0.0/KiKomeScrubber.koplugin.zip","size":215076,"digest":"sha256:8c386263da46b21b753ac27eb5c613bdee7f3157327b03fd3a4c4f54f1b9699c"}],"name":"Kikome Scrubber UI"}]
 source_type=release
 source_asset=KiKomeScrubber.koplugin.zip
-size=358914
+size=379748

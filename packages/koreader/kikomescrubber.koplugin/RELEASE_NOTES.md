@@ -1,3 +1,33 @@
+# v2.1.0 · 2026-11-06
+
+## v2.1
+
+### New
+- **Select button** in edit mode.
+- **Customizable clock**: pick a preset layout (time, weekday + time, time + date, two lines...) or write your own custom pattern, e.g. `%K, %a %e %b` shows `22:42, Thu 5 Nov`. Find it in Settings > General > Status bar.
+
+### Keyboard
+- More responsive: fewer missed keys when typing fast.
+- Slide your finger over the **space bar** to move the cursor: slide right and the cursor moves right, slide left and it moves left, following your finger.
+- New symbol: `%`
+
+### Translations
+- The plugin is now translatable.
+- Available in:
+  - Español
+  - Português (BR)
+
+### Fixes
+- Fixed a bug: tapping **Exit KOReader** now closes KOReader normally.
+- New Home button 
+
+## Installation
+1. Download `KiKomeScrubber.koplugin.zip` from the **Assets** section below (not "Source code").
+2. Unzip it and copy the `KiKomeScrubber.koplugin` folder into `koreader/plugins/`.
+3. Restart KOReader.
+
+To update, use **Check for updates** in KiKome's Settings, or replace the folder. To uninstall, delete it.
+
 # v2.0.0 · 2026-11-03
 
 ## What's new
