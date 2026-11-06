@@ -1,3 +1,21 @@
+# v1.1.1 · 2026-11-06
+
+# Capitulares v1.1.1 — What Changed
+
+## English
+
+1. **Improved EPUB compatibility:** better detection of chapter openings in light novels and books with alternative HTML structures.
+2. **Refined screen-based drop caps:** additional drop caps now appear only at the beginning of eligible paragraphs, never in text continuing from previous screens.
+3. **Option to remove symbol dropcaps:** if wanted you can remove manually drop caps oddly formatted due to symbols like " or -
+5. **Improved consistency:** maximum of one additional drop cap per screen, with the counting interval resetting at each new chapter.
+
+## Português (PT-PT)
+
+1. **Compatibilidade EPUB melhorada:** deteção mais eficaz de inícios de capítulos em light novels e livros com estruturas HTML alternativas.
+2. **Capitulares por ecrãs aperfeiçoadas:** as capitulares adicionais aparecem apenas no início de parágrafos elegíveis, nunca em continuações de texto de ecrãs anteriores.
+3. **Possibilidade de remoção de capitulares com símbolos** se assim preferir pode ocultar capitulares com símbolos gigantes tais como " ou -
+4. **Maior consistência:** máximo de uma capitular adicional por ecrã, com reinício da contagem em cada novo capítulo.
+
 # v1.1 · 2026-11-04
 
 **Capitulares v1.1 — what changed **
