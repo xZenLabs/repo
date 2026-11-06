@@ -112,7 +112,8 @@ note; a notification says when an index you were waiting for is ready.
   Kindle's own browser, see below), text size,
   e-ink mode (black text, no tinted backgrounds), your own font for all text,
   Latin text only, or Japanese/Chinese text only, reversed swipes for
-  vertical text, and preparing the next result in advance (on by default: while
+  vertical text, a flash on every page turn (e-ink screens, off by default: it clears
+  the ghosts of earlier pages), and preparing the next result in advance (on by default: while
   you read one result, the next MDict result is laid out in the background).
 - **Dictionary settings**: per dictionary, the writing direction (automatic,
   horizontal, vertical) and page layout (columns, or slices for layouts that
@@ -131,8 +132,10 @@ note; a notification says when an index you were waiting for is ready.
   stays open, also while the Kindle sleeps, and is closed after twenty minutes without
   a lookup. Pages come from the browser's screencast (under a second each on the
   emulated Paperwhite), with a screenshot when no frame comes. The browser uses about
-  70 MB of memory and starts only when 80 MB are free. If it cannot start, or ends,
-  entries fall back to KOReader's renderer for the session. Turn it off and restart the
+  70 MB of memory and starts only when 80 MB are free. If memory runs low later, it is
+  asked to free its caches, and closed if that is not enough, before the Kindle runs
+  out. If it cannot start, or ends, entries fall back to KOReader's renderer for the
+  session. Turn it off and restart the
   Kindle if anything misbehaves.
 - **Kindle browser check** (Kindles only): a report for the Kindle renderer, about the
   browser that Kindle firmware 5.16.4 and later ships.

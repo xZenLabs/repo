@@ -1,3 +1,25 @@
+# v0.2.7 · 2026-11-06
+
+## Added
+
+- *Flash the screen on page turns* (e-ink screens, off by default): *Search → Settings → MDict dictionaries → Display*. Each page turn in an entry then fully refreshes the popup, which clears the ghosts of earlier pages that e-ink screens can leave, at the cost of a flash. Without it, page turns refresh the screen as KOReader's own dictionary popup does, with a flash only every few refreshes. (#1)
+
+## Changed
+
+- Kindle's browser (experimental): when memory runs low, the browser is asked to free its caches, and if that is not enough, it is closed and entries are shown with KOReader's renderer, with a note that the Kindle is low on memory. Before, the Kindle could freeze for half a minute until the system ended the browser itself. (#1)
+- Kindle's browser: if the system ends the browser because memory ran out, the note now says so instead of "killed by signal 9".
+- Kindle's browser: the log (`crash.log`) now gives the memory available with each entry, which helps with reports.
+- Updates: a download that stalls is tried again, up to three times, with more time each try, and a failed download says where to get the release by hand. Timeouts are described in words on older KOReader versions instead of "wantread". (#1)
+
+## Fixed
+
+- A warning from the WebView renderer wrote a block of internal text into the log before the message.
+
+## Install
+
+- From 0.2.0: *Search → Settings → MDict dictionaries → Updates → Check for updates*, or wait for the automatic offer. Then restart KOReader (on Android, exit KOReader and open it again).
+- From 0.1.0: unzip `mdict.koplugin-0.2.7.zip` into `koreader/plugins/`, replacing the `mdict.koplugin` folder, and restart KOReader.
+
 # v0.2.6 · 2026-11-06
 
 ## Fixed
@@ -64,15 +86,3 @@
 
 - From 0.2.0: *Search → Settings → MDict dictionaries → Updates → Check for updates*, or wait for the automatic offer. Then restart KOReader (on Android, exit KOReader and open it again).
 - From 0.1.0: unzip `mdict.koplugin-0.2.3.zip` into `koreader/plugins/`, replacing the `mdict.koplugin` folder, and restart KOReader.
-
-# v0.2.2 · 2026-11-03
-
-## Fixed
-
-- On Kindle, Kobo, PocketBook and other devices without the WebView (and on Android with the WebView turned off), entries were shown with none of the dictionary's styling, so every dictionary looked the same ([#1](https://github.com/moopoint-dev/mdict.koplugin/issues/1)). KOReader's renderer (MuPDF) reads stylesheets only from a page's head, and the entry's stylesheet links never got there. The plugin now gives the popup each entry's CSS itself, and scales sizes set in pixels to the popup's text size, since MuPDF draws a CSS pixel as one screen pixel. Layouts still look as MuPDF can draw them: no flexbox or grid, vertical text, scripts or audio.
-- In dictionaries that keep each entry under a record number and link the words to it, the popup showed that number (such as `OKG1121512`) instead of the word. It now shows the entry's headword.
-
-## Install
-
-- From 0.2.0: *Search → Settings → MDict dictionaries → Updates → Check for updates*, or wait for the automatic offer. Then restart KOReader (on Android, exit KOReader and open it again).
-- From 0.1.0: unzip `mdict.koplugin-0.2.2.zip` into `koreader/plugins/`, replacing the `mdict.koplugin` folder, and restart KOReader.
