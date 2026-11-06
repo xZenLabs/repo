@@ -1,3 +1,15 @@
+# 26.11.6 · 2026-11-06
+
+## What's New
+
+* **Book backups**: You can now include your actual ebook files in backups alongside your reading progress and settings. Choose between backing up books you are actively reading (*In-Progress*), your entire library, or specific folders.
+* **Persistent manual backup settings**: Component selections and individual item choices in manual backups are now remembered across sessions, so you don't have to reconfigure them each time you back up.
+* **Multiple book folders**: You can now set up multiple book directories in *Settings* (such as secondary libraries, research papers, or external SD cards) so reading progress and book files across all of them are preserved.
+* **Show hidden folders in file picker**: Added a toggle in the folder browser to show or hide dot folders, making it easy to select directories like `.koreader` or custom hidden backup paths.
+* **Snooze scheduled reminders**: When an automated backup reminder appears while you're reading, you can now snooze it for *1 hour*, *4 hours*, or *1 day* to be reminded later.
+
+**Full Changelog**: https://github.com/ultimatejimmy/backup.koplugin/compare/26.10.23...26.11.6
+
 # 26.10.23 · 2026-10-23
 
 ## What's New
@@ -52,10 +64,3 @@ You can now organize your cloud backups into subfolders (such as `mine/koreader 
 Various bugfixes
 
 **Full Changelog**: https://github.com/ultimatejimmy/backup.koplugin/compare/26.9.28.1...26.9.28.2
-
-# 26.9.28.1 · 2026-09-28
-
-- Update translations
-- Fix structure for releases to remove unnecessary stuff
-
-**Full Changelog**: https://github.com/ultimatejimmy/backup.koplugin/compare/26.9.28...26.9.28.1

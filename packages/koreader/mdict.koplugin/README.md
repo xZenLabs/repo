@@ -131,7 +131,10 @@ note; a notification says when an index you were waiting for is ready.
   lookup starts the browser, which takes about 20 seconds on a Paperwhite 4; it then
   stays open, also while the Kindle sleeps, and is closed after twenty minutes without
   a lookup. Pages come from the browser's screencast (under a second each on the
-  emulated Paperwhite), with a screenshot when no frame comes. The browser uses about
+  emulated Paperwhite), with a screenshot when no frame comes. The browser lays out one
+  entry at a time: while another dictionary's result is shown, the nearest MDict result
+  is prepared, and the MDict result you move away from is kept, so that going back to it
+  is immediate. The browser uses about
   70 MB of memory and starts only when 80 MB are free. If memory runs low later, it is
   asked to free its caches, and closed if that is not enough, before the Kindle runs
   out. If it cannot start, or ends, entries fall back to KOReader's renderer for the

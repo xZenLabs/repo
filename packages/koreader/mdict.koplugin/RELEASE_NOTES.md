@@ -1,3 +1,20 @@
+# v0.2.8 · 2026-11-06
+
+## Changed
+
+- Kindle's browser (experimental): switching to an MDict result in the popup is faster. The browser lays out one entry at a time, so before, an MDict result was only laid out once it was shown, and again each time you came back to it. Now, while another dictionary's result is shown, the nearest MDict result is prepared in the background, and the MDict result you move away from is kept, so that going back to it is immediate. (#1)
+- E-ink screens: entry pages are kept in grey, which takes a quarter of the memory. This matters most on Kindles, where the browser and KOReader share little memory.
+- Kindle's browser: the log (`crash.log`) now also records what the system says about the e-ink screen's controller, a moment after each entry is shown. This should tell whether pages that stay half drawn on page turns come from the screen controller. (#1)
+
+## Fixed
+
+- Links to a place in the same entry (`entry://#…`, used for buttons that jump to a section) did nothing: they were looked up as an empty word. They now go to the page of that place. Buttons whose script scrolls to a section now go to that section's page too. (#1)
+
+## Install
+
+- From 0.2.0: *Search → Settings → MDict dictionaries → Updates → Check for updates*, or wait for the automatic offer. Then restart KOReader (on Android, exit KOReader and open it again).
+- From 0.1.0: unzip `mdict.koplugin-0.2.8.zip` into `koreader/plugins/`, replacing the `mdict.koplugin` folder, and restart KOReader.
+
 # v0.2.7 · 2026-11-06
 
 ## Added
@@ -70,19 +87,3 @@
 
 - From 0.2.0: *Search → Settings → MDict dictionaries → Updates → Check for updates*, or wait for the automatic offer. Then restart KOReader (on Android, exit KOReader and open it again).
 - From 0.1.0: unzip `mdict.koplugin-0.2.4.zip` into `koreader/plugins/`, replacing the `mdict.koplugin` folder, and restart KOReader.
-
-# v0.2.3 · 2026-11-04
-
-## Added
-
-- *Kindle browser check* (Kindles only): *Search → Settings → MDict dictionaries → Kindle browser check*. Kindle firmware 5.16.4 and later ships a Chromium browser, which could lay out entries the way the WebView does on Android: vertical Japanese, flexbox and grid, and buttons that open sections. Before that renderer is built, this check finds out whether a Kindle has the browser and enough free memory with KOReader running. It only reads system information (memory, CPU, firmware version, which of Amazon's services are running, the browser's files). It starts nothing, changes nothing, and holds no serial numbers or account names. The report is shown and saved as `koreader/mdict-kindle-report.txt`: Kindle owners, please attach it to a GitHub issue.
-
-## Fixed
-
-- Content that a dictionary hangs just outside its lines, such as LDELC's sense numbers, was cut off at the left edge of the page, and a sliver of it showed at the right edge of the page before. Horizontal pages now keep a small gutter on each side (4 px, scaled with the text size). Vertical entries are unchanged.
-- *My font* did not apply to bold and italic text when the chosen font has no bold or italic file (KOReader's FreeSerif, for example): that text kept the dictionary's font and could lose its weight. It now uses the chosen font, made bold or slanted by the WebView, as KOReader does in books.
-
-## Install
-
-- From 0.2.0: *Search → Settings → MDict dictionaries → Updates → Check for updates*, or wait for the automatic offer. Then restart KOReader (on Android, exit KOReader and open it again).
-- From 0.1.0: unzip `mdict.koplugin-0.2.3.zip` into `koreader/plugins/`, replacing the `mdict.koplugin` folder, and restart KOReader.

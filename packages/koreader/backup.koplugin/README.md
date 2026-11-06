@@ -15,12 +15,13 @@ Save your reading settings, custom fonts, icons, plugins, sleep screens, and boo
 
 ## Key Highlights
 
-- **Pick What to Save**: Choose exactly what to include in your backup—reading settings, custom Profiles, QuickMenus, UI gestures, user plugins, custom fonts, icons, screensavers, style tweaks, or reading history. Your custom component selections are remembered automatically across manual backups.
+- **Pick What to Save**: Choose exactly what to include in your backup—reading settings, custom Profiles, QuickMenus, UI gestures, user plugins, custom fonts, icons, screensavers, style tweaks, reading history, or ebook files. Your custom component selections and drill-downs are remembered automatically across backups.
 - **Safe Device Switching**: Moving from Kindle to Kobo, or Android to an e-ink reader? The plugin automatically adapts screen and hardware settings so your new device starts up cleanly without display glitches.
 - **Wireless Device Beaming & Web Download**: Transfer backups directly between e-readers without cables—or download and decrypt your ready-to-use `.zip` backup on your computer or phone via the web portal or QR code.
 - **One-Tap Undo Safety Net**: A safety rollback snapshot is automatically created before any restore, so you can revert back anytime if you ever change your mind.
-- **Built-in Folder Picker & Multiple Book Folders**: Easily browse your device's storage to pick your backup destination, and add multiple book directories (like papers, articles, or secondary libraries) to ensure all your reading progress and annotations are preserved.
-- **Automatic Multi-Language Support**: Fully translated into 18 languages, automatically matching your KOReader language.
+- **Built-in Folder Picker & Multiple Book Folders**: Easily browse your device's storage to pick your backup destination, and configure multiple book directories (like papers, articles, or secondary libraries) to ensure all your reading progress and book files are preserved.
+- **Cloud Storage & Sync**: Back up directly to Google Drive, OneDrive, Dropbox, WebDAV, FTP, or SFTP with nested folder organization and automatic local cleanup.
+- **Automatic Multi-Language Support**: Fully translated into 19 languages, automatically matching your KOReader language.
 
 ---
 ## Documentation & Wiki
@@ -34,6 +35,7 @@ For detailed guides and walkthroughs, visit our [Wiki](https://github.com/ultima
 - [5. Troubleshooting](https://github.com/ultimatejimmy/backup.koplugin/wiki/5.-Troubleshooting) — Quick answers to common questions.
 - [6. Settings](https://github.com/ultimatejimmy/backup.koplugin/wiki/6.-Settings) — Customizing backup folders, file formats, and storage limits.
 - [7. Beam Wireless Transfer](https://github.com/ultimatejimmy/backup.koplugin/wiki/7.-Beam-Transfer) — Beaming backups between e-readers wirelessly.
+- [8. Cloud Storage](https://github.com/ultimatejimmy/backup.koplugin/wiki/8.-Cloud-Storage) — Connect Google Drive, OneDrive, Dropbox, WebDAV, FTP, or SFTP.
 
 
 
