@@ -1,0 +1,33 @@
+# Orca plugin for KOReader
+# https://github.com/ManzoliW/orca.koplugin
+# zenpm:auto-scraped
+id=orca
+name=Orca
+version=2.2.0
+description=Orca 🤝 Kindle
+author=ManzoliW
+category=utility
+platforms=koreader
+dependencies=
+source=https://github.com/ManzoliW/orca.koplugin
+stars=5
+updated_at=2026-11-06T16:00:58Z
+published_at=2026-11-01T16:49:55Z
+readme_url=packages/koreader/orca.koplugin/README.md
+readme_hash=a79c380ec5ef81799d4e386a79e7e729c2733880
+release_notes_url=packages/koreader/orca.koplugin/RELEASE_NOTES.md
+release_notes_hash=beaeca0c436845343a0acf2cd4c64d86d86de7b8acb60be5586abb705b3e07bd
+releases=[{"tag_name":"v2.2.0","assets":[{"name":"koreader-patches.zip","url":"https://github.com/ManzoliW/orca.koplugin/releases/download/v2.2.0/koreader-patches.zip","size":1081,"digest":"sha256:9b3ee2e729e32468f58ddded2f279d6457feb237bcd620306bc300597dda9d0e"},{"name":"orca.koplugin.zip","url":"https://github.com/ManzoliW/orca.koplugin/releases/download/v2.2.0/orca.koplugin.zip","size":319694,"digest":"sha256:8c8137a1c38be1c77373ab0e2e720ff4bc6ab196ecd8db29a5066afb0aeeeb48"},{"name":"tailscale.koplugin.zip","url":"https://github.com/ManzoliW/orca.koplugin/releases/download/v2.2.0/tailscale.koplugin.zip","size":9283,"digest":"sha256:e718593f33f96061c19e2ecd018bd1c43aabbe6126d88084938f272dbeb3d0b9"}],"name":"v2.2.0"},{"tag_name":"v2.1.0","assets":[{"name":"koreader-patches.zip","url":"https://github.com/ManzoliW/orca.koplugin/releases/download/v2.1.0/koreader-patches.zip","size":1081,"digest":"sha256:f9f80261c1857b67b76683da647bde3fa2f70ae2f9f8347e60957595898abed3"},{"name":"orca.koplugin.zip","url":"https://github.com/ManzoliW/orca.koplugin/releases/download/v2.1.0/orca.koplugin.zip","size":318775,"digest":"sha256:98a3d515a55af91076e4db4dbf9fb86113524487821d9a1066ed918e500ee2d8"},{"name":"tailscale.koplugin.zip","url":"https://github.com/ManzoliW/orca.koplugin/releases/download/v2.1.0/tailscale.koplugin.zip","size":9283,"digest":"sha256:b41e58b67f3c5e4af39352a48722b956dcd21217b0ae260a5280a478f063b8a7"}],"name":"v2.1.0"},{"tag_name":"v2.0.1","assets":[{"name":"orca.koplugin.zip","url":"https://github.com/ManzoliW/orca.koplugin/releases/download/v2.0.1/orca.koplugin.zip","size":111548,"digest":"sha256:87c42ecbe19abeb048d4f8fa33258b98e3747c615365c2a139c1464b8e45310b"},{"name":"tailscale.koplugin.zip","url":"https://github.com/ManzoliW/orca.koplugin/releases/download/v2.0.1/tailscale.koplugin.zip","size":9283,"digest":"sha256:69a6c07f2f19fde0949ae325d02e7fcb1ebc22fc49b89d4b3101560e39cdfdf9"}],"name":"v2.0.1"},{"tag_name":"v2.0.0","assets":[{"name":"orca.koplugin.zip","url":"https://github.com/ManzoliW/orca.koplugin/releases/download/v2.0.0/orca.koplugin.zip","size":111218,"digest":"sha256:f47a95e1f34c3eac180b6a7769943221bebb7a152a75b7b7d7f85fdc55852d69"},{"name":"tailscale.koplugin.zip","url":"https://github.com/ManzoliW/orca.koplugin/releases/download/v2.0.0/tailscale.koplugin.zip","size":9283,"digest":"sha256:356f7b6db6bc1c06e1b3718cbdbd129f6bc7b5298b5cc64c7f7ea8b0bbb1f885"}],"name":"v2.0.0"}]
+source_type=release
+assets.0.arch=any
+assets.0.asset=koreader-patches.zip
+assets.0.url=https://github.com/ManzoliW/orca.koplugin/releases/download/v2.2.0/koreader-patches.zip
+assets.0.size=1081
+assets.1.arch=any
+assets.1.asset=orca.koplugin.zip
+assets.1.url=https://github.com/ManzoliW/orca.koplugin/releases/download/v2.2.0/orca.koplugin.zip
+assets.1.size=319694
+assets.2.arch=any
+assets.2.asset=tailscale.koplugin.zip
+assets.2.url=https://github.com/ManzoliW/orca.koplugin/releases/download/v2.2.0/tailscale.koplugin.zip
+assets.2.size=9283
