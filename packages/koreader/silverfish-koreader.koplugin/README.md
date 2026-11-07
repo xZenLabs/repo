@@ -30,17 +30,37 @@ It runs on your e-reader with **no AI and no internet**. Everything it says is p
 - **It keeps a diary** of your reading days, and a **notebook** with your highlights.
 - **It dreams.** Turn on its sleep screen, and when your e-reader sleeps you'll see it asleep, dreaming about what you read. Each stage has its own sleeping drawing.
 - **Achievements and a bookshelf** with every book you finished together.
+- **It has company.** In the **brood**, more creatures can share your save, one awake at a time. The first new
+  species is the **Ash Cat** (see below).
 - **Portuguese and English.** It follows KOReader's language, or you can choose.
 
 ![“After Dracula, I need a light on and a long silence.” “After Pride and Prejudice, I need a handkerchief and a long silence.” “After The Hound of the Baskervilles, I need a cigarette and a long silence.”](media/after-the-book.png)
 
 ![“Old and frightened. A fine result of your literary taste.” “I've gone soft. It was your romances. Tell no one.”](media/your-taste.png)
 
+## The brood and the Ash Cat
+
+Your silverfish doesn't have to be alone. Open the menu (☰) on its screen and tap **BROOD**: you'll see the life of
+whoever is awake (name, stage, obsession, the book you're reading, days, books and generation) and the crew below.
+
+- **One awake at a time.** Hatch an egg or wake a sleeping creature, and the one that was awake goes to sleep.
+  Sleeping creatures don't get hungry or older; they wake up just as they were.
+- **Your reading is shared.** The books you read, your bookshelf and your streaks go with whoever is awake. Each
+  creature keeps its own stage, personality, diary and lineage.
+- **The Ash Cat** is the first new species, and its egg is ready from the start. Long ago, in a city that no
+  longer has a name, cats pulled pages out of the furnaces, one at a time, in their teeth, and remembered them.
+  Their descendant still wears the scarf. It doesn't eat your pages, it keeps them. It checks the exits when it
+  enters a room, quotes the Rules of the Cellar its grandmother taught it, and calls you its accomplice. It has
+  its own stages (egg, kitten, adult, elder), its own diary, CELLAR NOTES, and its own voice for everything, and
+  what you read shapes it just as it shapes the silverfish.
+- **Names.** Give each creature a name (up to 14 characters, or shuffle a suggestion) when it hatches, on the
+  welcome screen, or later in its settings.
+
 ## Install
 
 **Before you start:** you need KOReader on your e-reader. On a Kindle, that means a jailbroken Kindle with KOReader installed, usually opened from KUAL. KOReader's own guide explains how: [KOReader wiki](https://github.com/koreader/koreader/wiki).
 
-1. Download `silverfish-v1.1.0.zip` from [Releases](../../releases) and unzip it. Inside there is a folder called `silverfish.koplugin`.
+1. Download `silverfish-v2.0.0.zip` from [Releases](../../releases) and unzip it. Inside there is a folder called `silverfish.koplugin`.
 2. Connect your e-reader to your computer and copy `silverfish.koplugin` into KOReader's `plugins` folder:
    - **Kindle:** `koreader/plugins/`
    - **Kobo:** `.adds/koreader/plugins/`
@@ -52,15 +72,15 @@ It runs on your e-reader with **no AI and no internet**. Everything it says is p
 
 ## Using it
 
-- **Just read.** The egg hatches after a few pages.
-- **To see it:** open the Tools menu and tap **Silverfish**. The welcome screen also lets you open it when KOReader starts, or with a long press in the top right corner.
-- **Its screen** has a menu with its diary, your notebook, achievements and the lineage.
-- **Tap it** to pet it. **Long-press it** for settings: sleep screen on/off, and language.
+- **Just read.** The egg hatches after a few pages. If you turn off KOReader's reading statistics, it stops counting pages too.
+- **To see it:** open the Tools menu and tap **Silverfish**. The welcome screen also lets you open it when KOReader starts, or with a long press in the top right corner. You can change both later in its settings.
+- **Its screen** has a menu (☰) with the brood, your notebook, its diary, achievements and the lineage.
+- **Tap it** to pet it. The **gear** at the top opens the settings: sleep screen, open at startup, gesture shortcut, its name and language. Long-pressing the silverfish opens them too.
 - **Optional:** with the [Simple UI](https://github.com/doctorhetfield-cmd/simpleui.koplugin) plugin (by doctorhetfield-cmd) installed, it shows up as a card on your home screen.
 
 <img src="media/simple-ui.png" alt="A Kindle showing KOReader's home screen with the Simple UI plugin: the book being read, and below it the elder silverfish saying: chiming. Ate it. Nobody uses that word anymore.">
 
-- **Optional:** with the [Bookshelf](https://github.com/AndyHazz/bookshelf.koplugin) plugin (by AndyHazz) installed, it can live on your home screen or stand on a shelf among your books. Bookshelf doesn't add cards by itself, so add it once:
+- **Optional:** with the [Bookshelf](https://github.com/AndyHazz/bookshelf.koplugin) plugin (by AndyHazz) installed, it can live on your home screen or stand on a shelf among your books. With Bookshelf 6.1 or newer, the welcome screen's **Home screen card** option puts it on your home shelf for you. Otherwise, or to put it somewhere else, add it once:
   - **Top panel:** in Bookshelf's settings, set **Behavior → Top panel starts with** to **Micro modules**. Then long-press the panel, tap **+ Add** and pick **Silverfish**.
   - **On a shelf:** long-press the shelf's tab, tap **Add a module to this shelf…** and pick **Silverfish**.
   - Narrow, it's just the silverfish. Wider, it gets a speech bubble with what it's thinking. Tap it to open its screen.
@@ -76,18 +96,18 @@ When your e-reader goes to sleep, Silverfish goes to sleep too, and dreams about
 **To turn it on:**
 
 1. Open Silverfish (Tools menu → **Silverfish**).
-2. Long-press the silverfish.
+2. Tap the gear at the top.
 3. Tap **Sleep screen: off**. It switches to **on**.
 
 To turn it off, do the same. While it's on, Silverfish uses KOReader's sleep screen; when you turn it off, the sleep screen you had before comes back.
 
 ## Your data
 
-Everything stays on your device, in `koreader/settings/traca.lua`: the titles and authors of the books you read, pages and reading times, its diary, a few lines from characters that it saved, and the path of the last book you opened. Silverfish never connects to the internet and never sends anything anywhere.
+Everything stays on your device, in `koreader/settings/traca.lua`: the titles and authors of the books you read, pages and reading times, the names you gave your creatures, their diaries, a few lines from characters that they saved, and the path of the last book you opened. Silverfish never connects to the internet and never sends anything anywhere.
 
 ## Updating and backups
 
-Your whole silverfish (its stage, personality, diary and lineage) lives in one file: `koreader/settings/traca.lua` (on Kobo, `.adds/koreader/settings/traca.lua`). The plugin folder holds no part of it.
+Your whole silverfish (its stage, personality, diary and lineage), and every creature in its brood, lives in one file: `koreader/settings/traca.lua` (on Kobo, `.adds/koreader/settings/traca.lua`). The plugin folder holds no part of it.
 
 **To update:**
 
@@ -96,7 +116,7 @@ Your whole silverfish (its stage, personality, diary and lineage) lives in one f
 3. Delete the old `silverfish.koplugin` folder from `koreader/plugins/` and copy in the new one.
 4. Start KOReader. Your silverfish picks up where it left off.
 
-Never delete `traca.lua` when updating: that file *is* your silverfish. Every new version is made to open saves from older ones.
+Never delete `traca.lua` when updating: that file *is* your silverfish. Every new version is made to open saves from older ones; a save from before 2.0.0 opens as a brood with your silverfish awake.
 
 **Moving to another device:** install the plugin there, then copy your `traca.lua` into the same folder on the new device, with KOReader closed.
 
@@ -104,9 +124,9 @@ Never delete `traca.lua` when updating: that file *is* your silverfish. Every ne
 
 ## Uninstalling
 
-1. If its sleep screen is on, turn it off first: long-press the silverfish and choose **Sleep screen: off**.
+1. If its sleep screen is on, turn it off first: tap the gear at the top of its screen, then tap **Sleep screen: on** so it switches to **off**.
 2. Delete `koreader/plugins/silverfish.koplugin`.
-3. To erase the silverfish and its diary too, delete `koreader/settings/traca.lua` and the `koreader/traca` folder.
+3. To erase the silverfish, its brood and their diaries too, delete `koreader/settings/traca.lua` and the `koreader/traca` folder.
 
 ## Compatibility
 

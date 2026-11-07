@@ -1,3 +1,85 @@
+# v1.0.16 · 2026-11-07
+
+**New optional apps**
+- **pfSense**: your pfSense firewall over its REST API package: gateways, interfaces, services (start, stop, restart), devices from DHCP and the ARP table with Wake-on-LAN, static mappings and DNS overrides, firewall rules on or off, aliases, NAT, VPNs (WireGuard, OpenVPN, IPsec), certificates' expiry with ACME renew, packages, logs, and reboot.
+- **NextDNS**: your NextDNS profile: today's queries and what was blocked, the query log (filtered, searched, or one device's), the denylist and allowlist, the security, privacy and parental control switches, and whether this Kindle uses NextDNS.
+
+**Launcher**
+- **App lock** (Settings > Launcher > App lock): a passcode or password before the apps you choose. They stay unlocked until the Kindle sleeps. SSH's own app PIN becomes part of it.
+- **Message time** (Settings > Launcher): how long short messages and Undo stay on screen, in every app.
+- **Page bar** (Settings > Launcher): what's at the foot of a page with more than one page: numbered parts, parts and Next, or words.
+- **Continue reading** can be turned off. It skips a deleted book, and opens the Library when there's no book to continue.
+- Shortcuts for **SSH hosts** and **crosswords**, from Add shortcut or from the app itself (hold a host in SSH, or Today's crossword in Crosswords).
+- **Help** (⋮) is rewritten for today's apps, with a link to the user guide.
+- **Fonts** in three tabs (Your fonts, Get more, Settings). Get more browses all of Google Fonts.
+- Settings has an **Optional apps** group.
+
+**Updates**
+- Each optional app shows its version and **Up to date** or **Update available**, with **Update**, **Reinstall** and **Remove**. **Update all** when two or more have an update.
+- **Show test versions**: test versions appear in Select version, and Check for updates finds them too.
+- An optional app that can't be updated with the rest says so in a notification.
+- Shorter, plainer text throughout.
+
+**FlashForge**
+- While printing, change the **speed**, **Z offset** and **fans**.
+- The Camera page has **Camera on**, **Camera off** and **Light**, and can **refresh automatically** (every 2 seconds to 5 minutes).
+- Settings > **SHOW** hides the light, camera, air filter or fans for a printer that doesn't have them.
+- **Monitor prints** (Settings) reads the printer in the background while the Kindle is awake, so notifications come with FlashForge closed. New notifications: **Print paused** and **Print hasn't moved in 20 min**.
+
+**SSH**
+- **Use a key** (Edit host): adds the key to the host for you and switches the host to it.
+- **Connect through** another host (Edit host), for a device you can only reach through another one.
+- **Reconnect** when a live session ends.
+- **Wake** waits for the host to answer, then reads its status.
+- **Ask before running**, for a saved command (hold it).
+- **Save** on the full output page keeps the output as a text file in Downloads.
+- The live session's buttons are an icon row, leaving more room for the terminal.
+- The web page's SSH tab has SSH settings and each host's groups, checks, MAC address, stats, sensors, alerts and quick commands.
+
+**To Do**
+- **Keep rows in place**: rows stay where they are after Done, a star or a new date, until you leave the list. A sort button (↕) puts them in order again.
+- A **Completed** row at the end of a list, with its count, opens the done tasks (with **Not done**).
+- **Skip to current** shows only for a repeating task that's overdue.
+- The web page's settings match the Kindle's.
+
+**Home Assistant**
+- Locks and sensors show when they last changed ("Changed 12 min ago").
+- **Keep rows in place** for Activity.
+- Routines as quick buttons, in search and as a gesture. Search opens a device.
+- Its own part in the web page's backup.
+
+**Notes and Crosswords**
+- **Handwritten notes on highlights**: Write a note in the highlight menu opens a pad, and the note's mark opens it again. Holding the pen's side button while selecting makes the highlight and opens the pad.
+- Crosswords: **Swap grid and clues**, a **Random puzzle** button, and new puzzles when Wi-Fi comes on.
+- Notes no longer jumps into the last crossword when it opens. **Open the last notebook** is off to start with.
+- More Notes and Crosswords settings on the web page, and their entries in the bell.
+
+**Library and Wikipedia**
+- Library: **Keep rows in place** after a status change.
+- Library and Wikipedia settings on the web page, and their books and saved articles in the page's search.
+- Wikipedia quick buttons.
+
+**Syncthing**
+- Notifications for stuck syncs and conflicting files (a switch turns them off).
+- A running icon by the clock, **Turn off when up to date**, and **Sync now, then turn off**.
+- Search opens a folder or device. The web page has the port and web GUI password.
+- Syncthing v2.1.7 (was v2.1.2).
+
+**Web server**
+- **Keep the Kindle awake** while it runs, and **Stop when idle**.
+- System > **Updates** as on the Kindle, with the optional apps.
+- The **Fonts** tab, notifications on Home, and the Launcher tab's App lock, Message time and new shortcuts.
+
+**Fixes**
+- To Do: the hold menu's buttons answer taps again.
+- Notes and Crosswords: Wi-Fi is checked the right way (they no longer think the Kindle is offline when it's connected).
+- The web page keeps a deleted Notes page for 30 days, as the Kindle does.
+- pfSense: the logs open again, and interfaces that are on no longer show as Disabled.
+- Pangolin and SSH: no grey boxes where an icon was missing.
+- SSH: a gesture for a deleted command says so in the apps' own message box.
+- Web page: text always goes in as plain text, never as HTML.
+- GitHub workflows run with read-only access.
+
 # v1.0.15 · 2026-10-27
 
 **Updates**
@@ -65,13 +147,3 @@ The guide PDF is updated.
 - Installing a zip (the web page's Update plugins, and the new updater) keeps the Syncthing program runnable.
 
 The guide PDF is updated.
-
-# v1.0.11 · 2026-10-26
-
-**SSH**
-- A command's output (quick commands, saved commands, Run a command) opens in a pop-up over the host's page: drag it by its title bar, tap ✕ or outside it to close it. Its buttons: Copy all, Explain and Summarize (with an AI set up), Run again, Live session (on the same host) and Full screen (the output on a full page, with Find). Hold a quick command for Run full screen.
-- SSH settings has Text size for the live session (10 to 24; the next session opens with it). The output's text follows it too.
-
-The guide PDF is updated.
-
-This release was built and published by GitHub Actions.
