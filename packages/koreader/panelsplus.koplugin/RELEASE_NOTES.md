@@ -1,3 +1,89 @@
+# v1.6.0 · 2026-11-07
+
+<div align="center" style="margin-bottom: 15px">
+  <img width="98%" height="auto" alt="moonlight-cover-release" src="https://github.com/user-attachments/assets/9f196d96-1805-400e-b082-c1f51403a854" />
+  <em>Me greeting the moon. Small and beautiful moon...</em>
+</div>
+
+> "Moonlight is sculpture; sunlight is painting."
+> -- **Nathaniel Hawthorne**, *The American Notebooks* (1838)
+
+Welcome to another update, this is themed moonlight due to dark/mode changes and brightness QOL's. Let's see what's new:
+
+# Main Features
+<div align="center">
+  <table>
+    <thead>
+      <tr>
+        <th width="50%" align="center">Feat 1: Dark mode Improved (Based on bug report from @Nabistay</th>
+        <th width="50%" align="center">Feat 2: LiveLight Plugin Support</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td width="50%" align="center" valign="top">
+          <video src="https://github.com/user-attachments/assets/f3725241-478a-4a0e-9afa-7ef4b0affc6a" controls width="100%"></video>
+        </td>
+        <td width="50%" align="center" valign="top">
+          <video src="https://github.com/user-attachments/assets/19405e8a-a689-4c62-b89a-57713d915f91" controls width="100%"></video>
+        </td>
+      </tr>
+      <tr>
+        <td align="left" valign="top">
+          <strong>Now you can invert dark colors for panels, and keep the rest of UI in dark mode.</strong> 
+          <br></br>Tbh, this feature was already built-in in KOReader! but Panels+ was ignoring it (skill issue of mine)<br></br>I didn't know that until someone <a href="https://github.com/KristanLaimon/PanelsPlus/issues/15"> reported this bug</a> so I took the bug fix and I converted it into a feature. 
+        </td>
+        <td align="left" valign="top">
+           A little QOL. Now LiveLight joins to Panels+ plugin's native support family. If you're interested, you can download it <a href="https://github.com/ironicsans/livelight.koplugin">here</a>. Neither it's paid advertising, nor I'm affiliated with the original author. I just found this plugin very useful for me and wanted to integrate it with Panels+.
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+## Feat 3 | New official translation: Brazilian Portuguese <- Translated by @MatheusLope
+<div align="center">
+  <img width="80%" height="auto" alt="image" src="https://github.com/user-attachments/assets/8b23e029-15e3-4b3f-909c-61c1e3feb605" />
+</div>
+
+
+
+---
+#### Releasing Schedule Change:
+Starting with this version, I'll be releasing smaller updates more frequently. 🦊 
+
+I've decided to make this change because keeping up with increasingly large updates for each new minor version, as I've done over the past four releases (v1.2.0, v1.3.0, v1.4.0, and v1.5.0), has become difficult to sustain.
+
+It's not sustainable for me in the long run, and it also means that Panels+ receives updates less frequently...
+
+I believe this is a win-win: you'll get updates faster, and I'll be able to keep developing Panels+ without burning myself out in the process.
+
+---
+## Downloading
+
+Panels+ has **two different builds/flavors**, choose the one that best fits your needs.
+
+| | **Vanilla / Standard Build** | **OCR-Embedded Build** |
+|:---|:---|:---|
+| **Description** | The classic Panels+ experience, with all the improvements introduced in this update. | Everything from the standard build, plus **two specially fine-tuned OCR models** designed for manga lettering. |
+| **Installation size** | Lightweight (~192KB) | Little larger, due to the included OCR models (~4.09MB) |
+| **Native OCR** | ✅ Supported | ✅ Supported |
+| **Included OCR models** | None (uses your existing KOReader Tesseract models) | ✅ English and Spanish, fine-tuned for manga lettering |
+| **OCR accuracy** | Standard Tesseract recognition | Approximately **10–15% better accuracy** compared to generic Tesseract models for Spanish and English OCR models only. |
+| **Custom OCR models** | ✅ Supported | ✅ Supported |
+| **Default OCR language** | Depends on your installed models and configuration | English |
+| **Switch OCR models** | ✅ Supported | ✅ Supported |
+| **New features & QOL improvements** | ✅ All included | ✅ All included |
+| **Download** | `panels_plus.koplugin.zip` | `panelsplus_with_ocrmodels.koplugin.zip` |
+
+> **Which version should I choose?**
+>
+> Choose **Vanilla** if you prefer a lightweight installation and already have your preferred OCR models.
+>
+> Choose **OCR-Embedded** if you want the additional manga-optimized English and Spanish OCR models included out of the box.
+
+Both versions are available in the **Assets / Downloads** section below.
+
 # v1.5.1 · 2026-10-24
 
 <p align="center">
@@ -802,67 +888,3 @@ Copy `panels_plus.koplugin` over your existing folder and restart KOReader. Your
 ## Author
 
 - KristanLaimon
-
-# v1.2.0 · 2026-07-31
-
-<img width="3168" height="1344" alt="final" src="https://github.com/user-attachments/assets/bea7ff8b-c7c3-4a24-86c1-b76c89a808e7" />
-
-# Panels+ | Smooth and cropped
-
-Built from tag: `v1.2.0`
-
-Hello PanelsPlus Users!, this was a really fast update. Somehow, I got motivated by some [some users really loving the plugin in reddit](https://www.reddit.com/r/koreader/comments/1utu32e/koreader_manga_kindle_comic_converter_tips/), so I get myself to work on an even better update than the last one in my free time these days.
-
-# New Features
-
-| Feature | Description |
-| :---: | :--- |
-| **Feature 1 (Major feat)** | **Smooth panel-to-panel navigation**<br><br>Switching panels can now pan the camera from the current panel to the next instead of cutting instantly. It's off by default (**Classic**); the *Navigation transition* menu switches it to **Smooth** and exposes sliders for the pan's duration and how many discrete frames it's split into. The frame count matters most on e-ink: it can be dropped to a single frame so the pan costs almost nothing on displays that already handle partial refresh poorly, or raised toward 24 on faster screens for a genuinely smooth pan. |
-| **Feature 2 (Major feat)** | **Panning across page boundaries**<br><br>The camera pan now also runs when a swipe crosses from the last panel of one page to the first panel of the next, as long as the next page's panels are already cached in the background — otherwise the crossing quietly falls back to an instant cut rather than blocking the gesture on detection. |
-| **Feature 3 (Major feat - Implicit)** | **A fourth crop option: "No crop"**<br><br>Alongside Strict, Loose, and With margin, a panel can now be shown **without cropping** at all: the viewer centers a screen-shaped window on the panel's own position on the page, so nearby page content that would normally be cut away stays visible, bounded only by the page's own edges (padded with white beyond them). Useful for panels sitting close to the page edge or to each other, where every other crop mode ends up clipping something. |
-| **Feature 4 (Minor feature)** | **Loose crop can go up to 100%**<br><br>The bleed slider's cap went from 40% to 100%, and the bleed distance is now measured off the panel's *larger* dimension instead of its smaller one, so very wide or very tall panels bleed a proportionate amount instead of an oddly small one. |
-| **Feature 5 (Buf-fixes and overall performance)** | **Kindle specific-bugs stability improvements and old Koreaders versions support**<br><br> |
-
-
-<div align="center">
-  <video src="https://github.com/user-attachments/assets/04ee9d71-915b-42e4-94de-ba0f8c84ab19" controls style="max-width: 100%;"></video>
-  <cap>Features 1 to 3: Now optionally you can move trough pannels with animation, and animation includes CROSS-PAGE changes!, and "No Cut" feature, so you can see the panel surroundings even with the traditional crop (not animations)</cap>
-</div>
-
-## Important Notes about transition animation
-The animation has FPS in transitions so it repaints a lot, its recommended to use this feature at 8fps in non ink-based devices (aka. Kindle), in case for ink-devices, I'd recommend 1 fps at most, but even that, its kinda strange, because it repaints the screen a lot and, moves weird due to ink-based-screens nature. Works far better in koreader for linux and mobile, and modern kobo devices, but if you really like it, there's no problem, its always accesible!, you can play with it if its to your taste!
-
-
-
-## More Fixes
-
-- Fixed a leaked transition-canvas image on every panel viewer close.
-- "No crop" mode's page tiles used during a boundary-crossing pan are now freed instead of held for the rest of the session.
-- Panning from a larger panel to a smaller one no longer risks its starting offset being silently clamped mid-animation.
-- Native (Outline) detection now skips both its shared-context render and its per-probe fallback outright when free memory is under `native_detect_min_free_bytes` (100MB), instead of attempting up to 29 full-resolution renders — this plugin's single largest allocation — right when memory is already tight.
-- Loose crop's bleed distance is now derived from the panel's larger dimension, so wide or tall panels no longer bleed a disproportionately small amount.
-- The smooth-navigation frame count is a real, saved setting now (a "Transition frames" slider, 1–24) instead of the placeholder toggle it briefly shipped as; its floor was set to 1 specifically so e-ink readers can pick the least possible animation.
-
-## Some new renaming 
-- "Auto mode" 'modes' has been renamed to a more accurate naming, now deep mode, fast mode and auto mode. (not gutter and outline weird names)
-
-## Included Commits
-
-- `6bddc58` feat: Implemented smooth panning (Basic)
-- `48f774b` feat: Added animation panning transitions across pages
-- `aafdf69` feat: Expanded loose crop percentage cap (Until 100%, maybe doesn't have sense, but its funny)
-- `a82d7f9` feat: No crop mode (and smooth navigation compatibility)
-- `3fd874e` feat-fix: Fixed possible memory leaks and improved smooth navigation from bigger to smaller panels
-- `47274ea` fix: Fixing more memory leaks happening in my kindle for many reasons
-- `e86049e` feat-docs-fix: Improved performance in low memory devices (kindle!)
-- `de7ddab` enhance: Setting minimum FPS for smooth transitions to 1 (foe e-ink-readers)
-
-## Upgrading
-
-Copy `panels_plus.koplugin` over your existing folder and restart KOReader. Your settings are kept; smooth navigation defaults to **Classic** (off) until you turn it on from the *Navigation transition* menu.
-
-## Author
-
-- KristanLaimon
-
-Thanks for using PanelsPlus+, any bug you found, pls create an Issue and I'll fix it ASAP 👍🏻.
