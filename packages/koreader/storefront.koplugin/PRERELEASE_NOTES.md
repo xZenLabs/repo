@@ -1,3 +1,9 @@
+# 26.11.6-beta · 2026-11-07
+
+- Update version check logic
+
+**Full Changelog**: https://github.com/ultimatejimmy/storefront.koplugin/compare/26.11.5-beta...26.11.6-beta
+
 # 26.11.5-beta · 2026-11-05
 
 - Load readme in the background without UI blocking
@@ -22,11 +28,3 @@
 - Update the logic for the "Check for updates" button
 
 **Full Changelog**: https://github.com/ultimatejimmy/storefront.koplugin/compare/26.10.28...26.10.29-beta
-
-# 26.10.26-beta · 2026-10-27
-
-- Fix #5080 
-- Fix #5081 
-- Update font #5082 
-
-**Full Changelog**: https://github.com/ultimatejimmy/storefront.koplugin/compare/26.10.23-beta...26.10.26-beta
