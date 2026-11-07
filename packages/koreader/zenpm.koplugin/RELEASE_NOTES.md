@@ -1,3 +1,10 @@
+# v1.7.3 · 2026-11-07
+
+## What's Changed
+
+- Better DNS error handling
+- Show updates on folders (icons/wallpapers)
+
 # v1.7.2 · 2026-10-15
 
 ## What's Changed
@@ -29,18 +36,3 @@
 - Update top menu tap zone
 - Better wifi edge case handling (no IP/no DNS)
 - Bug fixes
-
-# v1.6.0 · 2026-09-18
-
-## What's Changed
-
-- Add wallpapers/screensavers sections from ReaderBackdrop
-- Set & configure screensaver/wallpaper directly from ZenPM
-- Add status bar from ZenOS
-- Fix absolute vs relative plugin path on some devices
-- Update settings layout
-- Merge Changes tab into Discover
-- Add alpha support
-- Allow using Github token and direct requests
-- Bug fixes
-- Performance improvements
