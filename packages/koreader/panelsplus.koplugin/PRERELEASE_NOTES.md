@@ -22,6 +22,11 @@ https://github.com/EmirErtorer/ink-away.koplugin/discussions/69
 
 There are no builds so far. I need more testing for these integration features.
 
+---
+
+Wait? Wasn't this v1.6.0?
+True, I delayed this update to v1.7.0 due to some bug reports about 1.5.1 which needed to patched (v1.6.0 Moonlight).
+
 # v1.5.0-nightly · 2026-09-21
 
 # The `Texty Texty` Update

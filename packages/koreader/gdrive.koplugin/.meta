@@ -1,0 +1,23 @@
+# Gdrive plugin for KOReader
+# https://github.com/moohaad/gdrive.koplugin
+# zenpm:auto-scraped
+id=gdrive
+name=Gdrive
+version=1.0.1
+description=A koreader plugin that allows files download and sync from Google drive
+author=moohaad
+category=productivity
+platforms=koreader
+dependencies=
+source=https://github.com/moohaad/gdrive.koplugin
+stars=5
+updated_at=2026-11-07T15:01:00Z
+published_at=2026-04-16T15:01:47Z
+readme_url=packages/koreader/gdrive.koplugin/README.md
+readme_hash=d7c8801c718c8b4d9099999125994b3caffe18f8
+release_notes_url=packages/koreader/gdrive.koplugin/RELEASE_NOTES.md
+release_notes_hash=e393435b44324ebf92de5329d4b1d9428a0787dcac9603bad23802b6a80208a1
+releases=[{"tag_name":"v1.0.1","assets":[{"name":"gdrive.koplugin.zip","url":"https://github.com/moohaad/gdrive.koplugin/releases/download/v1.0.1/gdrive.koplugin.zip","size":11400,"digest":"sha256:20d52e091b8c9f897991bdbca531b073febeda065ec5ed5f335b428dd69f1082"}],"name":"v1.0.1"},{"tag_name":"v1.0.0","assets":[{"name":"gdrive.koplugin.zip","url":"https://github.com/moohaad/gdrive.koplugin/releases/download/v1.0.0/gdrive.koplugin.zip","size":11657,"digest":"sha256:1c08394d713508c5012d3dc9a89dc693a79e021170873926508fdf1093496a35"}],"name":"v1.0.0"}]
+source_type=release
+source_asset=gdrive.koplugin.zip
+size=11400

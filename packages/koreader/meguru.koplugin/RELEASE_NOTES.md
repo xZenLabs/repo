@@ -1,3 +1,19 @@
+# v1.8.0 · 2026-11-07
+
+### New
+
+- Local `.cbz` covers and metadata load much faster.
+- (.meguru) A page that fails to load now stops the forward turn. The next turn retries a transient failure (with a notice), or names a permanent one and skips it.
+- Taps and swipes made while a page or panel is still rendering are ignored instead of replayed.
+- Two-page view fills the blank under the shorter page with its margin colour.
+
+### Fixed
+
+- Large local pages that would run the device out of memory. Such a page is refused, retried once, then skipped with a "too large" message.
+- Freezes of tens of seconds when Kavita or Suwayomi is unreachable.
+- Dust widening the page-number strip and cropping into the artwork.
+- Errors when pinching or spreading a panel whose image failed to load.
+
 # v1.7.3 · 2026-11-02
 
 ## New features
@@ -75,12 +91,3 @@ Two new optional integrations.
 - Fixed an error when a local `.cbz` is opened for the first time.
 
 **Full Changelog**: https://github.com/Craftwork2720/meguru/compare/v1.5.4...v1.6.0
-
-# v1.5.4 · 2026-10-11
-
-## Bug fixes
-
-- **Kavita: chapters are no longer skipped.** ([#5](https://github.com/Craftwork2720/meguru/issues/5)).
-- **Komga: series covers now use the full-size image**.
-
-**Full Changelog**: https://github.com/Craftwork2720/meguru/compare/v1.5.3...v1.5.4
