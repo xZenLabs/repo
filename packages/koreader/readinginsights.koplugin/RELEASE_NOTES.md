@@ -1,3 +1,9 @@
+# v8.7.11 · 2026-11-07
+
+### Fixed 
+
+- The white vertical line cutting through the day numbers in the Book progress calendar is gone, because the day number is now drawn on top of the “+%” and progress bar layer
+
 # v8.7.10 · 2026-11-04
 
 ### Fixed
@@ -32,9 +38,3 @@
   - It is on by default, has no effect in day mode, and is only available while “Cover border” is on.
   - It applies to Book info, the Reading calendar and the Reading shelf.
 - Book info popup is draggable. A swipe moves it (kept on screen) and a slower pan moves it freely. Taps still close it, and a tap on the stars or the description behaves as before. A swipe that starts outside the popup still closes it. Long-press on the stars and on a missing cover keeps its function, so hold-and-drag is not used.
-
-# v8.7.6 · 2026-10-23
-
-### Fixed
-
-- ISO date format for month now '01' instead of '1'
