@@ -4,8 +4,6 @@ OrbitShelf 1.2.23 — Spines for BookOrbit shelves: Series, Authors and Genres (
 
 Note: Spines is for the Spines view when Bookshelf 6.4 drops — it needs Bookshelf 6.4 (or its feat-588 test branch). On older Bookshelf, everything works as before; the Spines option simply isn't there yet.
 
-Install: unzip, copy the orbitshelf.koplugin folder into KOReader's plugins folder (.adds/koreader/plugins/ on Kobo, koreader/plugins/ on Kindle), restart KOReader, open Tools → OrbitShelf.
-
 # v1.2.21 · 2026-11-07
 
 OrbitShelf 1.2.21 — Footer critter stands on SimpleUI 3.0.3's ground shadow, like the home screen's.
