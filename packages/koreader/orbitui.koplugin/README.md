@@ -89,7 +89,19 @@ You can use OrbitUI with ordinary local books, KOReader collections, local
 reading goals and no online account. BookOrbit, Hardcover and MyAnimeList are
 optional integrations, not requirements.
 
-**1.1.0-beta.4 preview:** optional **Alphabet strip**, OFF by default. Enable it
+**1.1.0-beta.5 preview:** fixes beta.4's invisible alphabet labels: use measured
+text height/width and no extra text padding, including high-DPI/narrow margins
+and the selected letter. Input/shelf geometry and sort/filter behavior stay
+unchanged. Automated tests reproduce the issue on beta.4; physical confirmation
+of the correction on Bigme/Boox is still required.
+
+**Svenska — förhandsversion 1.1.0-beta.5:** fixar osynliga bokstäver i beta.4.
+Texten anpassas efter uppmätt höjd/bredd utan extra textmarginaler, även vid hög
+DPI, snäv marginal och markerad bokstav. Pekytor, hyllans utrymme och sortering/
+filter ändras inte. Felet återskapas i automattester på beta.4; korrigeringen
+behöver fortfarande bekräftas på Bigme/Boox.
+
+**Since 1.1.0-beta.4:** optional **Alphabet strip**, OFF by default. Enable it
 per view through **footer counter ▾ > Sort, filter & view > Alphabet strip**.
 Tap a letter, or drag to preview a large letter and release to jump within the
 existing sorted/filtered shelf. Å/Ä/Ö remain distinct. Dragging does not read

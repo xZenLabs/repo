@@ -9,7 +9,7 @@ and KOReader.
 ![Streamline Flex Gradient: selected KOReader controls, library tabs, and common actions](.github/overview-streamline-flex-gradient.png)
 
 This repository contains one pack: **Streamline Flex Gradient for ZenOS**.
-Its **358 editable SVGs** use exact runtime lookup filenames and build into
+Its **368 editable SVGs** use exact runtime lookup filenames and build into
 `dist/zen-streamline-flex-gradient.zip`. It themes all **23 built-in choices under
 Navbar → Tabs → Add → Tab**.
 
@@ -51,6 +51,16 @@ Page-browser and reader-control lookups include `annotations.svg`,
 pin and bookmark. Settings rows also cover the copy, cut, paste, sort, sync,
 and other `settings_*` lookups used by ZenOS context menus. Division, bottom
 dock, drag, swipe gesture, play and table-row settings keep the bundled artwork.
+
+Context-menu and settings rows also resolve `settings_link.svg`,
+`settings_incognito.svg`, `settings_send.svg`, `settings_wifi_off.svg`,
+`settings_chevron_left.svg`, `settings_chevron_right.svg`,
+`settings_file_cabinet.svg`, `settings_book_outline.svg`, and
+`settings_file_document_outline.svg`. Incognito, send, chevrons, file browser, book and document
+reuse the pack's existing artwork; Wi-Fi off draws a line through the pack's Wi-Fi icon.
+
+The ZenFM Controls button and Launcher entry resolve `zenfm.svg`, a copy of the
+pack's file-browser folder artwork.
 
 Some designs require small adaptations to supply the correct UI symbol. Books
 reuse the original cover or page shapes. Navigation, menu lines, the X, dots,

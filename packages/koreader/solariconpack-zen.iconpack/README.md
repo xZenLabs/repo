@@ -14,7 +14,7 @@ Modern, rounded replacement icons for [ZenOS](https://github.com/xZenLabs/zen-os
 
 ## What's included
 
-Each style contains 421 SVG files named for ZenOS, KOReader, and ZenPM's exact icon lookups, including all 102 original KOReader filenames and drawings. Every lookup is an editable source file, including names previously generated as aliases during the build. Matching grids and line weights keep the artwork consistent across the three interfaces. Missing icons use the bundled artwork.
+Each style contains 431 SVG files named for ZenOS, KOReader, and ZenPM's exact icon lookups, including all 102 original KOReader filenames and drawings. Every lookup is an editable source file, including names previously generated as aliases during the build. Matching grids and line weights keep the artwork consistent across the three interfaces. Missing icons use the bundled artwork.
 
 | Pack | Style | Made for | Release asset |
 |---|---|---|---|
@@ -60,6 +60,16 @@ Page-browser and reader-control lookups include `annotations.svg`,
 `pin_remove.svg` and `bookmark_remove.svg` draw a line through the pack's own
 pin and bookmark. Settings rows also cover the copy, cut, paste, sort, sync,
 and other `settings_*` lookups used by ZenOS context menus.
+
+Context-menu and settings rows also resolve `settings_link.svg`,
+`settings_incognito.svg`, `settings_send.svg`, `settings_wifi_off.svg`,
+`settings_chevron_left.svg`, `settings_chevron_right.svg`,
+`settings_file_cabinet.svg`, `settings_book_outline.svg`, and
+`settings_file_document_outline.svg`. Incognito, chevrons, file browser, book and document reuse
+the pack's existing artwork; Wi-Fi off draws a line through the pack's Wi-Fi icon.
+
+The ZenFM Controls button and Launcher entry resolve `zenfm.svg`, a copy of the
+pack's file-browser folder artwork.
 
 ## Install with ZenPM
 

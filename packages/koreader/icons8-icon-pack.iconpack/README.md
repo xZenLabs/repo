@@ -20,7 +20,7 @@ and packaged by [ZenLabs](https://github.com/xZenLabs) for
 | **Icons8 Colour** | Original multicolour Flat Color artwork, with supplementary UI symbols | `zen-icons8-colour.zip` |
 | **Icons8 Mono** | Native Windows 10 outlines, with matching outline adaptations | `zen-icons8-mono.zip` |
 
-Icons8 Colour has **356 editable SVGs** and Icons8 Mono has **349**, each using its exact runtime lookup filenames.
+Icons8 Colour has **366 editable SVGs** and Icons8 Mono has **359**, each using its exact runtime lookup filenames.
 Both packs theme all **23 built-in choices under Navbar → Tabs → Add → Tab**.
 KOReader and Zen icons retain their exact lookup names. Shared artwork under
 different lookup names is stored as editable source SVGs. No Lua manifests are needed.
@@ -66,6 +66,16 @@ Page-browser and reader-control lookups include `annotations.svg`,
 pin and bookmark. Settings rows also cover the copy, cut, paste, sort, sync,
 and other `settings_*` lookups used by ZenOS context menus. Zoom, eye, pause,
 and horizontal-dots lookups have no Icons8 source and keep the bundled artwork.
+
+Context-menu and settings rows also resolve `settings_link.svg`,
+`settings_incognito.svg`, `settings_send.svg`, `settings_wifi_off.svg`,
+`settings_chevron_left.svg`, `settings_chevron_right.svg`,
+`settings_file_cabinet.svg`, `settings_book_outline.svg`, and
+`settings_file_document_outline.svg`. Incognito, send, chevrons, file browser, book and document
+reuse the pack's existing artwork; Wi-Fi off draws a line through the pack's Wi-Fi icon.
+
+The ZenFM Controls button and Launcher entry resolve `zenfm.svg`, a copy of the
+pack's file-browser folder artwork.
 
 ## Install
 

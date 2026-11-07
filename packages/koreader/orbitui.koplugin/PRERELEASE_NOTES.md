@@ -1,3 +1,37 @@
+# v1.1.0-beta.5 · 2026-11-07
+
+OrbitUI 1.1.0-beta.5 — Visible alphabet labels · Synliga bokstäver
+
+## Svenska
+
+- Fixar att bokstavslisten i beta.4 kan reagera på dragning utan att bokstäverna syns. Den gamla beräkningen utgick från önskad textstorlek, inte typsnittets faktiska radhöjd och extra textmarginaler. Text som inte fick plats ritades inte alls.
+- Listens egna texter får nu noll extra marginal; radavståndet följer uppmätt normal/fet texthöjd. Storleken anpassas efter faktisk bredd/höjd i listen, den markerade bokstavens rad och den stora återkopplingen.
+- Pekytan, bokstavspositionerna, omslagens utrymme, sortering/filter, läsaråtergång och paus/avbryt-beteende behålls. Ingen metadata, EPUB, nätverksläsning eller ombyggnad av hyllan under dragning. Bokstavslisten är fortsatt valfri och avstängd som standard, med svenska och engelska.
+
+Aktivera per vy via **sidräknaren ▾ > Sortering, filter och vy > Bokstavslist**.
+
+Ett nytt test återskapar osynliga bokstäver med den publicerade beta.4-koden och passerar med fixen. Kontrollen använder även KOReaders riktiga textwidget och FreeType-mått från ett medföljande typsnitt. Tidigare tester kontrollerade bakgrund/pekyta men använde för förenklade textmått. Teckenformning och faktisk skärmvisning är fortfarande inte ett fysiskt Bigme/Boox-test; bekräfta gärna att listen nu syns, även vid andra textstorlekar, rotation och nattläge.
+
+**Endast förhandskanalen; stabil/latest är fortfarande 1.0.0.** Ingen ny upstream-merge, ändring av komponentversioner, bootstrap/API1, bilder, befintliga inställningar, läsdata eller synkägare. Ingen användarenhet/server driftsätts av releasen. Äldre versioners filer/taggar lämnas oförändrade. Övriga 1.1-funktioner och tidigare säkerhetsbegränsningar finns kvar.
+
+## English
+
+- Fixes beta.4's alphabet strip accepting gestures while its letters remain invisible. Requested font size underestimated native line height plus default vertical padding; oversized text was silently omitted.
+- Owned labels now have zero extra padding. Measured regular/bold line heights determine spacing, and bounded cached size fitting covers actual width/height of normal labels, the selected row and large feedback.
+- Touch mapping, cover/content space, sorting/filtering, reader return and cancellation/lifecycle ownership remain unchanged. Dragging still performs no metadata/EPUB/network reads or shelf rebuild. The strip remains optional, OFF by default, with SV/EN controls.
+
+Enable per view through **footer counter ▾ > Sort, filter & view > Alphabet strip**.
+
+New visibility assertions fail against the exact published beta.4 adapter and pass with the fix, including actual KOReader TextWidget sizing and FreeType measurements from a bundled font. Earlier tests exercised fills/input with over-simplified text dimensions. This does not run native glyph shaping or physically certify Bigme/Boox output; please check visible labels, font sizes, rotation and night mode on-device.
+
+**Preview only; stable/latest stays 1.0.0.** No additional upstream merge, component/source-pin/bootstrap/API1/path/artwork migration, settings/reading-data wipe, new sync owner or device/server deployment. Older releases/tags stay immutable. Existing 1.1 features and hosted safety deferrals remain.
+
+Download **orbitui.koplugin.zip**, not GitHub's source archive. Back up settings/reading data and restart KOReader after installation.
+
+Unchanged reviewed pins: Bookshelf d47edfcc7c160691417235201595ab12cdffbdfe; SimpleUI 4bf2d2c5605d4172c5283e224450854d0b72219b.
+
+Built on / bygger på SimpleUI by doctorhetfield-cmd and contributors, and Bookshelf by AndyHazz and contributors. See README.md, LICENSE, NOTICE and asset-specific notices.
+
 # v1.1.0-beta.4 · 2026-11-07
 
 OrbitUI 1.1.0-beta.4 — Alphabet strip · Bokstavslist
@@ -133,29 +167,3 @@ Inställningar, cacheformat, läsdata, bilder, språk och externa plugin-/patchk
 **Återstår:** fysiska Bigme/Boox-tester av vila under indexering av alla 3 341 filer, paus/fortsätt/Stäng, markerat omslag/beskrivning, kall/varm/parkering och riktig uppdatering/återställning. Automattester bevisar inte exakt vad som utlöste felet på enheten och är inte godkännande för stabil 1.0.
 
 Installera `orbitui.koplugin.zip` eller uppdatera via **förhandskanalen** och starta om KOReader. Behåll en separat säkerhetskopia. RC2 ska inte väljas av stabila kanalen.
-
-# v1.0.0-rc.1 · 2026-11-02
-
-## OrbitUI 1.0.0-rc.1 — release candidate, not stable 1.0
-
-The feature set is frozen for focused acceptance testing. Bookshelf stays at the reviewed `b512cd90` documentation follow-up after 6.2.0; SimpleUI stays at `fdf83c7d`. No further upstream features, redesign, settings migration or new synchronization owner.
-
-- BookOrbit status checks now report unchanged, missing files/data, protected entries and real newer-local conflicts separately. Open **Integrations > BookOrbit > Import reading status > Status check details** for reasons and up to 50 session-only filename examples. Only counts persist. Existing overwrite protections, server API requirement and OFF default are unchanged; status import remains experimental.
-- The unavailable Bookshelf-OS reference is removed only from inspiration monitoring. The other five sources, historical attribution, existing settings-category cards and quick controls remain.
-- Home/Bento, Library/Manga profiles, fast return, tags/indexing, shelves/series/artwork, optional add-ons and external BookOrbit/Hardcover/MAL/patch ownership retain their behavior. The API-1 bootstrap, all assets/languages and exactly 2,000 installed paths are preserved.
-
-**Testing scope:** automated/sealed/native installer checks do not establish physical device acceptance. Fresh install, real-device update/recovery, full 3,000+ EPUB indexing, Bigme/Boox rendering/lifecycle and write-safe optional-integration checks remain open. No device or server was changed for this release. The exact RC checklist is in `docs/TESTING.md`.
-
-Install `orbitui.koplugin.zip` (not GitHub's source archive), or update through the **preview channel**, then restart KOReader. Keep an independent backup. RC1 is a prerelease and must not be selected by the stable channel. Previous public releases are not replaced.
-
-## Svenska
-
-**1.0.0-rc.1 är en testkandidat, inte stabil 1.0.** Nya funktioner pausas inför riktad testning. Bookshelf/SimpleUI är kvar på granskade versioner; ingen ny design, migrering eller synkägare.
-
-- BookOrbits statusrapport skiljer på oförändrat, saknade filer/läsdata, skydd och nyare lokal status. Under **Integrationer > BookOrbit > Hämta lässtatus > Detaljer om statuskontrollen** finns orsaker och högst 50 tillfälliga filnamnsexempel. Bara antalen sparas. Säkerhetsregler, serverkrav och standardvalet avstängt är oförändrade; statusimport är fortsatt experimentell.
-- Bookshelf-OS tas bort enbart ur inspirationsbevakningen. De andra fem källorna, historiken, inställningskorten och snabbkontrollerna behålls.
-- Hem/Manga, profiler, snabbåtergång, taggar/indexering, hyllor/serier/bilder, tillägg och externa plugin-/patchkopplingar ändras inte. API-1, samtliga bilder/språk och 2 000 installationsfiler behålls.
-
-**Återstår:** fysiska Bigme/Boox-tester, full indexering av 3 000+ EPUB-filer, riktig uppdatering/återställning och säkra integrationstester. Automattester är inte enhetsgodkännande. Ingen läsplatta eller server ändras av publiceringen. Testlistan finns i `docs/TESTING.md`.
-
-Installera `orbitui.koplugin.zip` eller uppdatera via **förhandskanalen** och starta om KOReader. Behåll en separat säkerhetskopia. RC1 ska inte väljas av stabila kanalen. Gamla releaser skrivs inte över.

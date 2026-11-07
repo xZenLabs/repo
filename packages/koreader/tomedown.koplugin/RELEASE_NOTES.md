@@ -1,47 +1,28 @@
 # v1.4.0 · 2026-11-07
 
-# [Release] Tomedown v1.4.0 for KOReader: Universal highlights, reading digest, dedicated menus, and Bookshelf support
+**New**
 
-Tomedown is a KOReader plugin that turns every volume you read into its own Markdown note with frontmatter, cover art, and an automatic library index. Direct from your e-reader to your notes vault. No servers, no tracking, no locked gates.
+- Universal Markdown highlights: choose how special highlights are formatted when exported (Obsidian Callout [!highlight], GFM Alert [!IMPORTANT], Standard highlight ==highlight==, Highlight & bold, Star & bold, or Bold).
+- Reading Digest: a consolidated chronological summary file (00 - Reading Digest.md) grouping highlights across your library by day, with an epigraph and a one-tap export shortcut.
+- KOReader metadata import: import book ratings, reviews, reading status, reading dates, and collections from KOReader directly into note frontmatter.
+- Reading now section: optional dedicated section at the top of the index table for books currently being read.
+- Subfolder organization & filename templates: organize notes into folders by author, series, or status, and customize filename patterns (Author - Title, Title (Author)).
+- Native Bookshelf integration: quick actions (Export this book, Tags..., Book visibility...) integrated into the bottom action bar of each book.
+- Tag suggestions & manager: fast tag suggestion dialog based on library tags and a tool to clean up unused tags.
 
-### What's new in v1.4.0:
+**Improvement**
 
-1. **Universal Markdown highlights**:
-   Until now, special highlights relied heavily on Obsidian callout syntax. You can now choose how your special highlights are exported from KOReader:
-   - Callout (`[!highlight]`)
-   - Alert (`[!IMPORTANT]`)
-   - Standard Markdown highlight (`==highlight==`)
-   - Highlight + bold (`==**text**==`)
-   - Star + bold (`⭐ **text**`)
-   - Bold (`**text**`)
-   Your notes will now look great whether you use Obsidian, MarkText, Typora, Logseq, iA Writer, or standard Markdown viewers.
+- Polished index tables: cover images optimized to 90×120 for balanced rows, compact 5-block progress bars, and added vertical breathing room for multi-line tags.
+- Calibre tag facet splitting: hierarchical category tags (e.g. Fiction.Mystery) are automatically split into clean individual #tag values.
+- Reorganized settings: settings split into dedicated, uncluttered Index and Style submenus with dedicated icons.
+- Book visibility: exclude specific volumes from the index or from export without deleting existing notes.
 
-2. **Reading Digest improvements**:
-   - One-tap export: all main actions are now grouped right at the top of the menu, including a direct shortcut for `Export reading digest`.
-   - Clean design: added an elegant title, an inspirational welcome quote, and fixed heading link formats so they render cleanly without raw bracket syntax in any Markdown editor.
+**Fix**
 
-3. **Reorganized Style and Index menus**:
-   - The settings menu has been completely reorganized with dedicated icons for **Index** and **Style**.
-   - The Files menu is now much cleaner and easier to navigate.
+- Reading digest heading links: wikilink headings render with unescaped pipes so they display cleanly without raw bracket syntax in Markdown viewers.
+- Under-the-hood stability: verified with 1,929 automated assertions passing on both Lua 5.4 and LuaJIT.
 
-4. **Polished Index tables**:
-   - Optimized table covers to 90×120 for compact, balanced rows.
-   - Sleeker 5-block progress bars to save horizontal space and keep tables from overflowing.
-   - Added vertical breathing room between tag pills.
-   - Long Calibre category tags are now automatically split into clean, individual tags.
-
-5. **Native Bookshelf integration**:
-   If you use the Bookshelf plugin, you will now find Tomedown's quick actions (`Export this book`, `Tags...`, `Book visibility...`) built right into the bottom action bar of each book.
-
-6. **General improvements**:
-   - 1,929 automated assertions passing on both standard Lua and LuaJIT.
-   - Under-the-hood stability improvements and bug fixes.
-
----
-
-### Installation:
-- If you use a KOReader plugin store ([Storefront](https://github.com/ultimatejimmy/storefront.koplugin) or [AppStore](https://github.com/omer-faruq/appstore.koplugin)), search `tomedown` under Tools and install it.
-- Alternatively, download `tomedown.koplugin-v1.4.0.zip` below and unzip it to your e-reader's `koreader/plugins/` directory.
+Install it from Check for updates, or the zip below.
 
 # v1.2.0 · 2026-11-03
 
