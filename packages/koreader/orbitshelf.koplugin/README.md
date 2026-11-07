@@ -11,7 +11,7 @@ If this plugin is useful to you, you can [support my work on Ko-fi](https://ko-f
 
 | | |
 |---|---|
-| **Version** | 1.2.21 |
+| **Version** | 1.2.23 |
 | **KOReader** | v2026.07 or newer |
 | **Needs** | [bookshelf.koplugin](https://github.com/AndyHazz/bookshelf.koplugin) (Bookshelf 6.x recommended) and bookorbit.koplugin, signed in |
 | **Optional** | SimpleUI (for the footer critter) |
@@ -21,7 +21,7 @@ If this plugin is useful to you, you can [support my work on Ko-fi](https://ko-f
 
 ## Features
 
-- **BookOrbit shelves in Bookshelf.** A BookOrbit shelf source with Library, Recently added, Recently read, Series, Authors, Genres, collections, smart scopes and libraries (one shelf per BookOrbit library, optionally grouped by Series, Authors or Genres). Series, Authors and Genres open as folders. A new shelf is named after its list (Authors, Recently added, the collection …) unless you name it yourself.
+- **BookOrbit shelves in Bookshelf.** A BookOrbit shelf source with Library, Recently added, Recently read, Series, Authors, Genres, collections, smart scopes and libraries (one shelf per BookOrbit library, optionally grouped by Series, Authors or Genres). Series, Authors and Genres open as folders. With Bookshelf 6.4 (or its feat-588 test branch) they can be shown as **Spines** too: each series, author or genre stands as a run of its books' spines under its name, covers colour the spines and page counts set their thickness, best with Offline Library on. A new shelf is named after its list (Authors, Recently added, the collection …) unless you name it yourself.
 - **Books not on the device show too.** Tap one to **Download** it, **Open In BookOrbit**, or read its **Book Description**. Nothing downloads until you ask.
 - **Hero buttons.** Download / Open In BookOrbit for books not on the device; small Remove / Open / Sync icons for books that are. Three button sizes.
 - **Offline Library.** Saves every book's cover and details (description, pages, published, language, genres), about 25 KB a book, so the full library shows with Wi-Fi off. Book files are never downloaded by it.
@@ -138,7 +138,7 @@ OrbitShelf writes to KOReader's `crash.log` (`.adds/koreader/crash.log` on Kobo)
 - A part that failed, with where. Bookshelf's own version runs instead, so the screen doesn't break.
 - Another patch or plugin that changed a Bookshelf function OrbitShelf uses, or replaced the BookOrbit shelf source, named by file. For example:
   ```
-  orbitshelf 1.2.21: Bookshelf.onHold (hero hold menu) was changed after OrbitShelf by plugins/other.koplugin/main.lua
+  orbitshelf 1.2.23: Bookshelf.onHold (hero hold menu) was changed after OrbitShelf by plugins/other.koplugin/main.lua
   ```
 
 **For more detail**, turn on **Diagnostics**, reproduce the problem within 30 minutes, then share `crash.log`. Diagnostics lines are tagged `orbitshelf <version> diag:`.
@@ -184,6 +184,8 @@ orbitshelf.koplugin/
 
 The full history is at the top of `main.lua`.
 
+- **1.2.23:** On Spines, Series / Authors / Genres show each group as a run of spines.
+- **1.2.22:** Spines for BookOrbit shelves (Bookshelf 6.4 or its feat-588 test branch).
 - **1.2.21:** Footer critter gets SimpleUI 3.0.3's ground shadow.
 - **1.2.20:** Lookups two at a time: same speed, less battery.
 - **1.2.19:** New BookOrbit shelves are named after their list; popup flashes cover only the popup.

@@ -1,3 +1,10 @@
+# v3.2 · 2026-11-07
+
+Fixed slowdown when rotating the screen for kindle devices. 
+
+**Known issue**
+- On kindle basic 2024, Fibers can still be slower than the other styles.
+
 # v3.1 · 2026-11-02
 
 Fixed slowness when changing orientation
@@ -23,9 +30,3 @@ Paints dots by writing directly to the screen buffer instead of calling KOReader
  * **Dark Mode Control:** Added a new setting to disable the feature when Dark Mode is active.
  * **One new style** 
 *  **Minor performance optimizations**
-
-# v2.1 · 2026-09-20
-
-**New options**
-- Hide dots on menus: keeps dots on the book page only, without dots on menus and dialogs.
-- Settings are now saved per style (density, size, shades, fiber length), so a value that looks good in one style doesn't affect the others.
