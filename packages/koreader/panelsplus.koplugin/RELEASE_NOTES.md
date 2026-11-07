@@ -322,7 +322,7 @@ Starting from now, Panels+ comes in **two different builds/flavors**, allowing y
 | **Default OCR language** | Depends on your installed models and configuration | English |
 | **Switch OCR models** | ✅ Supported | ✅ Supported |
 | **New features & QOL improvements** | ✅ All included | ✅ All included |
-| **Download** | `panelsplus-1-5-0-RC1.koplugin.zip` | `panelsplus-1-5-0-RC1-OCR-EmbbededVersion.koplugin.zip` |
+| **Download** | `panels_plus.koplugin.zip` | `panelsplus_with_ocrmodels.koplugin.zip` |
 
 > **Which version should I choose?**
 >

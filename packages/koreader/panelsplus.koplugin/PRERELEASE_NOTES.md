@@ -1,4 +1,4 @@
-# v1.6.0-nightly · 2026-11-01
+# v1.7.0-nightly · 2026-11-01
 
 > “A ship in harbor is safe, but that is not what ships are built for.”
 >
