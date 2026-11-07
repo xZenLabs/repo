@@ -93,13 +93,30 @@ optional integrations, not requirements.
 text height/width and no extra text padding, including high-DPI/narrow margins
 and the selected letter. Input/shelf geometry and sort/filter behavior stay
 unchanged. Automated tests reproduce the issue on beta.4; physical confirmation
-of the correction on Bigme/Boox is still required.
+has been reported successful on the user's Bigme. Broader font/night/rotation
+acceptance on Bigme/Boox remains open.
 
 **Svenska — förhandsversion 1.1.0-beta.5:** fixar osynliga bokstäver i beta.4.
 Texten anpassas efter uppmätt höjd/bredd utan extra textmarginaler, även vid hög
 DPI, snäv marginal och markerad bokstav. Pekytor, hyllans utrymme och sortering/
 filter ändras inte. Felet återskapas i automattester på beta.4; korrigeringen
-behöver fortfarande bekräftas på Bigme/Boox.
+är nu bekräftad av användaren på Bigme. Bredare prov med typsnitt, nattläge och
+rotation på Bigme/Boox återstår.
+
+**Development code, not yet released:** optional **Word suggestions** in
+**Search OrbitUI**, OFF by default. Complete the last word from already cached
+local titles/authors/series; tap one of up to three suggestions, then Search.
+Two characters and cursor at the end are required. Hold the toggle for help.
+Coverage follows the chosen scope and can be incomplete while caches are cold;
+there are no new file scans, EPUB reads or network requests while typing.
+
+**Utvecklingskod, ännu inte släppt:** valfria **Ordförslag** i
+**Sök i OrbitUI**, avstängda som standard. Komplettera sista ordet från redan
+cachade lokala titlar/författare/serier. Tryck på ett av högst tre förslag,
+sedan Sök. Skriv minst två tecken med markören i slutet. Långtryck på reglaget
+för hjälp. Förslagen följer vald avgränsning men kan vara ofullständiga när
+cachen är kall. Inga nya filskanningar, EPUB-läsningar eller nätanrop görs
+medan du skriver.
 
 **Since 1.1.0-beta.4:** optional **Alphabet strip**, OFF by default. Enable it
 per view through **footer counter ▾ > Sort, filter & view > Alphabet strip**.
