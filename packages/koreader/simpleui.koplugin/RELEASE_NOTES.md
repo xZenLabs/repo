@@ -1,3 +1,14 @@
+# 3.0.3 · 2026-11-07
+
+What's New in Simple UI v3.0.3
+
+- Cover Deck Improvements: Match tilted cover buffer type to screen specifications, and refine text truncation and character width ratio handling for non-Latin titles;
+- Apply visual refinements and tweaks to the Tiny Critter;
+- Fix Collections management by restoring missing sort options in Arrange Collections;
+- Stop foreign menus from unnecessarily refreshing the bottom navigation bar;
+- Sync bold clone orig_size during scaled getFace operations to ensure font rendering stability;
+- Update patch compatibility checks to automatically flag incompatible patches;
+
 # 3.0.2 · 2026-10-30
 
 What's New in Simple UI v3.0.2
@@ -56,14 +67,4 @@ What's New in Simple UI v2.7.5
 - Fix crash when navigating via Quick Settings while a book is open;
 - Fix Android CBZ metadata crash caused by missing symbols;
 - Fix reading streaks not updating immediately after a freeze is used;
-- General bug fixes and quality-of-life optimizations.
-
-# 2.7.1 · 2026-09-07
-
-What's New in Simple UI v2.7.1
-
-- Speed up Cover Deck module refresh after closing a book;
-- The D-Pad row selector in the Settings windows only shows up when you press a button;
-- Fix bug preventing "Currently Reading" from refreshing on book close;
-- Fix bug blocking Library access after using the Quick Settings Bar to head home;
 - General bug fixes and quality-of-life optimizations.
