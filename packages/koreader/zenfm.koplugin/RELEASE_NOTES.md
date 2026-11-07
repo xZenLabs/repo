@@ -1,3 +1,11 @@
+# v1.2.2 · 2026-11-07
+
+## What's Changed
+
+- Open unknown filetypes as text files (i.e .conf, no extension etc)
+- Update French translations
+- Bug fixes
+
 # v1.2.1 · 2026-10-03
 
 ## What's Changed
@@ -33,12 +41,3 @@
 
 - Add SVG & Image previews
 - Sticky toolbar
-
-# v1.0.5 · 2026-09-11
-
-## What's Changed
-
-- Add PWA manifest
-- Use white favicon for dark mode browser
-- Add show IP/QR code to ZenOS settings
-- Fix showing entire filesystem
