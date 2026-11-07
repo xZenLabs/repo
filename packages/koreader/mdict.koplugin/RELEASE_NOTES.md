@@ -1,3 +1,31 @@
+# v0.2.10 · 2026-11-07
+
+## Changed
+
+- An audio player in an entry now shows that it is playing: a tap on it turns its play button into a stop button, and its time and progress bar follow the recording (on e-ink, only the player's area is refreshed, once a second). A tap on the stop button stops the recording.
+- A recording played from a result stops when you move to another result, look a word up from it, or close the popup. This applies to speaker icons as well as players.
+
+## Install
+
+- From 0.2.0: *Search → Settings → MDict dictionaries → Updates → Check for updates*, or wait for the automatic offer. Then restart KOReader (on Android, exit KOReader and open it again).
+- From 0.1.0: unzip `mdict.koplugin-0.2.10.zip` into `koreader/plugins/`, replacing the `mdict.koplugin` folder, and restart KOReader.
+
+# v0.2.9 · 2026-11-07
+
+## Fixed
+
+- Lines drawn over each other: dictionaries whose CSS uses `round()` (for example to set line heights) showed every line of an entry on top of the one before in WebViews older than Chromium 125, which many e-readers have. On such a WebView, these stylesheets are now rewritten without `round()`.
+- Audio players in entries (`<audio controls>`, such as a "read the definition" player at the end of an entry) did nothing when tapped. A tap now plays the recording, as speaker icons do, and so does a button whose script plays a sound.
+
+## Changed
+
+- A recording that a dictionary only links on the web (its .mdd has no copy) is downloaded when you tap it, once KOReader is online, and kept for the next time.
+
+## Install
+
+- From 0.2.0: *Search → Settings → MDict dictionaries → Updates → Check for updates*, or wait for the automatic offer. Then restart KOReader (on Android, exit KOReader and open it again).
+- From 0.1.0: unzip `mdict.koplugin-0.2.9.zip` into `koreader/plugins/`, replacing the `mdict.koplugin` folder, and restart KOReader.
+
 # v0.2.8 · 2026-11-06
 
 ## Changed
@@ -49,41 +77,3 @@
 
 - From 0.2.0: *Search → Settings → MDict dictionaries → Updates → Check for updates*, or wait for the automatic offer. Then restart KOReader (on Android, exit KOReader and open it again).
 - From 0.1.0: unzip `mdict.koplugin-0.2.6.zip` into `koreader/plugins/`, replacing the `mdict.koplugin` folder, and restart KOReader.
-
-# v0.2.5 · 2026-11-05
-
-## Added
-
-- *Render entries with the Kindle's browser (experimental)* (Kindles only, off by default): *Search → Settings → MDict dictionaries → Display*. Entries are laid out by the web browser that the Kindle's firmware ships (5.16 to 5.18, which runs it in Amazon's `/chroot`), as the WebView does on Android: with the dictionary's own CSS, vertical text, and the entry's scripts (sections that open and close, picture viewers). The first lookup starts the browser, which takes about 20 seconds on a Paperwhite 4; a message says so. It then stays open for the next lookups, also while the Kindle sleeps, and is closed after twenty minutes without one. It uses about 70 MB of memory, and starts only when 80 MB are free. Its window stays off the screen and it is kept away from the Kindle's own software, as in the *Kindle browser test*. If the browser cannot start or ends, entries are shown with KOReader's renderer for the rest of the session, with a note saying why. Sounds do not play on Kindles. If the Kindle behaves oddly, turn the option off and restart the Kindle. Reports are welcome in a GitHub issue.
-
-## Changed
-
-- Dictionaries that name Hiragino, Palatino, Georgia, Verdana and similar fonts get the Kindle's own Mincho, Gothic, Bookerly and Amazon Ember fonts in the Kindle's browser.
-- The *Kindle browser test* closes the browser right away instead of waiting five seconds for it.
-
-## Fixed
-
-- A tap on a picture viewer that an entry's script opened could fall through to the entry under it in older versions of Chromium, the Kindle's among them.
-
-## Install
-
-- From 0.2.0: *Search → Settings → MDict dictionaries → Updates → Check for updates*, or wait for the automatic offer. Then restart KOReader (on Android, exit KOReader and open it again).
-- From 0.1.0: unzip `mdict.koplugin-0.2.5.zip` into `koreader/plugins/`, replacing the `mdict.koplugin` folder, and restart KOReader.
-
-# v0.2.4 · 2026-11-04
-
-## Added
-
-- *Kindle browser test (experimental)* (Kindles only): *Search → Settings → MDict dictionaries → Kindle browser test (experimental)*. The next step toward laying out entries on Kindles with the browser that the firmware ships. It starts the Kindle's own browser once in the background, lays out two made-up sample entries (vertical Japanese and English), shows the pages the browser drew, and closes it again, reporting the time and memory each step took. It works with the browser of firmware 5.16 to 5.18, which runs in Amazon's `/chroot`, and asks before it starts. While it runs (up to about two minutes) KOReader does not respond. The browser's window stays off the screen, and the browser is kept away from the Kindle's own software: no title bar appears and nothing is added to the browser history. Everything it puts on the Kindle goes to `/tmp` and is removed afterwards. The report is saved as `koreader/mdict-kindle-browser-test.txt`, with the two pages beside it as `mdict-kindle-browser-ja.png` and `mdict-kindle-browser-en.png`: Kindle owners, please attach all three to a GitHub issue.
-
-## Fixed
-
-- Furigana (ruby) came apart in older versions of Chromium, the Kindle's among them: each reading was drawn as a line of its own, spread along the column. Android WebViews before version 121 lay ruby out the same way.
-- Entries of dictionaries whose scripts show them only once the page has loaded, such as Chambers Dictionary 13th, were blank. The pager now runs what an entry's scripts set up for the page's DOMContentLoaded and load events, as a browser does for each page.
-- A dictionary title written as a whole HTML page (现代汉语规范词典 converted on macOS, for example) showed its markup in the popup. Its text is shown now, without a rescan.
-- The *Kindle browser check* showed "? free" for storage with KOReader 2026.07 and earlier.
-
-## Install
-
-- From 0.2.0: *Search → Settings → MDict dictionaries → Updates → Check for updates*, or wait for the automatic offer. Then restart KOReader (on Android, exit KOReader and open it again).
-- From 0.1.0: unzip `mdict.koplugin-0.2.4.zip` into `koreader/plugins/`, replacing the `mdict.koplugin` folder, and restart KOReader.
