@@ -89,14 +89,31 @@ You can use OrbitUI with ordinary local books, KOReader collections, local
 reading goals and no online account. BookOrbit, Hardcover and MyAnimeList are
 optional integrations, not requirements.
 
-**1.1.0-beta.3 preview:** tag results now have **Series / Volumes** tabs. Manga
+**1.1.0-beta.4 preview:** optional **Alphabet strip**, OFF by default. Enable it
+per view through **footer counter ▾ > Sort, filter & view > Alphabet strip**.
+Tap a letter, or drag to preview a large letter and release to jump within the
+existing sorted/filtered shelf. Å/Ä/Ö remain distinct. Dragging does not read
+books/metadata or rebuild the shelf; an explicit jump can query cached metadata.
+The strip uses spare right-margin space and hides in unsupported layouts/sorts.
+SV/EN labels; physical font, gesture, night-mode and timing checks remain open.
+
+**Svenska — förhandsversion 1.1.0-beta.4:** valfri **Bokstavslist**, avstängd
+som standard. Aktivera per vy via **sidräknaren ▾ > Sortering, filter och vy >
+Bokstavslist**. Tryck på en bokstav eller dra för att visa en stor bokstav och
+släpp för att hoppa i den befintliga sorterade/filtrerade hyllan. Å/Ä/Ö hålls
+isär. Dragningen läser inga böcker/metadata och bygger inte om hyllan; själva
+hoppet kan fråga metadata i cachen. Listen använder ledigt utrymme i högermarginalen
+och döljs i vyer/sorteringar som saknar stöd. Typsnitt, gester, nattläge och tider
+behöver fortfarande provas på riktig enhet. Stabil 1.0 är oförändrad.
+
+**Also included since 1.1.0-beta.3:** tag results have **Series / Volumes** tabs. Manga
 defaults to Series; a tap selects the first locally indexed available volume in
 the shelf preview, without opening the book. Grouping uses cached metadata, not
 another EPUB scan. Standalone and metadata-incomplete books remain visible.
 SimpleUI's latest fix prevents unrelated menus from refreshing the bottom bar.
 Physical acceptance of these new views remains outstanding.
 
-**Svenska — förhandsversion 1.1.0-beta.3:** taggträffar har nu flikarna
+**Svenska — även med sedan 1.1.0-beta.3:** taggträffar har flikarna
 **Serier / Volymer**. Manga visar Serier som standard; ett tryck markerar första
 lokalt indexerade tillgängliga volymen i bokhyllan utan att öppna boken.
 Grupperingen använder cachad metadata, inte en ny EPUB-skanning. Fristående böcker

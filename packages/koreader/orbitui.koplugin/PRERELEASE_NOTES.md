@@ -1,3 +1,37 @@
+# v1.1.0-beta.4 · 2026-11-07
+
+OrbitUI 1.1.0-beta.4 — Alphabet strip · Bokstavslist
+
+## Svenska
+
+- Valfri **Bokstavslist**, avstängd som standard och sparad per vy. Aktivera via **sidräknaren ▾ > Sortering, filter och vy > Bokstavslist**.
+- Tryck på en bokstav, eller dra för att visa en stor bokstav och släpp för att hoppa i den befintliga sorterade/filtrerade hyllan. Å/Ä/Ö hålls isär; andra latinska accenter använder grundbokstaven, övriga skriftsystem och siffror hamnar under # om ingen translitterering finns.
+- Dragningen läser inga böcker, omslag, EPUB-filer eller metadata och bygger inte om hyllan. Bara bokstavsåterkopplingen ritas om. Ett uttryckligt hopp kan fråga den befintliga metadatacachen; ingen ny indexering eller bakgrundsskanning startas. Moduler i rutnätet, serieboxar och bokryggarnas faktiska positioner behålls.
+- Listen använder ledigt utrymme i högermarginalen, inte omslagens bredd. Döljs bland annat vid icke-alfabetisk sortering, ensideslistor, öppnad serie, tvåspaltslistor, fjärrvyer och för snäv marginal. Den ändrar aldrig din sortering för att kunna visas.
+- Gester/återkoppling avbryts säkert när vyn byts, täcks, stängs, går i vila eller roteras. Första trycket efter läsaråtergång får en aktuell inmatningsägare. Monokrom återkoppling följer hyllans faktiska ljusa/mörka bakgrund.
+
+**Endast förhandskanalen; stabil/latest är fortfarande 1.0.0.** Ingen ytterligare upstream-merge ingår: samma Bookshelf- och SimpleUI-versioner som beta.3. Tidigare Serier/Volymer och övriga 1.1-nyheter finns kvar. Inga befintliga böcker, läsdata, inställningar eller cacher raderas/migreras; bootstrap/API1, 2 000 installerade sökvägar, bilder och externa synkägare behålls. BookOrbit-statusimport är fortsatt experimentell och avstängd som standard. Tidigare säkerhetsbegränsningar för automatisk datumläsning och mappradering kvarstår.
+
+Automatiska/native tester är inte fysisk Bigme/Boox-godkänning. Prova svenska/engelska, stora typsnitt, stående/liggande, Manga/serieboxar/moduler, högermarginalens pekytor, släpp utanför listen, läsar-/menyavbrott, vila/återgång och nattläge/ghosting. Kalla/varma hopptider är ännu inte enhetsmätta. Ingen server eller användarenhet driftsätts genom publiceringen.
+
+## English
+
+- Optional **Alphabet strip**, OFF by default and remembered per view. Enable through **footer counter ▾ > Sort, filter & view > Alphabet strip**.
+- Tap a letter, or drag to preview a large letter and release to jump in the existing native sorted/filtered shelf. Å/Ä/Ö stay distinct; other Latin accents map to the base letter, numbers/untransliterated scripts to #.
+- Dragging performs no book/cover/EPUB/metadata reads and no shelf rebuild. Only letter feedback refreshes. An explicit jump can query the existing metadata cache, not a new index or background scanner. Native module visual slots, series boxes and actual spine item positions remain intact.
+- Uses spare right-margin space without reducing content/cover width. Hidden for nonalphabetical sorts, single-page/opened-series/remote/two-column views and tight margins; never changes sorting to make itself appear.
+- Gesture/feedback ownership expires on replacement, cover, close, sleep or rotation; reader return renews it before the first tap. Monochrome feedback follows native light/dark page paint space.
+
+**Preview only; stable/latest stays 1.0.0.** No additional upstream merge or device/server deployment. Existing Series/Volumes and 1.1 features remain. No book/reading-data migration, cache wipe, bootstrap/API1/path/artwork change or new sync owner. BookOrbit status import stays experimental and OFF by default; existing automatic file-date/folder-delete safety deferrals remain.
+
+Headless/native tests are not physical Bigme/Boox acceptance or measured speedups. Fonts, SV/EN portrait/landscape, touch ergonomics, module/series/spine layouts, reader/menu interruptions, sleep/rotation, dark themes/ghosting and cold/warm jump timing still need device testing.
+
+Download **orbitui.koplugin.zip**, not GitHub's source archive. Back up settings/reading data and restart KOReader after installation.
+
+Unchanged reviewed pins: Bookshelf d47edfcc7c160691417235201595ab12cdffbdfe; SimpleUI 4bf2d2c5605d4172c5283e224450854d0b72219b. Alphabet-strip reference reviewed, not imported: Library GUI by antonyvo; independent OrbitUI implementation.
+
+Built on / bygger på SimpleUI by doctorhetfield-cmd and contributors, and Bookshelf by AndyHazz and contributors. See README.md, LICENSE, NOTICE and asset-specific notices.
+
 # v1.1.0-beta.3 · 2026-11-05
 
 OrbitUI 1.1.0-beta.3 — Series / Volumes · Serier / Volymer
@@ -125,37 +159,3 @@ Install `orbitui.koplugin.zip` (not GitHub's source archive), or update through 
 **Återstår:** fysiska Bigme/Boox-tester, full indexering av 3 000+ EPUB-filer, riktig uppdatering/återställning och säkra integrationstester. Automattester är inte enhetsgodkännande. Ingen läsplatta eller server ändras av publiceringen. Testlistan finns i `docs/TESTING.md`.
 
 Installera `orbitui.koplugin.zip` eller uppdatera via **förhandskanalen** och starta om KOReader. Behåll en separat säkerhetskopia. RC1 ska inte väljas av stabila kanalen. Gamla releaser skrivs inte över.
-
-# v0.1.0-beta.29 · 2026-11-01
-
-## Svenska
-
-Beta 29 innehåller den granskade **Bookshelf 6.2.0**-uppdateringen. SimpleUI är redan uppdaterat. Inga ytterligare upstream-ändringar hämtas i detta publiceringssteg.
-
-- **Bildkontrast:** valfri kontrastökning för omslag, ornament och bokryggar samt separat kontrast/ljusstyrka för bakgrunden. Standardutseendet ändras inte. Originalbilder och rå bildcache skrivs inte om. Bakgrundsreglagen finns också under **Tema → Bakgrund**.
-- **Beteende → Nederkantens knapprad:** Visa, Dölj eller Osynliga knappar. Dölj frigör utrymmet; osynliga knappar behåller sina tryckytor. Markering/tangentfokus visar kontrollerna igen. OrbitUI:s egna storlekar, marginaler och navigationsfält behålls.
-- **Mindre blinkande:** meny- och temabyten använder färre helskärmsuppdateringar. Svep på hyllan utanför en dialog kan byta sida bakom dialogen. Ett tryck utanför ett reglage sparar värdet; kryss/Bakåt ångrar fortfarande.
-- **Android-nattläge:** jämnare runda färgade hörn, med bibehållen mjukvarureservväg och våra egna bakgrunds-/navigationsfixar. Fixar även felaktig bakgrund, fastnad menyåterställning och skuggor när böcker öppnas.
-- Valda hyllmoduler får minutuppdateringar när rätt hylla visas. Sena återanrop får inte rita om en stängd eller annan hylla; delade menykrokar frigörs när deras ägare avslutas.
-
-Hem/Bento, Manga-profiler, serielådornas omslag/proportioner, taggar/indexering, ornament och BookOrbit/Hardcover/MAL/patch-kopplingar behålls. BookOrbit-statusimporten är fortfarande avstängd som standard och kräver separat servertillägg. Ingen server driftsätts eller enhet uppdateras av själva publiceringen.
-
-Svenska och engelska kontroller/hjälptexter ingår. Samma 2 000 installationsfiler och oförändrad API-1-bootstrap. Tidigare releaser, taggar och filer ändras inte. Uppdatera via förhandskanalen och starta om KOReader.
-
-Fortsatt beta: de senaste kontrast-/knapprads-/svep-/menyändringarna är automatiskt testade men ännu inte visuellt accepterade på Bigme/Boox. Ingen ny uppmätt hastighetsförbättring utlovas. Se TESTING för exakta resultat och kvarvarande enhetskontroller.
-
-## English
-
-Beta 29 publishes the reviewed **Bookshelf 6.2.0** merge. SimpleUI is already current. No additional upstream revision is imported during publication.
-
-- **Image contrast:** optional contrast boost for covers, ornaments and spines, with separate wallpaper contrast/brightness. Defaults stay unchanged; original artwork and raw disk images are not rewritten. Wallpaper controls also appear under **Theme → Wallpaper**.
-- **Behavior → Footer bar:** Show, Hide or Invisible buttons. Hide reclaims space; Invisible retains hitboxes. Selection/key focus reveals the controls. OrbitUI's adjustable footer dimensions, margins and dock geometry remain.
-- Fewer intended full-screen flashes on menu/theme changes. Side swipes on the shelf outside a picker can turn its page without closing the picker. Tapping outside a slider commits its value; X/Back still cancel.
-- Android night-mode rounded RGB paints keep consistent corners, including software fallback and OrbitUI's existing backdrop/dock fixes. Fixes stale wallpaper/menu restoration and face-out opening shadows.
-- Explicitly configured shelf modules can update every minute. Late callbacks cannot repaint hidden/replaced/closed shelves. Shared menu hooks are released with their host.
-
-Existing Home/Bento, Manga profiles, aspect-preserving series artwork, tags/indexing, ornament add-ons and external BookOrbit/Hardcover/MAL/patch ownership stay intact. BookOrbit status import remains OFF by default and requires its separate server extension. This release deploys no server and installs nothing on a device by itself.
-
-Swedish/English controls/help; the same 2,000 installed paths and unchanged API-1 bootstrap. Previous public releases, tags and assets are immutable. Update through the preview channel and restart KOReader.
-
-Still a prerelease: latest contrast/footer/swipe/menu changes have automated verification but no fresh physical Bigme/Boox visual acceptance or measured speedup. See TESTING for exact results and remaining device checks.

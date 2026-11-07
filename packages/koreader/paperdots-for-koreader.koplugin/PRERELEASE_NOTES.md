@@ -1,3 +1,5 @@
+# beta2.0 · 2026-11-07
+
 # diagnostic1.0 · 2026-11-04
 
 Diagnostic version. Do not install this unless you need detailed info in in your crash.log.
