@@ -8,7 +8,7 @@
 > "Moonlight is sculpture; sunlight is painting."
 > -- **Nathaniel Hawthorne**, *The American Notebooks* (1838)
 
-Welcome to another update, this is themed moonlight due to dark/mode changes and brightness QOL's. Let's see what's new:
+Welcome to another update, let's see what's new:
 
 # Main Features
 <div align="center">
@@ -57,6 +57,10 @@ I've decided to make this change because keeping up with increasingly large upda
 It's not sustainable for me in the long run, and it also means that Panels+ receives updates less frequently...
 
 I believe this is a win-win: you'll get updates faster, and I'll be able to keep developing Panels+ without burning myself out in the process.
+
+And...
+
+I planned v1.6.0 to be the manhwa update, but its getting more complicated to implement than I thought .... I plan to release it in v1.7.0 or v1.8.0
 
 ---
 ## Downloading

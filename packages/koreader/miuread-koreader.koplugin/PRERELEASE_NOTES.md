@@ -1,3 +1,15 @@
+# v6.5.0-beta.24 · 2026-11-07
+
+- perf(reader): skip toolbar state refresh when reader toolbar is disabled
+- perf(store): use ZIP central directory for EPUB identity instead of 1.75MB read and unzip subprocesses
+- perf(reader): gate WeRead-only and toolbar-only onReaderReady tasks on local books
+- fix(lifecycle): avoid 18s rebuild candidate false positive on CloseDocument
+- perf(store): bound settings_equal seen stack, deduplicate incremental flush pass, and skip clean native close flushes
+- perf(reader): isolate plugin-mode native books from recent-read writes, idle transition timers, and eager thought link guard
+- fix(readtime): allow time reports when rereading finished books (#183)
+- fix(readtime): preserve Web report status and failure scope
+- feat(readtime): include Web reports in opt-in diagnostics
+
 # v6.5.0-beta.23 · 2026-11-02
 
 - 最近阅读内嵌统计收窄至文字区约 37%，并保留左侧书籍资料的最小宽度；只调整卡片内部布局，不改变主页 hero 高度、下方快捷栏、书架比例和分页。
@@ -33,10 +45,3 @@
 - 同账号扫码恢复后先重新读取 Web 位置，再恢复 Web 时间；明确认证过期主动提示扫码、避免周期性重复弹窗。Web/Agent 获取状态不再互相清除。
 - 修正部分阅读同步菜单的书籍记录回退识别，单独显示 Web 及 E-Ink 待同步状态；精确进度事务及 E-Ink 批量上传协议未改动。
 - 保留 `pr=100` 位置冲突保护：协议语义和真实服务器回执仍需实机验证；下载 Web 定位补全单独后续处理。
-
-# v6.5.0-beta.17 · 2026-10-31
-
-- 将 Google Books、Open Library 的图书元数据 HTTP 429 冷却分别隔离到 `metadata-google`、`metadata-openlibrary` 作用域，避免写入微信读书沿用的 `global` 限流文件。
-- 图书元数据请求遇到自身 429 立即停止并尝试另一来源（可用时），不在元数据任务中持续等待 300 秒；原有网络补全开关保持可用。
-- 只修改 `network_metadata.lua` 和版本标识，保留 beta.16 的 EPUB 下载/即时 Web 补全、阅读进度/时间 Worker、云端保护及 beta.5 发布工作流。
-- 已存在的旧版 `weread-rate-limit.json` 仍须自行到期；不会绕过真实的微信读书 429。
