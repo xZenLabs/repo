@@ -1,3 +1,18 @@
+# v4.4.1 · 2026-11-07
+
+**This is a prerelease.** To get it from inside Ink Away, turn on Settings, Updates, "Tell me about prereleases", then install it from there. Or download `ink-away.koplugin-v4.4.1.zip` below and put the `ink-away.koplugin` folder in KOReader's plugins folder. You can go back to the latest release from Settings, Updates at any time.
+
+## New
+- Cloud sync with Dropbox or Google Drive (Library, ⋯, Cloud sync): notebooks, book notes, ink on books, pens and more, kept the same on all your readers.
+- Boox: the firmware draws the pen's ink while you write (#37). Pen and input, "Draw with Boox's pen layer" turns it off.
+- Android: lighter screen updates while drawing. Pen and input, "Lighter screen updates" turns it off.
+- Handwritten notes on highlights (#77).
+- Make room in a book's text for stickers, pictures and notes.
+- Stickers, pin a selection to its page, copy part of a page, and tap a highlight to change its colour.
+- An Ink Away icon in KOReader's top menu bar, and Settings in four tabs.
+
+Cloud sync and the Boox pen layer could only be tested in the emulator, so reports with your device's name are very welcome.
+
 # v4.2.2 · 2026-10-19
 
 **This is a prerelease.** To get it from inside Ink Away, turn on Settings, Updates, "Tell me about prereleases", then install it from there. Or download `ink-away.koplugin-v4.2.2.zip` below and put the `ink-away.koplugin` folder in KOReader's plugins folder. You can go back to the latest release from Settings, Updates at any time.
@@ -304,31 +319,3 @@ colour and pen readers are very welcome.
   leave both alone whatever the settings said. As with a filled shape, rubbing
   out writing on top of one keeps it. "Protect text from eraser" is in the
   Eraser's sheet now as well as the Text sheet.
-
-# v3.1.3 · 2026-09-27
-
-Prerelease rolling up **everything since 3.1.0** (3.1.1 and 3.1.2 were prereleases), with a major focus on making landscape fast and correct.
-
-## New
-- **Landscape orientation.** Draw with the device held sideways; Ink Away remembers the choice and reopens the same way. A landscape session gets a wide canvas, and its PNG / JPEG / PDF export comes out landscape automatically.
-- **Background remover for images.** First-pass remover that flood-fills from the edges, so a photo's subject stays solid while the surrounding background drops out.
-
-## Landscape performance (the big rework)
-On e-ink readers that render landscape by rotating the framebuffer in software, drawing and menus used to lag. Landscape is now rebuilt to be as responsive as portrait:
-- Panel-order rendering — the canvas is scaled and copied through the screen's native pixel order (a memcpy) instead of a per-pixel rotated copy on every frame.
-- The master bitmap is mirrored in panel order, so pan / zoom / redraw never re-rotate the whole screen.
-- Shape commits re-render only the shape's rectangle, not the whole drawing area.
-- The floating zoom control is cached as a sprite instead of being redrawn every frame; toolbar chrome isn't repainted mid-stroke or mid-drag.
-
-## Settings & grid
-- Grid type, size and opacity moved into their own grid sub-sheet, so the settings sheet fits with no scrolling (no more nudging a slider by accident).
-- Fixed grid-on drawing slowness (the grid is clipped to the changed region while you draw).
-
-## Reliability
-- Reopening Ink Away can no longer stack a second canvas over an old one (which had made the app get slower until a restart); reopening recovers cleanly.
-- Notebook shape clipping on rotation fixed; text stays put across rotation.
-- Online image browser: fixed a tap-to-add crash and re-searching without the keyboard getting trapped.
-- Memory backstops so long sessions don't degrade.
-
-## Known issue
-- Very heavy, prolonged switching between portrait and landscape *while drawing* can gradually reduce responsiveness until KOReader is restarted. Normal use is unaffected; a fix is still being investigated.
