@@ -63,18 +63,18 @@ functionality, not a claim that OrbitUI invented the Home screen, library,
 series boxes, themes or ornament system. [The feature guide](docs/FEATURES.md)
 explains the extra controls and where to find them.
 
-**1.1.0-beta.11 preview:** fixes the missing companion in **Currently reading +
-Silverfish** caused by incorrectly rejecting KOReader's normal event wrapper.
-Larger density-aware text and a full-height cover improve wide, shallow cards;
-compact titles truncate instead of shrinking. Continue reading, saved placements
-and Silverfish's files/data remain unchanged. Requires separately installed/
-enabled public Silverfish 2.0.0; no fork or copied artwork. Automated/native-
-adapter checks pass; physical Bigme acceptance is still pending. Update through
-preview and restart. [Release notes](docs/OTA.md#orbitui-110-beta11).
+**1.1.0-beta.12 preview:** recomposes **Currently reading + Silverfish** with
+a full-height companion on the left, one centered text stack and the book cover
+on the right. The title uses its measured height; compact cards omit secondary
+rows before reducing readability. Continue reading, saved placements and
+Silverfish's files/data remain unchanged. Requires separately installed/enabled
+public Silverfish 2.0.0; no fork or copied artwork. Automated/native-adapter
+checks pass; physical Bigme acceptance is still pending. Update through preview
+and restart. [Release notes](docs/OTA.md#orbitui-110-beta12).
 
-**Svenska, förhandsversion 1.1.0-beta.11:** rättar den saknade figuren i
-**Läser just nu + Silverfish**. Texten får läsbar storlek även i breda, låga
-kort och omslaget mer höjd; långa titlar kortas i stället för att krympas.
+**Svenska, förhandsversion 1.1.0-beta.12:** ny layout för **Läser just nu +
+Silverfish**: större figur till vänster, samlad text i mitten och bokomslaget
+till höger. Kortets höjd används bättre och texten behåller läsbar storlek.
 Fortsätt läsa, dina placeringar och Silverfishs sparfiler lämnas orörda.
 Automatiska tester är gröna; test på själva Bigmen återstår. Uppdatera via
 förhandskanalen och starta om KOReader.

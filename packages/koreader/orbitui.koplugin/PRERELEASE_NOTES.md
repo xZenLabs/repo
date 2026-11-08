@@ -1,3 +1,27 @@
+# v1.1.0-beta.12 · 2026-11-08
+
+## Svenska
+
+Ny layout för **Läser just nu + Silverfish**:
+- Större figur till vänster, samlad text i mitten och bokomslaget till höger.
+- Namn/stadium, boktitel/författare och läsprogression får en tydligare placering.
+- Texten behåller läsbar storlek; kompakta kort döljer sekundära rader först.
+- Tryck på figuren/namnet för Silverfish, på titeln/omslaget för att fortsätta läsa.
+
+**Fortsätt läsa ersätts inte.** Befintliga placeringar och Silverfishs sparfiler/progression ändras inte. Kräver separat installerat och aktiverat Silverfish 2.0.0; ingen fork eller kopierad grafik.
+
+Uppdatera via förhandskanalen och **starta om KOReader**. Säkerhetskopiera inställningar/läsdata separat; kodåterställning återställer inte dem eller tredjepartsdata. Tidigare dashboard-v2/v3-begränsningar vid nedgradering gäller fortfarande.
+
+Automatiska tester, fryst runtime/uppgraderingskontroll och CI kontrolleras före publicering. **Test på själva Bigmen återstår**, inklusive typsnitt, tryckytor, färg/nattläge, rotation/vila och hela Silverfish-livscykeln. Förhandsbilden var en schematisk rendering, inte ett enhetstest.
+
+## English
+
+Recompose **Currently reading + Silverfish**: full-height companion left, vertically centered text in the middle, book cover right. Native measured title height avoids unused lines; compact cards omit secondary rows instead of miniature fonts. Normal-contrast secondary text and separate pet/book tap targets.
+
+Continue reading, saved placements and Silverfish data/progression are unchanged. Requires separately installed/enabled public Silverfish 2.0.0; no fork or copied artwork. No new upstream/component/pin/art/API/server/device changes. Stable/latest 1.0 and earlier releases remain unchanged. Physical Bigme/full-plugin acceptance remains pending.
+
+Download **orbitui.koplugin.zip**, not GitHub's source archive. Existing migration and dashboard downgrade limits apply: see docs/OTA.md and docs/MIGRATION.md.
+
 # v1.1.0-beta.11 · 2026-11-08
 
 ## Reading companion fix
@@ -97,33 +121,3 @@ Update through preview and restart KOReader; back up settings and reading data s
 Prerelease: real menu builders with substituted display/service boundaries, not physical Bigme acceptance. Real-device retesting and live source/link coverage remain pending. No device/plugin installation, server deployment or new upstream merge. Stable/latest 1.0 and previous tags/assets remain unchanged; API1/bootstrap, 27 exact lazy helpers / 407 identities and 2,000 installed paths are retained.
 
 Download orbitui.koplugin.zip, not the source-code archive. Details: docs/TESTING.md and docs/OTA.md.
-
-# v1.1.0-beta.7 · 2026-11-08
-
-## Svenska
-
-BookOrbit-hyllor och smartscopes kan nu läggas till som egna kort i Läsöversikt.
-
-- Öppna **Läsöversikt → + → BookOrbit-hyllor och smartscopes → Uppdatera hyllor och smartscopes** och välj en källa. Lägg till flera kort med egna rubriker/storlekar och omslagsrad eller karusell. Tryck på rubriken eller långtryck på bakgrunden för att konfigurera kortet.
-- Bara BookOrbit-länkade filer som redan finns på enheten visas. Olänkade kopior gissas inte fram och serverböcker laddas inte ned. Smartscope-reglerna utvärderas av BookOrbit.
-- Sparade träffar visas direkt. Synliga kort uppdateras i bakgrunden högst var 15:e minut; bara berört kort ritas om. Borttagna källor och gamla svar hanteras separat. OrbitUI slår inte på Wi-Fi eller skickar lässtatus.
-- Egen av/på-brytare under **Integrationer → BookOrbit**, separat från Vill läsa och BookOrbit-pluginets egen synk. Svenska och engelska finns. Kräver ett anslutet BookOrbit-plugin/server med katalog- och bakgrunds-API; inget nytt extras-servertillägg behövs.
-
-Uppdatera via **förhandskanalen** och starta om KOReader. Säkerhetskopiera inställningar och läsdata först. Nya BookOrbit-kort använder läsöversiktens konfigurationsformat v3: beta.6/äldre bevarar den sidan men kan inte redigera den. Kodåterställning återställer inte inställningar; behåll en matchande säkerhetskopia.
-
-**Förhandsversion:** automatiska tester och datorprov är inte prov på Bigmen eller mot din riktiga server. Verkliga källor, fillänkar, menyer/nattläge, vila/återgång och starttid/minne återstår att verifiera. Ingen ny upstream-merge, serverdriftsättning eller installation på din enhet. Stabil 1.0 och tidigare releaser är oförändrade.
-
-## English
-
-Add BookOrbit libraries, shelves and smartscopes as independent Reading dashboard cards.
-
-- **Reading dashboard → + → BookOrbit shelves and smartscopes → Refresh shelves and smartscopes**. Choose sources for several cards, with custom titles/sizes and cover-row or one-cover carousel views. Tap the heading or hold the background to configure.
-- Only exact BookOrbit-linked files already on the device are shown. No title guesses or remote-book downloads. The server evaluates smartscope rules.
-- Cached-first, visible-only asynchronous refresh, at most every 15 minutes; only the requesting card redraws. Account/policy/map/mount/sleep guards retire old responses. Transient failures preserve saved results; missing sources are suppressed. No automatic Wi-Fi activation or reading-status writes.
-- Separate **Integrations → BookOrbit** switch, independent of Want to Read and the external plugin's own sync. Swedish/English controls. Requires a connected BookOrbit plugin/server with native catalog/background APIs, not a new extras server extension.
-
-Update through **preview** and restart KOReader. Back up settings and reading data independently. Adding a source card opts that screen into dashboard config v3: beta.6/older preserve it but cannot edit it. Code rollback does not reverse layout/cache or third-party data changes; keep a matching settings backup.
-
-**Prerelease:** desktop/automated evidence only. Physical Bigme and live-server source/link coverage, menus/day/night, suspend/read-return and measured start/latency/RSS remain pending. No universal compatibility or measured device-speed claim. No new upstream import, server deployment, device/plugin install or independent module-catalog publication. Stable/latest 1.0 and all earlier release assets/tags remain unchanged. API1/bootstrap stay fixed at 2,000 installed files, 27 exact lazy helpers/407 identities.
-
-Download **orbitui.koplugin.zip**, not the source-code archive. Verification details and device limits: docs/TESTING.md and docs/OTA.md.

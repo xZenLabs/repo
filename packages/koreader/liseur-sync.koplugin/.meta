@@ -3,7 +3,7 @@
 # zenpm:auto-scraped
 id=liseur-sync
 name=Liseur Sync
-version=source
+version=plugin-0.13
 description=Self-hostable reading-position sync and statistics server for Liseur, KOReader, and friends
 author=chmouel
 category=media
@@ -11,8 +11,13 @@ platforms=koreader
 dependencies=
 source=https://github.com/chmouel/liseur-sync
 stars=21
-updated_at=2026-11-08T22:01:00Z
+updated_at=2026-11-08T23:01:01Z
+published_at=2026-11-08T22:12:18Z
 readme_url=packages/koreader/liseur-sync.koplugin/README.md
-readme_hash=8a759e48999ed2546dd8eb17075234dab2c41dcf
-source_type=source
-source_url=https://codeload.github.com/chmouel/liseur-sync/zip/refs/heads/main
+readme_hash=9f8ccb506204013d5a499b9cf8288058880227af
+release_notes_url=packages/koreader/liseur-sync.koplugin/RELEASE_NOTES.md
+release_notes_hash=09a4ce2322041c8a24e1c7d3087efb9b6b733b5e8cb34268366bc97cda6c5614
+releases=[{"tag_name":"plugin-0.13","assets":[{"name":"liseur.koplugin.zip","url":"https://github.com/chmouel/liseur-sync/releases/download/plugin-0.13/liseur.koplugin.zip","size":49242,"digest":"sha256:643ce4bf487c3e9a2e0607a3d598811cec2efd0b0b81582828ff4818eb575093"}],"name":"KOReader plugin 0.13"}]
+source_type=release
+source_asset=liseur.koplugin.zip
+size=49242
