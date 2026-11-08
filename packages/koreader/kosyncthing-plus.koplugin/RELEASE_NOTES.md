@@ -1,3 +1,32 @@
+# v1.2.4 · 2026-11-08
+
+## [v1.2.4] — 2026-11-08
+
+### Fixed
+- **Android remote mode could not connect while "Use HTTPS for GUI" was
+  enabled.** The dialog only said "Could not connect", although the API key and
+  port were correct. The TLS handshake succeeds, but on some KOReader/Android
+  builds `ssl.https.request` rejects the connection with "hostname does not
+  match certificate" even with `verify="none"`: Syncthing's generated GUI
+  certificate has the CN `syncthing`, never `127.0.0.1`. The request now builds
+  the TLS connection with `ssl.wrap` and lets `socket.http` parse the response,
+  skipping only the hostname check. This is safe because the URL is always
+  `https://127.0.0.1:<port>`; authentication stays the API key.
+- **An http probe no longer "succeeds" through Syncthing's redirect.** On a TLS
+  GUI, Syncthing answers plain http with `307` to https; following it could make
+  the http probe pass and save the wrong scheme. Redirects are no longer
+  followed.
+- **A pasted API key with a trailing newline no longer breaks the request.**
+  Whitespace is now stripped from the key (Syncthing answered such a request
+  with `400`).
+
+### Changed
+- **The "Could not connect" dialog now shows why**, per scheme (for example
+  `https: HTTP/1.1 403 Forbidden` or `https: request failed: connection
+  refused`), and stays on screen longer.
+
+**Full Changelog**: https://github.com/d0nizam/kosyncthing_plus.koplugin/compare/v1.2.3...v1.2.4
+
 # v1.2.3 · 2026-11-01
 
 ## What's Changed
@@ -60,29 +89,3 @@
 - KOReader commit 751b497 removed `Device:unpackArchive`, breaking plugin and binary updates on newer KOReader builds. Added `U.unpackArchive` with a direct `ffi/archiver` fallback so updates work on all KOReader versions.
 
 **Full Changelog**: https://github.com/d0nizam/kosyncthing_plus.koplugin/compare/v1.1.9...v1.2.0
-
-# v1.1.9 · 2026-06-20
-
-## [v1.1.9] — 2026-06-21
-
-### Fixed
-- **A successful pairing no longer shows a warning icon.** After accepting a
-  pairing request in the wizard, the "Paired with … successfully" message was
-  displayed with a ⚠ warning icon instead of the neutral info icon, making a
-  success look like something had gone wrong. The icon now matches the outcome.
-  (The failure message is unchanged - it still shows the warning icon.)
-
-### Added
-- **Windows test setup.** A one-command `spec/setup_windows.ps1` (installs
-  MinGW-w64, LuaRocks and `luafilesystem`, then runs the suite) plus Windows
-  path/command shims in `spec/run_tests.lua`, so the full 506-test suite runs
-  on Windows as well as Linux/WSL. Dev tooling only - not part of the shipped
-  plugin.
-
-### Changed
-- **The LICENSE is now bundled with the installed plugin.** It was previously
-  excluded from the install package; it now ships alongside the runtime files.
-- **Dropped the deprecated `name` field from `_meta.lua`.** KOReader derives the
-  plugin name from its directory and logs a deprecation warning for a `name`
-  key in `_meta.lua`; removing it silences that warning with no change to the
-  plugin's identity.

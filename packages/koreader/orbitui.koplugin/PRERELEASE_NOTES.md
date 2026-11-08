@@ -1,3 +1,36 @@
+# v1.1.0-beta.6 · 2026-11-08
+
+# OrbitUI 1.1.0-beta.6
+
+Experimental preview. Stable/latest stays **1.0.0**. Update through OrbitUI's preview channel and restart KOReader; back up settings and reading data first.
+
+## Svenska
+
+- **Fler moduler i Läsöversikt:** tryck + eller håll inne → Lägg till modul. Lägg till kompatibla SimpleUI-/Bookshelf-kort eller åtgärdsgenvägar, ändra storlek, ordna, dölj och ta bort dem. Fler kort får egna sidor.
+- **Modulbibliotek:** Lägg till modul → Hämta fler moduler. Först finns versionslåst **Silverfish 2.0.0**. Hämtningen verifieras med SHA-256 och kräver bekräftelse och omstart. Befintliga plugins och sparfiler skrivs inte över. Uppdatering och avinstallation är manuella i denna första version.
+- **Bättre återanvändning av omslag:** begränsad LRU-cache för miniatyrer utan att hålla stora originalbilder kvar i minnet. Återanvänder även externa omslags nedskalningar. Ingen hastighetsvinst på Bigme är ännu uppmätt.
+- **Ordförslag:** valfritt och avstängt som standard i Sök i OrbitUI. Kompletterar sista ordet från redan cachade lokala titlar, författare och serier, utan filskanning eller nätanrop medan du skriver.
+- **Tidigare granskad upstream följer med:** Bookshelf 6.3.3 och SimpleUI 3.0.3, bland annat förbättringar av bokdetaljernas uppdatering, sortering och samlingarnas ordning. Ingen ytterligare upstream-merge görs i detta steg.
+
+**Viktigt:** Silverfish-märket betyder att adaptrarna är testade på dator – inte att hela pluginet är säkerhetscertifierat eller testat på Bigme. Tredjepartsplugins körs med KOReaders fil- och nätverksåtkomst. Silverfishs eget gränssnitt är på engelska/portugisiska; OrbitUIs nya reglage och katalog är på svenska och engelska. Ingen separat online-modulkatalog har publicerats ännu; den medföljande katalogen fungerar och uppdateringsknappen förklarar detta.
+
+## English
+
+- Add compatible SimpleUI/Bookshelf plugin cards and action shortcuts to Reading dashboard. Resize, arrange, hide/remove and paginate up to 16 added cards per screen. Original Home layouts and book actions stay intact; visible card refreshes and timer lifetimes are scoped.
+- Get more modules opens the curated Module library, initially official Silverfish 2.0.0. Explicit first install, pinned archive/checksum/source/license disclosure and restart. Never overwrite/adopt/enable an existing plugin; updates and removal remain manual. No pet code or artwork is bundled in OrbitUI.
+- Bounded thumbnail LRU reuse no longer strongly retains large sources; warm external-cover downscales are reused. Desktop fixtures reduce repeated scaler calls from 20 to 1, not a measured device speed ratio.
+- Optional local-cache Word suggestions, OFF by default, and the previously reviewed Bookshelf 6.3.3 / SimpleUI 3.0.3 fixes are included.
+
+Desktop adapter testing is **not** a safety certificate or full-plugin/Bigme approval. Physical module/catalog installation, complete Silverfish startup/screensaver/save, night/rotation/sleep and device opening-time/RSS checks remain open. No new upstream import, server deployment or device installation accompanies publication. The independent catalog channel is supported but not yet published; the bundled reviewed entry remains usable.
+
+## Upgrade and recovery
+
+API1/bootstrap remains unchanged with 2,000 installed files (26 exact lazy helpers, 407 canonical module identities). Update from beta.5 via the preview channel and restart. Existing profiles, sources/headings, ornaments and sync/data ownership are retained.
+
+Adding dashboard cards opts that screen into layout config v2: older versions cannot edit it but must preserve it. Code rollback does not reverse layout edits or third-party data migrations, and does not uninstall a separately installed plugin. Keep an independent settings backup; do not restore old reading progress.
+
+Full Lua/LuaJIT, translations, sealed/native, real pinned Silverfish archive, older-installers, source/history/artwork/secrets and main/tag CI checks precede publication. See docs/TESTING.md and docs/OTA.md for exact evidence and remaining device limits.
+
 # v1.1.0-beta.5 · 2026-11-07
 
 OrbitUI 1.1.0-beta.5 — Visible alphabet labels · Synliga bokstäver
@@ -137,33 +170,3 @@ Hem/Läsöversikt, Manga/profiler/serier/bilder, lokala taggar, snabbåtergång,
 Endast förhandskanalen. Stabil/latest är fortsatt 1.0.0; välj stabilkanalen för att stanna där. Hämta orbitui.koplugin.zip, säkerhetskopiera och starta om KOReader. Den nya 1.1-vyn behöver fysisk testning på Bigme/Boox; automattester ersätter inte det. BookOrbit-statusimport är fortsatt experimentell och avstängd som standard.
 
 Built on / bygger på SimpleUI by doctorhetfield-cmd and contributors, and Bookshelf by AndyHazz and contributors. See README.md, LICENSE, NOTICE and asset-specific notices.
-
-# v1.0.0-rc.2 · 2026-11-02
-
-## OrbitUI 1.0.0-rc.2 — release candidate, not stable 1.0
-
-Feature freeze continues. This release publishes the tested tag lifecycle fix and the explicitly requested shelf-preview navigation change. Bookshelf stays at `b512cd90`; SimpleUI stays at `fdf83c7d`. No new upstream import or synchronization owner.
-
-- Fixes the reproduced tag-search/index dialog retirement bug: Close remains usable after background-work ownership expires, and stale work releases busy/index state without adopting stale results. A changed view explains that it must be reopened instead of leaving enabled no-op actions.
-- Sleep pauses offline tag search/indexing without painting or automatically restarting on wake. Completed tag reads are kept. Use Continue/Refresh when ready; reopen the page first if navigation changed.
-- Tapping a title in offline or BookOrbit tag results now selects the actual book on its Bookshelf profile/folder/page with cover/description, without opening ReaderUI. Repeated selection cannot start reading. Long-press still opens book details. Missing/filtered targets fail safely, and unrelated search/reader actions are unchanged.
-
-Existing settings, cache schemas, reading progress/history, artwork/languages and external BookOrbit/Hardcover/MAL/patch ownership remain. BookOrbit status import stays experimental, OFF by default, with unchanged protection rules. No server is deployed. Bootstrap API 1 and exactly 2,000 installed paths are retained; previous public releases/tags, including RC1, are not replaced.
-
-**Testing limitation:** automated/sealed/native installer checks are not physical device acceptance. Sleep/wake during all 3,341 files, pause/continue/Close, actual selected-cover/description layout, cold/warm/parked transitions and on-device update/recovery still need Bigme/Boox testing. The synthetic reproduction does not prove the exact trigger on the user's device. This is not stable-1.0 sign-off.
-
-Install `orbitui.koplugin.zip` (not GitHub's source archive), or update through the **preview channel**, then restart KOReader. Keep an independent backup. The stable channel must ignore RC2. See `docs/TESTING.md` for the remaining RC acceptance checklist.
-
-## Svenska
-
-**1.0.0-rc.2 är en testkandidat, inte stabil 1.0.** Funktionsfrysen fortsätter. RC2 innehåller den testade fixen och den önskade ändringen av titeltryck i taggträffar. Bookshelf/SimpleUI är kvar på granskade versioner; ingen ny upstream-merge eller synkägare.
-
-- Fixar den återskapade låsningen i taggsökning/indexering: Stäng fungerar även när bakgrundsarbetet blivit inaktuellt. Gammalt arbete släpper upptaget tillstånd utan att ta över träfflistan. En ändrad vy förklarar att den behöver öppnas igen.
-- Vila pausar lokal taggsökning/indexering utan automatisk återstart. Redan lästa taggar behålls. Välj Fortsätt/Uppdatera när du vill; öppna sidan igen först om navigationen ändrats.
-- Titeltryck i lokala eller BookOrbit-taggträffar markerar boken på rätt profil/mapp/sida i bokhyllan och visar omslag/beskrivning utan att öppna läsvyn. Upprepade tryck startar inte läsning. Långtryck öppnar fortfarande bokdetaljer. Saknade/filtrerade mål hanteras säkert; övriga sök- och läsåtgärder är oförändrade.
-
-Inställningar, cacheformat, läsdata, bilder, språk och externa plugin-/patchkopplingar behålls. BookOrbit-statusimport är fortsatt experimentell och avstängd som standard, med samma skyddsregler. Ingen server driftsätts. API-1 och 2 000 installationsfiler är kvar. RC1 och äldre releaser skrivs inte över.
-
-**Återstår:** fysiska Bigme/Boox-tester av vila under indexering av alla 3 341 filer, paus/fortsätt/Stäng, markerat omslag/beskrivning, kall/varm/parkering och riktig uppdatering/återställning. Automattester bevisar inte exakt vad som utlöste felet på enheten och är inte godkännande för stabil 1.0.
-
-Installera `orbitui.koplugin.zip` eller uppdatera via **förhandskanalen** och starta om KOReader. Behåll en separat säkerhetskopia. RC2 ska inte väljas av stabila kanalen.
