@@ -1,3 +1,33 @@
+# v1.1.0-beta.7 · 2026-11-08
+
+## Svenska
+
+BookOrbit-hyllor och smartscopes kan nu läggas till som egna kort i Läsöversikt.
+
+- Öppna **Läsöversikt → + → BookOrbit-hyllor och smartscopes → Uppdatera hyllor och smartscopes** och välj en källa. Lägg till flera kort med egna rubriker/storlekar och omslagsrad eller karusell. Tryck på rubriken eller långtryck på bakgrunden för att konfigurera kortet.
+- Bara BookOrbit-länkade filer som redan finns på enheten visas. Olänkade kopior gissas inte fram och serverböcker laddas inte ned. Smartscope-reglerna utvärderas av BookOrbit.
+- Sparade träffar visas direkt. Synliga kort uppdateras i bakgrunden högst var 15:e minut; bara berört kort ritas om. Borttagna källor och gamla svar hanteras separat. OrbitUI slår inte på Wi-Fi eller skickar lässtatus.
+- Egen av/på-brytare under **Integrationer → BookOrbit**, separat från Vill läsa och BookOrbit-pluginets egen synk. Svenska och engelska finns. Kräver ett anslutet BookOrbit-plugin/server med katalog- och bakgrunds-API; inget nytt extras-servertillägg behövs.
+
+Uppdatera via **förhandskanalen** och starta om KOReader. Säkerhetskopiera inställningar och läsdata först. Nya BookOrbit-kort använder läsöversiktens konfigurationsformat v3: beta.6/äldre bevarar den sidan men kan inte redigera den. Kodåterställning återställer inte inställningar; behåll en matchande säkerhetskopia.
+
+**Förhandsversion:** automatiska tester och datorprov är inte prov på Bigmen eller mot din riktiga server. Verkliga källor, fillänkar, menyer/nattläge, vila/återgång och starttid/minne återstår att verifiera. Ingen ny upstream-merge, serverdriftsättning eller installation på din enhet. Stabil 1.0 och tidigare releaser är oförändrade.
+
+## English
+
+Add BookOrbit libraries, shelves and smartscopes as independent Reading dashboard cards.
+
+- **Reading dashboard → + → BookOrbit shelves and smartscopes → Refresh shelves and smartscopes**. Choose sources for several cards, with custom titles/sizes and cover-row or one-cover carousel views. Tap the heading or hold the background to configure.
+- Only exact BookOrbit-linked files already on the device are shown. No title guesses or remote-book downloads. The server evaluates smartscope rules.
+- Cached-first, visible-only asynchronous refresh, at most every 15 minutes; only the requesting card redraws. Account/policy/map/mount/sleep guards retire old responses. Transient failures preserve saved results; missing sources are suppressed. No automatic Wi-Fi activation or reading-status writes.
+- Separate **Integrations → BookOrbit** switch, independent of Want to Read and the external plugin's own sync. Swedish/English controls. Requires a connected BookOrbit plugin/server with native catalog/background APIs, not a new extras server extension.
+
+Update through **preview** and restart KOReader. Back up settings and reading data independently. Adding a source card opts that screen into dashboard config v3: beta.6/older preserve it but cannot edit it. Code rollback does not reverse layout/cache or third-party data changes; keep a matching settings backup.
+
+**Prerelease:** desktop/automated evidence only. Physical Bigme and live-server source/link coverage, menus/day/night, suspend/read-return and measured start/latency/RSS remain pending. No universal compatibility or measured device-speed claim. No new upstream import, server deployment, device/plugin install or independent module-catalog publication. Stable/latest 1.0 and all earlier release assets/tags remain unchanged. API1/bootstrap stay fixed at 2,000 installed files, 27 exact lazy helpers/407 identities.
+
+Download **orbitui.koplugin.zip**, not the source-code archive. Verification details and device limits: docs/TESTING.md and docs/OTA.md.
+
 # v1.1.0-beta.6 · 2026-11-08
 
 # OrbitUI 1.1.0-beta.6
@@ -128,45 +158,5 @@ Hämta **orbitui.koplugin.zip**, inte källkodsarkivet. Säkerhetskopiera instä
 Automated/native headless gates are not physical Bigme/Boox acceptance or measured performance gains. The new SV/EN views, rotation, index/grouping Stop/Close/sleep, filtered series preview/return and real menu refresh still need device testing. Install orbitui.koplugin.zip, back up settings/reading data and restart KOReader.
 
 Reviewed source pins: Bookshelf d47edfcc7c160691417235201595ab12cdffbdfe; SimpleUI 4bf2d2c5605d4172c5283e224450854d0b72219b, full unsquashed ancestry.
-
-Built on / bygger på SimpleUI by doctorhetfield-cmd and contributors, and Bookshelf by AndyHazz and contributors. See README.md, LICENSE, NOTICE and asset-specific notices.
-
-# v1.1.0-beta.2 · 2026-11-04
-
-OrbitUI 1.1.0-beta.2 — separate upstream preview / separat upstream-beta
-
-## English
-
-Beta.1 was never published: beta.2 fixes a final reproduced race where a pending page timer could override a direct wallpaper choice. Its pushed tag is preserved, not moved.
-
-Stable 1.0.0 remains the user-accepted RC2 implementation. This prerelease starts a separate 1.1 cycle with reviewed Bookshelf 6.3.2 (53 commits, d47edfcc) and SimpleUI follow-ups (five commits, 633ffbff).
-
-- Refreshed book-menu layout, publication-year sorting/token, and locally editable display dates. Cached Hardcover/calibre/OPDS/user dates remain available without a new network writer.
-- Wallpaper Stretch, Crop to fill and Fit to screen, with screen-shaped previews. Late page/tab/Close callbacks cannot save stale choices; pathological native allocations are bounded.
-- Metadata/series refresh, filtered-folder light-map efficiency, retained page facts/spine colours and missing-file/cover fixes. OrbitUI keeps its cancellable, blob-free metadata windows instead of a blocking full-table refresh. These are expected benefits, not new Bigme timing measurements.
-- Cover Deck truncates non-Latin titles more conservatively; Critter gains ground/bubble shadows while retaining embedded/custom art and cache ownership.
-
-Two deliberate hosted safety deferrals: automatic publication-date file reads use an unowned fork queue upstream, so they remain disabled in OrbitUI with an explicit explanation; cached/curated and explicit local display dates still work. The new folder-delete flow is not exposed because it purges sidecars before a fallible folder deletion. Move/rename and standalone component fallbacks remain.
-
-Existing Home/Reading dashboard, Manga/profiles/series/artwork, local tags, reader return, settings and BookOrbit/Hardcover/MAL/patch owners are retained. No books/EPUBs/reading sidecars/remote statuses are rewritten by date editing. No server/device deployment, bootstrap change, removed language/artwork or increased old-updater limit. Same 2,000 API-1 installed paths, 24 exact lazy helpers and 407 canonical identities.
-
-Preview channel only. Stable/latest remains 1.0.0; use the stable channel to stay on that accepted release. Install orbitui.koplugin.zip, back up settings/reading data and restart KOReader. New 1.1 UI/lifecycle has not been physically accepted on Bigme/Boox. Automated/native headless gates are not device tests. BookOrbit status import remains experimental and OFF by default.
-
-## Svenska
-
-Beta.1 publicerades aldrig: beta.2 rättar ett återskapat fel där en väntande sidtimer kunde skriva över ett manuellt bakgrundsval. Den pushade taggen behålls orörd.
-
-Stabil 1.0.0 behåller den användargodkända RC2-koden. Den här separata 1.1-betan tar in Bookshelf 6.3.2 och SimpleUI-fixar efter granskning.
-
-- Ny bokmenylayout, sortering/token för utgivningsår och egna lokala visningsdatum. Kända datum från Hardcover/Calibre/OPDS och användaren kan visas utan en ny synkägare.
-- Bakgrundsbilder kan sträckas ut, beskäras för att fylla eller anpassas till skärmen. Skärmformade förhandsbilder, skydd mot sena meny-anrop och begränsade extrema bildallokeringar.
-- Fixar för metadata/serier, filtrerade mappar, sparade sidfakta/bokryggsfärger och omslag. Våra avbrytbara metadatajobb behålls. Förväntade förbättringar är inte nya prestandamätningar på Bigmen.
-- Cover Deck kortar exempelvis japanska titlar säkrare. Läskompanjonen får skuggor utan ändrat ägarskap för bilder eller cache.
-
-Två medvetna säkerhetsbegränsningar i OrbitUI: automatisk datumläsning ur bokfiler är avstängd tills bakgrundskön fått rätt livscykel-/Android-skydd; kända datum och egna visningsdatum fungerar. Ny mappradering erbjuds inte eftersom misslyckad filradering kan lämna sidodata raderade. Flytta/byt namn och fristående komponentbeteende behålls.
-
-Hem/Läsöversikt, Manga/profiler/serier/bilder, lokala taggar, snabbåtergång, inställningar och externa integrationer behålls. Datumredigering skriver inte böcker, EPUB-taggar, läsdata eller serverstatus. Ingen server/enhet driftsätts; inga språk/bilder tas bort och äldre uppdaterares gränser höjs inte.
-
-Endast förhandskanalen. Stabil/latest är fortsatt 1.0.0; välj stabilkanalen för att stanna där. Hämta orbitui.koplugin.zip, säkerhetskopiera och starta om KOReader. Den nya 1.1-vyn behöver fysisk testning på Bigme/Boox; automattester ersätter inte det. BookOrbit-statusimport är fortsatt experimentell och avstängd som standard.
 
 Built on / bygger på SimpleUI by doctorhetfield-cmd and contributors, and Bookshelf by AndyHazz and contributors. See README.md, LICENSE, NOTICE and asset-specific notices.

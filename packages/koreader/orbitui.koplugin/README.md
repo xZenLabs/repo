@@ -63,7 +63,41 @@ functionality, not a claim that OrbitUI invented the Home screen, library,
 series boxes, themes or ornament system. [The feature guide](docs/FEATURES.md)
 explains the extra controls and where to find them.
 
-**1.1.0-beta.6 preview:** Reading dashboard
+**1.1.0-beta.8 preview:** fixes beta.7's empty BookOrbit source picker after
+refresh, its crash when reopening saved sources, the blank Module library and
+the cover-row/carousel chooser. Three loop indices accidentally shadowed the
+translator. Existing sources, cards and plugin data are preserved. Regression
+tests reproduce the failures in public beta.7 and pass in Swedish and English;
+physical Bigme retesting remains pending. Update through preview and restart.
+[Release notes](docs/OTA.md#orbitui-110-beta8).
+
+**Svenska, förhandsversion 1.1.0-beta.8:** fixar den tomma BookOrbit-källistan
+efter uppdatering, kraschen vid återöppning, det tomma Modulbiblioteket och
+valet omslagsrad/karusell. Tre loopvariabler krockade med översättningsfunktionen.
+Sparade källor, kort och plugindata behålls. Felet är återskapat i beta.7 och
+automattestat på svenska och engelska; nytt Bigme-test återstår. Uppdatera via
+förhandskanalen och starta om KOReader.
+
+**Included since 1.1.0-beta.7:** Add BookOrbit shelves and smartscopes as independent
+Reading dashboard cards: **+ → BookOrbit shelves and smartscopes → Refresh
+shelves and smartscopes**. Multiple cards, custom titles/sizes and cover
+row/carousel views. Only exact BookOrbit-linked files already on this device;
+cached-first, visible-only asynchronous refresh, no downloads/status writes or
+new extras server patch. Separate integration switch, Swedish/English controls.
+Requires a connected BookOrbit plugin with native catalog/background APIs.
+Desktop-tested; actual Bigme and live-server acceptance remain pending.
+[Release and rollback notes](docs/OTA.md#orbitui-110-beta7).
+
+**Svenska, förhandsversion 1.1.0-beta.7:** Lägg till BookOrbit-hyllor och
+smartscopes som egna kort via **Läsöversikt → + → BookOrbit-hyllor och
+smartscopes → Uppdatera hyllor och smartscopes**. Flera kort med egna rubriker,
+storlekar och omslagsrad/karusell. Bara BookOrbit-länkade filer på enheten visas;
+sparade träffar först, uppdatering i bakgrunden för synliga kort, inga
+nedladdningar/lässtatusskrivningar eller nytt extras-servertillägg. Egen
+av/på-brytare under Integrationer, svenska/engelska. Kräver anslutet BookOrbit-
+plugin med katalog-/bakgrunds-API. Datorprovat; Bigme- och liveservertest återstår.
+
+**Included since 1.1.0-beta.6:** Reading dashboard
 can host compatible SimpleUI/Bookshelf plugin cards and action shortcuts.
 Tap **+**, or use **Cards and content → Add module…**. Long-press a plugin card
 to resize/hide/remove it; **Arrange cards** sets its position. Extra cards use
@@ -231,6 +265,35 @@ Målet för Inställningar-ikonen behålls även när genvägen tas bort och lä
 igen. Funktionen ingår i Beta 26.
 
 ### Optional BookOrbit features
+
+**1.1.0-beta.7 preview:** Reading dashboard **+ → BookOrbit
+shelves and smartscopes → Refresh shelves and smartscopes** lists sources from
+the connected BookOrbit plugin's catalog API. Select a library, shelf or
+smartscope to add a card; repeat for more cards. Tap its heading (or hold its
+background) to change source, title, size, cover row/carousel or refresh it.
+Smartscope rules run on BookOrbit, not in KOReader. Only exact BookOrbit-linked
+files already on the device are shown; unlinked local copies and server-only
+books are not guessed or downloaded. Cached results appear first. Visible
+cards refresh asynchronously, at most every 15 minutes, and only their own
+subtrees redraw. No scan/HTTP while painting, no automatic Wi-Fi activation or
+reading-status writes. A separate switch under **Integrations → BookOrbit**
+disables these cards without changing the Want to Read switch, links or layout.
+No extras server patch is required; an older plugin/server without the native
+catalog/subprocess APIs needs an update. Desktop/fixture tested only; physical
+Bigme and live server acceptance remain pending.
+
+**Förhandsversion 1.1.0-beta.7:** **Läsöversikt → + → BookOrbit-hyllor
+och smartscopes → Uppdatera hyllor och smartscopes** visar källor från det
+anslutna BookOrbit-pluginets katalog-API. Lägg till flera kort med olika källor.
+Tryck på rubriken eller långtryck på kortets bakgrund för att ändra källa,
+rubrik, storlek, omslagsrad/karusell eller uppdatera. Bara BookOrbit-länkade
+filer som finns på enheten visas; olänkade kopior gissas inte fram och inget
+laddas ned. Servern utvärderar smartscopes. Sparade träffar visas direkt och
+synliga kort uppdateras i bakgrunden högst var 15:e minut utan att bygga om
+resten av Hem. Funktionen har en egen av/på-brytare under **Integrationer →
+BookOrbit** och kräver inget extras-servertillägg, men ett tillräckligt nytt
+BookOrbit-plugin/server. Ingen lässtatus skickas. Dator-/fixturtestat, ännu inte
+verifierat på Bigmen eller mot den riktiga servern.
 
 **Beta 28 (experimental):** **Integrations > BookOrbit > Import reading
 status from BookOrbit** adds an off-by-default, deferred GET-only importer for
