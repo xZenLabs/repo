@@ -1,3 +1,37 @@
+# v0.5.1 · 2026-11-08
+
+## 月读 v0.5.1
+
+KOReader 插件包：`book.koplugin-v0.5.1.zip`
+
+输入法词库（整库，手动 sideload）：`dictionary.sqlite3 dictionary-wubi.sqlite3 dictionary-cangjie.sqlite3 dictionary-zhuyin.sqlite3`
+
+安装：解压后将 `book.koplugin` 复制到 `koreader/plugins/`，然后重启。
+
+词库 sideload：下载对应布局的词库，直接放入 `koreader/.moon/`
+（与 `book.sqlite3` 同级）。附件已使用最终文件名，无需重命名。
+
+### 更新内容
+
+相对上一版本 `v0.5.0`：
+
+#### 修复
+
+- :bug: (tools): 修复 macOS 模拟器点击被识别为长按 (42e596c3)
+
+#### 界面
+
+- :lipstick: (setting): 账号页为全部内置书源配独立图标 (21c904bc)
+
+#### 变更
+
+- :speech_balloon: (paths): 手动安装路径统一显示 koreader/ 前缀 (051505f7)
+- :children_crossing: (guard): 其它插件出错时引导去找对应作者 (5a93268d)
+
+### 完整对比
+
+https://github.com/AnkioTomas/moon/compare/v0.5.0...v0.5.1
+
 # v0.5.0 · 2026-11-08
 
 ## 月读 v0.5.0
@@ -148,70 +182,3 @@ KOReader 插件包：`book.koplugin-v0.4.15.zip`
 ### 完整对比
 
 https://github.com/AnkioTomas/moon/compare/v0.4.14...v0.4.15
-
-# v0.4.14 · 2026-11-04
-
-## 月读 v0.4.14
-
-KOReader 插件包：`book.koplugin-v0.4.14.zip`
-
-输入法词库（整库，手动 sideload）：`dictionary.sqlite3 dictionary-wubi.sqlite3 dictionary-cangjie.sqlite3 dictionary-zhuyin.sqlite3`
-
-安装：解压后将 `book.koplugin` 复制到 KOReader 的 `plugins` 目录，然后重启。
-
-词库 sideload：下载对应布局的词库，直接放入 KOReader 数据目录下的
-`.moon/`（与 `book.sqlite3` 同级）。附件已使用最终文件名，无需重命名。
-
-### 更新内容
-
-相对上一版本 `v0.4.13`：
-
-#### 新功能
-
-- :sparkles: (bars): 顶栏、底栏可设置离屏幕边缘的边距，正文随之让位 (d4fbfbfb)
-- :sparkles: (library): 书库封面可设置双击、长按动作，默认无动作 (#86) (7a8eab81)
-- :sparkles: (wechat): 时长上报成功后记录书、秒数与小时桶，便于排查阅读时长对不上 (3c0915ff)
-- :sparkles: 天气 / 一言等 online 任务不再出现在任务列表和顶栏计数 (f66915d9)
-- :sparkles: 一言联网频率可设置：默认 1 小时，可选 10 分钟 / 1 天 / 不联网 (1feb6500)
-- :sparkles: (http): 请求支持 IPv6，不通时退回 IPv4 (a987d312)
-- :sparkles: (source): 退出登录时清掉这个源的本地记录 (528ec367)
-- :sparkles: (reviews): 段评可点进二级回复 (ec0739d3)
-- :sparkles: (remote): 清除配置升级为格式化月读数据，入口挪到首页备份面板之后 (86964d87)
-
-#### 修复
-
-- :bug: (translate): 双语对照不再翻译 nav 目录，修复目录无法识别 (125b002f)
-- :bug: (http): HTTPS 的 IPv6 异步连接失败时退回 IPv4 (f49efe0b)
-- :bug: (lockscreen): 文件夹背景跳过 ._ 隐藏文件，避免解码失败 (6700e717)
-- :bug: (panel): 亮度/色温滑块只响应起点在轨道上的拖动 (#87) (4c51c09c)
-- :bug: (http): 本机没有 IPv6 路由时不再尝试 AAAA 连接，修复 Kindle 联网后几秒崩溃 (b1aaf0a3)
-- :bug: (http): IPv6 失败退回 IPv4 换 socket 前先从 ioloop 摘掉旧 socket (b94df5ed)
-- :bug: 当前阅读简介缺失：开书时把文件自带简介补进库 (86ea9f83)
-- :bug: (remote): 同一台机器同种浏览器重新授权时替换旧令牌，不再累加 (479c4b09)
-- :bug: (subscribe): 订阅换章号时旧排版双语章跟着文章迁移 (1834d792)
-
-#### 性能
-
-- :zap: (copymanga): 页图改为 800 宽 JPEG，长图翻页不再卡 (54942b7f)
-- :zap: (reader): 收划线和双语章不再扫工作目录 (65482676)
-
-#### 重构
-
-- :recycle: (battery): 单位按驱动表换算、多电池容量求和，旧电量计不再给假的 100% 健康度 (23c7ccf2)
-- :recycle: (audit): 锁屏背景直接 require 外部模块，微信书架落盘改原子写 (529fa842)
-- :recycle: (translate): 删掉只转发的 ChapterBi.pathFor (6e1f11bd)
-- :recycle: (http): turbo 补丁不再 pcall(require) socket (68313254)
-- :recycle: (source): 退出登录按统一任务前缀取消，去掉 kavita 特例和 pcall(require) (5cb568b1)
-
-#### 变更
-
-- :children_crossing: (lockscreen): 生成失败提示只显示错误首行，不再刷整段堆栈 (09343200)
-- :children_crossing: (bars): 顶栏、底栏边距微调步长改为 1 (e17fd6fa)
-- :children_crossing: (sidebar): 「阅读时长」改名「本机时长」，与累计时长相同时不再重复显示 (a6c3e735)
-- :globe_with_meridians: (l10n): 补上退出登录、段评回复和 IPv6 译文 (b94d128d)
-- :loud_sound: (reader): 开章关书休眠的耗时按步骤打进 warn (6001cd82)
-- :white_check_mark: (source): 退出登录测试桩补上 invalidate (631fde7b)
-
-### 完整对比
-
-https://github.com/AnkioTomas/moon/compare/v0.4.13...v0.4.14
