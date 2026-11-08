@@ -17,6 +17,8 @@ I'd say is 10% experimental and 90% stable, but this requires changes in ink-awa
 You can follow up the current state of this integration in this discussion I made to the original ink-away author:
 https://github.com/EmirErtorer/ink-away.koplugin/discussions/69
 
+Update: I've created the PR for the integration here -> https://github.com/EmirErtorer/ink-away.koplugin/pull/80
+
 
 ---
 

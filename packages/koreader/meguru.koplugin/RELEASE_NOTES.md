@@ -1,3 +1,13 @@
+# v1.8.1 · 2026-11-08
+
+### Fixed
+
+- Pinch in pan & zoom changes and remembers the zoom level.
+- Edge swipes in panel views no longer zoom.
+- Page turns right after a page appears are no longer missed.
+
+**Full Changelog**: https://github.com/Craftwork2720/meguru/compare/v1.8.0...v1.8.1
+
 # v1.8.0 · 2026-11-07
 
 ### New
@@ -62,32 +72,3 @@ Two new optional integrations.
 - [AcidWeb](https://github.com/AcidWeb) for [bookshelf.koplugin PR #496](https://github.com/AndyHazz/bookshelf.koplugin/pull/496), which made the Bookshelf integration possible
 
 **Full Changelog**: https://github.com/Craftwork2720/meguru/compare/v1.6.0...v1.7.0
-
-# v1.6.0 · 2026-10-16
-
-## New features
-
-- **Settings are shared across a series** — a menu row you change applies to every book in it. Turn off *Remember settings for this series* to stop the sharing.
-- **Panel rotation has three states**: No rotate / Rotate / Autorotate, remembered across books.
-- **Hardware Dithering row** on devices whose screen controller can dither. It replaces the software row there, and starts from the device's own setting.
-- **Full refresh on every page turn**, for Meguru only.
-- **Crop recognises more margins**: paper, drawn frames, and bars down a side.
-- **The letterbox is painted in the margin that was trimmed**.
-- **Book info names the OPDS catalog** when it differs from the server.
-
-## Improvements
-
-- **Decode budget raised to 10 Mpx.**
-- **Resuming a book no longer decodes page 1.**
-- **The panel view warms the next page's crop, panels and first tile.**
-- **Panel detection no longer copies the page.**
-- **The pair offset gesture action is named *Meguru: …* and is offered only while a Meguru book is open.**
-- **Menu regrouped**: server rows are now under **OPDS**.
-
-## Bug fixes
-
-- Fixed the margin colour around the first page of a book.
-- Fixed a catalog that changed server being remembered as the old one.
-- Fixed an error when a local `.cbz` is opened for the first time.
-
-**Full Changelog**: https://github.com/Craftwork2720/meguru/compare/v1.5.4...v1.6.0
