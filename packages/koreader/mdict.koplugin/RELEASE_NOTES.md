@@ -1,3 +1,15 @@
+# v0.2.11 · 2026-11-08
+
+## Fixed
+
+- *My font* did not reach all text. It stood in only for the fonts a dictionary's stylesheet names, so text the dictionary sets in a generic font (serif, sans-serif, system-ui, ui-serif) or in a font that only the entry's own styles name kept the dictionary's font. In a dictionary whose text is set in ui-serif, only the sense numbers and labels changed. My font now covers that text too, and the characters it has no glyphs for keep the dictionary's fonts. (#3)
+- Text set in ui-serif, ui-sans-serif, ui-monospace or ui-rounded, as in dictionaries made from macOS ones, was drawn in the WebView's default font (sans-serif on Android), which does not know these names. It is now drawn in serif, sans-serif or monospace, as the dictionary intends. (#3)
+
+## Install
+
+- From 0.2.0: *Search → Settings → MDict dictionaries → Updates → Check for updates*, or wait for the automatic offer. Then restart KOReader (on Android, exit KOReader and open it again).
+- From 0.1.0: unzip `mdict.koplugin-0.2.11.zip` into `koreader/plugins/`, replacing the `mdict.koplugin` folder, and restart KOReader.
+
 # v0.2.10 · 2026-11-07
 
 ## Changed
@@ -64,16 +76,3 @@
 
 - From 0.2.0: *Search → Settings → MDict dictionaries → Updates → Check for updates*, or wait for the automatic offer. Then restart KOReader (on Android, exit KOReader and open it again).
 - From 0.1.0: unzip `mdict.koplugin-0.2.7.zip` into `koreader/plugins/`, replacing the `mdict.koplugin` folder, and restart KOReader.
-
-# v0.2.6 · 2026-11-06
-
-## Fixed
-
-- At a text size other than 100 %, Android WebViews older than Chromium 128 (and the Kindle's browser) got the position of everything in an entry wrong by the text size. Opening a section jumped back several pages, a tap on a link could miss it and turn the page instead, and *Find* matches and the selection box were drawn in the wrong place. (#2)
-- A tap on part of an entry that runs over two pages (such as a definition that shows its translation when tapped) went back to the page where that part starts. It now stays on the page tapped.
-- Sections that open and close with a checkbox and no script also turned the page, and the entry was not laid out again.
-
-## Install
-
-- From 0.2.0: *Search → Settings → MDict dictionaries → Updates → Check for updates*, or wait for the automatic offer. Then restart KOReader (on Android, exit KOReader and open it again).
-- From 0.1.0: unzip `mdict.koplugin-0.2.6.zip` into `koreader/plugins/`, replacing the `mdict.koplugin` folder, and restart KOReader.
