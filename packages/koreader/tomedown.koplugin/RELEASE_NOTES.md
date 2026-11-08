@@ -1,3 +1,18 @@
+# v1.4.1 · 2026-11-08
+
+New
+
+• Customizable covers folder name: choose any destination folder name for extracted book covers (e.g. `_covers`, `_assets`, or whatever you prefer) under **Settings → Style → Covers folder**. Perfect for Obsidian vaults where leading underscores hide asset directories from note listings. Thanks to @arcanaemia for the suggestion (#41)!
+• Seamless automatic migration: changing the folder name automatically migrates existing covers to the new directory and cleans up the old folder. All frontmatter paths (`cover: "_covers/..."`) and Markdown image links are automatically updated on export.
+
+Improvement
+
+• Updated documentation across all settings guides.
+• Full localization in Italian, German, French, Spanish, and Brazilian Portuguese.
+• Verified with 1,954 automated assertions passing on Lua 5.4, LuaJIT, and Kindle's Lua 5.1 bytecode check.
+
+Install it from **Check for updates** inside the plugin, or download the zip below.
+
 # v1.4.0 · 2026-11-07
 
 **New**
@@ -64,17 +79,6 @@ Tomedown 1.1.2.
 - The row that rebuilds every file is now called *Repair all files*, which is what it does.
 - The About window wears the new logo.
 - The README has a front page and reference pages now: settings, file formats, keeping notes, and developing. Menu screenshots are refreshed there.
-
-Install it from *Check for updates*, or the zip below.
-
-Questions or feedback on the menu? [Join the discussion](https://github.com/imanubdesigner/tomedown.koplugin/discussions).
-
-# v1.1.1 · 2026-10-27
-
-Tomedown 1.1.1.
-
-- The changelog inside KOReader no longer shows the address of an image or a link when the viewer cannot render Markdown. It keeps the image caption and the link text.
-- The rename dialog is called *Notes heading*, like the row that opens it.
 
 Install it from *Check for updates*, or the zip below.
 

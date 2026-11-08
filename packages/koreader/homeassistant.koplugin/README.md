@@ -25,8 +25,6 @@
   
 <br>
 
-> **If you’re looking for a Home Assistant KOReader status sensor that shows your e-book reader’s state, including the title, author, and battery level, check out [heartbeat.koplugin](https://github.com/moritz-john/heartbeat.koplugin)**
-
 ## Installation
 
 ### Step 1: Download the Plugin
@@ -58,6 +56,10 @@ The example entries are placeholders and won't work until you add your host, por
 ### Step 5: Restart KOReader Again
 
 Restart KOReader so the new config is loaded. The plugin is now available under **Tools → Page X → Home Assistant** or can be called from KOReader [gestures](#koreader-gestures).
+
+<p align="center">
+<img src="assets/tools_menu_entry.png" style="width:70%; height:auto;" />
+</p>
 
 ## Configuration
 
@@ -389,7 +391,7 @@ The actions are named after the `label` of each entity.
 
 A complete gesture example:  
 **Settings → Taps and gestures → Gesture manager▸**  
-**Long-press on corner▸ → Bottom Left → General▸ → Page 1–X: Toggle: Reading Lamp**
+**Long-press on corner▸ → Bottom Left → General▸ → Page 1–X: Reading Lamp → turn_on**
 
 If you want several entities behind a single gesture, you can build a list manually with a [Quick Menu](https://koreader.rocks/user_guide/#L2-quickmenu).
 
@@ -413,7 +415,7 @@ Unlike a manual Quick Menu, it updates itself: changes to `homeassistant_config.
 ## Screenshots
 
 <p align="center">
-<img src="assets/tools_menu_entry.png" style="width:70%; height:auto;" />
+<img src="assets/menu_getting_started.png" style="width:70%; height:auto;" />
 </p>
 
 <p align="center">

@@ -3,7 +3,7 @@
 > [!WARNING]
 > **BREAKING CHANGE:** `homeassistant_config.lua` now lives in `koreader/settings/` instead of the plugin folder. Your existing config is ignored until you move it there. See below.
 
-## New configuration file location
+## 1) New configuration file location
 
 **Why:** Some Package managers replace the entire plugin folder when updating, so users lost their configuration on every update. The config now lives outside the plugin folder, so updates can no longer delete it. See: #32
 
@@ -34,7 +34,7 @@ koreader/
     └── ... (other files)
 ```
 
-## New feature: ButtonDialog gesture
+## 2) New feature: ButtonDialog gesture
 
 There is a new gesture action called `☰ Home Assistant: all entities`. It opens a dialog that lists every entity from your config, like a Quick Menu that is already set up for you. Unlike a manual Quick Menu, it updates itself: changes to `homeassistant_config.lua` appear after the next KOReader restart.
 
