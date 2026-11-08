@@ -1,3 +1,40 @@
+# v6.4.0 · 2026-11-08
+
+- Decades: a new grouped source (shelf settings > Source > Grouped > Decades) stacks your books by the decade they were published, with Unknown last. "A decade" makes a shelf of just one.
+- %published{format}: the full publication date in your own layout, like %published{%d %B %Y}. A book whose date has no month or day shows the shorter form.
+- Book sizes in a spine shelf's settings: Varied, or Same to stand every book at one size.
+- Series boxes can now be Cover, Plain (no picture) or Spines (the books spine-out, with the first cover printed across them) (#577).
+- Series boxes in Covers and List too (long-press the shelf > View mode > Series boxes): each series gets one tile, on a shelf of books and inside an author or any other group (#503).
+- Spine text size: Bookshelf settings > Text size > Spine text. Spines get thicker to fit larger text.
+- Inside a Shelf of shelves, tap the shelf's name in the breadcrumb to open its settings.
+- Shelves from other plugins' sources can now use Spines view, when the plugin offers it (#588).
+- Genres from calibre only, under Read calibre metadata.calibre: genres come from calibre's tags alone, without the book file's old ones (#583).
+- The top panel's description can be justified (#586, thanks @ferorborja).
+- List view rows no longer have the small arrow on the right (#589).
+- Faster page turns: the next pages are made ready while you read, and turning back to a page you just left is much quicker.
+- Faster shelf switching and startup, most noticeable on older Kindles.
+- Series and folder stack covers are resized more smoothly.
+- Performance improvement for shelves of series or folder stacks, such as Series and Decades
+- Performance improvement for author/title/series sorted shelves during metadata scans
+- Performance improvement for page turns while KOReader reads new books
+- Performance improvement for page turns on long shelves with ornaments off
+- Performance improvement for Latest added and Home shelves with a status filter
+- Performance improvement when the home folder is the top of the device (#590)
+- Bookshelf now frees its memory when it's closed.
+- Fix: books with no series number now come after the numbered ones, by title (#587)
+- Fix: a spine page or series box could lay out differently when you came back to it
+- Fix: disabling or deleting the shelf on screen left the next shelf wearing its theme
+- Fix: Hardcover's first-published year was used even with Use Hardcover metadata off
+- Fix: some EPUB 3 books showed no publication date
+- Fix: Crop to fill with a very wide or very tall wallpaper
+- Fix: Delete folder lost the reading progress of books it couldn't delete
+- Fix: on a full disk, ornament changes stopped saving and a cover could be saved cut short
+- Fix: a swipe down over a Bookshelf popup opened two KOReader menus
+- Fix: covers extracted while KOReader was busy with a long scan didn't show until the page was turned
+- Fix: spines flickered while publication dates were read in the background
+- Fix: the colour picker's No background tile cut its label short
+- Fix: the search box in Bookshelf's pickers (themes, icons, collections and others) went square while typing
+
 # v6.3.3 · 2026-11-05
 
 - Fix: tapping the page arrows in the book menu's Cover tab, after searching online for covers, crashed KOReader (#585)
@@ -29,19 +66,3 @@
 - Fix: dialogs from some other plugins, opened from KOReader's menu over the shelf, were only partly drawn (#572)
 - Fix: the book menu showed a placeholder instead of the cover for books shown as plain spines (#575)
 - Fix: "Only books without a page count" counted books again that already had a count from being opened, or that had been read since their last scan (#573)
-
-# v6.2.0 · 2026-11-01
-
-- Image contrast (Settings > Image contrast): Covers and ornaments contrast boost deepens the darks and lifts the lights of covers, spines and ornaments, which can help on screens with few greys. Wallpaper contrast and brightness adjust the wallpaper on its own, and are also in Theme > Wallpaper. All off by default.
-- Swipe left or right on the shelf behind a Bookshelf menu or slider to turn its page, so a change can be seen on more books without closing it.
-- A tap outside a slider closes it and keeps the value.
-- Footer bar (Settings > Behavior): Show, Hide (the shelf uses the space), or Invisible buttons (the buttons still work where they were, and moving into them with the keys shows them).
-- Fewer full-screen flashes: closing KOReader's menu over the shelf, closing the Theme library, and moving between shelves with different themes.
-- OPDS: a catalog book's publication year is available in %calibre{pubdate} (#569, thanks @amycardoso).
-- Modules on a shelf can update every minute (on_minute), and a plugin adding a card to the home shelf works with modules switched off.
-- Read calibre metadata.calibre is no longer marked beta.
-- Fix: menu options added to a shortcuts folder disappeared after being switched on or off (#571)
-- Fix: KOReader's menu could get stuck open after using a Bookshelf slider or the Theme library
-- Fix: a shelf with no wallpaper could show the wallpaper of another shelf
-- Fix: opening a face-out book on a spines shelf lost the shadow of the plank above, and is quicker
-- Fix: select rings had black corners on Android in night mode

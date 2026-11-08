@@ -14,7 +14,7 @@ Modern, rounded replacement icons for [ZenOS](https://github.com/xZenLabs/zen-os
 
 ## What's included
 
-Each style contains 431 SVG files named for ZenOS, KOReader, and ZenPM's exact icon lookups, including all 102 original KOReader filenames and drawings. Every lookup is an editable source file, including names previously generated as aliases during the build. Matching grids and line weights keep the artwork consistent across the three interfaces. Missing icons use the bundled artwork.
+Each style contains 433 SVG files named for ZenOS, KOReader, and ZenPM's exact icon lookups, including all 102 original KOReader filenames and drawings. Every lookup is an editable source file, including names previously generated as aliases during the build. Matching grids and line weights keep the artwork consistent across the three interfaces. Missing icons use the bundled artwork.
 
 | Pack | Style | Made for | Release asset |
 |---|---|---|---|
@@ -70,6 +70,9 @@ the pack's existing artwork; Wi-Fi off draws a line through the pack's Wi-Fi ico
 
 The ZenFM Controls button and Launcher entry resolve `zenfm.svg`, a copy of the
 pack's file-browser folder artwork.
+
+The Bookshelf tab and Launcher entry resolve `bookshelf.svg`. The BookOrbit tab
+resolves `bookorbit.tab.svg` and its Launcher entry `bookorbit.svg`. All use pxlflux v1.2.1 artwork.
 
 ## Install with ZenPM
 

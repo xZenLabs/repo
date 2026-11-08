@@ -20,7 +20,7 @@ and packaged by [ZenLabs](https://github.com/xZenLabs) for
 | **Icons8 Colour** | Original multicolour Flat Color artwork, with supplementary UI symbols | `zen-icons8-colour.zip` |
 | **Icons8 Mono** | Native Windows 10 outlines, with matching outline adaptations | `zen-icons8-mono.zip` |
 
-Icons8 Colour has **366 editable SVGs** and Icons8 Mono has **359**, each using its exact runtime lookup filenames.
+Icons8 Colour has **368 editable SVGs** and Icons8 Mono has **361**, each using its exact runtime lookup filenames.
 Both packs theme all **23 built-in choices under Navbar → Tabs → Add → Tab**.
 KOReader and Zen icons retain their exact lookup names. Shared artwork under
 different lookup names is stored as editable source SVGs. No Lua manifests are needed.
@@ -76,6 +76,9 @@ reuse the pack's existing artwork; Wi-Fi off draws a line through the pack's Wi-
 
 The ZenFM Controls button and Launcher entry resolve `zenfm.svg`, a copy of the
 pack's file-browser folder artwork.
+
+The Bookshelf tab and Launcher entry resolve `bookshelf.svg`. The BookOrbit tab
+resolves `bookorbit.tab.svg` and its Launcher entry `bookorbit.svg`. BookOrbit uses a supplementary orbit design.
 
 ## Install
 

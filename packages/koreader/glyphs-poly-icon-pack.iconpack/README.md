@@ -13,7 +13,7 @@ by **Goran Spasojevic**. Created with GitHub's **Use this template** feature fro
 
 | Pack | Source SVGs | Built SVG lookups | Release asset |
 |---|---|---|---|
-| Glyphs Poly | 376 | 376 | `zen-glyphs-poly.zip` |
+| Glyphs Poly | 378 | 378 | `zen-glyphs-poly.zip` |
 
 The pack covers navigation, library tabs, quick actions, reader menus, chevrons,
 text alignment, column layouts, stars, open Wi-Fi signal levels, batteries,
@@ -56,6 +56,9 @@ existing artwork; Wi-Fi off draws a line through the pack's Wi-Fi icon.
 
 The ZenFM Controls button and Launcher entry resolve `zenfm.svg`, a copy of the
 pack's file-browser folder artwork.
+
+The Bookshelf tab and Launcher entry resolve `bookshelf.svg`. The BookOrbit tab
+resolves `bookorbit.tab.svg` and its Launcher entry `bookorbit.svg`. BookOrbit uses the pack's planet and moon artwork.
 
 ## Install with ZenPM
 

@@ -1,3 +1,21 @@
+# v1.1.0-beta.11 · 2026-11-08
+
+## Reading companion fix
+
+Fixes the missing cat/silverfish in **Currently reading + Silverfish**. OrbitUI incorrectly rejected KOReader's normal event wrapper as an unsupported plugin API; the wrapper is now accepted without bypassing its error boundary. Public Silverfish **2.0.0** and the existing version/state/species checks are still required.
+
+Text now follows screen density and available width rather than shrinking with a shallow row. The cover/book use the full inner height, the companion has its own name/stage column, and long titles truncate within compact cards. **Continue reading, saved placements and Silverfish's files/saves are unchanged.** No fork, copied artwork or duplicate pet progression.
+
+## Svenska
+
+Rättar den saknade katten/silverfisken i **Läser just nu + Silverfish** och den pyttelilla texten i breda, låga kort. Texten får läsbar storlek och omslaget mer höjd. Långa titlar kortas i stället för att krympas. **Fortsätt läsa och dina placeringar lämnas orörda.** Silverfish 2.0.0 behöver vara separat installerat och aktiverat; inga sparfiler ändras.
+
+## Update and scope
+
+Update through OrbitUI's **preview** channel and restart KOReader. For manual installation use **orbitui.koplugin.zip**, not GitHub's source-code archive. Back up settings and reading data separately: code rollback does not restore those or third-party data. Dashboard v2/v3 downgrade limits still apply.
+
+This is a prerelease. Automated tests include KOReader's native minimum/current sandbox and font code, and Silverfish's real frozen renderer; they do not establish physical Bigme font/layout/touch/night/colour/wake/rotation or complete external-plugin acceptance. Those checks remain pending. No new upstream/component/pin/artwork/bootstrap/API1, independent catalog, device or BookOrbit-server deployment. Stable/latest 1.0 remains unchanged; the 2,000-file limit is preserved.
+
 # v1.1.0-beta.10 · 2026-11-08
 
 ## Dashboard card fixes
@@ -109,36 +127,3 @@ Update through **preview** and restart KOReader. Back up settings and reading da
 **Prerelease:** desktop/automated evidence only. Physical Bigme and live-server source/link coverage, menus/day/night, suspend/read-return and measured start/latency/RSS remain pending. No universal compatibility or measured device-speed claim. No new upstream import, server deployment, device/plugin install or independent module-catalog publication. Stable/latest 1.0 and all earlier release assets/tags remain unchanged. API1/bootstrap stay fixed at 2,000 installed files, 27 exact lazy helpers/407 identities.
 
 Download **orbitui.koplugin.zip**, not the source-code archive. Verification details and device limits: docs/TESTING.md and docs/OTA.md.
-
-# v1.1.0-beta.6 · 2026-11-08
-
-# OrbitUI 1.1.0-beta.6
-
-Experimental preview. Stable/latest stays **1.0.0**. Update through OrbitUI's preview channel and restart KOReader; back up settings and reading data first.
-
-## Svenska
-
-- **Fler moduler i Läsöversikt:** tryck + eller håll inne → Lägg till modul. Lägg till kompatibla SimpleUI-/Bookshelf-kort eller åtgärdsgenvägar, ändra storlek, ordna, dölj och ta bort dem. Fler kort får egna sidor.
-- **Modulbibliotek:** Lägg till modul → Hämta fler moduler. Först finns versionslåst **Silverfish 2.0.0**. Hämtningen verifieras med SHA-256 och kräver bekräftelse och omstart. Befintliga plugins och sparfiler skrivs inte över. Uppdatering och avinstallation är manuella i denna första version.
-- **Bättre återanvändning av omslag:** begränsad LRU-cache för miniatyrer utan att hålla stora originalbilder kvar i minnet. Återanvänder även externa omslags nedskalningar. Ingen hastighetsvinst på Bigme är ännu uppmätt.
-- **Ordförslag:** valfritt och avstängt som standard i Sök i OrbitUI. Kompletterar sista ordet från redan cachade lokala titlar, författare och serier, utan filskanning eller nätanrop medan du skriver.
-- **Tidigare granskad upstream följer med:** Bookshelf 6.3.3 och SimpleUI 3.0.3, bland annat förbättringar av bokdetaljernas uppdatering, sortering och samlingarnas ordning. Ingen ytterligare upstream-merge görs i detta steg.
-
-**Viktigt:** Silverfish-märket betyder att adaptrarna är testade på dator – inte att hela pluginet är säkerhetscertifierat eller testat på Bigme. Tredjepartsplugins körs med KOReaders fil- och nätverksåtkomst. Silverfishs eget gränssnitt är på engelska/portugisiska; OrbitUIs nya reglage och katalog är på svenska och engelska. Ingen separat online-modulkatalog har publicerats ännu; den medföljande katalogen fungerar och uppdateringsknappen förklarar detta.
-
-## English
-
-- Add compatible SimpleUI/Bookshelf plugin cards and action shortcuts to Reading dashboard. Resize, arrange, hide/remove and paginate up to 16 added cards per screen. Original Home layouts and book actions stay intact; visible card refreshes and timer lifetimes are scoped.
-- Get more modules opens the curated Module library, initially official Silverfish 2.0.0. Explicit first install, pinned archive/checksum/source/license disclosure and restart. Never overwrite/adopt/enable an existing plugin; updates and removal remain manual. No pet code or artwork is bundled in OrbitUI.
-- Bounded thumbnail LRU reuse no longer strongly retains large sources; warm external-cover downscales are reused. Desktop fixtures reduce repeated scaler calls from 20 to 1, not a measured device speed ratio.
-- Optional local-cache Word suggestions, OFF by default, and the previously reviewed Bookshelf 6.3.3 / SimpleUI 3.0.3 fixes are included.
-
-Desktop adapter testing is **not** a safety certificate or full-plugin/Bigme approval. Physical module/catalog installation, complete Silverfish startup/screensaver/save, night/rotation/sleep and device opening-time/RSS checks remain open. No new upstream import, server deployment or device installation accompanies publication. The independent catalog channel is supported but not yet published; the bundled reviewed entry remains usable.
-
-## Upgrade and recovery
-
-API1/bootstrap remains unchanged with 2,000 installed files (26 exact lazy helpers, 407 canonical module identities). Update from beta.5 via the preview channel and restart. Existing profiles, sources/headings, ornaments and sync/data ownership are retained.
-
-Adding dashboard cards opts that screen into layout config v2: older versions cannot edit it but must preserve it. Code rollback does not reverse layout edits or third-party data migrations, and does not uninstall a separately installed plugin. Keep an independent settings backup; do not restore old reading progress.
-
-Full Lua/LuaJIT, translations, sealed/native, real pinned Silverfish archive, older-installers, source/history/artwork/secrets and main/tag CI checks precede publication. See docs/TESTING.md and docs/OTA.md for exact evidence and remaining device limits.

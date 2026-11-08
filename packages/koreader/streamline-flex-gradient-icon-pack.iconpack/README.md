@@ -9,7 +9,7 @@ and KOReader.
 ![Streamline Flex Gradient: selected KOReader controls, library tabs, and common actions](.github/overview-streamline-flex-gradient.png)
 
 This repository contains one pack: **Streamline Flex Gradient for ZenOS**.
-Its **368 editable SVGs** use exact runtime lookup filenames and build into
+Its **370 editable SVGs** use exact runtime lookup filenames and build into
 `dist/zen-streamline-flex-gradient.zip`. It themes all **23 built-in choices under
 Navbar → Tabs → Add → Tab**.
 
@@ -61,6 +61,9 @@ reuse the pack's existing artwork; Wi-Fi off draws a line through the pack's Wi-
 
 The ZenFM Controls button and Launcher entry resolve `zenfm.svg`, a copy of the
 pack's file-browser folder artwork.
+
+The Bookshelf tab and Launcher entry resolve `bookshelf.svg`. The BookOrbit tab
+resolves `bookorbit.tab.svg` and its Launcher entry `bookorbit.svg`. BookOrbit uses the pack's galaxy artwork.
 
 Some designs require small adaptations to supply the correct UI symbol. Books
 reuse the original cover or page shapes. Navigation, menu lines, the X, dots,

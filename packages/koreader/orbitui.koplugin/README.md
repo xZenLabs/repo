@@ -63,27 +63,21 @@ functionality, not a claim that OrbitUI invented the Home screen, library,
 series boxes, themes or ornament system. [The feature guide](docs/FEATURES.md)
 explains the extra controls and where to find them.
 
-**1.1.0-beta.10 preview:** dashboard additions now show saved feedback and
-BookOrbit sources have checkmarks; repeated picker taps cannot create duplicate
-source cards. Remove is one action with feedback and immediate list return,
-and healthy BookOrbit cards no longer incorrectly show Unavailable. Existing
-duplicates are kept. New optional **Currently reading + Silverfish** combines
-the book cover/title/progress and active companion; Continue reading is not
-replaced. Add through **Reading dashboard > + > Home modules (SimpleUI)**.
-Requires separately installed/enabled public Silverfish 2.0.0; no fork, copied
-art or pet-save changes. Native cover polling supports late/missing covers.
-Desktop tests pass; physical Bigme acceptance remains pending. Update through
-preview and restart. [Release notes](docs/OTA.md#orbitui-110-beta10).
+**1.1.0-beta.11 preview:** fixes the missing companion in **Currently reading +
+Silverfish** caused by incorrectly rejecting KOReader's normal event wrapper.
+Larger density-aware text and a full-height cover improve wide, shallow cards;
+compact titles truncate instead of shrinking. Continue reading, saved placements
+and Silverfish's files/data remain unchanged. Requires separately installed/
+enabled public Silverfish 2.0.0; no fork or copied artwork. Automated/native-
+adapter checks pass; physical Bigme acceptance is still pending. Update through
+preview and restart. [Release notes](docs/OTA.md#orbitui-110-beta11).
 
-**Svenska, förhandsversion 1.1.0-beta.10:** kvittens och bock vid tillagda
-BookOrbit-källor; upprepade tryck skapar inte fler likadana kort. Ta bort kort
-ger kvittens och återgår direkt till listan. Felaktig Inte tillgänglig-märkning
-är rättad. Gamla dubbletter lämnas kvar. Det valfria **Läser just nu + Silverfish**
-visar omslag, titel/läsprogress och din figur utan att ersätta Fortsätt läsa.
-Välj det under **Läsöversikt > + > Hem-moduler (SimpleUI)**. Silverfish 2.0.0
-installeras/aktiveras separat; ingen fork eller ändring av dess sparfiler.
-Automatiska tester är gröna; Bigme-test återstår. Uppdatera via förhandskanalen
-och starta om KOReader.
+**Svenska, förhandsversion 1.1.0-beta.11:** rättar den saknade figuren i
+**Läser just nu + Silverfish**. Texten får läsbar storlek även i breda, låga
+kort och omslaget mer höjd; långa titlar kortas i stället för att krympas.
+Fortsätt läsa, dina placeringar och Silverfishs sparfiler lämnas orörda.
+Automatiska tester är gröna; test på själva Bigmen återstår. Uppdatera via
+förhandskanalen och starta om KOReader.
 
 **Included since 1.1.0-beta.7:** Add BookOrbit shelves and smartscopes as independent
 Reading dashboard cards: **+ → BookOrbit shelves and smartscopes → Refresh

@@ -29,8 +29,8 @@ opacity. Related actions may share a design.
 
 | Pack | Source files | SVG lookups | Screen | Release asset |
 |---|---|---|---|---|
-| **Fluent Color** | 352 | 352 | Color e-ink | `zen-fluent-color.zip` |
-| **Fluent Mono** | 402 | 402 | Black & white e-ink | `zen-fluent-mono.zip` |
+| **Fluent Color** | 354 | 354 | Color e-ink | `zen-fluent-color.zip` |
+| **Fluent Mono** | 404 | 404 | Black & white e-ink | `zen-fluent-mono.zip` |
 
 Both variants cover all 50 ZenOS `quick_` controls and `tab_` icons, excluding
 the blank spacer. Color uses Fluent filled moon, snooze, tag, battery, Bluetooth,
@@ -74,6 +74,9 @@ the pack's existing artwork.
 
 The ZenFM Controls button and Launcher entry resolve `zenfm.svg`, a copy of the
 pack's file-browser folder artwork.
+
+The Bookshelf tab and Launcher entry resolve `bookshelf.svg`. The BookOrbit tab
+resolves `bookorbit.tab.svg` and its Launcher entry `bookorbit.svg`. BookOrbit uses the pack's planet artwork.
 
 ## Install with ZenPM
 

@@ -1,0 +1,18 @@
+# Liseur Sync plugin for KOReader
+# https://github.com/chmouel/liseur-sync
+# zenpm:auto-scraped
+id=liseur-sync
+name=Liseur Sync
+version=source
+description=Self-hostable reading-position sync and statistics server for Liseur, KOReader, and friends
+author=chmouel
+category=media
+platforms=koreader
+dependencies=
+source=https://github.com/chmouel/liseur-sync
+stars=21
+updated_at=2026-11-08T22:01:00Z
+readme_url=packages/koreader/liseur-sync.koplugin/README.md
+readme_hash=8a759e48999ed2546dd8eb17075234dab2c41dcf
+source_type=source
+source_url=https://codeload.github.com/chmouel/liseur-sync/zip/refs/heads/main
