@@ -1,3 +1,19 @@
+# v1.0.55-b516eae0052876662a1569784409fe8b0a0da10d · 2026-11-08
+
+**Update from inside KOReader:** Z-library → Settings → Check for updates.
+
+**Or install by hand:** download the zip below and unpack it into your KOReader
+directory, so the plugin lands in `koreader/plugins/zlibrary.koplugin/`.
+
+What changed in this version is listed in
+[CHANGELOG.md](https://github.com/ZlibraryKO/zlibrary.koplugin/blob/main/CHANGELOG.md).
+
+---
+
+This plugin is maintained in my spare time, and Z-library changes often enough to
+keep it that way. If you like it and want it to keep working:
+[buy me a coffee](https://ko-fi.com/zlibraryko) ☕
+
 # v1.0.54-c16f8565dd2412aa0db39c494bcfd76829aa9b86 · 2026-10-19
 
 **Update from inside KOReader:** Z-library → Settings → Check for updates.
@@ -61,5 +77,3 @@ What changed in this version is listed in
 This plugin is maintained in my spare time, and Z-library changes often enough to
 keep it that way. If you like it and want it to keep working:
 [buy me a coffee](https://ko-fi.com/zlibraryko) ☕
-
-# v1.0.50-0a1f7fb97f116752df4b50df95dba3848042fa61 · 2026-09-26
