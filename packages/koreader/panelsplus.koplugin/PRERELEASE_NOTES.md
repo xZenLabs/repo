@@ -14,7 +14,7 @@ Yep, if *Ink-Away* is installed along with Panels+, you'll be able to use Ink-aw
 
 I'd say is 10% experimental and 90% stable, but this requires changes in ink-away internal code.
 
-You can follow up the current state of this integration in this discussion I made to the original ink-away author:
+You can follow up the current state of this integration in this discussion I made to ink-away author:
 https://github.com/EmirErtorer/ink-away.koplugin/discussions/69
 
 Update: I've created the PR for the integration here -> https://github.com/EmirErtorer/ink-away.koplugin/pull/80

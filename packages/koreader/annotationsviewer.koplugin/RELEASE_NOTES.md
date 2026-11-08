@@ -15,6 +15,7 @@ This is a big update, it changes the overall look of the plugin.
 - Menus, dropdowns and dialogs pass gestures you don't use on to KOReader
 - Line spacing setting, also negative to bring lines closer together
 - Own font and size for notes, plus space above the note and an extra indent for it
+- Own font and size for the author name, and capitals or as written for book and chapter titles, the chapter · date line and the author
 - Scrollbar marks follow the sort order: books, authors, months or chapters (also in one book)
 
 ## Changed

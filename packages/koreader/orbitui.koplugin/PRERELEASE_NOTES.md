@@ -1,3 +1,29 @@
+# v1.1.0-beta.10 · 2026-11-08
+
+## Dashboard card fixes
+
+- Adding a card shows saved feedback. BookOrbit shelves/smartscopes get a checkmark; repeated picker taps cannot create duplicate cards for that source on this screen.
+- Remove card is one action with feedback and an immediate updated list, not another removal submenu. Existing duplicates are kept; remove unwanted placements individually.
+- Healthy BookOrbit sources and usable offline caches no longer incorrectly show Unavailable. Failed saves never show success.
+
+## Optional reading companion
+
+New **Currently reading + Silverfish** module: book cover, title/author/progress plus your active companion. Tap the book to resume; tap the creature to open Silverfish. **Continue reading is not replaced.** Add through **Reading dashboard > + > Home modules (SimpleUI)**, or the ordinary Home module picker.
+
+Requires separately installed/enabled public **Silverfish 2.0.0** and restart. No fork, copied artwork, plugin-file edits, save access or duplicate development. Other versions show a compatibility explanation. Late/missing covers use native polling; colours follow KOReader/Silverfish.
+
+## Svenska
+
+Tillägg får kvittens och BookOrbit-källor en bock; upprepade tryck skapar inga dubbletter. **Ta bort kort** ger kvittens och återgår direkt till listan. Felaktig **Inte tillgänglig**-märkning är rättad. Befintliga dubbletter lämnas orörda.
+
+Valfria **Läser just nu + Silverfish** visar bokomslag/läsprogress och din figur. **Fortsätt läsa ersätts inte.** Välj under **Läsöversikt > + > Hem-moduler (SimpleUI)**. Silverfish 2.0.0 installeras/aktiveras separat; inga sparfiler ändras.
+
+## Update and scope
+
+Update through OrbitUI's preview channel and restart KOReader. For manual installation use **orbitui.koplugin.zip**, not GitHub's source-code archive. Back up settings and reading data separately: code rollback does not undo layout edits or third-party data. Dashboard v2/v3 downgrade limits still apply.
+
+Prerelease: automated/native-adapter tests are not complete Silverfish or physical Bigme certification. Real font/touch, checkmark/toast, layout/colour/night, sleep/wake/rotation and plugin lifecycle retesting remain pending. No device or BookOrbit-server deployment, new upstream merge, component/pin or artwork update. Stable/latest 1.0 is unchanged. Bootstrap/API1 and the 2,000-file limit are preserved.
+
 # v1.1.0-beta.9 · 2026-11-08
 
 ## Svenska
@@ -116,37 +142,3 @@ API1/bootstrap remains unchanged with 2,000 installed files (26 exact lazy helpe
 Adding dashboard cards opts that screen into layout config v2: older versions cannot edit it but must preserve it. Code rollback does not reverse layout edits or third-party data migrations, and does not uninstall a separately installed plugin. Keep an independent settings backup; do not restore old reading progress.
 
 Full Lua/LuaJIT, translations, sealed/native, real pinned Silverfish archive, older-installers, source/history/artwork/secrets and main/tag CI checks precede publication. See docs/TESTING.md and docs/OTA.md for exact evidence and remaining device limits.
-
-# v1.1.0-beta.5 · 2026-11-07
-
-OrbitUI 1.1.0-beta.5 — Visible alphabet labels · Synliga bokstäver
-
-## Svenska
-
-- Fixar att bokstavslisten i beta.4 kan reagera på dragning utan att bokstäverna syns. Den gamla beräkningen utgick från önskad textstorlek, inte typsnittets faktiska radhöjd och extra textmarginaler. Text som inte fick plats ritades inte alls.
-- Listens egna texter får nu noll extra marginal; radavståndet följer uppmätt normal/fet texthöjd. Storleken anpassas efter faktisk bredd/höjd i listen, den markerade bokstavens rad och den stora återkopplingen.
-- Pekytan, bokstavspositionerna, omslagens utrymme, sortering/filter, läsaråtergång och paus/avbryt-beteende behålls. Ingen metadata, EPUB, nätverksläsning eller ombyggnad av hyllan under dragning. Bokstavslisten är fortsatt valfri och avstängd som standard, med svenska och engelska.
-
-Aktivera per vy via **sidräknaren ▾ > Sortering, filter och vy > Bokstavslist**.
-
-Ett nytt test återskapar osynliga bokstäver med den publicerade beta.4-koden och passerar med fixen. Kontrollen använder även KOReaders riktiga textwidget och FreeType-mått från ett medföljande typsnitt. Tidigare tester kontrollerade bakgrund/pekyta men använde för förenklade textmått. Teckenformning och faktisk skärmvisning är fortfarande inte ett fysiskt Bigme/Boox-test; bekräfta gärna att listen nu syns, även vid andra textstorlekar, rotation och nattläge.
-
-**Endast förhandskanalen; stabil/latest är fortfarande 1.0.0.** Ingen ny upstream-merge, ändring av komponentversioner, bootstrap/API1, bilder, befintliga inställningar, läsdata eller synkägare. Ingen användarenhet/server driftsätts av releasen. Äldre versioners filer/taggar lämnas oförändrade. Övriga 1.1-funktioner och tidigare säkerhetsbegränsningar finns kvar.
-
-## English
-
-- Fixes beta.4's alphabet strip accepting gestures while its letters remain invisible. Requested font size underestimated native line height plus default vertical padding; oversized text was silently omitted.
-- Owned labels now have zero extra padding. Measured regular/bold line heights determine spacing, and bounded cached size fitting covers actual width/height of normal labels, the selected row and large feedback.
-- Touch mapping, cover/content space, sorting/filtering, reader return and cancellation/lifecycle ownership remain unchanged. Dragging still performs no metadata/EPUB/network reads or shelf rebuild. The strip remains optional, OFF by default, with SV/EN controls.
-
-Enable per view through **footer counter ▾ > Sort, filter & view > Alphabet strip**.
-
-New visibility assertions fail against the exact published beta.4 adapter and pass with the fix, including actual KOReader TextWidget sizing and FreeType measurements from a bundled font. Earlier tests exercised fills/input with over-simplified text dimensions. This does not run native glyph shaping or physically certify Bigme/Boox output; please check visible labels, font sizes, rotation and night mode on-device.
-
-**Preview only; stable/latest stays 1.0.0.** No additional upstream merge, component/source-pin/bootstrap/API1/path/artwork migration, settings/reading-data wipe, new sync owner or device/server deployment. Older releases/tags stay immutable. Existing 1.1 features and hosted safety deferrals remain.
-
-Download **orbitui.koplugin.zip**, not GitHub's source archive. Back up settings/reading data and restart KOReader after installation.
-
-Unchanged reviewed pins: Bookshelf d47edfcc7c160691417235201595ab12cdffbdfe; SimpleUI 4bf2d2c5605d4172c5283e224450854d0b72219b.
-
-Built on / bygger på SimpleUI by doctorhetfield-cmd and contributors, and Bookshelf by AndyHazz and contributors. See README.md, LICENSE, NOTICE and asset-specific notices.

@@ -1,3 +1,12 @@
+# v1.8.2 · 2026-11-08
+
+### Fixed
+
+- Page turning did not work on the KOReader stable version (#11).
+
+
+**Full Changelog**: https://github.com/Craftwork2720/meguru/compare/v1.8.1...v1.8.2
+
 # v1.8.1 · 2026-11-08
 
 ### Fixed
@@ -50,25 +59,3 @@
 - Fixed books opened from a just-added OPDS catalog not creating their series folder.
 
 **Full Changelog**: https://github.com/Craftwork2720/meguru/compare/v1.7.0...v1.7.1
-
-# v1.7.0 · 2026-10-25
-
-## Meguru v1.7.0
-
-Two new optional integrations.
-
-### [Bookshelf](https://github.com/AndyHazz/bookshelf.koplugin) (OPDS catalog browser)
-
-- **▶ Meguru this series** row in Bookshelf's OPDS catalog window opens a series directly in Meguru.
-- **`.meguru` files also open from folder shelves** with bookshelf.koplugin 5.5.0+.
-
-### [Panels+](https://github.com/KristanLaimon/PanelsPlus)
-
-- **Panels+ added as an option for the long-press.** *Panel view* puts `panels+` first, followed by `off` and all three Meguru views: `panel cut`, `pan & zoom`, and `free view`.
-- **Panels+ OCR text selection now works in Meguru**, in the Panels+ view only.
-
-### Thanks
-
-- [AcidWeb](https://github.com/AcidWeb) for [bookshelf.koplugin PR #496](https://github.com/AndyHazz/bookshelf.koplugin/pull/496), which made the Bookshelf integration possible
-
-**Full Changelog**: https://github.com/Craftwork2720/meguru/compare/v1.6.0...v1.7.0

@@ -63,22 +63,27 @@ functionality, not a claim that OrbitUI invented the Home screen, library,
 series boxes, themes or ornament system. [The feature guide](docs/FEATURES.md)
 explains the extra controls and where to find them.
 
-**1.1.0-beta.9 preview:** new Silverfish Home cards go inside Reading dashboard
-instead of below its full-page module, where they could draw over the dock.
-Ordinary Home uses a separate page unless current geometry proves room.
-Existing placements, card customizations, pet saves and screensaver options
-are preserved. Silverfish's Home toggle recognizes dashboard cards across
-add/off/restart without duplicates. No Silverfish fork or automatic migration.
-Desktop native-adapter tests pass; physical Bigme retesting remains pending.
-Update through preview and restart. [Release notes](docs/OTA.md#orbitui-110-beta9).
+**1.1.0-beta.10 preview:** dashboard additions now show saved feedback and
+BookOrbit sources have checkmarks; repeated picker taps cannot create duplicate
+source cards. Remove is one action with feedback and immediate list return,
+and healthy BookOrbit cards no longer incorrectly show Unavailable. Existing
+duplicates are kept. New optional **Currently reading + Silverfish** combines
+the book cover/title/progress and active companion; Continue reading is not
+replaced. Add through **Reading dashboard > + > Home modules (SimpleUI)**.
+Requires separately installed/enabled public Silverfish 2.0.0; no fork, copied
+art or pet-save changes. Native cover polling supports late/missing covers.
+Desktop tests pass; physical Bigme acceptance remains pending. Update through
+preview and restart. [Release notes](docs/OTA.md#orbitui-110-beta10).
 
-**Svenska, förhandsversion 1.1.0-beta.9:** nya Silverfish-kort placeras i
-Läsöversikt i stället för under den, där de kunde ritas över docken. På vanligt
-Hem används en egen sida om det inte säkert finns plats. Dina redan sparade
-placeringar, kortinställningar och Silverfish-data lämnas orörda. Silverfishs
-eget Hem-val känner igen kortet även efter omstart, utan dubletter. Automatiska
-tester är gröna; visuellt Bigme-test återstår. Uppdatera via förhandskanalen
-och starta om KOReader. En gammal överlappande placering flyttas inte automatiskt.
+**Svenska, förhandsversion 1.1.0-beta.10:** kvittens och bock vid tillagda
+BookOrbit-källor; upprepade tryck skapar inte fler likadana kort. Ta bort kort
+ger kvittens och återgår direkt till listan. Felaktig Inte tillgänglig-märkning
+är rättad. Gamla dubbletter lämnas kvar. Det valfria **Läser just nu + Silverfish**
+visar omslag, titel/läsprogress och din figur utan att ersätta Fortsätt läsa.
+Välj det under **Läsöversikt > + > Hem-moduler (SimpleUI)**. Silverfish 2.0.0
+installeras/aktiveras separat; ingen fork eller ändring av dess sparfiler.
+Automatiska tester är gröna; Bigme-test återstår. Uppdatera via förhandskanalen
+och starta om KOReader.
 
 **Included since 1.1.0-beta.7:** Add BookOrbit shelves and smartscopes as independent
 Reading dashboard cards: **+ → BookOrbit shelves and smartscopes → Refresh
