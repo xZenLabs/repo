@@ -1,3 +1,17 @@
+# v1.18.0 · 2026-11-08
+
+### What's new
+
+- Stop or start syncing a book from the Seekquel menu. "Stop syncing this book" and "Start syncing this book" do what the switch on the book's page in Seekquel does, without leaving the reader.
+- A book you switched off in Seekquel says so when you open it, the Seekquel menu reads "Seekquel (off for this book)", and Sync now and Sync status tell you nothing is kept for it.
+- A book you finish or rate while syncing is off is sent once syncing is back on, and its file details wait instead of being sent over and over.
+
+### Install
+
+Already paired? The add-on updates itself: open Seekquel in KOReader's menu and accept the update when it is offered.
+
+New install: download seekquel.koplugin-v1.18.0.zip below, unzip it, and copy the seekquel.koplugin folder into KOReader's plugins folder. Restart KOReader, then open Seekquel from the menu to pair.
+
 # v1.17.0 · 2026-11-03
 
 ### What's new
@@ -45,13 +59,3 @@ Installing for the first time: download `seekquel.koplugin-v1.15.1.zip`, unzip i
 ### Install
 
 Download `seekquel.koplugin-v1.15.0.zip`, unzip it, copy the `seekquel.koplugin` folder into `koreader/plugins` on your reader and restart KOReader. Then open Tools, Seekquel, Connect this device. If the add-on is already installed, it updates itself from the Seekquel menu.
-
-# v1.14.0 · 2026-10-08
-
-### What's new
-
-- **Pair by scanning a QR code.** The pairing screen now shows a QR code above the code. Scan it with your phone and Seekquel opens with the code already filled in, so all that is left is to tap Connect. Typing the code still works as before.
-
-### Install
-
-Download `seekquel.koplugin-v1.14.0.zip`, unzip it, and copy the `seekquel.koplugin` folder into KOReader's `plugins` folder on your e-reader. Restart KOReader, then open the Seekquel menu to pair. If the add-on is already installed and paired, it updates itself and you do not need to do anything.
