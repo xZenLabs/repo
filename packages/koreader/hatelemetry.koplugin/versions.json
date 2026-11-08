@@ -1,0 +1,3 @@
+{
+  "releases": [{"tag_name":"v0.4.0","assets":[{"name":"hatelemetry.koplugin-v0.4.0.zip","url":"https://github.com/hudsonbrendon/hatelemetry.koplugin/releases/download/v0.4.0/hatelemetry.koplugin-v0.4.0.zip","size":24938,"digest":"sha256:e2cc7fe549e6a5381fae574160fd2203daec5493aae302b3642c6b78340beea6"}],"name":"v0.4.0"},{"tag_name":"v0.3.0","assets":[{"name":"hatelemetry.koplugin-v0.3.0.zip","url":"https://github.com/hudsonbrendon/hatelemetry.koplugin/releases/download/v0.3.0/hatelemetry.koplugin-v0.3.0.zip","size":24182,"digest":"sha256:5de2c4a74417741c87a5a8fb4ca5c92036c76cce8ecc96e52af43049d83a4c03"}],"name":"v0.3.0"}]
+}

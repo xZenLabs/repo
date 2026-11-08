@@ -1,0 +1,23 @@
+# Hatelemetry plugin for KOReader
+# https://github.com/hudsonbrendon/hatelemetry.koplugin
+# zenpm:auto-scraped
+id=hatelemetry
+name=Hatelemetry
+version=0.4.0
+description=KOReader plugin: push Kindle reading + device telemetry to Home Assistant via the REST API
+author=hudsonbrendon
+category=utility
+platforms=koreader
+dependencies=
+source=https://github.com/hudsonbrendon/hatelemetry.koplugin
+stars=5
+updated_at=2026-11-08T17:00:56Z
+published_at=2026-05-28T18:39:23Z
+readme_url=packages/koreader/hatelemetry.koplugin/README.md
+readme_hash=e68c2966c81ac2c73c2f19492f162d7b7c6c22c1
+release_notes_url=packages/koreader/hatelemetry.koplugin/RELEASE_NOTES.md
+release_notes_hash=f3a87beef8cf954195621e5b4a7acf11404a2b9fb9422d96f937c31542ae84b6
+releases=[{"tag_name":"v0.4.0","assets":[{"name":"hatelemetry.koplugin-v0.4.0.zip","url":"https://github.com/hudsonbrendon/hatelemetry.koplugin/releases/download/v0.4.0/hatelemetry.koplugin-v0.4.0.zip","size":24938,"digest":"sha256:e2cc7fe549e6a5381fae574160fd2203daec5493aae302b3642c6b78340beea6"}],"name":"v0.4.0"},{"tag_name":"v0.3.0","assets":[{"name":"hatelemetry.koplugin-v0.3.0.zip","url":"https://github.com/hudsonbrendon/hatelemetry.koplugin/releases/download/v0.3.0/hatelemetry.koplugin-v0.3.0.zip","size":24182,"digest":"sha256:5de2c4a74417741c87a5a8fb4ca5c92036c76cce8ecc96e52af43049d83a4c03"}],"name":"v0.3.0"}]
+source_type=release
+source_asset=hatelemetry.koplugin-v0.4.0.zip
+size=24938

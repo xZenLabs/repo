@@ -1,3 +1,29 @@
+# v0.5 · 2026-11-08
+
+# v0.5
+
+This is a big update, it changes the overall look of the plugin.
+
+## New
+- Chapter headings in the list, they look like the book title
+- Saved filters, one tap to bring a filter back
+- Search matches are underlined in highlights and notes
+- Landscape width setting
+- Page number in the annotation sheet
+- Chinese, Japanese and Korean text wraps correctly (thanks gytwo, pull request #8)
+- Lines per note setting, long notes end with "..." and tap shows all of it
+- Menus, dropdowns and dialogs pass gestures you don't use on to KOReader
+
+## Changed
+- Sort order is a dropdown now
+- Books, Chapters and Tags pickers all work the same, with an Only these / Hide these switch
+- Settings are split into Text and Spacing, with a preview on top
+- Menus use Prev / Next buttons like the list instead of a scrollbar. Swipes and page keys work too
+- Default content text size is 16
+- Night mode keeps the real highlight colors
+
+Install: copy the `annotationsviewer.koplugin` folder from the zip to KOReader's `plugins` folder and restart.
+
 # v0.4 · 2026-05-05
 
 ## New Features

@@ -63,20 +63,22 @@ functionality, not a claim that OrbitUI invented the Home screen, library,
 series boxes, themes or ornament system. [The feature guide](docs/FEATURES.md)
 explains the extra controls and where to find them.
 
-**1.1.0-beta.8 preview:** fixes beta.7's empty BookOrbit source picker after
-refresh, its crash when reopening saved sources, the blank Module library and
-the cover-row/carousel chooser. Three loop indices accidentally shadowed the
-translator. Existing sources, cards and plugin data are preserved. Regression
-tests reproduce the failures in public beta.7 and pass in Swedish and English;
-physical Bigme retesting remains pending. Update through preview and restart.
-[Release notes](docs/OTA.md#orbitui-110-beta8).
+**1.1.0-beta.9 preview:** new Silverfish Home cards go inside Reading dashboard
+instead of below its full-page module, where they could draw over the dock.
+Ordinary Home uses a separate page unless current geometry proves room.
+Existing placements, card customizations, pet saves and screensaver options
+are preserved. Silverfish's Home toggle recognizes dashboard cards across
+add/off/restart without duplicates. No Silverfish fork or automatic migration.
+Desktop native-adapter tests pass; physical Bigme retesting remains pending.
+Update through preview and restart. [Release notes](docs/OTA.md#orbitui-110-beta9).
 
-**Svenska, förhandsversion 1.1.0-beta.8:** fixar den tomma BookOrbit-källistan
-efter uppdatering, kraschen vid återöppning, det tomma Modulbiblioteket och
-valet omslagsrad/karusell. Tre loopvariabler krockade med översättningsfunktionen.
-Sparade källor, kort och plugindata behålls. Felet är återskapat i beta.7 och
-automattestat på svenska och engelska; nytt Bigme-test återstår. Uppdatera via
-förhandskanalen och starta om KOReader.
+**Svenska, förhandsversion 1.1.0-beta.9:** nya Silverfish-kort placeras i
+Läsöversikt i stället för under den, där de kunde ritas över docken. På vanligt
+Hem används en egen sida om det inte säkert finns plats. Dina redan sparade
+placeringar, kortinställningar och Silverfish-data lämnas orörda. Silverfishs
+eget Hem-val känner igen kortet även efter omstart, utan dubletter. Automatiska
+tester är gröna; visuellt Bigme-test återstår. Uppdatera via förhandskanalen
+och starta om KOReader. En gammal överlappande placering flyttas inte automatiskt.
 
 **Included since 1.1.0-beta.7:** Add BookOrbit shelves and smartscopes as independent
 Reading dashboard cards: **+ → BookOrbit shelves and smartscopes → Refresh

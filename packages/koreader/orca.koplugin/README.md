@@ -45,7 +45,7 @@ pull requests are demo data ([how](tools/screenshots/README.md)).
     <td align="center"><img src="docs/screenshots/sleep.png" width="250"><br><sub><b>Sleep screen</b>: still useful asleep</sub></td>
   </tr>
   <tr>
-    <td align="center"><img src="docs/screenshots/home-prs.png" width="250"><br><sub><b>Pull requests</b> and Claude's limits</sub></td>
+    <td align="center"><img src="docs/screenshots/home-prs.png" width="250"><br><sub><b>Pull requests</b> with their checks</sub></td>
     <td align="center"><img src="docs/screenshots/home-week.png" width="250"><br><sub><b>This week</b> and your book</sub></td>
     <td align="center"><img src="docs/screenshots/home-reading.png" width="250"><br><sub><b>Reading</b> next to GitHub</sub></td>
   </tr>
@@ -86,11 +86,14 @@ Tailscale on both the Kindle and the PC, and Orca running on the PC.
 Then open it with Tools → **Orca**, or bind **Open Orca** to a gesture
 (KOReader → Settings → Taps and gestures) to open it with one tap from a
 book. Every Orca screen has the clock, Tailscale, the PC link and the battery
-at the top: tap that line to turn Tailscale on or off or test the
-connection. **⚙** next to ‹ / ✕ holds the settings:
+at the top: tap that line for the **control center**, with toggles for
+Tailscale, notifications and the sleep picture, the sessions that need you,
+a frontlight slider, **Clean screen**, **Test connection** and shortcuts
+(**Open Orca's control center** is a gesture action too). **⚙** on Home, or
+in the control center, holds the settings:
 
 <p>
-  <img src="docs/screenshots/connection.png" width="250" alt="The connection card the status line opens">
+  <img src="docs/screenshots/connection.png" width="250" alt="The control center the status line opens">
   <img src="docs/screenshots/menu.png" width="250" alt="Orca settings (⚙)">
 </p>
 
@@ -126,7 +129,7 @@ When the PC can't be reached because Tailscale is off, the card says so with
 
 <img src="docs/screenshots/cards.png" width="220" align="right">
 
-**Home cards…** (**⚙**) lets you hide each card on Home or on the sleep
+**Home cards** (**⚙**) lets you hide each card on Home or on the sleep
 screen, and change their order: the sleep picture leaves out what doesn't
 fit, so this is also how you choose what it keeps.
 
@@ -309,4 +312,5 @@ work; `kindlectl`'s touch profile may need adjusting (see
 
 ## License
 
-[GPLv3](LICENSE), like KOReader.
+[GPLv3](LICENSE), like KOReader. The icons are from
+[Feather](https://feathericons.com) ([MIT](orca.koplugin/icons/LICENSE-Feather.txt)).

@@ -1,3 +1,54 @@
+# v0.5.2 · 2026-11-08
+
+## 月读 v0.5.2
+
+KOReader 插件包：`book.koplugin-v0.5.2.zip`
+
+输入法词库（整库，手动 sideload）：`dictionary.sqlite3 dictionary-wubi.sqlite3 dictionary-cangjie.sqlite3 dictionary-zhuyin.sqlite3`
+
+安装：解压后将 `book.koplugin` 复制到 `koreader/plugins/`，然后重启。
+
+词库 sideload：下载对应布局的词库，直接放入 `koreader/.moon/`
+（与 `book.sqlite3` 同级）。附件已使用最终文件名，无需重命名。
+
+### 更新内容
+
+相对上一版本 `v0.5.1`：
+
+#### 修复
+
+- :bug: fix(convert): 统一段首缩进并补齐卷章目录回归 (1cc407f0)
+- :bug: fix: 收紧换库、进度决议与书架对账边界 (12fb16f1)
+- :bug: fix(wechat): 对齐章节书籍版本与有限重试 (8e793769)
+- :bug: fix(emu): 时钟修正仅作用于 macOS 模拟器 (5b0c24d5)
+- :bug: fix(main): 保护统一事件入口避免异常崩溃 (0f014b39)
+- :bug: fix(l10n): 补齐使用指南译文与设置页测试依赖 (28f5c00b)
+- :bug: (jdread): 书架脏 ID 跳过，不再拖死整架同步 (5f87e93d)
+- :bug: (store): 换书库目录/服务器时清掉旧书架进度统计 (930dac75)
+- :bug: (wechat): 样式表缺失时正文不再丢掉首行缩进 (4a10782d)
+- :bug: fix(desktop): 修复统计取消串扰与阅读退出异常 (0cf3ba01)
+- :bug: (changpei): 滑块验完后 check<3 沿用已解密正文 (e726a79a)
+
+#### 性能
+
+- :zap: perf(toc): 逐章缓存与异步解析避免目录长卡顿 (cc626414)
+
+#### 文档
+
+- :memo: (release): 更新 KOReader 插件与词库安装路径说明 (bf5e9eba)
+
+#### 变更
+
+- fix(reflow): preserve volume and chapter structure (c31efdad)
+- :loud_sound: fix(http): 记录下载响应头解析失败原因 (b52da464)
+- :children_crossing: (setting): 设置页与账号页挂上官网使用指南 (4afa9a6f)
+- :white_check_mark: (wechat): 补 ZIP TXT 回归，并让 _o 主文件排在续篇前 (9c6000d3)
+- fix(wechat): handle TXT chapters in ZIP packages (340e961d)
+
+### 完整对比
+
+https://github.com/AnkioTomas/moon/compare/v0.5.1...v0.5.2
+
 # v0.5.1 · 2026-11-08
 
 ## 月读 v0.5.1
@@ -148,37 +199,3 @@ KOReader 插件包：`book.koplugin-v0.4.16.zip`
 ### 完整对比
 
 https://github.com/AnkioTomas/moon/compare/v0.4.15...v0.4.16
-
-# v0.4.15 · 2026-11-04
-
-## 月读 v0.4.15
-
-KOReader 插件包：`book.koplugin-v0.4.15.zip`
-
-输入法词库（整库，手动 sideload）：`dictionary.sqlite3 dictionary-wubi.sqlite3 dictionary-cangjie.sqlite3 dictionary-zhuyin.sqlite3`
-
-安装：解压后将 `book.koplugin` 复制到 KOReader 的 `plugins` 目录，然后重启。
-
-词库 sideload：下载对应布局的词库，直接放入 KOReader 数据目录下的
-`.moon/`（与 `book.sqlite3` 同级）。附件已使用最终文件名，无需重命名。
-
-### 更新内容
-
-相对上一版本 `v0.4.14`：
-
-#### 新功能
-
-- :sparkles: (library): 书库「更多」按钮可选关闭、进入详情或弹出菜单 (28b2a17a)
-
-#### 修复
-
-- :bug: (ai): X-Ray 大请求改用 SSE 流式，避免整包等待超时 (7dc7d55d)
-- :bug: (local): 开文档时子进程崩溃的书改按文件名入库 (fef59478)
-
-#### 变更
-
-- :loud_sound: (workers): 子进程无结果退出时记录可用内存，便于排查 OOM (7e806585)
-
-### 完整对比
-
-https://github.com/AnkioTomas/moon/compare/v0.4.14...v0.4.15

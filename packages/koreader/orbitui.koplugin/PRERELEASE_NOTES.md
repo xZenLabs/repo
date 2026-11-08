@@ -1,3 +1,25 @@
+# v1.1.0-beta.9 · 2026-11-08
+
+## Svenska
+
+Fixar standardplaceringen för nya Silverfish-kort: de hamnar i Läsöversikt i stället för under den, där de kunde ritas över docken. På vanligt Hem används en egen sida om det inte säkert finns plats.
+
+Silverfishs eget Hem-val känner igen dashboard-kortet efter på/av och omstart, utan dubletter. Dina redan sparade placeringar, kortinställningar, Silverfish-data och skärmsläckarval lämnas orörda. En gammal överlappande placering flyttas inte automatiskt: ta bort och lägg till kortet igen, eller justera placeringen manuellt.
+
+Uppdatera via förhandskanalen och starta om KOReader. Säkerhetskopiera inställningar och läsdata separat. Inget plugin installeras om och inget ändras på BookOrbit-servern. Ingen ny upstream-merge ingår. Stabil 1.0 påverkas inte.
+
+Automatiska tester omfattar native-adaptrarna och Silverfishs publika Hem-funktioner på dator, inte hela pluginet eller fysisk Bigme-kontroll. Visuella tester, tryck, vila och rotation på Bigmen återstår.
+
+## English
+
+New Silverfish Home cards go inside Reading dashboard instead of becoming a sibling below its full-page module and drawing over the dock. Ordinary Home uses a separate page unless current matching geometry proves there is room.
+
+The plugin's public Home toggle recognizes dashboard placement across add/off/restart without duplicates. Existing placements, edited cards, pet saves and screensaver options are preserved. Old overflowing placements are intentionally not migrated; remove/re-add the card or adjust it manually.
+
+Update through preview and restart KOReader. Back up settings and reading data separately; code rollback does not restore settings or third-party data. No Silverfish fork, plugin reinstall, new upstream merge or BookOrbit-server operation. Stable/latest 1.0 is unchanged; API1/bootstrap and the 2,000-file installation budget are retained.
+
+This prerelease is desktop-tested with native adapter/input/buffer fixtures and frozen Silverfish public Home methods, not the full plugin or physical Bigme drawing/touch/wake/rotation. Device acceptance remains pending.
+
 # v1.1.0-beta.8 · 2026-11-08
 
 ## Svenska
@@ -126,39 +148,5 @@ New visibility assertions fail against the exact published beta.4 adapter and pa
 Download **orbitui.koplugin.zip**, not GitHub's source archive. Back up settings/reading data and restart KOReader after installation.
 
 Unchanged reviewed pins: Bookshelf d47edfcc7c160691417235201595ab12cdffbdfe; SimpleUI 4bf2d2c5605d4172c5283e224450854d0b72219b.
-
-Built on / bygger på SimpleUI by doctorhetfield-cmd and contributors, and Bookshelf by AndyHazz and contributors. See README.md, LICENSE, NOTICE and asset-specific notices.
-
-# v1.1.0-beta.4 · 2026-11-07
-
-OrbitUI 1.1.0-beta.4 — Alphabet strip · Bokstavslist
-
-## Svenska
-
-- Valfri **Bokstavslist**, avstängd som standard och sparad per vy. Aktivera via **sidräknaren ▾ > Sortering, filter och vy > Bokstavslist**.
-- Tryck på en bokstav, eller dra för att visa en stor bokstav och släpp för att hoppa i den befintliga sorterade/filtrerade hyllan. Å/Ä/Ö hålls isär; andra latinska accenter använder grundbokstaven, övriga skriftsystem och siffror hamnar under # om ingen translitterering finns.
-- Dragningen läser inga böcker, omslag, EPUB-filer eller metadata och bygger inte om hyllan. Bara bokstavsåterkopplingen ritas om. Ett uttryckligt hopp kan fråga den befintliga metadatacachen; ingen ny indexering eller bakgrundsskanning startas. Moduler i rutnätet, serieboxar och bokryggarnas faktiska positioner behålls.
-- Listen använder ledigt utrymme i högermarginalen, inte omslagens bredd. Döljs bland annat vid icke-alfabetisk sortering, ensideslistor, öppnad serie, tvåspaltslistor, fjärrvyer och för snäv marginal. Den ändrar aldrig din sortering för att kunna visas.
-- Gester/återkoppling avbryts säkert när vyn byts, täcks, stängs, går i vila eller roteras. Första trycket efter läsaråtergång får en aktuell inmatningsägare. Monokrom återkoppling följer hyllans faktiska ljusa/mörka bakgrund.
-
-**Endast förhandskanalen; stabil/latest är fortfarande 1.0.0.** Ingen ytterligare upstream-merge ingår: samma Bookshelf- och SimpleUI-versioner som beta.3. Tidigare Serier/Volymer och övriga 1.1-nyheter finns kvar. Inga befintliga böcker, läsdata, inställningar eller cacher raderas/migreras; bootstrap/API1, 2 000 installerade sökvägar, bilder och externa synkägare behålls. BookOrbit-statusimport är fortsatt experimentell och avstängd som standard. Tidigare säkerhetsbegränsningar för automatisk datumläsning och mappradering kvarstår.
-
-Automatiska/native tester är inte fysisk Bigme/Boox-godkänning. Prova svenska/engelska, stora typsnitt, stående/liggande, Manga/serieboxar/moduler, högermarginalens pekytor, släpp utanför listen, läsar-/menyavbrott, vila/återgång och nattläge/ghosting. Kalla/varma hopptider är ännu inte enhetsmätta. Ingen server eller användarenhet driftsätts genom publiceringen.
-
-## English
-
-- Optional **Alphabet strip**, OFF by default and remembered per view. Enable through **footer counter ▾ > Sort, filter & view > Alphabet strip**.
-- Tap a letter, or drag to preview a large letter and release to jump in the existing native sorted/filtered shelf. Å/Ä/Ö stay distinct; other Latin accents map to the base letter, numbers/untransliterated scripts to #.
-- Dragging performs no book/cover/EPUB/metadata reads and no shelf rebuild. Only letter feedback refreshes. An explicit jump can query the existing metadata cache, not a new index or background scanner. Native module visual slots, series boxes and actual spine item positions remain intact.
-- Uses spare right-margin space without reducing content/cover width. Hidden for nonalphabetical sorts, single-page/opened-series/remote/two-column views and tight margins; never changes sorting to make itself appear.
-- Gesture/feedback ownership expires on replacement, cover, close, sleep or rotation; reader return renews it before the first tap. Monochrome feedback follows native light/dark page paint space.
-
-**Preview only; stable/latest stays 1.0.0.** No additional upstream merge or device/server deployment. Existing Series/Volumes and 1.1 features remain. No book/reading-data migration, cache wipe, bootstrap/API1/path/artwork change or new sync owner. BookOrbit status import stays experimental and OFF by default; existing automatic file-date/folder-delete safety deferrals remain.
-
-Headless/native tests are not physical Bigme/Boox acceptance or measured speedups. Fonts, SV/EN portrait/landscape, touch ergonomics, module/series/spine layouts, reader/menu interruptions, sleep/rotation, dark themes/ghosting and cold/warm jump timing still need device testing.
-
-Download **orbitui.koplugin.zip**, not GitHub's source archive. Back up settings/reading data and restart KOReader after installation.
-
-Unchanged reviewed pins: Bookshelf d47edfcc7c160691417235201595ab12cdffbdfe; SimpleUI 4bf2d2c5605d4172c5283e224450854d0b72219b. Alphabet-strip reference reviewed, not imported: Library GUI by antonyvo; independent OrbitUI implementation.
 
 Built on / bygger på SimpleUI by doctorhetfield-cmd and contributors, and Bookshelf by AndyHazz and contributors. See README.md, LICENSE, NOTICE and asset-specific notices.

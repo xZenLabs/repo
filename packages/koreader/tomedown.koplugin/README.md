@@ -7,7 +7,6 @@
 </p>
 
 <p align="center">
-  <a href="https://ko-fi.com/imanubdesigner"><img src="https://img.shields.io/badge/Ko--fi-Buy%20me%20a%20coffee-FF5E5B?style=for-the-badge&logo=ko-fi&logoColor=white&labelColor=171717" alt="Buy me a coffee on Ko-fi"></a>
   <img src="https://img.shields.io/badge/KOReader-plugin-white?style=for-the-badge&logo=koreader&logoColor=white&labelColor=171717" alt="KOReader">
   <img src="https://img.shields.io/badge/Obsidian-ready-fff176?style=for-the-badge&logo=obsidian&logoColor=white&labelColor=171717" alt="Obsidian">
   <img src="https://img.shields.io/badge/Markdown-file-white?style=for-the-badge&logo=markdown&logoColor=white&labelColor=171717" alt="Markdown">
@@ -18,6 +17,7 @@
   <a href="https://github.com/imanubdesigner/tomedown.koplugin/releases/latest"><img src="https://img.shields.io/github/v/release/imanubdesigner/tomedown.koplugin?style=for-the-badge&color=fff176&labelColor=171717&logo=github&logoColor=white" alt="Latest release"></a>
   <a href="https://github.com/imanubdesigner/tomedown.koplugin/actions/workflows/test.yml"><img src="https://img.shields.io/github/actions/workflow/status/imanubdesigner/tomedown.koplugin/test.yml?style=for-the-badge&color=238636&labelColor=171717&logo=githubactions&logoColor=white&label=tests" alt="Test status"></a>
   <a href="LICENSE"><img src="https://img.shields.io/github/license/imanubdesigner/tomedown.koplugin?style=for-the-badge&color=white&labelColor=171717" alt="License"></a>
+  <a href="https://ko-fi.com/imanubdesigner"><img src="https://img.shields.io/badge/Ko--fi-support-FF5E5B?style=for-the-badge&logo=ko-fi&logoColor=white&labelColor=171717" alt="Buy me a coffee on Ko-fi"></a>
 </p>
 
 <p align="center">
