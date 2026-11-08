@@ -1,3 +1,35 @@
+# v1.2.2 · 2026-11-08
+
+### Fixed
+
+- Closing a book opened in Incognito no longer updates the history timestamp of the
+  previously read book. Fixes a crash when the history was empty. (#4)
+
+### Added
+
+- AppStore compatibility: `version` and `author` are now exposed in `_meta.lua`.
+- The plugin version in the release archive is derived from the release tag.
+
+## Installation
+1. Download `incognito.koplugin.zip`
+2. Extract to `koreader/plugins/`
+3. Restart KOReader
+
+# v1.2.1 · 2026-11-08
+
+## Installation
+1. Download `incognito.koplugin.zip`
+2. Extract to `koreader/plugins/`
+3. Restart KOReader
+
+## What's Changed
+* fix: disable history timestamp update in Incognito by @andreltrigo in https://github.com/Craftwork2720/incognito.koplugin/pull/4
+
+## New Contributors
+* @andreltrigo made their first contribution in https://github.com/Craftwork2720/incognito.koplugin/pull/4
+
+**Full Changelog**: https://github.com/Craftwork2720/incognito.koplugin/compare/v.1.2.0...v1.2.1
+
 # v.1.2.0 · 2026-03-20
 
 ## Installation

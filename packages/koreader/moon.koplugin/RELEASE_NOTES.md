@@ -1,3 +1,46 @@
+# v0.5.0 · 2026-11-08
+
+## 月读 v0.5.0
+
+本次更新包含上一正式版本 v0.4.18 之后的全部变更。
+
+### 书源与书城
+
+- 新接入或大幅补齐：豆瓣、掌阅、塔读、得到、网易云阅读、书旗、快看、知音漫客、知乎盐选、爱看书（18ta）等；多源补齐登录、书架同步、分类与详情元信息。
+- 浏览器 Cookie 登录与详情元信息通路打通，网页书源更易保留电脑端登录态。
+- 书评 / 段评：豆瓣专栏章评、京东阅读整书书评、快看每话章评、知乎章末段评与表情、番茄段评 emoji、晋江 / 长佩 / QQ 阅读 / 掌阅 / 起点等书城评论与登录加固。
+- 潇湘、七猫、爱读、京东阅读等完善游客 / 登录书城、筛选与同步确认；拷贝漫画补齐 API 选线与收藏同步。
+
+### 阅读体验
+
+- 阅读中可从侧栏与快捷面板直达阅读设置，不必先回桌面。
+- 书城详情若该书已在架，主按钮改为「开始 / 继续阅读」。
+- 电池页增加用法统计：估算每小时耗电与剩余可用时间（保留原有健康度 / 容量读数）。
+- Kavita：卷列表续读卡与卷封面，系列页主按钮写明目标卷；续读目标与离线选卷行为统一。
+
+### 稳定性与性能
+
+- 修复本地与 WebDAV 同路径双身份抢进度、进度写到墓碑行的问题；WebDAV 进度同步优先、减少无效传输。
+- 修复目录含空标题章节时打开目录崩溃；云端进度冲突未决前不再自动上推；换号 / 登录边界更干净。
+- 详情页续读目标一页只算一次；书库「更多」菜单只读选卷入口；Kavita 卷进度改为整列一次查询，不再逐卷扫 resumePage。
+- 修复 Legado / reader3 本地 EPUB 章节与图片、稀有字注音筛选与补刷范围、书城分页聚合上限、LuaSec `wantwrite` 误判写失败、缺 inflate 时章节仍可解压等。
+
+### 其他
+
+- 书源译文收口到各自目录；统一书源能力表与限制说明。
+- 书库路径含中文或特殊符号时提前提醒换目录。
+- CI：KOReader 运行时改为可缓存，并优先经 GitHub API 拉取，避免 Release CDN 504 导致测试跑不到。
+
+### 安装
+
+下载 `book.koplugin-v0.5.0.zip`，解压后将 `book.koplugin` 复制到 KOReader 的 `plugins` 目录，然后重启。
+
+输入法词库附件：`dictionary.sqlite3`、`dictionary-wubi.sqlite3`、`dictionary-cangjie.sqlite3`、`dictionary-zhuyin.sqlite3`。如需手动安装，下载对应布局的文件，直接放入 KOReader 数据目录的 `.moon/`，与 `book.sqlite3` 同级，无需重命名。
+
+### 完整对比
+
+https://github.com/AnkioTomas/moon/compare/v0.4.18...v0.5.0
+
 # v0.4.18 · 2026-11-05
 
 ## 月读 v0.4.18
@@ -172,62 +215,3 @@ KOReader 插件包：`book.koplugin-v0.4.14.zip`
 ### 完整对比
 
 https://github.com/AnkioTomas/moon/compare/v0.4.13...v0.4.14
-
-# v0.4.13 · 2026-11-02
-
-## 月读 v0.4.13
-
-KOReader 插件包：`book.koplugin-v0.4.13.zip`
-
-输入法词库（整库，手动 sideload）：`dictionary.sqlite3 dictionary-wubi.sqlite3 dictionary-cangjie.sqlite3 dictionary-zhuyin.sqlite3`
-
-安装：解压后将 `book.koplugin` 复制到 KOReader 的 `plugins` 目录，然后重启。
-
-词库 sideload：下载对应布局的词库，直接放入 KOReader 数据目录下的
-`.moon/`（与 `book.sqlite3` 同级）。附件已使用最终文件名，无需重命名。
-
-### 更新内容
-
-相对上一版本 `v0.4.12`：
-
-#### 新功能
-
-- :sparkles: feat(wechat): 大书架自动开远程管理并引导到网页导入，导入页带进度 (35ce4016)
-- :sparkles: feat(awake): 抽出 utils/awake 防自动休眠，ai/convert/sync 任务执行期间也撑着 (275304c1)
-- :sparkles: (remote): 远程管理新增屏幕镜像，可在浏览器点按、长按、滑动操作设备 (29f23e07)
-- :sparkles: (reviews): 设置页可调整段评字号 (591d0b5e)
-- :sparkles: (legado): 设置页可手动扫描局域网，找回换了 IP 的阅读服务 (468eb81a)
-- :sparkles: (wechat): 书架全量回包过大时落盘，交浏览器解码分批导入 (eee437f1)
-- :sparkles: (http): 域名可绑定到固定地址，内网不再查 DNS (bf22185c)
-
-#### 修复
-
-- :bug: (wechat): 超限书架待导入时不重复下载，只重弹导入页；同步远端改显式方法表 (4f836748)
-- :bug: (storage): 存储页识别 kamare / kindle 插件更新包，使用中不列入可清理 (9be72491)
-- :bug: fix(http): 请求超时改为空闲计时，持续收到数据不再超时 (f78cc51f)
-- :bug: (desktop): 退出阅读器回桌面时不再因失效的文档缓存报错 (d9708835)
-- :bug: (battery): 原装 Paperwhite 3 设计容量按 1408 mAh 算 (08777d23)
-
-#### 界面
-
-- :lipstick: (reviews): 段评气泡改为带左尖角的抗锯齿圆角框，居中且字号随正文缩小 (4b307ef4)
-
-#### 重构
-
-- :recycle: (audit): 删去代理 dns_bind 与版本比较里的多余转换，修正屏幕镜像注释 (e5f0af04)
-- :recycle: (kindle): Kindle 书源不依赖 kindle.koplugin 是否已装，插件更新挪进书源设置页 (2bf76059)
-- :recycle: (update): 月读、kamare、kindle.koplugin 共用插件更新引擎 (6e0fde3c)
-- :recycle: (xray): 改身份与撕墓碑共用同一份表清单 (ff2fceda)
-
-#### 文档
-
-- :memo: (readme): 说明改短，详细步骤改到官网 (ee6b1ba4)
-
-#### 变更
-
-- :white_check_mark: test: 修复四个离线红测试（doccache / device 桩、代理注释误报） (a19f6539)
-- :children_crossing: (home): 总阅读卡按量级降精度，几万小时不再被截断 (5fc4ae62)
-
-### 完整对比
-
-https://github.com/AnkioTomas/moon/compare/v0.4.12...v0.4.13

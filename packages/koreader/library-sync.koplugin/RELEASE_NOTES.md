@@ -1,3 +1,75 @@
+# v0.7.6 · 2026-11-08
+
+# Library Sync 0.7.6
+
+Use Library Sync's folder and filename rules when downloading from BookOrbit's
+own KOReader catalogue, without editing BookOrbit's installed files.
+
+## What's new
+
+- Optional **Use Library Sync file rules for BookOrbit downloads** under
+  **Library Sync → BookOrbit integration**. **Experimental; OFF by default.**
+- Existing Library Sync folder and naming profiles apply to single EPUB/CBZ
+  downloads, their destination preview and native bulk downloads from the
+  matching BookOrbit server.
+- BookOrbit retains ownership of transfers, verification, local file linking,
+  existing-file handling and its reading-progress sync. Existing books are not
+  moved and KOReader's global download folder is not changed.
+- Missing required metadata, invalid custom rules, unsafe paths, changed
+  settings and detected compatibility conflicts stop managed downloads rather
+  than silently choosing a fallback folder. Cancel/Close remains usable.
+- Read-along edition changes update the verified destination; delayed callbacks
+  do not start a download after their sheet closes.
+- English and Swedish controls, help and owned error messages.
+- Fix the updater's no-JSON fallback to match hyphenated package names literally
+  and never select a checksum sidecar. Both canonical and legacy ZIPs are tested.
+
+The reviewed compatibility targets are **BookOrbit plugin 2.1.0** (server source
+tag 3.6.0) and **2.2.0** (server source tag 3.7.0). Unknown plugin versions are
+blocked for managed downloads until reviewed. Other servers and non-EPUB/CBZ
+formats keep their native routing. No server extension or new account login is
+required. Genre/tag-dependent bulk profiles may add one detail request per book;
+flat/author profiles do not require these extra metadata calls.
+
+The existing **0.7.5 HTTP-409 BookOrbit download fallback**, error reporting and
+Mirror cleanup protections are included unchanged.
+
+## Install or update
+
+Existing installations: **Library Sync → Check for updates**, then restart
+KOReader. New installations: download **library-sync.koplugin.zip** and extract
+it into `koreader/plugins/`. Legacy `grimmory-sync.koplugin` installations retain
+their matching updater asset. Do not install both directories.
+
+After updating, explicitly enable the new setting if desired. Configure
+BookOrbit and the same server address in Library Sync first; use Library Sync's
+folder/naming settings while the integration is enabled.
+
+## Verification and limitations
+
+The existing provider contracts and 24 routing cases pass locally under Lua 5.5
+and LuaJIT. The supplement runs real, SHA-verified official single-download,
+bulk, sheet and path-check methods at frozen 3.6.0/3.7.0 revisions; network,
+filesystem, widgets and transfer execution are mocked. Syntax and canonical/
+legacy package equivalence/checksums are checked. CI also runs Lua 5.1/LuaJIT.
+
+**Physical Bigme download, restart, cancellation and sleep/resume testing remains
+outstanding.** Nothing is installed on a device or deployed to a server by this
+release. Back up settings and reading data before trying the opt-in feature.
+
+## Svenska
+
+Från **Library Sync → BookOrbit integration → Använd Library Syncs filregler för
+BookOrbit-nedladdningar** kan du låta samma mapp- och filnamnsregler styra nya
+EPUB/CBZ-filer även när hämtningen startas i BookOrbit-pluginet. Funktionen är
+experimentell och **avstängd som standard**. Förhandsvisning och massnedladdning
+omfattas också. BookOrbit sköter fortfarande överföringen och kopplingen till
+sin lässynk; inga befintliga böcker flyttas och inget servertillägg behövs.
+
+0.7.5:s tidigare nedladdningsfixar ingår. Automattesterna är gröna, men test på
+den fysiska Bigmen återstår. Uppdatera via pluginets uppdateringsmeny, starta om
+KOReader och aktivera därefter funktionen om du vill prova den.
+
 # v0.7.5 · 2026-10-26
 
 # Library Sync 0.7.5
@@ -99,19 +171,5 @@ Both ZIP assets are included for new and legacy OTA installations.
 - Add regression coverage for HTML-to-text migration and real description changes.
 
 After updating, cancel any previously prepared mass refresh and run **Refresh existing metadata** again. The first scan may take its usual time while old signatures are migrated, but equivalent descriptions should be skipped rather than downloaded.
-
-Both ZIP assets are included for new and legacy OTA installations.
-
-# v0.7.1 · 2026-10-13
-
-## What's new
-
-- Use BookOrbit's download response filename when **Server file name** is selected, avoiding unnecessary `Title - Author` fallback names.
-- Preserve existing local paths during metadata refresh so manifest tracking remains stable.
-- Validate response filenames against the expected EPUB or CBZ format before using them.
-- Keep an existing server-named destination untouched instead of overwriting it.
-- Improve `Content-Disposition` parsing and add regression coverage for EPUB, CBZ, refresh paths, and invalid extensions.
-
-Thanks to @kai-arsenault for the original fix in #8.
 
 Both ZIP assets are included for new and legacy OTA installations.
