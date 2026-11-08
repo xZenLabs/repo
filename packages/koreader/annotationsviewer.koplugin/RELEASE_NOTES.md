@@ -13,14 +13,18 @@ This is a big update, it changes the overall look of the plugin.
 - Chinese, Japanese and Korean text wraps correctly (thanks gytwo, pull request #8)
 - Lines per note setting, long notes end with "..." and tap shows all of it
 - Menus, dropdowns and dialogs pass gestures you don't use on to KOReader
+- Line spacing setting, also negative to bring lines closer together
+- Own font and size for notes, plus space above the note and an extra indent for it
+- Scrollbar marks follow the sort order: books, authors, months or chapters (also in one book)
 
 ## Changed
 - Sort order is a dropdown now
 - Books, Chapters and Tags pickers all work the same, with an Only these / Hide these switch
-- Settings are split into Text and Spacing, with a preview on top
+- Settings are split into Text and Spacing, with a preview on top. Spacing is grouped by where the space is: page, between annotations, book heading, highlight text and your note
 - Menus use Prev / Next buttons like the list instead of a scrollbar. Swipes and page keys work too
 - Default content text size is 16
 - Night mode keeps the real highlight colors
+- Text keeps clear of the scrollbar when the horizontal margin is small
 
 Install: copy the `annotationsviewer.koplugin` folder from the zip to KOReader's `plugins` folder and restart.
 
