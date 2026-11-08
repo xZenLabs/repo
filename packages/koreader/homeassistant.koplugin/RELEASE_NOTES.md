@@ -1,3 +1,53 @@
+# v26.11.08 · 2026-11-08
+
+> [!WARNING]
+> **BREAKING CHANGE:** `homeassistant_config.lua` now lives in `koreader/settings/` instead of the plugin folder. Your existing config is ignored until you move it there. See below.
+
+## New configuration file location
+
+**Why:** Some Package managers replace the entire plugin folder when updating, so users lost their configuration on every update. The config now lives outside the plugin folder, so updates can no longer delete it. See: #32
+
+**Action required when updating:**
+1. **Backup your config.** Copy it from `koreader/plugins/homeassistant.koplugin/` to a safe place:
+   * Coming from the last release? Back up `homeassistant_config.lua`.
+   * Coming from an older release? Back up `config.lua` and rename it to `homeassistant_config.lua`.
+2. Replace the contents of the `homeassistant.koplugin` folder with the files from this release.
+3. Copy your backed-up `homeassistant_config.lua` into `koreader/settings/`. If a file with that name already exists there, replace it (the plugin creates a placeholder on first start).
+4. Restart KOReader.
+
+**Your folders should look like this afterwards:**
+
+```text
+koreader/
+└── plugins/
+    └── homeassistant.koplugin/
+        ├── _meta.lua
+        ├── main.lua
+        ├── homeassistant_api.lua
+        └── homeassistant_config.sample.lua
+```
+
+```text
+koreader/
+└── settings/
+    ├── homeassistant_config.lua
+    └── ... (other files)
+```
+
+## New feature: ButtonDialog gesture
+
+There is a new gesture action called `☰ Home Assistant: all entities`. It opens a dialog that lists every entity from your config, like a Quick Menu that is already set up for you. Unlike a manual Quick Menu, it updates itself: changes to `homeassistant_config.lua` appear after the next KOReader restart.
+
+As with every action in this plugin, you can assign it to a KOReader gesture or use it from other plugins that support gestures, such as ZenUI.
+
+<p align="center">
+    <img src="assets/homeassistant_koplugin_buttondialog.gif" width="50%" />
+</p>
+
+<p align="center">
+    <img src="https://github.com/user-attachments/assets/ceacc733-93d2-4996-8ce5-c13e4fa1b520" width="50%" />
+</p>
+
 # v26.10.19 · 2026-10-19
 
 > [!WARNING]
@@ -96,24 +146,3 @@ Getting Started message:
 <img width="692" height="467" alt="heartbeat_settings" src="https://github.com/user-attachments/assets/33f13523-7ac4-4b26-b322-fa852acdbc1b" />
 
 **Full Changelog**: https://github.com/moritz-john/homeassistant.koplugin/compare/v26.02.26...v26.03.19
-
-# v26.02.26 · 2026-02-26
-
-This update focuses primarily on refactoring and general code cleanup to improve maintainability 
-
-- **State queries have been completely refactored** 
-  - The plugin now performs a templating request to `/api/template`
-  - States automatically include their unit of measurement (when available)
-  - Binary states are now localized (e.g., "Open/Closed" instead of "on/off" for doors)
-  - Date values such as `last_changed` are formatted in a more user-friendly way
-- The sensor update delay after device resume is now configurable via: `sensor_resume_delay` in `config.lua`; the default is now 8 seconds[^1]
-- Removed `messages.lua`; added `api.lua`
-- Removed "response data" support from actions (todo.get_items & weather.get_forecasts)[^2]
-
-<img width="474" height="198" alt="door_example" src="https://github.com/user-attachments/assets/e63492b4-7cff-4b5b-87e5-0c039798aba7" />
-
-[^1]:A delay of 4 seconds works well on my Kindle, allowing enough time to reconnect to Wi-Fi.
-Kobo devices may require a slightly longer delay.
-[^2]: I spent way too much time on this niche feature (over 40 hours) and was never happy with how it turned out
-
-**Full Changelog**: https://github.com/moritz-john/homeassistant.koplugin/compare/v26.02.03...v26.02.26
