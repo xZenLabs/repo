@@ -1,3 +1,37 @@
+# v1.1.0-beta.8 · 2026-11-08
+
+## Svenska
+
+Fixar de tomma menyerna och återöppningskraschen i beta.7.
+
+- BookOrbit-källistan visas efter uppdatering och går att öppna igen med sparade hyllor/smartscopes.
+- Hämta fler moduler / Modulbibliotek visar den medföljande Silverfish-posten igen.
+- Valet mellan omslagsrad och karusell för BookOrbit-kort fungerar.
+- Orsaken var tre loopvariabler som krockade med översättningsfunktionen. Din enhetslogg bekräftar modulbiblioteksfelet. Åtta nya menytester återskapar felen i publicerad beta.7 och passerar med fixen på svenska och engelska.
+
+Befintliga hyllor, kort, inställningar och plugindata behålls. Ingen cache behöver rensas. Inga ändringar av BookOrbit-servern, lässtatussynken eller modulinstallationens regler.
+
+Uppdatera via förhandskanalen och starta om KOReader. Säkerhetskopiera inställningar/läsdata separat. BookOrbit-kort använder fortsatt konfigurationsformat v3: beta.6/äldre bevarar sidan men kan inte redigera den. Kodåterställning återställer inte dina inställningar eller tredjepartsdata.
+
+Förhandsversion: testerna använder riktiga menybyggare med simulerade enhets-/tjänstegränser. Nytt prov på Bigmen och verklig käll-/fillänkskontroll återstår. Ingen installation på enheten, serverdriftsättning eller ny upstream-merge ingår. Stabil 1.0 och tidigare releaser lämnas oförändrade.
+
+## English
+
+Fixes beta.7's blank menus and cached-source reopening crash.
+
+- BookOrbit sources render after refresh and can be reopened with saved shelves/smartscopes.
+- Get more modules / Module library shows the bundled Silverfish entry again.
+- BookOrbit cards' cover-row/carousel chooser works.
+- Three loop indices accidentally shadowed the translator. The supplied device log confirms the module-library error. Eight native-menu regressions reproduce failures in public beta.7 and pass with the fix in Swedish and English.
+
+Existing sources, cards, settings and plugin data are preserved. No cache reset is needed. BookOrbit server, reading-status sync and module-installation policies are unchanged.
+
+Update through preview and restart KOReader; back up settings and reading data separately. Source cards retain dashboard config v3: beta.6/older preserve the page but cannot edit it. Code rollback does not reverse settings or third-party data.
+
+Prerelease: real menu builders with substituted display/service boundaries, not physical Bigme acceptance. Real-device retesting and live source/link coverage remain pending. No device/plugin installation, server deployment or new upstream merge. Stable/latest 1.0 and previous tags/assets remain unchanged; API1/bootstrap, 27 exact lazy helpers / 407 identities and 2,000 installed paths are retained.
+
+Download orbitui.koplugin.zip, not the source-code archive. Details: docs/TESTING.md and docs/OTA.md.
+
 # v1.1.0-beta.7 · 2026-11-08
 
 ## Svenska
@@ -126,37 +160,5 @@ Headless/native tests are not physical Bigme/Boox acceptance or measured speedup
 Download **orbitui.koplugin.zip**, not GitHub's source archive. Back up settings/reading data and restart KOReader after installation.
 
 Unchanged reviewed pins: Bookshelf d47edfcc7c160691417235201595ab12cdffbdfe; SimpleUI 4bf2d2c5605d4172c5283e224450854d0b72219b. Alphabet-strip reference reviewed, not imported: Library GUI by antonyvo; independent OrbitUI implementation.
-
-Built on / bygger på SimpleUI by doctorhetfield-cmd and contributors, and Bookshelf by AndyHazz and contributors. See README.md, LICENSE, NOTICE and asset-specific notices.
-
-# v1.1.0-beta.3 · 2026-11-05
-
-OrbitUI 1.1.0-beta.3 — Series / Volumes · Serier / Volymer
-
-## Svenska
-
-- Taggträffar får flikarna **Serier / Volymer**. Manga visar Serier som standard; ditt uttryckliga val sparas per ursprungsbibliotek. Sökningen omfattar fortfarande samma lokala bibliotek.
-- En serie visas en gång med antal matchande respektive lokalt indexerade volymer. Fristående böcker och okänd metadata finns kvar. Varningar visas om första volymen saknas i metadata eller volymordningen är okänd. Den befintliga gränsen på 400 volymträffar förklaras även i serievyn.
-- Ett tryck markerar första tillgängliga lokalt indexerade volymen i rätt serie/bokhylla så att omslag och beskrivning visas, utan att boken öppnas. Första volymen kan sakna den sökta taggen. Flikbyte återanvänder taggträffar och cachad metadata, inte en ny EPUB-skanning.
-- Senaste SimpleUI-mergen hindrar orelaterade menyer från att rita om nederlisten. Vanlig filbläddring och menyer med egen nederlist behåller sidnavigeringen. En ny post i upstreams lista över krockande omslagspatchar följer med som källkod, men OrbitUI kan fortfarande inte ändra eller stänga av dina patchar. Bookshelf var redan ikapp.
-
-Endast förhandskanalen. **Stabil/latest är fortfarande 1.0.0.** Inga böcker, läsdata, serverstatusar eller befintliga inställningar migreras/raderas. API1/bootstrap, bilder, profiler och BookOrbit/Hardcover/MAL/patch-integrationernas ägare behålls. BookOrbit-statusimport är fortsatt experimentell och avstängd som standard.
-
-De nya serievyerna och menyfixen är automattestade men ännu inte fysiskt godkända på Bigme/Boox. Prova svenska/engelska, rotation, Stoppa/Stäng/vila under indexering och återgång från serieförhandsvisning med filter. Inga nya enhetsmätta prestandasiffror hävdas. Tidigare 1.1-skydd behålls: automatisk datumläsning ur filer och den nya mappraderingen är uppskjutna i OrbitUI.
-
-Hämta **orbitui.koplugin.zip**, inte källkodsarkivet. Säkerhetskopiera inställningar/läsdata och starta om KOReader efter installation. Ingen server eller användarenhet driftsätts av publiceringen.
-
-## English
-
-- Tag results gain **Series / Volumes** tabs. Manga defaults to Series; explicit choices are remembered per origin library without narrowing the existing local search scope.
-- One row per series shows matching versus locally indexed volumes. Standalone and unknown-metadata books remain visible, with honest cached-missing-first/unknown-order warnings and disclosure of the existing 400-volume hit cap.
-- Tap a series to select its first available locally indexed volume in the correct shelf/series preview, showing cover and description without opening the reader. That first volume may be untagged. Switching tabs reuses hits and bounded read-only cached metadata, not another EPUB scan.
-- Reviewed SimpleUI updates stop unrelated menus from refreshing the bottom bar while preserving native chooser/injected-menu pagination. The updated incompatible cover-patch catalog remains upstream source only: OrbitUI's read-only compatibility shim cannot rename or disable patches. Bookshelf was already current.
-
-**Preview only; stable/latest remains 1.0.0.** No book/reading-data migration, cache wipe, new sync owner, bootstrap/API1 change or server/device deployment. Existing artwork, profiles, settings and external integrations remain. BookOrbit status import stays experimental and OFF by default. Existing hosted automatic file-date/folder-delete safety deferrals remain.
-
-Automated/native headless gates are not physical Bigme/Boox acceptance or measured performance gains. The new SV/EN views, rotation, index/grouping Stop/Close/sleep, filtered series preview/return and real menu refresh still need device testing. Install orbitui.koplugin.zip, back up settings/reading data and restart KOReader.
-
-Reviewed source pins: Bookshelf d47edfcc7c160691417235201595ab12cdffbdfe; SimpleUI 4bf2d2c5605d4172c5283e224450854d0b72219b, full unsquashed ancestry.
 
 Built on / bygger på SimpleUI by doctorhetfield-cmd and contributors, and Bookshelf by AndyHazz and contributors. See README.md, LICENSE, NOTICE and asset-specific notices.

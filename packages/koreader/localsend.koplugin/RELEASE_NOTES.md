@@ -1,3 +1,30 @@
+# v1.4.7 · 2026-11-08
+
+## KOReader Plugin
+
+### Bug Fixes
+
+- **"No devices found" when sending**: Scans now share the receiver's endpoint instead of competing for it. Thanks @zenixlabs (https://github.com/kaikozlov/localsend.koplugin/issues/21)
+
+---
+
+## Installation
+
+1. Download the zip for your device's architecture:
+   - **armv7** — Kindle (all models), Kobo, reMarkable 2, PocketBook
+   - **arm64** — reMarkable Paper Pro
+   - **arm-legacy** — Kindle 3, Kindle DX, older 32-bit ARM devices
+
+   > **Not sure?** Try armv7 first. Use arm-legacy only if armv7 doesn't work on older hardware.
+
+2. Extract `localsend.koplugin` to your KOReader plugins directory:
+   - Kindle: `/mnt/us/koreader/plugins/`
+   - Kobo: `/.adds/koreader/plugins/`
+   - reMarkable: `/home/root/koreader/plugins/`
+3. Restart KOReader
+
+See README for usage instructions.
+
 # v1.4.6 · 2026-11-03
 
 ## KOReader Plugin
@@ -135,39 +162,6 @@ See README for usage instructions.
 ### Bug Fixes
 
 - **Settings menu stays open**: Opening **About** or **Recent transfers** from the settings menu no longer dismisses the menu behind it.
-
----
-
-## Installation
-
-1. Download the zip for your device's architecture:
-   - **armv7** — Kindle (all models), Kobo, reMarkable 2, PocketBook
-   - **arm64** — reMarkable Paper Pro
-   - **arm-legacy** — Kindle 3, Kindle DX, older 32-bit ARM devices
-
-   > **Not sure?** Try armv7 first. Use arm-legacy only if armv7 doesn't work on older hardware.
-
-2. Extract `localsend.koplugin` to your KOReader plugins directory:
-   - Kindle: `/mnt/us/koreader/plugins/`
-   - Kobo: `/.adds/koreader/plugins/`
-   - reMarkable: `/home/root/koreader/plugins/`
-3. Restart KOReader
-
-See README for usage instructions.
-
-# v1.4.2 · 2026-07-19
-
-## KOReader Plugin
-
-### Bug Fixes
-
-- **Older Kindle receiver support**: 32-bit ARM builds now work on Amazon Linux 2.6.31 kernels (such as Paperwhite 1 / firmware 5.6.1.1) that lack `epoll_pwait` and `accept4`. The receiver can start, show up in LocalSend, and complete transfers again.
-- **Update checks on older Kindles**: "Check for updates" no longer fails with `HTTP status: 000` when the firmware certificate bundle is too old to validate GitHub. Requests use KOReader's CA bundle when available.
-- **Legacy iptables support**: Firewall setup works on older firmware that lacks `iptables -C`, or only ships iptables under common sbin paths.
-
-### Improvements
-
-- **Legacy Kindle compatibility docs**: Documented the verified firmware and syscall boundary, plus the release overlay and audit workflow used for older Amazon kernels.
 
 ---
 

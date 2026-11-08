@@ -1,23 +1,23 @@
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/banner-dark.png">
-    <source media="(prefers-color-scheme: light)" srcset="assets/banner-light.png">
-    <img src="assets/banner-light.png" alt="tomedown: one Markdown file per book, straight into your notes" width="480">
+    <source media="(prefers-color-scheme: dark)" srcset="assets/banner-dark.webp">
+    <source media="(prefers-color-scheme: light)" srcset="assets/banner-light.webp">
+    <img src="assets/banner-light.webp" alt="tomedown: one Markdown file per book, straight into your notes" width="420">
   </picture>
 </p>
 
 <p align="center">
-  <a href="https://ko-fi.com/imanubdesigner"><img src="https://img.shields.io/badge/Ko--fi-Buy%20me%20a%20coffee-FF5E5B?style=for-the-badge&logo=ko-fi&logoColor=white" alt="Buy me a coffee on Ko-fi"></a>
-  <img src="https://img.shields.io/badge/KOReader-171717?style=for-the-badge&logo=koreader&logoColor=white" alt="KOReader">
-  <img src="https://img.shields.io/badge/Obsidian-171717?style=for-the-badge&logo=obsidian&logoColor=white" alt="Obsidian">
-  <img src="https://img.shields.io/badge/Markdown-171717?style=for-the-badge&logo=markdown&logoColor=white" alt="Markdown">
-  <img src="https://img.shields.io/badge/Lua-171717?style=for-the-badge&logo=lua&logoColor=white" alt="Lua">
+  <a href="https://ko-fi.com/imanubdesigner"><img src="https://img.shields.io/badge/Ko--fi-Buy%20me%20a%20coffee-FF5E5B?style=for-the-badge&logo=ko-fi&logoColor=white&labelColor=171717" alt="Buy me a coffee on Ko-fi"></a>
+  <img src="https://img.shields.io/badge/KOReader-plugin-white?style=for-the-badge&logo=koreader&logoColor=white&labelColor=171717" alt="KOReader">
+  <img src="https://img.shields.io/badge/Obsidian-ready-fff176?style=for-the-badge&logo=obsidian&logoColor=white&labelColor=171717" alt="Obsidian">
+  <img src="https://img.shields.io/badge/Markdown-file-white?style=for-the-badge&logo=markdown&logoColor=white&labelColor=171717" alt="Markdown">
+  <img src="https://img.shields.io/badge/Lua-5.1%2B-white?style=for-the-badge&logo=lua&logoColor=white&labelColor=171717" alt="Lua">
 </p>
 
 <p align="center">
-  <a href="https://github.com/imanubdesigner/tomedown.koplugin/releases/latest"><img src="https://img.shields.io/github/v/release/imanubdesigner/tomedown.koplugin?style=for-the-badge&color=171717&labelColor=171717&logo=github&logoColor=white" alt="Latest release"></a>
-  <a href="https://github.com/imanubdesigner/tomedown.koplugin/actions/workflows/test.yml"><img src="https://img.shields.io/github/actions/workflow/status/imanubdesigner/tomedown.koplugin/test.yml?style=for-the-badge&labelColor=171717&logo=githubactions&logoColor=white&label=tests" alt="Test status"></a>
-  <a href="LICENSE"><img src="https://img.shields.io/github/license/imanubdesigner/tomedown.koplugin?style=for-the-badge&color=171717&labelColor=171717" alt="License"></a>
+  <a href="https://github.com/imanubdesigner/tomedown.koplugin/releases/latest"><img src="https://img.shields.io/github/v/release/imanubdesigner/tomedown.koplugin?style=for-the-badge&color=fff176&labelColor=171717&logo=github&logoColor=white" alt="Latest release"></a>
+  <a href="https://github.com/imanubdesigner/tomedown.koplugin/actions/workflows/test.yml"><img src="https://img.shields.io/github/actions/workflow/status/imanubdesigner/tomedown.koplugin/test.yml?style=for-the-badge&color=238636&labelColor=171717&logo=githubactions&logoColor=white&label=tests" alt="Test status"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/github/license/imanubdesigner/tomedown.koplugin?style=for-the-badge&color=white&labelColor=171717" alt="License"></a>
 </p>
 
 <p align="center">
@@ -113,7 +113,7 @@ rsync -a --exclude tests --exclude .git --exclude .github \
       --exclude docs \
       --exclude assets/menu --exclude assets/obsidian \
       --exclude assets/obsidian-guide --exclude assets/tutorials \
-      --exclude 'assets/banner-*.png' \
+      --exclude 'assets/banner-*' \
       tomedown.koplugin /mnt/us/koreader/plugins/
 ```
 
