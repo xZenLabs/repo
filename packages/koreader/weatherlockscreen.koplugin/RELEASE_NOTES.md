@@ -1,6 +1,6 @@
 # v1.1.0 · 2026-11-01
 
-New Features
+## New Features
 
 * Thanks to @oldman63 WeatherLockscreen plugin is now available in Hungarian.
 * WeatherLockscreen will now prefer its own translations over those from KoReader.

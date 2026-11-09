@@ -1,3 +1,42 @@
+# v2.2.0 · 2026-11-09
+
+## What's new
+
+### Metadata
+- **Cover.** In *Edit > Metadata*, the Cover row opens a screen with three ways to change a book's cover:
+  - **Search online**: Apple Books, Open Library, Amazon and Google Books.
+  - **Search with other words**: for example a title in another language, or another author.
+  - **Choose from this device**: a JPG or PNG you already have.
+
+  Once a custom cover is set, a fourth option appears: **Use the book's own cover** removes it.
+- **More details.** A new page with **Publisher**, **Publication year**, **ISBN** and **Pages**.
+- **Search online.** Most fields (title, authors, series, language, keywords, description, publisher, year, ISBN, pages) have a *Search online* row. It lists what online sources say about the book and you pick a value. Nothing changes until you choose.
+
+### Stable pages
+Page numbers that stay the same whatever the font size, like in a printed book.
+
+1. **Optional:** set the book's page count in *Edit > Metadata > More details > Pages*.
+2. **Choose how books are numbered** in *Settings > General > Books > Stable pages*:
+   - **Off**: no stable pages.
+   - **KOReader numbering**: KOReader's own count.
+   - **Metadata page count**: uses *Pages* when the book has it, and KOReader's numbering when it doesn't.
+3. **Change it for one book** in *Edit > Book settings > Stable pages*, with the same three options.
+
+With no choice made, KiKome follows KOReader's own setting. Turning stable pages on for all books asks for confirmation first, because books you are already reading may show a different page number and total. Books update when you open them.
+
+### KiKome in the reader menu
+- Inside a book, a single **KiKome** row now sits in the **Tools** tab, with *Open KiKome Home* and *Configurations* inside it.
+
+### Fixes
+- **Start with > KiKome** now opens KiKome directly, which avoids glitches at startup.
+
+## Installation
+1. Download `KiKomeScrubber.koplugin.zip` from the **Assets** section below (not "Source code").
+2. Unzip it and copy the `KiKomeScrubber.koplugin` folder into `koreader/plugins/`.
+3. Restart KOReader.
+
+To update, use **Check for updates** in KiKome's Settings, or replace the folder. To uninstall, delete it.
+
 # v2.1.0 · 2026-11-06
 
 ## v2.1
