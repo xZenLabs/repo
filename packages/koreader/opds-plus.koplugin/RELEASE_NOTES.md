@@ -1,3 +1,25 @@
+# v1.3.1 · 2026-11-09
+
+# OPDS Plus v1.3.1
+
+A bug-fix release: you can now reach the rest of a long feed after jumping to the last page, downloads get a proper file extension and a sensible default folder, and each catalog page takes one request instead of two.
+
+### Changed
+- **One Request per Catalog Page**: Opening a catalog page used to ask the server for its headers and then for the page, so a server that builds the whole feed both times, like Calibre-Web, did the work twice. Each page is now a single request. A server that tags or dates its feeds answers "not modified" when the copy on the device is still current.
+
+### Fixed
+- **Rest of a Long Feed Unreachable**: Jumping to the last page with the end chevron or the page number dialog left the next page button greyed out, so the rest of a long feed, such as a Calibre-Web shelf, could only be reached by swiping. The next part of the feed is now fetched when you land there (Issue #100).
+- **Downloads Without a File Extension**: A book whose download address had no extension, such as `/download/7`, or one KOReader can't open, such as `get.php`, was saved under that name and could not be opened. The extension of the chosen format is now added.
+- **Download Folder When None Is Set**: Without a download folder chosen, books were saved to the last folder opened in the file browser, which on a first start is KOReader's hidden help folder. They now go to the home folder, as in KOReader's own OPDS browser.
+- **Where to Set the Sync Folder**: Syncing without a sync folder now tells you where to set one: the menu at the top left of the list of catalogs, under **Set sync folder**.
+- **Duplicate PDF Download Buttons**: A PDF link was sometimes added to a book twice, so the format list read "EPUB, PDF, PDF" and a book with a single PDF asked which format to download. This happened with arXiv's feeds.
+
+### Notes
+- If you never chose a download folder, new downloads now go to your home folder instead of the last folder you browsed. Tap **Choose folder** in the download dialog to pick another.
+
+Full changelog:
+https://github.com/greywolf1499/opds_plus.koplugin/blob/main/CHANGELOG.md
+
 # v1.3.0 · 2026-11-09
 
 # OPDS Plus v1.3.0
@@ -173,5 +195,3 @@ Thanks to everyone (myself, so far) who tested v1.0.0 and provided feedback! Thi
 ---
 
 **Full Changelog**: https://github.com/greywolf1499/opds_plus.koplugin/blob/main/CHANGELOG.md
-
-# v1.0.0 · 2025-11-18

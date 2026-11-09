@@ -11,7 +11,7 @@
 
 # OPDS Plus - Enhanced OPDS Browser for KOReader
 
-**Version:** 1.3.0
+**Version:** 1.3.1
 
 **OPDS Plus** is a feature-rich enhancement of KOReader's built-in OPDS catalog browser, providing visual book cover displays, multiple viewing modes, and extensive customization options for browsing online book catalogs.
 
@@ -228,7 +228,7 @@ Access settings from: **OPDS Plus Catalog → Settings**
   - These can be assigned in KOReader's gesture/action configuration.
 - **Catalog Sync Controls**:
   - Per-catalog sync and force-sync via catalog long-press actions.
-  - Sync folder selection.
+  - Sync folder selection: open the menu at the top left of the list of catalogs and tap **Set sync folder**. Sync needs a folder before it can start.
   - Maximum sync download count.
   - Filetype filtering for sync downloads.
 
