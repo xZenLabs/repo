@@ -28,29 +28,13 @@ See the [KOReader documentation](https://koreader.rocks/user_guide/#L2-userpatch
 
 This is now a full-featured KOReader plugin that displays beautiful weather information on your sleep screen, with multiple display formats and easy configuration - no need to edit source code!
 
-## [Weather Lockscreen patches](weather-lockscreen)
-
-### [🞂 2-weather-today-tomorrow-view-hours.lua](weather-lockscreen/2-weather-today-tomorrow-view-hours.lua)
-Requires WeatherLockscreen v0.9.2-beta.1
-
-The Patch allows you to modify the hours that are shown in the "Today & Tomorrow" display and the "Today" display.
-
-<details>
-<summary>See Screenshots </summary>
-
-| Before | After |
-|--------|-------|
-| <a href="resources/weather_lockscreen_detailed_hours_vanilla.png"><img src="resources/weather_lockscreen_detailed_hours_vanilla.png" width="300px"></a> | <a href="resources/weather_lockscreen_detailed_hours_patched.png"><img src="resources/weather_lockscreen_detailed_hours_patched.png" width="300px"></a> |
-
-<sub>2-weather-today-tomorrow-view-hours</sub><br />
-<sup>**Before:** The shown hours are 6am, 12pm, 6pm. **After:** User defined hour are shown.</sup>
-</details>
+The former `2-weather-today-tomorrow-view-hours.lua` patch is no longer needed: since v0.9.7 the shown hours can be selected directly in the plugin settings (Display style → Forecast hours shown).
 
 
 ## [Project: Title Patches](project-title)
 
 ### [🞂 2-pt-modify-font-sizes.lua](project-title/2-pt-modify-font-sizes.lua)
-Requires Project:Title v3.5
+Requires Project:Title v3.8
 
 Customize font sizes for titles, authors, and metadata in list view. \
 I use this patch to disable the auto-sizing and make the strings look more uniform
@@ -69,6 +53,9 @@ by setting maximum and minimum font sizes to the same value.
 </details>
 
 ### [🞂 2-pt-disable-progress-string.lua](project-title/2-pt-disable-progress-string.lua)
+
+Requires Project:Title v3.8
+
 Removes the reading status text (New/Reading/Finished/On hold) from list view.
 Attention: If you are using a different localization than english (or german), you will have to adapt the patch and add the strings in your language.
 
@@ -84,7 +71,7 @@ Attention: If you are using a different localization than english (or german), y
 </details>
 
 ### [🞂 2-pt-limit-tags.lua](project-title/2-pt-limit-tags.lua)
-Requires Project:Title v3.5
+Requires Project:Title v3.8
 
 <details>
 <summary>See Screenshots </summary>
@@ -100,6 +87,8 @@ Limit the number of tags displayed under books in list view.
 
 ### [🞂 2-pt-disable-folder-nbitems-overlay.lua](project-title/2-pt-disable-folder-nbitems-overlay.lua)
 
+Requires Project:Title v3.8
+
 Removes the item count from folder overlays in Cover Grid view.
 
 <details>
@@ -114,6 +103,8 @@ Removes the item count from folder overlays in Cover Grid view.
 
 ### [🞂 2-pt-disable-folder-image-search.lua](project-title/2-pt-disable-folder-image-search.lua)
 
+Requires Project:Title v3.8
+
 Disables searching for folder cover images (cover.jpg, folder.png, etc.) and forces Project: Title to build folder thumbnails from book covers only.
 
 By default, Project: Title first searches for dedicated folder cover images before falling back to building covers from book thumbnails. \
@@ -123,7 +114,7 @@ If you do not intend to provide your own images, this will speed up turning page
 
 ### [🞂 2-pt-modify-item-limits.lua](project-title/2-pt-modify-item-limits.lua)
 
-Requires Project:Title v3.5
+Requires Project:Title v3.8
 
 Customize the maximum number of items displayed per page.
 
@@ -141,7 +132,7 @@ Customize the maximum number of items displayed per page.
 
 ### [🞂 2-pt-modify-progressbar-max-width.lua](project-title/2-pt-modify-progressbar-max-width.lua)
 
-Requires Project:Title v3.5
+Requires Project:Title v3.8
 
 Increase the maximum progress bar width for longer books.
 If your display settings allow for more space, you can de-/increase the maximum width of the progress bars.
@@ -160,7 +151,7 @@ Alternatively, you can change how many pages the progress bar represents by in/d
 
 ### [🞂 2-pt-modify-series-format.lua](project-title/2-pt-modify-series-format.lua)
 
-Requires Project:Title v3.5
+Requires Project:Title v3.8
 
 Customize the format of the series in listview.
 The file contains some suggestions, but you have complete freedom to define the format.
@@ -184,6 +175,26 @@ Draw every cover in the cover grid at the same size.
 By default, each cover keeps its own aspect ratio, so covers end up with different sizes. \
 This patch stretches all covers to the grid cell instead (stretched, not cropped). \
 If covers look too distorted, lower `STRETCH_RATIO` (e.g. to 0.8-0.9) to make them narrower.
+
+<details>
+<summary>See Screenshots </summary>
+
+| Before | After |
+|--------|-------|
+| <a href="resources/cover_sizes_vanilla.png"><img src="resources/cover_sizes_vanilla.png" width="300px"></a> | <a href="resources/cover_sizes_patched.png"><img src="resources/cover_sizes_patched.png" width="300px"></a> |
+
+<sub>2-pt-uniform-cover-size</sub><br />
+<sup>**Before:** Each cover keeps its own aspect ratio, so the covers have different sizes. **After:** All covers fill the grid cell and have the same size.</sup>
+</details>
+
+### [🞂 2-pt-recent-books-first.lua](project-title/2-pt-recent-books-first.lua)
+
+Requires Project:Title master (unreleased as of 09 Nov 2026)
+
+Bring back "Show opened books first" from the old Library mode.
+Project: Title replaced its Library mode with KOReader's "Show all files from subfolders" option (long-press the Project: Title logo to toggle it). \
+This patch moves the books you are currently reading to the front of that list and marks them with the black separator line / underline, like before. \
+Optionally, the recent books can be sorted by last read date, or the patch can be applied to every folder instead of only the library view.
 
 ## License
 [GNU AGPL v3](https://www.gnu.org/licenses/agpl-3.0.de.html)

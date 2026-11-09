@@ -1,0 +1,23 @@
+# Book Rewind plugin for KOReader
+# https://github.com/davydmaker/book_rewind.koplugin
+# zenpm:auto-scraped
+id=book-rewind
+name=Book Rewind
+version=1.3.1
+description=A yearly reading recap for KOReader, in illustrated cards made for e-ink. Offline, on your device.
+author=davydmaker
+category=utility
+platforms=koreader
+dependencies=
+source=https://github.com/davydmaker/book_rewind.koplugin
+stars=5
+updated_at=2026-11-09T22:01:04Z
+published_at=2026-11-08T03:01:47Z
+readme_url=packages/koreader/book-rewind.koplugin/README.md
+readme_hash=0ca2df88b2f96aa79248bc126d73f5d7da406089
+release_notes_url=packages/koreader/book-rewind.koplugin/RELEASE_NOTES.md
+release_notes_hash=d42be0b2b0278e14e768a889aa8bc9b690ed0e3fd109f9a7347adb48699fbd96
+releases=[{"tag_name":"v1.3.1","assets":[{"name":"book_rewind.koplugin.zip","url":"https://github.com/davydmaker/book_rewind.koplugin/releases/download/v1.3.1/book_rewind.koplugin.zip","size":619540,"digest":"sha256:d0b925b47f0b359db570f4c03ace861c654f4cc01df8ea225049710e9ab7b295"}],"name":"v1.3.1"},{"tag_name":"v1.3.0","assets":[{"name":"book_rewind.koplugin.zip","url":"https://github.com/davydmaker/book_rewind.koplugin/releases/download/v1.3.0/book_rewind.koplugin.zip","size":547028,"digest":"sha256:7ec95522b05cfda96c4578eff9c5a1276c4277ff844d0502c4f6ea88709db7e8"}],"name":"v1.3.0"},{"tag_name":"v1.2.0","assets":[{"name":"book_rewind.koplugin.zip","url":"https://github.com/davydmaker/book_rewind.koplugin/releases/download/v1.2.0/book_rewind.koplugin.zip","size":545166,"digest":"sha256:709b82e5bfcd46348c856f00ee8aaa4681dee124021146853852b829ae013e09"}],"name":"v1.2.0"},{"tag_name":"v1.1.1","assets":[{"name":"book_rewind.koplugin.zip","url":"https://github.com/davydmaker/book_rewind.koplugin/releases/download/v1.1.1/book_rewind.koplugin.zip","size":431750,"digest":"sha256:94709be3e332412fbab0f5dbacb4e626142faf9104482df27d521b9db9fd2017"}],"name":"v1.1.1"},{"tag_name":"v1.1.0","assets":[{"name":"book_rewind.koplugin.zip","url":"https://github.com/davydmaker/book_rewind.koplugin/releases/download/v1.1.0/book_rewind.koplugin.zip","size":428294,"digest":"sha256:cda76613da2f045165a9518d169bc0b763abf34aa6a320c7321e5afc6020419d"}],"name":"v1.1.0"},{"tag_name":"v1.0.0","assets":[{"name":"book_rewind.koplugin.zip","url":"https://github.com/davydmaker/book_rewind.koplugin/releases/download/v1.0.0/book_rewind.koplugin.zip","size":406405,"digest":"sha256:b58c32a0bbfe0a99694f1293c80eb60995f94a2c339a4f592e107b8b04cd9c33"}],"name":"v1.0.0"}]
+source_type=release
+source_asset=book_rewind.koplugin.zip
+size=619540
