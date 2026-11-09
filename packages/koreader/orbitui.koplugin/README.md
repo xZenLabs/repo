@@ -63,21 +63,22 @@ functionality, not a claim that OrbitUI invented the Home screen, library,
 series boxes, themes or ornament system. [The feature guide](docs/FEATURES.md)
 explains the extra controls and where to find them.
 
-**1.1.0-beta.12 preview:** recomposes **Currently reading + Silverfish** with
-a full-height companion on the left, one centered text stack and the book cover
-on the right. The title uses its measured height; compact cards omit secondary
-rows before reducing readability. Continue reading, saved placements and
-Silverfish's files/data remain unchanged. Requires separately installed/enabled
-public Silverfish 2.0.0; no fork or copied artwork. Automated/native-adapter
-checks pass; physical Bigme acceptance is still pending. Update through preview
-and restart. [Release notes](docs/OTA.md#orbitui-110-beta12).
+**Stable 1.1.0:** promotes the unchanged beta.12 implementation after user
+acceptance. Includes series-level tag results, the alphabet strip, search word
+suggestions, exact-size cover reuse, optional plugin cards/module library,
+BookOrbit shelf/smartscope cards and Currently reading + Silverfish. All are
+optional; Continue reading and existing placements/data stay unchanged.
+Silverfish requires separately installed/enabled public 2.0.0; no fork or copied
+artwork. Bookshelf 6.4 is reserved for a separate 1.2 preview cycle. Update
+through the stable channel and restart. [Release notes](docs/OTA.md#orbitui-110).
 
-**Svenska, förhandsversion 1.1.0-beta.12:** ny layout för **Läser just nu +
-Silverfish**: större figur till vänster, samlad text i mitten och bokomslaget
-till höger. Kortets höjd används bättre och texten behåller läsbar storlek.
-Fortsätt läsa, dina placeringar och Silverfishs sparfiler lämnas orörda.
-Automatiska tester är gröna; test på själva Bigmen återstår. Uppdatera via
-förhandskanalen och starta om KOReader.
+**Svenska, stabil 1.1.0:** samma fungerande kod som beta.12, nu som stabil
+release. Serieträffar för taggar, bokstavslist, sökförslag, bättre omslagsåterbruk,
+valbara pluginmoduler, modulbibliotek, BookOrbit-hyllor/smartscopes och
+Läser just nu + Silverfish. Fortsätt läsa, placeringar och sparade data lämnas
+orörda. Bookshelf 6.4 tas in först i nästa betacykel. Uppdatera via den stabila
+kanalen och starta om KOReader. Användarens allmänna godkännande ersätter inte
+en dokumenterad testmatris för varje enhet eller valfri integration.
 
 **Included since 1.1.0-beta.7:** Add BookOrbit shelves and smartscopes as independent
 Reading dashboard cards: **+ → BookOrbit shelves and smartscopes → Refresh
