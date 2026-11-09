@@ -1,3 +1,36 @@
+# v0.5.4 · 2026-11-09
+
+## 月读 v0.5.4
+
+KOReader 插件包：`book.koplugin-v0.5.4.zip`
+
+输入法词库（整库，手动 sideload）：`dictionary.sqlite3 dictionary-wubi.sqlite3 dictionary-cangjie.sqlite3 dictionary-zhuyin.sqlite3`
+
+安装：解压后将 `book.koplugin` 复制到 `koreader/plugins/`，然后重启。
+
+词库 sideload：下载对应布局的词库，直接放入 `koreader/.moon/`
+（与 `book.sqlite3` 同级）。附件已使用最终文件名，无需重命名。
+
+### 更新内容
+
+相对上一版本 `v0.5.3`：
+
+#### 新功能
+
+- :sparkles: (library): 文件夹用最近阅读封面，并支持封面圆角 (7accc60f)
+- :sparkles: (panel): 连续章节快捷面板可手动刷新目录 (7a62589b)
+
+#### 修复
+
+- :bug: (panel): 刷新目录 available 不因会话桩缺方法崩掉 (40a17713)
+- :bug: (source): 番茄换号重推书架，取消目录刷新不吃迟到回包 (a77157bd)
+- :bug: fix(source): 换账号保留书架和阅读记录 (0f0c0900)
+- :bug: (insight): 软删除与下架的已读书仍计入读完 (7b767be7)
+
+### 完整对比
+
+https://github.com/AnkioTomas/moon/compare/v0.5.3...v0.5.4
+
 # v0.5.3 · 2026-11-09
 
 ## 月读 v0.5.3
@@ -158,39 +191,3 @@ https://github.com/AnkioTomas/moon/compare/v0.5.0...v0.5.1
 ### 完整对比
 
 https://github.com/AnkioTomas/moon/compare/v0.4.18...v0.5.0
-
-# v0.4.18 · 2026-11-05
-
-## 月读 v0.4.18
-
-本次更新包含上一正式版本 v0.4.16 之后的全部变更。
-
-### 登录与验证
-
-- 起点、潇湘书院支持直接扫码登录，保留 Cookie 导入；QQ 阅读复用同一套阅文扫码流程。
-- 七猫支持本机手机号与短信验证码登录，仅将滑块交互交给远程验证。
-- 长佩遇到阅读滑块验证时可通过远程管理完成，不再误报为登录失效。
-- 非墨水屏设备的二维码窗口支持在本机打开链接；较长的登录提示支持分页。
-- 统一跨平台安全随机源，补充英文和繁体中文翻译。
-
-### 其他更新与修复
-
-- 快捷面板可添加第三方插件入口并自选图标；动作弹窗支持分页和屏幕旋转。
-- 阅读进度条可选显示两位总进度百分比；AI 支持手动设置温度；X-Ray 可重置当前书的数据。
-- 修复 WebDAV 失败重传及多设备阅读统计隔离、微信图片位置进度同步、番茄登录失效识别、Kavita 系列元数据和卷行显示。
-- 修复 LuaSocket 请求体部分发送、旧 Android DNS、PocketBook 解压库、缺失图标字体时闪退及电池健康度显示。
-- 保留锁屏 PNG 写出失败原因，修正只拉取书源的同步任务提示。
-
-### 验证
-
-云端完整测试：543 项通过，0 跳过，0 失败；覆盖真实 KOReader 前端与原生渲染、远程管理网页脚本，并检查发布工具的 SQLite 环境隔离。
-
-### 安装
-
-下载 `book.koplugin-v0.4.18.zip`，解压后将 `book.koplugin` 复制到 KOReader 的 `plugins` 目录，然后重启。
-
-输入法词库附件：`dictionary.sqlite3`、`dictionary-wubi.sqlite3`、`dictionary-cangjie.sqlite3`、`dictionary-zhuyin.sqlite3`。如需手动安装，下载对应布局的文件，直接放入 KOReader 数据目录的 `.moon/`，与 `book.sqlite3` 同级，无需重命名。
-
-### 完整对比
-
-https://github.com/AnkioTomas/moon/compare/v0.4.16...v0.4.18

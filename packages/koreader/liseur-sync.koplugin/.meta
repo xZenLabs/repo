@@ -3,7 +3,7 @@
 # zenpm:auto-scraped
 id=liseur-sync
 name=Liseur Sync
-version=plugin-0.18
+version=plugin-20261109.19
 description=Self-hostable reading-position sync and statistics server for Liseur, KOReader, and friends
 author=chmouel
 category=media
@@ -11,13 +11,13 @@ platforms=koreader
 dependencies=
 source=https://github.com/chmouel/liseur-sync
 stars=21
-updated_at=2026-11-09T07:01:03Z
-published_at=2026-11-09T06:52:32Z
+updated_at=2026-11-09T09:01:00Z
+published_at=2026-11-09T07:44:34Z
 readme_url=packages/koreader/liseur-sync.koplugin/README.md
 readme_hash=9f8ccb506204013d5a499b9cf8288058880227af
 release_notes_url=packages/koreader/liseur-sync.koplugin/RELEASE_NOTES.md
-release_notes_hash=7850f8405672f9c0c7b210ca7c8c49ed01fc20e03bdc69bf38b94588b0f113a8
-releases=[{"tag_name":"plugin-0.18","assets":[{"name":"liseur.koplugin.zip","url":"https://github.com/chmouel/liseur-sync/releases/download/plugin-0.18/liseur.koplugin.zip","size":50581,"digest":"sha256:2b7841ae1283556ee49aafa3e5b14dd5f3478ddbc1dbf46f7858c318c86549a2"}],"name":"KOReader plugin 0.18"},{"tag_name":"plugin-0.15","assets":[{"name":"liseur.koplugin.zip","url":"https://github.com/chmouel/liseur-sync/releases/download/plugin-0.15/liseur.koplugin.zip","size":49834,"digest":"sha256:e51ac0e06560992ec1d17a56a3b735c04aff8d645a7827ba2ed400a67a8e85dc"}],"name":"KOReader plugin 0.15"},{"tag_name":"plugin-0.13","assets":[{"name":"liseur.koplugin.zip","url":"https://github.com/chmouel/liseur-sync/releases/download/plugin-0.13/liseur.koplugin.zip","size":49242,"digest":"sha256:643ce4bf487c3e9a2e0607a3d598811cec2efd0b0b81582828ff4818eb575093"}],"name":"KOReader plugin 0.13"}]
+release_notes_hash=e43baa21a64a1816239818762522d46aae49a2185716eb18515504f0b99b7f26
+releases=[{"tag_name":"plugin-20261109.19","assets":[{"name":"liseur.koplugin.zip","url":"https://github.com/chmouel/liseur-sync/releases/download/plugin-20261109.19/liseur.koplugin.zip","size":50589,"digest":"sha256:d1ac7cba4a092a0565681702ae81e36e9787ac7bd29562600cf1e7d2975d4a1f"}],"name":"KOReader plugin 20261109.19"}]
 source_type=release
 source_asset=liseur.koplugin.zip
-size=50581
+size=50589
