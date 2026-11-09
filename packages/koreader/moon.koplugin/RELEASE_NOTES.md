@@ -1,3 +1,36 @@
+# v0.5.3 · 2026-11-09
+
+## 月读 v0.5.3
+
+KOReader 插件包：`book.koplugin-v0.5.3.zip`
+
+输入法词库（整库，手动 sideload）：`dictionary.sqlite3 dictionary-wubi.sqlite3 dictionary-cangjie.sqlite3 dictionary-zhuyin.sqlite3`
+
+安装：解压后将 `book.koplugin` 复制到 `koreader/plugins/`，然后重启。
+
+词库 sideload：下载对应布局的词库，直接放入 `koreader/.moon/`
+（与 `book.sqlite3` 同级）。附件已使用最终文件名，无需重命名。
+
+### 更新内容
+
+相对上一版本 `v0.5.2`：
+
+#### 修复
+
+- :bug: fix(source): 隔离临时文件并统一 Cookie 更新 (8c65c782)
+- :bug: (qidian): 扫码合并书架 Cookie，VIP 不再假报失效 (f24ab548)
+- :bug: (copymanga): 登录后落盘密码，401 才能自动重登 (17c5af19)
+- :bug: (paths): Android 临时文件改落 .moon/cache/tmp (19c9d7a2)
+- :bug: (desktop): 桌面手势 Dispatcher 动作落到 FM 模块 (97130e48)
+
+#### 变更
+
+- :see_no_evil: chore: 停止跟踪本地审计报告 (d1308a53)
+
+### 完整对比
+
+https://github.com/AnkioTomas/moon/compare/v0.5.2...v0.5.3
+
 # v0.5.2 · 2026-11-08
 
 ## 月读 v0.5.2
@@ -161,41 +194,3 @@ https://github.com/AnkioTomas/moon/compare/v0.4.18...v0.5.0
 ### 完整对比
 
 https://github.com/AnkioTomas/moon/compare/v0.4.16...v0.4.18
-
-# v0.4.16 · 2026-11-04
-
-## 月读 v0.4.16
-
-KOReader 插件包：`book.koplugin-v0.4.16.zip`
-
-输入法词库（整库，手动 sideload）：`dictionary.sqlite3 dictionary-wubi.sqlite3 dictionary-cangjie.sqlite3 dictionary-zhuyin.sqlite3`
-
-安装：解压后将 `book.koplugin` 复制到 KOReader 的 `plugins` 目录，然后重启。
-
-词库 sideload：下载对应布局的词库，直接放入 KOReader 数据目录下的
-`.moon/`（与 `book.sqlite3` 同级）。附件已使用最终文件名，无需重命名。
-
-### 更新内容
-
-相对上一版本 `v0.4.15`：
-
-#### 新功能
-
-- :sparkles: (bookorbit): 拉取书架时同步已读状态 (#90) (c5a39848)
-
-#### 修复
-
-- :bug: (remote): 同名 Cookie 有多个时逐个验令牌，不只认第一个 (58394a84)
-- :bug: (db): 书库文件损坏时挪开坏库并自动重建 (b4ac6dd5)
-
-#### 界面
-
-- :lipstick: (setting): 设置页提示行统一为 Row.note，词库手动安装改成独立入口 (136a0bfc)
-
-#### 变更
-
-- :loud_sound: (dictionary): 查词回退原生窗时记录是哪个插件按钮导致 (4ddbe6a0)
-
-### 完整对比
-
-https://github.com/AnkioTomas/moon/compare/v0.4.15...v0.4.16

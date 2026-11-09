@@ -1,3 +1,30 @@
+# v1.2.0-beta.1 · 2026-11-09
+
+## Svenska
+
+Första betan i 1.2-serien, efter den stabila 1.1-releasen. Bookshelf är uppdaterat till **6.4.1**. SimpleUI var redan aktuellt (3.0.3).
+
+- Mindre onödigt arbete med omslag, metadata och kataloger; bättre återanvändning av lätta hyllistor och lugnare uppdateringar efter metadataextraktion. Förväntade förbättringar, inte uppmätta hastighetsvinster på Bigmen.
+- Nya val för lika höga/lika stora böcker, ryggtextens storlek och Plain/Spines-serieboxar. Valbara serierutor även i Covers/List och bläddring per årtionde.
+- Anpassat till OrbitUI: separata bibliotekssektioner, Home/dock, serieomslag, MAL, ornament, taggar, BookOrbit och Silverfish behåller sina egna inställningar och ansvar.
+- Säkrare omslagscache vid skrivfel och avbrutna bakgrundsjobb. Inga inställningar, läsdata eller cachefiler nollställs.
+
+**1.1.0 är fortfarande stabil/latest.** Den här betan finns i förhandskanalen. Nya layoutval, vila/återgång och prestanda med stora bibliotek behöver fortfarande provas på enheten. Automatiska tester är inte ett sådant godkännande.
+
+Vi aktiverar inte upstreams nya helsidescache/förladdning, bytecode-sökare eller uppdelning av navigationsinställningar: de behöver först uppfylla OrbitUI:s minnes-, modul- och återställningskrav. Omslags- och listförbättringarna ingår ändå.
+
+## English
+
+First 1.2 preview after stable 1.1. Integrates **Bookshelf 6.4.1**; SimpleUI 3.0.3 was already current. Credit to AndyHazz, doctorhetfield-cmd and their contributors for the upstream foundations and improvements.
+
+Lighter cover/metadata/directory work, retained scoped shelf lists and throttled extraction updates; optional book-size/spine-text/series-box styles, Covers/List series tiles and Decades browsing. Host adaptations preserve OrbitUI sections, Home/dock, cover proportions, ornaments, tags, BookOrbit/MAL/Hardcover ownership and the optional Silverfish card. Cache-write failures preserve the previous good cover and retired background callbacks stay inert.
+
+New whole-page pixel caching/build-ahead, the competing bytecode searcher and navigation-file migration remain deferred in hosted mode. No settings, reading data, cache reset or server deployment. API1 and the identical 2,000 installed paths are retained.
+
+Use the complete **orbitui.koplugin.zip**, not GitHub's source archive; restart KOReader after updating. Disable standalone SimpleUI/Bookshelf before first installation. Back up settings and reading data separately: code rollback does not restore them or third-party saves. Stable **1.1.0** remains available and unchanged.
+
+Automated source/package/native-fixture/upgrade/rollback checks precede publication. Physical Bigme font/layout/touch/colour/night/rotation/wake, large-library resource use and timings remain pending. This is a prerelease, not a device-performance certification.
+
 # v1.1.0-beta.12 · 2026-11-08
 
 ## Svenska
@@ -87,37 +114,3 @@ The plugin's public Home toggle recognizes dashboard placement across add/off/re
 Update through preview and restart KOReader. Back up settings and reading data separately; code rollback does not restore settings or third-party data. No Silverfish fork, plugin reinstall, new upstream merge or BookOrbit-server operation. Stable/latest 1.0 is unchanged; API1/bootstrap and the 2,000-file installation budget are retained.
 
 This prerelease is desktop-tested with native adapter/input/buffer fixtures and frozen Silverfish public Home methods, not the full plugin or physical Bigme drawing/touch/wake/rotation. Device acceptance remains pending.
-
-# v1.1.0-beta.8 · 2026-11-08
-
-## Svenska
-
-Fixar de tomma menyerna och återöppningskraschen i beta.7.
-
-- BookOrbit-källistan visas efter uppdatering och går att öppna igen med sparade hyllor/smartscopes.
-- Hämta fler moduler / Modulbibliotek visar den medföljande Silverfish-posten igen.
-- Valet mellan omslagsrad och karusell för BookOrbit-kort fungerar.
-- Orsaken var tre loopvariabler som krockade med översättningsfunktionen. Din enhetslogg bekräftar modulbiblioteksfelet. Åtta nya menytester återskapar felen i publicerad beta.7 och passerar med fixen på svenska och engelska.
-
-Befintliga hyllor, kort, inställningar och plugindata behålls. Ingen cache behöver rensas. Inga ändringar av BookOrbit-servern, lässtatussynken eller modulinstallationens regler.
-
-Uppdatera via förhandskanalen och starta om KOReader. Säkerhetskopiera inställningar/läsdata separat. BookOrbit-kort använder fortsatt konfigurationsformat v3: beta.6/äldre bevarar sidan men kan inte redigera den. Kodåterställning återställer inte dina inställningar eller tredjepartsdata.
-
-Förhandsversion: testerna använder riktiga menybyggare med simulerade enhets-/tjänstegränser. Nytt prov på Bigmen och verklig käll-/fillänkskontroll återstår. Ingen installation på enheten, serverdriftsättning eller ny upstream-merge ingår. Stabil 1.0 och tidigare releaser lämnas oförändrade.
-
-## English
-
-Fixes beta.7's blank menus and cached-source reopening crash.
-
-- BookOrbit sources render after refresh and can be reopened with saved shelves/smartscopes.
-- Get more modules / Module library shows the bundled Silverfish entry again.
-- BookOrbit cards' cover-row/carousel chooser works.
-- Three loop indices accidentally shadowed the translator. The supplied device log confirms the module-library error. Eight native-menu regressions reproduce failures in public beta.7 and pass with the fix in Swedish and English.
-
-Existing sources, cards, settings and plugin data are preserved. No cache reset is needed. BookOrbit server, reading-status sync and module-installation policies are unchanged.
-
-Update through preview and restart KOReader; back up settings and reading data separately. Source cards retain dashboard config v3: beta.6/older preserve the page but cannot edit it. Code rollback does not reverse settings or third-party data.
-
-Prerelease: real menu builders with substituted display/service boundaries, not physical Bigme acceptance. Real-device retesting and live source/link coverage remain pending. No device/plugin installation, server deployment or new upstream merge. Stable/latest 1.0 and previous tags/assets remain unchanged; API1/bootstrap, 27 exact lazy helpers / 407 identities and 2,000 installed paths are retained.
-
-Download orbitui.koplugin.zip, not the source-code archive. Details: docs/TESTING.md and docs/OTA.md.

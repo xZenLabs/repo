@@ -1,713 +1,318 @@
 # OrbitUI for KOReader
 
-**A customizable Home screen and a visual library, together in one KOReader plugin.**
+**Make your library feel like yours.** A customizable Home screen, visual
+bookshelves and a connected reading workflow — together in one KOReader plugin.
 
-OrbitUI combines **[SimpleUI](https://github.com/doctorhetfield-cmd/simpleui.koplugin)
+OrbitUI brings together **[SimpleUI](https://github.com/doctorhetfield-cmd/simpleui.koplugin)
 by [doctorhetfield-cmd](https://github.com/doctorhetfield-cmd)** and
 **[Bookshelf](https://github.com/AndyHazz/bookshelf.koplugin)
 by [AndyHazz](https://github.com/AndyHazz)**, with their contributors' work.
-These projects are the foundation of OrbitUI, not just inspiration: their code,
-interfaces and features are included and adapted here. Please support and credit
-the original creators.
+Their code, interfaces and features are OrbitUI's foundation, not just
+inspiration. OrbitUI adds a shared workflow and its own optional features on
+top. Please support and credit the original creators.
 
-**[Download OrbitUI](https://github.com/komadorirobin/orbitui.koplugin/releases)**
-| [Install](#installation)
-| [Switch from SimpleUI / Bookshelf](#already-using-simpleui-or-bookshelf)
+**[Download stable 1.1.0](https://github.com/komadorirobin/orbitui.koplugin/releases/tag/v1.1.0)**
+| [Installation](#installation)
+| [What OrbitUI adds](#what-orbitui-adds)
 | [Feature guide](docs/FEATURES.md)
 | [Report a problem](https://github.com/komadorirobin/orbitui.koplugin/issues)
 
-> **OrbitUI replaces the standalone SimpleUI and Bookshelf plugins.**
-> You do not need to install either one first. If you already use one or both,
-> disable them and restart KOReader before installing OrbitUI. Never run them
-> alongside OrbitUI. Keep their files and settings for backup and rollback.
+**Trying the next version?** [1.2.0-beta.1](https://github.com/komadorirobin/orbitui.koplugin/releases/tag/v1.2.0-beta.1)
+integrates Bookshelf 6.4.1: lighter cover/metadata work, optional book-size and
+series-box styles, and Decades browsing. It preserves OrbitUI's sections, Home,
+tags and integrations. New-device/layout/performance checks are still pending;
+**1.1.0 remains the stable release**. See the release notes before switching.
 
-## Screenshots
+> **OrbitUI replaces the standalone SimpleUI and Bookshelf plugins.**
+> Neither is required separately. If either is installed, disable it and restart
+> KOReader before installing OrbitUI. Never run them alongside OrbitUI. Keep
+> their files and settings for backup and rollback.
+
+## A look around
 
 | Reading dashboard | Book shelves | Manga series |
 | --- | --- | --- |
-| [![Reading dashboard with reading progress, goals and paginated book rows](docs/screenshots/reading-dashboard.jpg)](docs/screenshots/reading-dashboard.jpg) | [![Physical bookshelf view with book covers and a framed-print ornament](docs/screenshots/book-shelves.jpg)](docs/screenshots/book-shelves.jpg) | [![Manga series boxes with MAL star ratings, read-volume counts and a motorcycle ornament](docs/screenshots/manga-series.jpg)](docs/screenshots/manga-series.jpg) |
+| [![Reading dashboard with reading progress, goals and paginated book rows](docs/screenshots/reading-dashboard.jpg)](docs/screenshots/reading-dashboard.jpg) | [![Physical bookshelf view with book covers and a framed-print ornament](docs/screenshots/book-shelves.jpg)](docs/screenshots/book-shelves.jpg) | [![Manga series boxes with MAL ratings, read-volume counts and an ornament](docs/screenshots/manga-series.jpg)](docs/screenshots/manga-series.jpg) |
 
-Click a screenshot to view it full-size. This is an example **customized setup**,
-not a fixed default: choose your own wallpaper, navigation buttons, sections and
-layout. Ornaments are optional add-ons. The manga star ratings come from the
-separate [MyAnimeList Manga Sync plugin](https://github.com/komadorirobin/myanimelist.koplugin).
+Click a screenshot to view it full-size. These show a **customized setup**, not
+a fixed default. Choose your own sections, wallpaper, navigation and layout.
+Ornaments are optional add-ons; manga ratings use the separate
+[MyAnimeList Manga Sync plugin](https://github.com/komadorirobin/myanimelist.koplugin).
 
-## Why combine them?
+## What OrbitUI adds
 
-SimpleUI provides a modular Home screen, reading statistics and navigation bars.
-Bookshelf provides a visual library with shelves, covers, lists, series, book
-details and themes. OrbitUI connects those experiences: go from your Home page
-to a shelf, open the same book-detail panel from either place, pin shelves to
-Home and search your library through one interface.
+SimpleUI supplies the modular Home, statistics and navigation; Bookshelf supplies
+the visual library, book details, themes and ornament system. OrbitUI connects
+them, then adds ways to organize and explore your books that are not part of
+either standalone project's default setup.
 
-The aim is a coherent reading interface with **one installation, one settings
-hub and one update channel**, while retaining the flexibility of both projects.
-It is not a new reading engine, a replacement for KOReader itself, or an official
-release by either upstream author.
+- **One connected interface.** Move between Home and your library with a shared
+  bottom bar, book-detail panels, scoped search and a settings hub. Pin a shelf
+  to Home as a book row or carousel.
+- **A Reading dashboard you can build on.** Combine Continue reading, progress,
+  statistics, goals and paginated book rows. Add compatible plugin cards,
+  shortcuts or BookOrbit shelf cards; arrange and size them independently.
+- **Tags that lead somewhere.** Find local EPUBs with the same tag, switch
+  between **Series / Volumes**, and turn combinations of tags into smart shelf
+  chips. Results take you to a book's shelf preview, not straight into reading.
+- **Your own library sections.** Give novels, manga, comics or any other library
+  independent folders, names, shelf chips and navigation buttons. No required
+  fiction/manga split or personal folder structure.
+- **Optional BookOrbit connections.** Local and server-backed Want to Read
+  modules, shelf/smartscope cards, online tags and guarded reading-status import.
+  Each has clear controls; ordinary local books work without an account.
+- **A reading companion beside your book.** The optional **Currently reading +
+  Silverfish** card combines your active companion with the book cover, title
+  and progress. It is an extra choice, not a replacement for Continue reading.
+- **Shelf details with character.** Classic OrbitUI and Minimal bookshelf
+  presets, per-shelf captions and bindings, proportion-preserving series covers,
+  optional MAL badges and separately installable ornament packs.
+- **Practical controls and updates.** Custom Android-app shortcuts, shared quick
+  controls, optional performance profiles and whole-plugin verified OTA updates
+  with code rollback.
 
-## What you get
+These are OrbitUI additions and integration choices, not a claim that OrbitUI
+invented modular Home screens, shelves, series boxes, themes or ornaments.
+[The feature guide](docs/FEATURES.md) explains the controls and their boundaries.
 
-| Part | What it provides |
+## Explore by tags, not just folders
+
+Open a book's **Tags** tab to browse its embedded EPUB tags. Tap a tag to find
+other matching books across your configured local libraries — entirely offline,
+without BookOrbit or a server patch. This uses embedded **`bookorbit:tags`**
+metadata; ordinary EPUB subjects remain Bookshelf's genres, not a duplicate
+tag source.
+
+For manga, **Series / Volumes** tabs let you discover a series without scrolling
+past every volume. Selecting a series highlights its first locally indexed
+available volume on the shelf; standalone and metadata-incomplete books remain
+visible. Tapping a result shows the cover and description without opening the
+reader. Long-press still opens book details.
+
+Long-press a local tag to create a named **smart chip**. Combine up to 16 exact
+tags using **AND / OR**, scoped to one library or all local libraries. A chip
+uses cached tags; refreshing its matches reads missing or changed files. Pin
+it to Home just like another supported shelf. No book is moved or edited.
+
+For a complete initial pass or after bulk retagging, use **OrbitUI settings →
+Bookshelf → Tags and indexing**:
+
+- **Update tag index** reads new/changed files and retries failures.
+- **Reread all EPUB tags…** confirms a fresh read of the configured EPUBs.
+- Pause and continue across restarts; sleep or closing the page pauses the job
+  and preserves completed reads. Keep KOReader open on the page while indexing.
+
+Indexing has no 400-file limit. Individual tag result/chip views show at most
+400 matches and disclose **400+** when capped; an incomplete index is labelled.
+Library roots and configured scan depth determine coverage.
+
+## Make Home useful to you
+
+The optional **Reading dashboard** adds a Home page without replacing your
+existing pages. Choose its cards, headings, colours, order and row sources:
+local To Be Read, new books, history, collections, saved shelves or BookOrbit.
+Each book row has its own paging arrows and swipe navigation.
+
+Use **+ → Add module…** or **Cards and content** for compatible SimpleUI and
+Bookshelf plugin cards or action shortcuts. Added cards have independent sizes
+and positions; extra content gets dashboard pages rather than ever-smaller
+text. Removing a card removes its placement, not the plugin or its data.
+Third-party cards still depend on their own plugin and supported APIs.
+
+**Get more modules…** opens a small curated **Module library**, initially with
+the pinned official **Silverfish 2.0.0** release. Installation requires explicit
+confirmation and restart. Existing plugin folders are never overwritten;
+updates/removal stay manual. A compatibility badge describes the reviewed
+version and adapter tests, not a guarantee that arbitrary later versions or
+every device are safe. [Catalog and trust details](docs/ADDONS.md).
+
+With Silverfish installed and enabled, add **Currently reading + Silverfish**
+as another module: companion on the left, reading information in the middle,
+book cover on the right. Tap the companion to open Silverfish, or the book to
+resume reading. OrbitUI uses its public APIs without copying creature artwork,
+changing saves or maintaining a Silverfish fork. Continue reading stays intact.
+
+On Android, long-press **Android apps → Apps** to add, remove, rename and reorder
+shortcuts to installed apps. More apps get page arrows; removing a shortcut does
+not uninstall the app. An optional **Settings shortcut → Developer options**
+destination is saved separately. Discovery runs only when adding apps, not
+every time Home is drawn.
+
+## Find your place faster
+
+Shared **Search OrbitUI** can target all libraries, a configured section or a
+supported current shelf. Optional **Word suggestions** complete words from
+already cached local titles, authors and series. They do not scan EPUBs or call
+the network as you type; cold-cache coverage can be incomplete.
+
+The optional per-view **Alphabet strip** lets you tap or drag through the
+current supported sort/filter. It uses spare right-margin space and keeps
+Å/Ä/Ö distinct. Enable it through **footer counter ▾ → Sort, filter & view →
+Alphabet strip**. Unsupported layouts/sorts hide it rather than jumping to
+unrelated books. Both the strip and word suggestions are off by default.
+
+## BookOrbit, when you want it
+
+Use **OrbitUI settings → Integrations → BookOrbit** for the master switch and
+individual controls. Disabling OrbitUI's integrations preserves source choices,
+layouts and cached data; it does **not** turn off the separate BookOrbit
+plugin's own reading-progress sync.
+
+| Feature | What it needs / does |
 | --- | --- |
-| **SimpleUI foundation** | Modular Home and Custom Screens, reading statistics/goals, navigation and quick actions, wallpapers and layout customization. |
-| **Bookshelf foundation** | Visual shelves, cover grids and lists, book details, filtering/grouping, series boxes, themes and ornaments. |
-| **Shared OrbitUI interface** | Connected Home/library navigation, shared book details and scoped search, shelf rows or carousels pinned to Home, and unified settings. |
-| **Your own library structure** | Name and configure sections, folders, shelves and bottom-bar buttons. No required fiction/manga split or hard-coded personal folder setup. |
-| **Optional Reading dashboard** | Continue reading, statistics, goals and book rows, with configurable cards, headings and sources. Choose greyscale, colour accents or tinted cards; each book row has arrows and swipe navigation. |
-| **Shelf refinements** | Per-shelf cover size and captions, optional above-cover labels, Hardcover/Paperback/Kanzenban bindings, and aspect-preserving series covers with naturally sized spines. |
-| **Optional ornament add-ons** | Browse, install and update packs inside OrbitUI, separately from plugin updates. Author/series matching is the default; random placement is also available. |
-| **One update channel** | Verified full-plugin OTA updates with restart activation and code rollback. Embedded SimpleUI and Bookshelf do not update separately. |
+| **Want to read [Local]** | KOReader's local To Be Read collection. No account or network. |
+| **Want to read [BookOrbit]** | The connected BookOrbit plugin; matches its server list to local files. No extras server patch or downloads. |
+| **BookOrbit shelf / smartscope cards** | A connected plugin/server with native catalog and background APIs. Add multiple sources through dashboard **+ → BookOrbit shelves and smartscopes**. Exact linked files already on the device only; cached-first refresh, no new extras patch. |
+| **Manual Want to Read actions** | Explicit add/remove actions for a linked book. These change the server list/status, unlike passive cards. |
+| **Online tags** | A compatible optional server tag API extension. Explicit load/refresh; matches linked local books, not server-only books. Offline EPUB tags need none of this. |
+| **Import reading status — experimental** | Off by default. Requires the separate **read-statuses v1** server extension. GET-only import for linked local books; not reading-position sync or a second automatic remote writer. |
+| **Undo accidental opening** | A separate device patch and version-compatible server extension. Not bundled with or enabled by OrbitUI. |
+| **Hardcover single-writer compatibility** | A separate optional device patch lets BookOrbit remain the automatic Hardcover writer while retaining Hardcover linking/edition/metadata tools. |
 
-These are additions and integration choices on top of substantial upstream
-functionality, not a claim that OrbitUI invented the Home screen, library,
-series boxes, themes or ornament system. [The feature guide](docs/FEATURES.md)
-explains the extra controls and where to find them.
+Local and BookOrbit Want to Read are **separate modules**, never silently
+substituted for one another. Shelf/smartscope rules run on the server; cards
+show cached results first and refresh visible cards asynchronously, at most
+every 15 minutes. They do not download missing books or write reading status.
 
-**Stable 1.1.0:** promotes the unchanged beta.12 implementation after user
-acceptance. Includes series-level tag results, the alphabet strip, search word
-suggestions, exact-size cover reuse, optional plugin cards/module library,
-BookOrbit shelf/smartscope cards and Currently reading + Silverfish. All are
-optional; Continue reading and existing placements/data stay unchanged.
-Silverfish requires separately installed/enabled public 2.0.0; no fork or copied
-artwork. Bookshelf 6.4 is reserved for a separate 1.2 preview cycle. Update
-through the stable channel and restart. [Release notes](docs/OTA.md#orbitui-110).
+Status import protects open books, pending undo and newer/ambiguous local
+changes. It does not reset unread books, replace reading positions/history or
+resolve conflicts automatically. **Status check details** explains skipped
+counts; filename examples remain session-local and are not uploaded.
 
-**Svenska, stabil 1.1.0:** samma fungerande kod som beta.12, nu som stabil
-release. Serieträffar för taggar, bokstavslist, sökförslag, bättre omslagsåterbruk,
-valbara pluginmoduler, modulbibliotek, BookOrbit-hyllor/smartscopes och
-Läser just nu + Silverfish. Fortsätt läsa, placeringar och sparade data lämnas
-orörda. Bookshelf 6.4 tas in först i nästa betacykel. Uppdatera via den stabila
-kanalen och starta om KOReader. Användarens allmänna godkännande ersätter inte
-en dokumenterad testmatris för varje enhet eller valfri integration.
+[BookOrbit Extras](https://github.com/komadorirobin/bookorbit-extras) contains
+the separately installable patches/server extensions, exact supported server
+bases and English/Swedish instructions. An administrator must build, test and
+deploy compatible server changes. **An OrbitUI update never deploys them.**
+An extension for one exact BookOrbit release is not a promise of compatibility
+with all newer releases. Do not remove undo support while an opening is protected.
 
-**Included since 1.1.0-beta.7:** Add BookOrbit shelves and smartscopes as independent
-Reading dashboard cards: **+ → BookOrbit shelves and smartscopes → Refresh
-shelves and smartscopes**. Multiple cards, custom titles/sizes and cover
-row/carousel views. Only exact BookOrbit-linked files already on this device;
-cached-first, visible-only asynchronous refresh, no downloads/status writes or
-new extras server patch. Separate integration switch, Swedish/English controls.
-Requires a connected BookOrbit plugin with native catalog/background APIs.
-Desktop-tested; actual Bigme and live-server acceptance remain pending.
-[Release and rollback notes](docs/OTA.md#orbitui-110-beta7).
+BookOrbit sync, Hardcover, MyAnimeList and Patch Manager remain separate plugins
+where used. OrbitUI does not replace them or introduce a new automatic sync
+engine. Local books, tags, collections and local reading goals need no account.
 
-**Svenska, förhandsversion 1.1.0-beta.7:** Lägg till BookOrbit-hyllor och
-smartscopes som egna kort via **Läsöversikt → + → BookOrbit-hyllor och
-smartscopes → Uppdatera hyllor och smartscopes**. Flera kort med egna rubriker,
-storlekar och omslagsrad/karusell. Bara BookOrbit-länkade filer på enheten visas;
-sparade träffar först, uppdatering i bakgrunden för synliga kort, inga
-nedladdningar/lässtatusskrivningar eller nytt extras-servertillägg. Egen
-av/på-brytare under Integrationer, svenska/engelska. Kräver anslutet BookOrbit-
-plugin med katalog-/bakgrunds-API. Datorprovat; Bigme- och liveservertest återstår.
+## Choose the look — keep your setup
 
-**Included since 1.1.0-beta.6:** Reading dashboard
-can host compatible SimpleUI/Bookshelf plugin cards and action shortcuts.
-Tap **+**, or use **Cards and content → Add module…**. Long-press a plugin card
-to resize/hide/remove it; **Arrange cards** sets its position. Extra cards use
-separate dashboard pages, not smaller and smaller text. **Add module… → Get more
-modules…** opens a small curated **Module library**, initially Silverfish 2.0.0.
-It installs only the pinned reviewed archive, after confirmation and with a
-restart; existing plugins are never overwritten. Updates/removal remain manual;
-plugin data stays theirs. Silverfish's existing adapters
-are the first desktop compatibility check, not Bigme certification.
+Follow each shelf's own preferences, choose **Classic OrbitUI** for face-out
+books and compact eligible series boxes, or **Minimal bookshelf** without
+ornaments. Presets do not reset Home, wallpaper, icons or saved shelf choices.
+Configure per-shelf cover size, captions/placement, book binding and series
+title plates. Bindings include Hardcover, Paperback and Kanzenban/large format;
+series-specific overrides and naturally sized spines preserve cover proportions.
+These are visual treatments, not changes to book metadata.
 
-**Svenska, förhandsversion 1.1.0-beta.6:** Lägg till
-kompatibla pluginmoduler eller åtgärdsgenvägar via **+** i Läsöversikt eller
-**Kort och innehåll → Lägg till modul…**. Håll inne ett pluginkort för att ändra
-storlek, dölja eller ta bort det; **Ordna kort** bestämmer placeringen. Fler kort
-får egna sidor i Läsöversikt. **Lägg till modul… → Hämta fler moduler…** öppnar
-ett litet **Modulbibliotek**, först med Silverfish 2.0.0. Det installerar bara
-versionslåsta granskade arkiv efter bekräftelse och kräver omstart. Befintliga
-plugins skrivs aldrig över; uppdatering och avinstallation görs manuellt.
-Pluginens egna data behålls. Bara Silverfish-adaptrarna är skrivbordstestade;
-prov av hela pluginet på Bigmen återstår. [Detaljer](docs/ADDONS.md#executable-module-library-local-11-development).
+Optional **MyAnimeList** integration adds cached community ratings to linked
+manga boxes. Shared icon pickers add Material Symbols Rounded, Solar and Tabler
+choices, including Solar Colour/Mono artwork. [Icon credits](docs/ICONS.md).
 
-### Local books first, online services optional
+**Add-ons → Ornament add-ons** offers separately downloadable packs — Manga,
+Japan, Ukiyo-e Gallery, Modernists, Authors and Authors II — with previews and
+their own updates. Match author/series ornaments to books, or choose random
+placement. Supported pieces have enlarged information cards in Swedish/English.
+No packs are automatically installed on a fresh setup; existing artwork stays.
+Artwork licenses differ, including some noncommercial terms; they are not all
+covered by the code license. [Add-on instructions and credits](docs/ADDONS.md).
 
-**1.0.0 — first stable release.** Promotes the same runtime implementation as
-the user-accepted RC2; the upstream backlog is reserved for a separate 1.1 beta.
-Home/Reading dashboard, Library/Manga, shared book details, local tags and
-optional integrations retain their behavior. No new reading-data migration,
-sync owner or server deployment. Update through **stable** or **preview** and
-restart KOReader. Back up settings and reading data before installation.
-Optional BookOrbit status import remains experimental and OFF by default.
-User acceptance is not a compatibility certification for every Bigme/Boox model
-or every recovery/large-library scenario. [Release notes](docs/OTA.md#orbitui-100).
-
-**Svenska: 1.0.0 är första stabila releasen.** Samma funktionskod som den
-användargodkända RC2; upstream-nyheterna kommer i en separat 1.1-beta.
-Hem/Läsöversikt, Bibliotek/Manga, bokdetaljer, lokala taggar och valfria
-integrationer behåller sitt beteende. Ingen ny läsdatamigrering, synkägare eller
-serverdriftsättning. Uppdatera via **stabil** eller **förhandskanalen** och starta
-om KOReader. Säkerhetskopiera inställningar och läsdata först. BookOrbits
-statusimport är fortsatt experimentell och avstängd som standard. Godkännandet
-är inte en certifiering av alla Bigme/Boox-modeller eller alla återställnings-
-och storbiblioteksscenarier.
-
-You can use OrbitUI with ordinary local books, KOReader collections, local
-reading goals and no online account. BookOrbit, Hardcover and MyAnimeList are
-optional integrations, not requirements.
-
-**1.1.0-beta.5 preview:** fixes beta.4's invisible alphabet labels: use measured
-text height/width and no extra text padding, including high-DPI/narrow margins
-and the selected letter. Input/shelf geometry and sort/filter behavior stay
-unchanged. Automated tests reproduce the issue on beta.4; physical confirmation
-has been reported successful on the user's Bigme. Broader font/night/rotation
-acceptance on Bigme/Boox remains open.
-
-**Svenska — förhandsversion 1.1.0-beta.5:** fixar osynliga bokstäver i beta.4.
-Texten anpassas efter uppmätt höjd/bredd utan extra textmarginaler, även vid hög
-DPI, snäv marginal och markerad bokstav. Pekytor, hyllans utrymme och sortering/
-filter ändras inte. Felet återskapas i automattester på beta.4; korrigeringen
-är nu bekräftad av användaren på Bigme. Bredare prov med typsnitt, nattläge och
-rotation på Bigme/Boox återstår.
-
-**Also in 1.1.0-beta.6:** optional **Word suggestions** in
-**Search OrbitUI**, OFF by default. Complete the last word from already cached
-local titles/authors/series; tap one of up to three suggestions, then Search.
-Two characters and cursor at the end are required. Hold the toggle for help.
-Coverage follows the chosen scope and can be incomplete while caches are cold;
-there are no new file scans, EPUB reads or network requests while typing.
-
-**Också i 1.1.0-beta.6:** valfria **Ordförslag** i
-**Sök i OrbitUI**, avstängda som standard. Komplettera sista ordet från redan
-cachade lokala titlar/författare/serier. Tryck på ett av högst tre förslag,
-sedan Sök. Skriv minst två tecken med markören i slutet. Långtryck på reglaget
-för hjälp. Förslagen följer vald avgränsning men kan vara ofullständiga när
-cachen är kall. Inga nya filskanningar, EPUB-läsningar eller nätanrop görs
-medan du skriver.
-
-**In 1.1.0-beta.6:** shelf/list exact-size cover copies use byte-bounded LRU
-reuse without retaining their larger source buffers. Rendering, image quality,
-native disk caches and saved cover budgets stay unchanged. This is not a
-measured Bigme Library/Manga opening-time improvement.
-
-**I 1.1.0-beta.6:** hyllans/listans storleksanpassade omslagskopior
-återanvänds med en bytebegränsad LRU-cache utan att hålla kvar de större
-källbilderna. Rendering, bildkvalitet, diskcache och sparade omslagsbudgetar
-ändras inte. Snabbare öppning av Bibliotek/Manga på Bigme är ännu inte uppmätt.
-
-**Since 1.1.0-beta.4:** optional **Alphabet strip**, OFF by default. Enable it
-per view through **footer counter ▾ > Sort, filter & view > Alphabet strip**.
-Tap a letter, or drag to preview a large letter and release to jump within the
-existing sorted/filtered shelf. Å/Ä/Ö remain distinct. Dragging does not read
-books/metadata or rebuild the shelf; an explicit jump can query cached metadata.
-The strip uses spare right-margin space and hides in unsupported layouts/sorts.
-SV/EN labels; physical font, gesture, night-mode and timing checks remain open.
-
-**Svenska — förhandsversion 1.1.0-beta.4:** valfri **Bokstavslist**, avstängd
-som standard. Aktivera per vy via **sidräknaren ▾ > Sortering, filter och vy >
-Bokstavslist**. Tryck på en bokstav eller dra för att visa en stor bokstav och
-släpp för att hoppa i den befintliga sorterade/filtrerade hyllan. Å/Ä/Ö hålls
-isär. Dragningen läser inga böcker/metadata och bygger inte om hyllan; själva
-hoppet kan fråga metadata i cachen. Listen använder ledigt utrymme i högermarginalen
-och döljs i vyer/sorteringar som saknar stöd. Typsnitt, gester, nattläge och tider
-behöver fortfarande provas på riktig enhet. Stabil 1.0 är oförändrad.
-
-**Also included since 1.1.0-beta.3:** tag results have **Series / Volumes** tabs. Manga
-defaults to Series; a tap selects the first locally indexed available volume in
-the shelf preview, without opening the book. Grouping uses cached metadata, not
-another EPUB scan. Standalone and metadata-incomplete books remain visible.
-SimpleUI's latest fix prevents unrelated menus from refreshing the bottom bar.
-Physical acceptance of these new views remains outstanding.
-
-**Svenska — även med sedan 1.1.0-beta.3:** taggträffar har flikarna
-**Serier / Volymer**. Manga visar Serier som standard; ett tryck markerar första
-lokalt indexerade tillgängliga volymen i bokhyllan utan att öppna boken.
-Grupperingen använder cachad metadata, inte en ny EPUB-skanning. Fristående böcker
-och böcker med ofullständig metadata finns kvar. SimpleUI-fixen hindrar andra
-menyer från att rita om nederlisten. De nya vyerna behöver provas på enheten.
-
-The 1.1 preview cycle separately integrates Bookshelf 6.3.2 and SimpleUI's
-Cover Deck/Critter follow-ups. Adds publication-year sorting/curated local dates,
-revised book-menu layout and wallpaper scaling/previews, with metadata/cache and
-cover fixes. Automatic publication-date reads from files and the new folder-delete
-flow are deliberately deferred in OrbitUI pending safe lifecycle/recovery work.
-No 1.1 code enters stable 1.0. Physical testing of the new UI is still required.
-
-**Svenska — övriga 1.1-nyheter:** separat merge av Bookshelf 6.3.2 och
-SimpleUI-fixar. Utgivningsår/sortering, egna visningsdatum, ny bokmenylayout,
-bakgrundsskalning/förhandsbilder samt metadata-/cache-/omslagsfixar. Automatisk
-datumläsning ur filer och den nya mappraderingen är tills vidare avstängda i
-OrbitUI i väntan på säkra livscykel-/återställningslösningar. Stabil 1.0 påverkas
-inte. Den nya vyn behöver provas på enheten.
-
-BookOrbit synchronization, MyAnimeList and Patch Manager remain separate
-plugins where used. OrbitUI does not replace them, download your whole server
-library or introduce a new synchronization engine.
-
-### Android apps (Beta 26)
-
-Long-press the **Android apps** module (previously **App Launcher**) and open
-**Apps > Add app…** to choose a launcher app installed on the device. Tap a
-selected app in that list to rename it, move it before/after a named neighbour,
-or remove its shortcut. Removing a shortcut does not uninstall the Android app.
-The numbered list shows the current order; extra apps get page arrows rather
-than being squeezed into one row. Choices are saved locally for this device
-and shared by this module's Home/custom pages. No account or server is needed.
-
-Existing enabled modules retain the six legacy shortcuts until edited. A
-newly enabled module starts empty; tap its **Add Android apps…** placeholder
-to configure it. An explicitly emptied list stays empty after restart. Normal
-SimpleUI module long-press settings still apply. If Android does not expose an
-app in the picker, **Add by package name…** remains available. App discovery
-runs only when you ask to add an app, never during Home painting. The list is
-bounded to 128 selected apps. The separate Settings destination choice stays
-saved even if you remove and re-add the Settings shortcut.
-
-**Svenska:** Långtryck på **Android-appar** (tidigare **App Launcher**) och välj
-**Appar > Lägg till app…**. Tryck på en vald app för att byta namn, flytta den
-före/efter en namngiven granne eller ta bort genvägen. Android-appen avinstalleras
-inte. Numreringen visar ordningen och fler appar får sidpilar. Valen sparas
-lokalt på enheten och delas mellan modulens Hem- och anpassade sidor.
-Befintliga aktiva moduler behåller sina val; nya börjar tomma. Tryck på
-**Lägg till Android-appar…** i en tom modul för att konfigurera den. En tömd
-lista förblir tom efter omstart. Vanliga SimpleUI-inställningar för långtryck
-gäller. **Lägg till med paketnamn…** finns om en app saknas i Androids lista.
-Målet för Inställningar-ikonen behålls även när genvägen tas bort och läggs till
-igen. Funktionen ingår i Beta 26.
-
-### Optional BookOrbit features
-
-**1.1.0-beta.7 preview:** Reading dashboard **+ → BookOrbit
-shelves and smartscopes → Refresh shelves and smartscopes** lists sources from
-the connected BookOrbit plugin's catalog API. Select a library, shelf or
-smartscope to add a card; repeat for more cards. Tap its heading (or hold its
-background) to change source, title, size, cover row/carousel or refresh it.
-Smartscope rules run on BookOrbit, not in KOReader. Only exact BookOrbit-linked
-files already on the device are shown; unlinked local copies and server-only
-books are not guessed or downloaded. Cached results appear first. Visible
-cards refresh asynchronously, at most every 15 minutes, and only their own
-subtrees redraw. No scan/HTTP while painting, no automatic Wi-Fi activation or
-reading-status writes. A separate switch under **Integrations → BookOrbit**
-disables these cards without changing the Want to Read switch, links or layout.
-No extras server patch is required; an older plugin/server without the native
-catalog/subprocess APIs needs an update. Desktop/fixture tested only; physical
-Bigme and live server acceptance remain pending.
-
-**Förhandsversion 1.1.0-beta.7:** **Läsöversikt → + → BookOrbit-hyllor
-och smartscopes → Uppdatera hyllor och smartscopes** visar källor från det
-anslutna BookOrbit-pluginets katalog-API. Lägg till flera kort med olika källor.
-Tryck på rubriken eller långtryck på kortets bakgrund för att ändra källa,
-rubrik, storlek, omslagsrad/karusell eller uppdatera. Bara BookOrbit-länkade
-filer som finns på enheten visas; olänkade kopior gissas inte fram och inget
-laddas ned. Servern utvärderar smartscopes. Sparade träffar visas direkt och
-synliga kort uppdateras i bakgrunden högst var 15:e minut utan att bygga om
-resten av Hem. Funktionen har en egen av/på-brytare under **Integrationer →
-BookOrbit** och kräver inget extras-servertillägg, men ett tillräckligt nytt
-BookOrbit-plugin/server. Ingen lässtatus skickas. Dator-/fixturtestat, ännu inte
-verifierat på Bigmen eller mot den riktiga servern.
-
-**Beta 28 (experimental):** **Integrations > BookOrbit > Import reading
-status from BookOrbit** adds an off-by-default, deferred GET-only importer for
-saved device matches. Automatic attempts are throttled to 15 minutes; Update
-now and the last successful check are available in the same page. Requires
-the separate `read-statuses v1` extension for exact BookOrbit 3.6.0, now
-published in [BookOrbit Extras 0.3.0](https://github.com/komadorirobin/bookorbit-extras/releases/tag/v0.3.0).
-An administrator must install it separately; the OrbitUI beta alone cannot
-enable it on an unextended server. The separately reviewed Littex installation
-has server support, but this does not change the client's off-by-default choice.
-No EPUB indexing, cover work, downloads or new remote writer. Open/parked
-books, pending Undo and newer/ambiguous same-day local changes are protected.
-Unread/Want to Read do not reset local reading. Position, history, ratings and
-reviews stay unchanged. Unchanged canonical statuses need no sidecar I/O;
-changed statuses are published in slices, with caches refreshed on normal
-navigation rather than forcing a heavy Manga rebuild. Conflicts/ambiguous
-metadata copies are skipped, not resolved automatically. Bigme timing/UI
-acceptance remains pending; headless tests are not device measurements.
-RC1 adds **Status check details** with separate reasons/counts and up to 50
-session-only filename examples. Only counts persist; nothing is uploaded and
-no status overwrite protection is relaxed. Old reports require a new check
-for reasons; they cannot retrospectively explain previous skipped totals.
-
-**Beta 28 (experimentellt):** Under **Integrationer > BookOrbit > Hämta lässtatus
-från BookOrbit** finns en avstängd bakgrundsfunktion för redan kopplade böcker.
-Den kontrollerar status högst var 15:e minut efter att Hem/hyllan visas, med
-manuell uppdatering och tid för senaste lyckade kontroll. Kräver det nya
-servertillägget `read-statuses v1`, publicerat i
-[BookOrbit Extras 0.3.0](https://github.com/komadorirobin/bookorbit-extras/releases/tag/v0.3.0).
-Det separat granskade Littex-bygget är driftsatt; på andra servrar måste
-administratören installera tillägget. Enbart OrbitUI-uppdateringen ger inte
-serverstödet och funktionen aktiveras aldrig automatiskt. Ingen indexering,
-omslagshämtning eller ny skrivare till server/Hardcover. Öppna böcker, väntande
-ångring och nyare/osäkra ändringar samma dag skyddas. Position och historik
-ändras inte. Oförändrad status kräver ingen läsning av lokala bokinställningar.
-Visningen uppdateras vid vanlig navigering, utan en framtvingad tung
-Manga-ombyggnad. Mätning och visuell kontroll på Bigmen återstår.
-RC1 lägger till **Detaljer om statuskontrollen** med separata orsaker/antal och
-högst 50 tillfälliga filnamnsexempel. Bara antalen sparas, ingenting laddas upp
-och inget skydd luckras upp. Kör en ny kontroll för orsaker; äldre totalsiffror
-kan inte delas upp i efterhand.
-
-**Beta 27 — smart offline tag chips:** long-press a local
-EPUB tag in the book's **Tags** tab to create a named smart chip in an existing
-library. Combine up to 16 exact tags with **AND** or **OR**, within that library
-or all local libraries. Opening a chip checks cached tags only; the **Indexed**
-footer is not a claim of complete indexing. Swipe down or use **Update tag
-matches…** in its settings to read missing/changed EPUB tags, with progressive
-results and Stop. The first 400 matches are shown; a capped chip says **400+**.
-Chips retain normal rename/order/remove and Home-pinning controls. No book is
-copied, moved or edited, and no BookOrbit account/server patch is needed.
-
-**Svenska, Beta 27 — smarta lokala taggchip:** långtryck på en
-lokal EPUB-tagg i bokens **Tags/Taggar**-flik för att skapa ett namngivet chip.
-Kombinera högst 16 exakta taggar med **OCH/ELLER** i valt bibliotek eller alla
-lokala bibliotek. Chipet visar **Indexerade** träffar utan att automatiskt läsa
-alla EPUB-filer. Svep nedåt eller välj **Uppdatera taggträffar…** för att läsa
-saknade/ändrade taggar. Sökningen kan stoppas; gränsen är 400 träffar och markeras
-med **400+**. Vanliga chipinställningar och visning på Hem fungerar även här.
-Inga böcker flyttas/redigeras och inget BookOrbit-konto eller servertillägg krävs.
-
-**Index all EPUB tags:** open **OrbitUI settings > Bookshelf > Tags and
-indexing**. **Update tag index** reads new/changed files and retries failures;
-**Reread all EPUB tags…** confirms a fresh read of every configured EPUB, useful
-after bulk retagging. Unlike a search result list, this job has **no 400-file
-limit**. Pause/Continue works across KOReader restarts; closing the page pauses
-the job and keeps completed reads. Resume rediscovers the inventory and
-revalidates file stamps, so its current-pass counter restarts without discarding
-successful same-run reads. Keep KOReader open on this page while indexing;
-pause before replacing EPUBs. It uses configured library roots and scan depth,
-not every EPUB elsewhere on the device. Read/reused/failed counts distinguish
-unreadable files from untagged books. Tag searches/chips still show at most 400
-matches (400+ is disclosed); indexing more books does not remove that view cap.
-
-**Indexera alla EPUB-taggar:** öppna **OrbitUI-inställningar > Bookshelf >
-Taggar och indexering**. **Uppdatera taggindex** läser nya/ändrade filer och
-försöker igen med misslyckade. **Läs om alla EPUB-taggar…** startar efter
-bekräftelse en ny omläsning av alla konfigurerade EPUB-filer — lämpligt när du
-har taggat om hela biblioteket. Indexeringen har **ingen gräns på 400 filer**.
-Du kan pausa och fortsätta efter omstart; stängning pausar och behåller färdiga
-läsningar. Fortsätt räknar om det aktuella beståndet från början men återanvänder
-oförändrade filer som redan lästs i samma jobb. Låt KOReader vara öppet på
-sidan medan jobbet körs, och pausa innan du ersätter EPUB-filerna. Bibliotekens
-mappar och sökdjup gäller. Räknare visar lästa, återanvända och misslyckade
-filer; oläsbara filer blir inte falska tomträffar. Sökningar/chip behåller sin
-visningsgräns på 400 träffar, även om fler böcker är indexerade.
-
-**RC2:** sleep pauses offline tag
-search/indexing without automatically restarting it on wake. Completed reads
-are kept; Continue resumes the index manager. If navigation changed, Close
-still works and the page explains that it must be reopened. Tapping a title in
-either local or BookOrbit tag results selects the book on its actual shelf,
-showing its cover/description without opening it for reading. Long-press still
-opens book details; other search/reader open actions are unchanged.
-
-**RC2:** vila pausar lokal
-taggsökning/indexering utan automatisk återstart. Redan lästa taggar behålls;
-Fortsätt återupptar indexeringen. Om navigationen ändrats fungerar Stäng ändå,
-och sidan förklarar att den behöver öppnas igen. Ett titeltryck i lokala eller
-BookOrbit-taggträffar markerar boken i rätt bokhylla och visar omslag/beskrivning
-utan att öppna läsvyn. Långtryck öppnar fortfarande bokdetaljer; övriga
-sök- och läsåtgärder är oförändrade.
-
-**OrbitUI settings > Integrations > BookOrbit** has a master switch and
-independent controls for the BookOrbit list, manual status actions and online
-tags, available from Beta 23. They do not disable the separate BookOrbit plugin's
-reading-progress sync, erase its credentials, or replace your saved layouts.
-
-| Feature | Source and requirements |
-| --- | --- |
-| **Want to read [Local]** | Existing local To Be Read module and KOReader collection. No account, network or server patch. |
-| **Want to read [BookOrbit]** | BookOrbit's Want to Read list, matched to files already on the device. Requires its connected KOReader plugin; no optional server patch. Does not download books. |
-| **Manual BookOrbit menu actions** | Explicitly add/remove a linked book from Want to Read. These actions change the server's read status; they are not a second automatic progress sync. |
-| **EPUB tags (offline)** | Read embedded `bookorbit:tags` metadata and find matching local EPUBs across profiles. No BookOrbit installation or API patch required. Standard EPUB subjects remain genres. Available in Beta 22. |
-| **Online BookOrbit tags** | Explicit load/refresh in the Tags tab. Exact matches among linked local files need the optional server API addition. No server-only results or automatic metadata writes. |
-| **Import reading status (experimental, Beta 28)** | Opt-in GET-only import for linked device books. Requires the separately installed read-statuses v1 server extension, published in BookOrbit Extras 0.3.0. No position sync or new remote writer. |
-| **Undo accidental opening** | Separate device patch plus a version-compatible server extension. Not bundled or controlled by OrbitUI. |
-| **Hardcover single-writer compatibility** | Optional device patch keeps BookOrbit as the automatic Hardcover writer while retaining the separate Hardcover plugin's linking/edition/metadata tools. |
-
-The two Want to Read modules remain separate. Turning BookOrbit off does not
-silently substitute the local collection, alter either list or remove saved
-source selections. Add the local module through **Home (SimpleUI) > Layout &
-modules**, or choose its source in **Reading dashboard**. Custom headings stay.
-
-See **[BookOrbit Extras](https://github.com/komadorirobin/bookorbit-extras)** for
-device-patch installation, exact server bases, licenses and English/Swedish
-instructions. Server changes require the server administrator to build, test
-and deploy them separately. An OrbitUI update never deploys a server patch.
-The reviewed official BookOrbit **3.6.0** source package can combine tags and
-undo; it does not mean support for every newer version. The old **3.2.0**
-compiled overlay must not be copied over a newer server. Databases using that
-old custom migration need a separately reviewed upgrade; do not erase opening
-state or rewrite migration history to bypass its safety check.
-Do not disable/remove undo support with a protected opening pending; resolve
-that state using the patch first. Local EPUB tags need none of these extras.
-
-**Svenska:** Under **OrbitUI-inställningar > Integrationer > BookOrbit** samlas
-de valfria funktionerna. **Vill läsa [Lokalt]** använder KOReaders lokala samling;
-**Vill läsa [BookOrbit]** hämtar serverns lista men visar bara matchade filer på
-enheten. Listorna byts aldrig ut mot varandra. Huvudbrytaren styr bara OrbitUIs
-funktioner, inte BookOrbits egen synk. EPUB-taggar fungerar offline utan patchar;
-taggmatchning via servern och Ångra öppning har separata serverkrav. De nya
-inställningarna och källnamnen ingår från Beta 23. BookOrbit Extras har ett
-granskat paket för exakt officiella 3.6.0 med båda funktionerna. Använd inte det
-gamla 3.2.0-överlägget på en nyare server; gamla egna databaser kräver en separat
-granskad uppgradering.
-
-### Choose the look
-
-Keep each shelf's own settings, choose **Classic OrbitUI** for face-out books
-and compact series boxes, or choose **Minimal bookshelf** without ornaments.
-The Home layout is configured separately.
-
-Ornaments are **not bundled or automatically installed** on a fresh setup.
-Install only the packs you want through **OrbitUI settings > Add-ons >
-Ornament add-ons**. Existing artwork is retained. Packs have their own credits
-and licenses, including some noncommercial licenses; they are not all covered
-by the code license. See [add-on instructions](docs/ADDONS.md).
+Shared quick controls provide supported native light controls, Wi-Fi, battery
+and time actions. Status-field taps are opt-in; Android Wi-Fi opens system
+settings. Hardware light-driver fixes, where needed, remain separate patches.
+Optional **Adaptive memory / Responsive** profiles trade cache/preloading for
+memory or responsiveness without changing image quality or saved cache budgets.
+Local performance reports help diagnose slow views; they are not a universal
+device-speed promise.
 
 ## Installation
 
-**Requirements:** KOReader **v2025.08 or newer**; v2026.03 or newer is recommended
-by Bookshelf. Keep KOReader's **Cover browser** plugin enabled. Beta 26 is a
-prerelease, not a promise of compatibility with every device or user patch.
+**Requirements:** KOReader **v2025.08 or newer**; **v2026.03 or newer** is
+recommended by Bookshelf. Keep KOReader's **Cover browser** plugin enabled.
 
-1. **Back up first.** Keep a copy of your KOReader settings, user patches,
-   custom artwork and working plugins. Preserve book sidecars/reading data
-   separately too. See [backup details](docs/MIGRATION.md#what-is-preserved).
-2. **If SimpleUI or Bookshelf is installed, disable it in KOReader's plugin
-   manager and restart KOReader.** Disable both if you have both. Do not delete
-   their settings or plugin folders.
+1. **Back up first:** settings, working plugins, patches, custom artwork and
+   book sidecars/reading data. [What to preserve](docs/MIGRATION.md#what-is-preserved).
+2. Disable standalone **SimpleUI and Bookshelf**, if installed, and restart
+   KOReader. Keep their files and settings for rollback.
 3. Download **`orbitui.koplugin.zip`** from the
-   [Beta 27 release](https://github.com/komadorirobin/orbitui.koplugin/releases/tag/v0.1.0-beta.27).
-   Do **not** use **Code > Download ZIP** or GitHub's **Source code** archives.
-4. Fully exit KOReader. Extract the ZIP and copy its **`orbitui.koplugin`**
-   folder into your KOReader **`plugins/`** directory.
-5. Start KOReader. Enable OrbitUI in the plugin manager and restart if needed.
-   On a fresh setup, the guide helps you choose folders, a start screen and
-   bottom-bar buttons. Nothing in the guide is applied until you confirm.
-6. Open **Tools > OrbitUI > OrbitUI settings** to customize it. Existing
-   SimpleUI/Bookshelf users keep their configuration rather than receiving an
-   automatic setup prompt; open **Setup guide** manually when wanted.
+   [stable 1.1.0 release](https://github.com/komadorirobin/orbitui.koplugin/releases/tag/v1.1.0).
+   Do not use **Code → Download ZIP**, **Source code**, checksum files or an
+   ornament-only release.
+4. Fully exit KOReader. Extract the ZIP and copy **`orbitui.koplugin`** into
+   its **`plugins/`** directory.
+5. Start KOReader, enable OrbitUI if needed and restart. On a fresh setup, the
+   optional guide reviews folders, start screen, navigation buttons and preset
+   before applying anything. Existing users keep their configuration.
+6. Open **Tools → OrbitUI → OrbitUI settings** to make it yours.
 
-Typical plugin locations (use the location of your actual KOReader installation):
-
-| Device | Plugins directory |
+| Device | Typical plugins directory |
 | --- | --- |
 | Kobo | `.adds/koreader/plugins/` |
 | Kindle | `koreader/plugins/` |
 | PocketBook | `applications/koreader/plugins/` |
 | Android | `koreader/plugins/` in internal storage |
 
-The resulting path must be **`plugins/orbitui.koplugin/main.lua`**, not
-`plugins/orbitui.koplugin/orbitui.koplugin/main.lua`. Do not install the folders
-under `components/` as separate plugins.
+Use your actual KOReader installation's location. The result must be
+**`plugins/orbitui.koplugin/main.lua`**, not a doubly nested folder. Do not
+install the folders under `components/` as separate plugins.
 
-**Already using OrbitUI?** Use **Tools > OrbitUI > Uppdatera OrbitUI**
-(the updater's current label), enable preview releases, update and restart.
-Do not install SimpleUI or Bookshelf updates inside OrbitUI. For manual updates
-of an existing OTA installation, read [the recovery guide](docs/OTA.md) first.
+**Already using OrbitUI?** Its **Uppdatera OrbitUI** menu is the recommended
+update path. Choose **stable** for releases or opt into **preview** for betas,
+update, then restart. Embedded SimpleUI/Bookshelf never update independently.
+Updates verify the full package and support restart activation/code rollback;
+code rollback does not restore stale reading-progress files.
+[OTA and manual recovery](docs/OTA.md).
 
-### Installing through a community app store
+### Already using SimpleUI or Bookshelf?
 
-OrbitUI is discoverable by KOReader app stores through its GitHub repository
-name and the `koreader-plugin` topic. These stores are independent projects;
-being listed does not mean that their maintainers have reviewed or endorsed
-OrbitUI. Their local catalogs may need refreshing.
+OrbitUI reuses the existing settings and recognizes old/current Bookshelf
+locations; ornament folders are read in place. If both settings locations
+exist, the older flat location takes priority and the other is left untouched,
+not automatically merged. Read [the migration guide](docs/MIGRATION.md) first
+if those copies differ.
 
-**[AppStore by omer-faruq](https://github.com/omer-faruq/appstore.koplugin):**
-after the backup and predecessor-disable steps above, find
-`komadorirobin/orbitui.koplugin`. In its download options, choose
-**Other releases...**, uncheck **Filter pre-releases**, select
-**v0.1.0-beta.26**, then select **`orbitui.koplugin.zip`**. Restart KOReader
-after installation. Preview builds are not returned by GitHub's "latest stable release"
-endpoint, so the default latest-release lookup may report that none exists.
-Do not choose **Direct download from repo**, **Source code**, the checksum
-file, or the add-on-only **ornaments-1** release.
+Before first component startup, a limited snapshot goes into
+`settings/orbitui/before-first-run/`; a failed snapshot blocks startup. This is
+**not a full backup** of books, sidecars, databases, artwork or other plugins.
+Older standalone versions may not understand newer settings. To switch back,
+disable OrbitUI and restart before re-enabling the old plugins. Never run both.
 
-**[Storefront by ultimatejimmy](https://github.com/ultimatejimmy/storefront.koplugin):**
-use **26.10.20 or newer**, which includes the
-[embedded-plugin detection fix](https://github.com/ultimatejimmy/storefront.koplugin/releases/tag/26.10.20).
-Find `komadorirobin/orbitui.koplugin` and choose **v0.1.0-beta.26** and
-**`orbitui.koplugin.zip`** from its versions/releases options if the cached
-catalog still shows an older beta. Disable the predecessor plugins first as
-described above. Older affected installers (including **26.10.17-beta2**) can
-mistake embedded SimpleUI for the outer plugin and overwrite `simpleui.koplugin`;
-use the manual ZIP instructions rather than those versions.
+### Community app stores
 
-These instructions concern **first installation**. For subsequent OrbitUI
-updates, **OrbitUI's own updater remains the recommended path**. Install Beta 2 or later
-through it first: Beta 1 and earlier cannot detect an externally overwritten root
-while an older OTA version remains active.
+Independent stores can find **`komadorirobin/orbitui.koplugin`**. Choose the
+**v1.1.0** release and **`orbitui.koplugin.zip`**, not a repository/source ZIP
+or an add-on release. Their listing is not an endorsement or compatibility
+certification; refresh a stale catalog or install manually.
 
-Beta 2 adds verified import of subsequently installed, newer external **release
-ZIPs**, preserving the active OTA snapshot for rollback. An extra restart is
-required to adopt the verified snapshot. Storefront also needs its own installer
-fix as described above, and real-device testing of the external-import flow is
-still pending. See [external-update compatibility](docs/OTA.md#external-updates-beta-2-and-later).
+For [Storefront](https://github.com/ultimatejimmy/storefront.koplugin), use
+**26.10.20 or newer**: older affected installers can mistake embedded SimpleUI
+for the outer plugin. [AppStore](https://github.com/omer-faruq/appstore.koplugin)
+also offers release selection. Disable predecessor plugins before either
+installation. For subsequent updates, prefer OrbitUI's own updater; consult
+[external-update recovery](docs/OTA.md#external-updates-beta-2-and-later) before
+manually overwriting an existing OTA installation.
 
-In-app ornaments are managed separately under **OrbitUI settings > Add-ons**.
-Their [distribution repository](https://github.com/komadorirobin/orbitui-addons)
-is separate from plugin releases. Existing packs and settings are preserved;
-older catalog downloads remain available for previous OrbitUI versions.
+## Stable 1.1 and what's next
 
-## Already using SimpleUI or Bookshelf?
+**1.1.0** promotes the user-accepted beta.12 runtime unchanged. Its highlights
+include series-level tag results, the alphabet strip, optional word suggestions,
+cover reuse, plugin/module-library support, BookOrbit shelf/smartscope cards and
+Currently reading + Silverfish. Continue reading, saved placements and data stay
+intact. Bookshelf 6.4 changes belong to the separate **1.2 preview cycle**, not
+the frozen 1.1 release. [Release notes and history](docs/OTA.md#orbitui-110).
 
-**Your existing data is not intentionally wiped or moved.** OrbitUI reuses
-SimpleUI's settings and recognizes both the older and current Bookshelf settings
-locations. It reads existing ornament folders in place. Normal preference edits
-use the selected existing stores, rather than a separate one-time imported copy.
+**Svenska:** OrbitUI samlar Hem och bokhyllan i ett plugin, med bland annat
+Läsöversikt, egna bibliotekssektioner, lokala taggar/smarta taggchip, Serier/
+Volymer, bokstavslist, valfria pluginmoduler och Läser just nu + Silverfish.
+BookOrbit är frivilligt: Vill läsa [Lokalt] och Vill läsa [BookOrbit] är skilda
+källor, och hyllor/smartscopes kan visas som egna kort. Vissa onlinefunktioner
+kräver separata tillägg; vanliga lokala böcker och EPUB-taggar gör det inte.
+Stabil 1.1 behåller den godkända beta.12-koden. Upstream-nyheter provas i 1.2-beta.
 
-Before its first component startup, OrbitUI also makes a **limited settings
-snapshot** in `settings/orbitui/before-first-run/`. A failed snapshot blocks
-startup. This is **not a full backup**: ornament images, wallpapers, books,
-sidecars, databases and other plugins' settings are not copied by that snapshot.
+Automated Lua/LuaJIT, native-fixture, packaging and update/rollback checks
+complement user testing. Stable does not certify every device, third-party
+patch, optional integration or recovery scenario. Some optional features remain
+experimental as marked. [Test evidence and remaining checks](docs/TESTING.md).
 
-If both old and new Bookshelf settings files exist, the older flat location
-wins to protect existing OrbitUI installations. The other copy is left untouched,
-not merged. Read [the migration guide](docs/MIGRATION.md) before proceeding if
-you have two different configurations.
-
-Existing Home pages and configured integrations are retained. OrbitUI-specific
-options and later upstream setting formats may not be understood by older
-standalone versions. Visual behavior can differ; custom patches are not
-guaranteed compatible. For rollback, **disable OrbitUI and restart before
-re-enabling your old plugins**. Never restore stale reading-progress files just
-to undo a UI change.
-
-## Beta status and feedback
-
-**0.1.0-beta.26** publishes Bookshelf **6.1.1**, configurable **Android apps**,
-and the measured first-Manga-opening optimizations. On the test Bigme, first
-Manga visits improved from a 15.76-second median to 6.18 seconds; warm Manga
-did not improve and metadata refresh can still pause. Picker cards now use
-their own height inside the shelf editor. Quiet update work forwards the tap
-that cancels it, and single-page settings retain category cards.
-
-It also fixes the Android crash on long-press > **Refresh metadata**.
-The safety check now uses the existing preference store instead of the settings
-editor. Android safe mode and your settings remain unchanged; no cache reset or
-full reindex is needed for this fix. All Beta 24 changes below remain. See
-[Beta 26 notes](docs/OTA.md#orbitui-010-beta26).
-App Launcher additionally offers an optional device-local **Settings shortcut >
-Developer options** target; normal Android Settings stays the default.
-
-**Svenska:** Beta 26 innehåller Bookshelf **6.1.1**, valbara **Android-appar**
-och optimerad första öppning av Manga. På test-Bigmen sjönk medianen från
-15,76 till 6,18 sekunder; redan laddad Manga blev inte snabbare. Valkort får
-rätt höjd i hyllredigeraren, tyst uppdateringsarbete släpper vidare avbrytande
-tryck och inställningarnas kategorikort fungerar även på en sida.
-Beta 26 rättar också kraschen vid långtryck > **Uppdatera metadata** på
-Android. Säkerhetsläget och dina inställningar behålls. Du behöver inte radera
-omslagscachen eller indexera om för att rätta den här kraschen. Uppdatera via
-förhandsversionskanalen och starta om KOReader. Fortsatt beta.
-App Launcher får också ett frivilligt enhetslokalt val **Inställningar-genväg >
-Utvecklaralternativ**. Vanliga Android-inställningar är fortfarande standard.
-
-**0.1.0-beta.24** publishes the reviewed **Bookshelf 6.1.0** integration:
-page-based shelf editing, clearer book dialogs/actions, richer genre/collection
-filters and improved cover/ornament cache reuse. SimpleUI fixes bold-font sizing
-under UI scaling. OrbitUI's profile, navigation, binding, caption, Android/night
-and BookOrbit adaptations remain, with new English/Swedish labels. No settings,
-reading data, external patch or server is reset or deployed. Physical Bigme/Boox
-acceptance remains open; cache benefits are not measured device speedups.
-See [Beta 24 notes](docs/OTA.md#orbitui-010-beta24), including rollback caveats.
-
-**Svenska:** Beta 24 innehåller Bookshelf 6.1 med tydligare bokdialoger,
-sidindelad hyllredigering, fler filter och förbättrad cache för omslag/ornament.
-Våra profiler, snabbstängning och BookOrbit-funktioner behålls. Fortsatt beta;
-prova de nya vyerna på enheten efter uppdatering och omstart.
-
-**0.1.0-beta.23** adds the BookOrbit integration settings, explicit local/server
-Want to Read source names, independent feature switches and guarded pending
-requests. It keeps offline EPUB tags and the external BookOrbit plugin's own
-progress sync independent. No server or device patch is deployed by OrbitUI.
-Physical Bigme/Boox settings and source-switch acceptance remain open.
-
-**0.1.0-beta.22** adds offline embedded
-EPUB tags to the existing Tags tab, alongside the optional online source.
-Exact local results span configured profiles without an account or server
-patch. It includes Beta 21's Book details crash fix and Beta 20's night-mode,
-search/browse refinements and reviewed upstream changes. Physical Bigme/Boox
-acceptance and optional live tag API verification remain open. Its published
-archive is unchanged; the newer controls are a separate Beta 23 release.
-
-**0.1.0-beta.18** fixes status taps being intercepted by Home's top menu,
-applies the quick-control opt-in immediately and keeps unanchored quick-control
-dialogs native so tabs, Close and Wi-Fi actions can respond. Existing custom
-gestures and modal/lifecycle safety remain. No new upstream import or hardware
-light driver is included; the optional Bigme compatibility userpatch is separate.
-See [Beta 18 notes](docs/OTA.md#orbitui-010-beta18) for English/Swedish details.
-Physical Boox/Bigme input and system-return retesting remains required.
-
-**0.1.0-beta.17** adds large bilingual settings-category cards and shared
-light/Wi-Fi/battery/time quick controls. Open **OrbitUI settings > Navigation &
-interface > Quick controls**; status-field taps are opt-in and the same action
-can be added to a bar without replacing saved buttons. Supported light controls
-use native ranges; Android Wi-Fi opens system settings. The reviewed October 30
-upstream changes also add optional grid quick actions, six-column book rows,
-menu hiding, page-turn statistics and Tiny Critter options. Existing profiles,
-safe-mode covers, fast reader return and external integrations are retained.
-See [Beta 17 notes](docs/OTA.md#orbitui-010-beta17) for SV/EN controls, upgrade/
-rollback details and outstanding physical-device checks. No new upstream import
-is performed by this release, and no measured device-speed claim is made.
-
-**0.1.0-beta.16** adds demand-driven Reading dashboard data, optional Adaptive
-memory / Responsive profiles, local performance reports and a bilingual
-Home/Bookshelf quick guide. Existing behaviour remains the default. The runtime
-package is smaller without dropping languages, images or licenses, and verified
-obsolete update-code snapshots can be cleaned after healthy startup while
-factory/current/rollback and user data remain protected. See [Beta 16 notes](docs/OTA.md#orbitui-010-beta16)
-for controls, tradeoffs and remaining physical-device checks. No new upstream
-import or measured device-speed claim is included.
-
-**0.1.0-beta.10** integrates **Bookshelf 6.0.2**: explicit metadata refresh
-now discards stale batch rows so books/covers can be re-extracted, colour-cover
-shadows stay clipped, status updates use the measured strip and clock ticks
-avoid refreshing beneath other windows. Micro-modules gain public book actions
-and keyboard access to their fullscreen editor. SimpleUI and the working
-Home/Bookshelf navigation fixes are retained. No automatic rescan or data reset.
-See [the Beta 10 notes](docs/releases/0.1.0-beta.10.md); physical cover/repaint/
-module-key and broader Bigme checks remain open.
-
-**0.1.0-beta.9** makes **Bookshelf** a direct navigation action and a removable
-default button on new setups. Existing bars are kept: open **OrbitUI settings >
-Bookshelf navigation** to enable it and choose a profile, or long-press the
-Bookshelf button. Each library section can also be added as its own button;
-profiles retain their independent folders and chips. Missing old `prose`/`comics`
-targets now explain the problem instead of silently doing nothing. No settings
-reset or custom dispatcher action is required. See
-[the Beta 9 notes](docs/releases/0.1.0-beta.9.md).
-
-**0.1.0-beta.8** fixes the missing `Blitbuffer` import in Home's shared screen
-engine. This caused `sui_screen_engine.lua:288` to fail while loading Home,
-including after Beta 7. New tests load the entire engine without ambient globals,
-then exercise Home and Custom Screen opening with native rendering stubbed.
-Update and restart; no settings reset is needed. Physical-device retesting is
-still required. See [the Beta 8 notes](docs/releases/0.1.0-beta.8.md).
-
-**0.1.0-beta.7** fixes a reproduced first-run Home crash caused by a missing
-logger import. Home load/open failures now show the actual error and log its
-traceback instead of only reporting that Home is unavailable. Failed partial
-Home windows are closed without resetting settings or scheduling an automatic
-retry. This is not confirmation that every reported Android native crash is
-resolved; physical-device retesting remains required. See
-[the Beta 7 notes](docs/releases/0.1.0-beta.7.md).
-
-**0.1.0-beta.6** integrates reviewed **Bookshelf 6.0.0** and newer **SimpleUI 3.0**
-Git commits. Bookshelf adds a micro-module layout editor, Shelf/Ornament modules
-among books, pinned ornaments, per-card colours, Highlights in book details and
-persistent derived caches. Its editor is separate from SimpleUI's Home/Bento
-editor. SimpleUI adds a shared daily-statistics ledger and display fixes.
-
-Existing Home/Bento layouts, scoped shelves, series-box bindings and cover
-proportions, author/series ornaments and optional external integrations are
-retained. SimpleUI's real Git history now accounts for the previously reviewed
-3.0 ZIP; provenance remains documented in [the upstream workflow](docs/UPSTREAM.md).
-See [the Beta 6 notes](docs/releases/0.1.0-beta.6.md) for upgrade and rollback details.
-
-The existing reader setup, upgrades and ornament menu were tried on the
-maintainer's device before Beta 1. Automated tests cover Lua and LuaJIT,
-integration, packaging and the OTA installer, including external-update
-snapshots and rollback. The new module migrations/editor, pinning, Highlights,
-colours/underlay restoration and external-plugin interactions still need physical
-Bigme testing. Cache changes are not a measured device speedup. This remains a
-prerelease, not an exhaustive device/fresh-install compatibility certification.
-
-Please report your device, KOReader version, OrbitUI version and steps to
-reproduce a problem in [OrbitUI issues](https://github.com/komadorirobin/orbitui.koplugin/issues).
-Report integration problems here first, not as presumed bugs in SimpleUI or
-Bookshelf. Redact tokens, account details and private paths from logs; do not
-upload settings backups.
+Report your device, KOReader/OrbitUI versions and reproduction steps in
+[OrbitUI issues](https://github.com/komadorirobin/orbitui.koplugin/issues),
+including integration problems, rather than presuming an upstream bug.
+Redact tokens, account details and private paths; do not upload settings backups.
 
 ## Credits and licenses
 
@@ -717,25 +322,24 @@ upload settings backups.
 - **Bookshelf:** [AndyHazz and contributors](https://github.com/AndyHazz/bookshelf.koplugin),
   [AGPL-3.0 license](components/bookshelf/LICENSE).
 - **OrbitUI integration and customizations:** [komadorirobin](https://github.com/komadorirobin),
-  [AGPL-3.0](LICENSE). This is an independent project, not an upstream endorsement.
-- **Icons and artwork:** their original creators retain credit and separate
-  licenses. See [icon credits](docs/ICONS.md) and each ornament pack's
-  **Credits and licenses**. Free download does not make every asset public domain.
+  [AGPL-3.0](LICENSE). Independent project, not an upstream endorsement.
+- **Icons and artwork:** original creators retain credit and separate licenses.
+  See [icon credits](docs/ICONS.md) and each pack's **Credits and licenses**.
+  Free download does not make every asset public domain.
 
 Both component licenses, notices and imported Git histories are retained.
-Exact imported baselines and currently reviewed upstream revisions are recorded
-in [sources.json](sources.json); historical release numbers are not source pins.
-Upstream updates are reviewed and merged, not automatically installed.
+[sources.json](sources.json) records the exact imported/reviewed revisions;
+release numbers are not source pins. Updates are reviewed, never auto-merged.
 
 ## Development
 
-Run `sh scripts/test.sh` and `LUA=luajit sh scripts/test.sh`, then
-`sh scripts/check-translations.sh`. Build a runtime ZIP from a clean committed
-revision with `sh scripts/package.sh`.
+Run `sh scripts/test.sh`, `LUA=luajit sh scripts/test.sh` and
+`sh scripts/check-translations.sh`. Build the runtime ZIP from a clean committed
+revision using `sh scripts/package.sh`.
 
-Integration code lives in `core/` and `adapters/`; the original components live
-under `components/`. See the [project context](docs/PROJECT_CONTEXT.md),
+Integration code lives in `core/` and `adapters/`; component sources live under
+`components/`. See [project context](docs/PROJECT_CONTEXT.md),
 [integration contracts](docs/INTEGRATION_CONTRACTS.md),
 [upstream workflow](docs/UPSTREAM.md), [merge history](docs/MERGE_LOG.md),
 [testing](docs/TESTING.md) and [OTA/recovery](docs/OTA.md).
-The upstream watcher reports changes only; it never merges or publishes.
+Upstream monitoring reports changes only; it never merges or publishes.

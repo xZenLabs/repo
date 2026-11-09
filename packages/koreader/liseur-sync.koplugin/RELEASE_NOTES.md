@@ -1,3 +1,28 @@
+# plugin-0.18 · 2026-11-09
+
+The KOReader plugin, packaged for KOReader's App Store or a manual install.
+
+Unzip into KOReader's `plugins/` directory and restart KOReader.
+See [koreader-plugin/README.md](https://github.com/chmouel/liseur-sync/blob/main/koreader-plugin/README.md) for setup and token permissions.
+
+## Changes
+
+- feat: import the device token from a file (9663784)
+- docs: simplify the KOReader plugin guide (e4bbce2)
+- fix(ci): publish the plugin only when what ships changed (eabe769)
+
+# plugin-0.15 · 2026-11-09
+
+The KOReader plugin, packaged for KOReader's App Store or a manual install.
+
+Unzip into KOReader's `plugins/` directory and restart KOReader.
+See [koreader-plugin/README.md](https://github.com/chmouel/liseur-sync/blob/main/koreader-plugin/README.md) for setup and token permissions.
+
+## Changes
+
+- docs(koplugin): split what users need from what developers need (b360332)
+- feat(koplugin): allow plain http to a server on the same network (fc66dfb)
+
 # plugin-0.13 · 2026-11-08
 
 The KOReader plugin, packaged for KOReader's App Store or a manual install.

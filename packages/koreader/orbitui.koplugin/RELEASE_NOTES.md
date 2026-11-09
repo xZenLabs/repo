@@ -1,3 +1,29 @@
+# v1.1.0 · 2026-11-09
+
+## Svenska — stabil 1.1
+
+Samma fungerande implementation som 1.1.0-beta.12, nu som stabil release efter användarens godkännande. Ingen ny upstream-kod tas in i detta släpp.
+
+- Taggträffar på serienivå, bokstavslist och sökförslag.
+- Återbruk av omslag i rätt storlek.
+- Valbara pluginmoduler och ett litet versionslåst modulbibliotek.
+- BookOrbit-hyllor och smartscopes som egna läsöversiktskort, med tydlig återkoppling när kort läggs till eller tas bort.
+- Valbar Läser just nu + Silverfish med större figur till vänster, samlad text och bokomslag till höger. Fortsätt läsa ersätts inte.
+
+Silverfish kräver separat installerat/aktiverat publicerat Silverfish 2.0.0; ingen fork eller kopierad grafik. BookOrbit-funktioner är valfria och kräver motsvarande plugin/anslutning; vissa andra integrationer kräver separata servertillägg. Inga sådana installeras eller driftsätts här.
+
+Uppdatera via den stabila kanalen och starta om KOReader. Säkerhetskopiera inställningar och läsdata separat; kodåterställning återställer inte dem eller tredjepartsdata. Tidigare dashboard-v2/v3-begränsningar vid nedgradering gäller fortfarande.
+
+Bookshelf 6.4 och senare upstream-arbete följer i en separat 1.2-betacykel. 1.1 behåller de redan granskade Bookshelf 6.3.3/SimpleUI 3.0.3-baslinjerna. Allmän acceptans på användarens enhet är inte en dokumenterad testmatris för alla enheter och valfria integrationer.
+
+## English — stable 1.1
+
+Promotes beta.12's unchanged runtime after user acceptance. Includes series-level tag results, alphabet navigation, search suggestions, exact-size cover reuse, optional dashboard plugin cards/module library, BookOrbit shelf/smartscope cards and Currently reading + Silverfish.
+
+Existing placements, Continue reading and third-party data remain unchanged. No new upstream import, device installation or server deployment. Bookshelf 6.4 is reserved for the next 1.2 preview cycle. General user acceptance is not agent-run certification of every device/optional integration.
+
+Download **orbitui.koplugin.zip**, not GitHub's source archive. See docs/OTA.md and docs/MIGRATION.md for installation, backups and downgrade limitations.
+
 # v1.0.0 · 2026-11-04
 
 OrbitUI 1.0.0 — first stable release / första stabila releasen
