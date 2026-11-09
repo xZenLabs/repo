@@ -1,3 +1,20 @@
+# v0.5.1 · 2026-11-09
+
+## New
+- Sort in up to three steps (sort by, then by, then by), for example author, then book, then place in the book. Last opened book is a new sort key
+- All annotations and a single book keep their own sort. A single book starts in reading order
+- In a single book you can sort by date, position or chapter, for example chapter, then newest first
+- Date can be followed by book and position, for example newest day first, then book, then position
+
+## Changed
+- The sort order dropdown has chips and a direction bar, on smaller screens this is more simplified
+- Sorting by author keeps each book together and ignores capitals
+- The line under the book title in a single book is larger
+
+Install: unzip into a folder named `annotationsviewer.koplugin` in KOReader's `plugins` folder and restart.
+
+<img width="342" height="636" alt="image" src="https://github.com/user-attachments/assets/58a4fbc8-1967-4002-84d5-120d9c7f99f3" />
+
 # v0.5 · 2026-11-08
 
 This is a big update, it changes the overall look of the plugin.
@@ -70,7 +87,3 @@ Install: copy the `annotationsviewer.koplugin` folder from the zip to KOReader's
 # v0.2 · 2026-01-31
 
 **Full Changelog**: https://github.com/xblain/annotationsviewer.koplugin/compare/v0.1...v0.2
-
-# v0.1 · 2026-01-09
-
-First release

@@ -1,0 +1,23 @@
+# Kolibby plugin for KOReader
+# https://github.com/kolibby/KOLibby.koplugin
+# zenpm:auto-scraped
+id=kolibby
+name=Kolibby
+version=0.7.1
+description=
+author=kolibby
+category=utility
+platforms=koreader
+dependencies=
+source=https://github.com/kolibby/KOLibby.koplugin
+stars=5
+updated_at=2026-11-09T01:01:00Z
+published_at=2026-11-09T00:42:59Z
+readme_url=packages/koreader/kolibby.koplugin/README.md
+readme_hash=2b73674e40a1d4ea5c1a601436d8f6d8a2daa348
+release_notes_url=packages/koreader/kolibby.koplugin/RELEASE_NOTES.md
+release_notes_hash=cf4f06001b43e5a172153f2acd6ce4f867b5cdf16d81c8f5f7c73d407c22347f
+releases=[{"tag_name":"v0.7.1","assets":[{"name":"KOLibby-0.7.1.zip","url":"https://github.com/kolibby/KOLibby.koplugin/releases/download/v0.7.1/KOLibby-0.7.1.zip","size":116470,"digest":"sha256:29a476aac289daaf8311b3d3c687d78b1c438e17c93bb8096cd6454b1a0fa507"}],"name":"KOLibby v0.7.1"},{"tag_name":"v0.7.0","assets":[{"name":"KOLibby-0.7.0.zip","url":"https://github.com/kolibby/KOLibby.koplugin/releases/download/v0.7.0/KOLibby-0.7.0.zip","size":116206,"digest":"sha256:baa051e775886e72d4ae1f04fb2bd349c1a3bb387e1d82ad459cde4e824028ec"}],"name":"KOLibby v0.7.0"},{"tag_name":"v0.6.4","assets":[{"name":"KOLibby-0.6.4.zip","url":"https://github.com/kolibby/KOLibby.koplugin/releases/download/v0.6.4/KOLibby-0.6.4.zip","size":111619,"digest":"sha256:8023e82663e3eab99354a26ae22823e8aac34a702e1dc85e9534e03b6afae2ef"}],"name":"KOLibby v0.6.4"},{"tag_name":"v0.6.3","assets":[{"name":"KOLibby-0.6.3.zip","url":"https://github.com/kolibby/KOLibby.koplugin/releases/download/v0.6.3/KOLibby-0.6.3.zip","size":104324,"digest":"sha256:7c5657fddb671938c0b595f40d2452967a7fad7700006139156bcca3cf58928a"}],"name":"KOLibby v0.6.3"},{"tag_name":"v0.6.2","assets":[{"name":"KOLibby-0.6.2.zip","url":"https://github.com/kolibby/KOLibby.koplugin/releases/download/v0.6.2/KOLibby-0.6.2.zip","size":104294,"digest":"sha256:cf7dfc1f3b5f93a4dbe551382d3c4f3f14fe1110ec6f142549a80efec30be8a9"}],"name":"KOLibby v0.6.2"}]
+source_type=release
+source_asset=KOLibby-0.7.1.zip
+size=116470
