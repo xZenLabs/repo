@@ -1,3 +1,115 @@
+# v2.4.0 · 2026-11-09
+
+## ✨ New
+- Add screenshot and versioning rules to CLAUDE.md (#202)
+- Add a plus FAB to the book's journal (#201)
+- Add offline caching for browsed reviews (#208)
+- Add changelog entries for the bug fixes (#220)
+- Add changelog entries for the third round of fixes (#258)
+- Add a month filter to Stats (#246)
+- Add six Hardcover data cards to the Bookshelf module pack (#280)
+- Save bulk-link results once per batch instead of once per book (#287)
+- Add read:lists and read:goals to sign-in, and check sign-in scopes against Hardcover's scope map (#284)
+
+## 🎨 Improved
+- Make the book details buttons smaller again (#200)
+- Show days from start to finish on Stats (#259)
+- Show pages per month on Stats (#257)
+- Show a settings row's full help text when it is held (#260)
+- Show rating against length and average rating by year on Stats (#261)
+- Show pages read offline in the Journal (#278)
+- Improve bulk link by reading an EPUB's OPF with one unzip process (#285)
+- Improve page turns on a shelf with a local search active (#286)
+- Improve Reviews and Stats redraws by laying the page out once (#292)
+- Improve Bookshelf card speed by building each card once per fit (#291)
+- Improve eviction to check only books that may have lost their hold (#290)
+
+## 🐛 Fixes
+- Fix "Start reading this book?" never appearing when tracking is off (#205)
+- Fix the empty Currently reading card on Home when offline (#203)
+- Fix offline Paused status stuck after reading (#206)
+- Send pages read offline with the time they were read (#207)
+- Fix a newer journal edit being lost while an older one is sent (#210)
+- Fix book details showing another edition's data while online (#212)
+- Fix an existing review opening blank after a cached reopen (#213)
+- Fix progress updates using the wrong read after changing edition (#214)
+- Fix choosing Private leaving an existing book Public (#215)
+- Fix "Jump to Hardcover's page" ignoring the book's page labels (#216)
+- Fix sign-in forgetting the server's polling backoff (#217)
+- Fix restarting bypassing refresh-token replay protection (#218)
+- Fix Charts.decimal stripping real zeros with zero places (#222)
+- Fix the GraphQL query for looking up a book by edition id (#223)
+- Fix Charts.niceScale giving a step of 3 (#224)
+- Fix a stale read and edition surviving a book snapshot that has none (#225)
+- Fix goal dates like 2026-02-31 being accepted (#227)
+- Fix Charts.number showing -0 and exponent notation (#228)
+- Fix review excerpts and chart labels counting bytes instead of characters (#232)
+- Fix Link all books dropping urn:isbn identifiers without a scheme (#233)
+- Fix journal times with a zone offset that has no minutes (#234)
+- Fix accented initials sorting after Z in shelf title and author sort (#235)
+- Fix early pages mapping to page 0 when the file is longer than the edition (#239)
+- Fix books fetched for a list or shelf download being evicted when a book is opened (#242)
+- Stop an overlapping sync from reporting a failure (#243)
+- Fix download queue keys shared between accounts (#245)
+- Fix cancelled goals and journal notes still being sent (#211)
+- Fix book lookup to try the ISBN-10 after the ISBN-13 (#226)
+- Fix a crash sorting goals with mixed local and server ids (#230)
+- Fix ISBN-10s ending in X never being parsed (#236)
+- Fix a queued reader status being reverted when the book's details open online (#244)
+- Fix a crash in findDefaultEdition when the book is missing (#229)
+- Apply a changed tracking frequency without a restart (#247)
+- Stop a retried re-read from creating a read each time (#248)
+- Send the last page before marking a book Finished (#254)
+- Fix offline status chains losing Currently Reading, and finish-then-restart (#262)
+- Fix bulk link missing the identifier after an empty identifier element (#221)
+- Fix end-of-book prompt after a re-read and goal archived mid-send (#219)
+- Fix list and shelf changes lost when undone while being sent (#264)
+- Fix a discarded note still reaching Hardcover when discarded mid-send (#265)
+- Fix closing a book, zero-page editions, backward jumps and the doubled end-of-book dialog (#268)
+- Fix sent journal entries, note pages and book journals offline (#269)
+- Fix ratings marking books as Read, Read again adding an empty read, and the current read (#270)
+- Fix sync conflicts when opening a book and the doubled jump question (#271)
+- Fix goal target input, accents in search, year 0 and offline wording (#272)
+- Fix opening a book without reading resetting Hardcover's page, and the notice covering the conflict question (#273)
+- Fix offline status ordering, date queued changes, and show waiting status changes in the Journal (#275)
+- Fix Stats Genres ring dropping its 5th genre into Other (#274)
+- Fix empty book journal cache hiding saved entries (#282)
+- Fix rate-limit waits to use Retry-After and stop treating every 403 as a missing scope (#283)
+- Fix vibe pagination and edition selection (#267)
+- Fix cover downloads, journal pagination and Unicode search (#263)
+- Fix finish dates when old read books sync offline (#294)
+
+## 🛠 For developers
+- Fix emulator scenarios failing on the sync queue's statusOf (#266)
+- Fix CI Lua installation timeouts (#293)
+
+## Other
+- Turn the Library's Activity tab into your Journal (#199)
+- Offer to jump to Hardcover's page when it is further along (#204)
+- Scope offline goal changes to the account that made them (#231)
+- Keep offline shelf moves and removals when an earlier download finishes (#237)
+- Hide another account's waiting shelf change (#238)
+- Retry queued changes after an expired token or timeout (#240)
+- Keep offline list adds and removals when an earlier download finishes (#241)
+- Ignore the Link, Track and Stop tracking gestures when no book is open (#249)
+- Clear queued entries without a timestamp once they are sent (#250)
+- Keep the inherited tracking default when setting the page without touching the toggle (#251)
+- Drop the older queued page when a book is marked Finished online (#252)
+- Do not send one account's offline reading to the next account (#253)
+- Refresh the Settings screen when sign-in succeeds (#255)
+- Report an error when an approved sign-in holds no usable tokens (#256)
+- Keep the progress queue by Hardcover book instead of by file (#276)
+- Keep shelf changes in the progress queue and remove the shelf queue (#277)
+- Keep offline reading history ordered and safe to retry (#279)
+- Adapt Bookshelf totals to portrait cards (#281)
+- Batch the library lookups when the sync queue flushes (#289)
+- Combine Home's reading, lists and goals requests into one (#288)
+- Steer Bookshelf Sources wiki documentation (#295)
+- Clarify Bookshelf sign-out wiki note (#296)
+- Document PR inspection tools (#297)
+
+**Full changelog**: https://github.com/CaptainCamin/HardcoverSync.koplugin/compare/v2.3.1...v2.4.0
+
 # v2.3.1 · 2026-10-22
 
 ## ✨ New
@@ -198,61 +310,3 @@ Install from branch: new developer option (#143)
 
 
 **Full Changelog**: https://github.com/CaptainCamin/HardcoverSync.koplugin/compare/v1.6.2...v2.0.0
-
-# v1.7.0 · 2026-10-09
-
-## Your library now lives on your device
-
-Until now, most screens downloaded everything again each time they opened, even when nothing had changed, and lists didn't work offline at all. From 1.7.0 the plugin keeps your **lists, shelves, books, their details and covers** on the device. It asks Hardcover only **what changed**, and anything that hasn't changed opens from the device with no download at all.
-
-This release is everything from the four 1.7.0 betas.
-
-### What's new
-
-- **Every list and every shelf is kept on your device**, including lists you follow and ones you've never opened.
-  - Home checks them all inside the requests it was already making, and downloads only what changed.
-  - A changed shelf or list downloads only which books it holds, plus any books the device doesn't have yet. Finishing a book no longer reloads your whole Read shelf.
-  - Moving, rating or removing a book updates the saved shelf straight away.
-- **Everything works offline:** shelves, lists, Stats, and every book on your shelves and lists with its **full synopsis**. The old saved shelves kept only the first 600 characters.
-- **Book details open instantly.** A book you've opened before, that's out and complete, opens with no loading screen and no request for the book. The series is kept for a week and works offline. Books not out yet are checked again once a week.
-- **Stats and For you** reload only when something they depend on changed, or once a week.
-- **Sharper, smaller covers.**
-  - Covers now come from Hardcover's image service at the size they're shown, instead of as uploaded. A cover uploaded at **1.9 MB** now arrives as **30 KB** in a list.
-  - A book's details page gets its cover at exactly the size of its box, at higher JPEG quality.
-  - Covers are drawn with e-ink dithering, so photos no longer turn into flat bands.
-- **Settings › Download covers for offline** keeps the cover of every book on your shelves and lists, so offline shelves aren't a wall of blank boxes.
-  - It tells you how many covers and roughly how much before it starts.
-  - It shows progress with a **Stop** button and keeps the device awake while it runs. Running it again picks up where it stopped.
-- **Refresh** in a shelf's or list's menu, and a reload icon on a book's details page, download them again in full if anything looks out of date.
-- **A fresher look:** rounded pill buttons, bold serif headings and figures, and solid progress bars.
-
-### Measured on a real account (9 lists, 4 shelves, 758 books)
-
-| | 1.6.3 | 1.7.0 |
-|---|---|---|
-| Opening a shelf or list that hasn't changed | the whole thing, every time | **no request** |
-| Read shelf (611 books) after one book changed | 840 KB in 7 requests | **51 KB, 1 request** |
-| A 25-book list that gained one book | ~32 KB | **~3 KB** |
-| Reopening a book you've opened before | 4 requests, loading screen | **no request for the book** |
-| A cover in a list | up to 1.9 MB | **30 KB** |
-| Checking everything for changes | — | one request, ~1 KB |
-| Offline | shelves only, synopses cut short | **lists, shelves, details, covers you've kept** |
-
-### Good to know
-
-- **Updating is automatic.** The first Home open after updating saves your whole library in the background. That was about 1.1 MB in under half a minute on the account above. After that, only changes are downloaded.
-- **Your saved shelves carry over** from 1.6.3 the first time Home or a shelf opens.
-- **Storage:** everything is kept in a small database, `hardcoversync_library.sqlite3` in KOReader's settings folder, using the SQLite KOReader already ships. The library above takes 1.5 MB. Covers you've seen get 30 MB of space, and covers you download for offline are kept separately. Signing out clears the library.
-- **Known:** reordering a ranked list on hardcover.app may not show up on the device until you tap Refresh.
-
----
-
-## What's Changed
-* theme.lua: pill buttons, serif headings, solid black progress bars, hatching and icon helpers by @CaptainCamin in https://github.com/CaptainCamin/HardcoverSync.koplugin/pull/51
-* Bundle plugin icons by @CaptainCamin in https://github.com/CaptainCamin/HardcoverSync.koplugin/pull/52
-* Lists kept on the device: offline, and downloaded only when they change by @CaptainCamin in https://github.com/CaptainCamin/HardcoverSync.koplugin/pull/53
-* Shelves, book details and covers kept on the device (stacked on #53) by @CaptainCamin in https://github.com/CaptainCamin/HardcoverSync.koplugin/pull/57
-* Release 1.7.0 by @CaptainCamin in https://github.com/CaptainCamin/HardcoverSync.koplugin/pull/60
-
-
-**Full Changelog**: https://github.com/CaptainCamin/HardcoverSync.koplugin/compare/1.6.3...v1.7.0

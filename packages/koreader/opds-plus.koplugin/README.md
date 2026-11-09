@@ -11,7 +11,7 @@
 
 # OPDS Plus - Enhanced OPDS Browser for KOReader
 
-**Version:** 1.2.0
+**Version:** 1.2.1
 
 **OPDS Plus** is a feature-rich enhancement of KOReader's built-in OPDS catalog browser, providing visual book cover displays, multiple viewing modes, and extensive customization options for browsing online book catalogs.
 
@@ -195,6 +195,7 @@ Access settings from: **OPDS Plus Catalog → Settings**
 - **Direct Sync Actions**:
   - Sync all catalogs
   - Force sync all catalogs
+  - Both only cover catalogs with **Sync catalog** ticked: long-press a catalog, tap **Edit** and tick it.
 - **Gesture Integration**:
   - Actions are registered in KOReader's dispatcher as:
     - `OPDS Plus: Sync all catalogs`
@@ -283,6 +284,8 @@ This file contains:
 - Display preferences
 - Font settings
 - Grid layout configuration
+
+Cached covers are stored in `<KOReader data dir>/cache/opds_plus/`. To remove both, use KOReader's plugin manager and choose **Disable plugin and delete settings** or **Delete plugin and settings**. Downloaded books are never deleted.
 
 ## 🤝 Contributing
 

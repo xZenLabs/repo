@@ -1,3 +1,35 @@
+# v1.2.1 · 2026-11-09
+
+# OPDS Plus v1.2.1
+
+A bug-fix release with cover cache, catalog compatibility and sync fixes since v1.2.0.
+
+### Fixed
+- Covers are cached on Kindle and other devices where KOReader runs from a relative directory (Issue #86, PR #87).
+- Cached covers no longer miss and download again after LuaJIT switches from interpreted to compiled code (PR #97).
+- Cover cache robustness: falls back to KOReader's data directory on versions without `getFullDataDir()`, creates relative cache directories in place, and writes covers atomically so an interrupted write cannot leave a truncated cover.
+- Catalog URLs with a local hostname, such as `http://booktrove:8083/opds`, can be added (Issue #91, PR #95).
+- Entries linked with the OPDS `crawlable` relation, like the Standard Ebooks "All Ebooks" feed, open instead of failing with "Cannot get catalog info from nil" (Issue #83).
+- Listings no longer lose the entries after one with an empty `<content/>` tag (Issue #100).
+- "Sync all catalogs" and "Force sync all catalogs" say when no catalog has "Sync catalog" ticked instead of reporting "Up to date!", and the gesture versions wait for the network like the menu entries (Issue #96).
+- A sync that fails shows the error instead of leaving "Synchronizing lists…" on screen. Feeds with a link-less entry and Project Gutenberg style catalogs with a single-book sub-feed now sync (Issue #96).
+- KOReader's plugin manager can delete OPDS Plus's settings and cover cache with "Disable plugin and delete settings" and "Delete plugin and settings". Downloaded books are kept (Issue #82).
+
+### Changed
+- Updated GitHub Actions dependencies for checkout and release publishing.
+
+### Notes
+- Covers cached by earlier versions are downloaded once more after updating, because the cache file naming changed.
+
+### Thanks
+Special thanks to these contributors for their work in this release cycle:
+- @cardoso42 (Kindle cover cache, #87)
+- @demrom (stable cover cache keys, #97)
+- @439qi (local hostnames, #95)
+
+Full changelog:
+https://github.com/greywolf1499/opds_plus.koplugin/blob/main/CHANGELOG.md
+
 # v1.2.0 · 2026-03-19
 
 # OPDS Plus v1.2.0
