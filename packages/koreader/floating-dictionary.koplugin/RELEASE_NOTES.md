@@ -1,3 +1,17 @@
+# v6.2.4 · 2026-11-09
+
+**WHAT'S NEW**
+
+* Page-turn buttons now switch dictionaries. When a definition has reached its end (or its start), pressing your device's page-turn buttons moves to the next (or previous) dictionary, just like swiping. If a word has only one result, nothing changes.
+* New "About" entry in the Floating Dictionary menu.
+* You can customize the Previous / Next result buttons again from "Buttons shown in preview": show or hide them, change their order, and give them your own text or icon (for example, arrow icons).
+
+IMPROVEMENTS
+
+* "Move up" / "Move down" in "Buttons shown in preview" now always makes a visible change when you tap it.
+* Cleaner plugin menu: "Check for updates" and "Word Review" are now visually separated from the rest.
+* Updated translations: English, Spanish, Portuguese and Brazilian Portuguese.
+
 # v6.2.0 · 2026-09-23
 
 **WHAT'S NEW**

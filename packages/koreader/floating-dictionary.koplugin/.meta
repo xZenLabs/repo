@@ -3,7 +3,7 @@
 # zenpm:auto-scraped
 id=floating-dictionary
 name=Floating Dictionary
-version=6.2.0
+version=6.2.4
 description=A lightweight, highly customizable floating dictionary for KOReader.  Instead of opening KOReader's full dictionary popup every time, Floating Dictionary displays a compact preview beside your sele...
 author=DisastrousPatience83
 category=reference
@@ -11,13 +11,13 @@ platforms=koreader
 dependencies=
 source=https://github.com/DisastrousPatience83/Floating-Dictionary.koplugin
 stars=43
-updated_at=2026-11-09T03:00:58Z
-published_at=2026-09-23T20:07:50Z
+updated_at=2026-11-09T04:00:58Z
+published_at=2026-11-09T03:17:30Z
 readme_url=packages/koreader/floating-dictionary.koplugin/README.md
 readme_hash=65a9160b6c98f7aec809008253202dd17a1e5e29
 release_notes_url=packages/koreader/floating-dictionary.koplugin/RELEASE_NOTES.md
-release_notes_hash=31dfe043a38625a279a80a330be5e926e5a07cb8a3f4f9cbbb019126658522f0
-releases=[{"tag_name":"v6.2.0","assets":[{"name":"floatingdictionary.koplugin.zip","url":"https://github.com/DisastrousPatience83/Floating-Dictionary.koplugin/releases/download/v6.2.0/floatingdictionary.koplugin.zip","size":204242,"digest":"sha256:2d7ea0c7efce33a911ad083ccea2095d1adc5f16cd96aee7a90ad7913a359362"}],"name":"Floating Dictionary v6.2.0"},{"tag_name":"v6.1.1","assets":[{"name":"floatingdictionary.koplugin.zip","url":"https://github.com/DisastrousPatience83/Floating-Dictionary.koplugin/releases/download/v6.1.1/floatingdictionary.koplugin.zip","size":196706,"digest":"sha256:68d839527646754649837f3d54afb28d01262f1337f84d075fb4d11f76bfede9"}],"name":"Floating Dictionary v6.1.1"},{"tag_name":"v6.1.0","assets":[{"name":"floatingdictionary.koplugin.zip","url":"https://github.com/DisastrousPatience83/Floating-Dictionary.koplugin/releases/download/v6.1.0/floatingdictionary.koplugin.zip","size":196715,"digest":"sha256:a04a9ee7f3eb4f873a220709278976866fa71895e7dac799480a626df23843ed"}],"name":"Floating Dictionary v6.1.0"},{"tag_name":"v6.0.0","assets":[{"name":"floatingdictionary.koplugin.zip","url":"https://github.com/DisastrousPatience83/Floating-Dictionary.koplugin/releases/download/v6.0.0/floatingdictionary.koplugin.zip","size":193772,"digest":"sha256:259ac946fe5b44f44a5ff79271d9a86cfdc2706094ea0cb55694ecf3ced6eced"}],"name":"Floating Dictionary v6.0.0"}]
+release_notes_hash=309ee9c836f41d7ba0af142f20325c06748997132fd20d63b17fbdacaeeb372e
+releases=[{"tag_name":"v6.2.4","assets":[{"name":"floatingdictionary.koplugin.zip","url":"https://github.com/DisastrousPatience83/Floating-Dictionary.koplugin/releases/download/v6.2.4/floatingdictionary.koplugin.zip","size":209289,"digest":"sha256:26236dba4e40aade3010ae3a477e1826bd5149c6f7a5e05e90a75e2a8ae31822"}],"name":"Floating Dictionary v6.2.4"},{"tag_name":"v6.2.0","assets":[{"name":"floatingdictionary.koplugin.zip","url":"https://github.com/DisastrousPatience83/Floating-Dictionary.koplugin/releases/download/v6.2.0/floatingdictionary.koplugin.zip","size":204242,"digest":"sha256:2d7ea0c7efce33a911ad083ccea2095d1adc5f16cd96aee7a90ad7913a359362"}],"name":"Floating Dictionary v6.2.0"},{"tag_name":"v6.1.1","assets":[{"name":"floatingdictionary.koplugin.zip","url":"https://github.com/DisastrousPatience83/Floating-Dictionary.koplugin/releases/download/v6.1.1/floatingdictionary.koplugin.zip","size":196706,"digest":"sha256:68d839527646754649837f3d54afb28d01262f1337f84d075fb4d11f76bfede9"}],"name":"Floating Dictionary v6.1.1"},{"tag_name":"v6.1.0","assets":[{"name":"floatingdictionary.koplugin.zip","url":"https://github.com/DisastrousPatience83/Floating-Dictionary.koplugin/releases/download/v6.1.0/floatingdictionary.koplugin.zip","size":196715,"digest":"sha256:a04a9ee7f3eb4f873a220709278976866fa71895e7dac799480a626df23843ed"}],"name":"Floating Dictionary v6.1.0"},{"tag_name":"v6.0.0","assets":[{"name":"floatingdictionary.koplugin.zip","url":"https://github.com/DisastrousPatience83/Floating-Dictionary.koplugin/releases/download/v6.0.0/floatingdictionary.koplugin.zip","size":193772,"digest":"sha256:259ac946fe5b44f44a5ff79271d9a86cfdc2706094ea0cb55694ecf3ced6eced"}],"name":"Floating Dictionary v6.0.0"}]
 source_type=release
 source_asset=floatingdictionary.koplugin.zip
-size=204242
+size=209289
