@@ -1,3 +1,7 @@
+# v6.4.1 · 2026-11-08
+
+- Book sizes > Equal height: a new option for spine shelves (long-press the shelf > View mode). Every book stands at the same height while keeping its own width, so landscape books facing out show their full cover, uncropped.
+
 # v6.4.0 · 2026-11-08
 
 - Decades: a new grouped source (shelf settings > Source > Grouped > Decades) stacks your books by the decade they were published, with Unknown last. "A decade" makes a shelf of just one.
@@ -58,11 +62,3 @@
 - Further improvements to compatibility with other plugins drawing over bookshelf (#572)
 - Performance improvements for shelf of shelves with nested filters
 - Performance improvements for page count extraction
-
-# v6.3.0 · 2026-11-02
-
-- New token %published: a book's publication year, from calibre, the OPDS catalog (kept when the book is downloaded) or the book file (EPUB, FB2, MOBI, AZW3, comics, PDF). For example, `%authors_short [if:published](%published)[/if]` adds the year after the author, and nothing when a book has no date (#566).
-- Delete folder… in a folder's long-press menu. Move, Rename and Delete now sit beside the book count (#456).
-- Fix: dialogs from some other plugins, opened from KOReader's menu over the shelf, were only partly drawn (#572)
-- Fix: the book menu showed a placeholder instead of the cover for books shown as plain spines (#575)
-- Fix: "Only books without a page count" counted books again that already had a count from being opened, or that had been read since their last scan (#573)

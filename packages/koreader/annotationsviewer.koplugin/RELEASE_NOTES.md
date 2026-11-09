@@ -1,7 +1,5 @@
 # v0.5 · 2026-11-08
 
-# v0.5
-
 This is a big update, it changes the overall look of the plugin.
 
 ## New
