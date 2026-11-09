@@ -1,3 +1,11 @@
+# 26.11.9 · 2026-11-09
+
+- Update delete logic 
+- Load readme in the background without UI blocking
+- Update version check logic to be more robust
+
+**Full Changelog**: https://github.com/ultimatejimmy/storefront.koplugin/compare/26.11.1...26.11.9
+
 # 26.11.1 · 2026-11-02
 
 - fix bug with branch install feature
@@ -43,17 +51,3 @@ New feature:
 * @danihrndzld made their first contribution in https://github.com/ultimatejimmy/storefront.koplugin/pull/5074
 
 **Full Changelog**: https://github.com/ultimatejimmy/storefront.koplugin/compare/26.10.13...26.10.16
-
-# 26.10.13 · 2026-10-13
-
-## What's Changed
-* sk: translate "plugin" as "doplnok", translate [draft] by @misko903 in https://github.com/ultimatejimmy/storefront.koplugin/pull/5069
-* Show download progress while installing plugins by @dmaglio in https://github.com/ultimatejimmy/storefront.koplugin/pull/5070
-* Fix font issue when a font is missing #5071 
-* Various memory and performance improvements 
-
-## New Contributors
-* @misko903 made their first contribution in https://github.com/ultimatejimmy/storefront.koplugin/pull/5069
-* @dmaglio made their first contribution in https://github.com/ultimatejimmy/storefront.koplugin/pull/5070
-
-**Full Changelog**: https://github.com/ultimatejimmy/storefront.koplugin/compare/26.10.2...26.10.13

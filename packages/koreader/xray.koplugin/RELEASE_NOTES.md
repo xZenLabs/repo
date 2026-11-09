@@ -1,3 +1,32 @@
+# 26.11.9 · 2026-11-09
+
+## Entity Underlining (optional new feature)
+
+You can now have X-Ray underline characters, locations, historical figures, and terms directly on your book pages as you read. Tapping any underlined name brings up an instant description pop-up without losing your place.
+
+A huge thank you to @Dukko for creating the original user patch that inspired and kicked off this native feature!
+
+**This feature is opt-in and fully configurable.**
+
+### What's New
+
+- **In-Book Entity Underlining**: Automatically underlines people, places, and terms found in your X-Ray data. Tapping an underlined item opens its summary right on the page.
+- **Customizable Underline Styles**: Choose from solid, wavy, dotted, dashed, or double underlines with adjustable line thickness and contrast to suit your screen.
+- **Tooltip & Footnote Displays**: Pick between a compact tooltip bubble pointing to the word or a bottom panel, along with customizable auto-close timers.
+- **Frequency & Category Controls**: Highlight every mention or keep things tidy by only underlining the first appearance per chapter. You can also toggle characters, locations, terms, or historical figures independently.
+- **Instant Inline Fetch Support**: When you look up and fetch a new entity while reading, it gets underlined across your book immediately.
+- **Smart Matching**: Dialogue transcripts, all-caps speaker tags, and chapter headings are cleanly detected without accidental matches on common lowercase words.
+
+### Bug fixes
+
+- Fix #163 
+- Fix #164 
+
+*Note for users who previously installed Dukko's `2-xray-entity-footnotes.lua` patch: entity underlining is now built directly into the plugin, so the old patch file in your patches folder can be safely removed.*
+
+
+**Full Changelog**: https://github.com/ultimatejimmy/xray.koplugin/compare/26.11.5...26.11.9
+
 # 26.11.5 · 2026-11-05
 
 This release introduces instant X-Ray lookups directly from text highlights, dedicated support for anthologies and short story collections, background unit scanning, and several performance optimizations and bug fixes.
@@ -134,21 +163,3 @@ Thanks to our new contributors for helping improve the plugin:
 * @abs3ntdev made their first contribution in https://github.com/ultimatejimmy/xray.koplugin/pull/141
 
 **Full Changelog**: https://github.com/ultimatejimmy/xray.koplugin/compare/26.9.30...26.9.30.1
-
-# 26.9.17 · 2026-09-17
-
-## What's New
-
-- Series Manager: You can now manage book series directly from the settings menu. View the full reading order, adjust series names and volume numbers, add or remove books using the built-in file picker, and save changes straight to your book's sidecar metadata. Thanks @Juansero29 for the idea and getting started on it.
-- Rebuild X-Ray Data (Clean Fetch): Added a new option under Maintenance that lets you completely discard cached data for the current book and fetch a fresh profile from AI without having to manually delete cache files. The standard fetch button also dynamically switches between Fetch and Update (Merge) depending on whether data already exists.
-- Cleaner Gestures: Removed unnecessary unit scanning and unit converter actions from the dispatcher gesture list to declutter your gesture configuration options.
-- Smarter Fetch Menu: The main menu now adapts based on whether you've fetched data for your book yet. If a book has no X-Ray data, the menu shows Fetch X-Ray Data to run a clean first-time analysis. Once data is saved, it switches to Update X-Ray Data (Merge) for your regular reading updates.
-- Quick Fetch from Empty Screens: Opening Timeline, Locations, or Historical Figures on a book without any X-Ray data will now ask if you'd like to fetch data from AI right then and there, rather than just giving you an empty screen notice.
-- Add page turn button support to paginated areas
-
-## Fixes 
-- Fix bug with Claude on certain thinking levels
-- Fix bug with mentions scanning on some devices and is some situations
-
-
-**Full Changelog**: https://github.com/ultimatejimmy/xray.koplugin/compare/26.9.11.2...26.9.17

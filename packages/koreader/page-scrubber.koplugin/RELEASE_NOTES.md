@@ -1,3 +1,33 @@
+# v8.4.0 · 2026-11-09
+
+## 8.4 Search button in quick menu and more 
+
+### **Quick Menu**
+* Added a **Search** button to the bottom row (light · search · actions · settings) to immediately trigger KOReader's text search.
+
+### Kikome and bookshelf compatibility
+- Instant exit from the **Library** button when KiKome or Bookshelf is the "Start with" home: the book is parked instead of closed, so the library shows with no loading wait.
+  - Start with = KiKome: needs *Instant exit from books* on and the book opened from KiKome.
+  - Start with = Bookshelf: needs hot parking on and the book opened from the shelf.
+- Any other "Start with" value, a missing or disabled plugin, an option turned off, or a book opened from elsewhere exits exactly as before.
+
+**Table of Contents (Vertical & Horizontal)**
+* The current chapter row (marked by the gray dot) now displays the time left to finish the chapter, mirroring KOReader's footer logic and chapter hierarchy.
+* Adaptive label sizing: The time left indicator hides if reading stats are unavailable/zero, and falls back to a compact format (e.g., "12m" instead of "12m left") on cramped screens.
+* Smart 2-line expansion: If the text still won't fit, the row expands to two lines to prevent harsh title truncation, placing the dot and time left at the end of the second line. "Page N" stays vertically centered.
+
+**Right Split Panel (Vertical)**
+*Small visual tweaks in formating. 
+
+
+
+## Installation
+1. Download the zip named `page_scrubber.koplugin-<version>.zip` from the **Assets** section below (not "Source code").
+2. Unzip it and copy the `page_scrubber.koplugin` folder into `koreader/plugins/`.
+3. Restart KOReader.
+
+To update, replace the folder. To uninstall, delete it (and `koreader/patches/2--page-scrubber-font.lua` if you used the system font).
+
 # v8.3.0 · 2026-10-26
 
 ## 8.3 New features: Breadcrumb pins on the progress bar. 
@@ -112,40 +142,6 @@ To update, replace the folder. To uninstall, delete it (and `koreader/patches/2-
 - Long-pressing a highlight and choosing a color now paints it with that color. Previously it sometimes showed as the default yellow.
 - Toggles that are off by default were shown as enabled in the selection menu settings.
 - If the pinned page has a bookmark, it now also shows up in the bookmarks list.
-
-## Installation
-1. Download the zip named `page_scrubber.koplugin-<version>.zip` from the **Assets** section below (not "Source code").
-2. Unzip it and copy the `page_scrubber.koplugin` folder into `koreader/plugins/`.
-3. Restart KOReader.
-
-To update, replace the folder. To uninstall, delete it (and `koreader/patches/2--page-scrubber-font.lua` if you used the system font).
-
-# v7.7.7 · 2026-10-09
-
-## New Features
-
-### Split Menu
-* **Color filter:** Now, in the Highlights and Notes tab, if there are annotations with more than one color, a new triangle icon will appear allowing you to filter entries by color.
-* **Individual color selector:** A new circular button was added to the highlight type editing row. This button allows you to directly change the color of a specific annotation (works for all styles except invert).
-
-### Selection Menu
-* **Quick color menu:** By long-pressing any highlight style (Highlight, Underline, or Strikethrough), the new color menu will now unfold to let you choose which color to paint the annotation with.
-
----
-
-## Fixes & Improvements
-
-### Interface & Behavior
-* **DPI pagination fix:** Fixed a critical bug where changing the screen DPI caused selecting an annotation in the Split Menu to take you to the wrong page.
-* **Optimized Split Menu loading:** The plugin now uses the same logic as KOReader's native listing. This fixes the excessive loading times when opening the menu after rotating the screen between portrait and landscape.
-* **Native notes integration:** Tapping the button to add text notes will now directly invoke KOReader's native menu.
-* **Visual refinement:** Slightly reduced the thickness of the buttons within the Split Menu and refined the SVG icons overall for a more polished look.
-
-### Performance
-* **Reduced lag when turning pages:** Rewrote the pagination logic to prevent bottlenecks and extreme slowdowns.
-  * **Preload queue optimization:** Each new tap now cancels older preload tasks that were still in the queue. Additionally, the engine now prioritizes loading pages in the direction you are navigating.
-  * **Concurrency control (Semaphore):** Implemented a semaphore system. If the current page hasn't finished rendering, page turns are blocked, preventing background processes from piling up and freezing the device.
-
 
 ## Installation
 1. Download the zip named `page_scrubber.koplugin-<version>.zip` from the **Assets** section below (not "Source code").

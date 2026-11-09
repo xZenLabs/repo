@@ -1,3 +1,39 @@
+# v1.3.0 · 2026-11-09
+
+# OPDS Plus v1.3.0
+
+A feature release: custom HTTP headers for catalogs behind a gateway, series info, a default catalog, parallel cover downloads, keyboard and D-pad navigation and more, with fixes for covers after switching views and for books with several authors.
+
+### Added
+- **Custom HTTP Headers**: A catalog can send extra headers with its requests, such as the `CF-Access-Client-Id` and `CF-Access-Client-Secret` headers that a server behind Cloudflare Access (Zero Trust) asks for. Tap **Headers** when adding or editing a catalog and write one `Name: value` per line. They go with the catalog's feeds, covers, downloads and sync, and only to that catalog's own server. They are saved as plain text, like the password (Issue #94).
+- **Series Info**: Books show their series and their number in it, such as "❖ Dune Chronicles #2", in list view and in the book info dialog. Read from the `SERIES:` line that Calibre and Calibre-Web put in the description, from `dc:series`, and from the collection metadata that Grimmory sends (Issue #70).
+- **Description Saved with Downloads**: The description a catalog gives for a book is saved with the downloaded file as KOReader custom book metadata, so it shows in Book information. This covers single downloads, the download queue and sync. A description the book already has, or one you edited yourself, is never replaced (Issue #85).
+- **Thumbnails on Navigation Entries**: Entries that only open a sub-catalog, such as a series in a comic server's feed, show their thumbnail in list and grid view when the server provides one (Issue #24).
+- **Default Catalog**: Settings > Default Catalog picks the catalog that opens as soon as you browse catalogs. Back returns to the list of catalogs (Issue #89).
+- **Parallel Cover Downloads**: Covers are downloaded in background processes, two at a time, so pages of covers fill in faster and a slow server no longer freezes the screen. Where a background process can't be started, covers are downloaded one at a time as before (PR #98).
+- **Keyboard and D-pad Navigation**: Devices with hardware keys can browse without the touchscreen. Back walks up one catalog level, Home closes the browser, the D-pad moves the focus item by item (cell by cell in the grid), and Enter opens the focused item (PR #93).
+
+### Changed
+- Switching between list and grid view keeps you on the same item instead of reloading the catalog (PR #93).
+- The page counter in the footer is KOReader's own button again (PR #93).
+- Paging forward no longer asks the server for another page on every tap. The next page is requested when you are one screen from the end of what has been loaded (PR #92).
+
+### Fixed
+- Covers no longer turn into coloured noise after you switch between list and grid view and then page through or switch back.
+- A book with more than one author lists all of them, such as "Robert Louis Stevenson, Lloyd Osbourne", in the list, the book info dialog and the file name, instead of only the last.
+
+### Notes
+- Parallel Cover Downloads, Thumbnails on Navigation Entries and Save Description with Downloads are on by default. Each can be turned off under Settings.
+- A Force sync downloads books with several authors once more, under their new file names.
+
+### Thanks
+Special thanks to these contributors for their work in this release cycle:
+- @iav (keyboard and D-pad navigation, switching views and fetching ahead, #92 and #93)
+- @demrom (parallel cover downloads, #98)
+
+Full changelog:
+https://github.com/greywolf1499/opds_plus.koplugin/blob/main/CHANGELOG.md
+
 # v1.2.1 · 2026-11-09
 
 # OPDS Plus v1.2.1

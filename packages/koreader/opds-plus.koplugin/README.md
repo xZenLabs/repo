@@ -11,7 +11,7 @@
 
 # OPDS Plus - Enhanced OPDS Browser for KOReader
 
-**Version:** 1.2.1
+**Version:** 1.3.0
 
 **OPDS Plus** is a feature-rich enhancement of KOReader's built-in OPDS catalog browser, providing visual book cover displays, multiple viewing modes, and extensive customization options for browsing online book catalogs.
 
@@ -24,6 +24,8 @@
 - **Book Info Dialog**: Open an at-a-glance details dialog with improved cover handling
 - **Series and Authors**: Every author of a book is listed. When the catalog provides it, the series and the book's number in it, such as ❖ Dune Chronicles #2, show in List View and in the Book Info Dialog (read from Calibre and Calibre-Web style descriptions, `dc:series` elements and Grimmory feeds)
 - **Sync Gesture Actions**: Trigger sync-related actions directly from configured gestures
+- **Keyboard and D-pad Navigation**: Browse catalogs on devices with hardware keys, without the touchscreen
+- **Custom HTTP Headers**: Send extra headers to a catalog's server, for catalogs behind Cloudflare Access (Zero Trust) or a similar gateway
 - **Cover Quality + Cache**: Improved cover rendering pipeline with disk-backed caching
 
 ### 🖼️ List View
@@ -139,6 +141,13 @@ git clone https://github.com/greywolf1499/opds_plus.koplugin.git
 3. Tap a book to view details and download options
 4. Downloaded books are saved to your configured download directory
 
+#### Keyboard and D-pad Navigation (New in 1.3.0)
+On devices with hardware keys, you can browse without the touchscreen:
+- **D-pad**: moves the focus from item to item (cell by cell in Grid View). An underline shows where it is
+- **Enter** (the centre button of the D-pad): opens the focused item
+- **Back**: goes up one catalog level, and closes the browser from the top level. In the book info dialog it closes the dialog
+- **Home**: closes the browser
+
 ### Customizing Settings
 
 Access settings from: **OPDS Plus Catalog → Settings**
@@ -238,6 +247,27 @@ Access settings from: **OPDS Plus Catalog → Settings**
    - OPDS feed URL
 4. The new catalog will appear in your catalog list
 
+#### Custom HTTP Headers (New in 1.3.0)
+
+Some servers only answer requests that carry extra headers. A Calibre-Web, COPS or Kavita server behind Cloudflare Access (Zero Trust), for example, expects `CF-Access-Client-Id` and `CF-Access-Client-Secret`.
+
+1. Add a catalog, or long-press an existing one and tap **Edit**
+2. Tap **Headers**, in the row with **Cancel** and **Save**
+3. Write one header per line as `Name: value`, then tap **OK** and **Save**
+
+```
+CF-Access-Client-Id: <your client id>
+CF-Access-Client-Secret: <your client secret>
+```
+
+The button shows how many headers the catalog has, such as **Headers (2)**.
+
+- The headers go with everything the plugin asks that server for: catalog pages, covers, downloads, sync and Kavita page streaming.
+- They are only sent to the catalog's own server, meaning the same scheme, host and port. `http` and `https`, or two different ports, count as different servers. Catalogs on the same server share their headers: the first catalog in the list that has headers decides what is sent to that server.
+- Headers the plugin has to control itself, such as `Host`, `Content-Length`, `Connection` and `Accept-Encoding`, can't be set. A custom `Authorization` header replaces the catalog's username and password.
+- Treat headers like a password. They are saved as plain text in `opdsplus.lua`, so anyone who can read that file can read them.
+- If a server redirects a request to another address, KOReader's HTTP library repeats the request there with the same headers, so only use headers with servers you trust.
+
 ## 🔧 Technical Details
 
 ### Requirements
@@ -287,6 +317,7 @@ opds_plus.koplugin/
     ├── catalog_utils.lua
     ├── debug.lua
     ├── file_utils.lua
+    ├── request_headers.lua
     ├── result.lua
     └── url_utils.lua
 ```
@@ -295,7 +326,7 @@ opds_plus.koplugin/
 Settings are stored in: `<KOReader data dir>/settings/opdsplus.lua`
 
 This file contains:
-- Catalog list
+- Catalog list, including each catalog's custom HTTP headers
 - Download history
 - Display preferences
 - Font settings
