@@ -1,3 +1,22 @@
+# 3.2.0 · 2026-11-09
+
+### Added
+- **Per-Library Download Subfolders** ([#16](https://github.com/JimDBh/kokomga.koplugin/issues/16)):
+  - New option (**Downloads & Storage → Separate Libraries into Subfolders**, off by default) that places downloaded books into a subfolder named after their Komga library (`<Download Dir>/<Library Name>/...`), combining cleanly with **Download into Series Subfolders** when both are enabled.
+- **Only List Writers as Authors** ([#15](https://github.com/JimDBh/kokomga.koplugin/issues/15)):
+  - New option (**Display & Appearance → Only list writers as authors**, off by default) that takes a book's author from Komga's Writer role only, instead of every role (penciller, inker, colorist, letterer, cover, editor, translator…). A book with no writer still shows all its authors. Applies to downloaded books' metadata, the browser's list view and Bookshelf; books downloaded before the change keep their author until downloaded again.
+
+### Changed
+- **Re-designed Settings Menu**:
+  - Re-organized the plugin menu into logical submenus: **Komga Browser**, **Manual Match / Unlink Current Book** (when a document is open), **Server Setup**, **Downloads & Storage**, **Sync & Reading**, **Display & Appearance**, and **Cache**.
+- A person credited in several roles is listed once as an author, not once per role.
+
+### Fixed
+- **Bookshelf Integration**:
+  - Fixed badge and progress bar incoherence on Komga shelves where downloaded books lost their Komga source identity, causing page-count pills to overwrite the downloaded tick badge and local metadata refreshes to clobber Komga reading progress and series badges.
+  - Reconciled Komga `readProgress` with local KOReader `.sdr` sidecars for downloaded books, updated cached shelf records immediately when progress is pushed or a document closes, and stopped unread books from showing a `0%` progress bar.
+  - Removed conflicting book-level reading status badges from series folder cards.
+
 # 3.1.0 · 2026-10-15
 
 ### Changed
@@ -71,21 +90,3 @@ Just fixed the version string in metadata.
   - Fixed the next chapter opening on its last page during automatic chapter transitions. The Readest plugin could apply the previous chapter's reading position to the newly opened chapter; because its apply path only moves forward and clamps an out-of-range page, every auto-advanced chapter jumped to the end, was marked finished, and pushed that position back to the Readest cloud.
   - Readest progress is now rejected when it arrives through a reader that is no longer the active one, or when both the file checksum and the page count disagree with the open document. Legitimate cross-device resumes are unaffected.
   - Readest's pending background pull and delayed push are now cancelled before switching documents.
-
-# 2.1.0 · 2026-07-15
-
-### Added
-- **Multi-Chapter Background Pre-Downloading**:
-  - Configurable setting under options to auto-download the next N chapters/books in the background (setting to `0` disables it).
-  - Runs sequentially in a background subprocess to avoid any UI lag or blocking during reading.
-  - Added cooperative polling (1-second check interval) and standby lock management to prevent the device from entering sleep mode mid-download.
-- **Skip End-of-Book Prompt**:
-  - Added a setting to skip the end-of-book prompt and directly open the next book if it has already been pre-downloaded locally.
-- **KOReader Action Registration**:
-  - Registered the Komga Library Browser as a global KOReader action (`komga_browse`), enabling users to bind gesture shortcuts, key presses, or profiles to launch the browser directly from both the file manager and the reader.
-
-### Fixed
-- **Dispatcher Actions**:
-  - Fixed the manual sync action (`komga_sync_now`) which had an incorrect `"none"` category and missing event method, ensuring it now correctly dispatches and triggers manual synchronization.
-- **Home Screen Return Behavior**:
-  - Aligned browser window stack properties and resolved settings menu stack retention to ensure closing the browser correctly returns to launcher/homescreen plugins (e.g. Simple UI) instead of showing the book file manager.

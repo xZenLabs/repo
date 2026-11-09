@@ -4,14 +4,14 @@
 id=orca
 name=Orca
 version=2.2.0
-description=(🫍) Orca 🤝 Kindle KOReader (📲)
+description=Orca 🤝 Kindle KOReader
 author=ManzoliW
 category=utility
 platforms=koreader
 dependencies=
 source=https://github.com/ManzoliW/orca.koplugin
 stars=6
-updated_at=2026-11-09T02:00:58Z
+updated_at=2026-11-09T03:00:58Z
 published_at=2026-11-01T16:49:55Z
 readme_url=packages/koreader/orca.koplugin/README.md
 readme_hash=ef1e316a024bee5f3b49fb84a24adf61e5510420

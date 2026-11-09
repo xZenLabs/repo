@@ -1,0 +1,22 @@
+# Readwisereader plugin for KOReader
+# https://github.com/Endle/readwisereader.koplugin
+# zenpm:auto-scraped
+id=readwisereader
+name=Readwisereader
+version=2.6
+description=A Koreader plugin for Readwise Reader
+author=Endle
+category=media
+platforms=koreader
+dependencies=
+source=https://github.com/Endle/readwisereader.koplugin
+stars=99
+updated_at=2026-11-09T03:00:58Z
+published_at=2026-10-12T23:49:46Z
+readme_url=packages/koreader/readwisereader.koplugin/README.md
+readme_hash=22c6f90405d06035fe311eb08ae0eb05f3ba265c
+release_notes_url=packages/koreader/readwisereader.koplugin/RELEASE_NOTES.md
+release_notes_hash=20a1e2959d3c9c77c95f751cfc10c6157cce0bef7b4f2b61d5edda786106fec9
+releases=[{"tag_name":"v2.6","assets":[{"name":"source-code.zip","url":"https://api.github.com/repos/Endle/readwisereader.koplugin/zipball/v2.6"}],"name":"v2.6"},{"tag_name":"v2.5","assets":[{"name":"source-code.zip","url":"https://api.github.com/repos/Endle/readwisereader.koplugin/zipball/v2.5"}],"name":"v2.5"},{"tag_name":"v2.4","assets":[{"name":"source-code.zip","url":"https://api.github.com/repos/Endle/readwisereader.koplugin/zipball/v2.4"}],"name":"v2.4"},{"tag_name":"v2.3","assets":[{"name":"source-code.zip","url":"https://api.github.com/repos/Endle/readwisereader.koplugin/zipball/v2.3"}],"name":"v2.3"},{"tag_name":"v1.7","assets":[{"name":"source-code.zip","url":"https://api.github.com/repos/Endle/readwisereader.koplugin/zipball/v1.7"}],"name":"v1.7"},{"tag_name":"v1.6","assets":[{"name":"source-code.zip","url":"https://api.github.com/repos/Endle/readwisereader.koplugin/zipball/v1.6"}],"name":"v1.6"},{"tag_name":"v1.5","assets":[{"name":"source-code.zip","url":"https://api.github.com/repos/Endle/readwisereader.koplugin/zipball/v1.5"}],"name":"v1.5"}]
+source_type=source
+source_url=https://codeload.github.com/Endle/readwisereader.koplugin/zip/refs/heads/main
