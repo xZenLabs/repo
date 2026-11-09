@@ -1,8 +1,8 @@
-# koreader-enhanced-currently-reading-yanllsama
+# Koreader Enhanced Currently Reading
 <p align="center">
   <img src="scr-1.png" alt="Hata Ekranı">
 </p>
-# 📖 Enhanced Currently Reading Yanllsama (SimpleUI Dashboard Module)
+# 📖 Enhanced Currently Reading  (SimpleUI Dashboard Module)
 
 Enhanced Currently Reading is a completely redesigned, highly detailed, and fully dynamic reading statistics dashboard module. This module (`module_currently_yanllsama.lua`) is built as an extension for the `simpleui_ext.koplugin` to provide a premium, modern reading dashboard on KOReader.
 

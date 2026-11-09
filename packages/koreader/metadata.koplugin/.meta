@@ -3,16 +3,21 @@
 # zenpm:auto-scraped
 id=metadata
 name=Metadata
-version=source
-description=KOReader plugin for searching and applying online book metadata and covers.
+version=0.1.0
+description=An online book metadata search plugin for KOReader.
 author=ZHA30
 category=utility
 platforms=koreader
 dependencies=
 source=https://github.com/ZHA30/metadata.koplugin
 stars=18
-updated_at=2026-11-09T15:01:03Z
+updated_at=2026-11-09T16:01:08Z
+published_at=2026-11-09T15:27:18Z
 readme_url=packages/koreader/metadata.koplugin/README.md
-readme_hash=f1cb02939cfd97c1becdb6e0ede4af729532c908
-source_type=source
-source_url=https://codeload.github.com/ZHA30/metadata.koplugin/zip/refs/heads/main
+readme_hash=93a5d4314e57cd883de4bdd416d7a6d483244e0e
+release_notes_url=packages/koreader/metadata.koplugin/RELEASE_NOTES.md
+release_notes_hash=0096070062413d9b7be5a33db2df0ad18e2346ec28ff45cdeef61b86180739f2
+releases=[{"tag_name":"v0.1.0","assets":[{"name":"metadata.koplugin.zip","url":"https://github.com/ZHA30/metadata.koplugin/releases/download/v0.1.0/metadata.koplugin.zip","size":33072,"digest":"sha256:fb3d7bcf2512ac1143fb97a748c8ab3625423f5d3c5f64a3f5d34ec97ad76ce3"}],"name":"v0.1.0"}]
+source_type=release
+source_asset=metadata.koplugin.zip
+size=33072

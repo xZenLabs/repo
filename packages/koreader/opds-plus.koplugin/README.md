@@ -142,6 +142,9 @@ git clone https://github.com/greywolf1499/opds_plus.koplugin.git
 
 Access settings from: **OPDS Plus Catalog → Settings**
 
+#### Default Catalog (New in 1.3.0)
+- **Default Catalog**: Choose the catalog you use most and it opens as soon as you open **OPDS Plus Catalog → Browse Catalogs** (or its gesture), so you don't have to tap it every time. Press Back to return to the list of catalogs and pick another one. Choose **None** to always start from the list.
+
 #### Display Mode
 - **List View**: Traditional list with covers on the left
 - **Grid View**: Visual grid layout with larger covers
@@ -164,6 +167,9 @@ Access settings from: **OPDS Plus Catalog → Settings**
 - **Parallel Cover Downloads**:
   - Enabled (default): downloads several covers at once, in background processes, so pages of covers fill in faster and a slow server does not freeze the screen.
   - Disabled: downloads covers one at a time. Turn this off if covers stop loading or the device runs low on memory.
+- **Thumbnails on Navigation Entries**:
+  - Enabled (default): entries that open a list of books instead of being a book, such as a series or an author, show their thumbnail when the server provides one.
+  - Disabled: only books show covers.
 - **Advanced Cache Controls**:
   - Cache Size (MB)
   - Cache TTL (minutes)
@@ -192,6 +198,12 @@ Access settings from: **OPDS Plus Catalog → Settings**
   - Font size (10-20pt)
   - Bold/regular weight
   - Color: Dark Gray or Black
+
+#### Downloads (New in 1.3.0)
+- **Save Description with Downloads**:
+  - Enabled (default): the description a catalog gives for a book is saved with the downloaded file, so it shows in KOReader's **Book information**. A description the book already has, or one you edited yourself, is never replaced.
+  - KOReader marks a description saved this way with its pencil icon, like any customized property. To remove it from a book, long-press the description in **Book information** and tap **Reset custom**.
+  - Disabled: downloaded books are left as the server delivers them.
 
 ### Sync Actions & Settings (New in 1.2.0)
 
