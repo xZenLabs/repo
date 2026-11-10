@@ -1,3 +1,38 @@
+# v1.4.0 · 2026-11-10
+
+# OPDS Plus v1.4.0
+
+OPDS Plus can now update itself: check for a new release, read what changed, and install it, or roll back, from **OPDS Plus Catalog → Settings → Updates**. Redirects are also handled safely for every request.
+
+**Install this version by hand, as before.** From 1.4.0 on, OPDS Plus can update itself.
+
+### Added
+- **Updates from Within KOReader**: **OPDS Plus Catalog → Settings → Updates** has **Check for updates**, which shows the notes of a newer release and installs it after you tap **Install**. The download can be cancelled with a tap, and KOReader asks to restart once the new version is in place. **Skip this version** keeps the weekly check quiet about that release until a newer one comes out.
+- **Weekly Update Check**: Once a week, when OPDS Plus is opened and the device is already online, it asks GitHub whether there is a newer release, and says so once with a short notice. It never turns Wi-Fi on, never installs anything by itself, and stays quiet when the check fails. Turn it off with **Automatic update check (weekly)**.
+- **Roll Back**: The version an update replaced is kept, and **Roll back to previous version** puts it back. The newer one is kept in turn, so you can switch back.
+- **Security Policy**: `SECURITY.md` explains how to report a vulnerability privately, and what OPDS Plus does and doesn't protect: saved passwords, catalog connections, and how updates are checked.
+
+### Update Safety
+- Updates come only from this repository's releases on GitHub, over HTTPS. The certificate is checked against KOReader's certificate bundle and must name the server it came from.
+- The downloaded archive must match the size and SHA-256 checksum that GitHub publishes for it. Every file in it is checked before anything is unpacked, and the unpacked plugin must load and carry the version it claims before it replaces the installed one.
+- The new version is unpacked next to the installed one and swapped in with two renames, so a failed update leaves the installed version as it was. A plugin folder that is a link or has a `.git` folder is treated as a development install and is not updated, unless you allow it in **Settings → Updates**.
+- An update that needs a newer KOReader than yours is not installed.
+
+### Changed
+- **Release Archive**: The `opds_plus.koplugin.zip` of a release now holds only the files the plugin runs on. It no longer carries the repository's own files (`.gitignore`, `.luacheckrc`, `CONTRIBUTING.md` and `CODE_OF_CONDUCT.md`). It is built by `scripts/build_release.py`, and the tests run on the very archive that gets published.
+- **Automated Tests**: A test suite that runs without KOReader (`scripts/test.sh`), and a check of the release archive, now run next to luacheck on every pull request and every push to `main`. See CONTRIBUTING.md.
+
+### Fixed
+- **Redirects**: A request that a server redirects is now followed by OPDS Plus itself instead of by KOReader's HTTP library, for catalog pages, covers, downloads, sync and Kavita page streaming. KOReader's library got four things wrong. A redirect to another place on the same server dropped the saved username and password, so a catalog page asked you to add credentials you had already saved, and covers and downloads were refused. A redirect to another server carried the catalog's custom headers (Issue #94), and the Kavita token, along with it; they now go only to the catalog's own server. A permanent redirect (HTTP 308) was not followed. And with "Use server filenames", looking up the name of a file whose download address redirects repeated the request as a full download instead of asking for the headers only, so the whole book could be fetched just to read its name.
+- **Catalog Address Checks**: Adding or editing a catalog no longer turns down an address that is fine: one typed with an upper-case protocol such as `HTTPS://`, one whose host name has an underscore (common for Docker and NAS names), or one with an IPv6 address in brackets, though some servers may still turn away the request KOReader sends to an IPv6 address. Spaces around the address are dropped, since a pasted address often comes with one. A port that is not a number from 1 to 65535 is reported on the spot instead of failing later.
+- **Editing a Catalog Keeps Its Sync Point**: Saving the edit dialog forgot where the last sync had stopped, so the next sync no longer said "Up to date!". It went through the whole feed again and ran into the books it had already downloaded. The sync point is kept now, unless you changed the address.
+- **Sync File Types**: The file types to sync are matched without regard to case, so `EPUB, PDF` works, and so does a server whose links end in `.EPUB`. A field holding only spaces or commas filters nothing, instead of blocking every download.
+- **Books Counted After a Sync**: When a sync came across books that were already on the device, the "books downloaded" message came out too low, by one for each of them.
+- **Description Next to an Empty Content Tag**: A book entry with an empty `<content/>` tag as well as a `<summary>` showed no description. The summary is used now.
+- **Search Without a Usable Description**: A catalog whose OpenSearch description can't be fetched or read no longer offers a search that only reloads the catalog.
+- **Odd Feeds and Servers**: A character reference that is not a number, such as `&#xZZ;`, no longer fails the whole feed, and neither does a title that is an empty XHTML `<div/>`. A redirect without a `Location` header, from a faulty server or proxy, is reported like any other failed request instead of causing an error while opening a catalog or downloading a book. With "Use server filenames", a file name taken from a redirect no longer keeps the query string or the percent-escapes of the address, and a redirect to an address with no file name no longer gives a file called `.epub`. Downloading to a folder that can't be written to fails at once, with the reason, instead of after asking the server for the book.
+- **Kavita Page Streaming**: When Kavita's reply to the progress request has no page number in it, page streaming starts from the first page instead of failing after the viewer has opened.
+
 # v1.3.1 · 2026-11-09
 
 # OPDS Plus v1.3.1
@@ -132,66 +167,3 @@ Special thanks to these contributors for their work in this release cycle:
 
 Full changelog:
 https://github.com/greywolf1499/opds_plus.koplugin/blob/main/CHANGELOG.md
-
-# v1.1.0 · 2025-11-18
-
-# OPDS Plus v1.1.0 - Polish & Performance Release
-
-This release focuses on polishing the user experience, fixing bugs discovered during real-world testing, and optimizing space utilization across all device sizes.
-
-## 🎯 Highlights
-
-### ✨ Better Text Display
-- Titles and authors now show **ellipsis (…)** when truncated
-- Smart word-aware truncation for cleaner breaks
-- UTF-8 safe for international characters
-
-### 📐 Optimized Layouts
-- **List View**: Dynamically fits maximum items with minimal whitespace
-- **Grid View**: Automatically maximizes rows based on screen height
-- Works perfectly on small e-readers, tablets, and large desktop displays
-- No more wasted space at the bottom of pages!
-
-### 🐛 Bug Fixes
-- Fixed release package containing nested directories
-- Fixed crashes in Grid Layout and Border settings menus
-- Fixed `%%` appearing in confirmation messages
-- Fixed version display in About dialog
-- Fixed text truncation crashes
-
-### 🔧 Developer Features
-- **Debug Mode Toggle**: Enable verbose logging when troubleshooting
-- **Version Display**: Now shown in settings menu
-- Cleaned up excessive logging for better performance
-
-## 📦 Installation
-
-1. Download `opds_plus.koplugin.zip` from assets below
-2. Extract to your KOReader plugins directory:
-   - **Linux/Mac**: `~/.config/koreader/plugins/`
-   - **Android**: `/sdcard/koreader/plugins/`
-   - **Kindle**: `/mnt/us/koreader/plugins/`
-3. Restart KOReader
-4. Access via: **File Manager → Menu → OPDS Plus Catalog**
-
-## ⚙️ Settings
-
-All settings accessible via: **OPDS Plus Catalog → Settings**
-
-- **Display Mode**: Switch between List and Grid views
-- **List View Settings**: Cover size presets (Compact/Regular/Large/Extra Large)
-- **Grid View Settings**: Layout presets, borders, and styling
-- **Font & Text**: Customize fonts, sizes, colors
-- **Developer**: Toggle debug mode for troubleshooting
-
-## 🔄 Upgrading from v1.0.0
-
-Simply replace the plugin directory with the new version. All your settings and catalogs will be preserved.
-
-## 🙏 Acknowledgments
-
-Thanks to everyone (myself, so far) who tested v1.0.0 and provided feedback! This release addresses all reported issues and includes several UX improvements based on real-world usage.
-
----
-
-**Full Changelog**: https://github.com/greywolf1499/opds_plus.koplugin/blob/main/CHANGELOG.md
