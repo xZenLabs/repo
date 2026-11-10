@@ -82,7 +82,7 @@ Every year ends with a card that describes how you read. Your strongest trait wi
 
 ## Sharing
 
-**Share**, on the summary card, shows a QR code. Point your phone at it on the same Wi-Fi network, tap **Allow** on the e-reader, and your recap opens in the browser, with nothing to install.
+**Share**, on the summary card, shows a QR code and an address. On the same Wi-Fi network, point your phone at the code or type the address in any browser, tap **Allow** on the e-reader, and your recap opens in the browser, with nothing to install.
 
 <table>
   <tr>
@@ -128,7 +128,7 @@ The language follows KOReader's: English, Portuguese or Spanish. In any other la
 ## Your data stays with you
 
 > [!NOTE]
-> Book Rewind only reads KOReader's statistics (`statistics.sqlite3`) and the library's cover cache (`bookinfo_cache.sqlite3`), both read-only. It makes no internet connections. Nothing leaves your device unless you tap **Share**, and then only to the device you allow on your own network.
+> Book Rewind only reads KOReader's statistics (`statistics.sqlite3`), the library's cover cache (`bookinfo_cache.sqlite3`) and, for page counts, the settings KOReader keeps for each book you opened this year, all read-only. It makes no internet connections. Nothing leaves your device unless you tap **Share**, and then only to the device you allow on your own network.
 
 <details>
 <summary><b>How the numbers work</b></summary>
@@ -139,6 +139,7 @@ The language follows KOReader's: English, Portuguese or Spanish. In any other la
 - **Title and author** come from the file. Without a title, it shows the file name. Without an author, the book stays out of the authors card.
 - **Read to the end** means 90% of the book read in KOReader. It counts in the year that mark is reached, even for a book started years before.
 - **Pages** count the part of the book you covered, so rereading a passage at another font size does not add up twice.
+- **Stable page numbers:** in a book where you turned on KOReader's stable page numbers (publisher pages or characters per page), pages count in them. Other books count screen pages, as KOReader shows them. This needs the book in KOReader's reading history.
 - **Covers** come from KOReader's library. Books with no cached cover get one generated on the spot, with the title and author.
 
 The complete rules, including the thresholds of each profile, are in [docs/design.md](docs/design.md).
