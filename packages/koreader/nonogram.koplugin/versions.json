@@ -1,3 +1,3 @@
 {
-  "releases": [{"tag_name":"v1.0.0","assets":[{"name":"nonogram.koplugin.zip","url":"https://github.com/omer-faruq/nonogram.koplugin/releases/download/v1.0.0/nonogram.koplugin.zip","size":20732,"digest":"sha256:1d6f0460602aa6730ca9030b30c90152a7c7004fe2d5dfd7a5db81377b63f705"}],"name":"v1.0.0"}]
+  "releases": [{"tag_name":"v1.1.0","assets":[{"name":"nonogram.koplugin.zip","url":"https://github.com/omer-faruq/nonogram.koplugin/releases/download/v1.1.0/nonogram.koplugin.zip","size":32397,"digest":"sha256:94049be87e9420186dd10d5665c9650b5c0711b403e4397f9a0c127556785a6b"}],"name":"v1.1.0"},{"tag_name":"v1.0.0","assets":[{"name":"nonogram.koplugin.zip","url":"https://github.com/omer-faruq/nonogram.koplugin/releases/download/v1.0.0/nonogram.koplugin.zip","size":20732,"digest":"sha256:1d6f0460602aa6730ca9030b30c90152a7c7004fe2d5dfd7a5db81377b63f705"}],"name":"v1.0.0"}]
 }
