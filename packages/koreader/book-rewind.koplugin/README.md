@@ -138,6 +138,7 @@ The language follows KOReader's: English, Portuguese or Spanish. In any other la
 - **It only counts what went through KOReader.** Reading in other apps is not included.
 - **Title and author** come from the file. Without a title, it shows the file name. Without an author, the book stays out of the authors card.
 - **Read to the end** means 90% of the book read in KOReader. It counts in the year that mark is reached, even for a book started years before.
+- **Books marked as finished** in KOReader also count as read to the end when the statistics don't show them, for example after you reset the statistics: the book needs to be marked as finished in the year, with at least 90% read, and be in KOReader's reading history. They count on the books card, the timeline (in the month they were marked) and the summary, but not in time, pages or the other cards, since their reading sessions are gone.
 - **Pages** count the part of the book you covered, so rereading a passage at another font size does not add up twice.
 - **Stable page numbers:** in a book where you turned on KOReader's stable page numbers (publisher pages or characters per page), pages count in them. Other books count screen pages, as KOReader shows them. This needs the book in KOReader's reading history.
 - **Covers** come from KOReader's library. Books with no cached cover get one generated on the spot, with the title and author.

@@ -1,3 +1,24 @@
+# v0.3.0 · 2026-11-10
+
+## Faster
+
+- Looking a word up in many dictionaries is much faster. Searching a dictionary's own key order normalised every key of each block it read; it now normalises only the dozen keys a search looks at. With 48 dictionaries on a Clear7, the search went from 0.45–0.8 s to 0.03–0.12 s per lookup.
+- The first lookup after KOReader starts no longer opens every dictionary again: the dictionaries opened at start stay open (with 48 dictionaries on a Clear7, 3.3 s → 0.14 s). Small dictionaries are no longer indexed in memory again in every session: their key order is remembered, or an index is built for them once in the background.
+- On WebViews older than Chromium 125 (such as WebView 109 on Android 14 e-readers), stylesheets that use CSS `round()` are rewritten once and saved, instead of in every lookup. For a dictionary with a 1.6 MB stylesheet, that is about 0.9 s less per lookup on a Clear7.
+- Pronunciation links play at once. The first tap on one could wait seconds while the next result was being laid out ahead.
+
+## Fixed
+
+- An entry that took longer than 8 s to lay out (for example one whose embedded fonts were being extracted for the first time) made every later entry of the session use the built-in renderer (MuPDF). Time spent extracting resources no longer counts, and the WebView is given up only when two entries in a row time out.
+- When MuPDF showed MDict results, every result of a lookup was prepared before the popup opened, extracting every resource its dictionary's stylesheets name. With dictionaries that embed font subsets (thousands of `@font-face` rules with a `unicode-range`), this could extract hundreds of MB, use over 1 GB of memory and leave KOReader unresponsive. Results are now prepared one at a time when shown, and MuPDF, which cannot use such subsets, no longer gets them.
+- A tap a few pixels beside a small link, such as a pronunciation icon, turned the page or moved to another result. A tap within 2.5 mm of a link now opens it.
+- KOReader's "Searching dictionary for…" message did not appear while MDict dictionaries were searched or the first entry was laid out, so a slow lookup looked like KOReader had stopped responding. It now appears when a lookup takes more than half a second.
+
+## Install
+
+- From 0.2.0: *Search → Settings → MDict dictionaries → Updates → Check for updates*, or wait for the automatic offer. Then restart KOReader (on Android, exit KOReader and open it again).
+- From 0.1.0: unzip `mdict.koplugin-0.3.0.zip` into `koreader/plugins/`, replacing the `mdict.koplugin` folder, and restart KOReader.
+
 # v0.2.11 · 2026-11-08
 
 ## Fixed
@@ -54,25 +75,3 @@
 
 - From 0.2.0: *Search → Settings → MDict dictionaries → Updates → Check for updates*, or wait for the automatic offer. Then restart KOReader (on Android, exit KOReader and open it again).
 - From 0.1.0: unzip `mdict.koplugin-0.2.8.zip` into `koreader/plugins/`, replacing the `mdict.koplugin` folder, and restart KOReader.
-
-# v0.2.7 · 2026-11-06
-
-## Added
-
-- *Flash the screen on page turns* (e-ink screens, off by default): *Search → Settings → MDict dictionaries → Display*. Each page turn in an entry then fully refreshes the popup, which clears the ghosts of earlier pages that e-ink screens can leave, at the cost of a flash. Without it, page turns refresh the screen as KOReader's own dictionary popup does, with a flash only every few refreshes. (#1)
-
-## Changed
-
-- Kindle's browser (experimental): when memory runs low, the browser is asked to free its caches, and if that is not enough, it is closed and entries are shown with KOReader's renderer, with a note that the Kindle is low on memory. Before, the Kindle could freeze for half a minute until the system ended the browser itself. (#1)
-- Kindle's browser: if the system ends the browser because memory ran out, the note now says so instead of "killed by signal 9".
-- Kindle's browser: the log (`crash.log`) now gives the memory available with each entry, which helps with reports.
-- Updates: a download that stalls is tried again, up to three times, with more time each try, and a failed download says where to get the release by hand. Timeouts are described in words on older KOReader versions instead of "wantread". (#1)
-
-## Fixed
-
-- A warning from the WebView renderer wrote a block of internal text into the log before the message.
-
-## Install
-
-- From 0.2.0: *Search → Settings → MDict dictionaries → Updates → Check for updates*, or wait for the automatic offer. Then restart KOReader (on Android, exit KOReader and open it again).
-- From 0.1.0: unzip `mdict.koplugin-0.2.7.zip` into `koreader/plugins/`, replacing the `mdict.koplugin` folder, and restart KOReader.
