@@ -1,3 +1,12 @@
+# v1.6.1 · 2026-11-10
+
+### Fixes
+- **Library**: manga you've read or downloaded now show up in the Manga tab, no need to add them to favourites. Ones you'd already started are picked up the first time you open the library (the exact title comes back when you open the manga's page).
+- **Sleep**: after your e-reader goes to sleep, you no longer have to restart it to reopen the plugin.
+
+### New
+- "Manga · Auto-add to library" option in Settings, to turn this off.
+
 # v1.6 · 2026-11-08
 
 ### New
@@ -54,24 +63,3 @@ Updated translations.
 
 Removed
 AniList integration and the old reading statistics screen.
-
-# v1.3 · 2026-10-21
-
-Sefirah v1.3 
-
-New features
-- AniList integration: added an AniList profile, access to AniList lists, and links between Sefirah titles and their AniList entries.
-- Reading progress sync: added support for syncing progress with AniList, including when a chapter is completed while an account is connected.
-- Reading statistics: added a dedicated statistics screen to track Sefirah-managed books and reading time across different periods.
-- Download queue: added a background download manager, with a queue screen and configurable progress notifications.
-- Sources: added support for WEBTOON, Kakuyomu, and RanobeHub.
-
-Improvements and fixes
-- Networking and stability: improved handling of HTTP redirects, temporary network errors, and connection retries.
-- More robust downloads: added retry and failure-handling mechanisms for chapter downloads.
-- Background work: moved some network operations away from direct UI interactions to help prevent interface freezes.
-- Cover cache: improved handling of local covers and added a way to clear stale cover-cache entries.
-- Library: improved metadata refresh and updates to the available chapter count.
-- Navigation: cached previously viewed result pages to make navigating back through results more consistent.
-- Manga: improved parallel image downloads and prefetching of the next chapter.
-- Localization: updated translation files.

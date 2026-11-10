@@ -1,0 +1,23 @@
+# Classicscover plugin for KOReader
+# https://github.com/dwigunakd/classicscover.koplugin
+# zenpm:auto-scraped
+id=classicscover
+name=Classicscover
+version=1.0.1
+description=generate book cover directly from koreader developed with the help of Codex
+author=dwigunakd
+category=theme
+platforms=koreader
+dependencies=
+source=https://github.com/dwigunakd/classicscover.koplugin
+stars=5
+updated_at=2026-11-10T13:00:59Z
+published_at=2026-04-12T23:47:18Z
+readme_url=packages/koreader/classicscover.koplugin/README.md
+readme_hash=fc85cb61f5918252217e9b6d6f25bd70f846d37b
+release_notes_url=packages/koreader/classicscover.koplugin/RELEASE_NOTES.md
+release_notes_hash=f5d04ed71847ad95763941608195c7de2f4f5b7c5fe723256af66a71ff71e6d4
+releases=[{"tag_name":"v1.0.1","assets":[{"name":"classicscover.koplugin.zip","url":"https://github.com/dwigunakd/classicscover.koplugin/releases/download/v1.0.1/classicscover.koplugin.zip","size":5817,"digest":"sha256:6f86d93254328ddb1d21dbcf31bfb915a1befa4b3080f05184c4adbf83b6dd89"}],"name":"Classics Cover v1.0.1"},{"tag_name":"v1.0.0","assets":[{"name":"classicscover.koplugin.zip","url":"https://github.com/dwigunakd/classicscover.koplugin/releases/download/v1.0.0/classicscover.koplugin.zip","size":5032,"digest":"sha256:74c38679ced54fd4022b54a3659433223a9138e706ea5887a42ff7c1ea93947b"}],"name":"Classics Cover v1.0.0"}]
+source_type=release
+source_asset=classicscover.koplugin.zip
+size=5817
