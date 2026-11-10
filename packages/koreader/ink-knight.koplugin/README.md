@@ -31,21 +31,28 @@
 <table>
   <tr>
     <td width="25%" align="center"><img src="docs/screenshots/start.png" alt="First page, with play online and play offline"><br><sub><b>First page</b></sub></td>
-    <td width="25%" align="center"><img src="docs/screenshots/games.png" alt="List of games, with those waiting for you on top"><br><sub><b>Your games</b></sub></td>
-    <td width="25%" align="center"><img src="docs/screenshots/game.png" alt="A game in progress, with clocks and a selected piece"><br><sub><b>Playing</b></sub></td>
+    <td width="25%" align="center"><img src="docs/screenshots/games.png" alt="Your games, with the challenges received and sent above them"><br><sub><b>Your games</b></sub></td>
+    <td width="25%" align="center"><img src="docs/screenshots/game.png" alt="A game in progress on the newspaper board, with Merida pieces, coordinates and clocks"><br><sub><b>Playing</b></sub></td>
     <td width="25%" align="center"><img src="docs/screenshots/puzzle.png" alt="A puzzle waiting for the best move"><br><sub><b>Puzzles</b></sub></td>
+  </tr>
+  <tr>
+    <td width="25%" align="center"><img src="docs/screenshots/styles.png" alt="Choosing a board style, with a sample of each one"><br><sub><b>Board styles</b></sub></td>
+    <td width="25%" align="center"><img src="docs/screenshots/moves.png" alt="The moves of a game, two to a row, with the one shown marked"><br><sub><b>List of moves</b></sub></td>
+    <td width="25%" align="center"><img src="docs/screenshots/hint.png" alt="A game against the offline engine, with a suggested move marked"><br><sub><b>Hint, offline</b></sub></td>
+    <td width="25%" align="center"><img src="docs/screenshots/two_players.png" alt="A game between two people on the same device"><br><sub><b>Two players</b></sub></td>
   </tr>
 </table>
 
 - **Your choice on opening:** the first page asks whether to play online or offline, and Lichess is only contacted if you choose online. The time and the battery stay at the bottom of every screen.
-- **Play:** find an opponent in rapid and classical, by correspondence, challenge a friend (blitz or no time limit too) or play the Lichess computer. In a challenge, you can pick your color.
+- **Play:** find an opponent in rapid and classical, by correspondence, challenge a friend (blitz or no time limit too) or play the Lichess computer. In a challenge, you can pick your color. The challenges you sent wait beside the ones you received, and you can cancel them.
 - **Several games at once:** the list shows whose turn it is, with the games waiting for you on top. It refreshes at the interval you choose.
-- **During a game:** clocks, promotion, draw offers and draws by repetition, asking for a takeback, giving time, resigning and canceling. When the game ends, play again. A dropped connection comes back by itself.
-- **Puzzles:** a pile stays on the device to solve without internet, and results go to Lichess when the Wi-Fi returns. Also puzzles by theme, your results and the daily puzzle.
+- **During a game:** clocks, promotion, draw offers and draws by repetition, asking for a takeback, giving time, resigning and canceling. The list of moves is one tap away, here and in the other modes. When the game ends, play again. A dropped connection comes back by itself.
+- **Puzzles:** a pile stays on the device to solve without internet, and results go to Lichess when the Wi-Fi returns. Also puzzles by theme, your results and the daily puzzle. You can also review the puzzles you missed in the last 30 days, including the ones missed on the site.
 - **Review:** your past games and favorites, move by move, with what Lichess knows about each position: its evaluation, the most played moves and, near the end, the perfect result.
 - **Players:** search by name, see who you follow is online, profiles, a rating chart with statistics, and your record against someone.
-- **Without internet:** play a small engine that never freezes the screen, and continue the game later.
+- **Without internet:** play a small engine that never freezes the screen, with your choice of color, undo and hints, and continue the game later. Or play against someone else on the same device.
 - **Your board:** five board styles, including the hatched squares of printed diagrams, three piece sets and coordinates on the edges.
+- **Sleep screen:** if the device sleeps with Ink Knight open, it shows the Ink Knight cover instead of the book cover. This applies when the KOReader sleep screen is set to show the book cover.
 
 ## Installation
 
@@ -54,6 +61,8 @@
 3. Restart KOReader. The plugin is in the Tools menu, as **Ink Knight**.
 
 The language follows KOReader's: English, Portuguese or Spanish. In any other language, it uses English.
+
+Your options, the games without internet and the saved puzzles are in `koreader/settings/ink_knight.lua`, and the token in `koreader/settings/ink_knight_token` or, on a Kindle, in `/var/local/ink_knight`. To uninstall, remove the plugin folder and these files, and revoke the token on Lichess.
 
 ## Connect your account
 
@@ -65,8 +74,8 @@ Ink Knight uses a personal token, which only you can create and revoke.
    - Puzzles: `puzzle:read` and `puzzle:write`
    - Play games: `challenge:write`, only to give time to an opponent
    - Only to add or remove favorites: `preference:write`. It comes unmarked, because it also allows changing your account preferences, which Ink Knight never does.
-2. Create the token, copy it and tap **Done: paste from my phone**.
-3. Point your phone at the QR code on the same Wi-Fi network, tap **Allow** on the e-reader and paste the token.
+2. Create the token, copy it and tap **Done: paste the token**.
+3. On the same Wi-Fi network, point your phone at the QR code or type the address shown below it in any browser, tap **Allow** on the e-reader and paste the token.
 
 Without a permission, the rest keeps working, and what depends on it says what is missing. **Settings > Token permissions** shows what your token allows. Lichess does not change an existing token, so adding a permission means creating another.
 
@@ -96,14 +105,14 @@ The full list is in [docs/design.md](docs/design.md).
 
 - Made for KOReader 2026.07 and for touchscreens, always in portrait. It was developed for a 10th generation basic Kindle (firmware 5.18.1).
 - Uses only what comes with KOReader, with nothing else to install.
-- The clock keeps running in a live game if you leave its screen, so Ink Knight asks first. During a game with a clock, the device stays awake, which costs battery.
+- The clock keeps running in a live game if you leave its screen, so Ink Knight asks first. During a game with a clock, the device stays awake, which costs battery. The power button still puts it to sleep.
 
 ## Development
 
-With [LuaJIT](https://luajit.org) installed, from the repository root:
+With [LuaJIT](https://luajit.org) and `zip` installed, from the repository root, this runs the tests, checks the texts of the three languages and builds the package:
 
 ```sh
-for spec in tests/*_spec.lua; do luajit "$spec"; done
+sh tools/check.sh
 ```
 
 The design, the tools and the release process are described in [docs/design.md](docs/design.md). Contributions are accepted under the project's license.
