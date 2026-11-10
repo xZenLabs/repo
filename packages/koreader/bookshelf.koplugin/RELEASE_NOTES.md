@@ -1,3 +1,15 @@
+# v6.4.2 · 2026-11-09
+
+- Comics from OPDS catalogs that serve CBZ files as ZIP now download as CBZ and show on the shelf (#592)
+- Coloured text keeps its colour over a wallpaper or on a Dark shelf, on colour screens
+- In night mode, the colour picker's swatches show their own colours, and a picked colour is saved as the one shown
+- On Android in night mode, text and swatch colours are no longer inverted
+- The status line shows the current time straight after waking (#596)
+- Performance improvement for the first page turn after waking or restarting
+- Performance improvement for Spines shelves with covers facing out
+- Performance improvement for page turns through covers not seen before
+- Performance improvement for expanding and collapsing the shelf
+
 # v6.4.1 · 2026-11-08
 
 - Book sizes > Equal height: a new option for spine shelves (long-press the shelf > View mode). Every book stands at the same height while keeping its own width, so landscape books facing out show their full cover, uncropped.
@@ -55,10 +67,3 @@
 - Random book's "All books" now includes your Kindle library books, if you have a Kindle Virtual Library shelf.
 - Fix: books added by Scan all library metadata didn't show in their series until KOReader was closed and opened again (#581)
 - Fix: changing a book's rating or status, removing it from history or changing its cover also cleared its stored page count and publish date
-
-# v6.3.1 · 2026-11-02
-
-- Design tweak to book menu header
-- Further improvements to compatibility with other plugins drawing over bookshelf (#572)
-- Performance improvements for shelf of shelves with nested filters
-- Performance improvements for page count extraction

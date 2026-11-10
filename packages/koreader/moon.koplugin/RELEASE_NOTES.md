@@ -1,3 +1,38 @@
+# v0.5.6 · 2026-11-09
+
+## 月读 v0.5.6
+
+KOReader 插件包：`book.koplugin-v0.5.6.zip`
+
+输入法词库（整库，手动 sideload）：`dictionary.sqlite3 dictionary-wubi.sqlite3 dictionary-cangjie.sqlite3 dictionary-zhuyin.sqlite3`
+
+安装：解压后将 `book.koplugin` 复制到 `koreader/plugins/`，然后重启。
+
+词库 sideload：下载对应布局的词库，直接放入 `koreader/.moon/`
+（与 `book.sqlite3` 同级）。附件已使用最终文件名，无需重命名。
+
+### 更新内容
+
+相对上一版本 `v0.5.5`：
+
+#### 新功能
+
+- :sparkles: (subscribe): 推荐源改接奇睿 API，去掉精选并修多级导航 (9542dff4)
+
+#### 修复
+
+- :bug: (subscribe): 修复 v0.5.6 发版测试：奇睿 catalog 用例与 l10n 归属 (9a527ecf)
+- :bug: (wechat): 纯图章进度坐标可上报阅读进度 (0d4cde98)
+- :bug: (desktop): 修复返回键无法退出桌面 (#114) (ad98a4dc)
+
+#### 界面
+
+- :lipstick: (subscribe): 推荐源显示描述，加入后不关窗并 toast (615e4b74)
+
+### 完整对比
+
+https://github.com/AnkioTomas/moon/compare/v0.5.5...v0.5.6
+
 # v0.5.5 · 2026-11-09
 
 ## 月读 v0.5.5
@@ -149,37 +184,3 @@ KOReader 插件包：`book.koplugin-v0.5.2.zip`
 ### 完整对比
 
 https://github.com/AnkioTomas/moon/compare/v0.5.1...v0.5.2
-
-# v0.5.1 · 2026-11-08
-
-## 月读 v0.5.1
-
-KOReader 插件包：`book.koplugin-v0.5.1.zip`
-
-输入法词库（整库，手动 sideload）：`dictionary.sqlite3 dictionary-wubi.sqlite3 dictionary-cangjie.sqlite3 dictionary-zhuyin.sqlite3`
-
-安装：解压后将 `book.koplugin` 复制到 `koreader/plugins/`，然后重启。
-
-词库 sideload：下载对应布局的词库，直接放入 `koreader/.moon/`
-（与 `book.sqlite3` 同级）。附件已使用最终文件名，无需重命名。
-
-### 更新内容
-
-相对上一版本 `v0.5.0`：
-
-#### 修复
-
-- :bug: (tools): 修复 macOS 模拟器点击被识别为长按 (42e596c3)
-
-#### 界面
-
-- :lipstick: (setting): 账号页为全部内置书源配独立图标 (21c904bc)
-
-#### 变更
-
-- :speech_balloon: (paths): 手动安装路径统一显示 koreader/ 前缀 (051505f7)
-- :children_crossing: (guard): 其它插件出错时引导去找对应作者 (5a93268d)
-
-### 完整对比
-
-https://github.com/AnkioTomas/moon/compare/v0.5.0...v0.5.1
