@@ -84,6 +84,10 @@ original-file backup in `.mac1984-theme` are preserved.
 - Storefront users: **Storefront → Update All**
 - Manual-install users: **Tools → Macintosh 1984 → Check for updates**
 
+Manual updates are verified against the SHA-256 checksum published with the
+release, and an interrupted update restores the previous plugin folder on the
+next start.
+
 Restart KOReader when prompted after updating.
 
 ## Plugin Menu
