@@ -1,3 +1,16 @@
+# v1.8.3 · 2026-11-10
+
+### Fixed
+
+- Page-turn buttons no longer invert when a wide page is auto-rotated.
+- Books without series information no longer show series navigation entries or a blank series name (#12).
+
+### Changed
+
+- **Rotate wide pages** now uses rotation arrows instead of "left 90°" and "right 90°".
+
+**Full Changelog**: https://github.com/Craftwork2720/meguru/compare/v1.8.2...v1.8.3
+
 # v1.8.2 · 2026-11-08
 
 ### Fixed
@@ -49,13 +62,3 @@
 * @KristanLaimon made their first contribution in https://github.com/Craftwork2720/meguru/pull/10
 
 **Full Changelog**: https://github.com/Craftwork2720/meguru/compare/v1.7.1...v1.7.3
-
-# v1.7.1 · 2026-10-30
-
-## Bug fixes
-
-- Fixed turned panels appearing upside down on a landscape screen.
-- Fixed **Meguru this series** missing on KOReader nightly builds ([koreader/koreader@dad1ad4](https://github.com/koreader/koreader/commit/dad1ad44335fafb1070d524c9ffd2fa2ce2da81d)).
-- Fixed books opened from a just-added OPDS catalog not creating their series folder.
-
-**Full Changelog**: https://github.com/Craftwork2720/meguru/compare/v1.7.0...v1.7.1
