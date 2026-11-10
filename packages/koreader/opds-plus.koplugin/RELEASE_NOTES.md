@@ -1,3 +1,23 @@
+# v1.5.0 · 2026-11-10
+
+# OPDS Plus v1.5.0
+
+OPDS Plus now reads OPDS 2.0 catalogs, such as Komga's, next to OPDS 1 ones, with nothing to set. Groups of books on a catalog's start page open as shelves, and the book details show the publisher, the publication date and the language.
+
+**Update from within KOReader**: **OPDS Plus Catalog → Settings → Updates → Check for updates**, or install by hand as before.
+
+### Added
+- **OPDS 2.0 Catalogs**: Catalogs that serve OPDS 2.0 (JSON) feeds open like any other: navigation, groups, books with their authors, series, covers and downloads, facets, pagination and search. OPDS Plus tells the two formats apart by the feed itself, so there is nothing to set.
+- **Shelves**: Groups of books that an OPDS 2.0 catalog shows on its start page without a link of their own (like the samples on test.opds.io) open as folders, next to the groups that have a link, with the number of books they hold. Search results that come only in such groups are still listed straight away.
+- **More Book Details**: The book details dialog shows the publisher, the publication date and the language when the catalog gives them, from OPDS 2.0 feeds and from the Dublin Core elements of OPDS 1 feeds (Calibre-Web sends the language).
+
+### Changed
+- **Catalog Requests Ask for OPDS 2.0 First**: Catalog requests now say which formats OPDS Plus reads, OPDS 2.0 first and then OPDS 1, so a server that has both can send the newer one. A server that refuses such a request is asked again the old way, and a catalog's own **Accept** header (in its custom headers) still wins.
+- **Clearer Message for a Web Page**: An address that leads to a web page (a login page, a web reader) now says that it is not an OPDS catalog, instead of showing an empty or broken list.
+
+### Fixed
+- Comic books that servers label `application/x-cbr`, `application/x-rar-compressed` or similar are offered for download as `.cbr`, and types with parameters (`application/epub+zip; charset=utf-8`) are recognized.
+
 # v1.4.0 · 2026-11-10
 
 # OPDS Plus v1.4.0
@@ -119,51 +139,6 @@ Special thanks to these contributors for their work in this release cycle:
 - @cardoso42 (Kindle cover cache, #87)
 - @demrom (stable cover cache keys, #97)
 - @439qi (local hostnames, #95)
-
-Full changelog:
-https://github.com/greywolf1499/opds_plus.koplugin/blob/main/CHANGELOG.md
-
-# v1.2.0 · 2026-03-19
-
-# OPDS Plus v1.2.0
-
-This release includes merged PRs, issue resolutions, and new user-facing settings since v1.1.0.
-
-> [!IMPORTANT]
-> **Upgrade method for existing users:** This release is based on a complete plugin rewrite.
-> To avoid stale files and update issues, **remove the old `opds_plus.koplugin` directory entirely**, then install the new release fresh.
-
-### Added
-- Book Info Dialog for at-a-glance book metadata with improved cover handling.
-- Direct dispatcher actions for:
-  - OPDS Plus: Sync all catalogs
-  - OPDS Plus: Force sync all catalogs
-- Cover pipeline improvements with disk-backed cache and lifecycle-safe image loading.
-- New Cover Settings:
-  - Prefer Large Covers (quality-first source selection)
-  - Enable Cover Cache toggle
-  - Advanced cache controls: max size, TTL, and manual cache clear
-
-### Changed
-- Refactored debug architecture to standardize logging through shared utilities.
-- Extended state-manager usage across UI menu components.
-- Removed obsolete/dead code and simplified some loader internals.
-- Updated GitHub Actions dependencies for checkout and artifact workflows.
-
-### Fixed
-- Gesture registration failures (Issue #58).
-- Duplicate PDF entries in results (Issue #57).
-- Book info dialog stability issues, including filename capture timing and cover widget behavior.
-
-### Thanks
-Special thanks to these contributors for their work in this release cycle:
-- Michael Cummings (@kodermike)
-- Gavin Mogan (@halkeye)
-
-### Documentation
-- Added KOReader installation/upgrade path reference:
-  https://github.com/koreader/koreader/wiki\#installationupgrading
-- Updated README and CHANGELOG to cover major additions and settings for 1.2.0.
 
 Full changelog:
 https://github.com/greywolf1499/opds_plus.koplugin/blob/main/CHANGELOG.md

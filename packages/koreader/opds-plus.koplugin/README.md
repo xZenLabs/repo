@@ -11,17 +11,18 @@
 
 # OPDS Plus - Enhanced OPDS Browser for KOReader
 
-**Version:** 1.4.0
+**Version:** 1.5.0
 
 **OPDS Plus** is a feature-rich enhancement of KOReader's built-in OPDS catalog browser, providing visual book cover displays, multiple viewing modes, and extensive customization options for browsing online book catalogs.
 
 ## ✨ Features
 
 ### 📚 Enhanced Catalog Browsing
+- **OPDS 2.0 and OPDS 1 Catalogs**: Reads both the Atom (OPDS 1) and the JSON (OPDS 2.0) feeds, such as Komga's, with nothing to set. OPDS 2.0 groups of books open as shelves, with their book count
 - **Visual Book Covers**: Browse catalogs with book cover images displayed alongside titles
 - **Dual View Modes**: Switch between List View and Grid View layouts
 - **Multiple Display Options**: Customize how books are presented
-- **Book Info Dialog**: Open an at-a-glance details dialog with improved cover handling
+- **Book Info Dialog**: Open an at-a-glance details dialog with improved cover handling, showing the publisher, publication date and language when the catalog gives them
 - **Series and Authors**: Every author of a book is listed. When the catalog provides it, the series and the book's number in it, such as ❖ Dune Chronicles #2, show in List View and in the Book Info Dialog (read from Calibre and Calibre-Web style descriptions, `dc:series` elements and Grimmory feeds)
 - **Sync Gesture Actions**: Trigger sync-related actions directly from configured gestures
 - **Keyboard and D-pad Navigation**: Browse catalogs on devices with hardware keys, without the touchscreen
@@ -74,6 +75,19 @@
 | ![View Toggle Menu](.github/screenshots/view_toggle_menu.png) | ![Settings Menu](.github/screenshots/settings_menu.png) |
 |             *Switch views instantly via the menu*             |            *Extensive customization options*            |
 
+|                       **Book Details**                        |                      **Updates**                       |
+| :-----------------------------------------------------------: | :----------------------------------------------------: |
+|    ![Book Details](.github/screenshots/book_details.png)     | ![Update Available](.github/screenshots/update_available.png) |
+|         *Author, series, language, formats and more*          |        *Release notes, then install in one tap*        |
+
+|                     **OPDS 2.0 Shelves**                      |                   **Facets**                    |
+| :-----------------------------------------------------------: | :---------------------------------------------: |
+|  ![OPDS 2.0 Start Page](.github/screenshots/opds2_shelves.png)  | ![Facets](.github/screenshots/opds2_facets.png) |
+|     *Groups and shelves from an OPDS 2.0 start page*      |       *Narrow a catalog with its facets*        |
+
+The screenshots come from a mock catalog of public-domain classics with generated covers
+(`tools/e2e/catalog/screenshots.sh` regenerates them).
+
 ## 📥 Installation
 
 ### Method 1: Manual Installation (Recommended)
@@ -86,7 +100,8 @@
 
    The location depends on your device:
 
-   - **Kindle/Kobo/Android**: Extract to `/koreader/plugins/`
+   - **Kindle/Kobo/PocketBook**: Extract to `koreader/plugins/` on the device's storage
+   - **Android**: Extract to `koreader/plugins/` on the internal storage
    - **Linux**: Extract to `~/.config/koreader/plugins/`
    - **Windows**: Extract to `%APPDATA%/koreader/plugins/`
    - **macOS**: Extract to `~/Library/Application Support/koreader/plugins/`
@@ -101,7 +116,7 @@
 4. **Verify installation**:
    - Open KOReader's File Browser
    - Tap the menu icon (⋮ or ≡)
-   - You should see "OPDS Plus Catalog" in the menu
+   - You should see "OPDS Plus Catalog" in the menu (KOReader may show it as "NEW: OPDS Plus Catalog" until you sort it into a menu)
 
 ### Method 2: Git Clone (For Developers)
 
@@ -114,6 +129,9 @@ git clone https://github.com/greywolf1499/opds_plus.koplugin.git
 
 # Restart KOReader
 ```
+
+The [wiki](https://github.com/greywolf1499/opds_plus.koplugin/wiki) has step-by-step guides for installing,
+updating, and setting up Calibre-Web, Kavita and Komga.
 
 ### Updating (New in 1.4.0)
 
@@ -220,7 +238,7 @@ Access settings from: **OPDS Plus Catalog → Settings**
 - **Automatic update check (weekly)**: enabled by default. At most once a week, when you open OPDS Plus and the device is already online, it checks for a new release and tells you once with a short notice. It never installs anything by itself.
 - **Roll back to previous version**: available after an update. Puts the previous version back and keeps the newer one, so you can switch again.
 - **Allow updating a development install**: for a plugin folder that is a link or a git checkout. A linked folder is moved aside as the backup; the folder it points to is not changed.
-- **About** shows when the last check was made.
+- **About OPDS Plus**, at the bottom of **Settings**, shows when the last check was made.
 - What a check sends: an update check is a request to `api.github.com` for the latest release of this repository, with the plugin version in the `User-Agent`. GitHub sees your IP address, as with any request. Nothing else is sent, and OPDS Plus has no server of its own. See [SECURITY.md](SECURITY.md).
 
 #### Downloads (New in 1.3.0)
@@ -254,12 +272,15 @@ Access settings from: **OPDS Plus Catalog → Settings**
 
 ### Adding Your Own Catalogs
 
-1. Go to **OPDS Plus Catalog → Settings → Manage Catalogs**
-2. Select **Add Catalog**
+1. Open **OPDS Plus Catalog → Browse Catalogs**
+2. Tap the menu at the top left of the list of catalogs and select **Add catalog**
 3. Enter:
    - Catalog name
    - OPDS feed URL
-4. The new catalog will appear in your catalog list
+   - Username and password, if the server needs them
+4. The new catalog will appear in your catalog list. Long-press it to edit or delete it
+
+Inside a catalog, the same menu's **Add catalog** saves the page you are on as a catalog of its own.
 
 #### Custom HTTP Headers (New in 1.3.0)
 
@@ -304,7 +325,13 @@ opds_plus.koplugin/
 │   ├── navigation_handler.lua
 │   ├── parser.lua
 │   ├── state_manager.lua
-│   └── sync_manager.lua
+│   ├── sync_manager.lua
+│   ├── mappers/
+│   │   ├── atom.lua
+│   │   └── opds2.lua
+│   └── parsers/
+│       ├── atom.lua
+│       └── opds2.lua
 ├── models/
 │   └── constants.lua
 ├── services/
@@ -334,13 +361,15 @@ opds_plus.koplugin/
     ├── catalog_utils.lua
     ├── debug.lua
     ├── file_utils.lua
+    ├── json_decode.lua
     ├── request_headers.lua
     ├── result.lua
     ├── semver.lua
+    ├── uri_template.lua
     └── url_utils.lua
 ```
 
-The release archive holds exactly these files. The repository also has `spec/` (automated tests), `scripts/` (test tooling and the release build), `tools/` (end-to-end checks in a real KOReader) and `.github/` (CI), which are not part of the archive.
+The release archive holds exactly these files, plus `README.md`, `CHANGELOG.md` and `LICENSE`. The repository also has `spec/` (automated tests), `scripts/` (test tooling and the release build), `tools/` (end-to-end checks in a real KOReader), `docs/wiki/` (the source of the [wiki](https://github.com/greywolf1499/opds_plus.koplugin/wiki)) and `.github/` (CI), which are not part of the archive.
 
 ### Settings Storage
 Settings are stored in: `<KOReader data dir>/settings/opdsplus.lua`
@@ -374,12 +403,24 @@ Contributions are welcome! Here's how you can help:
 - Document new features in the README
 - Run `luacheck .` and `scripts/test.sh` before opening a pull request. [CONTRIBUTING.md](CONTRIBUTING.md) explains the test setup and the rest of the workflow
 
+## 🔒 Privacy
+
+OPDS Plus collects no analytics and sends nothing to its author. It talks only to the catalogs you add and,
+for the update check, to GitHub (which sees your IP address and the `OPDSPlus/<version>` user agent); the weekly
+check can be turned off under **Settings → Updates**. Catalog passwords, Kavita API keys in catalog addresses,
+and custom headers are saved as plain text in `opdsplus.lua`, and a password sent over an `http://` address
+travels unencrypted. [SECURITY.md](SECURITY.md) has the details and explains how to report a vulnerability.
+
 ## 📝 Known Issues & Limitations
 
-- Cover loading depends on catalog providing image URLs
-- Some OPDS feeds may not include cover images
-- Large catalogs may take time to load initially
-- Grid view performance varies with device capabilities
+- Covers show only when the catalog provides image URLs; some feeds have none
+- Large catalogs may take time to load initially, and Grid View performance varies with the device
+- OPDS 2.0 catalogs that need an authentication document or OAuth are not supported; only username and
+  password (Basic) logins are
+- **Page stream** reads your saved progress only from Kavita; on other servers it starts at the first page
+- The `SERIES:` line that Calibre and Calibre-Web add to descriptions stays in the description, next to the
+  Series row
+- Update release notes are shown as plain Markdown text
 
 ## 🙏 Credits
 
@@ -395,6 +436,7 @@ See the [LICENSE](LICENSE) file for details.
 
 ## 📞 Support
 
+- **User Guide**: [OPDS Plus Wiki](https://github.com/greywolf1499/opds_plus.koplugin/wiki)
 - **Issues & Bug Reports**: [GitHub Issues](https://github.com/greywolf1499/opds_plus.koplugin/issues)
 - **KOReader Documentation**: [KOReader Wiki](https://github.com/koreader/koreader/wiki)
 - **OPDS Specification**: [OPDS Spec](https://specs.opds.io/)
