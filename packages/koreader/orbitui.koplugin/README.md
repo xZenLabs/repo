@@ -17,11 +17,14 @@ top. Please support and credit the original creators.
 | [Feature guide](docs/FEATURES.md)
 | [Report a problem](https://github.com/komadorirobin/orbitui.koplugin/issues)
 
-**Trying the next version?** [1.2.0-beta.1](https://github.com/komadorirobin/orbitui.koplugin/releases/tag/v1.2.0-beta.1)
-integrates Bookshelf 6.4.1: lighter cover/metadata work, optional book-size and
-series-box styles, and Decades browsing. It preserves OrbitUI's sections, Home,
-tags and integrations. New-device/layout/performance checks are still pending;
+**Trying the next version?** [1.2.0-beta.2](https://github.com/komadorirobin/orbitui.koplugin/releases/tag/v1.2.0-beta.2)
+adds a modern reader bottom panel, pinned reading references, local similar-book
+discovery, optional Next in series and Finish forecast cards, plus a redesigned
+updater. It retains the Bookshelf 6.4.1 integration and your existing setup.
+See the release notes for scoped Bigme tests and remaining compatibility limits;
 **1.1.0 remains the stable release**. See the release notes before switching.
+Physical touch after sleep/wake still needs verification with a stable connection.
+The preview is published with that limitation, not as an all-tests-passed build.
 
 > **OrbitUI replaces the standalone SimpleUI and Bookshelf plugins.**
 > Neither is required separately. If either is installed, disable it and restart
@@ -55,6 +58,13 @@ either standalone project's default setup.
 - **Tags that lead somewhere.** Find local EPUBs with the same tag, switch
   between **Series / Volumes**, and turn combinations of tags into smart shelf
   chips. Results take you to a book's shelf preview, not straight into reading.
+- **A more connected reader.** The new bottom panel brings book tools and other
+  ongoing reads together. Keep pages, excerpts and images as separate reading
+  references; original reading settings stay one tap away. Optional X-Ray and
+  KOAssistant shortcuts use the installed plugin's own controls.
+- **What to read next — locally.** Find books or series with shared EPUB tags,
+  add a Next in series card, or try an optional reading-time/finish forecast.
+  No AI or server account is needed for these features.
 - **Your own library sections.** Give novels, manga, comics or any other library
   independent folders, names, shelf chips and navigation buttons. No required
   fiction/manga split or personal folder structure.
@@ -74,6 +84,12 @@ either standalone project's default setup.
 These are OrbitUI additions and integration choices, not a claim that OrbitUI
 invented modular Home screens, shelves, series boxes, themes or ornaments.
 [The feature guide](docs/FEATURES.md) explains the controls and their boundaries.
+
+The reader panel is enabled by default in the preview. Use **Reading settings…**
+to reach KOReader's original margins/fonts menu, or disable **Use OrbitUI as the
+bottom menu** under **OrbitUI settings → Integrations → Reader panel & X-Ray**.
+X-Ray/KOAssistant remain separate optional plugins; opening the panel does not
+generate AI data. Continue reading and existing Home layouts are not replaced.
 
 ## Explore by tags, not just folders
 

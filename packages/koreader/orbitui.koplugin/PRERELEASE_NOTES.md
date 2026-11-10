@@ -1,3 +1,54 @@
+# v1.2.0-beta.2 · 2026-11-10
+
+OrbitUI 1.2.0-beta.2 brings a new reader bottom panel and more ways to discover, continue and keep track of local books.
+
+This is a preview release. **Physical touch input after sleep/wake still needs verification with a stable connection.** Wireless ADB disconnected during that part of the Bigme tests. The release is published with this known verification gap; stable **1.1.0** remains available.
+
+## A new reader bottom panel
+
+- Book information, reading position and chapter progress in one panel, with clear tabs for the current book and other ongoing reads.
+- Quick access to contents, bookmarks, search, book details, pinned references and Go to page. The ongoing-books tab includes paging and respects KOReader's ask-before-opening setting.
+- **Reading settings…** opens KOReader's original reading controls, including margins and fonts.
+- The OrbitUI panel is the default bottom-menu entry in this preview. To use the original menu, disable **Use OrbitUI as the bottom menu** under **OrbitUI settings → Integrations → Reader panel & X-Ray**.
+- Optional standalone X-Ray and KOAssistant shortcuts. Automatic selection prefers an active X-Ray plugin, then KOAssistant. Choose a provider manually or hide the shortcut. The shortcut opens the plugin's own interface; opening the reader panel does not generate AI data.
+
+## More local reading tools
+
+- **Pinned references:** keep page locations, excerpts and images in a separate per-book drawer, with previews and explicit jumps.
+- **Similar books and series:** discover local EPUBs through shared tags, with separate book and series results.
+- **Next in series:** an optional Home card prepares the next local volumes without needing a server account.
+- **Finish forecast:** an optional card uses available local reading statistics and reports when there is not enough data for an estimate.
+- Reuse prepared series ordering to reduce repeated sorting during browsing. This is a scoped optimization; no claim of a measured whole-library opening speedup.
+
+These features take inspiration from Aleph. The implementation builds on OrbitUI's existing integration; no Aleph code or assets are included.
+
+## Updates and fixes
+
+- Redesigned update panel with version comparison, expandable release notes, progress, cancellation and restart guidance.
+- Fixed unnecessary horizontal scrolling in the new reader/update panels after viewport or display-scale changes.
+- Fixed overlapping modal headings and Next in series preparation being left paused across native card rebuilds.
+- Updated README and feature guide. Bookshelf 6.4.1 and SimpleUI 3.0.3 remain the integrated versions.
+
+## Verification and limits
+
+Both complete Lua/LuaJIT suites, all 43 translation catalogs, sealed-package tests, package/source checks and older-installer tests pass. Physical Bigme tests exercised tap/swipe entry, original reading settings, immediate opt-out/re-enable, reader-tool navigation, ongoing-book paging/switching, the KOAssistant chooser and compact scrolling. Update-panel actions were tested using an isolated UI fixture.
+
+The sleep/wake input check remains open. Standalone X-Ray was not installed on the device, no AI request was generated, and these tests do not certify every device or plugin combination. Current release notes and source documentation distinguish software checks from physical testing.
+
+## Install or update
+
+Enable **Include preview releases** in OrbitUI's updater, check for updates and restart KOReader after installation. For manual installation, use **orbitui.koplugin.zip**, not GitHub's source-code archive. Back up settings and reading data first; code rollback does not restore older reading data.
+
+OrbitUI replaces standalone SimpleUI and Bookshelf: disable those plugins and restart before enabling OrbitUI. X-Ray and KOAssistant are separate optional plugins.
+
+Package SHA-256: `d7abac63c97b05e5a7b6b77d6ee3d20b9d6ebd16cc92e13eab422200e07ffd5f`
+
+## Svenska
+
+Ny läsarpanel med bokverktyg, pågående böcker och genväg till KOReaders vanliga läsinställningar. Dessutom kommer lokala bok-/serietips, egna läsreferenser, Nästa i serien, läsprognos och en ny uppdateringspanel. Panelen är standard i betan och kan stängas av i OrbitUI-inställningarna.
+
+**Tryck efter vila är ännu inte färdigtestat på Bigmen**, eftersom den trådlösa anslutningen bröts. Betan publiceras med den begränsningen. Uppdatera via förhandskanalen och starta om KOReader.
+
 # v1.2.0-beta.1 · 2026-11-09
 
 ## Svenska
@@ -92,25 +143,3 @@ Valfria **Läser just nu + Silverfish** visar bokomslag/läsprogress och din fig
 Update through OrbitUI's preview channel and restart KOReader. For manual installation use **orbitui.koplugin.zip**, not GitHub's source-code archive. Back up settings and reading data separately: code rollback does not undo layout edits or third-party data. Dashboard v2/v3 downgrade limits still apply.
 
 Prerelease: automated/native-adapter tests are not complete Silverfish or physical Bigme certification. Real font/touch, checkmark/toast, layout/colour/night, sleep/wake/rotation and plugin lifecycle retesting remain pending. No device or BookOrbit-server deployment, new upstream merge, component/pin or artwork update. Stable/latest 1.0 is unchanged. Bootstrap/API1 and the 2,000-file limit are preserved.
-
-# v1.1.0-beta.9 · 2026-11-08
-
-## Svenska
-
-Fixar standardplaceringen för nya Silverfish-kort: de hamnar i Läsöversikt i stället för under den, där de kunde ritas över docken. På vanligt Hem används en egen sida om det inte säkert finns plats.
-
-Silverfishs eget Hem-val känner igen dashboard-kortet efter på/av och omstart, utan dubletter. Dina redan sparade placeringar, kortinställningar, Silverfish-data och skärmsläckarval lämnas orörda. En gammal överlappande placering flyttas inte automatiskt: ta bort och lägg till kortet igen, eller justera placeringen manuellt.
-
-Uppdatera via förhandskanalen och starta om KOReader. Säkerhetskopiera inställningar och läsdata separat. Inget plugin installeras om och inget ändras på BookOrbit-servern. Ingen ny upstream-merge ingår. Stabil 1.0 påverkas inte.
-
-Automatiska tester omfattar native-adaptrarna och Silverfishs publika Hem-funktioner på dator, inte hela pluginet eller fysisk Bigme-kontroll. Visuella tester, tryck, vila och rotation på Bigmen återstår.
-
-## English
-
-New Silverfish Home cards go inside Reading dashboard instead of becoming a sibling below its full-page module and drawing over the dock. Ordinary Home uses a separate page unless current matching geometry proves there is room.
-
-The plugin's public Home toggle recognizes dashboard placement across add/off/restart without duplicates. Existing placements, edited cards, pet saves and screensaver options are preserved. Old overflowing placements are intentionally not migrated; remove/re-add the card or adjust it manually.
-
-Update through preview and restart KOReader. Back up settings and reading data separately; code rollback does not restore settings or third-party data. No Silverfish fork, plugin reinstall, new upstream merge or BookOrbit-server operation. Stable/latest 1.0 is unchanged; API1/bootstrap and the 2,000-file installation budget are retained.
-
-This prerelease is desktop-tested with native adapter/input/buffer fixtures and frozen Silverfish public Home methods, not the full plugin or physical Bigme drawing/touch/wake/rotation. Device acceptance remains pending.

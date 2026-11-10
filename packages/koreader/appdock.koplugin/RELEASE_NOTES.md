@@ -1,3 +1,10 @@
+# v9.0.0 · 2026-11-10
+
+- New media control card
+- "All apps" menu
+- fixed some errors
+See you later
+
 # v8.9.3 · 2026-11-02
 
 Faster homescreen construction without visual or functional changes.
@@ -13,8 +20,3 @@ Faster homescreen construction without visual or functional changes.
 # v8.9.1 · 2026-11-02
 
 # v8.9.0 · 2026-11-01
-
-# v8.8.0 · 2026-11-01
-
-# SwipeToType 
-SwipeToType adds a dragging technology for using the keyboard tapless by dragging your finger between the keys. Of course with a visual feedback. Try it out!
