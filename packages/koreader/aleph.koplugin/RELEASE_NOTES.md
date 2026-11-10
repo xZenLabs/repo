@@ -1,3 +1,16 @@
+# v1.0.1 · 2026-11-10
+
+A small update with two fixes.
+
+## Fixes
+
+- **Night mode:** a book with a page colour chosen in **Style → Background** could turn white in night mode and flash on every page turn. In night mode, pages now use KOReader's normal colour, so they stay dark, and your chosen colour comes back when night mode is off. Colours too dark to read on can no longer be picked as a page colour.
+- **Top menu:** the round check marks no longer touch the text next to them.
+
+## Updating
+
+Replace the `aleph.koplugin` folder in KOReader's `plugins` folder with the one in **aleph.koplugin.zip** below, then restart KOReader. Your settings and data are kept. If you installed through Storefront, you can update from there.
+
 # v1.0.0 · 2026-11-09
 
 **Aleph** brings your books, reading, highlights and shelves together in one place: a customizable home screen, local library and reader tools for KOReader. Everything works with the books and reading data on your device. No account or server needed.
