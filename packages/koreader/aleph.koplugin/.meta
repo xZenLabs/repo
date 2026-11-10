@@ -1,0 +1,23 @@
+# Aleph plugin for KOReader
+# https://github.com/lara-2-ko/aleph.koplugin
+# zenpm:auto-scraped
+id=aleph
+name=Aleph
+version=1.0.0
+description=A customizable home screen, local library and reader tools for KOReader with BookOrbit's UI. No BookOrbit server required. Optional author portraits and plugin integrations.
+author=lara-2-ko
+category=theme
+platforms=koreader
+dependencies=
+source=https://github.com/lara-2-ko/aleph.koplugin
+stars=5
+updated_at=2026-11-10T01:00:58Z
+published_at=2026-11-09T18:34:24Z
+readme_url=packages/koreader/aleph.koplugin/README.md
+readme_hash=c045c9c1944ebc9195a8591b28c3f8b52e12fab1
+release_notes_url=packages/koreader/aleph.koplugin/RELEASE_NOTES.md
+release_notes_hash=1754363b01484cb03a455778e551964e0da5ec3fa84abeeec729fdca2867b2b4
+releases=[{"tag_name":"v1.0.0","assets":[{"name":"aleph.koplugin.zip","url":"https://github.com/lara-2-ko/aleph.koplugin/releases/download/v1.0.0/aleph.koplugin.zip","size":473081,"digest":"sha256:e59d03f021d6c2af2f5bb5df6a6c83d045af85b3dd9d2f94f2aaf146871b985e"}],"name":"Aleph 1.0.0"}]
+source_type=release
+source_asset=aleph.koplugin.zip
+size=473081
