@@ -1,3 +1,43 @@
+# v0.5.7 · 2026-11-10
+
+## 月读 v0.5.7
+
+KOReader 插件包：`book.koplugin-v0.5.7.zip`
+
+输入法词库（整库，手动 sideload）：`dictionary.sqlite3 dictionary-wubi.sqlite3 dictionary-cangjie.sqlite3 dictionary-zhuyin.sqlite3`
+
+安装：解压后将 `book.koplugin` 复制到 `koreader/plugins/`，然后重启。
+
+词库 sideload：下载对应布局的词库，直接放入 `koreader/.moon/`
+（与 `book.sqlite3` 同级）。附件已使用最终文件名，无需重命名。
+
+### 更新内容
+
+相对上一版本 `v0.5.6`：
+
+#### 新功能
+
+- :sparkles: (library): 详情页按文件后缀显示 WebDAV 书籍格式 (a7f703e3)
+
+#### 修复
+
+- :bug: (store): OPDS 源打开即拉根目录，不再只能搜索 (a994fc66)
+- :bug: (wechat): 规范 xpointer 路径，映射失败时按章内比例上报进度 (30c3824a)
+
+#### 性能
+
+- :zap: (webdav): 优化硬刷新列目录并发与深度列表 (42520024)
+- :zap: (wechat): 章节下载改为官方五章一批，缓存全书走 offline=1 (f2f0b761)
+
+#### 重构
+
+- :recycle: (reader): 抽取章节缓存至共享模块并注册快捷面板动作 (ff22e41e)
+- :recycle: (reader): 抽取章节缓存至共享模块并注册快捷面板动作 (7f6a875d)
+
+### 完整对比
+
+https://github.com/AnkioTomas/moon/compare/v0.5.6...v0.5.7
+
 # v0.5.6 · 2026-11-09
 
 ## 月读 v0.5.6
@@ -133,54 +173,3 @@ KOReader 插件包：`book.koplugin-v0.5.3.zip`
 ### 完整对比
 
 https://github.com/AnkioTomas/moon/compare/v0.5.2...v0.5.3
-
-# v0.5.2 · 2026-11-08
-
-## 月读 v0.5.2
-
-KOReader 插件包：`book.koplugin-v0.5.2.zip`
-
-输入法词库（整库，手动 sideload）：`dictionary.sqlite3 dictionary-wubi.sqlite3 dictionary-cangjie.sqlite3 dictionary-zhuyin.sqlite3`
-
-安装：解压后将 `book.koplugin` 复制到 `koreader/plugins/`，然后重启。
-
-词库 sideload：下载对应布局的词库，直接放入 `koreader/.moon/`
-（与 `book.sqlite3` 同级）。附件已使用最终文件名，无需重命名。
-
-### 更新内容
-
-相对上一版本 `v0.5.1`：
-
-#### 修复
-
-- :bug: fix(convert): 统一段首缩进并补齐卷章目录回归 (1cc407f0)
-- :bug: fix: 收紧换库、进度决议与书架对账边界 (12fb16f1)
-- :bug: fix(wechat): 对齐章节书籍版本与有限重试 (8e793769)
-- :bug: fix(emu): 时钟修正仅作用于 macOS 模拟器 (5b0c24d5)
-- :bug: fix(main): 保护统一事件入口避免异常崩溃 (0f014b39)
-- :bug: fix(l10n): 补齐使用指南译文与设置页测试依赖 (28f5c00b)
-- :bug: (jdread): 书架脏 ID 跳过，不再拖死整架同步 (5f87e93d)
-- :bug: (store): 换书库目录/服务器时清掉旧书架进度统计 (930dac75)
-- :bug: (wechat): 样式表缺失时正文不再丢掉首行缩进 (4a10782d)
-- :bug: fix(desktop): 修复统计取消串扰与阅读退出异常 (0cf3ba01)
-- :bug: (changpei): 滑块验完后 check<3 沿用已解密正文 (e726a79a)
-
-#### 性能
-
-- :zap: perf(toc): 逐章缓存与异步解析避免目录长卡顿 (cc626414)
-
-#### 文档
-
-- :memo: (release): 更新 KOReader 插件与词库安装路径说明 (bf5e9eba)
-
-#### 变更
-
-- fix(reflow): preserve volume and chapter structure (c31efdad)
-- :loud_sound: fix(http): 记录下载响应头解析失败原因 (b52da464)
-- :children_crossing: (setting): 设置页与账号页挂上官网使用指南 (4afa9a6f)
-- :white_check_mark: (wechat): 补 ZIP TXT 回归，并让 _o 主文件排在续篇前 (9c6000d3)
-- fix(wechat): handle TXT chapters in ZIP packages (340e961d)
-
-### 完整对比
-
-https://github.com/AnkioTomas/moon/compare/v0.5.1...v0.5.2
