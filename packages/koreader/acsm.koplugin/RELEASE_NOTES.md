@@ -1,3 +1,25 @@
+# v0.0.16 · 2026-11-10
+
+## What's Changed
+* fix: isolate zlib FFI bindings from other plugins by @kaikozlov in https://github.com/kaikozlov/acsm.koplugin/pull/28
+
+
+**Full Changelog**: https://github.com/kaikozlov/acsm.koplugin/compare/v0.0.15...v0.0.16
+
+---
+
+## Installation
+
+1. Download `acsm-koplugin-v0.0.16.zip` below
+2. Extract `acsm.koplugin` to your KOReader plugins directory:
+   - Kindle: `/mnt/us/koreader/plugins/`
+   - Kobo: `/.adds/koreader/plugins/`
+   - Android: `/storage/emulated/0/koreader/plugins/`
+   - reMarkable: `/home/root/koreader/plugins/`
+3. Restart KOReader
+
+See README for usage instructions.
+
 # v0.0.15 · 2026-11-04
 
 **Full Changelog**: https://github.com/kaikozlov/acsm.koplugin/compare/v0.0.14...v0.0.15
@@ -70,27 +92,6 @@ See README for usage instructions.
 ## Installation
 
 1. Download `acsm-koplugin-v0.0.12.zip` below
-2. Extract `acsm.koplugin` to your KOReader plugins directory:
-   - Kindle: `/mnt/us/koreader/plugins/`
-   - Kobo: `/.adds/koreader/plugins/`
-   - Android: `/storage/emulated/0/koreader/plugins/`
-   - reMarkable: `/home/root/koreader/plugins/`
-3. Restart KOReader
-
-See README for usage instructions.
-
-# v0.0.11 · 2026-07-27
-
-**Full Changelog**: https://github.com/kaikozlov/acsm.koplugin/compare/v0.0.10...v0.0.11
-
-- **ACSM PDFs open much faster**, especially on older or slower e-readers.
-- **Various reliability fixes** for device activation and processing of EPUBs and PDFs.
-
----
-
-## Installation
-
-1. Download `acsm-koplugin-v0.0.11.zip` below
 2. Extract `acsm.koplugin` to your KOReader plugins directory:
    - Kindle: `/mnt/us/koreader/plugins/`
    - Kobo: `/.adds/koreader/plugins/`

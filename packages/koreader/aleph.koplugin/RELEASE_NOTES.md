@@ -1,3 +1,27 @@
+# v1.1.0 · 2026-11-10
+
+## Aleph 1.1.0
+
+### New
+- **Reader menu shortcuts:** a Bluetooth switch for **BT Manager - HID Passthrough**, plus **Sync now** and **Progress** for **Syncery**. Each one only appears when that plugin is installed.
+- **Book margins:** choose the text colour (Light gray, Gray, Black, or any colour on colour screens) and Regular or Bold text, and move the top and bottom lines closer to or further from the edge.
+- **Comics:** CBZ, CBR, CB7 and CBT files now show their real title, series and issue number, writers, genres and summary, read from the `ComicInfo.xml` inside them.
+- **Custom metadata** set in KOReader (Book information → Set custom) is now used throughout the library.
+- **Highlight menu:** smaller and tidier, with a new **Pin** button. **More** now has a **Back** button.
+- **Warning at startup** when ZenOS or Simple UI is also running. They replace the same screens as Aleph and can freeze KOReader.
+
+### Fixes
+- Comics marked Reading or Finished no longer disappear from the Series view or lose their titles.
+- The bottom margin text no longer sits too high when KOReader's status bar is on but empty.
+- **Highlight** in the dictionary pop-up now highlights the word and closes the pop-up. Before, it seemed to do nothing.
+- The top menu's brightness and warmth slider no longer touches the − and + buttons.
+- Wikipedia now has its own "W" icon.
+
+### Install
+Download **aleph.koplugin.zip** below, extract it and copy the `aleph.koplugin` folder into KOReader's `plugins` folder, replacing the old one. Then restart KOReader. Storefront users will get the update automatically.
+
+Not compatible with ZenOS or Simple UI. See the README for which other plugins work alongside Aleph.
+
 # v1.0.1 · 2026-11-10
 
 A small update with two fixes.

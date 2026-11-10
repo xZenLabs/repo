@@ -72,6 +72,14 @@ Aleph works with books and reading data on your device. No Aleph account or Book
 
 The supplied project's documentation reports use with **KOReader 2026.07.1 on Kindle Paperwhite and Kindle Colorsoft**. Other versions and devices are not verified. Some controls require a touchscreen, frontlight, adjustable warmth or a color screen. No separate BookOrbit installation is required.
 
+### Other plugins
+
+- **Not compatible: ZenOS (Zen UI) and Simple UI.** Both put their own home screen over KOReader's file browser, as Aleph does (ZenOS also replaces the reader menus, page browser, dictionary and status bars). With either one enabled alongside Aleph, KOReader can slow down, freeze or crash, most often when a book is closed. Turn it off in Plugin management before using Aleph. Aleph shows a warning at startup when it finds one running.
+- **Bookshelf** works alongside Aleph: the top bar's book details fall back to Bookshelf's page for books outside Aleph's library. Use one of them as the screen that opens at startup and after a book, not both, or they open one after the other.
+- **Project: Title** and KOReader's Cover browser restyle the file browser that sits under Aleph's board; they work with Aleph. On devices with little memory, their list view uses less memory than the cover grid.
+- **Menu restyling plugins** (Modern Menu, QuickUI, Reader Menu Redesign, Appearance and similar) restyle the same KOReader menus as Aleph. If you use one, turn off **Settings → Opening Aleph → Dialogs → Aleph dialogs** so the two do not fight over the same menus.
+- The separate **Bookends** plugin: Aleph's book margins stay hidden while it is on.
+
 ## Home and dashboard
 
 Four pages organize your reading: **Home, Insights, Library and Decor**. Swipe sideways or use the page controls to change pages.
@@ -129,6 +137,8 @@ Title/author ordering has an A–Z index. Tap the pager for a letter jump or pag
 
 Genres come from book metadata, with adjacent Calibre `metadata.opf` subjects as a fallback. Calibre itself is not required.
 
+Comic archives (CBZ, CBR, CB7, CBT) get their title, series and issue number, writers, genres and summary from the `ComicInfo.xml` inside them, which KOReader itself does not read. Metadata you set by hand in KOReader (**Book information → Set custom**) is used for every book.
+
 Hold a book **in the library list or a series page** to select multiple books. Tap more books, then use **…** to change status, add to a collection, create a collection or select the whole displayed result set. Back exits the menu, then selection mode.
 
 ## Book details and highlights
@@ -142,11 +152,11 @@ Book details show the cover, title, author, series, rating, status, progress, de
 - **Read all** opens the full description; **+N** opens all genre tags.
 - The Highlight of the day widget opens the full passage with chapter, date, note and a book-details link.
 
-Aleph restyles highlight actions, selected-text actions, notes/details and the style/color picker. Hold a color name to rename it; hold a swatch to choose a replacement color. These names and colors affect KOReader globally. Drag the selection handles to adjust highlights in reflowable books; use the step arrows for PDFs. Holding an adjustment arrow switches between word and letter steps.
+Aleph restyles highlight actions, selected-text actions, notes/details and the style/color picker. Hold a color name to rename it; hold a swatch to choose a replacement color. These names and colors affect KOReader globally. Drag the selection handles to adjust highlights in reflowable books; use the step arrows for PDFs. Holding an adjustment arrow switches between word and letter steps. Tap a highlight for Delete, Style, Note, Pin, Details and More; More has a Back button to return. In the dictionary pop-up, Highlight highlights the word and closes the pop-up.
 
 ## Reader tools
 
-Tap the bottom menu region for **This book** and **Also reading**. This book links to Style, Contents, Bookmarks, Pages, the current-page bookmark switch, Book details and Aleph Home. Also reading switches to another book in progress. X-Ray options appear when the optional X-Ray plugin is available.
+Tap the bottom menu region for **This book** and **Also reading**. This book links to Style, Contents, Bookmarks, Pages, the current-page bookmark switch, Book details and Aleph Home. With **BT Manager - HID Passthrough** installed, a small Bluetooth switch starts or stops its daemon; with **Syncery** installed, **Sync now** and **Progress** (its progress browser) sit beside it. Tap the Silverfish widget when its speech is cut short to read all of it. Also reading switches to another book in progress. X-Ray options appear when the optional X-Ray plugin is available.
 
 Swipe up from the bottom edge for the page browser. It has Pages, Reading settings, Bookmarks, Highlights, Contents and Pinned pages tabs, a page carousel, grid, search and a slider. Tap the middle page to read there; tap side pages or swipe to browse. Hold a step arrow to skip a chapter. Close or Back returns without committing a page jump.
 
@@ -162,7 +172,7 @@ Use **Tools → Pin badge position** while reading, or **Settings → Opening Al
 
 ## Book margins
 
-Open **Settings → Book margins**, or **Tools → Book margins (top and bottom stats)** while reading. Enable/disable the feature, header and footer; select Small/Medium/Large text; choose no line, progress line or chapter-marked line; optionally hide KOReader's status bar. Tap each left/middle/right slot and select up to three items in order.
+Open **Settings → Book margins**, or **Tools → Book margins (top and bottom stats)** while reading. Enable/disable the feature, header and footer; select Small/Medium/Large text; choose no line, progress line or chapter-marked line; optionally hide KOReader's status bar. Choose the text colour (Light gray, Gray, Black, or any colour on a colour screen) and weight (Regular or Bold), and move the top and bottom lines nearer to or further from the edge of the screen. Tap each left/middle/right slot and select up to three items in order.
 
 Items: progress, page, page of pages, pages left in chapter, time left in chapter/book, chapter, book title, author, clock, date, battery, Wi-Fi, frontlight and time read this sitting.
 
@@ -190,6 +200,8 @@ Quick Top Bar adds Controls and Apps to the top menu. Controls include supported
 | X-Ray | Adds its available character, timeline, historical-figure, location, glossary, image/map and author tools |
 | KOSyncthing+ | Optional start/quick-sync control; synchronization is performed by that plugin |
 | Bookshelf | Optional book-details fallback for the current-book top-bar action |
+| BT Manager - HID Passthrough | A Bluetooth switch in the reader menu |
+| Syncery | Sync now and its progress browser in the reader menu |
 
 The standalone **Quick Top Bar** takes precedence over Aleph's built-in top bar. Choose which implementation to use. Other plugins or patches that replace the same reader menus, highlight panels or top menu can conflict; their combinations have not all been tested.
 
@@ -213,7 +225,7 @@ The library index is device-specific; build it separately on each device. Use Sy
 
 ## Troubleshooting and reports
 
-For missing books, check folder selection and filters, then refresh. For empty time statistics, enable KOReader's Reading statistics and collect reading data. For visual conflicts, switch off the affected Aleph feature and restart if needed. Include your device model, KOReader version, Aleph version, reproduction steps and relevant `crash.log` lines in an issue. Review logs for private file paths before sharing.
+For missing books, check folder selection and filters, then refresh. For empty time statistics, enable KOReader's Reading statistics and collect reading data. For visual conflicts, switch off the affected Aleph feature and restart if needed. Freezes when closing a book usually mean another home screen plugin, such as ZenOS or Simple UI, is running too: turn it off first. Include your device model, KOReader version, Aleph version, reproduction steps and relevant `crash.log` lines in an issue. Review logs for private file paths before sharing.
 
 ## Credits and license
 
