@@ -11,7 +11,7 @@ If this plugin is useful to you, you can [support my work on Ko-fi](https://ko-f
 
 | | |
 |---|---|
-| **Version** | 1.2.24 |
+| **Version** | 1.2.26 |
 | **KOReader** | v2026.07 or newer |
 | **Needs** | [bookshelf.koplugin](https://github.com/AndyHazz/bookshelf.koplugin) (Bookshelf 6.x recommended) and bookorbit.koplugin, signed in |
 | **Optional** | SimpleUI (for the footer critter) |
@@ -33,10 +33,11 @@ If this plugin is useful to you, you can [support my work on Ko-fi](https://ko-f
 - **Reading Status.** Set a book's BookOrbit status (Read, Reading, Want To Read …) from its hold menu. Off by default.
 - **Next In Series.** Finish a book and, back on the home screen, get asked whether to download the next one in the series. Off by default.
 - **Show On Device / Not On Device.** A shelf can show only the books on the device, or only the ones that aren't.
+- **Mark Books Not On Device.** BookOrbit's download mark (the one the Side Panel uses) on the bottom-left of covers whose book isn't on the device, so you can see at a glance what's left to download. Books on the device stay clean; the page count keeps the bottom-right. Mark Style: black or white depending on the cover (Auto), or on a small round badge. Off by default.
 - **Download progress.** Big downloads show their % in the corner.
 - **Book Description popup.** A compact window that sizes itself to the text. Tap outside or the X to close.
 - **E-ink options.** A Flash menu to clear ghosting where you need it: the hero, shelf page turns, Book Description, the hold menus, the Download window and Bookshelf's shelf editor.
-- **Footer critter and close button.** Your SimpleUI critter in place of the page numbers, and an optional one-tap close X.
+- **Footer critter, close and Home buttons.** Your SimpleUI critter in place of the page numbers, an optional one-tap close X, and an optional Home button in the other corner that jumps back to page 1 (of this shelf, or of a shelf you pick).
 - **Battery-friendly.** Lookups run in a background process so the screen stays responsive. They pause on sleep or Wi-Fi off, and nothing runs on a timer.
 - **Tells you what broke.** Problems go to `crash.log`, including which other patch or plugin interfered.
 
@@ -118,6 +119,8 @@ All under **Tools → OrbitShelf** (or **Tools → Add-ons → OrbitShelf** if y
 | **Hero → Sync Button** | Refreshes the lists and runs BookOrbit's sync | Off |
 | **Hero → Button Size** | Small, Medium or Large | Small |
 | **Shelf → Search BookOrbit** | Bookshelf's search looks in BookOrbit instead of the device | Off |
+| **Shelf → Mark Books Not On Device** | Download mark, bottom-left, on BookOrbit covers not on the device (covers view) | Off |
+| **Shelf → Mark Style** | Auto Black / White (by the cover, with a thin outline) or Badge (on a small round disc) | Auto |
 | **Shelf → Build / Rebuild Genres** | Looks up genres in the background | — |
 | **Flash → Hero When It Changes** / **Hero: Every Change** | Clears ghosting when the hero shows another book; every change or every 4th / 6th | Off |
 | **Flash → Shelf Page Turns** | Full refresh on every shelf page | Off |
@@ -125,6 +128,8 @@ All under **Tools → OrbitShelf** (or **Tools → Add-ons → OrbitShelf** if y
 | **Footer → Footer Critter** | SimpleUI critter in place of the page numbers | Off |
 | **Footer → Critter Says** | Page, Witty, Picks, Sayings | All on |
 | **Footer → Close Only** / **Close Control** | One-tap close X; left, right or Bookshelf's side | Off |
+| **Footer → Home Button** | House in the corner opposite the close X / hamburger: back to page 1; out of a folder or group to the shelf | Off |
+| **Footer → Home Goes To** | This Shelf (page 1 of the shelf you're on) or a shelf you pick | This Shelf |
 | **Clean Up Cache…** | Removes old covers and saved lists | — |
 | **Diagnostics** | Detailed log for 30 minutes after each start, off by itself after 3 days | Off |
 
@@ -175,10 +180,10 @@ orbitshelf.koplugin/
 ├── orbitshelf_genres.lua      background lookups (Genres, Offline Library)
 ├── orbitshelf_source.lua      the Bookshelf source and its shelves
 ├── orbitshelf_hero.lua        hero buttons, status line, flash
-├── orbitshelf_footer.lua      footer critter, close X
+├── orbitshelf_footer.lua      footer critter, close X, Home button
 ├── orbitshelf_collections.lua Add To Collection (website sign-in, saved password)
 ├── orbitshelf_bulk.lua        Bulk Download / Remove (checklist, size check, download queue)
-├── orbitshelf_extras.lua      Reading Status, Next In Series
+├── orbitshelf_extras.lua      Reading Status, Next In Series, Not On Device mark
 ├── orbitshelf_menu.lua        settings menu
 ├── orbitshelf_diag.lua        Diagnostics (loaded only while it's on)
 └── README.md
@@ -196,6 +201,8 @@ orbitshelf.koplugin/
 
 The full history is at the top of `main.lua`.
 
+- **1.2.26:** Mark Style for the Not On Device mark: Auto Black / White or Badge.
+- **1.2.25:** Mark Books Not On Device (download mark on covers not on the device). Footer Home button (page 1 of this shelf or a shelf you pick).
 - **1.2.24:** Extras menu: Bulk Download, Bulk Remove, Reading Status, Next In Series. Shelf filter (On Device / Not On Device). Download progress %.
 - **1.2.23:** On Spines, Series / Authors / Genres show each group as a run of spines.
 - **1.2.22:** Spines for BookOrbit shelves (Bookshelf 6.4 or its feat-588 test branch).

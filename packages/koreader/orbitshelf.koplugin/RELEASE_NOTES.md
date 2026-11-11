@@ -1,3 +1,14 @@
+# v1.2.26 · 2026-11-11
+
+Spines need Bookshelf 6.4 (or its feat-588 test branch) — until 6.4 lands for everyone, Spines stay off on stock Bookshelf.
+
+1.2.26
+- Shelf > Mark Style for the Not On Device mark: Auto (the default) draws it black on a light cover corner and white on a dark one, with a thin outline in the other colour so it reads on a busy corner too; Badge puts it on a small round disc in Bookshelf's badge colours, like its page-count pill. Night mode keeps the contrast either way.
+
+1.2.25
+- Shelf > Mark Books Not On Device (off by default): BookOrbit's download mark on the bottom-left of a BookOrbit cover whose book isn't on the device; books on the device stay as they are. Covers view only.
+- Footer > Home Button (off by default): a house in the footer corner opposite the close X / hamburger, back to page 1. Home Goes To: This Shelf or a shelf you pick.
+
 # v1.2.24 · 2026-11-10
 
 1.2.24 — Extras menu: Bulk Download, Bulk Remove, Reading Status, Next In Series. Shelf filter (On Device / Not On Device). Download progress %.
@@ -25,11 +36,5 @@ Install: unzip, copy the orbitshelf.koplugin folder into KOReader's plugins fold
 # v1.2.20 · 2026-11-07
 
 OrbitShelf 1.2.20 — Smart Scopes and Libraries as shelves, Group By, Return To, Add To Collection, a Flash menu, background cover downloads, and shelf naming. Lookups now two at a time: same speed, less battery.
-
-Install: unzip, copy the orbitshelf.koplugin folder into KOReader's plugins folder (.adds/koreader/plugins/ on Kobo, koreader/plugins/ on Kindle), restart KOReader, open Tools → OrbitShelf.
-
-# v1.2.5 · 2026-11-06
-
-OrbitShelf 1.2.5 — Reports: the start-up line now shows BookOrbit's version, and the Diagnostics snapshot lists every OrbitShelf setting, the saved library size, how many books Offline Library has saved, and whether a lookup run is going. No change to how OrbitShelf works.
 
 Install: unzip, copy the orbitshelf.koplugin folder into KOReader's plugins folder (.adds/koreader/plugins/ on Kobo, koreader/plugins/ on Kindle), restart KOReader, open Tools → OrbitShelf.
