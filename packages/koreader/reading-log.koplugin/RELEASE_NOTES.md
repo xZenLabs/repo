@@ -1,3 +1,90 @@
+# v1.5.0 · 2026-11-11
+
+## Styles to download
+
+Tools > Reading Log > Styles and colours > **Get more styles…** lists the styles in [reading-log-styles](https://github.com/stevenzamora1/reading-log-styles). Tap one to download it, and again later to update or remove it.
+
+Seven so far: **Christmas**, **Gothic**, **Forest**, **Ocean**, **Space**, **Honey** and **Winter**. Each one redraws the rings, the days of the week, the goals, the progress bars, the Monthly challenge, the calendar, the book covers and the Dashboard's tabs, and brings its own colours.
+
+- **Colours**: any style can go on White, Dark or Paper instead of its own colours (Styles and colours > Colours).
+- **Behind the Dashboard's cards**: keep the style's page colour, or your home screen's own background.
+- **Your styles…** works without Wi-Fi. Hide Cute, Cyber or Dark Academia from the Style list, or delete downloaded styles.
+
+## ZenOS
+
+Every card, the Mini dashboard and the Dashboard are widgets for [ZenOS](https://github.com/xZenLabs/zen-os)'s Home (Zen Settings > Home > Widgets). Long-press one for its settings, text size and height. Swipe the Dashboard to turn its page.
+
+**To have the Dashboard alone on Home:**
+
+1. In Zen Settings > Home > Widgets, turn off every widget except Zen's Reading stats.
+2. Turn on Reading Log · Dashboard.
+3. Turn off Reading stats.
+4. Optionally, long-press the Dashboard > Height on Home > 10/10.
+
+Zen won't let you turn off its last widget, so the Dashboard has to go on before Reading stats goes off.
+
+## The Dashboard full screen
+
+Tools > Reading Log > **Open the dashboard**, or the new **Reading Log dashboard** gesture, shows the Dashboard on a screen of its own, with or without a home screen plugin.
+
+- Swipe left or right to turn the page.
+- Swipe down, or tap the X, to close it.
+- Long-press a card for its settings.
+
+## New cards
+
+- **Pages goal**: pages read this year, this month or this week against a goal you set, how far ahead or behind you are, and how many pages a day it takes.
+- **Finish speed**: a dot for every book you finished, from a day to a year, with how long a typical book takes you, and your fastest and slowest.
+- **Decades**: when the books in your library were published, with the typical year, your oldest and your newest. With Bookshelf 6.4 or newer it uses the dates you set there.
+
+## Mini dashboard
+
+- **Up to four cards**, and they can **stack**: the first on the left and the others on top of each other on the right (This week over the Monthly challenge, say).
+- "With three cards or more" sets Auto, Side by side or Stacked on the right.
+- Continue reading and Reading and today's rings now grow with a taller Mini dashboard ([#9](https://github.com/stevenzamora1/reading-log/issues/9)).
+
+## Your reading
+
+- **The Yearly page goes back through the years** ([#6](https://github.com/stevenzamora1/reading-log/issues/6)). Its arrows step back up to ten years, like the Monthly page's months.
+- **What counts as finished is up to you** ([#7](https://github.com/stevenzamora1/reading-log/issues/7)): Marked finished, Read to the end (from the reading statistics), or Either.
+- **Change a book's dates**: set when you started or finished a book when the statistics have it wrong. Every card uses them.
+- **Goals for one collection**: Year goal and Pages goal can count only one collection's books, so a TBR collection becomes "read all of these this year".
+- **Quotes can open at the highlight** instead of where you left off.
+- **When tapped can run any KOReader action** on ZenOS, Simple UI and full screen, from the same list as gestures.
+
+## Easier to use
+
+- **Simpler menus.** Tools > Reading Log has five items:
+  - Open the dashboard
+  - Styles and colours
+  - Your reading
+  - Reader panel
+  - About and updates
+- **The long-press menu on the Dashboard has four:**
+  - Dashboard pages
+  - Styles and colours
+  - Card settings
+  - Reset to default
+- **Lifetime pages** shows a bigger total. Its year, month and week rows can each be hidden.
+- **Thicker progress bars** on Continue reading and Book club.
+
+## Bug fixes
+
+- Switching from Dark Academia or Cyber to another style kept the old page, tabs and headings. A style's colours now always go when you leave it.
+- "On pace" on the Monthly challenge was white on white on dark cards (Dark, Cyber).
+- Bookshelf's log showed "micro-module failed to load … unexpected symbol" for `._alm_*.lua` files a Mac left behind. Reading Log now removes them.
+- Continue reading didn't grow on a taller Mini dashboard; only the cover did ([#9](https://github.com/stevenzamora1/reading-log/issues/9)).
+
+## Languages
+
+**Ukrainian**, by [@advokatb](https://github.com/advokatb). Thank you!
+
+## Updating
+
+Tools > Reading Log > About and updates > **Check for updates**, then restart KOReader. Or download `readinglog-1.5.0.zip` below and replace the `readinglog.koplugin` folder in `koreader/plugins`.
+
+The full list is in the [changelog](CHANGELOG.md).
+
 # v1.4.0 · 2026-10-30
 
 Reading Log is now one KOReader plugin that works with Simple UI and with Bookshelf. New in this version: Cyber and Dark Academia styles, five ornaments, a Device card, a Lifetime pages card, and a small panel under the reader's menu.
@@ -99,19 +186,3 @@ To update, download reading-log-1.2.0.zip and copy everything inside its micromo
 - **Today's timeline**: each sitting today on a line through the day.
 - **Control centre**: up to 8 buttons for any action, with brightness and warmth.
 - **Library stats**, **Most-read authors**, **Random pick** (only the next book of a series) and **Quote of the day** (from your own highlights).
-
-# v1.0.0 · 2026-10-19
-
-- 21 cards for Bookshelf's home screen and full-screen view: Banner,
-  Continue reading, Activity rings, Week rings, Month rings, Month totals,
-  Pages per day, When you read, Longest reads (month), Longest reads (year),
-  Time read by month, Books and pages, Year in covers, Year goal, Top genres,
-  Book club, TBR shelf, Finish by, This week, Reading heatmap and Recently
-  finished.
-- A Dashboard that puts them together as three tabbed pages, Today, Yearly
-  and Monthly, with every page editable on the device. The Monthly page steps
-  back through the last twelve months.
-- Cards on their own match Bookshelf's look, including its dark theme.
-- Three themes (White, Dark, Paper) and twelve accent colours chosen for
-  colour e-ink, with screen updates that clear ghosting.
-- Any card can run a plugin, a KOReader action or a menu entry when tapped.
