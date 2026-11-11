@@ -206,7 +206,7 @@ on top.
 | **Export new and changed books** | only the books whose highlights changed since the last export (per-book hash)                                                                                 |
 | **Repair all files**             | writes every file again from KOReader's reading history: for a file deleted by mistake or a sync that went wrong                                              |
 | **Choose books…**                | a list with checkboxes: tick the volumes and export just those                                                                                                |
-| **Current book**                 | the rows that name the open book: *Keep my notes in this book*, *Book info* (*Tags: %1* and the book-info rows), *Book visibility: %1*, *Notes heading: %1* and *Backup copies*, explained in [Keep my notes](docs/keep-my-notes.md) and [File format](docs/file-format.md#imported-book-information) |
+| **Current book**                 | the rows that name the open book: *Keep my notes in this book*, *Book info* (*Tags: %1* and the book-info rows), *Book visibility: %1*, *Notes heading: %1*, *Backup copies* and *Style & format*, explained in [Keep my notes](docs/keep-my-notes.md), [Settings](docs/settings.md) and [File format](docs/file-format.md#imported-book-information) |
 | **Upload all files again**       | re-uploads every file already in the local folder, after comparing each one with its cloud copy                                                               |
 | **Last export**                  | a wide popup, one line per entry: network, server, pending uploads, the last export and upload with timestamp and outcome                                     |
 | **Settings**                     | the six groups, described in [Settings](docs/settings.md)                                                                                                    |
@@ -282,9 +282,9 @@ hand stay. *Book visibility: %1* keeps the book in the index, hides it from
 the index only, or stops exporting it, without ever deleting the note already
 written.
 
-Two copies sit beside the file when they are needed: `.bak` holds your notes
-when Keep my notes goes off, and `.bak.1` is the safety copy for text that
-cannot come back by itself. On, off, on: your notes come back each time.
+Backup copies sit beside the file when they are needed: `.bak` holds your notes
+when Keep my notes goes off, and `.bak.1`–`.bak.3` are rotating safety copies for text that
+cannot come back by itself (inline comments written directly below a quote in Obsidian are preserved automatically). On, off, on: your notes come back each time.
 *Backup copies* lists them and lets you read or delete them.
 
 With Keep my notes off the files are rewritten at every export: treat them as

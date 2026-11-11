@@ -338,6 +338,11 @@ inherit the source login, and saving it as a subcatalog does not copy that login
 custom headers still apply. Older download-queue entries without a saved catalog origin withhold
 Basic credentials and show a notice; remove and re-add any entries that need authentication.
 
+Feed and cover caches in development builds are separated by authentication context. Changing a
+login or custom headers can trigger fresh requests; old unscoped cover entries are no longer read.
+Header changes can invalidate caches for other catalogs too, because redirected requests may use
+those headers. Cache limits and cleanup remain unchanged, and credentials are not stored in cache names.
+
 ## 🔧 Technical Details
 
 ### Requirements
@@ -454,8 +459,8 @@ travels unencrypted. [SECURITY.md](SECURITY.md) has the details and explains how
 - Large catalogs may take time to load initially, and Grid View performance varies with the device
 - OPDS 2.0 catalogs that need an authentication document or OAuth are not supported; only username and
   password (Basic) logins are
-- Two-way streaming progress synchronization is not yet available. Development builds support local and
-  standard PSE resume, including on non-Kavita servers; see the [streaming guide](docs/wiki/Kavita.md#resume-in-development-builds).
+- Two-way streaming progress synchronization is not yet available. Development builds support local,
+  standard PSE and normalized Kavita resume; see the [streaming guide](docs/wiki/Kavita.md#resume-in-development-builds).
 - The `SERIES:` line that Calibre and Calibre-Web add to descriptions stays in the description, next to the
   Series row
 - Update release notes are shown as plain Markdown text

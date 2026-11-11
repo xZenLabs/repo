@@ -1,3 +1,30 @@
+# v2.0.0 · 2026-11-11
+
+New
+
+• Per-book style & frontmatter overrides: customize frontmatter visibility, export formats (.md / .txt / both), footnote styles, chapter headings, and highlight metadata for a single volume under Current book → Style & format.
+• Modular YAML frontmatter: hide any optional standard key (e.g. progress, status, pages, special) to keep git diffs noise-free.
+• Custom frontmatter fields: check [x] Custom fields to define arbitrary key-value pairs (e.g. genre, project, doi, rating). Custom keys automatically turn into individual toggleable checkboxes in both global and per-book menus.
+• Book-only custom metadata: define custom fields isolated strictly to the volume you're reading without polluting other notes.
+• Custom frontmatter key ordering: control the exact sequence of YAML keys with a comma-separated list (Frontmatter key order…).
+• Multi-format export: export notes as rich Obsidian-ready Markdown (.md), clean minimalist Plain Text (.txt), or Both simultaneously.
+• Native Top Bar icon: optional dedicated [M↓] tab in KOReader's top reading navigation bar for instant 1-tap access to Tomedown actions.
+• 3-Slot rolling safety backups: merge engine rotates hand-edited backups through three timestamped slots (.bak.1 → .bak.2 → .bak.3) so earlier edits are never buried.
+• Highlight context capture: optionally capture surrounding text before and after each highlight.
+
+Improvement
+
+• In-place menu disclosure: toggling Custom fields or adding keys updates menus dynamically without reloads.
+• Instant cache flush: modifying style or metadata immediately invalidates the in-memory book cache for Export this book.
+• Full localization: complete and updated translations for Italian, German, Spanish, French, and Brazilian Portuguese.
+
+Fix
+
+• Single-book export cache: resolved an issue where Export this book could reuse a cached book model after changing settings.
+• Under-the-hood stability: verified with 2,130 automated assertions passing on Lua 5.4, LuaJIT, and Kindle's luac5.1 bytecode compiler.
+
+Install it from Check for updates inside the plugin, or download the zip below.
+
 # v1.4.1 · 2026-11-08
 
 New
@@ -71,15 +98,3 @@ Install it from Check for updates, or the zip below.
 - The test suite runs on LuaJIT, the interpreter KOReader ships, as well as on Lua 5.4.
 
 Coming from 1.1.2 or earlier, this release is installed by the previous updater; the new install steps start with the next update.
-
-# v1.1.2 · 2026-10-30
-
-Tomedown 1.1.2.
-
-- The row that rebuilds every file is now called *Repair all files*, which is what it does.
-- The About window wears the new logo.
-- The README has a front page and reference pages now: settings, file formats, keeping notes, and developing. Menu screenshots are refreshed there.
-
-Install it from *Check for updates*, or the zip below.
-
-Questions or feedback on the menu? [Join the discussion](https://github.com/imanubdesigner/tomedown.koplugin/discussions).
