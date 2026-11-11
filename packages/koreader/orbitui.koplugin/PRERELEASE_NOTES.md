@@ -1,3 +1,20 @@
+# v1.2.0-beta.3 · 2026-11-11
+
+## What’s new
+
+- **Straight cover row on Home.** Four equally sized covers show progress at a glance. The last book’s title sits below the time estimate, and the Want to read and Recently added stacks share a card with independent paging. The layout uses Inter by default and respects your custom UI font. It is preselected in the first-run setup guide.
+- **An airy book information page.** See the cover, reading status, rating, description and cached EPUB tags together. The existing book actions and detailed tabs are available from the page.
+- **Updated search and library tools.** Book search keeps the query, scope and sort together. Tag and similar-book results offer book and series views. Collection editing, shelf appearance and dashboard module settings have clearer layouts.
+- **A clearer reader panel.** See estimated time for the book and chapter when reading statistics are available, and open KOReader’s native Reading settings directly. The Also reading tab now recovers from stale navigation state.
+
+This beta includes the previously merged Bookshelf 6.4.2 and SimpleUI 3.0.3 integrations.
+
+## Testing
+
+USB testing on a Bigme covered Home, Library, Manga, book information, search, the reader panel and touch after sleep and wake. The final Inter and header alignment changes were checked with KOReader widgets on desktop. A fresh physical installation and the final typography still need device checks.
+
+Enable preview releases in OrbitUI’s updater to install this beta. The stable channel continues to offer **1.1.0**.
+
 # v1.2.0-beta.2 · 2026-11-10
 
 OrbitUI 1.2.0-beta.2 brings a new reader bottom panel and more ways to discover, continue and keep track of local books.
@@ -117,29 +134,3 @@ Rättar den saknade katten/silverfisken i **Läser just nu + Silverfish** och de
 Update through OrbitUI's **preview** channel and restart KOReader. For manual installation use **orbitui.koplugin.zip**, not GitHub's source-code archive. Back up settings and reading data separately: code rollback does not restore those or third-party data. Dashboard v2/v3 downgrade limits still apply.
 
 This is a prerelease. Automated tests include KOReader's native minimum/current sandbox and font code, and Silverfish's real frozen renderer; they do not establish physical Bigme font/layout/touch/night/colour/wake/rotation or complete external-plugin acceptance. Those checks remain pending. No new upstream/component/pin/artwork/bootstrap/API1, independent catalog, device or BookOrbit-server deployment. Stable/latest 1.0 remains unchanged; the 2,000-file limit is preserved.
-
-# v1.1.0-beta.10 · 2026-11-08
-
-## Dashboard card fixes
-
-- Adding a card shows saved feedback. BookOrbit shelves/smartscopes get a checkmark; repeated picker taps cannot create duplicate cards for that source on this screen.
-- Remove card is one action with feedback and an immediate updated list, not another removal submenu. Existing duplicates are kept; remove unwanted placements individually.
-- Healthy BookOrbit sources and usable offline caches no longer incorrectly show Unavailable. Failed saves never show success.
-
-## Optional reading companion
-
-New **Currently reading + Silverfish** module: book cover, title/author/progress plus your active companion. Tap the book to resume; tap the creature to open Silverfish. **Continue reading is not replaced.** Add through **Reading dashboard > + > Home modules (SimpleUI)**, or the ordinary Home module picker.
-
-Requires separately installed/enabled public **Silverfish 2.0.0** and restart. No fork, copied artwork, plugin-file edits, save access or duplicate development. Other versions show a compatibility explanation. Late/missing covers use native polling; colours follow KOReader/Silverfish.
-
-## Svenska
-
-Tillägg får kvittens och BookOrbit-källor en bock; upprepade tryck skapar inga dubbletter. **Ta bort kort** ger kvittens och återgår direkt till listan. Felaktig **Inte tillgänglig**-märkning är rättad. Befintliga dubbletter lämnas orörda.
-
-Valfria **Läser just nu + Silverfish** visar bokomslag/läsprogress och din figur. **Fortsätt läsa ersätts inte.** Välj under **Läsöversikt > + > Hem-moduler (SimpleUI)**. Silverfish 2.0.0 installeras/aktiveras separat; inga sparfiler ändras.
-
-## Update and scope
-
-Update through OrbitUI's preview channel and restart KOReader. For manual installation use **orbitui.koplugin.zip**, not GitHub's source-code archive. Back up settings and reading data separately: code rollback does not undo layout edits or third-party data. Dashboard v2/v3 downgrade limits still apply.
-
-Prerelease: automated/native-adapter tests are not complete Silverfish or physical Bigme certification. Real font/touch, checkmark/toast, layout/colour/night, sleep/wake/rotation and plugin lifecycle retesting remain pending. No device or BookOrbit-server deployment, new upstream merge, component/pin or artwork update. Stable/latest 1.0 is unchanged. Bootstrap/API1 and the 2,000-file limit are preserved.

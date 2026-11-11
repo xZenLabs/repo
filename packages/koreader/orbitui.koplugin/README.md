@@ -17,14 +17,11 @@ top. Please support and credit the original creators.
 | [Feature guide](docs/FEATURES.md)
 | [Report a problem](https://github.com/komadorirobin/orbitui.koplugin/issues)
 
-**Trying the next version?** [1.2.0-beta.2](https://github.com/komadorirobin/orbitui.koplugin/releases/tag/v1.2.0-beta.2)
-adds a modern reader bottom panel, pinned reading references, local similar-book
-discovery, optional Next in series and Finish forecast cards, plus a redesigned
-updater. It retains the Bookshelf 6.4.1 integration and your existing setup.
-See the release notes for scoped Bigme tests and remaining compatibility limits;
-**1.1.0 remains the stable release**. See the release notes before switching.
-Physical touch after sleep/wake still needs verification with a stable connection.
-The preview is published with that limitation, not as an all-tests-passed build.
+**Trying the next version?** [1.2.0-beta.3](https://github.com/komadorirobin/orbitui.koplugin/releases/tag/v1.2.0-beta.3)
+adds the Straight cover row dashboard, an airy book information page, and
+updated book search and tag results. The reader panel shows estimated reading
+time when enough statistics are available. See the release notes for the Bigme
+checks and remaining test coverage. **1.1.0 remains the stable release**.
 
 > **OrbitUI replaces the standalone SimpleUI and Bookshelf plugins.**
 > Neither is required separately. If either is installed, disable it and restart
@@ -124,8 +121,9 @@ Library roots and configured scan depth determine coverage.
 
 ## Make Home useful to you
 
-The optional **Reading dashboard** adds a Home page without replacing your
-existing pages. Choose its cards, headings, colours, order and row sources:
+On a fresh install, the setup guide preselects **Reading dashboard** with
+**Straight cover row**. Review and apply to add it as the first Home page.
+Choose its cards, headings, colours, order and row sources:
 local To Be Read, new books, history, collections, saved shelves or BookOrbit.
 Each book row has its own paging arrows and swipe navigation.
 
