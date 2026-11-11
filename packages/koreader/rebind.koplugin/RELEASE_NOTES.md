@@ -1,3 +1,46 @@
+# v2.3.0 · 2026-11-11
+
+## [2.3.0](https://github.com/rameezk/rebind.koplugin/compare/v2.2.0...v2.3.0) (2026-11-11)
+
+Rebind can now work through a whole folder of books at once.
+
+Until now you rebound one book at a time. That is fine for the odd book, but slow when you have just copied a dozen new books onto your device. Now you choose several books, Rebind looks them all up, and you get one review list. Every sure match can be rebound with a single tap, and you go through the rest one by one in the same picker you already know.
+
+### Starting a batch
+
+- Tools → Rebind → Rebind several books…
+- Long-press a folder and tap "Rebind books in this folder"
+- Select books in the file browser's select mode, even across folders
+- Bind "Rebind several books…" to a gesture
+
+### Reviewing and rebinding
+
+- Books land in the review list as sure matches, books to review, and books that are done.
+- "Rebind N sure matches" writes each sure match exactly as its picker would, using one Save as for the whole batch, and shows progress with "Stop after this book".
+- A summary at the top counts what happened. A book that could not be written or moved goes back to review with the reason.
+
+### Safeguards
+
+- Rebind asks before looking up more than 300 books, and tells you roughly how long it will take.
+- It asks before you close the review list with books still unfinished.
+- If the connection drops, the remaining books are marked "Lookup failed" straight away instead of each waiting out a timeout. Tap one to try again.
+- The book open in the reader is never touched.
+- Your device stays awake while a batch is looking up or writing, so it does not sleep and lose Wi-Fi halfway through.
+
+### Also new
+
+Long-pressing a book in Collections, History or file search now shows the Rebind button, just like the file browser.
+
+
+### Features
+
+* ask before big or unfinished batches and fail the rest when the connection drops ([#129](https://github.com/rameezk/rebind.koplugin/issues/129)) ([4ca38bf](https://github.com/rameezk/rebind.koplugin/commit/4ca38bff2e354c8a5778bc1802656f915e70e4ff))
+* choose several books, look them up and review them in one list ([#126](https://github.com/rameezk/rebind.koplugin/issues/126)) ([3ca7cd1](https://github.com/rameezk/rebind.koplugin/commit/3ca7cd160d743f12ec2cfab3067a55a7e75fca31))
+* keep the device awake while a batch is working ([#130](https://github.com/rameezk/rebind.koplugin/issues/130)) ([34006f4](https://github.com/rameezk/rebind.koplugin/commit/34006f44858f92a8a6815f9dca45cc0b1baab0ab))
+* rebind a book from collections, history and file search ([#124](https://github.com/rameezk/rebind.koplugin/issues/124)) ([be863ab](https://github.com/rameezk/rebind.koplugin/commit/be863abc5d11e1e469f5977a63e86eccea5b5f90))
+* rebind every sure match in a batch with one tap ([#127](https://github.com/rameezk/rebind.koplugin/issues/127)) ([573e93f](https://github.com/rameezk/rebind.koplugin/commit/573e93fcb79c01af677bf866a9589976456cff05))
+* start rebinding several books from a folder, a selection or a gesture ([#128](https://github.com/rameezk/rebind.koplugin/issues/128)) ([e14dbcb](https://github.com/rameezk/rebind.koplugin/commit/e14dbcba2d6b7f51c1771ba56f2f8c5acdae7736))
+
 # v2.2.0 · 2026-11-09
 
 ## [2.2.0](https://github.com/rameezk/rebind.koplugin/compare/v2.1.0...v2.2.0) (2026-10-29)
@@ -56,18 +99,3 @@ Rebind 2.0 redesigns its interface so fixing a book takes less scrolling, fewer 
 ### Bug Fixes
 
 * make the whole rebind picker scroll as one view ([#23](https://github.com/rameezk/rebind.koplugin/issues/23)) ([1df6b96](https://github.com/rameezk/rebind.koplugin/commit/1df6b96647621ffd76dab6725d9d1ccde50b2a76))
-
-# v1.5.0 · 2026-07-31
-
-## [1.5.0](https://github.com/rameezk/rebind.koplugin/compare/v1.4.0...v1.5.0) (2026-07-30)
-
-
-### Features
-
-* get a book's metadata in another language ([#20](https://github.com/rameezk/rebind.koplugin/issues/20)) ([d27c34b](https://github.com/rameezk/rebind.koplugin/commit/d27c34bea17becc3e4079df7d1ae04a5ec6cf132)), closes [#16](https://github.com/rameezk/rebind.koplugin/issues/16)
-* select another edition of book ([#18](https://github.com/rameezk/rebind.koplugin/issues/18)) ([2e2a5c3](https://github.com/rameezk/rebind.koplugin/commit/2e2a5c3a3a4cb4528125b78bb231fed67f1a3ac9))
-
-
-### Bug Fixes
-
-* make Hardcover lookups work in the macOS emulator ([#21](https://github.com/rameezk/rebind.koplugin/issues/21)) ([9a86da6](https://github.com/rameezk/rebind.koplugin/commit/9a86da65df74edddefa2a712f61e398f7df214b2))
