@@ -1,3 +1,12 @@
+# 1.8.3 · 2026-11-11
+
+- (fix) Stop retrying a book's status lookup when the reader sleeps, Wi-Fi drops (with "Enable wifi on demand" off) or the provider is turned off. The retries kept going, so sleeping and waking while the lookup failed added more each time, and a provider that had been turned off could still look the book up and mark it as Currently Reading.
+
+
+---
+
+Full changelog: [CHANGELOG.md](https://github.com/Lyfts/ShelfSync/blob/main/CHANGELOG.md#183)
+
 # 1.8.2 · 2026-11-03
 
 - (feat) Choose file types (e.g. cbz for manga) that are never linked automatically, under Settings > Auto Book Link.
@@ -46,14 +55,3 @@ Full changelog: [CHANGELOG.md](https://github.com/Lyfts/ShelfSync/blob/main/CHAN
 ---
 
 Full changelog: [CHANGELOG.md](https://github.com/Lyfts/ShelfSync/blob/main/CHANGELOG.md#170)
-
-# 1.6.1 · 2026-10-06
-
-- (feat) Add a Goodreads account connection check that verifies the cookie and uses the configured cookie refresher when the cookie is missing or expired.
-- (fix) Allow Goodreads syncing when only Cookie Auto-Refresh URL is configured, and refresh rejected cookies after HTTP 403 responses.
-- (fix) Goodreads shelf changes now send the cookies that came with their CSRF token. Without them, they could get a 404 "Page not found" page.
-
-
----
-
-Full changelog: [CHANGELOG.md](https://github.com/Lyfts/ShelfSync/blob/main/CHANGELOG.md#161)

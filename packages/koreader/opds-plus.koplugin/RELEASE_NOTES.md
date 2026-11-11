@@ -1,3 +1,41 @@
+# v1.6.0 · 2026-11-11
+
+**Update from within KOReader**: **OPDS Plus Catalog → Settings → Updates → Check for updates**, or install by hand.
+Neighboring-cover prefetch and streaming progress writes are both **off by default**.
+OAuth login and downloaded-book progress synchronization are not included.
+
+### Added
+
+- **Authentication Discovery**: Recognize OPDS authentication documents in protected responses or at a direct address, including advertised HTTP/Atom/OPDS 2 links. Show provider information, Basic field labels and unsupported-flow explanations in a scrollable viewer. Public catalogs keep their entries and offer an explicit information action. Linked discovery uses verified same-origin HTTPS without catalog credentials, custom headers or redirects. Existing Basic/self-signed catalogs are unchanged; OAuth login remains gated.
+- **Opt-in Streaming Progress Sync**: A per-catalog **Sync streaming progress** option pulls and reconciles Kavita/Komga page-stream positions and coalesces changes to painted pages into background server writes. Ask on conflicts, honor rewinds, preserve pending local state across errors/close/suspend, and recheck before/after writes. Credentials, stream identity or page-count changes require fresh reconciliation. Explain provider completion/reset behavior and non-atomic server APIs before enabling. Downloaded books and generic streams remain outside this feature.
+- **Neighboring Cover Prefetch**: An off-by-default Cover Settings option warms the disk cache for one neighboring display page while the current covers are ready and input is idle. It requires caching and parallel downloads, never decodes or draws speculative images, and cancels on navigation, dialogs and close. Thanks to @iav for the prefetch work proposed in issue #117.
+- **User Guide**: The [wiki](https://github.com/greywolf1499/opds_plus.koplugin/wiki) explains installing and updating OPDS Plus, its views and settings, setting up Calibre-Web, Kavita and Komga, OPDS 2.0 catalogs, and what to do about each error message.
+
+### Changed
+
+- **Formatted Release Notes**: Render update notes with KOReader's native Markdown viewer, or its existing converter and HTML scroller on v2025.10. Preserve Install / Skip / Later, keyboard scrolling and complete long notes. If rendering fails, explain it and offer the original plain text; do not fetch remote images or open links in notes.
+- **Cancellable Catalog Loading**: Fetch, parse and map catalogs in the background while keeping the current page visible. Tap or press a key to cancel without changing the listing or history. If background processes are unavailable, ask before loading in the foreground, where input will pause. Catalog caching, search and sequential feed-page fetching are preserved.
+- **Screenshots**: The README shows the book details, the update dialog and an OPDS 2.0 catalog's shelves and facets, all taken from a mock catalog of public-domain classics.
+- **Editor Diagnostics**: Add a reproducible LuaLS check with accurate Busted assertions and KOReader module resolution, without disabling production warnings.
+
+### Fixed
+
+- **Kavita Authentication Validation**: Reject malformed decoded API keys and progress tokens before they can become authentication-header values.
+- **Kavita Feed Resume**: Normalize Kavita's zero-based feed cursor before showing the Resume page or opening the stream, including relative links behind reverse proxies. Keep completed chapters on their final page and leave standard PSE positions unchanged.
+- **Authenticated Caches**: Partition feed validators and cached cover bytes by request authentication context, including credentials, their source origin and configured custom headers that redirects may use. Ignore old unscoped cover entries rather than showing another account's cached image. Keep same-context reuse and stale fallback; credentials are not written into cache names.
+- **Catalog Credentials**: Keep usernames and passwords on their source catalog's scheme, host and port, including the first request to a feed link, cover, download or stream. Preserve destination-scoped custom headers and provider-owned tokens. Saved subcatalogs on another origin no longer inherit the source login. Older download-queue entries without a recorded origin withhold Basic credentials and explain how to re-add authenticated downloads.
+- **Responsive Page Streaming**: Move image requests and fallback Kavita progress lookup into cancellable background workers. Keep the current image until its replacement is decoded; reject stale results and preserve painted-page progress on cancellation, failure, close and suspend. Bound requests with an overall watchdog and report unavailable workers instead of silently blocking in the foreground.
+- **Streaming Resume**: Use standard PSE positions in both default stream actions and remember displayed pages locally, including rewinds. Validate page counts/choices and clamp stale positions; do not fetch page 1 before a resumed page or record failed/speculative requests. Use Kavita's read-only reader-image API rather than its progress-writing OPDS image endpoint. Keep up to 500 catalog/account-scoped local positions and flush on close/suspend; server synchronization requires the separate per-catalog opt-in.
+- **Responsive Update Checks**: Move connectivity probes and release requests off the UI thread, retaining parent-side settings and notifications. Manual checks can be cancelled; automatic checks pass input through when interrupted and never wake Wi-Fi. Reject stale results, coalesce duplicate checks, bound stalled workers and cancel on suspend/close/install. Ask before any manual foreground fallback.
+- **Series Descriptions**: Show a matching Calibre-style `SERIES:` metadata line only in the series field, not again in the description. Book details, download information and newly saved descriptions use the same cleanup. Keep rating/tags, prose, malformed or mismatched fields, and existing downloaded-book metadata unchanged.
+- **Shared Cover Workers**: Visible and prefetched covers share a two-worker limit rather than starting two workers per batch. If subprocesses are unavailable, speculative warming is skipped instead of falling back to blocking network requests.
+- **Decoded Cover Memory**: Keep an 8 MiB least-recently-used cover budget instead of retaining every visited page. Visible and dialog-borrowed images stay pinned, even when they exceed that budget. Release high-resolution dialog images and widget-scaled copies when their users close or are rebuilt.
+- **Cover Loading and Keys**: Yield between cover decodes and widget updates, including cache hits and repeated cover URLs. Key and touch activity postpones expensive cover work without killing and restarting downloads. Thanks to @iav for the input-deferral work behind issue #117.
+- **Closing Book Details**: Cancel a pending high-resolution cover when its dialog closes, instead of decoding it later or repainting a replacement dialog.
+- **Invalid Book Addresses**: Empty download, cover and page-stream addresses report an error instead of crashing or opening a broken viewer. An invalid download address leaves any existing destination file untouched.
+- **Update Validation**: If the staged version file becomes unreadable during validation, the update reports the failure and keeps the installed plugin instead of throwing a Lua error.
+- **Kavita Resume**: Read complete JSON responses regardless of field order or network chunk boundaries. Invalid tokens and page numbers are reported without crashing, and generic page streams no longer attempt Kavita authentication.
+
 # v1.5.0 · 2026-11-10
 
 # OPDS Plus v1.5.0
@@ -107,38 +145,6 @@ A feature release: custom HTTP headers for catalogs behind a gateway, series inf
 Special thanks to these contributors for their work in this release cycle:
 - @iav (keyboard and D-pad navigation, switching views and fetching ahead, #92 and #93)
 - @demrom (parallel cover downloads, #98)
-
-Full changelog:
-https://github.com/greywolf1499/opds_plus.koplugin/blob/main/CHANGELOG.md
-
-# v1.2.1 · 2026-11-09
-
-# OPDS Plus v1.2.1
-
-A bug-fix release with cover cache, catalog compatibility and sync fixes since v1.2.0.
-
-### Fixed
-- Covers are cached on Kindle and other devices where KOReader runs from a relative directory (Issue #86, PR #87).
-- Cached covers no longer miss and download again after LuaJIT switches from interpreted to compiled code (PR #97).
-- Cover cache robustness: falls back to KOReader's data directory on versions without `getFullDataDir()`, creates relative cache directories in place, and writes covers atomically so an interrupted write cannot leave a truncated cover.
-- Catalog URLs with a local hostname, such as `http://booktrove:8083/opds`, can be added (Issue #91, PR #95).
-- Entries linked with the OPDS `crawlable` relation, like the Standard Ebooks "All Ebooks" feed, open instead of failing with "Cannot get catalog info from nil" (Issue #83).
-- Listings no longer lose the entries after one with an empty `<content/>` tag (Issue #100).
-- "Sync all catalogs" and "Force sync all catalogs" say when no catalog has "Sync catalog" ticked instead of reporting "Up to date!", and the gesture versions wait for the network like the menu entries (Issue #96).
-- A sync that fails shows the error instead of leaving "Synchronizing lists…" on screen. Feeds with a link-less entry and Project Gutenberg style catalogs with a single-book sub-feed now sync (Issue #96).
-- KOReader's plugin manager can delete OPDS Plus's settings and cover cache with "Disable plugin and delete settings" and "Delete plugin and settings". Downloaded books are kept (Issue #82).
-
-### Changed
-- Updated GitHub Actions dependencies for checkout and release publishing.
-
-### Notes
-- Covers cached by earlier versions are downloaded once more after updating, because the cache file naming changed.
-
-### Thanks
-Special thanks to these contributors for their work in this release cycle:
-- @cardoso42 (Kindle cover cache, #87)
-- @demrom (stable cover cache keys, #97)
-- @439qi (local hostnames, #95)
 
 Full changelog:
 https://github.com/greywolf1499/opds_plus.koplugin/blob/main/CHANGELOG.md
