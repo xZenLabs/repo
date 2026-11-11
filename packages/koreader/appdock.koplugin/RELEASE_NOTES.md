@@ -1,24 +1,17 @@
-# v9.1.0 · 2026-11-10
+# v9.2.1 · 2026-11-11
 
-Glass Quick Settings: dunkle Glass-Oberfläche, Vektor-Icons, Blur-Backdrop sowie neue Helligkeits- und Lautstärkeregler. AppDock verwendet dafür appdock_glass.lua und aktualisiert seine Version auf 9.1.0.
+The open Apps screen was reworked to look amazing
 
-# v9.0.0 · 2026-11-10
+# v9.2.0 · 2026-11-11
 
-- New media control card
-- "All apps" menu
-- fixed some errors
-See you later
+# v9.1.5 · 2026-11-11
 
-# v8.9.3 · 2026-11-02
+AppDock 9.1.5 verwendet für Quick Settings denselben abgesicherten Frosted-Veil-Mechanismus wie die AppDock-eigenen Dialoge: Alpha-Blending, kurzlebiges addblitFrom-Overlay und sicherer Graustufen-Fallback ohne persistenten Backdrop-Puffer.
 
-Faster homescreen construction without visual or functional changes.
+# v9.1.4 · 2026-11-11
 
-- Reuse one app-catalog snapshot across pinned apps, recent apps, search results, and the All apps dock item.
-- Avoid duplicate Store-widget enumeration during initialization; later rebuilds still refresh widgets.
-- Keep pinned-app lookup lazy while searching.
+AppDock 9.1.4 behebt den tatsächlichen Quick-Settings-Absturz: Der native ColorRGB32-Cache wird nicht mehr mit nil verglichen und löst damit den fehlerhaften Geräte-__eq-Operator nicht mehr aus.
 
-# v8.9.2 · 2026-11-02
+# v9.1.3 · 2026-11-11
 
-- Reduced many slow things, for example wallpaper scaling, app loading etc.
-
-# v8.9.1 · 2026-11-02
+AppDock 9.1.3 entfernt den nativen Backdrop-Puffer aus Quick Settings. Damit wird der native pthread_mutex-Absturz durch einen bereits zerstörten Blitbuffer-Mutex vermieden; Glass-Kacheln und Slider bleiben erhalten.
