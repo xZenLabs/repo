@@ -1,3 +1,22 @@
+# v0.4.1 · 2026-11-11
+
+## Fixed
+
+- **E-ink mode keeps the backgrounds that carry something.** E-ink mode drew all text black and removed every background, so a caption drawn on a coloured tab over its box's border showed the border running through its text, and reversed labels (white numbers or headings on a dark background) turned into plain text. Now a dark background turns black under white text, and an opaque light one turns white, so it still covers what it covered. See-through tints go as before. Pages without such backgrounds look exactly as before.
+- **No more page for a line or two at the end of an entry.** An entry that ends with space below its last lines (a margin meant for a desktop window) could have its last lines moved to a page of their own, to make room for that space. The space after an entry's last lines is now dropped where nothing is drawn around it.
+- **Pronunciation buttons sit where the dictionary puts them.** Entries' `sound://` links were renamed for KOReader, so a dictionary's own rules for its sound links (`a[href^="sound://"]`) no longer applied, and a play button the dictionary aligns with its text sat below the line. The links now stay `sound://` and play as before.
+- Parts of a line with a black (or yellow) background could lose it when the layout split the line around blocks. Such colours were taken for "no background".
+- A dictionary's prebuilt `.koidx` index is checked again when a volume is replaced by a new copy of the same size. Some devices keep reporting the old file's date after a copy, and the plugin could then trust its earlier check of the old file without checking the index again. Each check now also records the volume's key count and key-section length and the index's header checksum, and holds only while they still match.
+
+## For dictionary makers
+
+`koidx-0.4.1.zip` holds the same `koidx.py` as 0.4.0.
+
+## Install
+
+- From 0.2.0: *Search → Settings → MDict dictionaries → Updates → Check for updates*, or wait for the automatic offer. Then restart KOReader (on Android, exit KOReader and open it again).
+- From 0.1.0: unzip `mdict.koplugin-0.4.1.zip` into `koreader/plugins/`, replacing the `mdict.koplugin` folder, and restart KOReader.
+
 # v0.4.0 · 2026-11-10
 
 ## New: dictionaries can come with their index
@@ -70,19 +89,3 @@ See *Dictionary exporters* in the README for details.
 
 - From 0.2.0: *Search → Settings → MDict dictionaries → Updates → Check for updates*, or wait for the automatic offer. Then restart KOReader (on Android, exit KOReader and open it again).
 - From 0.1.0: unzip `mdict.koplugin-0.2.10.zip` into `koreader/plugins/`, replacing the `mdict.koplugin` folder, and restart KOReader.
-
-# v0.2.9 · 2026-11-07
-
-## Fixed
-
-- Lines drawn over each other: dictionaries whose CSS uses `round()` (for example to set line heights) showed every line of an entry on top of the one before in WebViews older than Chromium 125, which many e-readers have. On such a WebView, these stylesheets are now rewritten without `round()`.
-- Audio players in entries (`<audio controls>`, such as a "read the definition" player at the end of an entry) did nothing when tapped. A tap now plays the recording, as speaker icons do, and so does a button whose script plays a sound.
-
-## Changed
-
-- A recording that a dictionary only links on the web (its .mdd has no copy) is downloaded when you tap it, once KOReader is online, and kept for the next time.
-
-## Install
-
-- From 0.2.0: *Search → Settings → MDict dictionaries → Updates → Check for updates*, or wait for the automatic offer. Then restart KOReader (on Android, exit KOReader and open it again).
-- From 0.1.0: unzip `mdict.koplugin-0.2.9.zip` into `koreader/plugins/`, replacing the `mdict.koplugin` folder, and restart KOReader.
