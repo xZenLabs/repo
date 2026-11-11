@@ -165,12 +165,23 @@ A plugin folder that is a link, or has a `.git` folder in it (Method 2), is a de
 3. Tap a book to view details and download options
 4. Downloaded books are saved to your configured download directory
 
+Development builds also omit a duplicate leading Calibre-style `SERIES:` line from descriptions when its
+name and number match the book's series field. Other metadata and prose stay intact; descriptions already
+saved with downloaded books are not rewritten.
+
 #### Keyboard and D-pad Navigation (New in 1.3.0)
 On devices with hardware keys, you can browse without the touchscreen:
 - **D-pad**: moves the focus from item to item (cell by cell in Grid View). An underline shows where it is
 - **Enter** (the centre button of the D-pad): opens the focused item
 - **Back**: goes up one catalog level, and closes the browser from the top level. In the book info dialog it closes the dialog
 - **Home**: closes the browser
+
+#### Catalog loading (development builds)
+
+Catalog requests, parsing and mapping run in a background process. While **Loading catalog...** is shown,
+tap or press a key to cancel; the current listing, page and navigation history stay in place.
+If background loading is unavailable, you can cancel or choose **Load** to try in the foreground.
+That fallback pauses input until the request finishes. This is separate from **Parallel Cover Downloads**.
 
 ### Customizing Settings
 
