@@ -1,3 +1,27 @@
+# v1.2.0 · 2026-11-11
+
+## Email to KOReader 1.2.0
+
+### New
+- **Choose what to download.** Check Inbox now lists the books waiting in your mailbox, one line each. Tick the ones you want; the others stay unread for next time.
+- **Share one mailbox between devices.** Switch on "Keep downloaded emails unread" in the Check Inbox window and every device gets the book. Each device remembers what it already fetched, so nothing downloads twice.
+- **Mail folder / Gmail label setting.** Point the plugin at a folder such as `Books` instead of the inbox (#9).
+
+### Fixed
+- **Plugin missing from the Tools menu** on recent KOReader versions: the plugin now ships the required `_meta.lua` (#15).
+- **Books from Calibre, Calibre-Web Automated and Grimmory not recognised** (#7, #10): sturdier handling of attachment headers and file names.
+- **Corrupted books after a dropped connection** (#13): a partial download is now discarded, an error is shown, and the email stays unread so the next check retries.
+- **Passwords containing `"` or `\`** now work, and a failed login shows the mail server's reason.
+- **"Downloaded 0 books" on Kobo and PocketBook**: the default download folder is now KOReader's home folder instead of a Kindle-only path, and an unwritable folder shows an error.
+
+### Changed
+- Emails without a matching attachment are no longer downloaded or marked as read, so the plugin is safe to use on a normal inbox.
+- Connection errors now show the IPv4 and IPv6 results separately.
+- The gesture / profile action downloads every book without showing the selection window.
+
+### Upgrading
+Replace the plugin folder and keep your `config.lua`. The folder must be named `emailtokoreader.koplugin`. You can delete the old `manifest.lua` and `metadata.lua` if they are still in the folder.
+
 # v1.1.1 · 2025-11-14
 
 ## Email to KOReader v1.1.1

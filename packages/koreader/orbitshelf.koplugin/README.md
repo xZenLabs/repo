@@ -11,7 +11,7 @@ If this plugin is useful to you, you can [support my work on Ko-fi](https://ko-f
 
 | | |
 |---|---|
-| **Version** | 1.2.23 |
+| **Version** | 1.2.24 |
 | **KOReader** | v2026.07 or newer |
 | **Needs** | [bookshelf.koplugin](https://github.com/AndyHazz/bookshelf.koplugin) (Bookshelf 6.x recommended) and bookorbit.koplugin, signed in |
 | **Optional** | SimpleUI (for the footer critter) |
@@ -29,6 +29,11 @@ If this plugin is useful to you, you can [support my work on Ko-fi](https://ko-f
 - **Search BookOrbit.** Bookshelf's search can look in your BookOrbit library instead of the device (works offline from the saved list).
 - **Return To.** Bookshelf can always open (and come back from a book) on a shelf you pick, or keep its own last-shelf behaviour.
 - **Add To Collection.** Hold a book (or tap one not on the device) to add it to or remove it from your BookOrbit collections. Signs in like the BookOrbit website; the password can be saved encrypted, shared with BookOrbit Tweaks if you have it.
+- **Bulk Download / Remove.** Hold a book, tap **Bulk Download…** or **Bulk Remove…**, tick books from that shelf (All, Same Series, Same Author or None). Downloads check size and free space first, then go one at a time. Off by default.
+- **Reading Status.** Set a book's BookOrbit status (Read, Reading, Want To Read …) from its hold menu. Off by default.
+- **Next In Series.** Finish a book and, back on the home screen, get asked whether to download the next one in the series. Off by default.
+- **Show On Device / Not On Device.** A shelf can show only the books on the device, or only the ones that aren't.
+- **Download progress.** Big downloads show their % in the corner.
 - **Book Description popup.** A compact window that sizes itself to the text. Tap outside or the X to close.
 - **E-ink options.** A Flash menu to clear ghosting where you need it: the hero, shelf page turns, Book Description, the hold menus, the Download window and Bookshelf's shelf editor.
 - **Footer critter and close button.** Your SimpleUI critter in place of the page numbers, and an optional one-tap close X.
@@ -100,6 +105,11 @@ All under **Tools → OrbitShelf** (or **Tools → Add-ons → OrbitShelf** if y
 | **Return To** | Shelf Bookshelf shows when it opens or you close a book: Bookshelf's Choice (last shelf) or one you pick | Bookshelf's Choice |
 | **Add To Collection → In Book Menu** | Add To Collection when holding the hero or tapping a book not on the device | Off |
 | **Add To Collection → Forget Saved BookOrbit Password** / **About** | Removes the saved password / what's saved and where | — |
+| **Extras → Bulk Download** | Bulk Download… when holding the hero or a book not on the device: tick books from that shelf, size check, download one at a time | Off |
+| **Extras → Bulk Remove** | Bulk Remove… when holding a BookOrbit book on the device: tick books from that shelf and remove them (they stay in BookOrbit) | Off |
+| **Extras → Reading Status** | Reading Status… in the hold and book menus: sets the book's status in BookOrbit | Off |
+| **Extras → Next In Series** | After you finish a book, back home: offers to download the next in its series | Off |
+| **Shelf editor → Show** | All Books, On Device or Not On Device | All Books |
 | **Offline Library → Keep Library Offline** | Saves every book's cover and details on the device | Off |
 | **Offline Library → Check For New Books** | On Wi-Fi Connect, On Refresh / Sync, Both, or Update Now Only | On Wi-Fi Connect |
 | **Offline Library → Update Now** | Pulls the list fresh and saves anything new | — |
@@ -167,6 +177,8 @@ orbitshelf.koplugin/
 ├── orbitshelf_hero.lua        hero buttons, status line, flash
 ├── orbitshelf_footer.lua      footer critter, close X
 ├── orbitshelf_collections.lua Add To Collection (website sign-in, saved password)
+├── orbitshelf_bulk.lua        Bulk Download / Remove (checklist, size check, download queue)
+├── orbitshelf_extras.lua      Reading Status, Next In Series
 ├── orbitshelf_menu.lua        settings menu
 ├── orbitshelf_diag.lua        Diagnostics (loaded only while it's on)
 └── README.md
@@ -184,6 +196,7 @@ orbitshelf.koplugin/
 
 The full history is at the top of `main.lua`.
 
+- **1.2.24:** Extras menu: Bulk Download, Bulk Remove, Reading Status, Next In Series. Shelf filter (On Device / Not On Device). Download progress %.
 - **1.2.23:** On Spines, Series / Authors / Genres show each group as a run of spines.
 - **1.2.22:** Spines for BookOrbit shelves (Bookshelf 6.4 or its feat-588 test branch).
 - **1.2.21:** Footer critter gets SimpleUI 3.0.3's ground shadow.

@@ -1,3 +1,11 @@
+# v1.8.4-dev-cover · 2026-11-10
+
+Test build for the missing local CBZ cover.
+
+Local CBZ covers are now always rendered from MuPDF page 1.
+
+**Install:** download `meguru.koplugin.zip` below and unzip it into the KOReader plugins folder, replacing the existing `meguru.koplugin`. This is a prerelease, so the plugin updater will not offer it.
+
 # v1.7.2-dev-android-derainbow-fix · 2026-11-01
 
 ## Pre-release: Android Derainbow fix — testers with a colour Android screen needed

@@ -86,8 +86,11 @@ grey circles mark the touches.
    list, where they are enabled, disabled and ordered like StarDict ones.
 
 Large dictionaries whose keys are not in the plugin's sort order are indexed
-once in the background (a few seconds each). Until then their lookups show a
-note; a notification says when an index you were waiting for is ready.
+once in the background (a few seconds each, a minute or more for the largest on
+slower e-readers). Until then their lookups show a note; a notification says
+when an index you were waiting for is ready. A dictionary that comes with a
+prebuilt index (`name.mdx.koidx`, see *Dictionary exporters*) needs no indexing:
+keep that file next to the `.mdx`.
 
 ## Reading entries
 
@@ -204,11 +207,34 @@ a tag or version that differs. A release needs an asset named
 
 ## Dictionary exporters
 
-Files whose keys are sorted by the plugin's `kosort-1` order can be used
-without an index. Exporters can say so with the header attribute
+Most MDict files keep their keys in MdxBuilder's order, which other readers
+such as DictTango rely on, so the plugin builds an index for them on the
+device. Dictionary makers can build that index on a computer instead and ship
+it next to each volume:
+
+    python3 tools/koidx.py build Name.mdx Name.mdd     # writes Name.mdx.koidx, Name.mdd.koidx
+    python3 tools/koidx.py check --deep Name.mdx        # the .koidx fits this Name.mdx?
+
+`koidx.py` needs Python 3.8 or later and nothing else, but keep `kosort.py` and
+`kosort1_tables.json` next to it. It reads only the header and key section of a
+volume, and writes the same index the plugin would build. The MDict files
+themselves are not changed, so other readers are not affected.
+
+The plugin uses a `.koidx` only when it fits the volume beside it: its key
+count, the length and CRC-32 of the volume's header and key section, and
+sampled keys are checked when the dictionary is opened, and the rest of the
+file once in the background. A `.koidx` that does not fit (say, left over from
+an older export) is ignored and the plugin builds its own index, as without
+one. *Index status* shows when a dictionary came with an index, or why its
+`.koidx` was not used. The file format is described in `tools/koidx.py` and
+`mdict.koplugin/mdict/index.lua`.
+
+Files whose keys are already sorted by the plugin's `kosort-1` order need no
+index at all. Exporters can say so with the header attribute
 `KOReaderKeyOrder="kosort-1"`; the plugin still verifies the order once in
-the background. `tools/kosort.py` is the reference implementation, with test
-vectors in `spec/data/kosort-1.tsv`.
+the background. Such files may lose lookups in readers that binary-search
+MdxBuilder's order. `tools/kosort.py` is the reference implementation, with
+test vectors in `spec/data/kosort-1.tsv`.
 
 ## Layout
 
@@ -228,7 +254,7 @@ vectors in `spec/data/kosort-1.tsv`.
   `mdict.koplugin/android/mdict-bridge.dex` and loaded at runtime (no custom
   KOReader build needed).
 - `tools/`: test fixture generator, inspection and index tools, the `kosort-1`
-  reference implementation, Chromium harnesses, `release.sh`, and `emulator/`
+  reference implementation, `koidx.py` (prebuilt indexes for dictionary makers), Chromium harnesses, `release.sh`, and `emulator/`
   (an Android emulator shaped like a 7" 300 ppi e-reader, with KOReader; see its README).
 - `spec/`: busted specs.
 

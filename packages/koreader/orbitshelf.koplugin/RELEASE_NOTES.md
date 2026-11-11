@@ -1,3 +1,15 @@
+# v1.2.24 · 2026-11-10
+
+1.2.24 — Extras menu: Bulk Download, Bulk Remove, Reading Status, Next In Series. Shelf filter (On Device / Not On Device). Download progress %.
+
+Bulk Download / Remove: hold a book, tap Bulk Download… or Bulk Remove…, tick books from that shelf (All, Same Series, Same Author or None). Downloads check size and free space first, then go one at a time. Off by default.
+Reading Status: set a book's BookOrbit status (Read, Reading, Want To Read …) from its hold menu. Off by default.
+Next In Series: finish a book and, back on the home screen, get asked whether to download the next one in the series. Off by default.
+Show On Device / Not On Device: a shelf can show only the books on the device, or only the ones that aren't.
+Download progress: big downloads show their % in the corner.
+
+Note: Spines (Series / Authors / Genres shelves as runs of book spines) needs Bookshelf 6.4 — on older Bookshelf everything works as before, the option just isn't there.
+
 # v1.2.23 · 2026-11-07
 
 OrbitShelf 1.2.23 — Spines for BookOrbit shelves: Series, Authors and Genres (and Group By shelves) stand as runs of their books' spines under each group's name, like Bookshelf's own Series shelf. Covers view is unchanged: groups are still folders there.
@@ -19,13 +31,5 @@ Install: unzip, copy the orbitshelf.koplugin folder into KOReader's plugins fold
 # v1.2.5 · 2026-11-06
 
 OrbitShelf 1.2.5 — Reports: the start-up line now shows BookOrbit's version, and the Diagnostics snapshot lists every OrbitShelf setting, the saved library size, how many books Offline Library has saved, and whether a lookup run is going. No change to how OrbitShelf works.
-
-Install: unzip, copy the orbitshelf.koplugin folder into KOReader's plugins folder (.adds/koreader/plugins/ on Kobo, koreader/plugins/ on Kindle), restart KOReader, open Tools → OrbitShelf.
-
-# v1.2.4 · 2026-11-06
-
-OrbitShelf 1.2.4 — Check For New Books option, plus the 1.2.x fixes: no more crash scrolling a long description, no more screen freeze during lookups, lookups three at a time, Hero Button Size, Book Description popup.
-
-Coming from the OrbitShelf Tweaks patch: delete patches/2-orbitshelf-tweaks.lua and patches/2-zz-orbitshelf-tweaks-diagnostics.lua, then unzip this release and copy orbitshelf.koplugin into KOReader's plugins folder. Your settings, genres, saved lists, offline library and covers carry over.
 
 Install: unzip, copy the orbitshelf.koplugin folder into KOReader's plugins folder (.adds/koreader/plugins/ on Kobo, koreader/plugins/ on Kindle), restart KOReader, open Tools → OrbitShelf.

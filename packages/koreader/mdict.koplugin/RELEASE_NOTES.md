@@ -1,3 +1,31 @@
+# v0.4.0 · 2026-11-10
+
+## New: dictionaries can come with their index
+
+Most MDict files keep their keys in MdxBuilder's order, which other apps rely on, so the plugin builds its own index for each large dictionary the first time it is used. On a slow e-reader that takes from seconds to over a minute per dictionary, and the dictionary answers "being indexed" meanwhile. With 39 large Japanese and English dictionaries on a Clear7 it was about 6 minutes after every copy.
+
+A dictionary can now come with that index prebuilt, as a `.koidx` file next to each volume (`Name.mdx.koidx`, `Name.mdd.koidx`, …). Copy it along with the dictionary and nothing is built on the device: the plugin checks that the file belongs to the volume beside it (key count, the CRC-32 of the volume's key section and a few sampled keys) and uses it at once. The rest of the file is checked once in the background. A `.koidx` that does not fit, for example one left from an older copy of the dictionary, is ignored and the plugin builds its index as before, so a wrong file is never worse than none. *Index status* shows which dictionaries came with an index, or why one was not used.
+
+On the Clear7 with those 39 dictionaries (98 files), checking every index took about a minute and a half in the background, instead of an estimated 10 minutes of building.
+
+## For dictionary makers
+
+`koidx-0.4.0.zip` holds `koidx.py`, which builds `.koidx` files on a computer (Python 3.8 or later, nothing to install). It reads only each volume's header and key section, and writes exactly the index the plugin would build. Your MDict files are not changed, so other apps are not affected.
+
+    python3 koidx/koidx.py build Name.mdx Name.mdd Name.1.mdd
+    python3 koidx/koidx.py check Name.mdx
+
+See *Dictionary exporters* in the README for details.
+
+## Fixed
+
+- After a dictionary's `.mdd` files were replaced with a newer copy, entries could still use stylesheets, fonts and images taken from the old files until *Clear extracted resources* was used. They are now taken again from the new files.
+
+## Install
+
+- From 0.2.0: *Search → Settings → MDict dictionaries → Updates → Check for updates*, or wait for the automatic offer. Then restart KOReader (on Android, exit KOReader and open it again).
+- From 0.1.0: unzip `mdict.koplugin-0.4.0.zip` into `koreader/plugins/`, replacing the `mdict.koplugin` folder, and restart KOReader.
+
 # v0.3.0 · 2026-11-10
 
 ## Faster
@@ -58,20 +86,3 @@
 
 - From 0.2.0: *Search → Settings → MDict dictionaries → Updates → Check for updates*, or wait for the automatic offer. Then restart KOReader (on Android, exit KOReader and open it again).
 - From 0.1.0: unzip `mdict.koplugin-0.2.9.zip` into `koreader/plugins/`, replacing the `mdict.koplugin` folder, and restart KOReader.
-
-# v0.2.8 · 2026-11-06
-
-## Changed
-
-- Kindle's browser (experimental): switching to an MDict result in the popup is faster. The browser lays out one entry at a time, so before, an MDict result was only laid out once it was shown, and again each time you came back to it. Now, while another dictionary's result is shown, the nearest MDict result is prepared in the background, and the MDict result you move away from is kept, so that going back to it is immediate. (#1)
-- E-ink screens: entry pages are kept in grey, which takes a quarter of the memory. This matters most on Kindles, where the browser and KOReader share little memory.
-- Kindle's browser: the log (`crash.log`) now also records what the system says about the e-ink screen's controller, a moment after each entry is shown. This should tell whether pages that stay half drawn on page turns come from the screen controller. (#1)
-
-## Fixed
-
-- Links to a place in the same entry (`entry://#…`, used for buttons that jump to a section) did nothing: they were looked up as an empty word. They now go to the page of that place. Buttons whose script scrolls to a section now go to that section's page too. (#1)
-
-## Install
-
-- From 0.2.0: *Search → Settings → MDict dictionaries → Updates → Check for updates*, or wait for the automatic offer. Then restart KOReader (on Android, exit KOReader and open it again).
-- From 0.1.0: unzip `mdict.koplugin-0.2.8.zip` into `koreader/plugins/`, replacing the `mdict.koplugin` folder, and restart KOReader.
