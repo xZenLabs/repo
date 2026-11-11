@@ -1,3 +1,47 @@
+# v2.0 · 2026-11-11
+
+## Kobold 2.0
+
+<!--kobold-->
+Make Kobold yours: your own toolbar and nav bar with custom actions, Home widgets you can set up, live text on Home, and redesigned popups in the stock reader's style.
+<!--/kobold-->
+
+### New
+
+- **Custom toolbar and nav bar**, add, remove and reorder items in Kobold Settings. Kobold opens on your first tab, and More always stays so you can't lock yourself out
+- **Custom actions**, give any KOReader action or plugin a name and an icon (Kobold's, KOReader's, or your own SVG or PNG), then put it in the toolbar or nav bar
+- **Home widgets**, show a series or collection of your choice in the My Books and collection stacks, and change what Continue Reading says, what tapping it does and the label under it
+- **Live text on Home**, write your own stats or Continue Reading line with tokens like `[time]`, `[streak]`, `[battery]`, `[today_pages]` or `[book]`
+- **Mark as finished, Mark as unread and Reset book** in the book menu. Reset asks first, just like KOReader
+- **Natural light auto**, a switch in the brightness popup for KOReader's automatic warmth
+- **Clock popup** with today's date, your reading time today, the date in the status bar and how soon the device goes to sleep
+- **Battery popup** with the time left from KOReader's battery statistics and a link to the full stats
+- **Translations**, Kobold's text can now be translated, other languages coming later
+
+### Improved
+
+- **Toolbar popups redesigned** in the stock reader's style. The icon gets a black circle while its popup is open, the box sits right under it, and there's a new on/off switch everywhere
+- **Kobold's own popups everywhere**, choosing, confirming, typing, numbers and messages all use Kobold's style now, with an icon grid for picking icons
+- **Press feedback**, tabs and list rows turn dark while you press them, like on the stock reader
+- **Settings reorganised** into pages: Home, My Books, Toolbar, Nav bar, Custom actions and Opening books
+- **New icons** for check for updates and natural light
+- **Battery percentage** is shown inside the battery icon instead of making it wider
+
+### Fixed
+
+- Wi-Fi Settings showed an error when Wi-Fi was off. It now turns Wi-Fi on and shows your networks
+- Settings changed right before a crash could be lost. Kobold now saves them straight away
+
+### Install
+
+1. Download `Kobold.koplugin.zip` below
+2. Extract it and copy the `Kobold.koplugin` folder into KOReader's `plugins` folder
+3. Restart KOReader and open Kobold, or set it under **Start with > Kobold Home**
+
+On 1.1 or newer? Use **More > Check for updates** in Kobold.
+
+To uninstall, delete the `Kobold.koplugin` folder and restart KOReader.
+
 # v1.5 · 2026-11-02
 
 ## Kobold 1.5
@@ -141,27 +185,5 @@ Instant return after closing a book, new icons, redesigned popups and settings, 
 3. Restart KOReader and open Kobold, or set it under **Start with > Kobold Home**
 
 On 1.1 or newer? Use **More > Check for updates** in Kobold.
-
-To uninstall, delete the `Kobold.koplugin` folder and restart KOReader.
-
-# v1.1.1 · 2026-10-17
-
-## Kobold 1.1.1
-
-<!--kobold-->
-Fixes the search button in the status bar.
-<!--/kobold-->
-
-### Fixed
-
-- **Search button** in the status bar works again. Taps on Kobold's own buttons near a screen corner no longer trigger KOReader corner gestures
-
-### Install
-
-1. Download `Kobold.koplugin.zip` below
-2. Extract it and copy the `Kobold.koplugin` folder into KOReader's `plugins` folder
-3. Restart KOReader and open Kobold, or set it under **Start with > Kobold Home**
-
-On 1.1 already? Use **More > Check for updates** in Kobold.
 
 To uninstall, delete the `Kobold.koplugin` folder and restart KOReader.
