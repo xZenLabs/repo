@@ -1,3 +1,14 @@
+# v1.8.5 · 2026-11-11
+
+### Fixed
+
+- Page turns no longer stop working with ZenOS enabled.
+- "In landscape" two-page view now works on tablets whose natural orientation is landscape (rotation mode 0).
+- Two-page view no longer adds white bands above and below the pages when crop auto and flexible gutter crop the two pages differently.
+- Local `.cbz` covers come from MuPDF page 1 again, the same page the reader opens.
+
+**Full Changelog**: https://github.com/Craftwork2720/meguru/compare/v1.8.3...v1.8.5
+
 # v1.8.3 · 2026-11-10
 
 ### Fixed
@@ -45,20 +56,3 @@
 - Freezes of tens of seconds when Kavita or Suwayomi is unreachable.
 - Dust widening the page-number strip and cropping into the artwork.
 - Errors when pinching or spreading a panel whose image failed to load.
-
-# v1.7.3 · 2026-11-02
-
-## New features
-
-- **ZenPM support**: Meguru can now be installed and updated from [ZenPM](https://github.com/xZenLabs/zen-pm). Search for `meguru`. (#10)
-
-## Bug fixes
-
-- **Derainbow works on Android again**: the native libraries are now copied into the app's private files directory, since shared storage is mounted `noexec`. Refs #9.
-- **Compatible with KOReader's new OPDS dialog**: the *Meguru this series* row now appears in both the old `showDownloads` and the new `getDownloadButtons` dialog. Refs koreader/koreader#16311.
-
-
-## New Contributors
-* @KristanLaimon made their first contribution in https://github.com/Craftwork2720/meguru/pull/10
-
-**Full Changelog**: https://github.com/Craftwork2720/meguru/compare/v1.7.1...v1.7.3
