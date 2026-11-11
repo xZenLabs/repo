@@ -17,11 +17,11 @@ top. Please support and credit the original creators.
 | [Feature guide](docs/FEATURES.md)
 | [Report a problem](https://github.com/komadorirobin/orbitui.koplugin/issues)
 
-**Trying the next version?** [1.2.0-beta.3](https://github.com/komadorirobin/orbitui.koplugin/releases/tag/v1.2.0-beta.3)
-adds the Straight cover row dashboard, an airy book information page, and
-updated book search and tag results. The reader panel shows estimated reading
-time when enough statistics are available. See the release notes for the Bigme
-checks and remaining test coverage. **1.1.0 remains the stable release**.
+**Trying the next version?** [1.2.0-beta.4](https://github.com/komadorirobin/orbitui.koplugin/releases/tag/v1.2.0-beta.4)
+refines the Straight cover row dashboard with larger cover stacks, a reading
+streak and a weekly reading chart. The preview also includes the airy book
+information page, updated search and tag results, and reading time estimates
+in the reader panel. **1.1.0 remains the stable release**.
 
 > **OrbitUI replaces the standalone SimpleUI and Bookshelf plugins.**
 > Neither is required separately. If either is installed, disable it and restart

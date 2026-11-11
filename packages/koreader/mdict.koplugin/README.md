@@ -2,9 +2,10 @@
 
 MDict (.mdx/.mdd) dictionaries for KOReader, shown in KOReader's own
 dictionary popup next to its StarDict dictionaries. On Android, entries are
-laid out by the system WebView (Chromium) and shown a page at a time, so
-complex dictionary layouts keep their original look, including vertical
-Japanese, and their scripts and audio work. Elsewhere, entries fall back to
+laid out by the system WebView (Chromium); on Kindles with firmware 5.16 to
+5.18, by the Kindle's own browser. They are shown a page at a time, so complex
+dictionary layouts keep their original look, including vertical Japanese, and
+their scripts work (audio too, on Android). Elsewhere, entries fall back to
 KOReader's built-in HTML renderer.
 
 ## Why
@@ -33,7 +34,8 @@ This plugin keeps lookups in KOReader's popup, with no conversion step:
   key index), and lists them with the StarDict dictionaries in *Manage dictionaries*.
 - On Android it lays entries out with the system WebView: full CSS, web fonts and
   the fonts in the `.mdd`, vertical text, ruby, tate-chu-yoko, SVG, and the
-  dictionary's own scripts.
+  dictionary's own scripts. On Kindles it does the same with the Kindle's own
+  browser (see *Settings*).
 - It plays pronunciations and example recordings from the `.mdd`.
 - It shows each entry a page at a time, sized to the popup, for e-ink. It works with
   KOReader's large window and with nested lookups, lookup history and the
@@ -130,10 +132,15 @@ keep that file next to the `.mdx`.
 - **Rebuild indexes**, **Clear extracted resources**, **Rescan**.
 - **Updates**: the installed version, *Check for updates*, and *Check for updates
   automatically* (on by default).
-- **Render entries with the Kindle's browser (experimental)** (Kindles only, off by
-  default, in *Display*): lays entries out with the web browser of the Kindle's
+- **Render entries with the Kindle's browser** (Kindles only, on by default, in
+  *Display*): lays entries out with the web browser of the Kindle's
   firmware (5.16 to 5.18, Chromium 75 in Amazon's `/chroot`), as the WebView does on
-  Android: the dictionary's CSS, vertical text and the entry's scripts. The first
+  Android: the dictionary's CSS, vertical text and the entry's scripts. CSS made for
+  newer browsers is adapted to it (as for Android WebViews before Chromium 88):
+  `:is()`, `:where()` and `:not()` with a list are written out as the plain
+  selectors they stand for, and `round()` as `calc()`. Kindles that
+  cannot run it (other firmware, Amazon's software stopped, too little free memory)
+  use KOReader's renderer without a word; the *Kindle browser check* says why. The first
   lookup starts the browser, which takes about 20 seconds on a Paperwhite 4; it then
   stays open, also while the Kindle sleeps, and is closed after twenty minutes without
   a lookup. Pages come from the browser's screencast (under a second each on the
@@ -197,13 +204,15 @@ a tag or version that differs. A release needs an asset named
 - MDict 3.0 files, and registered files whose records are encrypted, are not
   supported yet.
 - Speex audio does not play.
-- The WebView renderer is Android only, with an experimental one on Kindles with firmware
-  5.16 to 5.18 (see *Settings*). On other Kindles, Kobo, PocketBook and other
+- The WebView renderer works on Android, and on Kindles with firmware 5.16 to 5.18
+  through the Kindle's own browser (see *Settings*). On other Kindles, Kobo, PocketBook and other
   devices, entries are laid out by KOReader's renderer (MuPDF) with the
   dictionary's CSS, as far as MuPDF supports it (no flexbox or grid). Vertical
   text, scripts (such as buttons that open or close a section) and audio do not work.
 - Some dictionaries' CSS is made for color phone screens; override files (above)
   can adapt it for e-ink.
+- On browsers before Chromium 105 (the Kindle's), CSS rules that need `:has()` do
+  not apply, and a rule with `:where()` can win where it would not in a newer browser.
 
 ## Dictionary exporters
 

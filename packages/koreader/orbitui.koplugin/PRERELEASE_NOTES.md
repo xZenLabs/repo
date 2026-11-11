@@ -1,3 +1,24 @@
+# v1.2.0-beta.4 · 2026-11-11
+
+## Home
+
+- The straight cover row has clearer card borders, an aligned greeting and date, larger add and search icons, and a stronger divider below the book progress labels.
+- Want to read and Recently added each have their own card and pager. Their cover stacks are larger, with more room for the covers above each label and arrow.
+- The reading streak and Monday–Sunday reading chart sit beside the reading goal. They use KOReader's local statistics and are available in English and Swedish.
+- The Silverfish companion and its details make better use of the space beside the current book.
+
+## SimpleUI 3.0.3 integration
+
+- Copy visibility settings for shared File Manager and Reader menu items.
+- See a folder's name on its File Manager placeholder when no cover is available.
+- Tiny Critter has updated bubble tails and shadows.
+
+## Testing
+
+The Home layout and both shelf pagers were checked on a Bigme. One Recently added cover briefly used a placeholder after paging and returned after restarting KOReader. The combined release was checked with local tests and upgrade checks.
+
+Choose the **preview** channel in OrbitUI's updater to install this beta. The **stable** channel offers 1.1.0.
+
 # v1.2.0-beta.3 · 2026-11-11
 
 ## What’s new
@@ -116,21 +137,3 @@ Recompose **Currently reading + Silverfish**: full-height companion left, vertic
 Continue reading, saved placements and Silverfish data/progression are unchanged. Requires separately installed/enabled public Silverfish 2.0.0; no fork or copied artwork. No new upstream/component/pin/art/API/server/device changes. Stable/latest 1.0 and earlier releases remain unchanged. Physical Bigme/full-plugin acceptance remains pending.
 
 Download **orbitui.koplugin.zip**, not GitHub's source archive. Existing migration and dashboard downgrade limits apply: see docs/OTA.md and docs/MIGRATION.md.
-
-# v1.1.0-beta.11 · 2026-11-08
-
-## Reading companion fix
-
-Fixes the missing cat/silverfish in **Currently reading + Silverfish**. OrbitUI incorrectly rejected KOReader's normal event wrapper as an unsupported plugin API; the wrapper is now accepted without bypassing its error boundary. Public Silverfish **2.0.0** and the existing version/state/species checks are still required.
-
-Text now follows screen density and available width rather than shrinking with a shallow row. The cover/book use the full inner height, the companion has its own name/stage column, and long titles truncate within compact cards. **Continue reading, saved placements and Silverfish's files/saves are unchanged.** No fork, copied artwork or duplicate pet progression.
-
-## Svenska
-
-Rättar den saknade katten/silverfisken i **Läser just nu + Silverfish** och den pyttelilla texten i breda, låga kort. Texten får läsbar storlek och omslaget mer höjd. Långa titlar kortas i stället för att krympas. **Fortsätt läsa och dina placeringar lämnas orörda.** Silverfish 2.0.0 behöver vara separat installerat och aktiverat; inga sparfiler ändras.
-
-## Update and scope
-
-Update through OrbitUI's **preview** channel and restart KOReader. For manual installation use **orbitui.koplugin.zip**, not GitHub's source-code archive. Back up settings and reading data separately: code rollback does not restore those or third-party data. Dashboard v2/v3 downgrade limits still apply.
-
-This is a prerelease. Automated tests include KOReader's native minimum/current sandbox and font code, and Silverfish's real frozen renderer; they do not establish physical Bigme font/layout/touch/night/colour/wake/rotation or complete external-plugin acceptance. Those checks remain pending. No new upstream/component/pin/artwork/bootstrap/API1, independent catalog, device or BookOrbit-server deployment. Stable/latest 1.0 remains unchanged; the 2,000-file limit is preserved.

@@ -1,3 +1,18 @@
+# v0.4.2 · 2026-11-11
+
+## Changed
+
+- Kindle: entries are now laid out with the Kindle's own browser by default, so they look as their dictionary intends, with vertical text and the dictionary's scripts. The option, *Settings → MDict dictionaries → Display → Render entries with the Kindle's browser*, is no longer marked experimental; turn it off to go back to KOReader's renderer. It needs firmware 5.16 to 5.18. Kindles that cannot run the browser (other firmware, Amazon's software stopped, too little free memory) keep using KOReader's renderer without a notification; *Kindle browser check* says why. The first lookup after KOReader starts takes about 20 seconds while the browser starts. (#1)
+
+## Fixed
+
+- Kindle, and Android WebViews before Chromium 88: CSS rules that use `:is()`, `:where()` or `:not()` with a list now apply. These browsers dropped such rules, so some dictionaries lost much of their styling (in some Japanese dictionaries, marks were drawn far too large). The plugin writes these selectors out as the plain selectors they stand for, in a copy of the stylesheet saved with the extracted resources. Rules that need `:has()` still do not apply on the Kindle.
+
+## Install
+
+- From 0.2.0: *Search → Settings → MDict dictionaries → Updates → Check for updates*, or wait for the automatic offer. Then restart KOReader (on Android, exit KOReader and open it again).
+- From 0.1.0: unzip `mdict.koplugin-0.4.2.zip` into `koreader/plugins/`, replacing the `mdict.koplugin` folder, and restart KOReader.
+
 # v0.4.1 · 2026-11-11
 
 ## Fixed
@@ -77,15 +92,3 @@ See *Dictionary exporters* in the README for details.
 
 - From 0.2.0: *Search → Settings → MDict dictionaries → Updates → Check for updates*, or wait for the automatic offer. Then restart KOReader (on Android, exit KOReader and open it again).
 - From 0.1.0: unzip `mdict.koplugin-0.2.11.zip` into `koreader/plugins/`, replacing the `mdict.koplugin` folder, and restart KOReader.
-
-# v0.2.10 · 2026-11-07
-
-## Changed
-
-- An audio player in an entry now shows that it is playing: a tap on it turns its play button into a stop button, and its time and progress bar follow the recording (on e-ink, only the player's area is refreshed, once a second). A tap on the stop button stops the recording.
-- A recording played from a result stops when you move to another result, look a word up from it, or close the popup. This applies to speaker icons as well as players.
-
-## Install
-
-- From 0.2.0: *Search → Settings → MDict dictionaries → Updates → Check for updates*, or wait for the automatic offer. Then restart KOReader (on Android, exit KOReader and open it again).
-- From 0.1.0: unzip `mdict.koplugin-0.2.10.zip` into `koreader/plugins/`, replacing the `mdict.koplugin` folder, and restart KOReader.
