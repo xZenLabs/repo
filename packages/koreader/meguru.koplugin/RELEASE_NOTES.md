@@ -1,11 +1,10 @@
 # v1.8.5 · 2026-11-11
 
-### Fixed
+## Fixed
 
-- Page turns no longer stop working with ZenOS enabled.
-- "In landscape" two-page view now works on tablets whose natural orientation is landscape (rotation mode 0).
-- Two-page view no longer adds white bands above and below the pages when crop auto and flexible gutter crop the two pages differently.
-- Local `.cbz` covers come from MuPDF page 1 again, the same page the reader opens.
+- Page turning works with Zen UI again.
+- The "In landscape" two-page view now works on tablets that are landscape by default (rotation mode 0).
+- Two-page view no longer shows white bands above and below the pages when auto crop and flexible gutter crop cut the two pages differently.
 
 **Full Changelog**: https://github.com/Craftwork2720/meguru/compare/v1.8.3...v1.8.5
 
