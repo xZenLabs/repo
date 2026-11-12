@@ -1,3 +1,26 @@
+# v1.2.0 · 2026-11-12
+
+OrbitUI 1.2 brings a cover-first Home layout, a cleaner book overview and more ways to move between your books from inside the reader. The [README](https://github.com/komadorirobin/orbitui.koplugin#readme) shows the new views on a Bigme B7 Pro.
+
+### Home and library
+
+- The setup guide now offers **Reading dashboard → Straight cover row**. See reading progress under each cover, then browse separate **Want to read** and **Recently added** stacks. Reading streak, weekly activity and goal cards fit on the same page. Existing layouts are preserved.
+- Open the airy book overview for the cover, synopsis and EPUB tags. The **•••** menu leads to the full Bookshelf actions. Search, tag results, module settings and shelf editing also have updated layouts.
+- Find similar books from local EPUB tags, or put **Next in series** on Home. An optional local finish forecast uses your reading history.
+- Home and Bookshelf share **Soften wallpaper**, enabled by default. The optional alphabet strip has a transparent background, with a solid background available per view.
+
+### In the reader
+
+- The OrbitUI bottom panel offers book tools, reading-time estimates and **Also reading**. **Reading settings…** opens KOReader’s own controls. You can switch back to KOReader’s bottom menu in OrbitUI settings.
+- Pin pages, excerpts and images for the current book. Installed X-Ray or KOAssistant plugins can optionally appear in the panel.
+- Estimated time left also appears in the supported Home cards when there is enough reading data.
+
+### Installation
+
+Includes the reviewed Bookshelf 6.4.2 and SimpleUI updates and a redesigned OrbitUI updater. Existing users can choose **stable** in **Update OrbitUI** and restart. For a manual install, use **orbitui.koplugin.zip** below. Keep KOReader’s Cover browser enabled and disable standalone SimpleUI and Bookshelf before activating OrbitUI.
+
+[Installation and migration](https://github.com/komadorirobin/orbitui.koplugin#installation) · [Feature guide](https://github.com/komadorirobin/orbitui.koplugin/blob/main/docs/FEATURES.md)
+
 # v1.1.0 · 2026-11-09
 
 ## Svenska — stabil 1.1

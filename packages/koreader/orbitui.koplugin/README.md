@@ -11,17 +11,15 @@ Their code, interfaces and features are OrbitUI's foundation, not just
 inspiration. OrbitUI adds a shared workflow and its own optional features on
 top. Please support and credit the original creators.
 
-**[Download stable 1.1.0](https://github.com/komadorirobin/orbitui.koplugin/releases/tag/v1.1.0)**
+**[Download OrbitUI 1.2.0](https://github.com/komadorirobin/orbitui.koplugin/releases/tag/v1.2.0)**
 | [Installation](#installation)
 | [What OrbitUI adds](#what-orbitui-adds)
 | [Feature guide](docs/FEATURES.md)
 | [Report a problem](https://github.com/komadorirobin/orbitui.koplugin/issues)
 
-**Trying the next version?** [1.2.0-beta.4](https://github.com/komadorirobin/orbitui.koplugin/releases/tag/v1.2.0-beta.4)
-refines the Straight cover row dashboard with larger cover stacks, a reading
-streak and a weekly reading chart. The preview also includes the airy book
-information page, updated search and tag results, and reading time estimates
-in the reader panel. **1.1.0 remains the stable release**.
+**New in 1.2:** A cover-first Reading dashboard, an airy book overview and a
+reader panel with book tools and other books in progress. Search for similar
+books by local EPUB tags and bring the next volume in a series to Home.
 
 > **OrbitUI replaces the standalone SimpleUI and Bookshelf plugins.**
 > Neither is required separately. If either is installed, disable it and restart
@@ -32,11 +30,17 @@ in the reader panel. **1.1.0 remains the stable release**.
 
 | Reading dashboard | Book shelves | Manga series |
 | --- | --- | --- |
-| [![Reading dashboard with reading progress, goals and paginated book rows](docs/screenshots/reading-dashboard.jpg)](docs/screenshots/reading-dashboard.jpg) | [![Physical bookshelf view with book covers and a framed-print ornament](docs/screenshots/book-shelves.jpg)](docs/screenshots/book-shelves.jpg) | [![Manga series boxes with MAL ratings, read-volume counts and an ornament](docs/screenshots/manga-series.jpg)](docs/screenshots/manga-series.jpg) |
+| [![Reading dashboard with cover rows, Silverfish, a streak and weekly reading stats](docs/screenshots/reading-dashboard.jpg)](docs/screenshots/reading-dashboard.jpg) | [![Fiction shelf with Record of a Night Too Brief by Hiromi Kawakami in the book panel](docs/screenshots/book-shelves.jpg)](docs/screenshots/book-shelves.jpg) | [![Manga series boxes with volume counts, ratings and a transparent alphabet strip](docs/screenshots/manga-series.jpg)](docs/screenshots/manga-series.jpg) |
 
-Click a screenshot to view it full-size. These show a **customized setup**, not
-a fixed default. Choose your own sections, wallpaper, navigation and layout.
-Ornaments are optional add-ons; manga ratings use the separate
+| Book overview | Library search | Reader panel |
+| --- | --- | --- |
+| [![Book overview with the cover and English synopsis for Record of a Night Too Brief](docs/screenshots/book-overview.jpg)](docs/screenshots/book-overview.jpg) | [![Search OrbitUI showing a result for Record of a Night Too Brief](docs/screenshots/library-search.jpg)](docs/screenshots/library-search.jpg) | [![OrbitUI reader panel with book tools and a shortcut to KOReader reading settings](docs/screenshots/reader-panel.jpg)](docs/screenshots/reader-panel.jpg) |
+
+Click a screenshot to view it full-size. See also the
+[book actions](docs/screenshots/book-actions.jpg) and
+[module picker](docs/screenshots/module-picker.jpg). These screenshots were taken in
+KOReader on a Bigme B7 Pro with customized shelves and wallpaper. Silverfish,
+ornaments and manga ratings are optional. Manga ratings use the separate
 [MyAnimeList Manga Sync plugin](https://github.com/komadorirobin/myanimelist.koplugin).
 
 ## What OrbitUI adds
@@ -82,7 +86,7 @@ These are OrbitUI additions and integration choices, not a claim that OrbitUI
 invented modular Home screens, shelves, series boxes, themes or ornaments.
 [The feature guide](docs/FEATURES.md) explains the controls and their boundaries.
 
-The reader panel is enabled by default in the preview. Use **Reading settings…**
+The reader panel is enabled by default. Use **Reading settings…**
 to reach KOReader's original margins/fonts menu, or disable **Use OrbitUI as the
 bottom menu** under **OrbitUI settings → Integrations → Reader panel & X-Ray**.
 X-Ray/KOAssistant remain separate optional plugins; opening the panel does not
@@ -162,8 +166,9 @@ the network as you type; cold-cache coverage can be incomplete.
 The optional per-view **Alphabet strip** lets you tap or drag through the
 current supported sort/filter. It uses spare right-margin space and keeps
 Å/Ä/Ö distinct. Enable it through **footer counter ▾ → Sort, filter & view →
-Alphabet strip**. Unsupported layouts/sorts hide it rather than jumping to
-unrelated books. Both the strip and word suggestions are off by default.
+Alphabet strip**. Turn on **Solid background for alphabet strip** in the same menu
+if the letters need more contrast. The strip itself and word suggestions are
+off by default, and unsupported views hide the strip.
 
 ## BookOrbit, when you want it
 
@@ -212,7 +217,9 @@ ornaments. Presets do not reset Home, wallpaper, icons or saved shelf choices.
 Configure per-shelf cover size, captions/placement, book binding and series
 title plates. Bindings include Hardcover, Paperback and Kanzenban/large format;
 series-specific overrides and naturally sized spines preserve cover proportions.
-These are visual treatments, not changes to book metadata.
+These are visual treatments, not changes to book metadata. Home and Bookshelf
+share the **Soften wallpaper** setting. Turn it off in either wallpaper menu
+if you want to keep the image at full strength.
 
 Optional **MyAnimeList** integration adds cached community ratings to linked
 manga boxes. Shared icon pickers add Material Symbols Rounded, Solar and Tabler
@@ -244,7 +251,7 @@ recommended by Bookshelf. Keep KOReader's **Cover browser** plugin enabled.
 2. Disable standalone **SimpleUI and Bookshelf**, if installed, and restart
    KOReader. Keep their files and settings for rollback.
 3. Download **`orbitui.koplugin.zip`** from the
-   [stable 1.1.0 release](https://github.com/komadorirobin/orbitui.koplugin/releases/tag/v1.1.0).
+   [stable 1.2.0 release](https://github.com/komadorirobin/orbitui.koplugin/releases/tag/v1.2.0).
    Do not use **Code → Download ZIP**, **Source code**, checksum files or an
    ornament-only release.
 4. Fully exit KOReader. Extract the ZIP and copy **`orbitui.koplugin`** into
@@ -265,7 +272,7 @@ Use your actual KOReader installation's location. The result must be
 **`plugins/orbitui.koplugin/main.lua`**, not a doubly nested folder. Do not
 install the folders under `components/` as separate plugins.
 
-**Already using OrbitUI?** Its **Uppdatera OrbitUI** menu is the recommended
+**Already using OrbitUI?** Its **Update OrbitUI** menu is the recommended
 update path. Choose **stable** for releases or opt into **preview** for betas,
 update, then restart. Embedded SimpleUI/Bookshelf never update independently.
 Updates verify the full package and support restart activation/code rollback;
@@ -289,7 +296,7 @@ disable OrbitUI and restart before re-enabling the old plugins. Never run both.
 ### Community app stores
 
 Independent stores can find **`komadorirobin/orbitui.koplugin`**. Choose the
-**v1.1.0** release and **`orbitui.koplugin.zip`**, not a repository/source ZIP
+**v1.2.0** release and **`orbitui.koplugin.zip`**, not a repository/source ZIP
 or an add-on release. Their listing is not an endorsement or compatibility
 certification; refresh a stale catalog or install manually.
 
@@ -301,22 +308,20 @@ installation. For subsequent updates, prefer OrbitUI's own updater; consult
 [external-update recovery](docs/OTA.md#external-updates-beta-2-and-later) before
 manually overwriting an existing OTA installation.
 
-## Stable 1.1 and what's next
+## OrbitUI 1.2
 
-**1.1.0** promotes the user-accepted beta.12 runtime unchanged. Its highlights
-include series-level tag results, the alphabet strip, optional word suggestions,
-cover reuse, plugin/module-library support, BookOrbit shelf/smartscope cards and
-Currently reading + Silverfish. Continue reading, saved placements and data stay
-intact. Bookshelf 6.4 changes belong to the separate **1.2 preview cycle**, not
-the frozen 1.1 release. [Release notes and history](docs/OTA.md#orbitui-110).
+The first-run setup offers **Reading dashboard → Straight cover row**. This
+release also brings the new reader panel, pinned reading references, local
+similar-book and next-volume discovery, optional reading forecasts, and a
+single update panel for OrbitUI. Bookshelf 6.4.2 and SimpleUI maintenance are
+included. Existing dashboard layouts, shelf settings and reading progress
+carry over. [Release notes and history](docs/OTA.md#orbitui-120).
 
-**Svenska:** OrbitUI samlar Hem och bokhyllan i ett plugin, med bland annat
-Läsöversikt, egna bibliotekssektioner, lokala taggar/smarta taggchip, Serier/
-Volymer, bokstavslist, valfria pluginmoduler och Läser just nu + Silverfish.
-BookOrbit är frivilligt: Vill läsa [Lokalt] och Vill läsa [BookOrbit] är skilda
-källor, och hyllor/smartscopes kan visas som egna kort. Vissa onlinefunktioner
-kräver separata tillägg; vanliga lokala böcker och EPUB-taggar gör det inte.
-Stabil 1.1 behåller den godkända beta.12-koden. Upstream-nyheter provas i 1.2-beta.
+**Svenska:** OrbitUI samlar Hem och bokhyllan i ett plugin. Nytt i 1.2 är
+läsöversikten med rak omslagsrad, en luftigare bokinfosida och en läsarpanel
+med lästid, bokverktyg och pågående böcker. Du kan hitta liknande böcker
+med lokala EPUB-taggar eller lägga nästa volym i serien på Hem. BookOrbit,
+Silverfish och mangaomdömen är valfria.
 
 Automated Lua/LuaJIT, native-fixture, packaging and update/rollback checks
 complement user testing. Stable does not certify every device, third-party
