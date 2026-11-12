@@ -1,3 +1,8 @@
+# v1.4.2 · 2026-11-12
+
+
+- Covers of PDFs, CBZs and other books without a title in their metadata now show up, found by file name. Before, those books got a generated cover.
+
 # v1.4.1 · 2026-11-10
 
 
@@ -22,13 +27,3 @@
 - On color e-ink, cards use the color modes of the screen, the same KOReader uses for covers.
 - Texts on the share page and screen say "e-reader" instead of "Kindle".
 - On the summary card, "Author" and "Month" are now "Top author" and "Best month".
-
-# v1.2.0 · 2026-11-06
-
-
-- Three themes: gray for black and white screens, a palette tuned for color e-ink, and a vibrant one for phones. Your device picks its own.
-- Every card now has its own background, with shapes that fit its subject: stars, clouds, pages, hills. All themes share the same art.
-- The hours card changes with your favorite time of day: morning and afternoon have the sun instead of the moon.
-- **Share** replaces **Save Images**. It shows a QR code, and a browser on the same Wi-Fi network gets your recap, with moving backgrounds and a choice of theme. Saved images come in story size, 1080x1920. Nothing is stored on the e-reader anymore, and images saved by older versions stay where they are.
-- New drawings for book spines and generated covers. The summary card carries a Book Rewind seal, and the warranty line on the About card is clearer.
-- Fixed the sand of the hourglass, which crossed the glass, and the checkered flag of the Marathoner, which now has true squares.
