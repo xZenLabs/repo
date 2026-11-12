@@ -1,3 +1,23 @@
+# v2.0.1 · 2026-11-12
+
+If you have existing book notes, re-exporting the current book or running a library re-export is recommended to apply the new tag splitting rules and unbreakable badge formatting to your index and frontmatter.
+
+Improvement
+
+• Unbreakable tag badges across all index views: every tag pill in the index table is now rendered as a protected inline block (white-space: nowrap). Hyphenated subjects like #Horror-tales or #Psychological-fiction never break across lines mid-word, preserving clean spacing across Tags below title, Tags column, and Compact layouts.
+• Intelligent tag and conjunction splitting: subjects containing conjunctions ("and", "AND", "&") or Calibre hierarchical facets ("--") are now automatically separated into distinct, individual tags with proper first-letter capitalization (e.g. Detective and mystery stories becomes #Detective and #Mystery-stories).
+• Direct metadata keyword parsing: raw EPUB and Calibre subject metadata is passed directly to the tag normalization pipeline without preliminary space-to-hyphen replacement, preserving full compound phrases for intelligent splitting.
+• Smooth format transitions: switching between Markdown (.md) and Plain Text (.txt) automatically manages note visibility, safely backing up inactive notes as .bak files and restoring them when switching back without cluttering the active vault.
+
+Fix
+
+• Clean frontmatter tag removal: disabling book metadata tags cleanly strips the tomedown_book_tags key from frontmatter instead of leaving orphaned keys.
+• Test suite verification: all 2,012 automated assertions passing across 8 test suites on Lua 5.4, LuaJIT, and Kindle luac5.1 bytecode compiler.
+
+Install it from Check for updates inside the plugin, or download the zip below.
+
+Full Changelog: https://github.com/imanubdesigner/tomedown.koplugin/compare/v2.0.0...v2.0.1
+
 # v2.0.0 · 2026-11-11
 
 New
@@ -85,16 +105,3 @@ Install it from Check for updates, or the zip below.
 - The workflows are linted in CI with actionlint, and the release zip is built by a script that checks its exact contents against an allowlist, so docs and banners cannot come back.
 
 Install it from Check for updates, or the zip below.
-
-# v1.1.3 · 2026-11-01
-
-- Updates unpack into a new folder first, check it, and only then replace the installed one. A failed download, unpack or check leaves your current version untouched.
-- The check looks for main.lua and _meta.lua, compiles every Lua module, and compares the version inside with the release.
-- The old folder stays as tomedown.koplugin.previous until the next update, and files that the new version no longer ships go away with it.
-- An archive entry that points outside the plugin folder is refused, and the update stops before it can touch the installed copy.
-- The curl fallbacks quote the address and accept only https addresses with safe characters.
-- Release notes and the changelog are plain text from this version on, so the layout is the same on every device.
-- The About window now shows the licence, GNU Affero General Public License v3.0.
-- The test suite runs on LuaJIT, the interpreter KOReader ships, as well as on Lua 5.4.
-
-Coming from 1.1.2 or earlier, this release is installed by the previous updater; the new install steps start with the next update.

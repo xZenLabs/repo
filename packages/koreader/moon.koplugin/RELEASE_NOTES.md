@@ -1,3 +1,37 @@
+# v0.5.12 · 2026-11-12
+
+## 月读 v0.5.12
+
+KOReader 插件包：`book.koplugin-v0.5.12.zip`
+
+输入法词库（整库，手动 sideload）：`dictionary.sqlite3 dictionary-wubi.sqlite3 dictionary-cangjie.sqlite3 dictionary-zhuyin.sqlite3`
+
+安装：解压后将 `book.koplugin` 复制到 `koreader/plugins/`，然后重启。
+
+词库 sideload：下载对应布局的词库，直接放入 `koreader/.moon/`
+（与 `book.sqlite3` 同级）。附件已使用最终文件名，无需重命名。
+
+### 更新内容
+
+相对上一版本 `v0.5.11`：
+
+#### 新功能
+
+- :sparkles: (share): 支持把划词和高亮生成书摘图片 (02cc33a8)
+
+#### 修复
+
+- :bug: (webdav): 强制逐目录核对并保护书目 (1c0aeeb8)
+- :bug: (core): 修复审计发现的笔记、漫画和书摘问题 (57545c9a)
+- :bug: (comic): 打包时按屏宽缩小并切片过高的漫画页 (74cb2aca)
+- :bug: (reader): 读完软删除等关书后再提示并设置超时 (f6a317b2)
+- :bug: (wechat): 任意路径的脚注 note.png 都回退到自带注标 (d2e7c57b)
+- :bug: (local): 换书库目录或搬书时按 md5 保留阅读记录 (6f396fb1)
+
+### 完整对比
+
+https://github.com/AnkioTomas/moon/compare/v0.5.11...v0.5.12
+
 # v0.5.11 · 2026-11-11
 
 ## 月读 v0.5.11
@@ -150,43 +184,3 @@ KOReader 插件包：`book.koplugin-v0.5.8.zip`
 ### 完整对比
 
 https://github.com/AnkioTomas/moon/compare/v0.5.7...v0.5.8
-
-# v0.5.7 · 2026-11-10
-
-## 月读 v0.5.7
-
-KOReader 插件包：`book.koplugin-v0.5.7.zip`
-
-输入法词库（整库，手动 sideload）：`dictionary.sqlite3 dictionary-wubi.sqlite3 dictionary-cangjie.sqlite3 dictionary-zhuyin.sqlite3`
-
-安装：解压后将 `book.koplugin` 复制到 `koreader/plugins/`，然后重启。
-
-词库 sideload：下载对应布局的词库，直接放入 `koreader/.moon/`
-（与 `book.sqlite3` 同级）。附件已使用最终文件名，无需重命名。
-
-### 更新内容
-
-相对上一版本 `v0.5.6`：
-
-#### 新功能
-
-- :sparkles: (library): 详情页按文件后缀显示 WebDAV 书籍格式 (a7f703e3)
-
-#### 修复
-
-- :bug: (store): OPDS 源打开即拉根目录，不再只能搜索 (a994fc66)
-- :bug: (wechat): 规范 xpointer 路径，映射失败时按章内比例上报进度 (30c3824a)
-
-#### 性能
-
-- :zap: (webdav): 优化硬刷新列目录并发与深度列表 (42520024)
-- :zap: (wechat): 章节下载改为官方五章一批，缓存全书走 offline=1 (f2f0b761)
-
-#### 重构
-
-- :recycle: (reader): 抽取章节缓存至共享模块并注册快捷面板动作 (ff22e41e)
-- :recycle: (reader): 抽取章节缓存至共享模块并注册快捷面板动作 (7f6a875d)
-
-### 完整对比
-
-https://github.com/AnkioTomas/moon/compare/v0.5.6...v0.5.7
