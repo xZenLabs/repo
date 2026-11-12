@@ -1,3 +1,23 @@
+# v0.7.2 · 2026-11-12
+
+Fixes valid audiobook parts being reported as incomplete, including failures during **Download all**. Resolves [#1](https://github.com/kolibby/KOLibby.koplugin/issues/1).
+
+Some complete MP3 responses have different byte counts from the publication manifest. KOLibby now validates the actual transfer instead of requiring an exact match to that estimate.
+
+- Preserve HTTP transfer, MP3 frame and duration validation, and existing size limits.
+- Record actual part sizes so interrupted downloads can reuse matching cached parts.
+- Update progress totals to reflect actual downloaded sizes.
+
+Validated with 223 portable tests, including a three-audiobook batch, resume and cache compatibility, and rejection of incomplete transfers or audio. Previously failing parts were also replayed successfully through validation and MP3 assembly, with independent size/duration checks.
+
+### Install and retry
+
+Use **Tools → KOLibby → Settings → Check for updates**, or extract **KOLibby-0.7.2.zip** below into KOReader's `plugins` folder, replacing the existing `KOLibby.koplugin` folder. Restart KOReader afterward, then run **Download all** again to retry unfinished loans.
+
+Completed downloads are skipped, and matching cached parts are reused. Your Libby connection, settings and downloaded books are preserved.
+
+Use the attached plugin ZIP; GitHub's automatic source archives are for development.
+
 # v0.7.1 · 2026-11-09
 
 Fixes a setup-code failure on Kindle and other installations where another KOReader plugin has already declared zlib's decompression functions.
@@ -71,22 +91,3 @@ If KOLibby is missing from your menu, download **KOLibby-0.6.3.zip** below, extr
 If your KOLibby menu already works, use **Tools → KOLibby → Settings → Check for updates**.
 
 Use the plugin ZIP attached below; GitHub's automatic source archives are for development.
-
-# v0.6.2 · 2026-11-07
-
-KOLibby is a KOReader companion to the official Libby web, iOS and Android apps.
-
-- Connect through Libby's device-copy flow and synchronize multiple library cards, loans and holds.
-- Browse loans and holds with cover art, metadata and due dates.
-- Download eligible ebooks as EPUBs and compatible audiobooks as a single MP3 with ID3v2.3 chapters, without re-encoding the audio.
-- Use **Loans → Download all** to download eligible loans while skipping completed checkouts. Card-filtered Loans views limit the action to that card.
-- Identify partner-library cards and their home card when that relationship is available.
-- Borrow available holds and check for plugin updates from Settings.
-
-### Install
-
-Use **KOReader 2026.07.1 or newer**. Download `KOLibby-0.6.2.zip` below and extract it into KOReader's plugins directory so the path is `plugins/KOLibby.koplugin/main.lua`. Restart KOReader, then open **Tools → KOLibby**.
-
-Android is the first tested platform. Kobo and Kindle still need hardware validation. Some fixed-layout EPUBs may not render correctly in KOReader, and PDF downloads are not supported.
-
-See the [README](https://github.com/kolibby/KOLibby.koplugin/blob/v0.6.2/README.md) for setup and usage. A SHA-256 sidecar is provided for manual download verification.
