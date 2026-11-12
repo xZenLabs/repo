@@ -1,3 +1,20 @@
+# v4.3.2 · 2026-11-12
+
+## What's Changed
+
+- Add reflow option to PDF layout settings in reader controls
+- Set left and right margins independently (Sync in the Left/Right margin menu)
+- Tap a theme preview in reader controls to select it
+- Add note button to new selection highlight menu
+- Choose what single and double tap do on a book, e.g. tap to open and double tap for the context menu
+- Table of contents folds subchapters under their chapter like KOReader's; the chapter being read starts unfolded
+- Option to show chapter page counts in the table of contents (Reader > Table of contents)
+- Fix: swiping in page browser chapters and bookmarks skipped every other page
+- Fix: accent color inverted on round buttons and corners in night mode on Android
+- Fix: highlight menu More button did nothing with plugins that wrap the highlight menu, e.g. X-Ray
+- Fix: entire page/chapter being highlighted when navigating with internal book links
+- Fix: blurred menu background left a blank strip at the bottom
+
 # v4.3.1 · 2026-11-09
 
 ## What's Changed
@@ -55,18 +72,3 @@
 - Fix reader settings not loading when starting with last file
 - Fix Airplane Mode control active state
 - Bug fixes
-
-# v4.0.1 · 2026-10-03
-
-## What's Changed
-
-- Add option to align Reader Status Bars with book margins
-- Add Navbar active tab filled option
-- Improve rendering, ghosting, and dark mode on color e-ink
-- Fix Pocketbook Wi-Fi toggling on
-- Fix stale navbar after disabling wallpaper
-- Fix KLC flashing when wallpaper enabled
-- Fix themed reader status bar backgrounds after waking on Colorsoft
-- Fix Android reader bottom status bar painting over the page browser
-- Fix History gestures not working
-- Fix rare bug in autoresume on kindle after deep sleep
