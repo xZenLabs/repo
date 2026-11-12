@@ -1,0 +1,23 @@
+# Murdoku plugin for KOReader
+# https://github.com/ratherDashing/murdoku.koplugin
+# zenpm:auto-scraped
+id=murdoku
+name=Murdoku
+version=1.3.0
+description=Unofficial KOReader plugin to play the free Murdoku logic-mystery cases on e-readers. Touch controls, offline play. Not affiliated with Murdoku.
+author=ratherDashing
+category=games
+platforms=koreader
+dependencies=
+source=https://github.com/ratherDashing/murdoku.koplugin
+stars=5
+updated_at=2026-11-12T19:01:01Z
+published_at=2026-11-09T01:53:47Z
+readme_url=packages/koreader/murdoku.koplugin/README.md
+readme_hash=223482551470c479b9d9c20f1680b4bdb5098607
+release_notes_url=packages/koreader/murdoku.koplugin/RELEASE_NOTES.md
+release_notes_hash=f4ef67ba7f8f6716493cc9f7d28304fb57b85c9a92e9334d862e7f7dcade0e4b
+releases=[{"tag_name":"v1.3.0","assets":[{"name":"murdoku.koplugin.zip","url":"https://github.com/ratherDashing/murdoku.koplugin/releases/download/v1.3.0/murdoku.koplugin.zip","size":582155,"digest":"sha256:b6deefd6826256ba667a86d03bc66982426dbafdef940bd03ea1830ce9ef15cd"}],"name":"v1.3.0: new look, new controls, new Originals"},{"tag_name":"v1.1.0","assets":[{"name":"murdoku.koplugin.zip","url":"https://github.com/ratherDashing/murdoku.koplugin/releases/download/v1.1.0/murdoku.koplugin.zip","size":25572,"digest":"sha256:9d8495e5d6492b137dab669b46af8170693ad14a4ac6df272ab6cdb7970e66c3"}],"name":"v1.1.0"}]
+source_type=release
+source_asset=murdoku.koplugin.zip
+size=582155
