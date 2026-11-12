@@ -46,11 +46,11 @@
 - **Your choice on opening:** the first page asks whether to play online or offline, and Lichess is only contacted if you choose online. The time and the battery stay at the bottom of every screen.
 - **Play:** find an opponent in rapid and classical, by correspondence, challenge a friend (blitz or no time limit too) or play the Lichess computer. In a challenge, you can pick your color. The challenges you sent wait beside the ones you received, and you can cancel them.
 - **Several games at once:** the list shows whose turn it is, with the games waiting for you on top. It refreshes at the interval you choose.
-- **During a game:** clocks, promotion, draw offers and draws by repetition, asking for a takeback, giving time, resigning and canceling. The list of moves is one tap away, here and in the other modes. When the game ends, play again. A dropped connection comes back by itself.
-- **Puzzles:** a pile stays on the device to solve without internet, and results go to Lichess when the Wi-Fi returns. Also puzzles by theme, your results and the daily puzzle. You can also review the puzzles you missed in the last 30 days, including the ones missed on the site.
+- **During a game:** clocks, promotion, draw offers and draws by repetition, asking for a takeback, giving time, resigning and canceling. The list of moves is one tap away, here and in the other modes, and starts with the name of the opening, even without internet (in a Lichess game, once it is over). When the game ends, play again. A dropped connection comes back by itself.
+- **Puzzles:** a pile stays on the device to solve without internet, and results go to Lichess when the Wi-Fi returns. Also puzzles by theme, your results and the daily puzzle, and you can choose the difficulty, compared with your puzzle rating, and the color you play. You can also review the puzzles you missed in the last 30 days, including the ones missed on the site.
 - **Review:** your past games and favorites, move by move, with what Lichess knows about each position: its evaluation, the most played moves and, near the end, the perfect result.
 - **Players:** search by name, see who you follow is online, profiles, a rating chart with statistics, and your record against someone.
-- **Without internet:** play a small engine that never freezes the screen, with your choice of color, undo and hints, and continue the game later. Or play against someone else on the same device.
+- **Without internet:** play a small engine that never freezes the screen, with your choice of color, undo and hints, and continue the game later. Or play against someone else on the same device, with a clock if you like, or solve the 5000 puzzles that come with the plugin, no account needed, at the difficulty you choose. Set up any position in the editor and play from it. For beginners, Learn chess has the 18 stages of the Lichess app, from how each piece moves to checkmate, with stars to collect. There is also coordinate training: find the square named, or name the square marked, against the clock. And a chess clock for a game on a real board, with the device lying between the players. Your correspondence games stay on the device too: you can look at them and make your move with the Wi-Fi off, and it goes to Lichess the next time you play online, if the game is still where you left it.
 - **Your board:** five board styles, including the hatched squares of printed diagrams, three piece sets and coordinates on the edges.
 - **Sleep screen:** if the device sleeps with Ink Knight open, it shows the Ink Knight cover instead of the book cover. This applies when the KOReader sleep screen is set to show the book cover.
 
@@ -59,6 +59,8 @@
 1. Download `ink_knight.koplugin.zip` from the [latest release](https://github.com/beater-studios/ink_knight.koplugin/releases/latest).
 2. Extract it into `koreader/plugins/`, so that `koreader/plugins/ink_knight.koplugin/main.lua` exists.
 3. Restart KOReader. The plugin is in the Tools menu, as **Ink Knight**.
+
+The release has two more packages with the same plugin and more puzzles to solve offline: `ink_knight-20000-puzzles.koplugin.zip` (about 1.2 MB) and `ink_knight-50000-puzzles.koplugin.zip` (about 2.5 MB), against 5000 puzzles in the usual one. To change, extract another over the installed folder; your progress is kept.
 
 The language follows KOReader's: English, Portuguese or Spanish. In any other language, it uses English.
 
@@ -121,7 +123,7 @@ The design, the tools and the release process are described in [docs/design.md](
 
 [GPL-3.0](LICENSE), version 3 only. You may use, study, modify and redistribute it, keeping it open under the same license.
 
-Lichess is a trademark of its owners, and this license grants no rights to it or to the names "Ink Knight" and "Beater Studios". See [NOTICE](NOTICE). The classic pieces are drawn from the FreeSerif font that comes with KOReader, and the Cburnett and Merida pieces are by Colin M.L. Burnett and Armando Hernandez Marroquin, under GPLv2 or later.
+Lichess is a trademark of its owners, and this license grants no rights to it or to the names "Ink Knight" and "Beater Studios". See [NOTICE](NOTICE). The classic pieces are drawn from the FreeSerif font that comes with KOReader, and the Cburnett and Merida pieces are by Colin M.L. Burnett and Armando Hernandez Marroquin, under GPLv2 or later. The names of the openings and the included puzzles come from the open Lichess data, in the public domain (CC0), and the lessons of Learn chess and their texts from the official Lichess app, under GPL-3.0.
 
 ---
 
