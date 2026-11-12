@@ -1,3 +1,32 @@
+# v0.5.13 · 2026-11-12
+
+## 月读 v0.5.13
+
+KOReader 插件包：`book.koplugin-v0.5.13.zip`
+
+输入法词库（整库，手动 sideload）：`dictionary.sqlite3 dictionary-wubi.sqlite3 dictionary-cangjie.sqlite3 dictionary-zhuyin.sqlite3`
+
+安装：解压后将 `book.koplugin` 复制到 `koreader/plugins/`，然后重启。
+
+词库 sideload：下载对应布局的词库，直接放入 `koreader/.moon/`
+（与 `book.sqlite3` 同级）。附件已使用最终文件名，无需重命名。
+
+### 更新内容
+
+相对上一版本 `v0.5.12`：
+
+#### 新功能
+
+- :sparkles: (update): 支持关闭自动检查更新 (342dfa0e)
+
+#### 修复
+
+- :bug: (share): 书摘导出统一保留彩色 (87bbd235)
+
+### 完整对比
+
+https://github.com/AnkioTomas/moon/compare/v0.5.12...v0.5.13
+
 # v0.5.12 · 2026-11-12
 
 ## 月读 v0.5.12
@@ -143,44 +172,3 @@ KOReader 插件包：`book.koplugin-v0.5.9.zip`
 ### 完整对比
 
 https://github.com/AnkioTomas/moon/compare/v0.5.8...v0.5.9
-
-# v0.5.8 · 2026-11-10
-
-## 月读 v0.5.8
-
-KOReader 插件包：`book.koplugin-v0.5.8.zip`
-
-输入法词库（整库，手动 sideload）：`dictionary.sqlite3 dictionary-wubi.sqlite3 dictionary-cangjie.sqlite3 dictionary-zhuyin.sqlite3`
-
-安装：解压后将 `book.koplugin` 复制到 `koreader/plugins/`，然后重启。
-
-词库 sideload：下载对应布局的词库，直接放入 `koreader/.moon/`
-（与 `book.sqlite3` 同级）。附件已使用最终文件名，无需重命名。
-
-### 更新内容
-
-相对上一版本 `v0.5.7`：
-
-#### 新功能
-
-- :sparkles: (remote): 提取日志记录当前启动模式 (067a2ae9)
-- :sparkles: (reader): 添加漫画 CBZ/CBT 默认排版 (91c15c57)
-
-#### 修复
-
-- :bug: (wechat): 修复发版测试：章节解包提示改走书源翻译 (85187873)
-- :bug: (sync): 唤醒后 connection refused 视为网络未就绪并延迟重试 (a1fc6b8d)
-
-#### 性能
-
-- :zap: (wechat): 章节解包前预检内存 (efd2097c)
-- :zap: (fonts): 字体下载写入过程日志，转换前预检内存 (d120120d)
-- :zap: (utils): 增加内存预检，不足时可改用 no-framework 重启 (91d4ddb0)
-
-#### 重构
-
-- :recycle: (log): 启动日志打印字符画并记录启动模式，移除调试开关 (821a926a)
-
-### 完整对比
-
-https://github.com/AnkioTomas/moon/compare/v0.5.7...v0.5.8
