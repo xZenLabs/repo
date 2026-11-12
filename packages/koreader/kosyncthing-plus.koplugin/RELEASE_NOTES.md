@@ -1,3 +1,19 @@
+# v1.2.5 · 2026-11-12
+
+## [v1.2.5] — 2026-11-12
+
+### Fixed
+- **Syncthing failed to start on firmware without a usable `nice`. **
+  `start-syncthing` always ran `setsid nice -n 10 syncthing …`, so a firmware
+  without a working `nice` (reported on Kobo software 6.0 beta, #11) aborted the
+  launch. The launcher no longer wraps Syncthing in `nice`: Syncthing lowers its
+  own priority at startup (`setLowPriority`, on by default; its worker process
+  was measured at niceness 11, against 10 with the old `nice` wrapper). If
+  `setLowPriority` is turned off in Syncthing, it now runs at normal priority.
+
+
+**Full Changelog**: https://github.com/d0nizam/kosyncthing_plus.koplugin/compare/v1.2.4...v1.2.5
+
 # v1.2.4 · 2026-11-08
 
 ## [v1.2.4] — 2026-11-08
@@ -80,12 +96,3 @@
 
 
 **Full Changelog**: https://github.com/d0nizam/kosyncthing_plus.koplugin/compare/v1.2.0...v1.2.1
-
-# v1.2.0 · 2026-07-18
-
-## [v1.2.0] — 2026-07-18
-
-### Fixed
-- KOReader commit 751b497 removed `Device:unpackArchive`, breaking plugin and binary updates on newer KOReader builds. Added `U.unpackArchive` with a direct `ffi/archiver` fallback so updates work on all KOReader versions.
-
-**Full Changelog**: https://github.com/d0nizam/kosyncthing_plus.koplugin/compare/v1.1.9...v1.2.0
