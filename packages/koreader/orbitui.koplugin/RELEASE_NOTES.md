@@ -1,3 +1,18 @@
+# v1.3.0 · 2026-11-13
+
+## OrbitUI 1.3
+
+- The OrbitUI grid tab sits directly beside Quick Actions in KOReader’s top menu. Open **Home** for the dashboard, cards and wallpaper, **Library** for shelves, covers and themes, or **Dock & interface** for shortcuts and shared appearance.
+- Long-press a dock shortcut to add, replace or remove it. In **Edit dock**, use the arrows to reorder shortcuts. The dock can open a library profile, folder, collection or quick action.
+- Fresh setups use **Home, Library, History and Power**. Existing setups keep their shortcuts. Manga remains available in the shortcut picker.
+- The README and feature guide show the new menu and explain how to edit the dock.
+
+## Updating
+
+Use OrbitUI’s updater and restart KOReader after installation. On 1.3, open **OrbitUI → System & maintenance → Updates**. For a fresh installation, download `orbitui.koplugin.zip` below.
+
+The menu and dock were tested on a Bigme B7 Pro. Fresh default dock order was checked in a Kobo emulator.
+
 # v1.2.0 · 2026-11-12
 
 OrbitUI 1.2 brings a cover-first Home layout, a cleaner book overview and more ways to move between your books from inside the reader. The [README](https://github.com/komadorirobin/orbitui.koplugin#readme) shows the new views on a Bigme B7 Pro.

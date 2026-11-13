@@ -11,19 +11,14 @@ Their code, interfaces and features are OrbitUI's foundation, not just
 inspiration. OrbitUI adds a shared workflow and its own optional features on
 top. Please support and credit the original creators.
 
-**[Download OrbitUI 1.2.0](https://github.com/komadorirobin/orbitui.koplugin/releases/tag/v1.2.0)**
+**[Download OrbitUI 1.3.0](https://github.com/komadorirobin/orbitui.koplugin/releases/tag/v1.3.0)**
 | [Installation](#installation)
 | [What OrbitUI adds](#what-orbitui-adds)
 | [Feature guide](docs/FEATURES.md)
 | [Report a problem](https://github.com/komadorirobin/orbitui.koplugin/issues)
 
-**New in 1.2:** A cover-first Reading dashboard, an airy book overview and a
-reader panel with book tools and other books in progress. Search for similar
-books by local EPUB tags and bring the next volume in a series to Home.
-
-**[Try OrbitUI 1.3.0-beta.1](https://github.com/komadorirobin/orbitui.koplugin/releases/tag/v1.3.0-beta.1)**
-for a single OrbitUI menu beside Quick Actions and dock shortcuts you can edit
-with a long press. 1.2.0 is the stable release.
+**New in 1.3** · Open OrbitUI beside Quick Actions to change Home, Library or
+dock settings. Long-press a dock icon to add, replace or remove a shortcut.
 
 > **OrbitUI replaces the standalone SimpleUI and Bookshelf plugins.**
 > Neither is required separately. If either is installed, disable it and restart
@@ -47,6 +42,12 @@ KOReader on a Bigme B7 Pro with customized shelves and wallpaper. Silverfish,
 ornaments and manga ratings are optional. Manga ratings use the separate
 [MyAnimeList Manga Sync plugin](https://github.com/komadorirobin/myanimelist.koplugin).
 
+| OrbitUI menu | Dock editor |
+| --- | --- |
+| [![OrbitUI tab beside Quick Actions with Home, Library and Dock settings](docs/screenshots/orbitui-menu.jpg)](docs/screenshots/orbitui-menu.jpg) | [![Dock editor with reorder arrows, remove buttons and Add shortcut](docs/screenshots/dock-editor.jpg)](docs/screenshots/dock-editor.jpg) |
+
+The menu and dock editor above were captured in the Kobo emulator.
+
 ## What OrbitUI adds
 
 SimpleUI supplies the modular Home, statistics and navigation; Bookshelf supplies
@@ -54,14 +55,14 @@ the visual library, book details, themes and ornament system. OrbitUI connects
 them, then adds ways to organize and explore your books that are not part of
 either standalone project's default setup.
 
-- **One OrbitUI menu in the 1.3 beta.** Open the grid icon next to Quick Actions
-  in KOReader’s top menu. **Home** covers
-  the dashboard and cards. **Library** covers shelves, covers and themes.
-  **Dock & interface** covers shortcuts and shared appearance. Pin a library
-  shelf to Home as a book row or carousel.
-- **A dock you can edit in place in the 1.3 beta.** Long-press a dock shortcut to add, replace
-  or remove a shortcut. Use **Edit dock** to reorder shortcuts. A fresh setup
-  starts with Home, Library, History and Power. Manga is an optional shortcut.
+- **One OrbitUI menu.** Open the grid icon beside Quick Actions in KOReader’s
+  top menu. **Home** covers the dashboard and cards. **Library** covers shelves,
+  covers and themes. **Dock & interface** covers shortcuts and shared appearance.
+- **A dock you can edit in place.** Long-press a dock shortcut to add, replace
+  or remove it. Use **Edit dock** to reorder shortcuts. Add a library profile,
+  folder, collection or quick action. Fresh setups start with Home, Library,
+  History and Power. Existing docks keep their shortcuts.
+- **Your shelves on Home.** Pin a library shelf as a book row or cover carousel.
 - **A Reading dashboard you can build on.** Combine Continue reading, progress,
   statistics, goals and paginated book rows. Add compatible plugin cards,
   shortcuts or BookOrbit shelf cards; arrange and size them independently.
@@ -121,7 +122,7 @@ uses cached tags; refreshing its matches reads missing or changed files. Pin
 it to Home just like another supported shelf. No book is moved or edited.
 
 For a complete initial pass or after bulk retagging, use **OrbitUI settings →
-Bookshelf → Tags and indexing**:
+Library → Tags and indexing**:
 
 - **Update tag index** reads new/changed files and retries failures.
 - **Reread all EPUB tags…** confirms a fresh read of the configured EPUBs.
@@ -260,7 +261,7 @@ recommended by Bookshelf. Keep KOReader's **Cover browser** plugin enabled.
 2. Disable standalone **SimpleUI and Bookshelf**, if installed, and restart
    KOReader. Keep their files and settings for rollback.
 3. Download **`orbitui.koplugin.zip`** from the
-   [stable 1.2.0 release](https://github.com/komadorirobin/orbitui.koplugin/releases/tag/v1.2.0).
+   [stable 1.3.0 release](https://github.com/komadorirobin/orbitui.koplugin/releases/tag/v1.3.0).
    Do not use **Code → Download ZIP**, **Source code**, checksum files or an
    ornament-only release.
 4. Fully exit KOReader. Extract the ZIP and copy **`orbitui.koplugin`** into
@@ -268,8 +269,7 @@ recommended by Bookshelf. Keep KOReader's **Cover browser** plugin enabled.
 5. Start KOReader, enable OrbitUI if needed and restart. On a fresh setup, the
    optional guide reviews folders, start screen, navigation buttons and preset
    before applying anything. Existing users keep their configuration.
-6. Open **Tools → OrbitUI → OrbitUI settings** in 1.2.0. In the 1.3 beta,
-   open the **OrbitUI** grid tab beside Quick Actions in KOReader’s top menu.
+6. Open the **OrbitUI** grid tab beside Quick Actions in KOReader’s top menu.
 
 | Device | Typical plugins directory |
 | --- | --- |
@@ -282,11 +282,10 @@ Use your actual KOReader installation's location. The result must be
 **`plugins/orbitui.koplugin/main.lua`**, not a doubly nested folder. Do not
 install the folders under `components/` as separate plugins.
 
-**Already using OrbitUI?** Its **Update OrbitUI** menu is the recommended
-update path. Choose **stable** for releases or opt into **preview** for betas,
-update, then restart. Embedded SimpleUI/Bookshelf never update independently.
-Updates verify the full package and support restart activation/code rollback;
-code rollback does not restore stale reading-progress files.
+**Already using OrbitUI?** Open **OrbitUI → System & maintenance → Updates**,
+then check for updates. In 1.2.0, use **Tools → OrbitUI** to reach the updater.
+Enable **Include preview releases** if you want future betas. Restart KOReader
+after installing. The updater verifies the package and can restore previous code.
 [OTA and manual recovery](docs/OTA.md).
 
 ### Already using SimpleUI or Bookshelf?
@@ -306,7 +305,7 @@ disable OrbitUI and restart before re-enabling the old plugins. Never run both.
 ### Community app stores
 
 Independent stores can find **`komadorirobin/orbitui.koplugin`**. Choose the
-**v1.2.0** release and **`orbitui.koplugin.zip`**, not a repository/source ZIP
+**v1.3.0** release and **`orbitui.koplugin.zip`**, not a repository/source ZIP
 or an add-on release. Their listing is not an endorsement or compatibility
 certification; refresh a stale catalog or install manually.
 
@@ -318,20 +317,15 @@ installation. For subsequent updates, prefer OrbitUI's own updater; consult
 [external-update recovery](docs/OTA.md#external-updates-beta-2-and-later) before
 manually overwriting an existing OTA installation.
 
-## OrbitUI 1.2
+## Svenska
 
-The first-run setup offers **Reading dashboard → Straight cover row**. This
-release also brings the new reader panel, pinned reading references, local
-similar-book and next-volume discovery, optional reading forecasts, and a
-single update panel for OrbitUI. Bookshelf 6.4.2 and SimpleUI maintenance are
-included. Existing dashboard layouts, shelf settings and reading progress
-carry over. [Release notes and history](docs/OTA.md#orbitui-120).
+Öppna rutnätsikonen **OrbitUI** bredvid snabbåtgärderna för att ändra **Hem**,
+**Bibliotek** eller **Docka och gränssnitt**. Långtryck på en dockikon för att
+lägga till, byta eller ta bort en genväg. Vid nyinstallation är **Historik** en
+av standardgenvägarna. Dina sparade genvägar följer med vid uppgradering och
+Manga går att lägga till från genvägsväljaren.
 
-**Svenska:** OrbitUI samlar Hem och bokhyllan i ett plugin. Nytt i 1.2 är
-läsöversikten med rak omslagsrad, en luftigare bokinfosida och en läsarpanel
-med lästid, bokverktyg och pågående böcker. Du kan hitta liknande böcker
-med lokala EPUB-taggar eller lägga nästa volym i serien på Hem. BookOrbit,
-Silverfish och mangaomdömen är valfria.
+[Versionshistorik](docs/OTA.md#orbitui-130).
 
 Automated Lua/LuaJIT, native-fixture, packaging and update/rollback checks
 complement user testing. Stable does not certify every device, third-party

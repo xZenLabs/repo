@@ -1,3 +1,11 @@
+# v0.2.0.7 · 2026-11-13
+
+
+- Switched opt-in KOReader Reading Statistics uploads to CrossPoint's per-book `POST /api/v1/stats/koreader` protocol for compatible CrossPoint and Techy-Notes servers, replacing the former Techy-Notes event endpoint.
+- Preserved ordinary KOSync progress-only compatibility. Enhanced-capability responses gate uploads; servers without a capabilities endpoint may be probed only with explicit statistics consent, and missing statistics endpoints are remembered until an explicit recheck.
+- Added per-server IANA reading time zones, full-history first upload, per-book change fingerprints, strict server acknowledgments, record/body limits, and safe handling of duplicate/updated page records and HTTP 409 history conflicts.
+- Reading statistics remain opt-in and never change reading positions or highlights.
+
 # v0.2.0.6 · 2026-10-13
 
 
@@ -30,11 +38,3 @@
 - Suppressed the plugin's own `AnnotationsModified` notification during remote annotation application so server updates do not create an upload feedback loop.
 - Preserved the last confirmed enhanced-server capability set across transient capability-request failures, while still clearing capabilities for definitive unsupported responses.
 - Added clearer annotation-sync diagnostic logging for sharing-disabled, capability-unavailable, offline, in-flight, and stale-revision recovery paths.
-
-# v0.2.0.2 · 2026-09-16
-
-
-- Added KOReader book series metadata to the existing Book Metadata payload for compatible servers. Deluxe-Sync now sends series and numeric series_index values when KOReader exposes them.
-- Saved KOReader doc_props remain authoritative, with document properties used as a fallback. Zero and decimal series indexes are preserved, while invalid indexes are omitted.
-- Existing Book Metadata consent, capability checks, retry sanitization, and standard KOSync compatibility remain unchanged; unsupported servers do not receive the new metadata fields.
-- Refreshed the README capability summary to document Vocabulary Builder synchronization and the current per-server data-sharing controls.
