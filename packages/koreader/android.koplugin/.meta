@@ -1,0 +1,22 @@
+# Android plugin for KOReader
+# https://github.com/arduinodude456/android.koplugin
+# zenpm:auto-scraped
+id=android
+name=Android
+version=1.0.1
+description=Run Android 4 on your Kobo eReader. With Apps: Chrome, F Droid, Minetest, GBoard
+author=arduinodude456
+category=utility
+platforms=koreader
+dependencies=
+source=https://github.com/arduinodude456/android.koplugin
+stars=5
+updated_at=2026-11-13T08:01:00Z
+published_at=2026-11-11T09:01:51Z
+readme_url=packages/koreader/android.koplugin/README.md
+readme_hash=b5ac98be199f95f9bd6fa81c2ef99d3c501fa04c
+release_notes_url=packages/koreader/android.koplugin/RELEASE_NOTES.md
+release_notes_hash=83b39b2ff6a9d3985f388c71055666ebb3d2b2707e21119ade6bb40d6046d312
+releases=[{"tag_name":"v1.0.1","assets":[{"name":"source-code.zip","url":"https://api.github.com/repos/arduinodude456/android.koplugin/zipball/v1.0.1"}],"name":"v1.0.1"},{"tag_name":"v1.0.0","assets":[{"name":"source-code.zip","url":"https://api.github.com/repos/arduinodude456/android.koplugin/zipball/v1.0.0"}],"name":"Android for Kobo eReader V1"}]
+source_type=source
+source_url=https://codeload.github.com/arduinodude456/android.koplugin/zip/refs/heads/main

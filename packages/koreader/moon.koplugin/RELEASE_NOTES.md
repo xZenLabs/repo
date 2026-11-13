@@ -1,3 +1,30 @@
+# v0.5.16 · 2026-11-13
+
+## 月读 v0.5.16
+
+KOReader 插件包：`book.koplugin-v0.5.16.zip`
+
+安装：解压后将 `book.koplugin` 复制到 `koreader/plugins/`，然后重启。
+
+输入法整库附件：`dictionary.sqlite3`、`dictionary-wubi.sqlite3`、`dictionary-cangjie.sqlite3`、`dictionary-zhuyin.sqlite3`。手动安装时将对应词库放入 `koreader/.moon/`，与 `book.sqlite3` 同级，无需重命名。
+
+### 更新内容
+
+相对上一实际发布版本 `v0.5.14`：
+
+- **章节摘要恢复（#125）**：先保存裁剪后的请求快照，重启恢复未失败的待办；长按阅读快捷面板「回顾前文」重试失败任务。休眠暂停保留待办，主动取消才撤销。书籍改名、删除与数据清理同步处理待办和在飞请求。提交：`31a83065`。
+- **旋转策略（#124）**：短按仍按原方式旋转，有重力传感器时长按选择自动、仅 180° 或关闭自动旋转；复用 KOReader 原生设置，无传感器仍保留手动旋转。提交：`79b0b996`。
+- **漫画与内存优化**：fork 后定向释放子进程位图缓存，漫画切片和打包移到子进程，并保护失败时的原件。仅漫画书源下载组装新 CBZ 时处理条漫，已有 CBZ 不检查或重建。提交：`1cfd8707`、`83b7dfd5`、`8f10fdbe`。
+- **测试兼容性**：隔离解释测试的配置依赖，修复 Linux CI 的测试桩问题（#125）。提交：`4ca991b1`。
+
+自动恢复要求开启自动章节摘要并配置 AI。旧版已丢失且没有快照的任务需重读章节触发；如果 AI 已处理但结果尚未落盘时退出，恢复可能重复请求并计费。
+
+`v0.5.15` 的发布检查未通过，未创建 Release；该标签保留，不覆盖历史。
+
+### 完整对比
+
+https://github.com/AnkioTomas/moon/compare/v0.5.14...v0.5.16
+
 # v0.5.14 · 2026-11-13
 
 ## 月读 v0.5.14
@@ -131,32 +158,3 @@ KOReader 插件包：`book.koplugin-v0.5.11.zip`
 ### 完整对比
 
 https://github.com/AnkioTomas/moon/compare/v0.5.10...v0.5.11
-
-# v0.5.10 · 2026-11-10
-
-## 月读 v0.5.10
-
-KOReader 插件包：`book.koplugin-v0.5.10.zip`
-
-输入法词库（整库，手动 sideload）：`dictionary.sqlite3 dictionary-wubi.sqlite3 dictionary-cangjie.sqlite3 dictionary-zhuyin.sqlite3`
-
-安装：解压后将 `book.koplugin` 复制到 `koreader/plugins/`，然后重启。
-
-词库 sideload：下载对应布局的词库，直接放入 `koreader/.moon/`
-（与 `book.sqlite3` 同级）。附件已使用最终文件名，无需重命名。
-
-### 更新内容
-
-相对上一版本 `v0.5.9`：
-
-#### 界面
-
-- :lipstick: (ime): 九宫格改为五列，左侧标点列并与手机拨号盘对齐 (eef73b6e)
-
-#### 性能
-
-- :zap: (fanqie): 读缓存目录不再整本扫锚点，刷新时保留已入库锚点 (487e6e6f)
-
-### 完整对比
-
-https://github.com/AnkioTomas/moon/compare/v0.5.9...v0.5.10
