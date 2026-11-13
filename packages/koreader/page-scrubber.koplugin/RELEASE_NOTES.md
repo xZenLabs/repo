@@ -1,3 +1,32 @@
+# v8.5.0 · 2026-11-13
+
+## What's new
+
+### Quick menu redesign
+- New **brightness bar** with percentage.
+- **Aa** menu: for EPUBs, choose 1 or 2 columns; for PDFs, switch between paged and continuous view. New **rotate** button.
+
+### New option: Rounded style
+- New **Rounded style** submenu in Appearance, with one toggle per view: Grid, Simple Grid, Multi Grid and Split menu. Enabled by default.
+- Turn a toggle off to get square page corners in that view.
+
+### Split menu
+- Redesigned split menu.
+- Icons in the right-hand list now show the highlight color as a background when the style uses several colors.
+
+### Compatibility
+- The dictionary popup now shows buttons registered by plugins loaded before Page Scrubber, such as OfflineTranslate's "Learned" button. Thanks to: #9 
+
+### Fixes
+- Fixed the "!" placeholder that could appear on grid thumbnails after returning from the split menu. Thumbnails whose request got stuck are now retried in the background.
+
+## Installation
+1. Download the zip named `page_scrubber.koplugin-<version>.zip` from the **Assets** section below (not "Source code").
+2. Unzip it and copy the `page_scrubber.koplugin` folder into `koreader/plugins/`.
+3. Restart KOReader.
+
+To update, replace the folder. To uninstall, delete it (and `koreader/patches/2--page-scrubber-font.lua` if you used the system font).
+
 # v8.4.0 · 2026-11-09
 
 ## 8.4 Search button in quick menu and more 
@@ -115,33 +144,6 @@ A new **Advanced** submenu (Settings > Other > Advanced):
   - **Clear image cache:** deletes the scan cache of the Images tab (the current size is shown next to it). Your favorite images are kept.
 - **Updates**
   - **Check for updates:** looks for a newer release on GitHub, shows its notes and installs it from the reader. It keeps a backup and restores the previous version if the install fails. Restart KOReader when it finishes.
-
-## Installation
-1. Download the zip named `page_scrubber.koplugin-<version>.zip` from the **Assets** section below (not "Source code").
-2. Unzip it and copy the `page_scrubber.koplugin` folder into `koreader/plugins/`.
-3. Restart KOReader.
-
-To update, replace the folder. To uninstall, delete it (and `koreader/patches/2--page-scrubber-font.lua` if you used the system font).
-
-# v8.0.0 · 2026-10-14
-
-## New: Panel View Update
-
-- **Detail panel in split view:** Tap an annotation or bookmark row in the split menu to preview its page. Tap the same page again to open the detail panel, which shows the full content of that item (the quote, note, chapter, and page) instead of only the page preview. You can now swipe through annotations inside the detail panel. A "Show in book" link jumps to that page in the book. You can expand the panel to use more of the screen.
-
-- **New Images tab in the split menu:** It works like the annotation tabs. The right menu lists the pages that contain images. Tap a row to preview that page, and tap it again to open the detail panel, where you can pinch-zoom the image or expand the panel for a bigger view and more room to zoom.
-  - Can be turned off in Settings > Layout > Disable Image Tab.
-  - Only scans images up to the point you've read, which avoids spoilers and keeps it from loading every image at once.
-  - Creates two files in the conf folder to store the image data.
-
-- **Selection menu:** Text selection, Dictionary, Wikipedia, and Translate can now be added to the main selection menu from Settings > Buttons in selection menu. Buttons left off stay in the More row.
-
-## Fixes
-
-- Minor visual improvements to the quick menu and settings (gray divider lines).
-- Long-pressing a highlight and choosing a color now paints it with that color. Previously it sometimes showed as the default yellow.
-- Toggles that are off by default were shown as enabled in the selection menu settings.
-- If the pinned page has a bookmark, it now also shows up in the bookmarks list.
 
 ## Installation
 1. Download the zip named `page_scrubber.koplugin-<version>.zip` from the **Assets** section below (not "Source code").
