@@ -1,3 +1,18 @@
+# v1.3.0-beta.1 · 2026-11-13
+
+## One place for OrbitUI settings
+
+- The OrbitUI grid tab sits directly beside Quick Actions in KOReader’s top menu. It replaces the separate Bookshelf settings tab and opens the shared settings from Home or from a book.
+- **Home** groups the dashboard, cards and wallpaper. **Library** groups shelves, covers and themes. **Dock & interface** covers shortcuts and shared appearance. You can search across the settings.
+- Long-press a dock shortcut to add, replace or remove it. **Edit dock** also lets you reorder shortcuts. Open a library profile, folder, collection or quick action right from the dock.
+- Fresh setups start with **Home, Library, History and Power**. Existing docks retain their shortcuts. Manga remains available as a shortcut, and existing manga shortcuts can still open their library start menu.
+
+## Updating
+
+Open the OrbitUI updater, enable **Include preview releases**, and check for updates. Restart KOReader after installing. In this beta, the updater is under **OrbitUI → System & maintenance → Updates**.
+
+The menu and dock were tested on a Bigme B7 Pro. The default dock order was tested on an emulated Kobo. The stable channel continues to offer 1.2.0.
+
 # v1.2.0-beta.4 · 2026-11-11
 
 ## Home
@@ -113,27 +128,3 @@ New whole-page pixel caching/build-ahead, the competing bytecode searcher and na
 Use the complete **orbitui.koplugin.zip**, not GitHub's source archive; restart KOReader after updating. Disable standalone SimpleUI/Bookshelf before first installation. Back up settings and reading data separately: code rollback does not restore them or third-party saves. Stable **1.1.0** remains available and unchanged.
 
 Automated source/package/native-fixture/upgrade/rollback checks precede publication. Physical Bigme font/layout/touch/colour/night/rotation/wake, large-library resource use and timings remain pending. This is a prerelease, not a device-performance certification.
-
-# v1.1.0-beta.12 · 2026-11-08
-
-## Svenska
-
-Ny layout för **Läser just nu + Silverfish**:
-- Större figur till vänster, samlad text i mitten och bokomslaget till höger.
-- Namn/stadium, boktitel/författare och läsprogression får en tydligare placering.
-- Texten behåller läsbar storlek; kompakta kort döljer sekundära rader först.
-- Tryck på figuren/namnet för Silverfish, på titeln/omslaget för att fortsätta läsa.
-
-**Fortsätt läsa ersätts inte.** Befintliga placeringar och Silverfishs sparfiler/progression ändras inte. Kräver separat installerat och aktiverat Silverfish 2.0.0; ingen fork eller kopierad grafik.
-
-Uppdatera via förhandskanalen och **starta om KOReader**. Säkerhetskopiera inställningar/läsdata separat; kodåterställning återställer inte dem eller tredjepartsdata. Tidigare dashboard-v2/v3-begränsningar vid nedgradering gäller fortfarande.
-
-Automatiska tester, fryst runtime/uppgraderingskontroll och CI kontrolleras före publicering. **Test på själva Bigmen återstår**, inklusive typsnitt, tryckytor, färg/nattläge, rotation/vila och hela Silverfish-livscykeln. Förhandsbilden var en schematisk rendering, inte ett enhetstest.
-
-## English
-
-Recompose **Currently reading + Silverfish**: full-height companion left, vertically centered text in the middle, book cover right. Native measured title height avoids unused lines; compact cards omit secondary rows instead of miniature fonts. Normal-contrast secondary text and separate pet/book tap targets.
-
-Continue reading, saved placements and Silverfish data/progression are unchanged. Requires separately installed/enabled public Silverfish 2.0.0; no fork or copied artwork. No new upstream/component/pin/art/API/server/device changes. Stable/latest 1.0 and earlier releases remain unchanged. Physical Bigme/full-plugin acceptance remains pending.
-
-Download **orbitui.koplugin.zip**, not GitHub's source archive. Existing migration and dashboard downgrade limits apply: see docs/OTA.md and docs/MIGRATION.md.

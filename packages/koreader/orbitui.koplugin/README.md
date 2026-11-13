@@ -21,6 +21,10 @@ top. Please support and credit the original creators.
 reader panel with book tools and other books in progress. Search for similar
 books by local EPUB tags and bring the next volume in a series to Home.
 
+**[Try OrbitUI 1.3.0-beta.1](https://github.com/komadorirobin/orbitui.koplugin/releases/tag/v1.3.0-beta.1)**
+for a single OrbitUI menu beside Quick Actions and dock shortcuts you can edit
+with a long press. 1.2.0 is the stable release.
+
 > **OrbitUI replaces the standalone SimpleUI and Bookshelf plugins.**
 > Neither is required separately. If either is installed, disable it and restart
 > KOReader before installing OrbitUI. Never run them alongside OrbitUI. Keep
@@ -50,9 +54,14 @@ the visual library, book details, themes and ornament system. OrbitUI connects
 them, then adds ways to organize and explore your books that are not part of
 either standalone project's default setup.
 
-- **One connected interface.** Move between Home and your library with a shared
-  bottom bar, book-detail panels, scoped search and a settings hub. Pin a shelf
-  to Home as a book row or carousel.
+- **One OrbitUI menu in the 1.3 beta.** Open the grid icon next to Quick Actions
+  in KOReader’s top menu. **Home** covers
+  the dashboard and cards. **Library** covers shelves, covers and themes.
+  **Dock & interface** covers shortcuts and shared appearance. Pin a library
+  shelf to Home as a book row or carousel.
+- **A dock you can edit in place in the 1.3 beta.** Long-press a dock shortcut to add, replace
+  or remove a shortcut. Use **Edit dock** to reorder shortcuts. A fresh setup
+  starts with Home, Library, History and Power. Manga is an optional shortcut.
 - **A Reading dashboard you can build on.** Combine Continue reading, progress,
   statistics, goals and paginated book rows. Add compatible plugin cards,
   shortcuts or BookOrbit shelf cards; arrange and size them independently.
@@ -259,7 +268,8 @@ recommended by Bookshelf. Keep KOReader's **Cover browser** plugin enabled.
 5. Start KOReader, enable OrbitUI if needed and restart. On a fresh setup, the
    optional guide reviews folders, start screen, navigation buttons and preset
    before applying anything. Existing users keep their configuration.
-6. Open **Tools → OrbitUI → OrbitUI settings** to make it yours.
+6. Open **Tools → OrbitUI → OrbitUI settings** in 1.2.0. In the 1.3 beta,
+   open the **OrbitUI** grid tab beside Quick Actions in KOReader’s top menu.
 
 | Device | Typical plugins directory |
 | --- | --- |
