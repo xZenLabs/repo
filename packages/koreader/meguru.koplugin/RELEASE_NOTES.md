@@ -1,3 +1,11 @@
+# v1.8.6 · 2026-11-13
+
+## Fixed
+
+- Blurry local `.cbz` pages on high-DPI images ([#13](https://github.com/Craftwork2720/meguru/issues/13)).
+
+**Full Changelog**: https://github.com/Craftwork2720/meguru/compare/v1.8.5...v1.8.6
+
 # v1.8.5 · 2026-11-11
 
 ## Fixed
@@ -40,19 +48,3 @@
 - Page turns right after a page appears are no longer missed.
 
 **Full Changelog**: https://github.com/Craftwork2720/meguru/compare/v1.8.0...v1.8.1
-
-# v1.8.0 · 2026-11-07
-
-### New
-
-- Local `.cbz` covers and metadata load much faster.
-- (.meguru) A page that fails to load now stops the forward turn. The next turn retries a transient failure (with a notice), or names a permanent one and skips it.
-- Taps and swipes made while a page or panel is still rendering are ignored instead of replayed.
-- Two-page view fills the blank under the shorter page with its margin colour.
-
-### Fixed
-
-- Large local pages that would run the device out of memory. Such a page is refused, retried once, then skipped with a "too large" message.
-- Freezes of tens of seconds when Kavita or Suwayomi is unreachable.
-- Dust widening the page-number strip and cropping into the artwork.
-- Errors when pinching or spreading a panel whose image failed to load.
