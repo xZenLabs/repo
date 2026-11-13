@@ -4,14 +4,14 @@
 id=ink-knight
 name=Ink Knight
 version=0.4.0
-description=A Lichess client for KOReader. Play live and by correspondence, solve puzzles and review your games on e-ink.
+description=Chess on e-ink, offline and on Lichess. An engine, puzzles, lessons and a clock with no internet, and live and correspondence games with your Lichess account, all inside KOReader.
 author=beater-studios
 category=games
 platforms=koreader
 dependencies=
 source=https://github.com/beater-studios/ink_knight.koplugin
 stars=5
-updated_at=2026-11-13T12:01:00Z
+updated_at=2026-11-13T13:01:01Z
 published_at=2026-11-12T20:19:57Z
 readme_url=packages/koreader/ink-knight.koplugin/README.md
 readme_hash=7c628064680fa22321a1c8ae43841e61c3bea3b4

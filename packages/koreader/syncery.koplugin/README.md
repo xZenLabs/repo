@@ -162,13 +162,18 @@ A recap step shows all choices. Tap **Done** to save and start syncing.
 
 ## What Syncery syncs
 
-| Category | What gets saved | Merge strategy | UI toggles |
-|----------|----------------|----------------|------------|
-| **Reading progress** | Per-device: `(percent, page, total_pages, xpath, revision, timestamp, device_id)` | Last-write-wins by `(revision, timestamp)` | Master toggle |
-| **Annotations** | Highlights, notes, bookmarks — each with colour, drawer, timestamps, device_id | 3-way merge with tombstone tracking | Master toggle + highlights/notes/bookmarks sub-toggles (each filters its own type; a disabled type stays local and is preserved for other devices in the shared file) + file-extension filter |
-| **Book metadata** | Reading status, rating, collections, summary note, custom title/author, handmade TOC | Per-field last-write-wins; status uses the lifecycle lattice | Master toggle + per-field sub-toggles |
-| **Render settings** | Font face, font size, line spacing, font weight, page margins | Per-field last-write-wins | Master toggle (off by default) + per-field sub-toggles |
-| **KOReader plugin databases** | Syncery does **not** carry these DBs. It periodically triggers KOReader's **Reading Statistics** and **Vocabulary Builder** to run their **own** cloud-storage sync, so your stats and word lists stay in sync just like your position and annotations. | N/A (Syncery only triggers; the plugins' cloud merge handles conflicts) | Master toggle (Statistics & Vocabulary) + sub-toggles per plugin + interval (1–1440 min) + unified server opt-in |
+Syncery keeps its state in **two JSON files per book**:
+
+- `syncery-progress.json` — reading position only. Kept separate because it changes most often.
+- `syncery-annotations.json` — a **consolidated container** for everything else. Despite the name, it holds three independent sections: `annotations`, `metadata`, and `render_settings`. Each section has its own merge policy, but they share one file so a single atomic write covers all three.
+
+| Category | Stored in | What gets saved | Merge strategy | UI toggles |
+|----------|-----------|----------------|----------------|------------|
+| **Reading progress** | `syncery-progress.json` | Per-device: `(percent, page, total_pages, xpath, revision, timestamp, device_id)` | Last-write-wins by `(revision, timestamp)` | Master toggle |
+| **Annotations** | `syncery-annotations.json` → `annotations` | Highlights, notes, bookmarks — each with colour, drawer, timestamps, device_id | 3-way merge with tombstone tracking | Master toggle + highlights/notes/bookmarks sub-toggles (each filters its own type; a disabled type stays local and is preserved for other devices in the shared file) + file-extension filter |
+| **Book metadata** | `syncery-annotations.json` → `metadata` | Reading status, rating, collections, summary note, custom title/author, handmade TOC | Per-field last-write-wins; status uses the lifecycle lattice | Master toggle + per-field sub-toggles |
+| **Render settings** | `syncery-annotations.json` → `render_settings` | Font face, font size, line spacing, font weight, page margins | Per-field last-write-wins | Master toggle (off by default) + per-field sub-toggles |
+| **KOReader plugin databases** | Not carried by Syncery — each plugin's own DB | Syncery does **not** carry these DBs. It periodically triggers KOReader's **Reading Statistics** and **Vocabulary Builder** to run their **own** cloud-storage sync, so your stats and word lists stay in sync just like your position and annotations. | N/A (Syncery only triggers; the plugins' cloud merge handles conflicts) | Master toggle (Statistics & Vocabulary) + sub-toggles per plugin + interval (1–1440 min) + unified server opt-in |
 ### Statistics & Vocabulary sync
 
 Syncery can periodically trigger KOReader's native **Reading Statistics** and **Vocabulary Builder** to sync their own databases over the cloud.
@@ -176,7 +181,7 @@ Syncery can periodically trigger KOReader's native **Reading Statistics** and **
 Syncery does **not** carry, read, or merge these SQLite databases. Instead, it fires each plugin's existing Cloud storage+ sync on a repeating timer — the same mechanism they use when you tap "Sync now" in their own menus. Each plugin performs its own three-way merge, so concurrent edits across devices are reconciled, not overwritten.
 
 **Requirements:**
-- Cloud storage+ plugin enabled (or the built-in SyncService)
+- Cloud storage+ plugin enabled
 - Each plugin needs a cloud server configured in its own settings (Dropbox or WebDAV — FTP does not work)
 - Syncthing does not carry these plugins' databases; cloud storage only
 
