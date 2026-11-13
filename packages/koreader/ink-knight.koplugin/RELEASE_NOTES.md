@@ -1,3 +1,22 @@
+# v0.5.0 · 2026-11-13
+
+
+- Broadcasts, in the online part: the over-the-board tournaments Lichess relays, live, coming and finished, with search; each tournament with its rounds and standings; a round with its games, kept up to date; and a game with the clocks of both players that follows the moves while it is played. A tournament can be kept on the device, downloaded in the background, to see with no network; a download cut short resumes with what is missing.
+- Every request to Lichess names the plugin and the address of its repository in its User-Agent.
+- The plugin presents itself as chess on e-ink, offline and on Lichess, instead of a Lichess client: in its description, the line under its name on the first screen, the About page, the README, the banner, the social preview and the sleep screen cover, which now show the first screen beside a game.
+- Analysis of a game played without internet, against the engine or between two people: once it is over, Analyze goes through the moves with the engine of the plugin, showing its progress and with a way to cancel, and opens the review with the clear mistakes and blunders marked, the better move named and the evaluation of each move, as in the review of a Lichess game. Against the engine only your moves are looked at. The engine is small, so only clear mistakes are marked.
+- Puzzles by opening, in the puzzles menu: the openings Lichess has puzzles of, most puzzles first, each family with its variations, and the last ones you opened on top. Like a theme, each keeps its puzzles on the device to solve without internet.
+- Chess960: without internet, in the offline menu, from a position drawn or typed by its number, against the engine or between two people; and on Lichess, with Play Chess960 beside the rated option, for finding an opponent, challenges and the computer, accepting challenges, correspondence games kept offline and reviewing past games, with its rating in the profile. Castling is tapped on the rook.
+- Four more piece sets, chosen for e-ink: Chessnut, MPChess, Kiwen Suwi and Shapes.
+- Always promote to a queen, an option beside the look of the board, for games; lessons, practice and puzzles still ask.
+- Bring preferences from Lichess, in Settings: promoting to a queen, coordinates, confirming moves and the piece set, copied from the site with the optional permission `preference:read`, which the link for creating a token now marks, since it only reads.
+- Block a player from their profile, after a confirmation, and unblock them there too.
+- Profiles have the recent activity by day, your private notes about the player (read and written on the device), the FIDE player when the account is linked to one, and the Puzzle Storm records. The players menu has the rankings: the top 10 of each rating.
+- The analysis of a position, in the review and in the editor, also offers the most played moves in games of masters and in your own games, with the color you played.
+- In the review of a game the site analyzed, More has a summary: the accuracy of each player, their inaccuracies, mistakes and blunders and the average centipawn loss, with the moves where the middlegame and the endgame begin, which the review and the list of moves also mark.
+- Puzzle history, in the puzzles menu: the puzzles you tried, the last first, with their rating, when and whether you solved them, and earlier ones a tap away. Any of them opens to be solved again.
+- Practice, in the offline menu: the practice lessons of Lichess, 308 of the 316 chapters in all 32 studies of checkmates, tactics and pawn and rook endgames. 165 are played against the engine until you mate, mate in so many moves or promote; 103 ask for an advantage or an equal position in so many moves, judged as the Lichess app judges them, with moves worked out with Stockfish beforehand, so no internet and no strong engine are needed; 3 ask you to hold the draw in king and pawn against king, judged exactly; 36 are guided, with the author's moves to find, comments, hints and the solution; and one is a commented game. The texts are in the three languages, translated from the English of Lichess, and the progress is kept.
+
 # v0.4.0 · 2026-11-12
 
 
@@ -49,19 +68,3 @@
 
 
 - When Lichess refuses the token, the online part is blocked except for one row that goes to connecting an account, and tapping it removes the token.
-
-# v0.1.0 · 2026-11-07
-
-
-First version.
-
-- A first page where you choose to play online, play offline or exit. Lichess is only contacted after you choose to play online.
-- The time and the battery at the bottom of every screen.
-- Play on Lichess: find an opponent in rapid and classical, by correspondence, challenge friends and play the Lichess computer, with or without a time limit, picking your color in a challenge, and with an optional rating range when searching.
-- A list of your games, with the ones waiting for you on top, refreshed at the interval you choose.
-- Draw offers and draws by repetition, takebacks, giving time, resigning, canceling, claiming when the opponent leaves and playing again, with the game resuming by itself after a dropped connection.
-- Puzzles, saved to solve without internet, with results sent when the Wi-Fi comes back, plus puzzles by theme, your results and the daily puzzle.
-- Your past games and favorites move by move, with what Lichess knows about each position.
-- Players: search, who is online, profiles, a rating chart with statistics, and your record against someone.
-- Chess against a small engine with no internet, saved after each move.
-- Connect your account by pasting the token from your phone, in English, Portuguese or Spanish.

@@ -1,9 +1,9 @@
 <p align="center">
-  <img src="docs/brand/banner.png" alt="Ink Knight: a Lichess client for KOReader">
+  <img src="docs/brand/banner.png" alt="Ink Knight: chess on e-ink, offline and on Lichess">
 </p>
 
 <p align="center">
-  <strong>A Lichess client for KOReader. Play live and by correspondence, solve puzzles and review your games on e-ink.</strong>
+  <strong>Chess on e-ink, offline and on Lichess. An engine, puzzles, lessons and a clock with no internet, and live and correspondence games with your Lichess account, all inside KOReader.</strong>
 </p>
 
 <p align="center">
@@ -44,14 +44,15 @@
 </table>
 
 - **Your choice on opening:** the first page asks whether to play online or offline, and Lichess is only contacted if you choose online. The time and the battery stay at the bottom of every screen.
-- **Play:** find an opponent in rapid and classical, by correspondence, challenge a friend (blitz or no time limit too) or play the Lichess computer. In a challenge, you can pick your color. The challenges you sent wait beside the ones you received, and you can cancel them.
+- **Play:** find an opponent in rapid and classical, by correspondence, challenge a friend (blitz or no time limit too) or play the Lichess computer, in standard chess or Chess960. In a challenge, you can pick your color. The challenges you sent wait beside the ones you received, and you can cancel them.
 - **Several games at once:** the list shows whose turn it is, with the games waiting for you on top. It refreshes at the interval you choose.
 - **During a game:** clocks, promotion, draw offers and draws by repetition, asking for a takeback, giving time, resigning and canceling. The list of moves is one tap away, here and in the other modes, and starts with the name of the opening, even without internet (in a Lichess game, once it is over). When the game ends, play again. A dropped connection comes back by itself.
 - **Puzzles:** a pile stays on the device to solve without internet, and results go to Lichess when the Wi-Fi returns. Also puzzles by theme and by opening, the history of the ones you tried, your results and the daily puzzle, and you can choose the difficulty, compared with your puzzle rating, and the color you play. You can also review the puzzles you missed in the last 30 days, including the ones missed on the site.
 - **Review:** your past games and favorites, move by move, with what Lichess knows about each position: its evaluation, the most played moves (on Lichess, by masters and in your own games) and, near the end, the perfect result, and for a game analyzed on the site, the accuracy of each player.
+- **Broadcasts:** follow the over-the-board tournaments Lichess relays, live or finished, with the standings, the games of each round and the clocks of both players, and keep a tournament on the device to see it without internet.
 - **Players:** search by name, see who you follow is online, profiles with the recent activity, your private notes, the FIDE rating and the Puzzle Storm records, a rating chart with statistics, your record against someone, and the top 10 of each rating.
-- **Without internet:** play a small engine that never freezes the screen, with your choice of color, undo and hints, and continue the game later. Or play against someone else on the same device, with a clock if you like, or solve the 5000 puzzles that come with the plugin, no account needed, at the difficulty you choose. After a game, the engine can point out your clear mistakes. Set up any position in the editor and play from it. For beginners, Learn chess has the 18 stages of the Lichess app, from how each piece moves to checkmate, with stars to collect, and Practice has the practice lessons of Lichess: checkmates, tactics and endgames played against the engine, or guided move by move. There is also coordinate training: find the square named, or name the square marked, against the clock. And a chess clock for a game on a real board, with the device lying between the players. Your correspondence games stay on the device too: you can look at them and make your move with the Wi-Fi off, and it goes to Lichess the next time you play online, if the game is still where you left it.
-- **Your board:** five board styles, including the hatched squares of printed diagrams, three piece sets and coordinates on the edges.
+- **Without internet:** play a small engine that never freezes the screen, in standard chess or Chess960, with your choice of color, undo and hints, and continue the game later. Or play against someone else on the same device, with a clock if you like, or solve the 5000 puzzles that come with the plugin, no account needed, at the difficulty you choose. After a game, the engine can point out your clear mistakes. Set up any position in the editor and play from it. For beginners, Learn chess has the 18 stages of the Lichess app, from how each piece moves to checkmate, with stars to collect, and Practice has the practice lessons of Lichess: checkmates, tactics and endgames played against the engine, or guided move by move. There is also coordinate training: find the square named, or name the square marked, against the clock. And a chess clock for a game on a real board, with the device lying between the players. Your correspondence games stay on the device too: you can look at them and make your move with the Wi-Fi off, and it goes to Lichess the next time you play online, if the game is still where you left it.
+- **Your board:** five board styles, including the hatched squares of printed diagrams, seven piece sets and coordinates on the edges.
 - **Sleep screen:** if the device sleeps with Ink Knight open, it shows the Ink Knight cover instead of the book cover. This applies when the KOReader sleep screen is set to show the book cover.
 
 ## Installation
@@ -125,7 +126,7 @@ The design, the tools and the release process are described in [docs/design.md](
 
 [GPL-3.0](LICENSE), version 3 only. You may use, study, modify and redistribute it, keeping it open under the same license.
 
-Lichess is a trademark of its owners, and this license grants no rights to it or to the names "Ink Knight" and "Beater Studios". See [NOTICE](NOTICE). The classic pieces are drawn from the FreeSerif font that comes with KOReader, and the Cburnett and Merida pieces are by Colin M.L. Burnett and Armando Hernandez Marroquin, under GPLv2 or later. The names of the openings and the included puzzles come from the open Lichess data, in the public domain (CC0), the lessons of Learn chess and their texts and the practice lessons from the official Lichess app, under GPL-3.0, the practice ones written for lichess.org by their authors and translated into Portuguese and Spanish here.
+Lichess is a trademark of its owners, and this license grants no rights to it or to the names "Ink Knight" and "Beater Studios". See [NOTICE](NOTICE). The classic pieces are drawn from the FreeSerif font that comes with KOReader. The Cburnett and Merida pieces are by Colin M.L. Burnett and Armando Hernandez Marroquin, under GPLv2 or later; Chessnut by Alexis Luengas, under Apache 2.0; MPChess by Maxime Chupin, under GPLv3 or later; Kiwen Suwi by neverRare, under CC BY 4.0; and Shapes by flugsio, under CC BY-SA 4.0. The names of the openings and the included puzzles come from the open Lichess data, in the public domain (CC0), the lessons of Learn chess and their texts and the practice lessons from the official Lichess app, under GPL-3.0, the practice ones written for lichess.org by their authors and translated into Portuguese and Spanish here.
 
 ---
 
