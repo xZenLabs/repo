@@ -1,3 +1,28 @@
+# v0.5.14 · 2026-11-13
+
+## 月读 v0.5.14
+
+KOReader 插件包：`book.koplugin-v0.5.14.zip`
+
+输入法词库（整库，手动 sideload）：`dictionary.sqlite3 dictionary-wubi.sqlite3 dictionary-cangjie.sqlite3 dictionary-zhuyin.sqlite3`
+
+安装：解压后将 `book.koplugin` 复制到 `koreader/plugins/`，然后重启。
+
+词库 sideload：下载对应布局的词库，直接放入 `koreader/.moon/`
+（与 `book.sqlite3` 同级）。附件已使用最终文件名，无需重命名。
+
+### 更新内容
+
+相对上一版本 `v0.5.13`：
+
+#### 修复
+
+- :bug: (comic): 缺少 tj3SetCroppingRegion 导出时回退到 JPEG 条带解码 (b12be1e5)
+
+### 完整对比
+
+https://github.com/AnkioTomas/moon/compare/v0.5.13...v0.5.14
+
 # v0.5.13 · 2026-11-12
 
 ## 月读 v0.5.13
@@ -135,40 +160,3 @@ KOReader 插件包：`book.koplugin-v0.5.10.zip`
 ### 完整对比
 
 https://github.com/AnkioTomas/moon/compare/v0.5.9...v0.5.10
-
-# v0.5.9 · 2026-11-10
-
-## 月读 v0.5.9
-
-KOReader 插件包：`book.koplugin-v0.5.9.zip`
-
-输入法词库（整库，手动 sideload）：`dictionary.sqlite3 dictionary-wubi.sqlite3 dictionary-cangjie.sqlite3 dictionary-zhuyin.sqlite3`
-
-安装：解压后将 `book.koplugin` 复制到 `koreader/plugins/`，然后重启。
-
-词库 sideload：下载对应布局的词库，直接放入 `koreader/.moon/`
-（与 `book.sqlite3` 同级）。附件已使用最终文件名，无需重命名。
-
-### 更新内容
-
-相对上一版本 `v0.5.8`：
-
-#### 新功能
-
-- :sparkles: (notes): 远程管理新增高亮与笔记，左右分页并可弹窗改备注 (1369ab2d)
-- :sparkles: (fonts): 在线字体列表缓存 30 天，关闭后隐藏在线分栏 (42d63ea4)
-
-#### 修复
-
-- :bug: (l10n): 去掉英/繁词典中重复的「高亮与笔记」键，并补上笔记接口文案 (76a13b7d)
-- :bug: (reviews): 文档缺少排版指纹时不再在绘制标记时崩溃 (4aa7ba7e)
-- :bug: (fanqie): 目录按卷分层并收录章内锚点 (97aa154f)
-- :bug: (store): 彻底删除后失效残缺书城缓存并记录删除日志 (2aa008c3)
-
-#### 性能
-
-- :zap: (chapter): 已缓存章节切章时只登记路径，不再拉目录或重渲 (f0b416fd)
-
-### 完整对比
-
-https://github.com/AnkioTomas/moon/compare/v0.5.8...v0.5.9
