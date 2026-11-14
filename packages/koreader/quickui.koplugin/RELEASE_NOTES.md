@@ -1,3 +1,14 @@
+# v1.2.6 · 2026-11-14
+
+## What's Changed
+
+- Quick Actions: update built-in action pool (ink-away, Page Scrubber, Book plugin)
+- Dispatcher: trim QuickUI's registered system actions
+- Defaults: adjust some default settings
+- Icon Picker: fix Nerd Font glyph overflow on Kindle Scribe
+- Book Switcher: change max history books to 10
+- i18n: deduplicate zh_CN.po entries, add Russian translation
+
 # v1.2.5 · 2026-10-29
 
 ## 更新说明
@@ -64,13 +75,3 @@
 3. 阅读滑块：新增文档设置区 —— 重置文档设置为默认、保存文档设置为默认
 4. 阅读滑块：样式微调区改为可折叠
 5. 默认设置：修改部分默认设置
-
-# v1.2.1 · 2026-09-28
-
-## 更新说明
-> 元数据编辑模块（封面、标题、作者、系列、分类、语言、出版社、出版时间、简介）
-> 可搭配[simpleui v2.7.1-b](https://github.com/gytwo/simpleui.koplugin/releases/v2.7.1-b)使用
--  元数据: 添加编辑自定义封面-从设备获取、在线源预览、移除自定义封面
--  元数据: 添加在线获取元数据来源-微信阅读（打开微信读书skill以获取API key)
--  元数据: 添加可编辑字段-出版日期
--  元数据: 完善中文翻译
