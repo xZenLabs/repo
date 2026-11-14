@@ -1,3 +1,50 @@
+# v1.5.1 · 2026-11-14
+
+### New
+
+**Tap a day on the calendar.** The Calendar page open a small card for that day: the book's cover, title, author and status, the time you read, the pages, and how far through the book you got. Read more than one book that day? Use the arrows, or swipe. Tap the book to open it.
+
+**Choose where the quotes come from.** Each quote card now has its own settings:
+
+- **Include**: quote only from the books and collections you tick.
+- **Exclude**: never quote from these (Exclude wins over Include).
+- **Highlight colours**: untick a colour to leave those highlights out (the red ones you use for names, say).
+
+So Quote of the day can stick to your favourites while another quote card skips them. The cards still never show the same highlight at once.
+
+**A tapped quote opens the book right at that highlight.** You can still choose "The book, where you left off" in the card's settings.
+
+**Black and white.** Styles and colours > Screen: Automatic, Colour, or Black and white. In black and white, the accent pickers offer four shades of grey instead of colours. Automatic uses black and white on greyscale readers.
+
+**Your own font.** Styles set in a serif (Dark Academia, Gothic, Forest, Ocean, Space) can use your UI font instead: Styles and colours > Font.
+
+**Count each book once.** If KOReader's statistics hold a book twice (Calibre rewrote it, you downloaded it again, statistics synced from another reader), it no longer counts twice towards the Year goal and Year in covers. It's on by default; Tools > Reading Log > Your reading turns it off.
+
+### Faster
+
+- **The Dashboard turns pages much faster**, above all on ZenOS. Each page is kept as a finished picture once drawn, so going back to it is instant, and the pages either side are drawn ahead while you look at one.
+- A tab flashes the moment you tap it, so you know the tap was taken.
+- On ZenOS and full screen, every piece of text was making KOReader search the disk for a Simple UI file that isn't there. Not any more.
+
+### Tidier settings
+
+- Card colour is one button, beside Styles and colours.
+- Every card's settings go in the same order: what it shows, how it looks, what a tap does.
+
+### Bug fixes
+
+- ZenOS: a Dashboard tab could do nothing, then switch seconds later or a tap behind. Zen pauses its Home's redraws while its update check runs in the background, which it repeats when the check fails; the Dashboard now puts its page on screen anyway.
+- With Simple UI and Bookshelf both installed, the Dashboard's tabs and the Control centre's buttons could seem to do nothing.
+- A value cut short in a menu could break a letter in two (Ukrainian, and languages with accents).
+
+### Styles
+
+**Gothic 1.6**: on White or Paper, the Monthly challenge's spiderweb is now spun in the card's accent colour instead of silver, which hardly showed. Pick its colour in Styles and colours. Update it from Get more styles.
+
+### Updating
+
+Tools > Reading Log > About and updates > **Check for updates**, then restart KOReader. Or download `readinglog-1.5.1.zip` below and replace the `readinglog.koplugin` folder in `koreader/plugins`.
+
 # v1.5.0 · 2026-11-11
 
 ## Styles to download
@@ -172,17 +219,3 @@ Tab names and the Random pick heading shrink a little instead of being cut off w
 KOReader’s log notes which language Reading Log loaded, which helps if it ever stays in English.
 
 To update, download reading-log-1.2.0.zip and copy everything inside its micromodules folder into koreader/settings/bookshelf/micromodules/, replacing the old files.
-
-# v1.1.0 · 2026-10-20
-
-### New in 1.1
-
-- **Dashboard**: Trends and Library pages, up to 7 tabs, move tabs, remove pages you added, reset the whole Dashboard.
-- **Mini dashboard**: one row of up to three small modules for the top of the home screen.
-- **Reading trends**: your last 90 days against your year (time, pages, reading days, session length, speed, books finished).
-- **Monthly challenge**: one goal for the month, picked from your last three months or set by you.
-- **Finish forecast**: when you'll finish the books you're reading at your recent pace, and where your year is heading.
-- **This week vs last**: your average a day this week against last week (or month, or year).
-- **Today's timeline**: each sitting today on a line through the day.
-- **Control centre**: up to 8 buttons for any action, with brightness and warmth.
-- **Library stats**, **Most-read authors**, **Random pick** (only the next book of a series) and **Quote of the day** (from your own highlights).
