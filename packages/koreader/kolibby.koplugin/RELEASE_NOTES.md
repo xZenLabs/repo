@@ -1,3 +1,21 @@
+# v0.8.0 · 2026-11-14
+
+Download up to **three loans at once** with **Download all**, and restart KOReader directly after a KOLibby update.
+
+- Both **Download all** and **Download all on this card** now run up to three loans simultaneously. Each loan's EPUB resources or MP3 parts are downloaded sequentially.
+- The progress dialog shows overall completion counts and progress for the active loans. Finished files are saved as each loan completes, and a failed title frees its slot so other loans can continue.
+- **Cancel all** stops every active worker while keeping completed files and resumable resources. Retrying also recovers a completed file interrupted before its record was saved.
+- Update completion now offers **Restart KOReader** and **Later**. On supported platforms the button restarts automatically; on Android and other platforms without automatic restart it closes KOReader so you can reopen it.
+- Disconnecting KOLibby clears temporary credential handoffs left by interrupted batches. Workers omit unchanged credentials from these handoffs.
+
+Validated with **236 portable tests**, **19 real-process concurrency checks on Android**, and **14 isolated Android update checks**. The restart button was also tapped in the Android emulator to confirm it closes the app. The concurrency and update checks use synthetic data; Kobo and Kindle still need hardware validation.
+
+### Install
+
+Use **Tools → KOLibby → Settings → Check for updates**, or extract **KOLibby-0.8.0.zip** below into KOReader's `plugins` folder, replacing the existing `KOLibby.koplugin` folder. Restart KOReader afterward. If updating from an older build, follow its existing restart instructions; the new restart button becomes available once this version is running.
+
+Your Libby connection, settings and completed downloads are preserved. Use the attached plugin ZIP; GitHub's automatic source archives are for development.
+
 # v0.7.2 · 2026-11-12
 
 Fixes valid audiobook parts being reported as incomplete, including failures during **Download all**. Resolves [#1](https://github.com/kolibby/KOLibby.koplugin/issues/1).
@@ -73,21 +91,3 @@ Validated with 184 portable tests and tested on Clear7 with KOReader for Android
 Use **Tools → KOLibby → Settings → Check for updates**, or extract **KOLibby-0.6.4.zip** below into KOReader's `plugins` folder, replacing the existing `KOLibby.koplugin` folder. Restart KOReader afterward. Connection settings and downloaded books are stored separately.
 
 Use the attached plugin ZIP; GitHub's automatic source archives are for development.
-
-# v0.6.3 · 2026-11-08
-
-Fixes KOLibby missing from the Tools menu on some KOReader installations, including reports from both manual and Storefront installs.
-
-- Use KOReader's bundled filesystem module, with a fallback for older environments.
-- Make the self-updater use the same filesystem backend.
-- Add startup regression tests and verify menu registration and update installation in Android KOReader.
-
-Thanks to the community for reporting the issue and sharing the fix.
-
-### Installing the fix
-
-If KOLibby is missing from your menu, download **KOLibby-0.6.3.zip** below, extract `KOLibby.koplugin` into KOReader's `plugins` folder, replacing the existing plugin folder, and restart KOReader. Your connection, settings and downloaded books are stored separately.
-
-If your KOLibby menu already works, use **Tools → KOLibby → Settings → Check for updates**.
-
-Use the plugin ZIP attached below; GitHub's automatic source archives are for development.

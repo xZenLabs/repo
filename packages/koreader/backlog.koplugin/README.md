@@ -33,13 +33,6 @@ Backlog treats each final table-of-contents entry as an article. In a flat antho
 - **Faded read links:** links to articles you have already read can appear dimmed, like visited links in a browser.
 - **Per-book tracking:** Backlog only tracks books where you open its article list, and it never changes the EPUB file itself.
 
-## Screenshot
-
-<p align="center">
-  <img src="screenshots/articles-list.jpg" width="360" alt="Articles list"><br>
-  <em>Articles list — ▶ current, ✓ read, running count</em>
-</p>
-
 ## Install
 
 Backlog needs KOReader and a book with a table of contents. It works best with EPUBs and other books whose text reflows, especially when the chapters are separate articles or entries.
