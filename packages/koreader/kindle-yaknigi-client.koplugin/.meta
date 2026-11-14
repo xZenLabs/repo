@@ -1,0 +1,29 @@
+# Kindle Yaknigi Client plugin for KOReader
+# https://github.com/ioannde/kindle-yaknigi-client
+# zenpm:auto-scraped
+id=kindle-yaknigi-client
+name=Kindle Yaknigi Client
+version=0.9.11
+description=Клиент для Яндекс Книг на Kindle с джейлбрейком: плагин KOReader · Yandex Books (Bookmate) client for jailbroken Kindle: a KOReader plugin
+author=ioannde
+category=media
+platforms=koreader
+dependencies=
+source=https://github.com/ioannde/kindle-yaknigi-client
+stars=9
+updated_at=2026-11-14T13:00:58Z
+published_at=2026-11-14T12:23:41Z
+readme_url=packages/koreader/kindle-yaknigi-client.koplugin/README.md
+readme_hash=ef89e263910032af60eff31b2db1a224b6a9240c
+release_notes_url=packages/koreader/kindle-yaknigi-client.koplugin/RELEASE_NOTES.md
+release_notes_hash=a081f1c4b2b2392a1f357edc09632b520c121140fe6701c02d6766ec13544138
+releases=[{"tag_name":"v0.9.11","assets":[{"name":"yaknigi-ko-kindlehf.zip","url":"https://github.com/ioannde/kindle-yaknigi-client/releases/download/v0.9.11/yaknigi-ko-kindlehf.zip","size":47460202,"digest":"sha256:b21c6c6968b628ca371db0bb144b18fd057116fdc444a605387c8bfbf294ef5f"},{"name":"yaknigi.koplugin.zip","url":"https://github.com/ioannde/kindle-yaknigi-client/releases/download/v0.9.11/yaknigi.koplugin.zip","size":5484573,"digest":"sha256:a24f993197f660ab119914a2517ccbc7c0226d2316b2d5496924597d75c829b1"}],"name":"v0.9.11"},{"tag_name":"v0.9.9","assets":[{"name":"yaknigi-ko-kindlehf.zip","url":"https://github.com/ioannde/kindle-yaknigi-client/releases/download/v0.9.9/yaknigi-ko-kindlehf.zip","size":47440169,"digest":"sha256:97f74f7305538264887b735279fb0773658f82afa0d7582bf48b2536f7f25dbf"}],"name":"v0.9.9"}]
+source_type=release
+assets.0.arch=kindle
+assets.0.asset=yaknigi-ko-kindlehf.zip
+assets.0.url=https://github.com/ioannde/kindle-yaknigi-client/releases/download/v0.9.11/yaknigi-ko-kindlehf.zip
+assets.0.size=47460202
+assets.1.arch=any
+assets.1.asset=yaknigi.koplugin.zip
+assets.1.url=https://github.com/ioannde/kindle-yaknigi-client/releases/download/v0.9.11/yaknigi.koplugin.zip
+assets.1.size=5484573
