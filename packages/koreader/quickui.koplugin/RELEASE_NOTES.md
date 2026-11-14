@@ -1,11 +1,19 @@
 # v1.2.6 · 2026-11-14
 
-## What's Changed
+## 更新说明 
+- 动作池：更新内置动作池（ink-away、Page Scrubber、月读、番茄、koreader自带搜索菜单）
+- 快捷手势：精简 QuickUI 注册的系统动作
+- 默认设置：调整顶部面板、底部栏、竖栏的默认按钮及顺序
+- 阅读器菜单：不再把「文件管理器」标签挪到最后，保持 KOReader 原生顺序
+- 图标选择器：修复 KS 设备上 Nerd Font 图标溢出的问题
+- 书籍切换器：历史书籍数量调整为 10
+- 翻译：中文翻译条目去重、增加俄语翻译
 
-- Quick Actions: update built-in action pool (ink-away, Page Scrubber, Book, FanQie)
+## What's Changed
+- Quick Actions: update built-in action pool (ink-away, Page Scrubber, Book, FanQie、Menusearch)
 - Dispatcher: trim QuickUI's registered system actions
 - Defaults: adjust default buttons and their order for the top panel, bottom bar and vertical bar
-- Reader menu: stop moving the \
+- Reader menu: stop moving the filemanager tab to the last
 -  tab to the end, keep KOReader's native order
 - Icon Picker: fix Nerd Font glyph overflow on Kindle Scribe
 - Book Switcher: change max history books to 10
