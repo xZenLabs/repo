@@ -1,3 +1,19 @@
+# v9.5.1 · 2026-11-14
+
+# AppDock 9.5.1
+
+## Deutsch
+
+- **Night Mode ist jetzt AppDock-eigen.** Der Schalter ändert nur AppDocks gespeicherte Theme-Palette und löst kein KOReader-`ToggleNightMode`-Ereignis aus. KOReaders globale Bildschirminvertierung wird dadurch nicht eingeschaltet.
+- Die dunkle Palette wird direkt gezeichnet; auf Graustufenlesern verwendet AppDock passende Helligkeitsrollen.
+- Enthält außerdem das AppDock-Modul **Health & reading** für optionale Augenpflege, Lesestatistik, Lesepausen und Schlafenszeiterinnerungen.
+
+## English
+
+- **Night mode is now AppDock-local.** The switch updates AppDock's persisted theme palette and does not emit KOReader's `ToggleNightMode` event or enable KOReader's global screen inversion.
+- The dark palette is rendered directly; grayscale readers use appropriate brightness roles.
+- Also includes AppDock's **Health & reading** module for optional eye-care scheduling, reading statistics, break reminders, and bedtime reminders.
+
 # v9.3.5 · 2026-11-12
 
 UPPERCASE
@@ -38,14 +54,3 @@ Dieses Patch-Release behebt verbleibendes Flackern beim Homescreen-Seitenwechsel
 Der Animationsrunner startet nun direkt mit dem ersten bewegten Frame statt zunächst einen statischen `t=0`-Frame zu zeichnen. Dadurch entsteht vor dem Homescreen-Seitenwechsel kein zusätzlicher sichtbarer Refresh.
 
 Das Quick-Settings-Dropdown startet ebenfalls ohne statischen Vorab-Frame. Beim Wegfahren werden Dropdown und Animationsebene zuerst vollständig entfernt; anschließend wird genau einmal ein normaler UI-Refresh für die darunterliegende Seite ausgeführt, um Ghosting sauber zu entfernen.
-
-# v9.3.1 · 2026-11-12
-
-# AppDock 9.3.1 — Flackerfreie Animationen
-
-Dieses Patch-Release entfernt die zusätzlichen Full-/Partial-Refreshes vor und nach den UI-Animationen.
-
-- Homescreen-Seitenwechsel übergeben jetzt regional mit `fast` an die echte UI.
-- Quick Settings und Recently-used/Open Apps verwenden beim Ein- und Ausblenden keine zusätzlichen `partial`- oder normalen UI-Refreshes mehr.
-- Die kurzen Schalteranimationen in Quick Settings lösen keinen abschließenden Full-Refresh mehr aus.
-- Die Animationsebene bleibt beim Übergang auf die echte UI im regionalen Fast-Refresh-Pfad, wodurch das sichtbare Flackern auf E-Ink-Geräten entfällt.
