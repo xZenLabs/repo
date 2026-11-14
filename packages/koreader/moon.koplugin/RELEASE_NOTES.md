@@ -1,3 +1,44 @@
+# v0.5.18 · 2026-11-14
+
+## 月读 v0.5.18
+
+KOReader 插件包：`book.koplugin-v0.5.18.zip`
+
+输入法词库（整库，手动 sideload）：`dictionary.sqlite3 dictionary-wubi.sqlite3 dictionary-cangjie.sqlite3 dictionary-zhuyin.sqlite3`
+
+安装：解压后将 `book.koplugin` 复制到 `koreader/plugins/`，然后重启。
+
+词库 sideload：下载对应布局的词库，直接放入 `koreader/.moon/`
+（与 `book.sqlite3` 同级）。附件已使用最终文件名，无需重命名。
+
+### 更新内容
+
+相对上一版本 `v0.5.17`：
+
+#### 新功能
+
+- :sparkles: (legado): 分类取阅读 App 的书架分组，取不到再退回书源标签 (a7d7c511)
+- :sparkles: (github): 添加赞助配置 (6700976a)
+- :sparkles: (http): 通用 Cookie 罐，请求层自动收发 Set-Cookie (f99e11c5)
+- :sparkles: (bars): 支持双行布局并修正组件绘制 (e7ebedff)
+
+#### 修复
+
+- :bug: (bars): 将底栏原生配置局部变量改为 footer_settings (833c972d)
+- :bug: (source): 京东/网易/QQ阅读/潇湘/晋江/zlib 改用会话 Cookie 罐 (dc034a9d)
+- :bug: (changpei): 复用服务端会话 Cookie，验证后重取正文 (9fa7358f)
+- :bug: (reader): 联网与唤醒后补刷章节书目录 (b11a59c0)
+- :bug: (desktop): 后台同步连接失败不再弹提示 (614b5a3e)
+
+#### 变更
+
+- :loud_sound: (reader): 增加刷新触发源诊断 (#126) (6bd5d476)
+- :loud_sound: (reader): 增加翻页耗时与慢路径日志 (#126) (49d9c0ce)
+
+### 完整对比
+
+https://github.com/AnkioTomas/moon/compare/v0.5.17...v0.5.18
+
 # v0.5.17 · 2026-11-13
 
 ## 月读 v0.5.17
@@ -107,37 +148,3 @@ KOReader 插件包：`book.koplugin-v0.5.13.zip`
 ### 完整对比
 
 https://github.com/AnkioTomas/moon/compare/v0.5.12...v0.5.13
-
-# v0.5.12 · 2026-11-12
-
-## 月读 v0.5.12
-
-KOReader 插件包：`book.koplugin-v0.5.12.zip`
-
-输入法词库（整库，手动 sideload）：`dictionary.sqlite3 dictionary-wubi.sqlite3 dictionary-cangjie.sqlite3 dictionary-zhuyin.sqlite3`
-
-安装：解压后将 `book.koplugin` 复制到 `koreader/plugins/`，然后重启。
-
-词库 sideload：下载对应布局的词库，直接放入 `koreader/.moon/`
-（与 `book.sqlite3` 同级）。附件已使用最终文件名，无需重命名。
-
-### 更新内容
-
-相对上一版本 `v0.5.11`：
-
-#### 新功能
-
-- :sparkles: (share): 支持把划词和高亮生成书摘图片 (02cc33a8)
-
-#### 修复
-
-- :bug: (webdav): 强制逐目录核对并保护书目 (1c0aeeb8)
-- :bug: (core): 修复审计发现的笔记、漫画和书摘问题 (57545c9a)
-- :bug: (comic): 打包时按屏宽缩小并切片过高的漫画页 (74cb2aca)
-- :bug: (reader): 读完软删除等关书后再提示并设置超时 (f6a317b2)
-- :bug: (wechat): 任意路径的脚注 note.png 都回退到自带注标 (d2e7c57b)
-- :bug: (local): 换书库目录或搬书时按 md5 保留阅读记录 (6f396fb1)
-
-### 完整对比
-
-https://github.com/AnkioTomas/moon/compare/v0.5.11...v0.5.12
