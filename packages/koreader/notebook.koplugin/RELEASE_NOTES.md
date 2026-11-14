@@ -1,3 +1,16 @@
+# v1.11.2 · 2026-11-14
+
+## [1.11.2](https://github.com/pierspad/notebook.koplugin/compare/v1.11.1...v1.11.2) (2026-11-14)
+
+### 🔧 Improvements
+
+* accelerate PDF RLE packing, SVG and XOPP exports ([0f6caf1](https://github.com/pierspad/notebook.koplugin/commit/0f6caf127b8a41ea750771b28f5207487ddb8fd1))
+* add direct BB8 and RGB32 scans for highlighter ink ([0e918ea](https://github.com/pierspad/notebook.koplugin/commit/0e918eacee4d44f2cdd528a61096dd59808478b7))
+* hoist renderer and canvas loop allocations ([4754e4f](https://github.com/pierspad/notebook.koplugin/commit/4754e4f072c8ccf28efdb716bd9667be654a2d94))
+* optimize lasso selection and marker area clipping ([4055538](https://github.com/pierspad/notebook.koplugin/commit/4055538a171909ef28dbb908c65e607f52007344))
+* remove inner closures in geometry and polygon ink ([17c4da1](https://github.com/pierspad/notebook.koplugin/commit/17c4da124ad70f6aa54ab77b32f9cc802fe92611))
+* streamline pen and pencil FFI rasterization ([705afb2](https://github.com/pierspad/notebook.koplugin/commit/705afb2f0e1ff36d570948a373c51f54e617bdce))
+
 # v1.11.1 · 2026-10-26
 
 ## [1.11.1](https://github.com/pierspad/notebook.koplugin/compare/v1.11.0...v1.11.1) (2026-10-26)
@@ -61,11 +74,3 @@
 ### 🐛 Bug Fixes
 
 * keep KOReader input chain safe after closing a notebook ([856f2ec](https://github.com/pierspad/notebook.koplugin/commit/856f2ec243f13dd923a09caa04e3ca7f60114cfa))
-
-# v1.9.0 · 2026-10-10
-
-## [1.9.0](https://github.com/pierspad/notebook.koplugin/compare/v1.8.0...v1.9.0) (2026-10-10)
-
-### ✨ New Features
-
-* improve gallery navigation and folder naming ([ad3c5d5](https://github.com/pierspad/notebook.koplugin/commit/ad3c5d5a2f7f6249e761994bf4e1c5aa04681b2e))
