@@ -1,0 +1,23 @@
+# Bookorbit plugin for KOReader
+# https://github.com/jadehawk/bookorbit.koplugin
+# zenpm:auto-scraped
+id=bookorbit
+name=Bookorbit
+version=1.7.0
+description=Standalone distribution and discoverable by KOReader plugin catalogs such as Storefront.
+author=jadehawk
+category=utility
+platforms=koreader
+dependencies=
+source=https://github.com/jadehawk/bookorbit.koplugin
+stars=5
+updated_at=2026-11-14T09:00:59Z
+published_at=2026-10-13T17:35:19Z
+readme_url=packages/koreader/bookorbit.koplugin/README.md
+readme_hash=13dba948fc3bf93aaa6a5c9276afcc79cc6a2bf1
+release_notes_url=packages/koreader/bookorbit.koplugin/RELEASE_NOTES.md
+release_notes_hash=12c3aa8de0fdc2c21ff31ad6bdb86b708709e35b1f0be86e5b36b71739916023
+releases=[{"tag_name":"v1.7.0","assets":[{"name":"bookorbit.koplugin.zip","url":"https://github.com/jadehawk/bookorbit.koplugin/releases/download/v1.7.0/bookorbit.koplugin.zip","size":205539,"digest":"sha256:034cfdb0e1888a71e8b1f7e40ab9da5237aab7fa8975dfb31a1d060cbe2b671d"}],"name":"v1.7.0"},{"tag_name":"v1.5.5","assets":[{"name":"bookorbit.koplugin.zip","url":"https://github.com/jadehawk/bookorbit.koplugin/releases/download/v1.5.5/bookorbit.koplugin.zip","size":201437,"digest":"sha256:d2357ede4dedef4c8306226ab09ee5299995dd106a4bf0ac2f7f63ee249cdb1b"}],"name":"v1.5.5"},{"tag_name":"v1.5.4","assets":[{"name":"bookorbit.koplugin.zip","url":"https://github.com/jadehawk/bookorbit.koplugin/releases/download/v1.5.4/bookorbit.koplugin.zip","size":199125,"digest":"sha256:58b03c38f0feda3d01d79589f899b1b9c20e259f8d45eeb99a71658cf32a5722"}],"name":"v1.5.4"},{"tag_name":"v1.5.2","assets":[{"name":"bookorbit.koplugin.zip","url":"https://github.com/jadehawk/bookorbit.koplugin/releases/download/v1.5.2/bookorbit.koplugin.zip","size":196813,"digest":"sha256:2092b13cd6601744efb28bbc5b343a5ff5ab626f75c7f7a02f39b78dc1ddd4b8"}],"name":"v1.5.2"},{"tag_name":"v1.5.1","assets":[{"name":"bookorbit.koplugin.zip","url":"https://github.com/jadehawk/bookorbit.koplugin/releases/download/v1.5.1/bookorbit.koplugin.zip","size":196782,"digest":"sha256:3a52d31a84349883acd6845b6caec9d1d68ed254d4c495882fa281404cbe80d1"}],"name":"v1.5.1"},{"tag_name":"v1.5.0","assets":[{"name":"bookorbit.koplugin.zip","url":"https://github.com/jadehawk/bookorbit.koplugin/releases/download/v1.5.0/bookorbit.koplugin.zip","size":195901,"digest":"sha256:e5a2faf4f0bfa5e3ad1cf68a2c18bc5bd29b0f101273ae6fc21568dd2c7980ff"}],"name":"v1.5.0"},{"tag_name":"v1.4.0","assets":[{"name":"bookorbit.koplugin.zip","url":"https://github.com/jadehawk/bookorbit.koplugin/releases/download/v1.4.0/bookorbit.koplugin.zip","size":188561,"digest":"sha256:5bb88c84949775b743b489349157101097bd862b76df83c35eae7d0986222835"}],"name":"v1.4.0"}]
+source_type=release
+source_asset=bookorbit.koplugin.zip
+size=205539
