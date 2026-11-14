@@ -1,3 +1,22 @@
+# v1.4.0-beta.1 · 2026-11-14
+
+## OrbitUI settings and Bookshelf patches
+
+- **Custom quick actions** opens the saved list and its create button from **Dock & interface**.
+- Pick the app-bar icon at **Dock & interface → Icons, fonts & shared appearance → Icons → System Icons → Tab Bar → Tab: OrbitUI**. With the picker set to **Default**, you can supply `koreader/icons/orbitui_menu.svg`.
+- OrbitUI runs KOReader’s registered Bookshelf patch hooks. **Progress Bookmarks** settings appear under **Library → Advanced library settings**. **Bookshelf Bar Styles** appear in the line editor for a line containing `%bar`.
+- The OrbitUI tab offers **Restart KOReader** on supported devices. Android shows **Close KOReader** and prompts you to reopen the app.
+
+## Reader and library
+
+- Comic archive metadata from ComicInfo now feeds Library and book information. KOReader custom fields retain priority.
+- Library searches reuse normalized book text between queries.
+- The reader has a compact text-selection menu, dictionary highlight feedback, native footer controls, and optional Syncery and Bluetooth HID shortcuts when available.
+
+## Updating
+
+Enable **Include preview releases** under **OrbitUI → System & maintenance → Update OrbitUI** and check for updates. Reopen KOReader after installation. Stable remains on 1.3.0.
+
 # v1.3.0-beta.1 · 2026-11-13
 
 ## One place for OrbitUI settings
@@ -101,30 +120,3 @@ Package SHA-256: `d7abac63c97b05e5a7b6b77d6ee3d20b9d6ebd16cc92e13eab422200e07ffd
 Ny läsarpanel med bokverktyg, pågående böcker och genväg till KOReaders vanliga läsinställningar. Dessutom kommer lokala bok-/serietips, egna läsreferenser, Nästa i serien, läsprognos och en ny uppdateringspanel. Panelen är standard i betan och kan stängas av i OrbitUI-inställningarna.
 
 **Tryck efter vila är ännu inte färdigtestat på Bigmen**, eftersom den trådlösa anslutningen bröts. Betan publiceras med den begränsningen. Uppdatera via förhandskanalen och starta om KOReader.
-
-# v1.2.0-beta.1 · 2026-11-09
-
-## Svenska
-
-Första betan i 1.2-serien, efter den stabila 1.1-releasen. Bookshelf är uppdaterat till **6.4.1**. SimpleUI var redan aktuellt (3.0.3).
-
-- Mindre onödigt arbete med omslag, metadata och kataloger; bättre återanvändning av lätta hyllistor och lugnare uppdateringar efter metadataextraktion. Förväntade förbättringar, inte uppmätta hastighetsvinster på Bigmen.
-- Nya val för lika höga/lika stora böcker, ryggtextens storlek och Plain/Spines-serieboxar. Valbara serierutor även i Covers/List och bläddring per årtionde.
-- Anpassat till OrbitUI: separata bibliotekssektioner, Home/dock, serieomslag, MAL, ornament, taggar, BookOrbit och Silverfish behåller sina egna inställningar och ansvar.
-- Säkrare omslagscache vid skrivfel och avbrutna bakgrundsjobb. Inga inställningar, läsdata eller cachefiler nollställs.
-
-**1.1.0 är fortfarande stabil/latest.** Den här betan finns i förhandskanalen. Nya layoutval, vila/återgång och prestanda med stora bibliotek behöver fortfarande provas på enheten. Automatiska tester är inte ett sådant godkännande.
-
-Vi aktiverar inte upstreams nya helsidescache/förladdning, bytecode-sökare eller uppdelning av navigationsinställningar: de behöver först uppfylla OrbitUI:s minnes-, modul- och återställningskrav. Omslags- och listförbättringarna ingår ändå.
-
-## English
-
-First 1.2 preview after stable 1.1. Integrates **Bookshelf 6.4.1**; SimpleUI 3.0.3 was already current. Credit to AndyHazz, doctorhetfield-cmd and their contributors for the upstream foundations and improvements.
-
-Lighter cover/metadata/directory work, retained scoped shelf lists and throttled extraction updates; optional book-size/spine-text/series-box styles, Covers/List series tiles and Decades browsing. Host adaptations preserve OrbitUI sections, Home/dock, cover proportions, ornaments, tags, BookOrbit/MAL/Hardcover ownership and the optional Silverfish card. Cache-write failures preserve the previous good cover and retired background callbacks stay inert.
-
-New whole-page pixel caching/build-ahead, the competing bytecode searcher and navigation-file migration remain deferred in hosted mode. No settings, reading data, cache reset or server deployment. API1 and the identical 2,000 installed paths are retained.
-
-Use the complete **orbitui.koplugin.zip**, not GitHub's source archive; restart KOReader after updating. Disable standalone SimpleUI/Bookshelf before first installation. Back up settings and reading data separately: code rollback does not restore them or third-party saves. Stable **1.1.0** remains available and unchanged.
-
-Automated source/package/native-fixture/upgrade/rollback checks precede publication. Physical Bigme font/layout/touch/colour/night/rotation/wake, large-library resource use and timings remain pending. This is a prerelease, not a device-performance certification.
