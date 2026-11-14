@@ -1,3 +1,13 @@
+# v0.14.0 · 2026-11-14
+
+## [0.14.0](https://github.com/ghepting/shelfspace.koplugin/compare/v0.13.0...v0.14.0) (2026-11-14)
+
+
+### Features
+
+* colour the README logo's empty slot green to match SideShelf ([#99](https://github.com/ghepting/shelfspace.koplugin/issues/99)) ([9ae5684](https://github.com/ghepting/shelfspace.koplugin/commit/9ae568424b8861b334ce1a06f87fbc75e5cdc7bd))
+* hide the chart and summary to give the list the whole page ([#101](https://github.com/ghepting/shelfspace.koplugin/issues/101)) ([98d2823](https://github.com/ghepting/shelfspace.koplugin/commit/98d2823f23e34222423ff919e0e344e071baab09))
+
 # v0.13.0 · 2026-11-04
 
 ## [0.13.0](https://github.com/ghepting/shelfspace.koplugin/compare/v0.12.1...v0.13.0) (2026-11-04)
@@ -33,12 +43,3 @@
 ### Bug Fixes
 
 * keep the item count at the right of the list, and make the chart's legend plain text with the info icon right after Other ([#90](https://github.com/ghepting/shelfspace.koplugin/issues/90)) ([6327870](https://github.com/ghepting/shelfspace.koplugin/commit/6327870d4d7515d51f4fbcca386472a86b7db6dd))
-
-# v0.11.0 · 2026-11-02
-
-## [0.11.0](https://github.com/ghepting/shelfspace.koplugin/compare/v0.10.2...v0.11.0) (2026-11-02)
-
-
-### Features
-
-* a landscape layout, with the chart or summary in a column beside the list, and landscape sizes in the size check ([#88](https://github.com/ghepting/shelfspace.koplugin/issues/88)) ([dd0e7b8](https://github.com/ghepting/shelfspace.koplugin/commit/dd0e7b859201716e0b5d70578ed2ebd4df6ec2b2))

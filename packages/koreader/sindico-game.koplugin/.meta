@@ -1,0 +1,23 @@
+# Sindico Game plugin for KOReader
+# https://github.com/beater-studios/sindico_game.koplugin
+# zenpm:auto-scraped
+id=sindico-game
+name=Sindico Game
+version=1.1.1
+description=You were elected building manager. We are sorry. A card decision game for KOReader, in English, Portuguese and Spanish.
+author=beater-studios
+category=games
+platforms=koreader
+dependencies=
+source=https://github.com/beater-studios/sindico_game.koplugin
+stars=5
+updated_at=2026-11-14T18:01:03Z
+published_at=2026-11-13T02:25:15Z
+readme_url=packages/koreader/sindico-game.koplugin/README.md
+readme_hash=2015541fa41d577bb320c3274f3446958a61b8be
+release_notes_url=packages/koreader/sindico-game.koplugin/RELEASE_NOTES.md
+release_notes_hash=fcdffdd311edf95bed6bb2eb22374cb518860de8f9a59b1f521dd88bc741c84f
+releases=[{"tag_name":"v1.1.1","assets":[{"name":"sindico_game.koplugin.zip","url":"https://github.com/beater-studios/sindico_game.koplugin/releases/download/v1.1.1/sindico_game.koplugin.zip","size":530676,"digest":"sha256:b078a1087c88c3f4a34b03744595a524464ce1ac5d10b1e9c243c90ea18ae1c3"}],"name":"v1.1.1"},{"tag_name":"v1.1.0","assets":[{"name":"sindico_game.koplugin.zip","url":"https://github.com/beater-studios/sindico_game.koplugin/releases/download/v1.1.0/sindico_game.koplugin.zip","size":530451,"digest":"sha256:6182d7986e2bd3864b0a8d8a4e42d379949b8c8b05519d6fe55dfb016ed2e9a1"}],"name":"v1.1.0"},{"tag_name":"v1.0.2","assets":[{"name":"sindico_game.koplugin.zip","url":"https://github.com/beater-studios/sindico_game.koplugin/releases/download/v1.0.2/sindico_game.koplugin.zip","size":248758,"digest":"sha256:deaf4bdc8954d4fa6932408f9c9cfd727f1905f80601f3a05d33d177b7aba9b5"}],"name":"v1.0.2"},{"tag_name":"v1.0.1","assets":[{"name":"sindico_game.koplugin.zip","url":"https://github.com/beater-studios/sindico_game.koplugin/releases/download/v1.0.1/sindico_game.koplugin.zip","size":217532,"digest":"sha256:69e2f1ad31af3836e2d9da3fd3221527b629949f16f393e194d5ebb3e96e2b61"}],"name":"v1.0.1"},{"tag_name":"v1.0.0","assets":[{"name":"sindico_game.koplugin.zip","url":"https://github.com/beater-studios/sindico_game.koplugin/releases/download/v1.0.0/sindico_game.koplugin.zip","size":217386,"digest":"sha256:57328742ab49c3134d877187ec47ef8de15308b07bb2bdfc31dd9c31e515cecc"}],"name":"v1.0.0"}]
+source_type=release
+source_asset=sindico_game.koplugin.zip
+size=530676
