@@ -45,6 +45,8 @@ To update later, you can do it from inside ShelfSpace when you choose to: see [A
 
 Three tabs: **Library**, **KOReader**, and **Duplicates**, which only appears when you have some. Held upright, each tab has its chart or summary over its list; held sideways (on a tablet, or a reader you rotate), the summary moves into a column on the left and the list gets the full height beside it.
 
+To give the list the whole page, tap the round chevron at the end of the tabs: it hides the chart or summary on every tab, and tapping it again brings them back. It points the way they go, up when they are over the list and left when they are in a column, and ShelfSpace remembers your choice the next time you open it. A set of duplicates keeps its heading, since that is where **‹ Back** is.
+
 ### Library
 
 At the top, the chart and its legend: books, KOReader's data, other files and free space. They only show where the space went. The info icon after **Other** explains what that space is and why it is left alone.
@@ -53,7 +55,7 @@ Under it, your files, largest first. Each row has a tile for its type, a colour 
 
 - **Open things.** Tap a folder to go in; the first row in a folder is `../`, to go back up. Tap a file, or press and hold any row, for its card: type, size, where it is, when it changed, when you last opened it and your progress, with **Open** and **Book info**. For the book you have open there is **Close book**, so you can delete it.
 - **Search** (the magnifier) looks by name through the folder you are in and everything under it. Once you have searched, the button shows your search and tapping it clears it.
-- **Filter** by file type, or by **Show**: books you have finished, or never opened, wherever they are. What is narrowing the list appears as chips with a ✕, each undoing just that. When nothing matches, you are told why and given a button that undoes it.
+- **Filter** by file type, or by **Show**: every book in the library, the books you have finished, or the ones never opened, wherever they are. What is narrowing the list appears as chips with a ✕, each undoing just that. When nothing matches, you are told why and given a button that undoes it.
 - **Sort** by size, name, date or last opened; the arrow beside it flips the direction.
 
 #### Deleting
@@ -155,9 +157,9 @@ Anything else is untested. If you try it on another device, please [tell us how 
 | --- | --- | --- |
 | <img src="assets/formats.png" width="260"> | <img src="assets/menu.png" width="260"> | <img src="assets/locked-rows.png" width="260"> |
 
-| Why it is locked | | |
+| Why it is locked | Chart hidden | |
 | --- | --- | --- |
-| <img src="assets/locked-card.png" width="260"> | | |
+| <img src="assets/locked-card.png" width="260"> | <img src="assets/hidden.png" width="260"> | |
 
 | Sets of copies | Compare and choose | Confirm |
 | --- | --- | --- |
