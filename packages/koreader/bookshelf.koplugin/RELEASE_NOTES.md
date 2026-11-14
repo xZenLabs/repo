@@ -1,3 +1,14 @@
+# v6.5.1 · 2026-11-14
+
+## New
+
+- Turkish translation
+- Favorites can be sorted by Collection order, then arranged by hand: long-press a book on the shelf to move it
+
+## Improvements
+
+- Hardcover ratings round to the nearest half star (3.9 now shows 4 stars, 3.3 shows 3½)
+
 # v6.5.0 · 2026-11-14
 
 ## New features
@@ -85,8 +96,3 @@
 - Fix: spines flickered while publication dates were read in the background
 - Fix: the colour picker's No background tile cut its label short
 - Fix: the search box in Bookshelf's pickers (themes, icons, collections and others) went square while typing
-
-# v6.3.3 · 2026-11-05
-
-- Fix: tapping the page arrows in the book menu's Cover tab, after searching online for covers, crashed KOReader (#585)
-- Fix: the "Refreshing library…" message didn't show, or showed cut off, on some Kindles such as the Paperwhite 6 (#584)
