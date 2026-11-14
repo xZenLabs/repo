@@ -1,3 +1,18 @@
+# v0.6.0 · 2026-11-14
+
+
+- The plugin checks once, the first time it needs Stockfish, that it runs on the device (about half a second on a Kindle), and keeps the small engine where it does not, as on e-readers where the binary cannot run. An engine that stops in the middle of an analysis is noticed at once.
+- Review at the end of a Lichess game: a game that ends with its board open shows a card with the result and Review the game first, and the bar of a finished game has Review. A game the site analyzed opens on its summary; one it did not offers the plugin's engine, with how long it takes, and an option to always analyze at the end of the game, which goes off again from More of the review. The analysis shows its progress as a bar, and every move it judged carries the tag "plugin's engine".
+- The review tells about each move in a panel under the board: the move with the sign of Lichess (??, ?, ?!) and its judgment, the better move with an arrow on the board, and the evaluation in words ("white mates in 2", "black +1.5"). Games analyzed by Lichess get the arrow too.
+- Moves are written with the pieces as symbols, the same in every language: in the review, the list of moves, the most played moves and under every board.
+- The board of a review always shows the coordinates, since its moves and the better ones name squares.
+- After the analysis of an offline game by Stockfish, its summary opens first, as at the end of a Lichess game, with your side marked.
+- A change of the whole board (a game arriving right after its board opened, the card at the end, the board turned) now refreshes with a flash. Without it, on the Kindle the bar of buttons could stay blank until the next flash.
+- The summary of an analysis has a chart of the evaluation, a tap away from each move, says whose analysis it is, marks your side, and has My first mistake, which goes to your first mistake or blunder. The accuracy of each phase moved to the rows of the phases.
+- Stockfish on the device: the plugin carries Stockfish 11 built for the Kindle, at the lowest priority so the screen keeps answering. The analysis of a game played without internet uses it, judging every move as Lichess does (inaccuracies, mistakes and blunders, average loss and accuracy, in a summary under More); and a Lichess game the site did not analyze can be analyzed by it from More, the review saying it is the plugin's analysis, not Lichess's.
+- The summary of an offline game analyzed by the small engine no longer offers a summary page it did not have, which closed the review with an error.
+- Studies, in the online part: your studies (private ones too with the optional permission `study:read`, which the link for creating a token now marks, since it only reads), another player's, also from their profile, or one by its address or code. A study is kept on the device, downloaded in the background, to read without internet: a chapter as a commented game, with its comments and arrows, and an interactive chapter as a guided one, with the author's comments on wrong moves. Navigating the variations comes later.
+
 # v0.5.0 · 2026-11-13
 
 
@@ -63,8 +78,3 @@
 - Piece sets: classic, Cburnett and Merida.
 - Optional coordinates on the edges of the board.
 - These are in the settings and in the offline menu, and each choice shows a sample before its name.
-
-# v0.1.1 · 2026-11-07
-
-
-- When Lichess refuses the token, the online part is blocked except for one row that goes to connecting an account, and tapping it removes the token.
