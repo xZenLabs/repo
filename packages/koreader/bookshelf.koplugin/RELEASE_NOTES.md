@@ -2,7 +2,7 @@
 
 ## New features
 
-- Collection shelves you arrange yourself (#390): Source > Your own collection picks a KOReader collection or makes one. Long-press a book to arrange: swipe it a place at a time, tap another book to send it there, long-press to swap. Add ornaments among the books and move them the same way.
+- Collection shelves you arrange yourself (#390): Source > Your own collection picks a KOReader collection or makes one. Long-press a book to arrange: swipe it a place at a time, or long-press another book or ornament to swap them. Tap another book to arrange that one instead. Add ornaments among the books and move them the same way.
 - Hardcover works without a sync plugin, or with either one (#603): give Bookshelf a Hardcover API key in Hardcover enrichment > Hardcover API key
 - Auto-link all books now runs in the background while you use your device, with progress in the status line. It pauses when you open a book and carries on when you come back to the shelf.
 - Sort by time left (#602)

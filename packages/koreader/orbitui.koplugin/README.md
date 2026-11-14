@@ -20,6 +20,10 @@ top. Please support and credit the original creators.
 **New in 1.3** · Open OrbitUI beside Quick Actions to change Home, Library or
 dock settings. Long-press a dock icon to add, replace or remove a shortcut.
 
+**[Try the 1.4 beta](https://github.com/komadorirobin/orbitui.koplugin/releases/tag/v1.4.0-beta.2)** ·
+The latest preview includes Bookshelf 6.5.0, with hand-arranged collection shelves
+in Library without a fixed profile, a Time left sort, and an optional Hardcover API key.
+
 > **OrbitUI replaces the standalone SimpleUI and Bookshelf plugins.**
 > Neither is required separately. If either is installed, disable it and restart
 > KOReader before installing OrbitUI. Never run them alongside OrbitUI. Keep

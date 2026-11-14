@@ -1,3 +1,16 @@
+# v1.18.1 · 2026-11-14
+
+### What's new
+
+- If you remove your e-reader in Seekquel, the add-on now tells you it is disconnected instead of quietly retrying with the old connection. The Seekquel menu offers Connect again.
+- Reading time Seekquel turned away while the device was disconnected is sent once you connect again.
+
+### Install
+
+Already paired? The add-on updates itself: open Seekquel in KOReader's menu and accept the update when it is offered.
+
+New install: download seekquel.koplugin-v1.18.1.zip below, unzip it, and copy the seekquel.koplugin folder into KOReader's plugins folder. Restart KOReader, then open Seekquel from the menu to pair.
+
 # v1.18.0 · 2026-11-08
 
 ### What's new
@@ -47,15 +60,3 @@ New install: download seekquel.koplugin-v1.16.0.zip below, unzip it, and copy th
 Already using the add-on? It updates itself; open the Seekquel menu in KOReader and accept the update.
 
 Installing for the first time: download `seekquel.koplugin-v1.15.1.zip`, unzip it, and copy the `seekquel.koplugin` folder into KOReader's `plugins` folder on your e-reader. Restart KOReader, then pair from the Seekquel menu.
-
-# v1.15.0 · 2026-10-10
-
-### What's new
-
-- **Continuing from Seekquel lands in the right place in the chapter.** When you accept "Continue there" for a place you reached in the Seekquel app, KOReader now opens the same point in that chapter instead of a percentage of the whole book. This works when your file lists the same chapters as the one you read in the app; otherwise the percentage is used as before.
-- **Seekquel learns how far into the chapter you are.** Each sync now says how far through the current chapter you have read, so the Seekquel app can open the same point in it.
-- **Fixed:** the offer to continue from Seekquel showed two percent signs ("60%%"). It now reads "60%".
-
-### Install
-
-Download `seekquel.koplugin-v1.15.0.zip`, unzip it, copy the `seekquel.koplugin` folder into `koreader/plugins` on your reader and restart KOReader. Then open Tools, Seekquel, Connect this device. If the add-on is already installed, it updates itself from the Seekquel menu.
