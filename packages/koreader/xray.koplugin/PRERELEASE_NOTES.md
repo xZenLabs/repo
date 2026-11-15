@@ -1,3 +1,10 @@
+# 26.11.15-beta · 2026-11-15
+
+- Various fixes
+- #166 
+
+**Full Changelog**: https://github.com/ultimatejimmy/xray.koplugin/compare/26.11.13-beta...26.11.15-beta
+
 # 26.11.13-beta · 2026-11-13
 
 ## What's New in 26.11.13-beta
@@ -57,9 +64,3 @@ Fix #164
 Fix #163 
 
 **Full Changelog**: https://github.com/ultimatejimmy/xray.koplugin/compare/26.11.5...26.11.6-beta
-
-# 26.11.4-beta2 · 2026-11-04
-
-- Do unit scanning in the background 
-
-**Full Changelog**: https://github.com/ultimatejimmy/xray.koplugin/compare/26.11.2-beta...26.11.4-beta2

@@ -1,3 +1,17 @@
+# v0.4.3 · 2026-11-15
+
+## Fixed
+
+- Dictionaries with lists of pictures in boxes of a set size that load as they come into view, such as the picture lists of some Japanese dictionaries: a lookup no longer waits 1.5 seconds for pictures pages away, and later pages show their pictures instead of empty boxes.
+- Newer Android WebViews: pictures without a size of their own that load as they come into view are now loaded before the entry is laid out, so their pages are no longer cut short when they arrive.
+- Newer Android WebViews: pictures the WebView fetched ahead while you were reading, which could stay empty when they took long to extract, are fetched again when their page is shown.
+- A tap that opens part of an entry now waits for the pictures it shows before the page is drawn.
+
+## Install
+
+- From 0.2.0: *Search → Settings → MDict dictionaries → Updates → Check for updates*, or wait for the automatic offer. Then restart KOReader (on Android, exit KOReader and open it again).
+- From 0.1.0: unzip `mdict.koplugin-0.4.3.zip` into `koreader/plugins/`, replacing the `mdict.koplugin` folder, and restart KOReader.
+
 # v0.4.2 · 2026-11-11
 
 ## Changed
@@ -80,15 +94,3 @@ See *Dictionary exporters* in the README for details.
 
 - From 0.2.0: *Search → Settings → MDict dictionaries → Updates → Check for updates*, or wait for the automatic offer. Then restart KOReader (on Android, exit KOReader and open it again).
 - From 0.1.0: unzip `mdict.koplugin-0.3.0.zip` into `koreader/plugins/`, replacing the `mdict.koplugin` folder, and restart KOReader.
-
-# v0.2.11 · 2026-11-08
-
-## Fixed
-
-- *My font* did not reach all text. It stood in only for the fonts a dictionary's stylesheet names, so text the dictionary sets in a generic font (serif, sans-serif, system-ui, ui-serif) or in a font that only the entry's own styles name kept the dictionary's font. In a dictionary whose text is set in ui-serif, only the sense numbers and labels changed. My font now covers that text too, and the characters it has no glyphs for keep the dictionary's fonts. (#3)
-- Text set in ui-serif, ui-sans-serif, ui-monospace or ui-rounded, as in dictionaries made from macOS ones, was drawn in the WebView's default font (sans-serif on Android), which does not know these names. It is now drawn in serif, sans-serif or monospace, as the dictionary intends. (#3)
-
-## Install
-
-- From 0.2.0: *Search → Settings → MDict dictionaries → Updates → Check for updates*, or wait for the automatic offer. Then restart KOReader (on Android, exit KOReader and open it again).
-- From 0.1.0: unzip `mdict.koplugin-0.2.11.zip` into `koreader/plugins/`, replacing the `mdict.koplugin` folder, and restart KOReader.

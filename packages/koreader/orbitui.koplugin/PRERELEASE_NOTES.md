@@ -1,3 +1,19 @@
+# v1.4.0-beta.4 · 2026-11-15
+
+## What’s new
+
+- **Customize the reading row on Home.** Choose up to five books in **Straight cover row** and show titles or reading percentages under the covers. The default is four books with percentages. **See all** opens the books in progress from your local reading history.
+- **Assign shortcuts to dashboard cards.** Use **When tapped** in the card’s settings to pick an action.
+- **Literary Clock.** Install the optional add-on from **Get more modules…**, restart KOReader, then add its card from **Shelf modules**. It works offline and uses English quotes.
+- **Reader tools.** Hold **Bookmarks** in the reader panel to choose a color for the current page bookmark. Filter the bookmark list by color. When a saved KOAssistant X-Ray is available, the reader panel shows its coverage and can open KOAssistant’s Mentions view.
+- **Book information.** The overview shows book language and page count when available.
+- **Bookshelf 6.5.1 and SimpleUI fixes.** Arrange Favorites in collection order, see Hardcover ratings rounded to the nearest half star, and use the library in Turkish. SimpleUI keeps goal columns aligned as percentages change and improves compatibility with older KOReader versions.
+- **Less background work on Home and in the library.** Statistics updates reuse the cover lists. Android batches cover repaints, and cold library metadata snapshots are written after opening.
+
+Enable **Include preview releases** under **OrbitUI → System & maintenance → Update OrbitUI**, then check for updates and restart after installing.
+
+Tested in KOReader emulators and with the updater from 1.4.0-beta.3 and stable 1.3.0. Physical Bigme testing of this combined build is still pending.
+
 # v1.4.0-beta.3 · 2026-11-15
 
 ## What’s new
@@ -53,24 +69,3 @@ Enable **Include preview releases** under **OrbitUI → System & maintenance →
 Open the OrbitUI updater, enable **Include preview releases**, and check for updates. Restart KOReader after installing. In this beta, the updater is under **OrbitUI → System & maintenance → Updates**.
 
 The menu and dock were tested on a Bigme B7 Pro. The default dock order was tested on an emulated Kobo. The stable channel continues to offer 1.2.0.
-
-# v1.2.0-beta.4 · 2026-11-11
-
-## Home
-
-- The straight cover row has clearer card borders, an aligned greeting and date, larger add and search icons, and a stronger divider below the book progress labels.
-- Want to read and Recently added each have their own card and pager. Their cover stacks are larger, with more room for the covers above each label and arrow.
-- The reading streak and Monday–Sunday reading chart sit beside the reading goal. They use KOReader's local statistics and are available in English and Swedish.
-- The Silverfish companion and its details make better use of the space beside the current book.
-
-## SimpleUI 3.0.3 integration
-
-- Copy visibility settings for shared File Manager and Reader menu items.
-- See a folder's name on its File Manager placeholder when no cover is available.
-- Tiny Critter has updated bubble tails and shadows.
-
-## Testing
-
-The Home layout and both shelf pagers were checked on a Bigme. One Recently added cover briefly used a placeholder after paging and returned after restarting KOReader. The combined release was checked with local tests and upgrade checks.
-
-Choose the **preview** channel in OrbitUI's updater to install this beta. The **stable** channel offers 1.1.0.

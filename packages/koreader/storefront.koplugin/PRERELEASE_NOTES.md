@@ -1,3 +1,9 @@
+# 26.11.15-beta · 2026-11-15
+
+- refine font catalog logic
+
+**Full Changelog**: https://github.com/ultimatejimmy/storefront.koplugin/compare/26.11.13-beta...26.11.15-beta
+
 # 26.11.13-beta · 2026-11-13
 
 ## What's New
@@ -35,9 +41,3 @@ The font catalog has been expanded with 35 new open-license fonts across classic
 - Update delete logic
 
 **Full Changelog**: https://github.com/ultimatejimmy/storefront.koplugin/compare/26.11.1...26.11.2-beta
-
-# 26.10.30-beta · 2026-10-30
-
-- fix bug with branch install feature
-
-**Full Changelog**: https://github.com/ultimatejimmy/storefront.koplugin/compare/26.10.29-beta...26.10.30-beta
