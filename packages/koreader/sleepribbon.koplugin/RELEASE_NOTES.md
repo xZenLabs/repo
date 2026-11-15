@@ -1,3 +1,27 @@
+# v1.2.0 · 2026-11-15
+
+SleepRibbon v1.2.0 introduces full-screen previews and automatic preview updates, making it easier to customize the sleep-screen ribbon and immediately see the result.
+
+### What's new
+
+- **Full-screen preview:** Displays the applicable sleep-screen image with the configured ribbon, respecting KOReader's image scaling and rotation settings.
+- **Automatic previews:** Opens the preview after confirmed changes to typography, colors, message, layout, positioning, opacity and progress-bar settings.
+- **Profile support:** Preview reflects the selected Global or Current book profile.
+- **Non-intrusive operation:** Preview does not suspend the device or change the frontlight intensity.
+- **Easy navigation:** Tap anywhere to dismiss the preview and return to the previous menu. Manual preview remains available.
+
+### Installation
+
+1. Download `SleepRibbon-v1.2.0.zip` from the release assets below.
+2. Extract the `sleepribbon.koplugin` folder into `koreader/plugins/`.
+3. Restart KOReader.
+
+Existing settings are preserved.
+
+**Note:** KOReader's native sleep-screen custom message must be enabled, with its container set to **Banner**.
+
+For the complete release history, see [CHANGELOG.md](https://github.com/araponga321/sleepribbon.koplugin/blob/main/CHANGELOG.md).
+
 # v1.1.0 · 2026-09-30
 
 SleepRibbon v1.1.0 adds per-book profiles and cover-derived color palettes, while moving the plugin to a more reliable and convenient location directly under KOReader's Settings menu.

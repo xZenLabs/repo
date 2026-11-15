@@ -1,3 +1,23 @@
+# v9.6.2 · 2026-11-15
+
+# AppDock 9.6.2
+
+## Deutsch
+- **Theme-Auswahl repariert:** Der Theme-Editor überschattet die KOReader-Übersetzungsfunktion `_` nicht mehr mit seiner Schleifenvariable. Aurora- und andere Verlaufs-Themes lassen sich jetzt in den Einstellungen auswählen.
+
+## English
+- **Theme selection fixed:** The theme editor no longer shadows KOReader's gettext function `_` with its loop variable. Aurora and other gradient themes can now be selected in Settings.
+
+# v9.6.1 · 2026-11-15
+
+# AppDock 9.6.1
+
+## Deutsch
+- **Aurora-Homescreen repariert:** Der Paletten-Cache verarbeitet jetzt sowohl rohe Farbverläufe als auch normalisierte Theme-Stopps korrekt. Damit stürzt der Homescreen beim Aufbau mit dem Aurora-Theme nicht mehr ab.
+
+## English
+- **Aurora homescreen fixed:** The palette cache now handles both raw gradient color stops and normalized theme stops correctly, preventing a crash while building the homescreen with the Aurora theme.
+
 # v9.6.0 · 2026-11-15
 
 # AppDock 9.6.0
@@ -43,22 +63,3 @@
 - **Night mode is now AppDock-local.** The switch updates AppDock's persisted theme palette and does not emit KOReader's `ToggleNightMode` event or enable KOReader's global screen inversion.
 - The dark palette is rendered directly; grayscale readers use appropriate brightness roles.
 - Also includes AppDock's **Health & reading** module for optional eye-care scheduling, reading statistics, break reminders, and bedtime reminders.
-
-# v9.3.5 · 2026-11-12
-
-UPPERCASE
-lowercase
-CamelCase
-
-* This release fixed doom ctrlsrelease event timeout
-
-# v9.3.4 · 2026-11-12
-
-# AppDock 9.3.4
-
-## Animation refresh fix
-
-- Discards stale KOReader repaint and refresh queues before the first animation frame.
-- Prevents the hidden pre-animation refresh that caused visible E-Ink flicker on the homescreen, dropdowns, and app views.
-- Removes the redundant fast refresh when launching an app from the homescreen.
-- Keeps the homescreen page transition's single full refresh after the animation completes.
