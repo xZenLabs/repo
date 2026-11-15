@@ -1,3 +1,17 @@
+# v9.6.0 · 2026-11-15
+
+# AppDock 9.6.0
+
+## Deutsch
+- **Neues Aurora-Theme** (Nordlichter) mit Hintergrund wie der Lockscreen. Nach dem Update automatisch aktiv, Dark Mode wird dabei ausgeschaltet.
+- **Farbverläufe in Themes** (eingebaute, eigene und Store-Designs; nur auf Farbdisplays).
+- **Auto-Rotation:** AppDock dreht sich mit dem Rotationssensor und baut alle Bildschirme sauber neu auf. Schalter unter Einstellungen → Anzeige und als Kachel „Auto-rotate“.
+
+## English
+- **New Aurora theme** (northern lights) with the lockscreen background. Activated automatically after the update; dark mode is switched off.
+- **Gradients in themes** (built-in, custom and Store designs; color panels only).
+- **Auto-rotate:** AppDock follows the rotation sensor and rebuilds every screen cleanly. Switch in Settings → Display and as an "Auto-rotate" tile.
+
 # v9.5.2 · 2026-11-15
 
 # AppDock 9.5.2
@@ -48,15 +62,3 @@ CamelCase
 - Prevents the hidden pre-animation refresh that caused visible E-Ink flicker on the homescreen, dropdowns, and app views.
 - Removes the redundant fast refresh when launching an app from the homescreen.
 - Keeps the homescreen page transition's single full refresh after the animation completes.
-
-# v9.3.3 · 2026-11-12
-
-# AppDock 9.3.3 — Kein Vorab-Refresh beim Seitenwechsel
-
-Dieses Patch-Release behebt den noch sichtbaren Refresh unmittelbar vor der Homescreen-Seitenanimation.
-
-Das Animations-Overlay wird nun ohne eigenen Vorab-Refresh registriert. Der erste bewegte Frame wird direkt in den bereits sichtbaren Screen-Puffer gezeichnet und erst anschließend aktualisiert. Dadurch beginnt die Animation ohne statischen Zwischenframe.
-
-Nach dem Seitenwechsel wird das Overlay ohne zusätzlichen Zwischenrefresh entfernt. Erst danach wird genau einmal ein Full-Refresh ausgeführt, um E-Ink-Ghosting zu beseitigen.
-
-Auch das Quick-Settings-Dropdown verwendet beim Schließen keinen zusätzlichen Overlay-Refresh vor dem abschließenden UI-Refresh.

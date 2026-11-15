@@ -1,3 +1,15 @@
+# v1.8.7 · 2026-11-15
+
+## Fixed
+
+Fixes some `.cbz` files not opening.
+
+- A damaged or unusual ZIP/image header no longer stops a local `.cbz` from opening. The page now falls back to the older density-based size.
+- Page buffers on colour screens are now also capped by available memory (in bytes), not just by pixel count. Large high-DPI pages should be less likely to run out of RAM on smaller devices.
+- If a page can't be rendered at its full source size, it's retried at the lower density size instead of being left blank.
+
+**Full Changelog**: https://github.com/Craftwork2720/meguru/compare/v1.8.6...v1.8.7
+
 # v1.8.6 · 2026-11-13
 
 ## Fixed
@@ -38,13 +50,3 @@
 
 
 **Full Changelog**: https://github.com/Craftwork2720/meguru/compare/v1.8.1...v1.8.2
-
-# v1.8.1 · 2026-11-08
-
-### Fixed
-
-- Pinch in pan & zoom changes and remembers the zoom level.
-- Edge swipes in panel views no longer zoom.
-- Page turns right after a page appears are no longer missed.
-
-**Full Changelog**: https://github.com/Craftwork2720/meguru/compare/v1.8.0...v1.8.1
