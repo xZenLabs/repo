@@ -1,3 +1,26 @@
+# v2.0.1 · 2026-11-15
+
+2.0.0 was never released on its own, so this release carries both 2.0.0 and 2.0.1.
+
+## 2.0.1
+- A reading status set with Wi-Fi off can be dropped before it's sent: Reading Status… starts with Don't Send <status> while one is waiting, and the covers go back to the status the book had. The hero's button says Status · Queued meanwhile.
+- The BookOrbit · Queue shelf shows books waiting to download only.
+- Clean-up: an unused return value removed.
+
+## 2.0.0 — OrbitShelf 2.0 ("your library, ready offline")
+- Book Page: hold a book, or Book Page in its menu — cover with status, title, author, series, status, progress and last read, pages / year / language / genres; buttons beside the cover (full-width under it on a tall book); Bulk Download, Bulk Remove and Help in the top bar with where the book is and the free space; the description; the series, more by the author, or similar books with status and On device / Queued on each cover. The page opens on the series (or More by); Similar › or a swipe left past it shows Similar books, ‹ or a swipe right goes back. Also in Bookshelf's book menu (and the file browser's) for a BookOrbit book on the device. Opens over Bookshelf, closes on sleep and when a book opens; BookOrbit opened from it comes back to it.
+- The Queue: with Wi-Fi off, downloads and reading statuses wait; the queue runs once 15 s after Wi-Fi connects (statuses first, books one at a time, 50 MB kept free) or Download Queue Now. A sent status sticks after a refresh. Clock mark on queued covers; BookOrbit · Queue shelf. No timers, no polling; sleep pauses it.
+- Up Next shelf: the next book in every series you've started.
+- Covers show BookOrbit's reading status and progress (Bookshelf's own badges) for books not on the device.
+- Remove Finished Books (Downloads, Not Opened For) and a Finished Books select in Bulk Remove. Bulk Remove on every Book Page.
+- Hero: Status button for a quick Reading Status; Remove Queue on a queued book.
+- Settings regrouped: Shelves, Books, Downloads, Look, Offline, Footer, Advanced, Help. Always on: Add To Collection, Reading Status, Bulk Download / Remove (under More… in a book's menu). Single choices for Flash, Hero Buttons, Close X, Home Button, Next Book In Series (Off / Ask / Add To Queue), read from the 1.x settings: nothing you set is changed, and 1.2.x still loads them.
+- Help at the bottom of Tools › OrbitShelf (Getting Started … What's New, newest version first), each topic in a window sized to it; What's New pops up once after the update.
+- Bigger footer critter.
+- Waking to Simple UI's home (its Start With Home Screen) with Bookshelf left open closes Bookshelf under the home, so it no longer pops up by itself when Wi-Fi connects.
+- Fix: paging a series strip past the book shown jumped back to the books around it, so a long series' later books never showed.
+- Clean-up: the start-up environment lines (versions, patches, plugins) only with Diagnostics on; unused code removed.
+
 # v1.2.26 · 2026-11-11
 
 Spines need Bookshelf 6.4 (or its feat-588 test branch) — until 6.4 lands for everyone, Spines stay off on stock Bookshelf.
@@ -30,11 +53,5 @@ Note: Spines is for the Spines view when Bookshelf 6.4 drops — it needs Booksh
 # v1.2.21 · 2026-11-07
 
 OrbitShelf 1.2.21 — Footer critter stands on SimpleUI 3.0.3's ground shadow, like the home screen's.
-
-Install: unzip, copy the orbitshelf.koplugin folder into KOReader's plugins folder (.adds/koreader/plugins/ on Kobo, koreader/plugins/ on Kindle), restart KOReader, open Tools → OrbitShelf.
-
-# v1.2.20 · 2026-11-07
-
-OrbitShelf 1.2.20 — Smart Scopes and Libraries as shelves, Group By, Return To, Add To Collection, a Flash menu, background cover downloads, and shelf naming. Lookups now two at a time: same speed, less battery.
 
 Install: unzip, copy the orbitshelf.koplugin folder into KOReader's plugins folder (.adds/koreader/plugins/ on Kobo, koreader/plugins/ on Kindle), restart KOReader, open Tools → OrbitShelf.

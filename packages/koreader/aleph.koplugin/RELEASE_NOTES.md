@@ -1,3 +1,248 @@
+# v1.2.0 · 2026-11-15
+
+# Aleph 1.2.0
+
+A home screen, library and set of reader tools for KOReader, after BookOrbit's. This release brings together everything since 1.1.0, from 60 test builds (1.1.1 to 1.1.60).
+
+📖 **How to use the new features: [the Aleph wiki](https://github.com/lara-2-ko/aleph.koplugin/wiki)**
+
+## Install or update
+
+1. Download **aleph.koplugin.zip** below and extract it.
+2. Copy the **aleph.koplugin** folder into KOReader's `plugins` folder. If you are updating, replace the old folder.
+3. Restart KOReader.
+
+Your settings, Home layouts, pins and library are kept. → [Installation guide](https://github.com/lara-2-ko/aleph.koplugin/wiki/Installation-Guide) · [Updating](https://github.com/lara-2-ko/aleph.koplugin/wiki/Updating)
+
+**Optional:** the **Aleph Goodreads cookie** browser extension, used only with the Goodreads plugin by advokatb. It renews that plugin's Goodreads sign-in from your computer in one click, instead of finding and typing your cookie by hand.
+
+- `aleph-goodreads-cookie-1.0.4-chrome.zip` is for Chrome, Edge and Brave.
+- `aleph-goodreads-cookie-1.0.4-firefox.zip` is for Firefox, or the signed `.xpi`.
+
+→ [Goodreads cookie extension](https://github.com/lara-2-ko/aleph.koplugin/wiki/Goodreads-Cookie-Extension)
+
+> ⚠️ **Not compatible with ZenOS (Zen UI) or Simple UI.** Both replace the same screens as Aleph. Turn them off in Plugin management before using Aleph.
+
+---
+
+## ✨ New on Home
+
+### Literary clock widget
+The time told by a line from a book that mentions it. You see the quote for the current minute with the time in bold, and the book's title and author under it. When a minute has several quotes, the choice changes from day to day. Quotes the collection marks as not safe for work are left out.
+
+Add it from Customize Home → + Add widget → Decor. → [Literary clock](https://github.com/lara-2-ko/aleph.koplugin/wiki/Literary-Clock)
+
+### Wallpaper
+Customize Home → **+ Add wallpaper** puts a picture from your device behind every page of Home. You can choose:
+
+- **Fit:** Fill (the edges are trimmed) or Whole.
+- **Wallpaper opacity**
+- **Widget opacity:** widgets can be see-through over the picture.
+
+→ [Wallpaper](https://github.com/lara-2-ko/aleph.koplugin/wiki/Wallpaper)
+
+### Read widget
+This widget shows how much of your library you have finished ("37% of your books") over the covers of finished books. Tap it to list every finished book.
+
+### Larger interface sizes
+Settings → Home → Interface size now goes from 1× up to **1.5×**, for anyone who finds the text too small. It has nine steps, set with − and +.
+
+### Night profile
+**Off by default.** Turn it on in Settings → Home → Night profile to make night mode automatic and look the way you like. While night mode is on:
+
+- The front light changes to **your own night brightness and warmth**. Choose them, or take the light as it is right now.
+- Book text gets **a little bolder** (off or three levels), so light letters on black stay crisp.
+
+When night mode turns off, your day light comes back.
+
+**By the clock** turns night mode on and off by itself between two times. **Set them to whatever times you want** (21:00–07:00 is only the starting point). If you switch night mode by hand in between, it stays that way until the next change time.
+
+→ [Night profile](https://github.com/lara-2-ko/aleph.koplugin/wiki/Night-Profile)
+
+### Owner information
+**Optional.** If your e-reader is lost, whoever finds it can see how to contact you. Menu → **Owner information** (between Settings and About) holds your name, email and phone number. Fill in only what you want shown. They appear large under "If you find this e-reader, please contact:", and are kept on the device only. → [Owner information](https://github.com/lara-2-ko/aleph.koplugin/wiki/Owner-Information)
+
+### Widget actions
+Settings → **Widget actions** sets:
+
+- **The Quick settings widget's buttons:** up to five, each with its action, its icon and its name.
+- **What a tap on each widget opens:** its usual page, nothing, or any action.
+
+Actions come from Aleph, KOReader and every installed plugin that offers gesture actions. → [Home screen and widgets](https://github.com/lara-2-ko/aleph.koplugin/wiki/Home-Screen-and-Widgets#widget-actions)
+
+### Smarter book suggestions
+- **Discover** offers only books you can start: unread books, and in a series only the next one to read.
+- **Up next in series** shows the next book only once the book before it is finished, and only if the next one is still unread.
+
+### Yearly goal
+Tap the number to **type your goal** (1 to 100,000) instead of tapping + many times. Home now updates once, after you stop tapping.
+
+---
+
+## 📚 Library and books
+
+### Sorting authors
+- **Sort by last name:** both the library's Sort and filter (**Author (by first or last name)**) and the Authors list (First name / Last name / Most books) can sort by surname.
+- **How the surname is found:** it is the part before a comma ("Collins, Suzanne"), otherwise the last word. Jr./Sr./II are set aside, and particles such as "Le Guin" and "van Gogh" are kept.
+
+→ [Library and sorting](https://github.com/lara-2-ko/aleph.koplugin/wiki/Library-and-Sorting)
+
+### Extra filters
+Language, Pages (under 200 … 600 or more) and Released (by decade). They are opt-in under Settings → Library → Extra filters, because Aleph reads every book's details once.
+
+### Book details
+- **Half-star ratings:** tap the left half of a star for a half star.
+- **Language** is shown by name ("English") instead of a code ("en-US", "eng").
+- **Page count:** from Calibre's page-count column when there is one, otherwise KOReader's own count.
+
+### Deleting books
+- **Delete a book from its page:** ⋯ → Delete book offers two ways. *keep its data* deletes only the file (highlights and progress stay). *and its data* deletes everything.
+- **Finished books stay counted after deleting them.** Your yearly goal and the Finished this year shelf keep them. Tap a deleted book there to see when you finished it or to remove it from the record.
+
+### Covers
+Settings → Library → Covers: **Whole** (each cover at its own shape), **Fill** (every cover the same size, trimmed) or **Stretch**.
+
+### Settings → Library
+Library folders is now **Library**. It holds the folders, refresh, Covers, Extra filters and the Goodreads options.
+
+---
+
+## 📖 Reading
+
+### Coloured bookmarks, as in the Kindle app
+- **Colours:** Red, Orange, Yellow, Green, Aqua, Blue, Purple and Pink.
+- **The page's corner** shows a ribbon in the bookmark's colour (grey shades on black-and-white screens).
+- **Bookmarking a page** opens a list of colours under the ribbon. Bookmarking from the page's corner or a gesture works too (this was fixed in 1.1.36).
+- **Filtering by colour:** the bookmarks page's colour dots show the bookmarks of that colour. On the **All** tab, a highlight colour also shows bookmarks of the same colour.
+- **To skip the colour list:** turn off Settings → Reader → Choose a colour when bookmarking.
+
+→ [Coloured bookmarks](https://github.com/lara-2-ko/aleph.koplugin/wiki/Coloured-Bookmarks)
+
+### X-Ray, Aleph's own
+Turn it on in Settings → X-Ray (it is off by default). It lists the **people, places and other names** of the book and where each was mentioned **up to your page**. It finds them on the device, with no network. The card for each name shows its spellings, counts and every mention with the words around it.
+
+Optional, with your own Claude, OpenAI, Gemini or OpenAI-style key:
+
+- **Describe with AI:** what each name is, with People / Places / Other filters.
+- **Story:** chapter summaries and "the story so far", written only from what you have read.
+- **The book before:** a recap of the previous book in the series.
+- **Recap after a break:** offered when you come back to a book after a while.
+
+→ [X-Ray](https://github.com/lara-2-ko/aleph.koplugin/wiki/X-Ray)
+
+### Page turner battery
+With **BT Manager / HID Passthrough** and a Bluetooth page turner, the page's bottom line ends with a dot, the Bluetooth mark and the page turner's battery (**" · 80%"**). It appears only while a page turner reports its battery, and shows up with the first page it turns. → [Book margins and page turner battery](https://github.com/lara-2-ko/aleph.koplugin/wiki/Book-Margins-and-Page-Turner-Battery)
+
+### Reader menu
+- **Settings → Reader** is a new category. It holds Reader menu at the bottom, Page browser on swipe up, Pinned pages and bookmark colours.
+- **The cover** in the reader menu opens the book's page.
+- **Plugin buttons:** with Syncery or KOSyncthing+, a **Sync now** button. With the Goodreads plugin, a **Goodreads** button that sends your reading progress.
+
+### Extra highlight styles
+Styles added by a patch or a modified KOReader (Crosshatch, Wavy underline, Outline thick and others) appear in the Highlight sheet and the bookmark filters.
+
+---
+
+## 🔄 Sync and Goodreads
+All of these are optional and appear only with those plugins installed.
+
+### Sync both e-readers in one tap
+With **KOSyncthing+** and **Syncery**, the Quick settings Sync button and the reader menu's Sync now run the whole chain, step by step, with a Stop button:
+
+1. Wi-Fi
+2. Syncthing
+3. Syncery
+4. Waiting for the other e-reader
+5. The files exchanged both ways
+6. The jump offer, or a library refresh
+
+Syncery's **cloud** (Dropbox, WebDAV, FTP) is followed too. The other e-reader's progress shows in the library and on book pages ("60% on Colorsoft"). → [Sync two e-readers](https://github.com/lara-2-ko/aleph.koplugin/wiki/Sync-Two-E-Readers)
+
+### Import from Goodreads
+Settings → Library → **Import from Goodreads** reads your Goodreads library export (`goodreads_library_export.csv`). It shows what it would change before changing anything.
+
+- **What it fills in:** statuses, finished dates and ratings, but only where they are empty.
+- **When finished dates differ:** **Choose finished dates** lets you keep this device's day or Goodreads' day, for each book or for all at once.
+- **Books read on Goodreads but not on the device** count toward that year's goal.
+- **Importing again** never adds anything twice.
+
+→ [Goodreads](https://github.com/lara-2-ko/aleph.koplugin/wiki/Goodreads#import-from-goodreads)
+
+### Send to Goodreads
+A book's page → ⋯ → **Send to Goodreads** sends its status, plus its rating and finished date for a finished book. The book doesn't need to be open, and you confirm before anything is sent.
+
+### Goodreads tracking in the background
+Settings → Library → **Track in the background** is off unless turned on. Aleph makes the Goodreads plugin's automatic updates in a background process, so turning a page or closing a book never waits for goodreads.com. That wait could be up to 45 seconds on Wi-Fi without internet.
+
+### Goodreads sign-in, without copying cookies by hand
+**Why:** the Goodreads plugin signs in to goodreads.com with your browser's **cookies**, and its sign-in expires from time to time. Until now, renewing it meant:
+
+1. opening the browser's developer tools on a computer;
+2. finding the right request;
+3. copying a long, unreadable "Cookie" line;
+4. getting it onto the e-reader and pasting or typing it in without a single mistake.
+
+That was fiddly, easy to get wrong, and hard to do at all without a computer background.
+
+**Now it takes a few seconds:**
+
+1. On the e-reader, open Settings → Library → **Goodreads sign-in** (under Import from Goodreads). It shows an address and a four-digit code.
+2. On a computer signed in to goodreads.com, click the **Aleph Goodreads cookie** browser extension, enter the address and code, and press **Send**.
+
+The extension picks up the cookies by itself and sends them straight to the e-reader over your home network. Aleph saves them in the Goodreads plugin's settings, and the plugin is signed in again. Nothing to find, copy or type.
+
+The e-reader listens only while that screen is open, for at most 10 minutes. The four-digit code keeps other devices out.
+
+→ [Goodreads cookie extension](https://github.com/lara-2-ko/aleph.koplugin/wiki/Goodreads-Cookie-Extension)
+
+---
+
+## 🎛️ Buttons and keys
+- **Page-turn buttons** (Kobo Libra, Kindle Oasis, a keyboard) turn the pages of Home, the library, authors, series and a book's neighbours.
+- **Direction keys** (Kindle 4, keyboard Kindles) move a mark between everything that can be tapped on Aleph's screens, and Press taps it. This is on by itself on devices with those keys; turn it on elsewhere with Settings → About → Button navigation.
+
+→ [Buttons and gestures](https://github.com/lara-2-ko/aleph.koplugin/wiki/Buttons-and-Gestures)
+
+---
+
+## ⚡ Faster and steadier
+- **Changing books and quitting KOReader** no longer wait several seconds while the library index is saved. It is written in the background, and on quitting.
+- **The library is read once per session** and shared. The book you close is read again on its own, so its progress is right at once.
+- **Covers and author portraits** are made in a background process.
+- **Home's lists** are kept between refreshes instead of being sorted again many times.
+- **Clock widgets** (Clock, Analog, Literary) redraw only themselves each minute, instead of the whole of Home. The minute tick stops when no clock is shown.
+- **Rotating the screen** redraws Home at once.
+- **Settings pages** too tall for the screen come in pages instead of being cut off.
+- **Filter lists** fit their contents (long lists split into two even columns).
+
+## 🛠️ Fixes
+- **New highlights** sometimes came out yellow whatever colour was picked.
+- **Opening Sort and filter** crashed with some libraries.
+- **The bookmark colour list** didn't appear when bookmarking from the page's corner.
+- **The reader menu's Bookmark this page switch** never moved.
+- **Aleph's reader menu** now closes when a top-menu item opens. Before, it hid plugins such as Capitulares.
+- **Aleph Home and All books** from the reader menu now leave the book properly.
+- **X-Ray:** Describe with AI no longer gives up after 20 seconds. "The book is closed" no longer appears with the book open.
+- **The Goodreads sign-in screen** now works when the browser keeps extensions off the local network.
+
+## 🔍 Troubleshooting
+- **Failures caught by Aleph** are now written to `crash.log` as `Aleph: file.lua:line failed: …` lines, once each. Before, they were silent.
+- **For problems opening a book:** Settings → About → **Troubleshooting log**.
+
+→ [Troubleshooting](https://github.com/lara-2-ko/aleph.koplugin/wiki/Troubleshooting)
+
+## Notes
+- **Literary clock quotes:** from the Literature Clock collection (The Guardian's readers, JohannesNE, Carlos Bonadeo), as converted by readinpixels' Literary Clock. They are shared under **CC BY-NC-SA 2.5** (non-commercial); see `THIRD_PARTY_NOTICES.md`.
+- **New icons:** from Lucide (ISC).
+- **Full change list:** `MODIFICATIONS.md`.
+
+## Assets
+| File | What it is |
+|---|---|
+| `aleph.koplugin.zip` | The plugin: extract and copy the `aleph.koplugin` folder into KOReader's `plugins` |
+| `aleph-goodreads-cookie-1.0.4-chrome.zip` | Browser extension for Chrome, Edge and Brave (Load unpacked) |
+| `aleph-goodreads-cookie-1.0.4-firefox.zip` / `.xpi` | Browser extension for Firefox (the .xpi is the signed one) |
+
 # v1.1.0 · 2026-11-10
 
 ## Aleph 1.1.0

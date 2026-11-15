@@ -11,7 +11,7 @@ If this plugin is useful to you, you can [support my work on Ko-fi](https://ko-f
 
 | | |
 |---|---|
-| **Version** | 1.2.26 |
+| **Version** | 2.0.1 |
 | **KOReader** | v2026.07 or newer |
 | **Needs** | [bookshelf.koplugin](https://github.com/AndyHazz/bookshelf.koplugin) (Bookshelf 6.x recommended) and bookorbit.koplugin, signed in |
 | **Optional** | SimpleUI (for the footer critter) |
@@ -29,9 +29,14 @@ If this plugin is useful to you, you can [support my work on Ko-fi](https://ko-f
 - **Search BookOrbit.** Bookshelf's search can look in your BookOrbit library instead of the device (works offline from the saved list).
 - **Return To.** Bookshelf can always open (and come back from a book) on a shelf you pick, or keep its own last-shelf behaviour.
 - **Add To Collection.** Hold a book (or tap one not on the device) to add it to or remove it from your BookOrbit collections. Signs in like the BookOrbit website; the password can be saved encrypted, shared with BookOrbit Tweaks if you have it.
-- **Bulk Download / Remove.** Hold a book, tap **Bulk Download…** or **Bulk Remove…**, tick books from that shelf (All, Same Series, Same Author or None). Downloads check size and free space first, then go one at a time. Off by default.
-- **Reading Status.** Set a book's BookOrbit status (Read, Reading, Want To Read …) from its hold menu. Off by default.
-- **Next In Series.** Finish a book and, back on the home screen, get asked whether to download the next one in the series. Off by default.
+- **Bulk Download / Remove.** Hold a book, tap **Bulk Download…** or **Bulk Remove…**, tick books from that shelf (All, Same Series, Same Author, Finished Books or None). Downloads check size and free space first, then go one at a time.
+- **Remove Finished Books.** **Downloads → Remove Finished Books…** removes the finished BookOrbit books you haven't opened here for a while (**Not Opened For**: 7, 30 or 90 days, or any). It always asks first, and the books stay in BookOrbit.
+- **Reading Status.** Set a book's BookOrbit status (Read, Reading, Want To Read …) from its hold menu, the Book Page, or the hero's **Status** button.
+- **Book Page.** Everything about a book on one page. Hold a book that isn't on the device (with **Hold A Book Opens: Book Page**), tap **Book Page** in its quick menu, or, for a BookOrbit book on the device, tap the **Book Page** card in Bookshelf's book menu. The cover shows its status (Read, On Hold 30% …) and On device / Queued; beside it the title (tap for all of it), author, series, status, progress and when it was last read (this Kobo's history or BookOrbit's), a finished date for a book finished here, pages / year / language / genres, and the buttons: Download / Open, Reading Status / Collection, BookOrbit / Remove. The top bar has Bulk Download, Bulk Remove and Help, with where the book is and the free space. Then the description (tap to read it all) and, at the bottom, the series in order (5 at a time, swipe or the arrows for more) or more by the author. **Similar ›** (or a swipe left past them) switches to Similar books (BookOrbit's own picks, else by genre); **‹ Series** or a swipe right goes back. It works offline from what's saved, closes on sleep and when a book opens, and BookOrbit opened from it comes back to it.
+- **The Queue.** With Wi-Fi off, the hero's **Download** becomes **Queue** (and the Not On Device menu has **Add To Queue**); **Reading Status…** saves the status to send later, and the cover changes now. It runs by itself 15 seconds after Wi-Fi connects, or with **Download Queue Now**: statuses first, then the books one at a time, each checked for free space. Sleep or Wi-Fi off stops it and the next connect carries on. No timers, and it never turns Wi-Fi on. Queued covers show a small clock, and the hero's button turns into **Remove Queue**. A waiting status can be dropped before it's sent: while one waits, the hero's button says **Status · Queued** and **Reading Status…** starts with **Don't Send**, and the covers go back to what the book had. **Tools → OrbitShelf → Downloads** lists it all (Move To Top, Remove, Clear Queue…) with free space; add a **BookOrbit · Queue** shelf in Bookshelf to see the books waiting to download.
+- **Status on covers.** Books not on the device show BookOrbit's reading status and progress with Bookshelf's own cover badges (progress bar, reading bookmark, done tick). On the device, KOReader's own status shows as always. Bookshelf's badge settings decide what's drawn.
+- **Up Next shelf.** **BookOrbit · Up Next**: for every series you've started, the next book after the furthest one you've read or are reading.
+- **Next In Series.** Finish a book and, back on the home screen, get asked whether to download the next one in the series (or have it added to the Queue). Off by default.
 - **Show On Device / Not On Device.** A shelf can show only the books on the device, or only the ones that aren't.
 - **Mark Books Not On Device.** BookOrbit's download mark (the one the Side Panel uses) on the bottom-left of covers whose book isn't on the device, so you can see at a glance what's left to download. Books on the device stay clean; the page count keeps the bottom-right. Mark Style: black or white depending on the cover (Auto), or on a small round badge. Off by default.
 - **Download progress.** Big downloads show their % in the corner.
@@ -39,6 +44,8 @@ If this plugin is useful to you, you can [support my work on Ko-fi](https://ko-f
 - **E-ink options.** A Flash menu to clear ghosting where you need it: the hero, shelf page turns, Book Description, the hold menus, the Download window and Bookshelf's shelf editor.
 - **Footer critter, close and Home buttons.** Your SimpleUI critter in place of the page numbers, an optional one-tap close X, and an optional Home button in the other corner that jumps back to page 1 (of this shelf, or of a shelf you pick).
 - **Battery-friendly.** Lookups run in a background process so the screen stays responsive. They pause on sleep or Wi-Fi off, and nothing runs on a timer.
+- **Help built in.** **Tools → OrbitShelf → Help**: Getting Started, Shelves, Book Page, Downloads And The Queue, Offline Library, Look / Footer / Flashing, Something's Wrong and What's New, each in a small window. What's New also pops up once after an update.
+- **Plays well with Simple UI.** Waking to Simple UI's home with Bookshelf left open closes Bookshelf under it, so Bookshelf doesn't pop up by itself when Wi-Fi connects.
 - **Tells you what broke.** Problems go to `crash.log`, including which other patch or plugin interfered.
 
 ![OrbitShelf settings](images/orbitshelf-menu.png)
@@ -51,7 +58,7 @@ Offline Library keeps every book's cover and details on the device — 130 of 13
 
 ![Check For New Books](images/orbitshelf-check-new-books.png)
 
-Check For New Books: On Wi-Fi Connect, On Refresh / Sync, Both, or Update Now Only.
+Check For New Books: On Wi-Fi Connect, On Refresh / Sync, Both, or Off (Update Now only).
 
 ![Hold menu](images/orbitshelf-hold-menu.png)
 
@@ -68,6 +75,26 @@ Downloaded — open it now or later.
 ![On-device book](images/orbitshelf-hero-on-device.png)
 
 A book on the device gets small Remove, Open In BookOrbit, and Sync icons instead.
+
+![Book Page — Series](images/orbitshelf-book-page-series.png)
+
+The Book Page: cover, status, progress and description, with the series below — Codex Alera, 0 of 6 read. Swipe left past it for Similar books.
+
+![Book Page — Similar books](images/orbitshelf-book-page-similar.png)
+
+Similar books on the Book Page — BookOrbit's picks, or by genre when it has none. Each cover shows its status and On device / Queued.
+
+![Book Page — Download](images/orbitshelf-book-page-download.png)
+
+The Book Page for a book not on the device: Download, Reading Status, Collection, BookOrbit. With Wi-Fi off the button reads Queue and the download waits.
+
+![Up Next](images/orbitshelf-up-next.png)
+
+Up Next: the next book in every series you've started — Academ's Fury (#2) and The Wicked King (#2) here.
+
+![Queue](images/orbitshelf-queue.png)
+
+The Queue shelf: books waiting to download, clock-marked, with their place in the series.
 
 ---
 
@@ -101,37 +128,32 @@ All under **Tools → OrbitShelf** (or **Tools → Add-ons → OrbitShelf** if y
 
 | Setting | What it does | Default |
 |---|---|---|
-| **Use BookOrbit In Bookshelf** | Adds the BookOrbit shelf source | Off |
-| **Rewrite Stock Series / Authors / Genres** | Points Bookshelf's own Series, Authors, Genres, Recent and Latest chips at BookOrbit | Off |
-| **Return To** | Shelf Bookshelf shows when it opens or you close a book: Bookshelf's Choice (last shelf) or one you pick | Bookshelf's Choice |
-| **Add To Collection → In Book Menu** | Add To Collection when holding the hero or tapping a book not on the device | Off |
-| **Add To Collection → Forget Saved BookOrbit Password** / **About** | Removes the saved password / what's saved and where | — |
-| **Extras → Bulk Download** | Bulk Download… when holding the hero or a book not on the device: tick books from that shelf, size check, download one at a time | Off |
-| **Extras → Bulk Remove** | Bulk Remove… when holding a BookOrbit book on the device: tick books from that shelf and remove them (they stay in BookOrbit) | Off |
-| **Extras → Reading Status** | Reading Status… in the hold and book menus: sets the book's status in BookOrbit | Off |
-| **Extras → Next In Series** | After you finish a book, back home: offers to download the next in its series | Off |
+| **Shelves → Use BookOrbit In Bookshelf** | Adds the BookOrbit shelf source | Off |
+| **Shelves → Rewrite Stock Series / Authors / Genres** | Points Bookshelf's own Series, Authors, Genres, Recent and Latest chips at BookOrbit | Off |
+| **Shelves → Return To** | Shelf Bookshelf shows when it opens or you close a book: Bookshelf's Choice (last shelf) or one you pick | Bookshelf's Choice |
+| **Shelves → Search BookOrbit** | Bookshelf's search looks in BookOrbit instead of the device | Off |
+| **Books → Hold A Book Opens** | Holding a book not on the device: Quick Menu or Book Page | Quick Menu |
+| **Books → Next Book In Series** | Finishing a book: Off, Ask (back home) or Add To Queue | Off |
+| **Books → BookOrbit Sign-In** | Forget Saved BookOrbit Password / About The Saved Password (Add To Collection's sign-in) | — |
+| **Downloads** | The Queue: what's waiting for Wi-Fi, Download Queue Now, each book (Move To Top / Remove), queued statuses, Clear Queue…, free space | Empty |
+| **Downloads → Remove Finished Books…** / **Not Opened For** | Removes finished BookOrbit books not opened here for 7, 30 or 90 days (or any); asks first | 30 days |
+| **Look → Hero Buttons** | Download / Queue and Open In BookOrbit on the hero; Remove, Open and Sync icons for books on the device | Off |
+| **Look → Hero Button Size** | Small, Medium or Large | Small |
+| **Look → Cover Marks** | Download mark, bottom-left, on BookOrbit covers not on the device (queued books show a clock either way) | Off |
+| **Look → Mark Style** | Auto Black / White (by the cover, with a thin outline) or Badge (on a small round disc) | Auto |
+| **Look → Flash** | Off, Popups, Popups + Shelf Pages or Everything (Custom keeps a 1.x mix); Hero Flash: every change, 4th or 6th | Off |
+| **Offline → Keep Library Offline** | Saves every book's cover and details on the device | Off |
+| **Offline → Check For New Books** | On Wi-Fi Connect, On Refresh / Sync, Both, or Off (Update Now only) | On Wi-Fi Connect |
+| **Offline → Update Now** / **Delete Offline Library…** | Pulls the list fresh / removes saved details and trims covers | — |
+| **Offline → Build / Rebuild Genres** | Looks up genres in the background | — |
+| **Footer → Footer Critter** / **Critter Says** | SimpleUI critter in place of the page numbers; Page, Witty, Picks, Sayings | Off / all on |
+| **Footer → Close X** | Off, Left, Right or Bookshelf's Side: the hamburger becomes a one-tap close X | Off |
+| **Footer → Home Button** | Off, This Shelf or a shelf you pick: house in the corner opposite the close X, back to page 1 | Off |
+| **Advanced → Clean Up Cache…** | Removes old covers and saved lists | — |
 | **Shelf editor → Show** | All Books, On Device or Not On Device | All Books |
-| **Offline Library → Keep Library Offline** | Saves every book's cover and details on the device | Off |
-| **Offline Library → Check For New Books** | On Wi-Fi Connect, On Refresh / Sync, Both, or Update Now Only | On Wi-Fi Connect |
-| **Offline Library → Update Now** | Pulls the list fresh and saves anything new | — |
-| **Offline Library → Delete Offline Library…** | Removes saved details and trims covers | — |
-| **Hero → Download / Remove Buttons** | Buttons on the hero for BookOrbit books | Off |
-| **Hero → Sync Button** | Refreshes the lists and runs BookOrbit's sync | Off |
-| **Hero → Button Size** | Small, Medium or Large | Small |
-| **Shelf → Search BookOrbit** | Bookshelf's search looks in BookOrbit instead of the device | Off |
-| **Shelf → Mark Books Not On Device** | Download mark, bottom-left, on BookOrbit covers not on the device (covers view) | Off |
-| **Shelf → Mark Style** | Auto Black / White (by the cover, with a thin outline) or Badge (on a small round disc) | Auto |
-| **Shelf → Build / Rebuild Genres** | Looks up genres in the background | — |
-| **Flash → Hero When It Changes** / **Hero: Every Change** | Clears ghosting when the hero shows another book; every change or every 4th / 6th | Off |
-| **Flash → Shelf Page Turns** | Full refresh on every shelf page | Off |
-| **Flash → Book Description / Hold Menu / Download Window / Bookshelf's Book Menu / Shelf Editor** | That popup's box flashes when it opens and closes | Off |
-| **Footer → Footer Critter** | SimpleUI critter in place of the page numbers | Off |
-| **Footer → Critter Says** | Page, Witty, Picks, Sayings | All on |
-| **Footer → Close Only** / **Close Control** | One-tap close X; left, right or Bookshelf's side | Off |
-| **Footer → Home Button** | House in the corner opposite the close X / hamburger: back to page 1; out of a folder or group to the shelf | Off |
-| **Footer → Home Goes To** | This Shelf (page 1 of the shelf you're on) or a shelf you pick | This Shelf |
-| **Clean Up Cache…** | Removes old covers and saved lists | — |
-| **Diagnostics** | Detailed log for 30 minutes after each start, off by itself after 3 days | Off |
+| **Shelf editor → BookOrbit · Queue** | A shelf of the books waiting to download | — |
+| **Advanced → Diagnostics** | Detailed log for 30 minutes after each start, off by itself after 3 days | Off |
+| **Help** | How OrbitShelf works, one topic at a time, and What's New | — |
 
 ### How Offline Library works
 
@@ -147,24 +169,22 @@ All under **Tools → OrbitShelf** (or **Tools → Add-ons → OrbitShelf** if y
 
 OrbitShelf writes to KOReader's `crash.log` (`.adds/koreader/crash.log` on Kobo). Its lines are tagged `orbitshelf <version>:`.
 
-**Every start:** the KOReader version, the device, the Bookshelf / BookOrbit / SimpleUI versions, and the patches and plugins installed.
-
-**Only when something's wrong**, once per start each:
+**When something's wrong**, once per start each:
 - A part that failed, with where. Bookshelf's own version runs instead, so the screen doesn't break.
 - Another patch or plugin that changed a Bookshelf function OrbitShelf uses, or replaced the BookOrbit shelf source, named by file. For example:
   ```
   orbitshelf 1.2.23: Bookshelf.onHold (hero hold menu) was changed after OrbitShelf by plugins/other.koplugin/main.lua
   ```
 
-**For more detail**, turn on **Diagnostics**, reproduce the problem within 30 minutes, then share `crash.log`. Diagnostics lines are tagged `orbitshelf <version> diag:`.
+**For more detail**, turn on **Diagnostics**, reproduce the problem within 30 minutes, then share `crash.log`. Diagnostics lines are tagged `orbitshelf <version> diag:`; with it on, each start also writes the KOReader version, the device, the Bookshelf / BookOrbit / SimpleUI versions, and the patches and plugins installed.
 
 **Common issues**
 
 | Problem | Try |
 |---|---|
 | No BookOrbit shelf | Check that Bookshelf and BookOrbit are installed, BookOrbit is signed in, and **Use BookOrbit In Bookshelf** is on. `crash.log` will say which one is missing. |
-| Genres shelf empty | Open it once and tap **Start**, or use **Shelf → Build Genres** with Wi-Fi on. |
-| Closing the shelf shows the file browser | That's Bookshelf's **Instant book close (beta)**, not OrbitShelf. Turn it off in Bookshelf's settings. |
+| Genres shelf empty | Open it once and tap **Start**, or use **Offline → Build Genres** with Wi-Fi on. |
+| Closing the shelf shows the file browser | That's Bookshelf's **Close books in the background** (called **Instant book close (beta)** before Bookshelf 6.5), not OrbitShelf. Turn it off in Bookshelf's settings. |
 | Ghosting on the hero, shelf or a popup | Turn on what you need under **Flash**. |
 
 ---
@@ -184,6 +204,8 @@ orbitshelf.koplugin/
 ├── orbitshelf_collections.lua Add To Collection (website sign-in, saved password)
 ├── orbitshelf_bulk.lua        Bulk Download / Remove (checklist, size check, download queue)
 ├── orbitshelf_extras.lua      Reading Status, Next In Series, Not On Device mark
+├── orbitshelf_queue.lua       the Queue (downloads and statuses waiting for Wi-Fi)
+├── orbitshelf_bookpage.lua    the Book Page
 ├── orbitshelf_menu.lua        settings menu
 ├── orbitshelf_diag.lua        Diagnostics (loaded only while it's on)
 └── README.md
@@ -201,6 +223,19 @@ orbitshelf.koplugin/
 
 The full history is at the top of `main.lua`.
 
+- **2.0.1:** A reading status set with Wi-Fi off can be dropped before it's sent (**Don't Send** in Reading Status…, the hero says **Status · Queued** meanwhile), and the covers go back. The **BookOrbit · Queue** shelf shows only books waiting to download, so **Remove Queue** takes a book off it at once.
+- **2.0.0:** OrbitShelf 2.0 ("your library, ready offline"), tested as 1.3.11–1.3.24 and 2.0.1–2.0.4. The Book Page grown up: buttons beside the cover, last read and finished dates, Bulk Download / Remove and Help in its top bar, statuses on every cover, Similar books one swipe or tap from the series or More by, a Book Page card in Bookshelf's book menu for books on the device, and BookOrbit opened from it coming back to it. A sent reading status sticks after a refresh. Up Next shelf. Remove Finished Books and a Finished Books select in Bulk Remove. Hero Status button. Help menu with What's New. Bigger footer critter. Bookshelf no longer pops up after waking to Simple UI's home. Fix: a long series' later books never showed in the strip. Start-up environment lines only with Diagnostics on; unused code removed. Nothing you set is changed by the update.
+- **1.3.10:** Fix: the Book Page closes on sleep, so it isn't left open (and glitched) behind the home screen after waking.
+- **1.3.9:** Book Page: More by / Similar books show each book's BookOrbit status (Read, On Hold…), so a finished book doesn't look new; the series strip uses the same words. Check For New Books off choice reads "Off (Update Now only)".
+- **1.3.8:** Settings regrouped (Shelves, Books, Downloads, Look, Offline, Footer, Advanced); Add To Collection, Reading Status and Bulk Download / Remove always there (More… in a book's menu); Flash, Hero Buttons, Close X, Home Button and Next Book In Series (now with Add To Queue) are single choices set from what you had; a one-time note says so. Book Page: Similar books for a book with no series and nothing else by its author.
+- **1.3.7:** Book Page: no white outlines around covers in night mode; tap the description to read all of it.
+- **1.3.6:** Book Page flashes only when it opens and closes.
+- **1.3.5:** Book Page: plain strip covers, status in words under series books, the description fills the space.
+- **1.3.4:** Book Page: Help in More, Remove's question on top, Bulk windows return to the page, more by the author when there's no series.
+- **1.3.3:** The Book Page (Hold A Book Opens: Book Page, or the quick menu's Book Page row). Hero says Remove Queue.
+- **1.3.2:** A queued book's hero button says Remove From Queue.
+- **1.3.1:** The Queue: with Wi-Fi off, Download and Reading Status wait in a queue that runs a little after Wi-Fi connects (statuses, then books one at a time, space checked). Clock on queued covers, Queue menu and BookOrbit · Queue shelf.
+- **1.3.0:** Covers of books not on the device show BookOrbit's reading status and progress with Bookshelf's own badges (KOReader's own status still wins on the device). Fills in on each list's next refresh.
 - **1.2.26:** Mark Style for the Not On Device mark: Auto Black / White or Badge.
 - **1.2.25:** Mark Books Not On Device (download mark on covers not on the device). Footer Home button (page 1 of this shelf or a shelf you pick).
 - **1.2.24:** Extras menu: Bulk Download, Bulk Remove, Reading Status, Next In Series. Shelf filter (On Device / Not On Device). Download progress %.
