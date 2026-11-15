@@ -1,3 +1,15 @@
+# v9.7.0 · 2026-11-15
+
+# AppDock 9.7.0
+
+## Deutsch
+
+Cyber-Theme mit Skyline-Hintergrund, neuen Kartenstilen und anpassbaren Kartenskins; ein Regal mit zuletzt gelesenen und empfohlenen Büchern; ein optionales Lese-Haustier, das sich mit der Lesezeit entwickelt; sowie ein integrierter Dateiwähler statt manueller Pfadeingabe für Bilder, Werkzeuge, Musik- und Ausgabeordner. Die Version ergänzt außerdem farb-aware Darstellung und passende Cyber-Skin-Grafiken.
+
+## English
+
+Cyber theme with a skyline wallpaper, new card styles and configurable skins; a homescreen shelf for recently read and featured books; an optional reading pet that grows with reading time; and a built-in file chooser replacing manual path entry for images, tools, music and output folders. This release also adds color-aware rendering and bundled Cyber skin artwork.
+
 # v9.6.2 · 2026-11-15
 
 # AppDock 9.6.2
@@ -47,19 +59,3 @@
 - **New navigation bar inside apps.** Android-style **Back**, **Home** and **Open apps**, each spanning a third of the full width. Back first leaves fullscreen, then lets the app close a sub page (`onBack`), otherwise closes the app.
 - **Optional swipe gestures** under *Settings → Display → Gesture navigation*: swipe from the left or right screen edge = Back, fast swipe up from the bottom = Home, slow swipe up from the bottom = Open apps. The buttons are then replaced by a slim bar.
 - The What's new dialog points out the new navigation.
-
-# v9.5.1 · 2026-11-14
-
-# AppDock 9.5.1
-
-## Deutsch
-
-- **Night Mode ist jetzt AppDock-eigen.** Der Schalter ändert nur AppDocks gespeicherte Theme-Palette und löst kein KOReader-`ToggleNightMode`-Ereignis aus. KOReaders globale Bildschirminvertierung wird dadurch nicht eingeschaltet.
-- Die dunkle Palette wird direkt gezeichnet; auf Graustufenlesern verwendet AppDock passende Helligkeitsrollen.
-- Enthält außerdem das AppDock-Modul **Health & reading** für optionale Augenpflege, Lesestatistik, Lesepausen und Schlafenszeiterinnerungen.
-
-## English
-
-- **Night mode is now AppDock-local.** The switch updates AppDock's persisted theme palette and does not emit KOReader's `ToggleNightMode` event or enable KOReader's global screen inversion.
-- The dark palette is rendered directly; grayscale readers use appropriate brightness roles.
-- Also includes AppDock's **Health & reading** module for optional eye-care scheduling, reading statistics, break reminders, and bedtime reminders.
