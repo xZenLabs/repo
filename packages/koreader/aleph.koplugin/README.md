@@ -4,7 +4,7 @@ Your books, reading, highlights and shelves in one place: a customizable home sc
 
 Aleph works with books and reading data on your device. No Aleph account or BookOrbit server is required. Optional author portraits use the internet; optional integrations can launch other plugins and their network features.
 
-**This is a modified version of BookOrbit and is not an official BookOrbit release. Modified 9 November 2026.**
+**This is a modified version of BookOrbit and is not an official BookOrbit release. Modified 15 November 2026.**
 
 ## Screenshots
 
@@ -67,7 +67,7 @@ Aleph works with books and reading data on your device. No Aleph account or Book
 2. Extract it. Copy the entire **aleph.koplugin** folder into KOReader's `plugins` folder.
 3. Check that `plugins/aleph.koplugin/main.lua` and `plugins/aleph.koplugin/_meta.lua` exist. Avoid an extra nested `aleph.koplugin` folder.
 4. Restart KOReader. Open **Tools → Aleph**. If it is disabled, enable it in KOReader's Plugin management and restart.
-5. In Aleph, open **Menu → Settings → Library folders → Add folder** and select your books folder. Subfolders are included. KOReader's Home folder is used initially when configured, and existing files in reading history are also indexed.
+5. In Aleph, open **Menu → Settings → Library → Add folder** and select your books folder. Subfolders are included. KOReader's Home folder is used initially when configured, and existing files in reading history are also indexed.
 6. Let the first scan finish. Covers load as needed. Use **Menu → Refresh local library** after adding or transferring books.
 
 The supplied project's documentation reports use with **KOReader 2026.07.1 on Kindle Paperwhite and Kindle Colorsoft**. Other versions and devices are not verified. Some controls require a touchscreen, frontlight, adjustable warmth or a color screen. No separate BookOrbit installation is required.
@@ -77,7 +77,7 @@ The supplied project's documentation reports use with **KOReader 2026.07.1 on Ki
 - **Not compatible: ZenOS (Zen UI) and Simple UI.** Both put their own home screen over KOReader's file browser, as Aleph does (ZenOS also replaces the reader menus, page browser, dictionary and status bars). With either one enabled alongside Aleph, KOReader can slow down, freeze or crash, most often when a book is closed. Turn it off in Plugin management before using Aleph. Aleph shows a warning at startup when it finds one running.
 - **Bookshelf** works alongside Aleph: the top bar's book details fall back to Bookshelf's page for books outside Aleph's library. Use one of them as the screen that opens at startup and after a book, not both, or they open one after the other.
 - **Project: Title** and KOReader's Cover browser restyle the file browser that sits under Aleph's board; they work with Aleph. On devices with little memory, their list view uses less memory than the cover grid.
-- **Menu restyling plugins** (Modern Menu, QuickUI, Reader Menu Redesign, Appearance and similar) restyle the same KOReader menus as Aleph. If you use one, turn off **Settings → Opening Aleph → Dialogs → Aleph dialogs** so the two do not fight over the same menus.
+- **Menu restyling plugins** (Modern Menu, QuickUI, Reader Menu Redesign, Appearance and similar) restyle the same KOReader menus as Aleph. If you use one, turn off **Settings → Home → Aleph dialogs** so the two do not fight over the same menus.
 - The separate **Bookends** plugin: Aleph's book margins stay hidden while it is on.
 
 ## Home and dashboard
@@ -94,11 +94,15 @@ Available widgets:
 | Statistics | Streak, This week, Today, Reading calendar, Year in reading, Goal pace, Reading records, When you read, Finished this year |
 | Library | Pick back up, Want to read, Up next in series, Discover, Recently added; Library, Series, Authors, Collections, History and Search links |
 | Device | Light, Quick settings, On device, Clock |
-| Decor | Silverfish integration; reading companions; Chapter line, Gathering dust, Tree rings, Pages turned, Glyph of the day, Analog clock, Moon phase |
+| Decor | Silverfish integration; reading companions; Chapter line, Gathering dust, Tree rings, Pages turned, Glyph of the day, Analog clock, Literary clock, Moon phase |
 
 The 15 bundled reading companions are cat, dog, rabbit, owl, penguin, robot, vampire, dragon, ghost, mimic, mummy, witch, skeleton, candle and alien. They do not require Silverfish. The separate Silverfish widget does.
 
-**Discover** shuffles your local books. **Want to read** uses unread books; **Pick back up** uses books in progress. These are local views, not separate online lists. **Recently added** reflects when Aleph first indexed the book. The annual goal counts indexed books marked Finished with a completion date in the current year. Chapter maps become available after opening and closing a book with Aleph installed.
+**Discover** shuffles your unread books, and offers only the next book to read in each series. **Want to read** uses unread books; **Pick back up** uses books in progress. These are local views, not separate online lists. **Recently added** reflects when Aleph first indexed the book. The annual goal counts indexed books marked Finished with a completion date in the current year. Chapter maps become available after opening and closing a book with Aleph installed.
+
+**Literary clock.** A Decor widget (Customize → + Add widget → Decor) that tells the time with a line from a book that mentions it: the quote for the current minute, the time in bold, the book's title and author under it, at the largest size that fills the tile. When a minute has several quotes the choice changes from day to day. Quotes the collection marks as not safe for work are left out; the few minutes with no quote show a line written like one, with the time in words. It changes each minute while Home is on screen. The quotes come from the Literature Clock collection (The Guardian's readers, JohannesNE, Carlos Bonadeo), as converted by readinpixels' Literary Clock plugin, and are shared under CC BY-NC-SA 2.5 (see THIRD_PARTY_NOTICES.md).
+
+**Owner information.** Menu → Owner information: your name, email and phone number, shown large under "If you find this e-reader, please contact:", so whoever finds a lost device can reach you. Kept on the device only.
 
 ## Settings reference
 
@@ -107,31 +111,37 @@ Open **Aleph → Menu → Settings**.
 | Setting | What it changes | Initial behavior |
 |---|---|---|
 | Profile → Your name | Home greeting | Not set |
-| Profile → Annual reading goal | Books to finish each year; 1–10,000 | 12 |
+| Profile → Annual reading goal | Books to finish each year: − and + or tap the number to type one (1–100,000) | 12 |
 | Opening Aleph → When KOReader starts | Show file browser, or open Aleph when the file browser starts, including after closing a book | File browser |
 | Opening Aleph → Shortcut | Pick an opening gesture; shows and confirms an existing binding before replacement | No Aleph shortcut assigned automatically |
-| Opening Aleph → Dialogs → Aleph dialogs | Restyle opening cards, prompts, dictionary, highlights and many KOReader windows | On |
-| Opening Aleph → Dialogs → Reader menu at the bottom | Aleph's reader menu instead of the stock bottom menu | On |
-| Opening Aleph → Dialogs → Page browser on swipe up | Open Aleph's page browser from a bottom-edge swipe | On |
-| Opening Aleph → Dialogs → Pinned pages | Position the badge and choose the drawer side | Bottom-right badge; right drawer |
+| Home → Aleph dialogs | Restyle opening cards, prompts, dictionary, highlights and many KOReader windows | On |
+| Reader → Reader menu at the bottom | Aleph's reader menu instead of the stock bottom menu | On |
+| Reader → Page browser on swipe up | Open Aleph's page browser from a bottom-edge swipe | On |
+| Reader → Pinned pages | Position the badge and choose the drawer side | Bottom-right badge; right drawer |
+| Reader → Choose a colour when bookmarking | Show the list of bookmark colours when a page is bookmarked; bookmarks appear as a ribbon in their colour | On; Blue first, then the colour used last |
 | Top menu | Enable Controls and Apps tabs | On, unless standalone Quick Top Bar takes precedence |
 | Top menu → Apps | Show/hide apps, change icons and arrange their order | Apps shown by default |
 | Top menu appearance | Outline around icons, Controls/Apps tab icons; brightness/warmth sliders: Knob, Bar, Notched or Dots | Outline on; Knob sliders |
 | Home → Starting layout | Reader, Stats or Library starting order; replaces customized pages after confirmation | Reader |
 | Home → Tile style | Outline, Soft or Ink | Outline |
 | Home → Colour | Accents, Tinted or Off; available on color-enabled screens | Accents; grayscale on monochrome screens |
-| Home → Interface size | 1×, 1.05×, 1.1×, 1.15× or 1.2× | 1.05× |
+| Home → Interface size | 1× to 1.5× (1, 1.05, 1.1, 1.15, 1.2, 1.25, 1.3, 1.4, 1.5), with − and + | 1.05× |
+| Customize Home → Add wallpaper | A picture behind the widgets, with fit, wallpaper opacity and widget opacity | No wallpaper |
+| Home → Night profile | Night light (brightness, warmth) and bolder book text while night mode is on; your day light back after | Off |
+| Home → Night profile → By the clock | Night mode on and off by itself between two times | Off; 21:00–07:00 |
 | Home → Reset Home | Restore the selected starting layout and outline tiles | Confirmation required |
-| Library folders | Add/remove roots, refresh or cancel a scan | Home folder if configured, plus reading history |
+| Library | Add/remove folders, refresh or cancel a scan, cover shape, extra filters, Import from Goodreads, Goodreads sign-in and Track in the background (with the Goodreads plugin) | Home folder if configured, plus reading history |
 | Book margins | Enable header/footer statistics and customize their content | Enabled; both lines on |
 | Author portraits | Enable online lookup, download all, stop downloading or remove downloaded portraits | Off |
+| Library → Goodreads sign-in | Only with the Goodreads plugin by advokatb installed: listens on the local network for a few minutes so the Aleph Goodreads cookie browser extension can send goodreads.com cookies (see below) | Not listening |
+| Menu → Owner information | Your name, email and phone, shown to whoever finds a lost device | Not set |
 | Help → About → Legal notices | Version, attribution and licensing information | Always available |
 
 Turning **Aleph dialogs** off does not turn off the separate reader-menu, swipe-browser, top-menu or book-margin features. Change their own switches to restore those parts of KOReader. To disable all Aleph hooks, disable the plugin and restart KOReader.
 
 ## Library, authors and series
 
-Use **List/Grid** to change the library view. Search matches title, author or series. The sort/filter sheet offers **Title, Author, Series, Added, Read**, reverse order, reading status, collection, genre and format. Choose **Done**, or tap outside the sheet, to apply. The main library remembers these choices; scoped author, series, genre and search views use their own current filters.
+Use **List/Grid** to change the library view. Search matches title, author or series. The sort/filter sheet offers **Title, Author (by first or last name), Series, Added, Read**, reverse order, reading status, collection, genre and format. Choose **Done**, or tap outside the sheet, to apply. The main library remembers these choices; scoped author, series, genre and search views use their own current filters.
 
 Title/author ordering has an A–Z index. Tap the pager for a letter jump or page selection. Authors and Series have their own List/Grid views, Name A–Z/Name Z–A/Most books sorting and reading/completion filters. Their preferences are remembered.
 
@@ -145,10 +155,10 @@ Hold a book **in the library list or a series page** to select multiple books. T
 
 Book details show the cover, title, author, series, rating, status, progress, description, genres and similar local books. Use Read/Resume to open it, swipe or tap neighboring titles to browse the current list, and tap series or genre links to explore related books.
 
-- Tap a star to rate; tap the same star again to clear it.
+- Tap a star to rate: the left half of a star gives a half star, the right half a whole one. Tap the same rating again to clear it. KOReader's own screens show the whole stars (4 for 4.5).
 - Tap status for **Unread, Reading, Finished or On hold**. These map to KOReader's new, reading, complete and abandoned statuses.
 - Use **… → Add to collection** to manage membership in KOReader's own collections.
-- **…** also offers Book information, Highlights and More by this author.
+- **…** also offers Book information, Highlights, More by this author, and **Delete book**, with two ways to do it: **Delete book, keep its data** (only the file; highlights, progress and status stay in its sidecar) or **Delete book and its data** (the file and its sidecar). Each asks first; reading statistics are kept either way.
 - **Read all** opens the full description; **+N** opens all genre tags.
 - The Highlight of the day widget opens the full passage with chapter, date, note and a book-details link.
 
@@ -164,11 +174,28 @@ Bookmarks have All/Highlights/Bookmarks/Notes filters plus highlight style and c
 
 For reflowable documents, **Reading settings → Background** offers White, Paper, Sepia, Gray and Custom. The selected option is stored with the book; the custom color value is shared in Aleph's settings. A document's own painted background can override the appearance.
 
+## X-Ray
+
+Aleph's own X-Ray lists the people, places and other names of the book you are reading, and where each was mentioned **up to the page you are on**. It is off until you turn it on in **Settings → X-Ray**; while off, none of it is loaded. It works with books KOReader lays out itself (EPUB and the like), not with PDFs or comics.
+
+- **First use in a book:** open the reader menu → **This book → X-Ray → Find names in this book**. The book is read once in the background (a minute or two; you can keep reading) and a note says when it is done. Nothing is sent anywhere: names are found from capital letters in the text.
+- **Opening it:** the X-Ray row in **This book**; the **X-Ray** button after selecting a word; the gesture **Aleph: X-Ray**; or a tap on an underlined name.
+- **A name's card:** its other spellings, how many times it was mentioned so far, and each mention with its page, chapter and the words around it. Tap a mention to go there; KOReader's back gesture returns. **Not a name** hides a wrong entry.
+- **Underline names** (off by default): a thin line under each name on the page. This is the only part that does any work as pages turn; turn it off if page turns feel slower.
+- **Show the whole book** (off by default): also lists names and mentions from pages you have not read.
+- **Descriptions with AI** (optional): add your own key for Claude, OpenAI, Gemini or another OpenAI-style service in **Settings → X-Ray**, then tap **Describe with AI** in a book's X-Ray. One request sends the book's title and author, how far you are, and two short excerpts per name from the pages already read. The answer adds what each name is and the People / Places / Other filters. Ask again later in the book to update. The model name can be changed in Settings; the defaults may need updating as providers rename theirs. The key is stored as typed in KOReader's settings file.
+
+- **Story** (optional, needs the same key): the **Story** tab of a book's X-Ray. **Update the story** sends the text of the chapters you have read, and nothing after the page you are on, to the provider; it comes back as a short summary of each chapter and "the story so far". It runs in the background and you can keep reading. Later updates only send what you have read since. Tap a chapter to read its summary whole or go to it.
+- **The book before:** for a book that is part of a series (not its first), the Story tab has **The book before**. If that book is in your library and has a Story of its own on this device, the recap is written from those chapter summaries. Otherwise the model is asked what it knows of the book from its title alone, and the answer is marked as such, since it can be wrong.
+- **After a break:** when you open a book you have not read for a while (2 weeks unless changed in **Settings → X-Ray → Offer a recap after a break**: 1 week, 2 weeks, 1 month or Never), or one whose status was On hold, Aleph asks once whether you want the story so far. Nothing is sent unless you say yes.
+
+The name finder is simple: it will miss some names and list a few words that are not names. X-Ray's files (`aleph_xray*.lua`) sit in the book's settings folder next to its highlights.
+
 ## Pinned pages and images
 
 Hold selected text and choose **Pin**, or hold an image and choose **Pin image**. The badge opens a side drawer; hold it for the pin list. Drawer controls navigate, jump to the source page, remove pins, resize, zoom and open full screen. Pinch to zoom and drag to pan where supported. The newest pin also updates KOReader's own pinned-page location.
 
-Use **Tools → Pin badge position** while reading, or **Settings → Opening Aleph → Dialogs → Pinned pages**, to choose one of eight positions, nudge the badge and select the drawer side.
+Use **Tools → Pin badge position** while reading, or **Settings → Reader → Pinned pages**, to choose one of eight positions, nudge the badge and select the drawer side.
 
 ## Book margins
 
@@ -178,6 +205,8 @@ Items: progress, page, page of pages, pages left in chapter, time left in chapte
 
 Defaults are progress/clock/battery on top and chapter time/session time/book time below, with a progress line and Small text. KOReader's status bar is not hidden by default. Aleph suppresses its margins when the separate Bookends plugin is active.
 
+**Page turner battery.** With the BT Manager / HID Passthrough plugin and a Bluetooth page turner, the bottom line of a book's page ends with a dot, the Bluetooth mark and the page turner's battery (" · 80%"), after whatever its right-hand side shows. It appears only while a page turner reports its battery, and shows up with the first page it turns. Settings → Book margins → Page turner battery turns it off.
+
 ## Gestures and device controls
 
 KOReader's gesture settings expose **Aleph: open**, **Aleph: this book**, **Aleph: page browser** and **Aleph: pinned pages**. The latter three are reader actions. The shortcut picker requires the Gestures plugin and offers top-left hold, bottom-right tap, two-finger top-right tap when supported, and top-right tap; the corner hold/top-right tap choices apply in books.
@@ -186,7 +215,15 @@ On Aleph pages, vertical swipes beginning in the left fifth adjust brightness; t
 
 Quick Top Bar adds Controls and Apps to the top menu. Controls include supported Wi-Fi, night mode, rotation, lighting, restart and exit actions. Apps launches available plugins; hold an app to hide it or change its icon. The current-book cover opens its details.
 
-**Refresh distinction:** Menu/Settings → Refresh local library rescans local files. The dashboard Quick settings refresh action instead starts or requests a quick sync from **KOSyncthing+** when available; without it, the action rescans the library.
+**Night profile.** Settings → Home → Night profile. When night mode turns on, the front light changes to your night brightness and warmth, and book text gets a little bolder so light letters on black stay crisp; when night mode turns off, your day light comes back. Choose the night brightness and warmth (or take the light as it is now), whether changes made at night are remembered, and how much bolder the text gets. Under By the clock, night mode can turn on and off by itself between two times (21:00 to 07:00 by default); switch it by hand and it stays that way until the next change. If you use the 2-night-profile.lua patch, delete it from koreader/patches first: Aleph's profile stays off while the patch is there.
+
+**Finished books are remembered.** Aleph keeps a record of every book you finish, so deleting a book after reading it does not take it off your yearly count or the Finished this year shelf. Tap a deleted book there to see when you finished it, or to remove it from the record.
+
+**Page-turn buttons** (Kobo Libra, Kindle Oasis, a keyboard) turn the Home pages and the library's pages. **Direction keys** (a Kindle 4, a keyboard Kindle): Up, Down, Left and Right move a mark between everything that can be tapped on Home, in the library, on a book's page and in Aleph's panels and menus, and Press taps it; past the left or right edge Home turns its page. This is on by itself on devices with those keys, and **Settings → About → Button navigation** turns it on elsewhere (reopen Home after). It is new in 1.1.46 and has not been tried on a button-only device yet. **Settings → Library → Covers** draws every cover at its own shape (Whole), or all the same size, trimmed (Fill) or stretched (Stretch).
+
+**Widget actions:** **Settings → Widget actions** sets the Quick settings widget's buttons (up to five: what each does, its icon and its name) and what a tap on each widget opens. Actions come from Aleph itself and from KOReader and every installed plugin that offers gesture actions, as Neo QuickSettings does. A widget can also be set to open nothing.
+
+**Refresh distinction:** Menu/Settings → Refresh local library rescans local files. Opening Home rescans by itself only the first time in a session, ten minutes after the last scan, or when a library folder itself changed; in between, the book you close is read again on its own, so its progress is right at once. Refresh after transferring books if they do not show yet. The dashboard Quick settings refresh action instead starts or requests a quick sync from **KOSyncthing+** when available; without it, the action rescans the library.
 
 ## Optional integrations
 
@@ -201,13 +238,24 @@ Quick Top Bar adds Controls and Apps to the top menu. Controls include supported
 | KOSyncthing+ | Optional start/quick-sync control; synchronization is performed by that plugin |
 | Bookshelf | Optional book-details fallback for the current-book top-bar action |
 | BT Manager - HID Passthrough | A Bluetooth switch in the reader menu |
-| Syncery | Sync now and its progress browser in the reader menu |
+| Syncery | Sync now in the reader menu; with KOSyncthing+ too, Sync runs the whole chain (Syncthing, Syncery, waiting for the other e-reader); the other e-reader's progress in the library and on book pages |
+| Goodreads (advokatb, 0.5.0) | Settings → Library → Goodreads sign-in receives its sign-in cookie from a computer's browser; a book page's ⋯ → Send to Goodreads sends status and rating; the reader menu's Goodreads button sends reading progress |
 
 The standalone **Quick Top Bar** takes precedence over Aleph's built-in top bar. Choose which implementation to use. Other plugins or patches that replace the same reader menus, highlight panels or top menu can conflict; their combinations have not all been tested.
 
 ## Network use and stored data
 
+**X-Ray.** Finding names and mentions uses no network. Only **Describe with AI**, when you tap it, contacts the provider you chose (api.anthropic.com, api.openai.com, generativelanguage.googleapis.com, or the address you typed) with your key, the book's title and author, your progress, and short excerpts from pages already read. **Update the story** sends much more: the full text of the chapters read since the last update (up to the page you are on), in requests of about 110,000 characters. **The book before** sends that book's title and series, and its chapter summaries when it has them. The question after a break sends nothing by itself.
+
 Ordinary library/dashboard browsing requires no server. Author portraits are off initially. When enabled, Aleph searches Open Library, then English Wikipedia, and downloads matching images from the returned image URLs. Requests include author search text and normal connection metadata. Images are cached locally; failed lookups are retried after 30 days. Bulk lookup can be stopped. Lookup requests can temporarily delay the interface on a slow connection.
+
+**Import from Goodreads.** On goodreads.com, My Books → Import and export → Export Library gives `goodreads_library_export.csv`. Copy it to the device (next to your books, in the Kindle's documents folder or in Downloads) and open **Settings → Library → Import from Goodreads**. Aleph shows what it would change before changing anything. For books on the device it only fills in what is empty: the status of books still unread here (Read, Currently reading, or a did-not-finish shelf), the finished date from Date Read, and a rating where there is none. When a book is Finished both here and on Goodreads but on different days, this device's day is kept unless you tap **Choose finished dates** on the summary: it lists those books with both days, and for each (or all at once) you keep this device's day or take Goodreads'. Books read on Goodreads that are not on the device go on Aleph's record of finished books, in the year they were read, so they count toward that year's goal. Read books without a Date Read are left out. Importing again does not add anything twice. Nothing is sent anywhere.
+
+**Send to Goodreads.** With the Goodreads plugin by advokatb installed, a book page's **⋯** menu has **Send to Goodreads**. It sends the book's status (Finished, Reading, Unread as Want to read, On hold as Did not finish if your account has that shelf) and, for a finished book, its rating and the day it was finished. The book does not need to be open. The first time, Aleph finds it on Goodreads by the ID or ISBN in the EPUB, or offers search results to choose from, and remembers the match the same way the plugin does. A confirmation shows the Goodreads book and what will be sent before anything is sent.
+
+**Goodreads tracking in the background.** The Goodreads plugin by advokatb updates Goodreads as you read, and the reader waits for goodreads.com each time: a second or two normally, up to 45 seconds per try on Wi-Fi that is connected but has no internet. With **Settings → Library → Track in the background** on (off unless turned on; shown only with that plugin installed), Aleph answers the plugin's automatic calls in its place for the open book: Currently reading when a book is started, the percentage at most once a minute, Read at the end, and the check of the book's shelf when it opens. They are asked in a background process with the plugin's own Goodreads code and sign-in, so a page turn or closing a book never waits. After a failure the next try waits 5 minutes, then 10, up to 30. Which books are tracked, and whether percentages are sent, stay the plugin's own settings; everything you ask for by hand in its menu works as before. The plugin's files are not changed. A plugin version Aleph does not recognise is left to track its own way, and the row says so.
+
+**Goodreads cookie.** With the Goodreads plugin by advokatb installed, **Settings → Library → Goodreads sign-in** (under Import from Goodreads) renews its sign-in without pasting cookies by hand. Install the **Aleph Goodreads cookie** extension (the `aleph-goodreads-cookie` zip released next to Aleph) in Chrome, Edge or Firefox on a computer signed in to goodreads.com. Open the screen on the e-reader; it shows an address and a four-digit code. Click the extension, enter both and press Send. Aleph saves the cookies in the Goodreads plugin's settings, as its own Session cookies menu does, and stops listening. The screen listens only while it is open, for at most 10 minutes, and stops after a cookie arrives or after five wrong codes. On a Kindle it opens the firewall for its port (8769) and closes it again. The cookies cross the local network unencrypted, so use it on a network you trust.
 
 Attribution links open only when selected. Dictionary/Wikipedia/translation and third-party plugin actions retain their own network behavior. Aleph has no BookOrbit login, API synchronization or self-updater; Storefront can manage plugin updates.
 
@@ -215,7 +263,7 @@ Aleph stores:
 
 - `settings/aleph_index.lua`: rebuildable library metadata, device paths and highlight excerpts.
 - KOReader's `aleph` settings table: preferences, layouts, margins, pin presentation and custom highlight palette. Aleph applies that palette to KOReader's shared highlight tables while active.
-- KOReader's `quicktopbar` settings table: launcher icons, order, visibility and appearance.
+- KOReader's `aleph_topbar` settings table: launcher icons, order, visibility and appearance (copied once from the Quick Top Bar plugin's `quicktopbar` table, which that plugin keeps).
 - `cache/aleph/`: covers, generated art/icons, chapter maps, portraits and saved pinned images.
 - KOReader book settings: user-requested rating/status changes, pins and background options. Collection and annotation actions use KOReader's own data mechanisms. Global highlight names/colors and gesture choices also modify their respective KOReader settings.
 
@@ -225,7 +273,7 @@ The library index is device-specific; build it separately on each device. Use Sy
 
 ## Troubleshooting and reports
 
-For missing books, check folder selection and filters, then refresh. For empty time statistics, enable KOReader's Reading statistics and collect reading data. For visual conflicts, switch off the affected Aleph feature and restart if needed. Freezes when closing a book usually mean another home screen plugin, such as ZenOS or Simple UI, is running too: turn it off first. Include your device model, KOReader version, Aleph version, reproduction steps and relevant `crash.log` lines in an issue. Review logs for private file paths before sharing.
+For missing books, check folder selection and filters, then refresh. For empty time statistics, enable KOReader's Reading statistics and collect reading data. For visual conflicts, switch off the affected Aleph feature and restart if needed. Freezes when closing a book usually mean another home screen plugin, such as ZenOS or Simple UI, is running too: turn it off first. For a problem when opening a book, turn on **Settings → About → Troubleshooting log**, open the book again, and the last `Aleph: debug: reader step` line in `crash.log` names the step that did not finish; turn it off again afterwards. Include your device model, KOReader version, Aleph version, reproduction steps and relevant `crash.log` lines in an issue. Review logs for private file paths before sharing.
 
 ## Credits and license
 
@@ -235,4 +283,4 @@ Copyright (C) 2025–2026 neon. Additional copyright is held by the respective B
 
 Licensed under the GNU Affero General Public License, version 3 only, with additional terms. This software is provided without warranty. You may redistribute and modify it under those terms.
 
-Preserve `LICENSE`, `ADDITIONAL_TERMS.md`, `NOTICE`, `MODIFICATIONS.md`, `THIRD_PARTY_NOTICES.md`, `ZENOS_NOTICE.md` and `LICENSE-GPL-3.0.md` with the plugin. The package includes attribution for BookOrbit, ZenOS, Lucide/Feather and Bookends-related design. Complete Lua runtime source is included in the plugin folder; release tags identify the published version.
+Preserve `LICENSE`, `ADDITIONAL_TERMS.md`, `NOTICE`, `MODIFICATIONS.md`, `THIRD_PARTY_NOTICES.md`, `ZENOS_NOTICE.md` and `LICENSE-GPL-3.0.md` with the plugin. The package includes attribution for BookOrbit, ZenOS, Lucide/Feather, Bookends-related design and the Literary Clock (its code, MIT; its quotes, CC BY-NC-SA 2.5, see THIRD_PARTY_NOTICES.md). Complete Lua runtime source is included in the plugin folder; release tags identify the published version.
