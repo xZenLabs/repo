@@ -1,3 +1,22 @@
+# v1.5.2 · 2026-11-15
+
+### Faster
+
+**Starts quicker.** Reading Log now keeps its parts compiled in KOReader's cache folder (`koreader/cache/readinglog`, under 1 MB). After the first start, it no longer reads a megabyte of code each time KOReader opens, so it loads about 25 times quicker, roughly a third of a second less on an e-reader. The cache is rebuilt by itself after an update.
+
+### New
+
+**Any font for the cards.** Styles and colours > Font now lists every font on your reader, as well as the style's own font and your UI font. 
+
+### Bug fixes
+
+- A serif style (Dark Academia, Forest, Gothic, Ocean, Space) lost its font when you switched it to White, Dark or Paper. The font now stays with the style, whatever its colours.
+- ZenOS: a Dashboard tab could flash and then do nothing. 
+
+### Updating
+
+Tools > Reading Log > About and updates > **Check for updates**, then restart KOReader. Or download `readinglog-1.5.2.zip` below and replace the `readinglog.koplugin` folder in `koreader/plugins`.
+
 # v1.5.1 · 2026-11-14
 
 ### New
@@ -204,18 +223,3 @@ Dashboard settings (or Look and colours on any card) > **Style** > **Cute** turn
 - Room for 8 Dashboard tabs.
 
 **Install:** unzip, then copy everything inside `micromodules` into `.adds/koreader/settings/bookshelf/micromodules/` and restart KOReader. Your settings are kept.
-
-# v1.2.0 · 2026-10-22
-
-Reading Log 1.2.0: now in four languages
-
-Reading Log now shows in the same language as KOReader: English, Italian, Spanish or Brazilian Portuguese. 
-
-Thanks to [@DevGizmo86](https://github.com/DevGizmo86), who built the translation system and the Italian translation. 
-
-Also in this release
-
-Tab names and the Random pick heading shrink a little instead of being cut off when a translation is longer.
-KOReader’s log notes which language Reading Log loaded, which helps if it ever stays in English.
-
-To update, download reading-log-1.2.0.zip and copy everything inside its micromodules folder into koreader/settings/bookshelf/micromodules/, replacing the old files.
