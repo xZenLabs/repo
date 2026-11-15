@@ -1,11 +1,3 @@
-# v1.4.7 · 2026-11-15
-
-## What's Changed
-
-- Long-press menu actions (upload/download metadata, upload book) and selection-mode Plus menu actions now reuse the existing batch pipelines instead of duplicating logic
-- Fix book upload from the long-press menu dropping the author field, which broke the title_author naming mode
-- Flush the currently open book's metadata to disk before checking for its sidecar
-
 # v1.4.6 · 2026-09-29
 
 ## 更新说明
@@ -59,3 +51,10 @@ Thanks to @iav  for contributions to improving the K3 device experience.
 - Added Auto Sync Exclude Directories feature #9  #10 
 - Optimized gesture registration: merged reader/filemanager paired gestures into unified general gestures
 - Remove logger.info
+
+# v1.4.2 · 2026-06-29
+
+## What's Changed
+
+- Fix: support all KOReader formats in book validation (including .fb2.zip)
+- Non-touch navigation for the cloud book dialog
