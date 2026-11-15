@@ -1,3 +1,55 @@
+# v2.3.0 · 2026-11-15
+
+## What's new
+
+### Actions (new Home chip)
+The biggest addition in this release. **Actions** is a new chip in Home that lets you build your own shortcuts. Each shortcut is a tile with a name and an icon of your choice, and one tap runs it. It is off by default: turn it on under Settings > Shelves.
+
+A tile can run either of two things:
+- **A KOReader action.** These are the same actions gestures and profiles can run, including the ones other plugins register (toggle night mode, open the file search, and so on).
+- **A plugin.** Any entry a plugin puts in KOReader's main menu, so you can open a plugin's screen straight from Home.
+**Creating an action:** tap the "+" tile at the end of the chip, then:
+1. Choose whether it runs a KOReader action or a plugin, and pick which one from the list.
+2. Give it a name (it starts with the name of what it runs).
+3. Choose an icon, or skip it to use the default one. You can use KiKome's own icons or any SVG/PNG file from your device.
+**Managing actions:** hold a tile to rename it, change its icon, change what it runs, move it earlier or later, or delete it. Deleting a tile only removes the shortcut; what it ran is not touched.
+**Hiding the "+" tile:** once your actions are set, you can hide the "+" tile from the More menu of Home. While it is hidden, an "Add an action" row in the same menu replaces it.
+Your actions are stored in KOReader's settings, so they survive plugin updates.
+
+### Home
+- **Current book view:** Home can now show a single "Current book" card instead of the recent books row. It shows the cover, title, author, reading progress and quick action buttons, which take a pale tint from the book's cover color.
+- **Literary clock (only English):** A third option under Settings > Home > Top of Home. It shows a quote from a book mentioning the current time—with the time phrase highlighted—along with the book's title and author on a soft grey card that updates every minute. Below the card sit quick action buttons to open your current book, its annotations, or its edit screen, tinted from the book's cover color. 
+
+- **Hold menu on folders and collections:** Long-pressing a folder or a collection in Home now opens the same options menu you get in Library (open, rename, add, remove and more). Before, this only worked in Library.
+- **Selection mode on Home:** Everything about selection mode now works in Home too: Select from the hold menu or from More, the Selection menu (Copy, Move, Select all, Delete), Add to collection, and Move to folder.
+
+### Collections
+- **New "Uncollected" collection:** An automatic list of every book that isn't in any collection. A book leaves it by itself as soon as you add it to one, so it works as an inbox of books still to organize. It has options of its own:
+  - **Add to collections:** hold a book and add it to one or several collections right away, without going through Select.
+  - **Select:** pick several books and add them all to collections in one step, with "Select all" available.
+  - **Disable collection:** hold the collection itself to turn it off. A short guide tells you how to bring it back.
+- **Optional:** It can be switched on or off at any time under Settings > Shelves > Collections (Home) or Settings > Library options > Tabs > Collections (Library), in "Show in Collections".
+
+### Annotations
+- **Colored highlights:** Quotes in the Annotations list now sit on a soft pill in the same hue as the highlight, in a lighter shade.
+- **Color names:** The line with the chapter and page now also names the color (e.g. `Chapter 3 · Page 45 · Yellow`). This helps on e-ink screens that can't show color. It applies to highlights, underlines and strikethroughs.
+
+### Settings
+- **Font choice:** You can now choose between the primary and the secondary font.
+
+### Fixes
+- **More room for shelves on smaller screens:** Tightened the vertical spacing at the top of Home so the shelves below get more room on smaller e-readers.
+- **Back gesture:** Back now steps back one level (closing menus, leaving selection mode) instead of dropping you out of the plugin.
+- **Exit confirmation:** KiKome now asks for confirmation before you leave it.
+- Technical improvements on the stable pages options.
+
+## Installation
+1. Download `KiKomeScrubber.koplugin.zip` from the **Assets** section below (not "Source code").
+2. Unzip it and copy the `KiKomeScrubber.koplugin` folder into `koreader/plugins/`.
+3. Restart KOReader.
+
+To update, use **Check for updates** in KiKome's Settings, or replace the folder. To uninstall, delete it.
+
 # v2.2.0 · 2026-11-09
 
 ## What's new
@@ -176,46 +228,6 @@ The whole plugin has been optimized.
 - Optimized for landscape mode.
 - Improved scroll bar: hold it and drag up or down.
 - Technical improvements to copy, cut and delete.
-
-## Installation
-1. Download `KiKomeScrubber.koplugin.zip` from the **Assets** section below (not "Source code").
-2. Unzip it and copy the `KiKomeScrubber.koplugin` folder into `koreader/plugins/`.
-3. Restart KOReader.
-
-To update, use **Check for updates** in KiKome's Settings, or replace the folder. To uninstall, delete it.
-
-# v1.0.0 · 2026-10-28
-
-## KiKome 1.0
-
-Hello, KiKome. A calm, rounded home for your library in KOReader.
-
-Based on [Kobold](https://github.com/unitreign/kobold), with a lot of new ideas on top.
-
-### Home
-- Your recent books up front. Swipe through them and pick up where you left off.
-- Shelves you make your own. Add chips for Collections, To be read, Favorites, or any folder.
-- Grid or list, with or without shelf boards.
-
-### Library
-- Browse by Books, Authors, Series, Collections, or Files.
-- Filter, sort, and group in a tap.
-- In Files, select books and copy, move, or delete them. Progress, history, and covers come along.
-- Paste into any folder, and make a New Folder anywhere.
-
-### Book details
-- A clean page for every book: progress, synopsis, keywords, and file info.
-- Tap the cover to see it full screen.
-
-### Little touches
-- A soft "Opening" pill appears on a book's cover while it loads, and a small "Closing" pill when you leave it.
-- Rounded corners and cover outlines, if you like them.
-- Quick panels for brightness, Wi-Fi, battery, and the clock.
-- Load every missing cover in one go.
-- Check for updates right from Settings.
-
-### Thank you
-To [Kobold](https://github.com/unitreign/kobold) and [Bookshelf](https://github.com/AndyHazz/bookshelf.koplugin). KiKome wouldn't exist without them.
 
 ## Installation
 1. Download `KiKomeScrubber.koplugin.zip` from the **Assets** section below (not "Source code").
