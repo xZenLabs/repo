@@ -1,3 +1,15 @@
+# v1.2.7 · 2026-11-15
+
+## 更新说明
+- 阅读背景：修复打开书籍时的闪烁问题
+- 阅读背景：夜间模式下现在至少混合 60% 黑色
+- 阅读背景：将单本书的透明度设为 0 时，现在会重置为全局透明度
+
+## What's Changed
+- Reading Background: fix flicker when opening a book
+- Reading Background: night mode now blends at least 60% black
+- Reading Background: setting per-book transparency to 0 now resets to the global transparency
+
 # v1.2.6 · 2026-11-14
 
 ## 更新说明 
@@ -71,17 +83,3 @@
 - 首次比如未匹配书籍时点击该按钮会先弹出书籍匹配界面，用户选定书籍之后会自动执行拉取当前章节想法。
 - 整个过程仅顶部小通知，不影响整体阅读体验，无需提前批量下载某些章节甚至所有章节想法
 > 整本下载伴随失败章节时会无法打包成EPUB，修改后即使有失败章节也可以打包成EPUB，失败章节正文内容提示"获取内容失败“
-
-# v1.2.2 · 2026-10-01
-
-## 更新内容
->可搭配[simpleui v2.7.1-b](https://github.com/gytwo/simpleui.koplugin/releases/v2.7.1-b)使用
-
-1. 快捷操作：新增内置动作
-- 切换翻页方向
-- 番茄-拉取段评：可为本地书籍匹配书源段评-需安装[fanqie.koplugin v2.2.1-b](https://github.com/gytwo/fanqie.koplugin/releases)
-- 页面浏览器：类似kindle原生页面缩略图，可快速预览页面、快速跳转下一章-需安装[page_scrubber.koplugin](https://github.com/lautaroelkin/page_scrubber.koplugin)
-2. 阅读滑块：新增配置区 —— 可直接在滑块弹窗中应用、创建、删除 KOReader 配置文件
-3. 阅读滑块：新增文档设置区 —— 重置文档设置为默认、保存文档设置为默认
-4. 阅读滑块：样式微调区改为可折叠
-5. 默认设置：修改部分默认设置

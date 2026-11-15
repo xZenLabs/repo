@@ -1,3 +1,12 @@
+# v1.4.0-beta.3 · 2026-11-15
+
+## What’s new
+
+- **Clearer top-menu footer.** The page number and arrows take priority when the clock and battery crowd the row. To hide device status throughout the top menu, turn off **Dock & interface → Quick controls → Show clock and battery in the top menu** in OrbitUI.
+- **Custom text-selection shortcuts.** Choose and reorder up to six actions for the first page of the selection menu. Select **Customize text selection menu** under **More…** while reading, or find it in **OrbitUI → Integrations → Reader panel & X-Ray**. **More…** still gives you the full action list.
+
+To update in KOReader, enable **Include preview releases** under **OrbitUI → System & maintenance → Update OrbitUI**, then check for updates and restart after installing.
+
 # v1.4.0-beta.2 · 2026-11-14
 
 ## Bookshelf 6.5.0
@@ -65,20 +74,3 @@ The menu and dock were tested on a Bigme B7 Pro. The default dock order was test
 The Home layout and both shelf pagers were checked on a Bigme. One Recently added cover briefly used a placeholder after paging and returned after restarting KOReader. The combined release was checked with local tests and upgrade checks.
 
 Choose the **preview** channel in OrbitUI's updater to install this beta. The **stable** channel offers 1.1.0.
-
-# v1.2.0-beta.3 · 2026-11-11
-
-## What’s new
-
-- **Straight cover row on Home.** Four equally sized covers show progress at a glance. The last book’s title sits below the time estimate, and the Want to read and Recently added stacks share a card with independent paging. The layout uses Inter by default and respects your custom UI font. It is preselected in the first-run setup guide.
-- **An airy book information page.** See the cover, reading status, rating, description and cached EPUB tags together. The existing book actions and detailed tabs are available from the page.
-- **Updated search and library tools.** Book search keeps the query, scope and sort together. Tag and similar-book results offer book and series views. Collection editing, shelf appearance and dashboard module settings have clearer layouts.
-- **A clearer reader panel.** See estimated time for the book and chapter when reading statistics are available, and open KOReader’s native Reading settings directly. The Also reading tab now recovers from stale navigation state.
-
-This beta includes the previously merged Bookshelf 6.4.2 and SimpleUI 3.0.3 integrations.
-
-## Testing
-
-USB testing on a Bigme covered Home, Library, Manga, book information, search, the reader panel and touch after sleep and wake. The final Inter and header alignment changes were checked with KOReader widgets on desktop. A fresh physical installation and the final typography still need device checks.
-
-Enable preview releases in OrbitUI’s updater to install this beta. The stable channel continues to offer **1.1.0**.
