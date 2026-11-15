@@ -1,0 +1,25 @@
+# Koreader Progress Bookmarks patch for KOReader
+# https://github.com/3lementa1/KOReader-Progress-Bookmarks
+# zenpm:auto-scraped
+id=koreader-progress-bookmarks
+name=Koreader Progress Bookmarks
+version=1.1.1
+description=Plugin for KOReader that draws a spine and pages with a bookmark that moves with reading progress
+author=3lementa1
+category=patches
+platforms=koreader
+dependencies=
+source=https://github.com/3lementa1/KOReader-Progress-Bookmarks
+stars=7
+updated_at=2026-11-15T18:08:38Z
+published_at=2026-11-12T18:18:52Z
+readme_url=packages/koreader/koreader-progress-bookmarks.kopatch/README.md
+readme_hash=1dfb0c0af5c1d7b3dfc718706b892eba368d79c3
+release_notes_url=packages/koreader/koreader-progress-bookmarks.kopatch/RELEASE_NOTES.md
+release_notes_hash=b0e388f043fde84f0de1377beafc83a3d91ea883ee7b55dc8200d0007f621aeb
+releases=[{"tag_name":"v1.1.1","assets":[{"name":"bookmark_images.zip","url":"https://github.com/3lementa1/KOReader-Progress-Bookmarks/releases/download/v1.1.1/bookmark_images.zip","size":18138851,"digest":"sha256:5182c8d276b5e786e0d75f8eed5c8037c103f937c27341fc5e970c78341298d1"}],"name":"Progress Bookmarks v1.1.1"},{"tag_name":"v1.1.0","assets":[{"name":"bookmark_images.zip","url":"https://github.com/3lementa1/KOReader-Progress-Bookmarks/releases/download/v1.1.0/bookmark_images.zip","size":18138851,"digest":"sha256:5182c8d276b5e786e0d75f8eed5c8037c103f937c27341fc5e970c78341298d1"}],"name":"Progress Bookmarks v1.1.0"},{"tag_name":"v1.0.0","assets":[{"name":"source-code.zip","url":"https://api.github.com/repos/3lementa1/KOReader-Progress-Bookmarks/zipball/v1.0.0"}],"name":"Progress Bookmarks v1.0.0"}]
+source_type=source
+assets.0.arch=any
+assets.0.asset=2-bookshelf-progress-bookmark.lua
+assets.0.url=https://raw.githubusercontent.com/3lementa1/KOReader-Progress-Bookmarks/main/2-bookshelf-progress-bookmark.lua
+assets.0.size=81722

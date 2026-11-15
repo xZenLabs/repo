@@ -6,28 +6,22 @@
 
 I think Panels+ is good enough as is, but what about its surrounding KOReader ecosystem?. It's time to sail beyond the horizon. Lets expand this ship (Panels+) to work together with other plugins!.
 
-## Ink-away compatibility (in process)
+## Ink-away compatibility
 
 <video width="100%" height="auto" src="https://github.com/user-attachments/assets/fdf3ef83-c7df-48f4-bb30-ca32a2305b90"></video>
 
 Yep, if *Ink-Away* is installed along with Panels+, you'll be able to use Ink-away annotations while panning!, it means that all rendered annotations made by ink-reader are visible from Panels+ custom viewer, including smooth transitions and drawing outside the panel when using no-crop mode.
 
-I'd say is 10% experimental and 90% stable, but this requires changes in ink-away internal code.
-
-You can follow up the current state of this integration in this discussion I made to ink-away author:
-https://github.com/EmirErtorer/ink-away.koplugin/discussions/69
-
-Update: I've created the PR for the integration here -> https://github.com/EmirErtorer/ink-away.koplugin/pull/80
-
+Ink-Away + PanelsPlus Discussion: https://github.com/EmirErtorer/ink-away.koplugin/discussions/69
+PanelsPlus PR: https://github.com/EmirErtorer/ink-away.koplugin/pull/80  (Merged!)
 
 ---
 
-There are no builds so far. I need more testing for these integration features.
+Builds:
 
----
+You can test these features now!, they're stable & candidates for next release.
 
-Wait? Wasn't this v1.6.0?
-True, I delayed this update to v1.7.0 due to some bug reports about 1.5.1 which needed to patched (v1.6.0 Moonlight).
+`panelsplus.koplugin.zip`: Has these ink-away integrations already built-in. Remember to download Ink-away >= v4.5.0 (https://github.com/EmirErtorer/ink-away.koplugin/releases/tag/v4.5.0)
 
 # v1.5.0-nightly · 2026-09-21
 

@@ -102,6 +102,8 @@ The 15 bundled reading companions are cat, dog, rabbit, owl, penguin, robot, vam
 
 **Literary clock.** A Decor widget (Customize → + Add widget → Decor) that tells the time with a line from a book that mentions it: the quote for the current minute, the time in bold, the book's title and author under it, at the largest size that fills the tile. When a minute has several quotes the choice changes from day to day. Quotes the collection marks as not safe for work are left out; the few minutes with no quote show a line written like one, with the time in words. It changes each minute while Home is on screen. The quotes come from the Literature Clock collection (The Guardian's readers, JohannesNE, Carlos Bonadeo), as converted by readinpixels' Literary Clock plugin, and are shared under CC BY-NC-SA 2.5 (see THIRD_PARTY_NOTICES.md).
 
+**Wallpaper.** Customize Home → **+ Add wallpaper** puts a picture from your device behind every page of Home, with its fit, how faded it is and how see-through the widgets are. Five seasonal wallpapers made for Aleph (Valentine, Summer, Autumn, Christmas, Easter) are in the [wallpapers folder](wallpapers/), or all together as **aleph-wallpapers.zip** on the Releases page.
+
 **Owner information.** Menu → Owner information: your name, email and phone number, shown large under "If you find this e-reader, please contact:", so whoever finds a lost device can reach you. Kept on the device only.
 
 ## Settings reference
@@ -119,6 +121,7 @@ Open **Aleph → Menu → Settings**.
 | Reader → Page browser on swipe up | Open Aleph's page browser from a bottom-edge swipe | On |
 | Reader → Pinned pages | Position the badge and choose the drawer side | Bottom-right badge; right drawer |
 | Reader → Choose a colour when bookmarking | Show the list of bookmark colours when a page is bookmarked; bookmarks appear as a ribbon in their colour | On; Blue first, then the colour used last |
+| Reader → Search like a Kindle | Every search result on a page of its own, a bar to go through them, and a way back to the page you were reading | On |
 | Top menu | Enable Controls and Apps tabs | On, unless standalone Quick Top Bar takes precedence |
 | Top menu → Apps | Show/hide apps, change icons and arrange their order | Apps shown by default |
 | Top menu appearance | Outline around icons, Controls/Apps tab icons; brightness/warmth sliders: Knob, Bar, Notched or Dots | Outline on; Knob sliders |
@@ -166,13 +169,15 @@ Aleph restyles highlight actions, selected-text actions, notes/details and the s
 
 ## Reader tools
 
-Tap the bottom menu region for **This book** and **Also reading**. This book links to Style, Contents, Bookmarks, Pages, the current-page bookmark switch, Book details and Aleph Home. With **BT Manager - HID Passthrough** installed, a small Bluetooth switch starts or stops its daemon; with **Syncery** installed, **Sync now** and **Progress** (its progress browser) sit beside it. Tap the Silverfish widget when its speech is cut short to read all of it. Also reading switches to another book in progress. X-Ray options appear when the optional X-Ray plugin is available.
+Tap the bottom menu region for **This book** and **Also reading**. This book links to Style, Search, Bookmarks, Pages (tap the Chapter line for the table of contents), the current-page bookmark switch, Book details and Aleph Home. With **BT Manager - HID Passthrough** installed, a small Bluetooth switch starts or stops its daemon; with **Syncery** installed, **Sync now** and **Progress** (its progress browser) sit beside it. Tap the Silverfish widget when its speech is cut short to read all of it. Also reading switches to another book in progress. X-Ray options appear when the optional X-Ray plugin is available.
 
 Swipe up from the bottom edge for the page browser. It has Pages, Reading settings, Bookmarks, Highlights, Contents and Pinned pages tabs, a page carousel, grid, search and a slider. Tap the middle page to read there; tap side pages or swipe to browse. Hold a step arrow to skip a chapter. Close or Back returns without committing a page jump.
 
 Bookmarks have All/Highlights/Bookmarks/Notes filters plus highlight style and color filters. The table-of-contents overlay also provides access to KOReader's native contents menu. Image viewing retains zoom and pan with Aleph's styled controls.
 
 For reflowable documents, **Reading settings → Background** offers White, Paper, Sepia, Gray and Custom. The selected option is stored with the book; the custom color value is shared in Aleph's settings. A document's own painted background can override the appearance.
+
+**Search like a Kindle.** Search a book (the page browser's search button, KOReader's search gesture, or Search on selected text) and every match shows on a page of its own, with an Annotations tab for highlights and notes that hold the words, and a Text tab with two lines around each match, its chapter and page. Tap one to read it there: the word is highlighted and a bar at the foot of the page shows the page and ‹ Result 3 of 46 ›; tap "Result 3 of 46" for the list again, × to finish. When you finish away from the page you were reading, **Go to most recent page** takes you back, and **Return to page …** returns. Hold the search button on the results page for KOReader's own search box (case, whole words, regular expressions). **Settings → Reader → Search like a Kindle** turns it off.
 
 ## X-Ray
 
@@ -185,7 +190,7 @@ Aleph's own X-Ray lists the people, places and other names of the book you are r
 - **Show the whole book** (off by default): also lists names and mentions from pages you have not read.
 - **Descriptions with AI** (optional): add your own key for Claude, OpenAI, Gemini or another OpenAI-style service in **Settings → X-Ray**, then tap **Describe with AI** in a book's X-Ray. One request sends the book's title and author, how far you are, and two short excerpts per name from the pages already read. The answer adds what each name is and the People / Places / Other filters. Ask again later in the book to update. The model name can be changed in Settings; the defaults may need updating as providers rename theirs. The key is stored as typed in KOReader's settings file.
 
-- **Story** (optional, needs the same key): the **Story** tab of a book's X-Ray. **Update the story** sends the text of the chapters you have read, and nothing after the page you are on, to the provider; it comes back as a short summary of each chapter and "the story so far". It runs in the background and you can keep reading. Later updates only send what you have read since. Tap a chapter to read its summary whole or go to it.
+- **Story** (optional, needs the same key): the **Story** tab of a book's X-Ray. **Update the story** sends the text of the chapters you have read, and nothing after the page you are on, to the provider; it comes back as a short summary of each chapter and "the story so far". It runs in the background and you can keep reading. Later updates only send what you have read since. Tap a chapter to read its summary whole or go to it; the ‹ › buttons beside The story and Go to chapter (or a sideways swipe) move to the summaries around it.
 - **The book before:** for a book that is part of a series (not its first), the Story tab has **The book before**. If that book is in your library and has a Story of its own on this device, the recap is written from those chapter summaries. Otherwise the model is asked what it knows of the book from its title alone, and the answer is marked as such, since it can be wrong.
 - **After a break:** when you open a book you have not read for a while (2 weeks unless changed in **Settings → X-Ray → Offer a recap after a break**: 1 week, 2 weeks, 1 month or Never), or one whose status was On hold, Aleph asks once whether you want the story so far. Nothing is sent unless you say yes.
 
@@ -224,6 +229,12 @@ Quick Top Bar adds Controls and Apps to the top menu. Controls include supported
 **Widget actions:** **Settings → Widget actions** sets the Quick settings widget's buttons (up to five: what each does, its icon and its name) and what a tap on each widget opens. Actions come from Aleph itself and from KOReader and every installed plugin that offers gesture actions, as Neo QuickSettings does. A widget can also be set to open nothing.
 
 **Refresh distinction:** Menu/Settings → Refresh local library rescans local files. Opening Home rescans by itself only the first time in a session, ten minutes after the last scan, or when a library folder itself changed; in between, the book you close is read again on its own, so its progress is right at once. Refresh after transferring books if they do not show yet. The dashboard Quick settings refresh action instead starts or requests a quick sync from **KOSyncthing+** when available; without it, the action rescans the library.
+
+## Languages
+
+Aleph follows KOReader's language (KOReader's **Settings → Language**; restart KOReader after changing it). Besides English it is translated into **Brazilian Portuguese** and **Spanish**; Portuguese from Portugal uses the Brazilian translation and every kind of Spanish uses the Spanish one. Where KOReader has its own translation of a word, Aleph uses KOReader's, so the two read alike. Not translated: the legal notices, and the Literary clock's quotes, which are in English.
+
+To add a language, copy `l10n/aleph.pot` to `l10n/<code>/aleph.po`, where `<code>` is the language's folder name in KOReader's own `l10n` folder (for example `fr` or `de`), and fill in each `msgstr` line. Poedit and similar programs open these files.
 
 ## Optional integrations
 

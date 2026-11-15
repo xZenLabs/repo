@@ -1,3 +1,72 @@
+# v1.2.7 · 2026-11-15
+
+# Aleph 1.2.7
+
+Kindle-style search, Aleph in Brazilian Portuguese and Spanish, Settings that fit at any interface size, ready-made wallpapers, and fixes for the issues you reported. Thank you, everyone who opened an issue!
+
+📖 **How to use everything: [the Aleph wiki](https://github.com/lara-2-ko/aleph.koplugin/wiki)**
+
+## Install or update
+
+1. Download **aleph.koplugin.zip** below and extract it.
+2. Copy the **aleph.koplugin** folder into KOReader's `plugins` folder, replacing the old one.
+3. Restart KOReader.
+
+Your settings, Home layouts, pins and library are kept. → [Installation guide](https://github.com/lara-2-ko/aleph.koplugin/wiki/Installation-Guide) · [Updating](https://github.com/lara-2-ko/aleph.koplugin/wiki/Updating)
+
+> ⚠️ **Not compatible with ZenOS (Zen UI) or Simple UI.** Turn them off in Plugin management before using Aleph.
+
+---
+
+## 🐛 Fixed issues
+
+- **Book margins could not be turned back on after turning them off** — [#3](https://github.com/lara-2-ko/aleph.koplugin/issues/3). Thanks to @tomdolhs, who also found the exact line. The same mistake was fixed in two other places:
+  - **Ratings:** tapping a book's current star rating now clears it.
+  - **Customize Home:** tapping the selected widget again now unselects it.
+- **Settings could not be left at an interface size of 1.2× or more** — [#4](https://github.com/lara-2-ko/aleph.koplugin/issues/4). Thanks to @N9TailedFOX. The page was taller than the screen and its top, with the back arrow, went off screen. Now:
+  - **Settings comes in pages:** every Settings page, the main list included, splits into pages when it doesn't fit, with arrows at the bottom.
+  - **The back arrow stays visible:** on all of Aleph's full-screen pages, the header stays at the top whatever the size.
+  - **Book margins** comes in pages too.
+
+---
+
+## ✨ New
+
+### 🔍 Search like a Kindle
+Every match in the book on one page, then a bar to go through them, and a way back to your page. → [Search](https://github.com/lara-2-ko/aleph.koplugin/wiki/Search)
+
+- **The results page:** "46 results", with an **Annotations** tab (your highlights and notes with the words) and a **Text** tab (every match with the lines around it, the word in bold, its chapter and page).
+- **The bar:** tap a result to open the book there with the word highlighted. A bar at the foot of the page shows **Page 34 · ‹ Result 1 of 46 › · ×**. Pages still turn as usual, and "Result 1 of 46" brings the list back.
+- **Getting back:** when you finish away from where you were reading, **Go to most recent page** takes you back, and **Return to page 53** goes to the result again.
+- **KOReader's own search box:** hold the search button on the results page for its options (capitals, whole words, patterns).
+- **Turning it off:** Settings → Reader → **Search like a Kindle**.
+
+### 🌎 Português (Brasil) and Español
+Aleph follows KOReader's language (Settings → Language). Every screen is now translated into **Brazilian Portuguese** and **Spanish**, and dates use the right month and day names. Portuguese from Portugal and every kind of Spanish use these too. Anyone can add another language. → [Languages](https://github.com/lara-2-ko/aleph.koplugin/wiki/Languages)
+
+### 🖼️ Wallpapers
+Five seasonal wallpapers made for Aleph's Home: **Romantic Valentine, Summer Beach, Autumn Enchanted, Christmas Wonderland and Easter Garden**. Download **aleph-wallpapers.zip** below, or pick one from the [wallpapers folder](https://github.com/lara-2-ko/aleph.koplugin/tree/main/wallpapers). Then use Customize Home → **+ Add wallpaper**. → [Wallpaper](https://github.com/lara-2-ko/aleph.koplugin/wiki/Wallpaper#ready-made-wallpapers)
+
+### 📖 Reader menu
+- **Search** replaces the Contents button.
+- **Table of contents:** tap the **Chapter** line (the chapter and its pages left) to open it.
+
+### ✨ X-Ray Story
+A chapter's summary now has one row of buttons, **‹ · The story · Go to chapter · ›**, to move to the summaries before and after it. A sideways swipe does the same. → [X-Ray](https://github.com/lara-2-ko/aleph.koplugin/wiki/X-Ray)
+
+---
+
+## Assets
+
+| File | What it is |
+|---|---|
+| `aleph.koplugin.zip` | The plugin: extract it and copy the `aleph.koplugin` folder into KOReader's `plugins` |
+| `aleph-wallpapers.zip` | The five wallpapers |
+| `aleph-goodreads-cookie-1.0.4-chrome.zip` | Optional browser extension for the Goodreads plugin (Chrome, Edge, Brave) |
+| `aleph-goodreads-cookie-1.0.4-firefox.zip` / `.xpi` | The same for Firefox (the .xpi is the signed one) |
+
+Full change list: `MODIFICATIONS.md`.
+
 # v1.2.0 · 2026-11-15
 
 # Aleph 1.2.0
