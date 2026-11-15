@@ -1,0 +1,3 @@
+{
+  "releases": [{"tag_name":"v1.0.0","assets":[{"name":"kosync2.koplugin.zip","url":"https://github.com/Tokisaki-Galaxy/koreader-kosync2.kolpugin/releases/download/v1.0.0/kosync2.koplugin.zip","size":18232,"digest":"sha256:358ef70730244fd948060e4217803ee474450ebf11a0dad020a5fdafbc6cfc6a"}],"name":"KOSync2 v1.0.0"}]
+}

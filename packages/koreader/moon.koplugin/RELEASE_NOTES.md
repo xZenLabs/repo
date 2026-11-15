@@ -1,3 +1,29 @@
+# v0.5.20 · 2026-11-15
+
+## 月读 v0.5.20
+
+KOReader 插件包：`book.koplugin-v0.5.20.zip`
+
+输入法词库（整库，手动 sideload）：`dictionary.sqlite3 dictionary-wubi.sqlite3 dictionary-cangjie.sqlite3 dictionary-zhuyin.sqlite3`
+
+安装：解压后将 `book.koplugin` 复制到 `koreader/plugins/`，然后重启。
+
+词库 sideload：下载对应布局的词库，直接放入 `koreader/.moon/`
+（与 `book.sqlite3` 同级）。附件已使用最终文件名，无需重命名。
+
+### 更新内容
+
+相对上一版本 `v0.5.19`：
+
+#### 修复
+
+- :bug: (reader): 切章时保留不可见占位窗，避免窗口栈清空退出 KOReader (f1246bc9)
+- :bug: (reader): 切章前校验章节文件并补充读完与切章失败日志 (78560d02)
+
+### 完整对比
+
+https://github.com/AnkioTomas/moon/compare/v0.5.19...v0.5.20
+
 # v0.5.19 · 2026-11-15
 
 ## 月读 v0.5.19
@@ -123,28 +149,3 @@ KOReader 插件包：`book.koplugin-v0.5.16.zip`
 ### 完整对比
 
 https://github.com/AnkioTomas/moon/compare/v0.5.14...v0.5.16
-
-# v0.5.14 · 2026-11-13
-
-## 月读 v0.5.14
-
-KOReader 插件包：`book.koplugin-v0.5.14.zip`
-
-输入法词库（整库，手动 sideload）：`dictionary.sqlite3 dictionary-wubi.sqlite3 dictionary-cangjie.sqlite3 dictionary-zhuyin.sqlite3`
-
-安装：解压后将 `book.koplugin` 复制到 `koreader/plugins/`，然后重启。
-
-词库 sideload：下载对应布局的词库，直接放入 `koreader/.moon/`
-（与 `book.sqlite3` 同级）。附件已使用最终文件名，无需重命名。
-
-### 更新内容
-
-相对上一版本 `v0.5.13`：
-
-#### 修复
-
-- :bug: (comic): 缺少 tj3SetCroppingRegion 导出时回退到 JPEG 条带解码 (b12be1e5)
-
-### 完整对比
-
-https://github.com/AnkioTomas/moon/compare/v0.5.13...v0.5.14

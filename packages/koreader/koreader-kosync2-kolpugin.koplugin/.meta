@@ -1,0 +1,23 @@
+# Koreader Kosync2.Kolpugin plugin for KOReader
+# https://github.com/Tokisaki-Galaxy/koreader-kosync2.kolpugin
+# zenpm:auto-scraped
+id=koreader-kosync2-kolpugin
+name=Koreader Kosync2.Kolpugin
+version=1.0.0
+description=
+author=Tokisaki-Galaxy
+category=utility
+platforms=koreader
+dependencies=
+source=https://github.com/Tokisaki-Galaxy/koreader-kosync2.kolpugin
+stars=5
+updated_at=2026-11-15T08:01:01Z
+published_at=2026-11-04T12:32:19Z
+readme_url=packages/koreader/koreader-kosync2-kolpugin.koplugin/README.md
+readme_hash=52e4d14e2fa1861f72e5aad2e743be3814af675b
+release_notes_url=packages/koreader/koreader-kosync2-kolpugin.koplugin/RELEASE_NOTES.md
+release_notes_hash=ba9e84e0bde983bc5b26fd0b0368f5ad671eb30de3d937ae563a487a03665d20
+releases=[{"tag_name":"v1.0.0","assets":[{"name":"kosync2.koplugin.zip","url":"https://github.com/Tokisaki-Galaxy/koreader-kosync2.kolpugin/releases/download/v1.0.0/kosync2.koplugin.zip","size":18232,"digest":"sha256:358ef70730244fd948060e4217803ee474450ebf11a0dad020a5fdafbc6cfc6a"}],"name":"KOSync2 v1.0.0"}]
+source_type=release
+source_asset=kosync2.koplugin.zip
+size=18232
