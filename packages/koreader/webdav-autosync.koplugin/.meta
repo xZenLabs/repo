@@ -1,0 +1,18 @@
+# Webdav Autosync plugin for KOReader
+# https://github.com/inkee08/webdav-autosync.koplugin
+# zenpm:auto-scraped
+id=webdav-autosync
+name=Webdav Autosync
+version=source
+description=
+author=inkee08
+category=utility
+platforms=koreader
+dependencies=
+source=https://github.com/inkee08/webdav-autosync.koplugin
+stars=5
+updated_at=2026-11-15T01:01:01Z
+readme_url=packages/koreader/webdav-autosync.koplugin/README.md
+readme_hash=a804170dfdbae7cede49a0959bc4bbc78522d0aa
+source_type=source
+source_url=https://codeload.github.com/inkee08/webdav-autosync.koplugin/zip/refs/heads/main

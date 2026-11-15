@@ -1,3 +1,19 @@
+# v9.5.2 · 2026-11-15
+
+# AppDock 9.5.2
+
+## Deutsch
+
+- **Neue Navigationsleiste in Apps.** Wie bei Android: **Zurück**, **Home** und **Offene Apps**, jeweils ein Drittel der vollen Breite. Zurück verlässt zuerst den Vollbildmodus, lässt sonst die App eine Unterseite schließen (`onBack`) und schließt andernfalls die App.
+- **Optionale Wischgesten** unter *Einstellungen → Anzeige → Gestennavigation*: vom linken oder rechten Bildschirmrand wischen = Zurück, unten schnell nach oben wischen = Home, unten langsam nach oben wischen = Offene Apps. Die Buttons werden dann durch eine schmale Leiste ersetzt.
+- Der Neuigkeiten-Dialog weist auf die neue Navigation hin.
+
+## English
+
+- **New navigation bar inside apps.** Android-style **Back**, **Home** and **Open apps**, each spanning a third of the full width. Back first leaves fullscreen, then lets the app close a sub page (`onBack`), otherwise closes the app.
+- **Optional swipe gestures** under *Settings → Display → Gesture navigation*: swipe from the left or right screen edge = Back, fast swipe up from the bottom = Home, slow swipe up from the bottom = Open apps. The buttons are then replaced by a slim bar.
+- The What's new dialog points out the new navigation.
+
 # v9.5.1 · 2026-11-14
 
 # AppDock 9.5.1
@@ -44,13 +60,3 @@ Das Animations-Overlay wird nun ohne eigenen Vorab-Refresh registriert. Der erst
 Nach dem Seitenwechsel wird das Overlay ohne zusätzlichen Zwischenrefresh entfernt. Erst danach wird genau einmal ein Full-Refresh ausgeführt, um E-Ink-Ghosting zu beseitigen.
 
 Auch das Quick-Settings-Dropdown verwendet beim Schließen keinen zusätzlichen Overlay-Refresh vor dem abschließenden UI-Refresh.
-
-# v9.3.2 · 2026-11-12
-
-# AppDock 9.3.2 — Animationsstart und Dropdown-Abschluss
-
-Dieses Patch-Release behebt verbleibendes Flackern beim Homescreen-Seitenwechsel und im Quick-Settings-Dropdown.
-
-Der Animationsrunner startet nun direkt mit dem ersten bewegten Frame statt zunächst einen statischen `t=0`-Frame zu zeichnen. Dadurch entsteht vor dem Homescreen-Seitenwechsel kein zusätzlicher sichtbarer Refresh.
-
-Das Quick-Settings-Dropdown startet ebenfalls ohne statischen Vorab-Frame. Beim Wegfahren werden Dropdown und Animationsebene zuerst vollständig entfernt; anschließend wird genau einmal ein normaler UI-Refresh für die darunterliegende Seite ausgeführt, um Ghosting sauber zu entfernen.
