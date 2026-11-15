@@ -1,3 +1,24 @@
+# v1.4.7 · 2026-11-15
+
+## 更新说明
+- 长按菜单操作（上传/下载元数据、上传书籍）与选择模式 Plus 菜单操作改为复用现有批量流程，不再重复实现
+- 修复长按菜单上传书籍丢失作者字段、导致「标题_作者」命名模式失效的问题
+- 检查本地 sidecar 前先落盘当前打开书籍的元数据
+> 自动同步增强保护：自动上传完全以本地覆盖云端，故从云端自动合并下载到上传的链条十分重要，一旦断裂就容易在用户不知情的情况下丢失云端数据，故此增强保护
+- 下载失败（无网络、未配置、下载出错等）后抑制该书的自动上传，避免用不完整的本地元数据覆盖云端；下载成功、云端无此书（404）或手动上传成功后解除抑制，抑制期间手动上传会弹窗确认
+- 开启自动上传但未开启自动下载时，提示可选开启自动下载（合并），避免首次上传直接覆盖云端数据
+- 开启省心同步模式且有书籍正在阅读时，提示先合并更新当前书，避免用未对齐的本地数据覆盖云端
+
+
+## What's Changed
+- Long-press menu actions (upload/download metadata, upload book) and selection-mode Plus menu actions now reuse the existing batch pipelines instead of duplicating logic
+- Fix book upload from the long-press menu dropping the author field, which broke the title_author naming mode
+- Flush the currently open book's metadata to disk before checking for its sidecar
+> Auto sync protection: auto upload fully overwrites the cloud with local data, so the chain from cloud merge-download to auto upload is critical. If that chain breaks, cloud data can be lost without the user knowing. These protections address that.
+- Suppress automatic upload for a book after its download failed (no network, not configured, download errors), to avoid overwriting the cloud with incomplete local metadata; a successful download, a 404 (book not in cloud), or a successful manual upload clears the suppression, and manual upload asks for confirmation while suppressed
+- When enabling automatic upload while automatic download is off, prompt to optionally enable automatic download (merge), to avoid overwriting cloud data on first upload
+- When enabling Worry-Free Sync Mode with a book currently open, prompt to merge-update the current book first, to avoid overwriting the cloud with data that has not been aligned
+
 # v1.4.6 · 2026-09-29
 
 ## 更新说明
@@ -51,10 +72,3 @@ Thanks to @iav  for contributions to improving the K3 device experience.
 - Added Auto Sync Exclude Directories feature #9  #10 
 - Optimized gesture registration: merged reader/filemanager paired gestures into unified general gestures
 - Remove logger.info
-
-# v1.4.2 · 2026-06-29
-
-## What's Changed
-
-- Fix: support all KOReader formats in book validation (including .fb2.zip)
-- Non-touch navigation for the cloud book dialog

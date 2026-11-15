@@ -1,3 +1,32 @@
+# v0.5.19 · 2026-11-15
+
+## 月读 v0.5.19
+
+KOReader 插件包：`book.koplugin-v0.5.19.zip`
+
+输入法词库（整库，手动 sideload）：`dictionary.sqlite3 dictionary-wubi.sqlite3 dictionary-cangjie.sqlite3 dictionary-zhuyin.sqlite3`
+
+安装：解压后将 `book.koplugin` 复制到 `koreader/plugins/`，然后重启。
+
+词库 sideload：下载对应布局的词库，直接放入 `koreader/.moon/`
+（与 `book.sqlite3` 同级）。附件已使用最终文件名，无需重命名。
+
+### 更新内容
+
+相对上一版本 `v0.5.18`：
+
+#### 界面
+
+- :lipstick: (reader): 开书与排版进度换成主题进度弹窗 (a0c37efb)
+
+#### 重构
+
+- :recycle: (bars): 删除底栏单栏/双栏开关，行数只看组件的上下行 (3871895b)
+
+### 完整对比
+
+https://github.com/AnkioTomas/moon/compare/v0.5.18...v0.5.19
+
 # v0.5.18 · 2026-11-14
 
 ## 月读 v0.5.18
@@ -119,32 +148,3 @@ KOReader 插件包：`book.koplugin-v0.5.14.zip`
 ### 完整对比
 
 https://github.com/AnkioTomas/moon/compare/v0.5.13...v0.5.14
-
-# v0.5.13 · 2026-11-12
-
-## 月读 v0.5.13
-
-KOReader 插件包：`book.koplugin-v0.5.13.zip`
-
-输入法词库（整库，手动 sideload）：`dictionary.sqlite3 dictionary-wubi.sqlite3 dictionary-cangjie.sqlite3 dictionary-zhuyin.sqlite3`
-
-安装：解压后将 `book.koplugin` 复制到 `koreader/plugins/`，然后重启。
-
-词库 sideload：下载对应布局的词库，直接放入 `koreader/.moon/`
-（与 `book.sqlite3` 同级）。附件已使用最终文件名，无需重命名。
-
-### 更新内容
-
-相对上一版本 `v0.5.12`：
-
-#### 新功能
-
-- :sparkles: (update): 支持关闭自动检查更新 (342dfa0e)
-
-#### 修复
-
-- :bug: (share): 书摘导出统一保留彩色 (87bbd235)
-
-### 完整对比
-
-https://github.com/AnkioTomas/moon/compare/v0.5.12...v0.5.13
