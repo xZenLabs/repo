@@ -1,3 +1,18 @@
+# 3.1.0 · 2026-11-16
+
+What's New in Simple UI v3.1.0
+
+- Flat Library View and Cross-Folder Series Grouping;
+- Per-Tab Views, Sorting, and Grid Size Controls;
+- Redesigned List Rows and Book Progress Bars;
+- Reorganized Settings and Faster On-Demand Startup;
+- Book Cover Window with Online Cover Search;
+- Connected Collections from Virtual Folders;
+- Hide Home Screen Pages and Reading History Entries;
+- File Manager Menu-Hiding Layout in Reader;
+- Reading Goals Alignment and Tiny Critter Visual Tweaks;
+- Navigation and Bug fixes Fixes
+
 # 3.0.3 · 2026-11-07
 
 What's New in Simple UI v3.0.3
@@ -52,19 +67,3 @@ Add new "Flow" layout option to the Coverdeck module;
 Add backdrop opacity controls to improve readability over active wallpapers;
 Redesign dialog box UI across the entire plugin for a cleaner, cohesive aesthetic;
 General bug fixes and performance optimizations.
-
-# 2.7.5 · 2026-10-04
-
-What's New in Simple UI v2.7.5
-
-- Add per-element text size, font, and weight settings across all modules;
-- Create live collections from real folders on long-press;
-- Add Bluetooth item to the top status bar;
-- Unify progress badges and apply a 0–100% backdrop across modules;
-- Add option to prevent color inversion for colored icons in night mode;
-- Automatically disable incompatible plugins and patches on startup;
-- Add a new Search Quick Action;
-- Fix crash when navigating via Quick Settings while a book is open;
-- Fix Android CBZ metadata crash caused by missing symbols;
-- Fix reading streaks not updating immediately after a freeze is used;
-- General bug fixes and quality-of-life optimizations.
