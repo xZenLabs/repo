@@ -1,3 +1,13 @@
+# v1.4.0 · 2026-11-16
+
+
+A twin: CyberUI and SolarUI, the new Art Nouveau garden home, switch with one tap.
+
+### Added
+
+- **The twin switch.** A plaque at the top of System, half cyberdeck and half garden, and a tile in the menu's Controls tab, hand home over to SolarUI at once and back. Only the UI in charge opens at start, comes back after a book and styles KOReader's windows, menus and sleep screen; each keeps its own settings. Without SolarUI the switch offers to install it.
+- **Corner to home.** A Home setting makes holding the bottom-right corner in a book open CyberUI's home, and the corner follows whichever twin is in charge.
+
 # v1.3.2 · 2026-11-12
 
 Hotfix: fixes KOReader crashing on start, or when opening Data shard, with Chinese, Japanese and other multi-byte highlights; windows such as the OPDS Add catalog form now open in front of lists; colour-screen popup refresh. Devices stuck restarting recover by updating. See CHANGELOG.md.
@@ -56,11 +66,3 @@ Everything since 1.1.2: KOReader's own windows in CyberUI's style, a rebuilt boo
 - A list of choices too long for the screen (the collections when adding a book to one, filters, and the like) is now split into pages with previous and next buttons, so every entry can be reached.
 
 Thanks to everyone who reported these.
-
-# v1.1.1 · 2026-10-31
-
-## Fixed
-- Choosing a folder no longer ends in "Something went wrong" and a crash. This hit
-  Statistics scope (Add a folder), Library opens in, and moving books to a folder.
-
-Thanks to everyone who reported it.
