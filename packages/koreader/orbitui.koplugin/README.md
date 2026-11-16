@@ -20,11 +20,12 @@ top. Please support and credit the original creators.
 **New in 1.3** · Open OrbitUI beside Quick Actions to change Home, Library or
 dock settings. Long-press a dock icon to add, replace or remove a shortcut.
 
-**[Try the 1.4 beta](https://github.com/komadorirobin/orbitui.koplugin/releases/tag/v1.4.0-beta.5)** ·
-Choose up to five books on Home, show titles or progress below the covers, and
-open the full reading list with **See all**. The preview also adds colored
-bookmarks, optional Literary Clock and Bookshelf 6.5.1. The text selection
-shortcuts can include actions from plugins such as Hardcover and KOAssistant.
+**[Try the 1.4 beta](https://github.com/komadorirobin/orbitui.koplugin/releases/tag/v1.4.0-beta.6)** ·
+Hide and restore Home pages and books in your reading history. The file
+browser has per-tab view and sort options and a flat view of nested books.
+Bookshelf 6.5.2 refreshes spine marks after settings changes. The preview
+also includes the customizable Home cover row, colored bookmarks, optional
+Literary Clock and text selection shortcuts for actions from installed plugins.
 
 > **OrbitUI replaces the standalone SimpleUI and Bookshelf plugins.**
 > Neither is required separately. If either is installed, disable it and restart

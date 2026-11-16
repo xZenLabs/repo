@@ -1,3 +1,13 @@
+# v4.0 · 2026-11-16
+
+## What's new
+
+- **Color mode:** dots can now be tinted. Pick a color from the palette (color screens only) under Tint; Neutral grey is still the default. 
+
+- **Page turn animations:** new Wipe and Blinds transitions that move toward the side you turn to. Configurable steps, optional skip for comics/manga, and a gesture to toggle them (general -> toggle paper dots page animation)
+
+- **Fast painting fixed:** it was silently failing because of a wrong buffer field, so it never actually ran. It now works, and it is enabled by default on supported screens.
+
 # v3.2 · 2026-11-07
 
 Fixed slowdown when rotating the screen for kindle devices. 
@@ -20,13 +30,3 @@ Paints dots by writing directly to the screen buffer instead of calling KOReader
 # v2.3 · 2026-10-08
 
 -One new style (diagonal lines)
-
-# v2.2 · 2026-09-24
-
-**What's New**
-
- * **Paperdots Gesture:** Easily toggle the feature on and off using your favorite gesture. (Gesture manager>your favorite gesture>general>toggle paperdots)
- * **Expanded Menu Access:** The menu is now also accessible from the file browser (first icon outside a book)
- * **Dark Mode Control:** Added a new setting to disable the feature when Dark Mode is active.
- * **One new style** 
-*  **Minor performance optimizations**

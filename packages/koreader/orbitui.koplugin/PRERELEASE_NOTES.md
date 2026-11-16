@@ -1,3 +1,16 @@
+# v1.4.0-beta.6 · 2026-11-16
+
+## What’s new
+
+- **Hide Home pages.** Open **OrbitUI → Home → Layout & modules** to hide a page and bring it back with its configured modules.
+- **Hide books from reading history.** Use **Hide from history** in History. Restore books from **Hidden books** in the Recent Books source settings. OrbitUI also excludes those books from its ongoing reading lists.
+- **File browser views.** SimpleUI 3.1.0 adds per-tab view and sort options, updated list rows and a flat view that includes books in subfolders. Open **OrbitUI → Dock & interface → File browser appearance** for the file browser’s settings.
+- **Bookshelf 6.5.2.** Spine marks such as the favorite icon update after a setting change. Kindle read flags and custom title and author metadata are handled more accurately.
+
+Enable **Include preview releases** under **OrbitUI → System & maintenance → Update OrbitUI**, check for updates, and restart after installing.
+
+Tested with KOReader 2026.07.1 in the Tolino emulator. Physical Bigme and Kindle testing is pending.
+
 # v1.4.0-beta.5 · 2026-11-15
 
 ## Text selection shortcuts
@@ -47,22 +60,3 @@ To update in KOReader, enable **Include preview releases** under **OrbitUI → S
 ## Updating
 
 Enable **Include preview releases** under **OrbitUI → System & maintenance → Update OrbitUI**, then check for updates. Reopen KOReader after installing. The stable channel remains on 1.3.0.
-
-# v1.4.0-beta.1 · 2026-11-14
-
-## OrbitUI settings and Bookshelf patches
-
-- **Custom quick actions** opens the saved list and its create button from **Dock & interface**.
-- Pick the app-bar icon at **Dock & interface → Icons, fonts & shared appearance → Icons → System Icons → Tab Bar → Tab: OrbitUI**. With the picker set to **Default**, you can supply `koreader/icons/orbitui_menu.svg`.
-- OrbitUI runs KOReader’s registered Bookshelf patch hooks. **Progress Bookmarks** settings appear under **Library → Advanced library settings**. **Bookshelf Bar Styles** appear in the line editor for a line containing `%bar`.
-- The OrbitUI tab offers **Restart KOReader** on supported devices. Android shows **Close KOReader** and prompts you to reopen the app.
-
-## Reader and library
-
-- Comic archive metadata from ComicInfo now feeds Library and book information. KOReader custom fields retain priority.
-- Library searches reuse normalized book text between queries.
-- The reader has a compact text-selection menu, dictionary highlight feedback, native footer controls, and optional Syncery and Bluetooth HID shortcuts when available.
-
-## Updating
-
-Enable **Include preview releases** under **OrbitUI → System & maintenance → Update OrbitUI** and check for updates. Reopen KOReader after installation. Stable remains on 1.3.0.
