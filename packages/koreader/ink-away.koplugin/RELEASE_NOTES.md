@@ -1,3 +1,12 @@
+# v4.5.1 · 2026-11-16
+
+A hotfix for exact-line rooms on KOReader 2026.07 and older.
+
+### Fixed
+- A book could stop opening after its first exact-line room, on KOReader 2026.07 and older or with a book first opened before August 2026 ("invalid order function for sorting"). Places of both styles now move, a book already caught opens again with its highlights back where they were, and a highlight that points at nothing can no longer stop any book opening on an older KOReader.
+
+Full changelog: https://github.com/EmirErtorer/ink-away.koplugin/blob/main/CHANGELOG.md
+
 # v4.5.0 · 2026-11-14
 
 Ink Away 4.5.0 is the stable release of everything since 4.4.0: the 4.4.1 to 4.4.4 test builds, now tested on readers, plus rooms on any line, a quicker way to Make room and a folder path in the library. The big ones are cloud sync, Make room in a book's text, stickers, handwritten notes on highlights and the Boox pen layer.
@@ -433,17 +442,3 @@ To update from inside Ink Away: Settings, Updates, Install. Or download `ink-awa
   Eraser's sheet now as well as the Text sheet.
 
 Full changelog: https://github.com/EmirErtorer/ink-away.koplugin/blob/main/CHANGELOG.md
-
-# v4.0.1 · 2026-10-10
-
-**Updating:** on 4.0.0, open Settings, Updates in Ink Away and install it from there. On 3.3.0 or older, download `ink-away.koplugin-v4.0.1.zip` below and put the `ink-away.koplugin` folder in KOReader's plugins folder, as before.
-
-Two fixes for pen and colour readers.
-
-## Fixed
-- With palm rejection on (the default on pen readers), a text box's Done and
-  Format buttons answered neither the pen nor a finger, so the keyboard could
-  not be closed. Both work now, and a finger tapping away closes the box.
-- Colour ink on colour e-ink settles to its true colour once the pen rests.
-  Pale colours such as pink could stay invisible, and blue could stay cyan,
-  until something else redrew the page.
