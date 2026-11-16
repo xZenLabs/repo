@@ -1,0 +1,23 @@
+# Dufs plugin for KOReader
+# https://github.com/Craftwork2720/dufs.koplugin
+# zenpm:auto-scraped
+id=dufs
+name=Dufs
+version=1.0.1
+description=A web file manager for KOReader
+author=Craftwork2720
+category=utility
+platforms=koreader
+dependencies=
+source=https://github.com/Craftwork2720/dufs.koplugin
+stars=5
+updated_at=2026-11-16T18:01:09Z
+published_at=2026-11-09T05:07:33Z
+readme_url=packages/koreader/dufs.koplugin/README.md
+readme_hash=0b605e31c3bc187f1b143161cef3912c9fbfc703
+release_notes_url=packages/koreader/dufs.koplugin/RELEASE_NOTES.md
+release_notes_hash=65200b2e57c2a8df51d6d8a4902e310695e01b0e1bfa1ec03e6534d7064da179
+releases=[{"tag_name":"v1.0.1","assets":[{"name":"dufs.koplugin.zip","url":"https://github.com/Craftwork2720/dufs.koplugin/releases/download/v1.0.1/dufs.koplugin.zip","size":7992703,"digest":"sha256:9ab0fc2837a779ad2f83840324df2b0f31a903504cea3ecf2abfb23396ccf0a8"}],"name":"v1.0.1"},{"tag_name":"v1.0.0","assets":[{"name":"dufs.koplugin.zip","url":"https://github.com/Craftwork2720/dufs.koplugin/releases/download/v1.0.0/dufs.koplugin.zip","size":7992376,"digest":"sha256:6e80fd7c7616564a2581006c493c6995f663879df564ed1cbbf9014525733edb"}],"name":"v1.0.0"}]
+source_type=release
+source_asset=dufs.koplugin.zip
+size=7992703

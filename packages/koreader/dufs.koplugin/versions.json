@@ -1,0 +1,3 @@
+{
+  "releases": [{"tag_name":"v1.0.1","assets":[{"name":"dufs.koplugin.zip","url":"https://github.com/Craftwork2720/dufs.koplugin/releases/download/v1.0.1/dufs.koplugin.zip","size":7992703,"digest":"sha256:9ab0fc2837a779ad2f83840324df2b0f31a903504cea3ecf2abfb23396ccf0a8"}],"name":"v1.0.1"},{"tag_name":"v1.0.0","assets":[{"name":"dufs.koplugin.zip","url":"https://github.com/Craftwork2720/dufs.koplugin/releases/download/v1.0.0/dufs.koplugin.zip","size":7992376,"digest":"sha256:6e80fd7c7616564a2581006c493c6995f663879df564ed1cbbf9014525733edb"}],"name":"v1.0.0"}]
+}
