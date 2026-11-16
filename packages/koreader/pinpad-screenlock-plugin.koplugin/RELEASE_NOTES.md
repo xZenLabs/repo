@@ -1,3 +1,21 @@
+# v1.2.1 · 2026-11-16
+
+* A few fixes to improve how the plugin is integrated in Koreader 2026.07..
+* Added a release workflow to ease updates.
+
+**Full Changelog**: https://github.com/Lena2309/pinpad_screenlock_plugin/compare/v1.2.0...v1.2.1
+
+# v1.2.0 · 2026-11-16
+
+## What's Changed
+* fix: closing background before suspend after first unlock resolved #9 by @fvelsg in https://github.com/Lena2309/pinpad_screenlock_plugin/pull/11
+* Fix image size rendering and caching, code cleaning by @Lena2309 in https://github.com/Lena2309/pinpad_screenlock_plugin/pull/13
+
+## New Contributors
+* @fvelsg made their first contribution in https://github.com/Lena2309/pinpad_screenlock_plugin/pull/11
+
+**Full Changelog**: https://github.com/Lena2309/pinpad_screenlock_plugin/compare/v1.1.0...v1.2.0
+
 # v1.1.0 · 2025-11-17
 
 **New Features:**
@@ -19,14 +37,3 @@
 
 **Features:**
 * on boot display when launching KOReader (solution from @oleasteo)
-
-# v1.0.3 · 2025-08-30
-
-**Features:**
-
-- Improved UI Menu entry
-
-# v1.0.2 · 2025-08-19
-
-**Fix**
-- Fix the way version are compared and the way versions are parsed
