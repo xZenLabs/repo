@@ -1,52 +1,43 @@
-# v1.44.3 · 2026-10-24
+# v1.43.7 · 2026-11-16
 
-## [1.44.3](https://github.com/tachibana-shin/rakuyomi/compare/v1.44.2...v1.44.3) (2026-10-24)
-
-
-### Bug Fixes
-
-* mprove UnixServer:stop() with exit wait logic ([d539181](https://github.com/tachibana-shin/rakuyomi/commit/d53918143f9fd3139d98fb14ee034c38f8ebf817)), closes [#394](https://github.com/tachibana-shin/rakuyomi/issues/394)
-
-# v1.44.2 · 2026-10-23
-
-## [1.44.2](https://github.com/tachibana-shin/rakuyomi/compare/v1.44.1...v1.44.2) (2026-10-23)
+## [1.43.7](https://github.com/yuuki-kagura/rakuyomi/compare/v1.43.6...v1.43.7) (2026-11-16)
 
 
 ### Bug Fixes
 
-* **epub:** generate valid XHTML chapter content ([#393](https://github.com/tachibana-shin/rakuyomi/issues/393)) ([a214f47](https://github.com/tachibana-shin/rakuyomi/commit/a214f47c24e7a696caef082d1d57120cc3157814))
+* revert 6c780369280db27d05fb7c10ac565430e694f05d ([eedf8e9](https://github.com/yuuki-kagura/rakuyomi/commit/eedf8e90a74fcbbeb28726e2ec47fe16d99b2aa6))
 
-# v1.44.1 · 2026-10-19
+# v1.43.6 · 2026-11-15
 
-## [1.44.1](https://github.com/tachibana-shin/rakuyomi/compare/v1.44.0...v1.44.1) (2026-10-19)
-
-
-### Bug Fixes
-
-* **tracking:** push local progress on link when ahead of tracker ([#381](https://github.com/tachibana-shin/rakuyomi/issues/381)) ([99d501d](https://github.com/tachibana-shin/rakuyomi/commit/99d501db7d164bdb9094dd01a6e44bb3246cc0ad))
-
-# v1.44.0 · 2026-10-19
-
-# [1.44.0](https://github.com/tachibana-shin/rakuyomi/compare/v1.43.4...v1.44.0) (2026-10-19)
+## [1.43.6](https://github.com/yuuki-kagura/rakuyomi/compare/v1.43.5...v1.43.6) (2026-11-15)
 
 
 ### Bug Fixes
 
-* **build:** pin rquickjs to 0.12.2 so bindgen is enabled ([#386](https://github.com/tachibana-shin/rakuyomi/issues/386)) ([942c4ec](https://github.com/tachibana-shin/rakuyomi/commit/942c4ecc2eb53e2d6661b24fa83d381c967cb532))
-* **reader:** only enforce recommended reader settings when opted in ([#388](https://github.com/tachibana-shin/rakuyomi/issues/388)) ([63c3dd9](https://github.com/tachibana-shin/rakuyomi/commit/63c3dd93e2c386f5ed71dd699f0f5b7fe26a3787)), closes [#378](https://github.com/tachibana-shin/rakuyomi/issues/378) [#379](https://github.com/tachibana-shin/rakuyomi/issues/379)
-* **ui:** cap source language lists to keep menu post_text short ([#387](https://github.com/tachibana-shin/rakuyomi/issues/387)) ([0a90969](https://github.com/tachibana-shin/rakuyomi/commit/0a90969c44531dd82e79c77b2f2dccbf5905093e)), closes [#374](https://github.com/tachibana-shin/rakuyomi/issues/374)
-* **update:** create update download temp file next to the plugin directory ([#390](https://github.com/tachibana-shin/rakuyomi/issues/390)) ([4ca2937](https://github.com/tachibana-shin/rakuyomi/commit/4ca29379dfb0eb44b7dab1cfcd24a0d675dae205)), closes [#362](https://github.com/tachibana-shin/rakuyomi/issues/362)
+* make backend socket-error detection actually match ([6c78036](https://github.com/yuuki-kagura/rakuyomi/commit/6c780369280db27d05fb7c10ac565430e694f05d))
+
+# v1.43.5 · 2026-11-14
+
+## [1.43.5](https://github.com/yuuki-kagura/rakuyomi/compare/v1.43.4...v1.43.5) (2026-11-14)
 
 
-### Features
+### Bug Fixes
 
-* **reader:** add configurable page overlap in continuous mode ([#389](https://github.com/tachibana-shin/rakuyomi/issues/389)) ([9f30a45](https://github.com/tachibana-shin/rakuyomi/commit/9f30a452d83de5a192b2e4f41d4d10d98bd01854)), closes [#376](https://github.com/tachibana-shin/rakuyomi/issues/376)
+* recover from a silently dead backend and stop leaking temp files ([8be3a90](https://github.com/yuuki-kagura/rakuyomi/commit/8be3a90fd432ff300a2c608e4e5d41cdd490456a))
 
-# v1.43.4 · 2026-10-11
+# v1.43.4 · 2026-11-14
 
-## [1.43.4](https://github.com/tachibana-shin/rakuyomi/compare/v1.43.3...v1.43.4) (2026-10-11)
+## [1.43.4](https://github.com/yuuki-kagura/rakuyomi/compare/v1.43.3...v1.43.4) (2026-11-14)
+
+
+### Bug Fixes
+
+* **ci:** use macos-latest for the macOS build job ([85e3b78](https://github.com/yuuki-kagura/rakuyomi/commit/85e3b7815efe2750b157955e1f5689e5ac99cb6e))
+* trigger release ([17c7c96](https://github.com/yuuki-kagura/rakuyomi/commit/17c7c9615b532e46f7847860259b847da22314b0))
 
 
 ### Performance Improvements
 
-* **cookie-bot:** stop registering bot commands on every cold isolate ([30d8002](https://github.com/tachibana-shin/rakuyomi/commit/30d80029c0566587edc415dd23a57561d948a720))
+* **cookie-bot:** stop registering bot commands on every cold isolate ([30d8002](https://github.com/yuuki-kagura/rakuyomi/commit/30d80029c0566587edc415dd23a57561d948a720))
+
+# v1.43.3 · 2026-11-14

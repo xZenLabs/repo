@@ -9865,8 +9865,8 @@
     {
       "id": "rakuyomi",
       "name": "Rakuyomi",
-      "version": "1.44.3",
-      "description": "A manga reader plugin for KOReader. (This fork adds new features and backward compatibility)",
+      "version": "1.43.7",
+      "description": "This is a offcial archive repo tachibana-shin/rakuyomi",
       "author": "tachibana-shin",
       "category": "media",
       "platforms": ["koreader"],
@@ -9875,62 +9875,58 @@
       "featured_image": "packages/koreader/rakuyomi.koplugin/assets/featured.png",
       "featured": true,
       "featured_order": 2,
-      "source": "https://github.com/tachibana-shin/rakuyomi",
+      "source": "https://github.com/yuuki-kagura/rakuyomi",
       "source_type": "release",
-      "stars": "658",
-      "updated_at": "2026-11-03T09:01:06Z",
-      "published_at": "2026-10-24T13:59:54Z",
-      "prerelease_version": "1.40.1",
-      "prerelease_published_at": "2026-08-18T11:17:22Z",
+      "stars": "12",
+      "updated_at": "2026-11-16T19:45:48Z",
+      "published_at": "2026-11-16T10:30:05Z",
       "readme_url": "packages/koreader/rakuyomi.koplugin/README.md",
       "readme_hash": "015d8a26b08448da2e95ba2257c5f4e4b914baab",
       "release_notes_url": "packages/koreader/rakuyomi.koplugin/RELEASE_NOTES.md",
-      "release_notes_hash": "6db5eb4eba90a2e5a4060946bab2243e6adcebff55de19f70bbf1fd852662140",
-      "prerelease_notes_url": "packages/koreader/rakuyomi.koplugin/PRERELEASE_NOTES.md",
-      "prerelease_notes_hash": "36f8f495da74d411ed7597cb1186b38edadb061bebaebaafbbe21f92f6e9b055",
+      "release_notes_hash": "98a1bb9b8c79c7c0d7c2cd3e64bf86eb574a13c09a3e8167c22a89616c08abde",
       "versions_url": "packages/koreader/rakuyomi.koplugin/versions.json",
       "assets": [
         {
           "arch": "arm64",
           "asset": "rakuyomi-aarch64.zip",
-          "url": "https://github.com/tachibana-shin/rakuyomi/releases/download/v1.44.3/rakuyomi-aarch64.zip",
-          "size": "14948071"
+          "url": "https://github.com/yuuki-kagura/rakuyomi/releases/download/v1.43.7/rakuyomi-aarch64.zip",
+          "size": "15602217"
         },
         {
           "arch": "any",
           "asset": "rakuyomi-android.zip",
-          "url": "https://github.com/tachibana-shin/rakuyomi/releases/download/v1.44.3/rakuyomi-android.zip",
-          "size": "677240"
+          "url": "https://github.com/yuuki-kagura/rakuyomi/releases/download/v1.43.7/rakuyomi-android.zip",
+          "size": "675047"
         },
         {
           "arch": "any",
           "asset": "rakuyomi-desktop.zip",
-          "url": "https://github.com/tachibana-shin/rakuyomi/releases/download/v1.44.3/rakuyomi-desktop.zip",
-          "size": "16049474"
+          "url": "https://github.com/yuuki-kagura/rakuyomi/releases/download/v1.43.7/rakuyomi-desktop.zip",
+          "size": "16708588"
         },
         {
           "arch": "kindle",
           "asset": "rakuyomi-kindle.zip",
-          "url": "https://github.com/tachibana-shin/rakuyomi/releases/download/v1.44.3/rakuyomi-kindle.zip",
-          "size": "15393160"
+          "url": "https://github.com/yuuki-kagura/rakuyomi/releases/download/v1.43.7/rakuyomi-kindle.zip",
+          "size": "16026434"
         },
         {
           "arch": "kindle",
           "asset": "rakuyomi-kindlea9.zip",
-          "url": "https://github.com/tachibana-shin/rakuyomi/releases/download/v1.44.3/rakuyomi-kindlea9.zip",
-          "size": "15416686"
+          "url": "https://github.com/yuuki-kagura/rakuyomi/releases/download/v1.43.7/rakuyomi-kindlea9.zip",
+          "size": "16051119"
         },
         {
           "arch": "kindle",
           "asset": "rakuyomi-kindlehf.zip",
-          "url": "https://github.com/tachibana-shin/rakuyomi/releases/download/v1.44.3/rakuyomi-kindlehf.zip",
-          "size": "15421784"
+          "url": "https://github.com/yuuki-kagura/rakuyomi/releases/download/v1.43.7/rakuyomi-kindlehf.zip",
+          "size": "16053676"
         },
         {
           "arch": "any",
           "asset": "rakuyomi-macos.zip",
-          "url": "https://github.com/tachibana-shin/rakuyomi/releases/download/v1.44.3/rakuyomi-macos.zip",
-          "size": "13359176"
+          "url": "https://github.com/yuuki-kagura/rakuyomi/releases/download/v1.43.7/rakuyomi-macos.zip",
+          "size": "13921531"
         }
       ]
     },
