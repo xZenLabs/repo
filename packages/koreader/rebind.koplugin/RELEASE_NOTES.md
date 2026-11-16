@@ -1,3 +1,56 @@
+# v2.4.0 · 2026-11-16
+
+## [2.4.0](https://github.com/rameezk/rebind.koplugin/compare/v2.3.0...v2.4.0) (2026-11-15)
+
+Rebind can now fix your covers as well as your metadata.
+
+Lots of books show up in the library as a blank tile, or with a blurry cover from the wrong edition. Now the picker shows the cover from the matched book next to the one your book already has. You can see both, compare them, and choose. Rebind always keeps your book's original cover inside the file, so you can undo the change later.
+
+### Adding a cover
+
+- If a book has no cover, the picker shows the cover from Hardcover, Open Library or Inventaire, with its size in pixels.
+- That cover is selected from the start, so applying the picker adds it to the book.
+- Rebind only offers JPEG or PNG covers that are big enough and shaped like a book cover. Anything else is skipped, so you never get a tiny or stretched image.
+
+### Replacing a cover
+
+- If a book already has a cover, the picker shows it on the "book" tile, next to the matched book's cover.
+- Your current cover stays selected. Nothing changes unless you tap the other cover.
+- The library thumbnail and the first page of the book both show the new cover after you apply it.
+
+### Getting the original back
+
+- Rebind keeps the cover your book had before Rebind first changed it, inside the EPUB.
+- When a book has a kept original, the picker shows an "original" tile. Select it and apply to put the original cover back.
+- If the book had no cover before Rebind added one, the tile reads "no cover", and applying it removes Rebind's cover.
+
+### Previewing a cover
+
+Hold any cover tile to see it full screen, with where it came from, the edition, its size in pixels and its file size. Tap "Select this cover" to choose it, or "Back" to keep what you had.
+
+### Covers in a batch
+
+- "Rebind N sure matches" now also adds a cover to any book that doesn't have one yet. Books that already have a cover are left alone.
+- The summary afterwards tells you how many books got a new cover.
+- Tap any book in the review list to open its picker with the cover field, just like rebinding a single book. That is where you replace a cover or get the original back.
+
+
+
+### Features
+
+* add missing covers when rebinding sure matches ([#152](https://github.com/rameezk/rebind.koplugin/issues/152)) ([800ee82](https://github.com/rameezk/rebind.koplugin/commit/800ee82acab43cd8d2bb96db7b5c93c703146762))
+* hold a cover to preview it full screen ([#150](https://github.com/rameezk/rebind.koplugin/issues/150)) ([78122ea](https://github.com/rameezk/rebind.koplugin/commit/78122eab47d48429edda5d16e20c564a7b92c24a))
+* offer the Hardcover cover for a book that has none ([#148](https://github.com/rameezk/rebind.koplugin/issues/148)) ([22a614e](https://github.com/rameezk/rebind.koplugin/commit/22a614eabdeea8c665a141d9b9ec1bc1b3f759e5))
+* offer the Open Library and Inventaire cover for a book that has none ([#151](https://github.com/rameezk/rebind.koplugin/issues/151)) ([e2e45ef](https://github.com/rameezk/rebind.koplugin/commit/e2e45ef967c88b5c27d990100a0df05dea3d4917))
+* replace a book's cover with the Hardcover cover and keep the original ([#149](https://github.com/rameezk/rebind.koplugin/issues/149)) ([c5b2268](https://github.com/rameezk/rebind.koplugin/commit/c5b2268568e34adbe574483ba77cb395e44a6303))
+* restore a book's original cover from the picker ([#153](https://github.com/rameezk/rebind.koplugin/issues/153)) ([0835c3d](https://github.com/rameezk/rebind.koplugin/commit/0835c3dcc1069abb8ed4cc4567d6dbd40b6f1fe1))
+* say how many books got a new cover after rebinding sure matches ([#161](https://github.com/rameezk/rebind.koplugin/issues/161)) ([3183ad7](https://github.com/rameezk/rebind.koplugin/commit/3183ad7762ca13cd8dbc1833ba84fdec2d2c86a3))
+
+
+### Bug Fixes
+
+* choose covers in the picker opened from a review row ([#160](https://github.com/rameezk/rebind.koplugin/issues/160)) ([ec6ab5b](https://github.com/rameezk/rebind.koplugin/commit/ec6ab5b7502fce2869b491b2fad276495f367ac3))
+
 # v2.3.0 · 2026-11-11
 
 ## [2.3.0](https://github.com/rameezk/rebind.koplugin/compare/v2.2.0...v2.3.0) (2026-11-11)
@@ -85,17 +138,3 @@ Rebind 2.0 redesigns its interface so fixing a book takes less scrolling, fewer 
 - **Rename or move on its own.** Apply now renames or moves a book even when its metadata doesn't change.
 - **Works without Hardcover.** Choose "Don't use Hardcover", or carry on when the plugin is missing or a lookup fails, and edit every field by hand.
 - **New field:** first published, saved as the book's year.
-
-# v1.6.0 · 2026-09-03
-
-## [1.6.0](https://github.com/rameezk/rebind.koplugin/compare/v1.5.0...v1.6.0) (2026-09-03)
-
-
-### Features
-
-* rename the EPUB to "Author - Title" when filing a book ([#24](https://github.com/rameezk/rebind.koplugin/issues/24)) ([92ccd81](https://github.com/rameezk/rebind.koplugin/commit/92ccd817927262d24bd6b121118296da8620e711))
-
-
-### Bug Fixes
-
-* make the whole rebind picker scroll as one view ([#23](https://github.com/rameezk/rebind.koplugin/issues/23)) ([1df6b96](https://github.com/rameezk/rebind.koplugin/commit/1df6b96647621ffd76dab6725d9d1ccde50b2a76))
