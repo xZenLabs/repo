@@ -197,6 +197,12 @@ Screenshots are taken by `tools/screenshots/run.sh /path/to/KOReader.app`. It bu
 
 Pull requests are squash-merged, so the title must be a conventional commit: `feat:`, `fix:`, `docs:`, `chore:`, `test:`, `refactor:` (`feat!:` for a breaking change). Releases are automatic: release-please keeps a "release" pull request open from those titles (a `fix` bumps the patch version, a `feat` the minor one) and merging it tags the release and attaches `shelfspace.koplugin.zip`.
 
+## Support
+
+If ShelfSpace freed up space you were missing, you can buy me a coffee:
+
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/H3N82AROX1)
+
 ## License
 
 [MIT](LICENSE)

@@ -2,14 +2,7 @@
 
 ## 月读 v0.6.0
 
-KOReader 插件包：`book.koplugin-v0.6.0.zip`
-
-输入法词库（整库，手动 sideload）：`dictionary.sqlite3 dictionary-wubi.sqlite3 dictionary-cangjie.sqlite3 dictionary-zhuyin.sqlite3`
-
-安装：解压后将 `book.koplugin` 复制到 `koreader/plugins/`，然后重启。
-
-词库 sideload：下载对应布局的词库，直接放入 `koreader/.moon/`
-（与 `book.sqlite3` 同级）。附件已使用最终文件名，无需重命名。
+正版书源已经全部移除，详情参考：https://moon.ankio.net/manual/library/sources/plugins
 
 ### 更新内容
 
