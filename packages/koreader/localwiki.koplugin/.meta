@@ -3,7 +3,7 @@
 # zenpm:auto-scraped
 id=localwiki
 name=Localwiki
-version=0.6.2
+version=0.6.3
 description=Offline Wikipedia and ZIM reader plugin for KOReader
 author=nar-io
 category=reference
@@ -11,13 +11,13 @@ platforms=koreader
 dependencies=
 source=https://github.com/nar-io/localwiki.koplugin
 stars=5
-updated_at=2026-11-17T00:01:02Z
-published_at=2026-11-17T00:03:21Z
+updated_at=2026-11-17T01:01:03Z
+published_at=2026-11-17T00:10:50Z
 readme_url=packages/koreader/localwiki.koplugin/README.md
 readme_hash=de81c58b5fe9c23105085c614978f4eb0abd0780
 release_notes_url=packages/koreader/localwiki.koplugin/RELEASE_NOTES.md
-release_notes_hash=797a991ae5f74616f00f7e6642e4a1915adcc614ad911877261ad4fc006c6318
-releases=[{"tag_name":"v0.6.2","assets":[{"name":"localwiki.koplugin.zip","url":"https://github.com/nar-io/localwiki.koplugin/releases/download/v0.6.2/localwiki.koplugin.zip","size":69803,"digest":"sha256:1863ec4b15259c149608259e87f549b71e4349b8265d1345469110dc92abe76c"}],"name":"v0.6.2"},{"tag_name":"v0.5.1","assets":[{"name":"localwiki.koplugin.zip","url":"https://github.com/nar-io/localwiki.koplugin/releases/download/v0.5.1/localwiki.koplugin.zip","size":55924,"digest":"sha256:fa27725903e2eaa05df42a0b22b1e13b113cf787b550889c6e4a81e8f9626d06"}],"name":"v0.5.1"},{"tag_name":"v0.4.0","assets":[{"name":"localwiki.koplugin.zip","url":"https://github.com/nar-io/localwiki.koplugin/releases/download/v0.4.0/localwiki.koplugin.zip","size":52179,"digest":"sha256:a91a603da6e11ce7afb3d950ffdacbe848d3368eeaca3fc41e21956a5e7f3d99"}],"name":"v0.4.0"}]
+release_notes_hash=09d7d543595b2bedcbafc8bc684cc418adc5d01945321be959864b46512ba753
+releases=[{"tag_name":"v0.6.3","assets":[{"name":"localwiki.koplugin.zip","url":"https://github.com/nar-io/localwiki.koplugin/releases/download/v0.6.3/localwiki.koplugin.zip","size":70802,"digest":"sha256:e7cc9c002cfb7df6131a74d8fbc19bd9cc270ac3635be0ffbcdfb1a4893aad08"}],"name":"v0.6.3"},{"tag_name":"v0.6.2","assets":[{"name":"localwiki.koplugin.zip","url":"https://github.com/nar-io/localwiki.koplugin/releases/download/v0.6.2/localwiki.koplugin.zip","size":69803,"digest":"sha256:1863ec4b15259c149608259e87f549b71e4349b8265d1345469110dc92abe76c"}],"name":"v0.6.2"},{"tag_name":"v0.5.1","assets":[{"name":"localwiki.koplugin.zip","url":"https://github.com/nar-io/localwiki.koplugin/releases/download/v0.5.1/localwiki.koplugin.zip","size":55924,"digest":"sha256:fa27725903e2eaa05df42a0b22b1e13b113cf787b550889c6e4a81e8f9626d06"}],"name":"v0.5.1"},{"tag_name":"v0.4.0","assets":[{"name":"localwiki.koplugin.zip","url":"https://github.com/nar-io/localwiki.koplugin/releases/download/v0.4.0/localwiki.koplugin.zip","size":52179,"digest":"sha256:a91a603da6e11ce7afb3d950ffdacbe848d3368eeaca3fc41e21956a5e7f3d99"}],"name":"v0.4.0"}]
 source_type=release
 source_asset=localwiki.koplugin.zip
-size=69803
+size=70802
