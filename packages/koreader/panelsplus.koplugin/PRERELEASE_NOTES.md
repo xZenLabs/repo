@@ -23,6 +23,8 @@ You can test these features now!, they're stable & candidates for next release.
 
 `panelsplus.koplugin.zip`: Has these ink-away integrations already built-in. Remember to download Ink-away >= v4.5.0 (https://github.com/EmirErtorer/ink-away.koplugin/releases/tag/v4.5.0)
 
+`panelsplus_1_7_0-with-panel-refresh-settings.zip`: Includes features related to e-ink refresh settings, for more details you can [read the original feature request](https://github.com/KristanLaimon/PanelsPlus/issues/17)
+
 # v1.5.0-nightly · 2026-09-21
 
 # The `Texty Texty` Update
