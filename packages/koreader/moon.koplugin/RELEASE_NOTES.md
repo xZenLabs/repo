@@ -1,3 +1,38 @@
+# v0.7.0 · 2026-11-17
+
+## 月读 v0.7.0
+
+KOReader 插件包：`book.koplugin-v0.7.0.zip`
+
+输入法词库（整库，手动 sideload）：`dictionary.sqlite3 dictionary-wubi.sqlite3 dictionary-cangjie.sqlite3 dictionary-zhuyin.sqlite3`
+
+安装：解压后将 `book.koplugin` 复制到 `koreader/plugins/`，然后重启。
+
+词库 sideload：下载对应布局的词库，直接放入 `koreader/.moon/`
+（与 `book.sqlite3` 同级）。附件已使用最终文件名，无需重命名。
+
+### 更新内容
+
+相对上一版本 `v0.6.5`：
+
+#### 新功能
+
+- :sparkles: (lockscreen): 实时主体和从未生成过的锁屏在锁屏瞬间同步生成 (808f3558)
+- :sparkles: (lockscreen): 文字按背景明暗自动反色，设置改动改为手动刷新锁屏图 (485c09ab)
+
+#### 修复
+
+- :bug: (lockscreen): 没有划线时锁屏句子改用一言缓存和内置随机句 (8016b943)
+- :bug: (toc): 目录不再被空列表覆盖，读库被打断时自动重读并联网重拉 (6265ca72)
+
+#### 性能
+
+- :zap: (toc) 目录冷读每批 16 章改为 256 章，避免大目录开书后长时间为空 (ff55f6eb)
+
+### 完整对比
+
+https://github.com/AnkioTomas/moon/compare/v0.6.5...v0.7.0
+
 # v0.6.5 · 2026-11-17
 
 ## 月读 v0.6.5
@@ -121,38 +156,3 @@ KOReader 插件包：`book.koplugin-v0.6.2.zip`
 ### 完整对比
 
 https://github.com/AnkioTomas/moon/compare/v0.6.1...v0.6.2
-
-# v0.6.1 · 2026-11-16
-
-## 月读 v0.6.1
-
-KOReader 插件包：`book.koplugin-v0.6.1.zip`
-
-输入法词库（整库，手动 sideload）：`dictionary.sqlite3 dictionary-wubi.sqlite3 dictionary-cangjie.sqlite3 dictionary-zhuyin.sqlite3`
-
-安装：解压后将 `book.koplugin` 复制到 `koreader/plugins/`，然后重启。
-
-词库 sideload：下载对应布局的词库，直接放入 `koreader/.moon/`
-（与 `book.sqlite3` 同级）。附件已使用最终文件名，无需重命名。
-
-### 更新内容
-
-相对上一版本 `v0.6.0`：
-
-#### 新功能
-
-- :sparkles: (xray): 新增情节线事件时间线 (8303a68c)
-- :sparkles: (tasks): 任务列表里已结束的任务支持长按删除 (c25bc6ff)
-- :sparkles: (setting): 书库页加第三方书源插件二维码入口 (a2a8614d)
-
-#### 修复
-
-- :bug: (xray): 限制描述与别名长度，修复实体越扫越长 (23a2556f)
-
-#### 变更
-
-- :children_crossing: (xray): 设置页分为识别、画线两组，新增事件开关（默认关） (9acf79e5)
-
-### 完整对比
-
-https://github.com/AnkioTomas/moon/compare/v0.6.0...v0.6.1
