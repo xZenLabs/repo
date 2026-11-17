@@ -36,6 +36,15 @@ From the LocalWiki menu you can enable or disable individual archives and
 choose the number of images shown in full articles. Your choices are saved
 between KOReader restarts.
 
+## Credits & Acknowledgements
+
+This project is based on and extends [c5e3/koreader_wikipedia](https://github.com/c5e3/koreader_wikipedia). Special thanks and full credit to the original author for creating the initial architecture, ZIM reader engine, and KOReader integration.
+
+Additional credits:
+- **[Kiwix](https://kiwix.org/)** — for creating and hosting the offline ZIM archives.
+- **[KOReader](https://koreader.rocks/)** — for the outstanding e-reader platform and bundled libraries (libzstd, liblzma, MuPDF).
+- **Wikipedia / Wikimedia contributors** — for the open knowledge and articles.
+
 ## License
 
 This project is released under the
