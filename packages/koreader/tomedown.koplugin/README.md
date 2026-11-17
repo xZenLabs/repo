@@ -2,325 +2,153 @@
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="assets/banner-dark.webp">
     <source media="(prefers-color-scheme: light)" srcset="assets/banner-light.webp">
-    <img src="assets/banner-light.webp" alt="tomedown: one Markdown file per book, straight into your notes" width="420">
+    <img src="assets/banner-light.webp" alt="Tomedown: one Markdown file per book, straight into your notes" width="440">
   </picture>
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/KOReader-plugin-white?style=for-the-badge&logo=koreader&logoColor=white&labelColor=171717" alt="KOReader">
-  <img src="https://img.shields.io/badge/Obsidian-ready-fff176?style=for-the-badge&logo=obsidian&logoColor=white&labelColor=171717" alt="Obsidian">
-  <img src="https://img.shields.io/badge/Markdown-file-white?style=for-the-badge&logo=markdown&logoColor=white&labelColor=171717" alt="Markdown">
-  <img src="https://img.shields.io/badge/Lua-5.1%2B-white?style=for-the-badge&logo=lua&logoColor=white&labelColor=171717" alt="Lua">
+  <img src="https://img.shields.io/badge/KOReader-plugin-faf6ee?style=for-the-badge&logo=koreader&logoColor=faf6ee&labelColor=2c2823" alt="KOReader">
+  <img src="https://img.shields.io/badge/Obsidian-ready-7f6df2?style=for-the-badge&logo=obsidian&logoColor=faf6ee&labelColor=2c2823" alt="Obsidian">
+  <img src="https://img.shields.io/badge/Markdown-100%25%20local-f0b00a?style=for-the-badge&logo=markdown&logoColor=faf6ee&labelColor=2c2823" alt="Markdown">
+  <img src="https://img.shields.io/badge/Lua-5.1%2B-faf6ee?style=for-the-badge&logo=lua&logoColor=faf6ee&labelColor=2c2823" alt="Lua">
 </p>
 
 <p align="center">
-  <a href="https://github.com/imanubdesigner/tomedown.koplugin/releases/latest"><img src="https://img.shields.io/github/v/release/imanubdesigner/tomedown.koplugin?style=for-the-badge&color=fff176&labelColor=171717&logo=github&logoColor=white" alt="Latest release"></a>
-  <a href="https://github.com/imanubdesigner/tomedown.koplugin/actions/workflows/test.yml"><img src="https://img.shields.io/github/actions/workflow/status/imanubdesigner/tomedown.koplugin/test.yml?style=for-the-badge&color=238636&labelColor=171717&logo=githubactions&logoColor=white&label=tests" alt="Test status"></a>
-  <a href="LICENSE"><img src="https://img.shields.io/github/license/imanubdesigner/tomedown.koplugin?style=for-the-badge&color=white&labelColor=171717" alt="License"></a>
-  <a href="https://ko-fi.com/imanubdesigner"><img src="https://img.shields.io/badge/Ko--fi-support-FF5E5B?style=for-the-badge&logo=ko-fi&logoColor=white&labelColor=171717" alt="Buy me a coffee on Ko-fi"></a>
+  <a href="https://github.com/imanubdesigner/tomedown.koplugin/releases/latest"><img src="https://img.shields.io/github/v/release/imanubdesigner/tomedown.koplugin?style=for-the-badge&color=f0b00a&labelColor=2c2823&logo=github&logoColor=faf6ee" alt="Latest release"></a>
+  <a href="https://imanubdesigner.github.io/tomedown.koplugin/docs/"><img src="https://img.shields.io/badge/Docs-Wiki-f0b00a?style=for-the-badge&logo=readthedocs&logoColor=faf6ee&labelColor=2c2823" alt="Docs Wiki"></a>
+  <a href="https://github.com/imanubdesigner/tomedown.koplugin/actions/workflows/test.yml"><img src="https://img.shields.io/github/actions/workflow/status/imanubdesigner/tomedown.koplugin/test.yml?style=for-the-badge&color=238636&labelColor=2c2823&logo=githubactions&logoColor=faf6ee&label=tests" alt="Test status"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/github/license/imanubdesigner/tomedown.koplugin?style=for-the-badge&color=faf6ee&labelColor=2c2823" alt="License"></a>
+  <a href="https://ko-fi.com/imanubdesigner"><img src="https://img.shields.io/badge/Ko--fi-support-f0b00a?style=for-the-badge&logo=ko-fi&logoColor=faf6ee&labelColor=2c2823" alt="Support on Ko-fi"></a>
 </p>
 
 <p align="center">
-  Questions, ideas, feedback: <a href="https://github.com/imanubdesigner/tomedown.koplugin/discussions">GitHub Discussions</a>
+  <a href="https://imanubdesigner.github.io/tomedown.koplugin/">Website</a> ·
+  <a href="https://imanubdesigner.github.io/tomedown.koplugin/docs/">Docs Wiki</a> ·
+  <a href="https://imanubdesigner.github.io/tomedown.koplugin/changelog/">Changelog &amp; Updates</a> ·
+  <a href="https://github.com/imanubdesigner/tomedown.koplugin/discussions">GitHub Discussions</a>
 </p>
 
-## Tomedown
-
-I made Tomedown because I wanted my books organized in a single `.md` file
-holding all my highlights.
-
-Every book you read in KOReader becomes one Markdown file of its own, with
-YAML frontmatter and an automatic index. The files are written to a folder on
-the device first (`clipboard/tomedown`, changeable); sending them to your
-cloud (any WebDAV server, or Dropbox/FTP) is an option, and so is reading
-them in Obsidian. No app in the middle.
-
-- **One file per book**, not one file for everything: unlike *Export
-  highlights and notes*, every volume stays separate;
-- **An index that ties the library together**: `00 - Index.md`, a clickable
-  table of every book, ordered by author, title, last read or highlights, with
-  a *Reading now* section at the top for the books you are reading;
-- **Tags for the book you are reading**: add them from the open book's menu,
-  choosing from the tags already used in your library, and they join its
-  frontmatter and the index, ready to filter in Obsidian;
-- **Rating, review and dates in the note**: import them from KOReader one book
-  at a time (or for the whole library at once) and Tomedown keeps them up to
-  date as you read, without touching a book you never imported;
-- **A book can stay out of the way**: hide it from the index, or stop exporting
-  it altogether, without deleting the note already written;
-- **Your notes survive**: write in the file from Obsidian and the next export
-  folds the new highlights in instead of overwriting them;
-- **The cloud is optional**: the local export needs no network at all.
-
-It has been in daily use since 1.0, and most of what changed in these releases
-comes from reading my own library, and from people who took the time to
-report what did not work.
-
-The examples in this repo use **Koofr**: its free plan gives you 10 GB, more
-than enough for a whole library of `.md` files.
+> [!IMPORTANT]
+> **Looking for the full guides or release updates?**  
+> All visual walkthroughs, full feature documentation, and release notes are hosted on the **[Tomedown Website & Docs Wiki](https://imanubdesigner.github.io/tomedown.koplugin/docs/)**.  
+> You can check the latest updates and version history on the **[Changelog page](https://imanubdesigner.github.io/tomedown.koplugin/changelog/)**.
 
 <p align="center">
   <strong>Jump to</strong><br>
-  <a href="#install">Install</a> · <a href="#first-export">First export</a> · <a href="#the-menu">The menu</a> · <a href="#special-highlights">Special highlights</a> · <a href="#cloud-upload">Cloud upload</a> · <a href="#keep-my-notes">Keep my notes</a> · <a href="#reference">Reference</a>
+  <a href="#overview">Overview</a> ·
+  <a href="#install">Install</a> ·
+  <a href="#first-export">First export</a> ·
+  <a href="#essentials">Essentials</a> ·
+  <a href="#documentation">Documentation</a> ·
+  <a href="#support">Support</a>
 </p>
+
+---
+
+## Overview
+
+I made Tomedown because I wanted every book I read in KOReader to have its own clean `.md` file holding all of my highlights and notes.
+
+Files are written locally on your e-reader first (`clipboard/tomedown/` by default). Cloud sync (WebDAV, Dropbox, FTP) and Obsidian are completely optional.
+
+- **One file per book:** Export as `.md`, `.txt`, or both, with modular book headers (optional `H1` title, Reading Dashboard, collapsible EPUB synopsis, body tags, and 4 Overview Recap styles).
+- **Handwritten notes & stylus drawings:** Exports pen strokes from stylus-enabled KOReader devices as clean vector `.svg` files into `drawings/` and embeds them inside your book notes.
+- **Navigable Library Index (`00 - Index.md`):** Includes a Library Dashboard, `### Completed books`, clickable Tag Cloud, optional book covers, progress bars, and compact tag display modes.
+- **Chronological Reading Digest (`00 - Reading Digest.md`):** Gathers highlights across all your books grouped by day.
+- **Your notes survive (`Keep my notes`):** Write comments or custom YAML frontmatter in Obsidian and future exports merge new highlights without erasing your edits.
+- **Portable settings & safe backups:** Export and restore your full plugin configuration (`tomedown_settings_backup.lua`) in one tap for easy device resets or migrations.
+
+---
 
 ## Install
 
-**Requirements**
+**Requirements:** KOReader (modern highlights and legacy `.sdr` files are both supported). No network or cloud account is needed for local exports.
 
-- KOReader with highlights in the modern format (old `.sdr` files, where
-  highlights live in `highlight` + `bookmarks`, are supported too)
-- the **Cloud storage** plugin that ships with KOReader, with any server it
-  supports (WebDAV, Dropbox, FTP). The examples use Koofr's WebDAV,
-  `https://app.koofr.net/dav/Koofr` (the plain `/dav/` root is not writable).
-  **No cloud at all?** The local export works anyway
-- optional, to read the notes in Obsidian: **Remotely Save** with a WebDAV
-  server (free). Any other Markdown app works too
-
-**Tested on** a Kindle Paperwhite 5 with KOReader 2026.07.2, in daily use,
-and a Kindle 4 Non-Touch with KOReader 2026.07.1, Nextcloud WebDAV and
-Obsidian, where [Tewel](https://codeberg.org/imanubdesigner/tomedown.koplugin/issues/1#issuecomment-25359526)
-verified online merge, the offline round trip and the Obsidian edits on beta
-2. The plugin is plain Lua: it runs wherever KOReader runs and touches no
-hardware.
-
-1. Plug the Kindle in via USB mass storage.
-
-2. Download `tomedown.koplugin-v*.zip` from the
-   [Releases](https://github.com/imanubdesigner/tomedown.koplugin/releases)
-   page and unzip it *into* `/mnt/us/koreader/plugins/`: the zip already
-   contains the `tomedown.koplugin/` directory.
-
-3. Unplug the Kindle and restart KOReader (or: ☰ menu → *Plugin management* →
-   enable *Tomedown*).
-
-4. **Tomedown** is the first entry of KOReader's menu: on top of the
-   *Navigation* tab (right before *Table of Contents*) while reading, and on
-   top of the first tab in the file browser (right before *Display mode*).
+1. **Via AppStore (easiest):** Install wirelessly through **Storefront** or **KOReader AppStore**.
+2. **Manual install:** Download `tomedown.koplugin-v*.zip` from [Releases](https://github.com/imanubdesigner/tomedown.koplugin/releases) (or the [Download page](https://imanubdesigner.github.io/tomedown.koplugin/download/)) and unzip it into your KOReader `plugins/` folder (e.g., `/mnt/us/koreader/plugins/` on Kindle).
+3. Restart KOReader (or go to `☰` → *Plugin management* and enable *Tomedown*).
+4. You will find **Tomedown** at the top of KOReader's menu (and optionally in the top bar via *Settings → Style → Show Tomedown icon in the top bar*).
 
 <details>
-<summary>Installing from a clone of this repo</summary>
+<summary>Installing from a git clone</summary>
 
-Copy the folder, leaving behind what KOReader does not need (tests, docs, git
-files and the guide artwork; the logo stays, the About popup shows it):
+Copy the plugin files to your e-reader's `plugins/` folder, excluding development and documentation directories:
 
-```
-rsync -a --exclude tests --exclude .git --exclude .github \
+```bash
+rsync -a --exclude tests --exclude site --exclude docs \
+      --exclude .git --exclude .github \
       --exclude .gitattributes --exclude .gitignore \
-      --exclude README.md \
-      --exclude TUTORIAL.md \
-      --exclude OBSIDIAN.md --exclude SYNC-DIRECTION.md \
-      --exclude docs \
+      --exclude '*.md' \
       --exclude assets/menu --exclude assets/obsidian \
       --exclude assets/obsidian-guide --exclude assets/tutorials \
       --exclude 'assets/banner-*' \
-      tomedown.koplugin /mnt/us/koreader/plugins/
-```
-
-The result should look like:
-
-```
-/mnt/us/koreader/plugins/tomedown.koplugin/main.lua
-/mnt/us/koreader/plugins/tomedown.koplugin/tomedown_shared.lua
-/mnt/us/koreader/plugins/tomedown.koplugin/tomedown_menu.lua
-/mnt/us/koreader/plugins/tomedown.koplugin/tomedown_export.lua
-/mnt/us/koreader/plugins/tomedown.koplugin/tomedown_upload.lua
-/mnt/us/koreader/plugins/tomedown.koplugin/tomedown_i18n.lua
-/mnt/us/koreader/plugins/tomedown.koplugin/tomedown_render.lua
-/mnt/us/koreader/plugins/tomedown.koplugin/tomedown_merge.lua
-/mnt/us/koreader/plugins/tomedown.koplugin/tomedown_cover.lua
-/mnt/us/koreader/plugins/tomedown.koplugin/tomedown_update.lua
-/mnt/us/koreader/plugins/tomedown.koplugin/_meta.lua
-/mnt/us/koreader/plugins/tomedown.koplugin/languages/it.po
-/mnt/us/koreader/plugins/tomedown.koplugin/languages/de.po
-/mnt/us/koreader/plugins/tomedown.koplugin/languages/fr.po
-/mnt/us/koreader/plugins/tomedown.koplugin/languages/es.po
-/mnt/us/koreader/plugins/tomedown.koplugin/languages/pt_BR.po
-/mnt/us/koreader/plugins/tomedown.koplugin/assets/logo.png
-/mnt/us/koreader/plugins/tomedown.koplugin/LICENSE
+      . /mnt/us/koreader/plugins/tomedown.koplugin/
 ```
 
 </details>
+
+---
 
 ## First export
 
-☰ menu → **Tomedown**:
+Open `☰` → **Tomedown**:
 
-1. On a fresh install, the first time you open the menu Tomedown offers to
-   export the highlights of your whole reading history in one tap (*Export* /
-   *Not now*; the offer is made only once, and the menu entry stays available
-   anyway).
-2. Otherwise pick **Export this book**, **Export new and changed books** or
-   **Choose books…**. *Export new and changed books* also picks up the books
-   you never exported.
-3. The files land in the local folder first; with *Upload to cloud* on, the
-   upload follows by itself.
+1. On a fresh install, Tomedown offers a one-tap export of your existing reading history (*Export* / *Not now*).
+2. At any time, pick **Export this book**, **Export new and changed books**, or **Choose books…**.
+3. Your files appear in the local folder right away:
 
-```
-/mnt/us/koreader/clipboard/tomedown/
+```text
+koreader/clipboard/tomedown/
 ├── 00 - Index.md
-├── Arthur Machen - The Three Impostors.md
-└── ...
+├── 00 - Reading Digest.md
+├── drawings/
+└── Author - Book Title.md
 ```
 
-With *Export when I close a book* on, closing a book exports it on the spot,
-and suspending the device does the same right before sleep, silently and
-without touching the network.
+Enable *Export when I close a book* in *Settings → Files* to automatically export silently whenever you close a book or put your e-reader to sleep.
 
-<details>
-<summary>Quickstart in six sheets</summary>
+---
 
-From the first highlight to a note you keep, in six sheets: the cover and one
-sheet per step. Start with **01**.
+## Essentials
 
-![From highlight to note: the quickstart cover](assets/tutorials/00-cover.svg)
+A few key things worth knowing right from the start:
 
-![01, mark what matters: select a passage, say what it is, find it written down](assets/tutorials/01-mark-what-matters.svg)
+- **Protecting your own notes:** By default, exports rewrite the generated files. If you plan to write personal notes or edit frontmatter in Obsidian, turn on **Keep my notes** (*Settings → My notes* or per-book under *Current book*). Tomedown also keeps rotating `.bak` / `.bak.1`–`.bak.3` safety copies when needed.
+- **Backing up your settings:** Before resetting your device or reinstalling KOReader, use **Settings → Files → Export settings to file**. It saves all global and per-book preferences to `tomedown_settings_backup.lua` inside your local folder so you can restore everything in one tap later.
+- **Cloud sync & Obsidian (optional):** If you want automatic WebDAV sync (for example with Koofr) and two-way vault sync with Obsidian's *Remotely Save* plugin, follow the step-by-step **[Cloud & Obsidian Tutorial](https://imanubdesigner.github.io/tomedown.koplugin/docs/tutorial/)**.
 
-![02, your file, your folder: the export lands in the folder you chose, plain Markdown](assets/tutorials/02-your-file-your-folder.svg)
+---
 
-![03, optional: the cloud: point Tomedown at a server once, every export rides along](assets/tutorials/03-optional-the-cloud.svg)
+## Documentation
 
-![04, read it in Obsidian: Remotely Save bridges your cloud and your vault](assets/tutorials/04-read-it-in-obsidian.svg)
+All detailed guides live on the **[Tomedown Docs Wiki](https://imanubdesigner.github.io/tomedown.koplugin/docs/)**:
 
-![05, edit, keep it: write in the file itself, flip one switch and your edits survive every export](assets/tutorials/05-edit-keep-it.svg)
+| Topic | What you will find |
+| --- | --- |
+| **[Getting Started](https://imanubdesigner.github.io/tomedown.koplugin/docs/quickstart/)** | Installation, first local export, and quickstart overview |
+| **[Menu & Settings](https://imanubdesigner.github.io/tomedown.koplugin/docs/settings/)** | Every option in Files, Index, Style, Book info, Cloud, My notes, and Updates |
+| **[Keep My Notes](https://imanubdesigner.github.io/tomedown.koplugin/docs/keep-my-notes/)** | How note merging works, `.bak` safety copies, and editing in Obsidian |
+| **[Formats & Output](https://imanubdesigner.github.io/tomedown.koplugin/docs/file-format/)** | Markdown/TXT layout, frontmatter, covers, `00 - Index.md`, and link IDs |
+| **[Highlight Styles & Frontmatter](https://imanubdesigner.github.io/tomedown.koplugin/docs/universal-highlights/)** | 6 highlight styles, inline/footnote comments, custom YAML, and per-book rules |
+| **[Templates, Folders & Index](https://imanubdesigner.github.io/tomedown.koplugin/docs/templates-and-folders/)** | Folder grouping, filename patterns, tag pills, and top bar icon |
+| **[Reading Digest](https://imanubdesigner.github.io/tomedown.koplugin/docs/reading-digest/)** | Chronological daily journal across your library |
+| **[Obsidian Guide](https://imanubdesigner.github.io/tomedown.koplugin/docs/obsidian/)** & **[Sync Direction](https://imanubdesigner.github.io/tomedown.koplugin/docs/sync-direction/)** | Vault structure and Remotely Save configuration |
+| **[FAQ](https://imanubdesigner.github.io/tomedown.koplugin/docs/faq/)** | Common questions about formats, tags, stylus notes, and sync |
+| **[Changelog & Updates](https://imanubdesigner.github.io/tomedown.koplugin/changelog/)** | Release history and what is new in each version |
 
-</details>
-
-A full walkthrough (cloud account and app password, Koofr as the example;
-first export; optional Remotely Save in Obsidian) is in
-[TUTORIAL.md](TUTORIAL.md).
-
-## The menu
-
-From the file browser the menu has seven rows:
-
-![The Tomedown menu in the file browser](assets/menu/reader/tomedown_reader_new_menu.png)
-
-With a book open it has nine: *Export this book* and *Current book* are added
-on top.
-
-| Row                              | What it does                                                                                                                                                  |
-| -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Export this book**             | the open book alone                                                                                                                                           |
-| **Export new and changed books** | only the books whose highlights changed since the last export (per-book hash)                                                                                 |
-| **Repair all files**             | writes every file again from KOReader's reading history: for a file deleted by mistake or a sync that went wrong                                              |
-| **Choose books…**                | a list with checkboxes: tick the volumes and export just those                                                                                                |
-| **Current book**                 | the rows that name the open book: *Keep my notes in this book*, *Book info* (*Tags: %1* and the book-info rows), *Book visibility: %1*, *Notes heading: %1*, *Backup copies* and *Style & format*, explained in [Keep my notes](docs/keep-my-notes.md), [Settings](docs/settings.md) and [File format](docs/file-format.md#imported-book-information) |
-| **Upload all files again**       | re-uploads every file already in the local folder, after comparing each one with its cloud copy                                                               |
-| **Last export**                  | a wide popup, one line per entry: network, server, pending uploads, the last export and upload with timestamp and outcome                                     |
-| **Settings**                     | the six groups, described in [Settings](docs/settings.md)                                                                                                    |
-| **About**                        | a popup with the logo, the installed version, the description and the GitHub link                                                                             |
-
-Long-pressing a book in the file browser, in History or in Bookshelf adds the
-same per-book actions to KOReader's file dialog: *Export this book*, *Tags…*,
-*Book visibility…* and *Import book info* (or *Remove imported book info* once
-the book is managed).
-
-![The Last export popup: every entry on its own line, the labels in bold](assets/menu/settings/new_status_popup_messages.png)
-
-## Special highlights
-
-Some highlights matter more than the rest: the quote you want to open first,
-the line you will come back to. **Special Highlight** is the flag for those.
-When you select text it sits right under *Highlight*, and tapping an existing
-highlight offers it at the bottom of the edit menu, with the same row in the
-full menu behind the "…" button. The flagged quote becomes a
-`> [!highlight]` callout in the file, or `> **quote**` if you pick *Bold* in
-Settings, so it always stays visually apart from the plain quotes.
-
-[File format](docs/file-format.md#special-highlights) shows the mark in the
-file, how to take it off again, and how the callout reads in Obsidian, Notion
-and GitHub.
-
-## Cloud upload
-
-*Settings → Cloud* points Tomedown at a server, once. After every export the
-`.md` files and the index go there automatically; with *Include book covers*
-the `covers/` folder travels with them, and each cover leaves the device once
-its upload succeeded.
-
-No connection? The export still happens locally and the files wait in a
-pending list. As soon as KOReader comes back online (the connection event is
-enough: no prompt, no dialog), **only those pending files** are uploaded:
-books already in the cloud and unchanged are never re-sent, and a book whose
-highlights changed since its last upload is uploaded again, overwriting the
-old copy. Failed uploads stay pending and are retried on the next connection.
-
-While uploading, an *Uploading N files to the cloud…* message stays on screen
-(including the wait times), and each file is tried **up to 3 times**: two
-seconds before the second attempt, four before the third. Only **transient**
-failures are retried: network errors (no HTTP code, e.g. `connection reset`,
-timeout), `5xx`, `408` and `429`. `4xx` errors (missing remote folder, wrong
-credentials…) are not retried: the file fails immediately, because retrying
-would only cost waiting.
-
-If a file still fails, a window shows `Cloud: X uploaded, Y errors`, the file
-stays in the local folder, and **Upload all files again** picks it up after
-the fix. The attempts are also logged:
-
-```
-tomedown: upload failed (attempt 1 of 3), retrying in 2 s: <path> 500
-```
-
-Uploads go through KOReader's *Cloud storage* plugin: if it is not active the
-local export still works and only the upload is skipped.
-
-## Keep my notes
-
-With *Keep my notes: all books* on (off by default), an export folds the new
-highlights into the file already in your vault instead of overwriting it.
-Above the generated block you get a heading and two blank lines of room:
-everything you write there, and your own frontmatter properties, survives
-every export. *Keep my notes in this book*, in the open book's menu, does the
-same for one book alone, and *Keep my notes: index* for `00 - Index.md`.
-*Tags: %1*, inside *Current book → Book info*, adds the tags of that one book: the ones already
-used in your library come first, most used first, and *Other tags…* writes a
-new one. They join `ebook`, `highlights` and its own keywords, and the ones you
-remove there leave the file at the next export while the tags you wrote by
-hand stay. *Book visibility: %1* keeps the book in the index, hides it from
-the index only, or stops exporting it, without ever deleting the note already
-written.
-
-Backup copies sit beside the file when they are needed: `.bak` holds your notes
-when Keep my notes goes off, and `.bak.1`–`.bak.3` are rotating safety copies for text that
-cannot come back by itself (inline comments written directly below a quote in Obsidian are preserved automatically). On, off, on: your notes come back each time.
-*Backup copies* lists them and lets you read or delete them.
-
-With Keep my notes off the files are rewritten at every export: treat them as
-read-only, or your edits disappear next time.
-
-[Keep my notes](docs/keep-my-notes.md) covers the zones, the switches, the
-merge and the two copies, step by step.
-
-## Reference
-
-| Page                                                                     | What is in it                                                          |
-| ------------------------------------------------------------------------ | ---------------------------------------------------------------------- |
-| [Settings](docs/settings.md)                                             | every group and row: Files, Cloud, My notes, Highlights, Updates, Beta |
-| [Keep my notes](docs/keep-my-notes.md)                                   | zones, switches, `.bak` and `.bak.1`, two devices, edits from Obsidian |
-| [File format](docs/file-format.md)                                       | frontmatter, the whole file, covers, index, link IDs                   |
-| [Developing](docs/developing.md)                                         | tests, project structure, debug, languages                             |
-| [Tutorial](TUTORIAL.md)                                                  | cloud account, Koofr, Remotely Save, first export, troubleshooting     |
-| [Obsidian guide](OBSIDIAN.md)                                            | the files as they sit in the vault, and the Remotely Save setup        |
-| [Sync direction](SYNC-DIRECTION.md)                                      | which Remotely Save direction to pick, and where your edits live       |
-| [Releases](https://github.com/imanubdesigner/tomedown.koplugin/releases) | zips and release notes                                                 |
+---
 
 ## Support
 
-If it saves you time, you can buy me a coffee: the next features are brewed
-with it.
+If Tomedown saves you time, you can buy me a coffee. Found a bug or have an idea? Feel free to [open an issue](https://github.com/imanubdesigner/tomedown.koplugin/issues) or start a [discussion](https://github.com/imanubdesigner/tomedown.koplugin/discussions).
 
 <p align="center">
   <a href="https://ko-fi.com/imanubdesigner">
-    <img src="https://img.shields.io/badge/Ko--fi-Buy%20me%20a%20coffee-FF5E5B?style=for-the-badge&logo=ko-fi&logoColor=white" alt="Buy me a coffee on Ko-fi">
+    <img src="https://img.shields.io/badge/Ko--fi-Buy%20me%20a%20coffee-f0b00a?style=for-the-badge&logo=ko-fi&logoColor=faf6ee&labelColor=2c2823" alt="Buy me a coffee on Ko-fi">
   </a>
 </p>
 
-Something wrong or missing? [Open an issue](https://github.com/imanubdesigner/tomedown.koplugin/issues).
-
 ## License
 
-Copyright (C) 2026 Manuel B.
-
-GNU Affero General Public License v3.0, see [LICENSE](LICENSE).
+Copyright (C) 2026 Manuel B.  
+Licensed under the **GNU Affero General Public License v3.0**. See [LICENSE](LICENSE) for details.

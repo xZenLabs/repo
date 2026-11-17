@@ -1,3 +1,56 @@
+# v2.1.0 · 2026-11-17
+
+# Tomedown v2.1.0 is Here
+
+### Added
+
+- **Handwritten notes and stylus drawings (`tomedown_handwritten.lua`)**:
+  - Exports freehand stylus drawings and annotations from stylus-enabled KOReader devices as clean vector `.svg` files into the `drawings/` folder (configurable via `Settings → Style → Drawings folder`).
+  - Automatically embeds vector illustrations directly into book notes and the reading digest.
+  - Supports both KOReader freehand stylus vector strokes and `pencil.koplugin` bitmap/bookmark captures.
+- **Modular book note header (`tomedown_render.lua`)**:
+  - `Include book title in body`: adds an `H1` title and `H3` author/series header to the note body.
+  - **Overview recap selector**: configurable recap layout (`Inline / Heading`, `Classic blockquote`, `Callout ([!summary])`, or `Table`).
+  - **Reading dashboard**: embeds reading status, progress percentage, page count, star rating, literary dates, and a quick backlink to the book index (`00 - Index.md`).
+  - **Collapsible EPUB synopsis**: extracts book blurbs into a collapsible callout (`[!abstract]- Book synopsis`).
+  - **Body tags**: adds clickable `#tags` directly to the note body.
+  - **Special highlights showcase**: collapsible `★ Special highlights` showcase callout before chapters.
+- **Library index additions (`00 - Index.md`)**:
+  - **Completed books**: dedicated showcase section for completed volumes above the main index.
+  - **Library dashboard**: consolidated status overview (`[!summary] Library dashboard`) with direct navigation to the reading digest.
+  - **Tag cloud**: aggregated tag cloud sorted by frequency.
+  - **Index tag display selector**: choose between `Show all`, compact `First 3 (+N)` pill badge, or collapsible `<details>` wrapper to keep table columns readable.
+- **Portable settings export and restore (`tomedown_settings_backup.lua`)**:
+  - `Export settings to file` and `Restore settings from backup…` under `Settings → Files`.
+  - Serializes all global and per-book configurations into `tomedown_settings_backup.lua` inside the local folder for straightforward device migration.
+- **Reading digest quick export**:
+  - Added `Export reading digest` directly to the primary Tomedown menu in KOReader.
+- **Visual identity and topbar glyph**:
+  - Updated visual identity, logo mark, and About dialog banner.
+  - 1-bit monochrome topbar icon (`assets/appbar.tomedown.svg`), toggleable via `Settings → Style → Show Tomedown icon in the top bar`.
+
+### Changed
+
+- **Reading digest layout (`00 - Reading Digest.md`)**:
+  - Literary date format (`16 Nov 2026`), timestamp labels (`09:41`), and horizontal dividers separating daily reading sessions.
+- **Backup management interface (`tomedown_menu.lua`)**:
+  - Explicit timestamp labels for existing note backups and snapshots (`Saved notes · <date>`, `Latest snapshot · <date>`).
+  - Added global `Delete all backup copies…` bulk cleanup with a safety confirmation dialog.
+- **Localization**:
+  - Updated translations for Italian (`it`), French (`fr`), German (`de`), Spanish (`es`), and Brazilian Portuguese (`pt_BR`).
+- **Documentation and online reference**:
+  - Comprehensive documentation overhaul with interactive zoom inspection for Obsidian architecture diagrams and updated UI schematics.
+
+### Fixed
+
+- **Settings restore security**: sandboxed `load` / `setfenv` execution environment and null-byte validation in `restoreSettingsFromFile()` to ensure safe deserialization of backup files.
+- **Frontmatter key ordering**: deterministic serialization order and preservation of user custom frontmatter fields during note re-exports.
+- **Diagram rendering**: resolved right-bezel clipping and visual border artifacts in documentation SVG diagrams.
+
+---
+
+**Full Changelog**: https://github.com/imanubdesigner/tomedown.koplugin/compare/v2.0.1...v2.1.0
+
 # v2.0.1 · 2026-11-12
 
 If you have existing book notes, re-exporting the current book or running a library re-export is recommended to apply the new tag splitting rules and unbreakable badge formatting to your index and frontmatter.
@@ -83,25 +136,5 @@ Install it from **Check for updates** inside the plugin, or download the zip bel
 
 - Reading digest heading links: wikilink headings render with unescaped pipes so they display cleanly without raw bracket syntax in Markdown viewers.
 - Under-the-hood stability: verified with 1,929 automated assertions passing on both Lua 5.4 and LuaJIT.
-
-Install it from Check for updates, or the zip below.
-
-# v1.2.0 · 2026-11-03
-
-**New**
-
-- Four new languages: German, French, Spanish and Brazilian Portuguese. Menus and exported notes follow KOReader's language wherever a translation exists.
-- Tags for the book you are reading: under *Current book*, Tags: %1 adds tags to that book alone. They join its frontmatter at the next export, and tags made only of numbers (1500, 1984) are ignored, with a notice that names them; 1500s and anno-1500 stay valid.
-- Tags in the index: books that carry their own tags get a Tags column, after Series and before Status, written as clickable #tag separated by a space. A book without tags shows a dash, and the column disappears when no book in the table has tags.
-- Index order: under Settings → Files, My books can be ordered by author (default), title, last read or highlights. Last read and highlights run newest and most first; series books keep their own order at whatever the setting says.
-
-**Fix**
-
-- Smaller download: the repository banners and the manual are no longer packed into the zip by mistake.
-
-**Improvement**
-
-- The plugin code is now split into small modules (shared, menu, export, upload): nothing changes for readers, but every future release is easier to check.
-- The workflows are linted in CI with actionlint, and the release zip is built by a script that checks its exact contents against an allowlist, so docs and banners cannot come back.
 
 Install it from Check for updates, or the zip below.

@@ -1,3 +1,25 @@
+# v9.8.1 · 2026-11-17
+
+# AppDock 9.8.1
+
+## Deutsch
+- **Fix:** Die Kategorie „Lockscreen“ wird jetzt tatsächlich in der Settings-Sidebar angezeigt. Entsperrmethode, Profilname, Profilbild und Uhrzeit-Stil sind dadurch erreichbar.
+
+## English
+- **Fix:** The “Lockscreen” category is now included in the Settings sidebar, making unlock method, profile name, profile image and clock style accessible.
+
+# v9.8.0 · 2026-11-17
+
+# AppDock 9.8.0
+
+## Deutsch
+- **Themes mit Verlaufsfarben pro Rolle:** Neben dem Hintergrund-Verlauf kann ein Theme jetzt auch für Primär-, Button-, Sekundär-, Tertiär-, Flächen- und Variantenfarben einen Verlauf festlegen (`gradients = { button = ... }`). Aurora nutzt das für Buttons, Kacheln und Chips. Die Textfarbe wird gegen jeden Verlaufsstopp geprüft; auf Graustufen-Displays und im hohen Kontrast bleibt es bei flachen Farben.
+- **Neue Einstellungs-Kategorie „Lockscreen“:** enthält Entsperrmethode, Name, Profilbild und neu den **Uhrzeit-Stil**: Standard, Liquid Glass oder Bunt (Stunden und Minuten groß in 2 Zeilen, jede Ziffer in eigener Farbe).
+
+## English
+- **Per-role gradients in themes:** besides the background gradient, a theme can now define a gradient for the primary, button, secondary, tertiary, surface and surface-variant colors (`gradients = { button = ... }`). Aurora uses it for buttons, tiles and chips. Text contrast is checked against every gradient stop; grayscale panels and high contrast keep flat colors.
+- **New settings category "Lockscreen":** unlock method, name, profile image and the new **clock style**: Standard, Liquid Glass or Color (hours and minutes big on 2 lines, one color per digit).
+
 # v9.7.1 · 2026-11-16
 
 # Fixes:
@@ -25,27 +47,3 @@ Cyber theme with a skyline wallpaper, new card styles and configurable skins; a 
 
 ## English
 - **Theme selection fixed:** The theme editor no longer shadows KOReader's gettext function `_` with its loop variable. Aurora and other gradient themes can now be selected in Settings.
-
-# v9.6.1 · 2026-11-15
-
-# AppDock 9.6.1
-
-## Deutsch
-- **Aurora-Homescreen repariert:** Der Paletten-Cache verarbeitet jetzt sowohl rohe Farbverläufe als auch normalisierte Theme-Stopps korrekt. Damit stürzt der Homescreen beim Aufbau mit dem Aurora-Theme nicht mehr ab.
-
-## English
-- **Aurora homescreen fixed:** The palette cache now handles both raw gradient color stops and normalized theme stops correctly, preventing a crash while building the homescreen with the Aurora theme.
-
-# v9.6.0 · 2026-11-15
-
-# AppDock 9.6.0
-
-## Deutsch
-- **Neues Aurora-Theme** (Nordlichter) mit Hintergrund wie der Lockscreen. Nach dem Update automatisch aktiv, Dark Mode wird dabei ausgeschaltet.
-- **Farbverläufe in Themes** (eingebaute, eigene und Store-Designs; nur auf Farbdisplays).
-- **Auto-Rotation:** AppDock dreht sich mit dem Rotationssensor und baut alle Bildschirme sauber neu auf. Schalter unter Einstellungen → Anzeige und als Kachel „Auto-rotate“.
-
-## English
-- **New Aurora theme** (northern lights) with the lockscreen background. Activated automatically after the update; dark mode is switched off.
-- **Gradients in themes** (built-in, custom and Store designs; color panels only).
-- **Auto-rotate:** AppDock follows the rotation sensor and rebuilds every screen cleanly. Switch in Settings → Display and as an "Auto-rotate" tile.

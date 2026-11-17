@@ -1,3 +1,20 @@
+# v4.1 · 2026-11-17
+
+## Performance improvements and optimizations
+
+- **Improved screen rotation performance:** Added optimized column-based rendering paths for Linen, Cross-hatch, Diagonal and Laid styles.
+- **Reduced rendering overhead:** Improved framebuffer context handling and reduced unnecessary allocations during screen refreshes.
+- **Optimized page-turn animations:** Reworked frame composition to copy only newly revealed areas instead of repeatedly copying large portions of the page.
+- **E-ink optimizations:** Added automatic animation step limits to reduce physical screen refreshes (Wipe: 5 steps, Blinds: 2 steps).
+- **Improved default animation settings:** Reduced the default animation steps from 15 to 3 for a better balance between smoothness and battery efficiency.
+- **Fixed page animation dispatcher action:** Corrected an incorrectly nested function declaration.
+- **Preserved existing rendering behavior:** Kept the BB8, RGB32, fast painting, night mode and custom tint rendering paths intact.
+
+## Notes
+- Keep in mind that page animations will consume additional battery power, regardless of how well optimized they are. If battery life is a concern, you can reduce the number of steps even further or disable the animation entirely.
+
+- I'm already working on version 5.0, it will include a new feature that I'm really excited about, and I hope you'll like it too. Stay tuned!
+
 # v4.0 · 2026-11-16
 
 ## What's new
@@ -26,7 +43,3 @@ What's new:
 2. Fast painting (experimental):
 Paints dots by writing directly to the screen buffer instead of calling KOReader once per pixel, which can speed up drawing on some devices. It only activates when the screen uses a compatible RGB32 framebuffer, is not rotated/inverted, and passes a read/write self-test; otherwise it is ignored and the normal method is used automatically. It does not change the pattern’s appearance. Enable it only if the plugin feels slow; disable it if dots look wrong or show artifacts.
 3. Minor performance optimizations
-
-# v2.3 · 2026-10-08
-
--One new style (diagonal lines)
