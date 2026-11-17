@@ -1,3 +1,52 @@
+# v0.6.5 · 2026-11-17
+
+## 月读 v0.6.5
+
+KOReader 插件包：`book.koplugin-v0.6.5.zip`
+
+输入法词库（整库，手动 sideload）：`dictionary.sqlite3 dictionary-wubi.sqlite3 dictionary-cangjie.sqlite3 dictionary-zhuyin.sqlite3`
+
+安装：解压后将 `book.koplugin` 复制到 `koreader/plugins/`，然后重启。
+
+词库 sideload：下载对应布局的词库，直接放入 `koreader/.moon/`
+（与 `book.sqlite3` 同级）。附件已使用最终文件名，无需重命名。
+
+### 更新内容
+
+相对上一版本 `v0.6.4`：
+
+#### 新功能
+
+- :sparkles: (setting): 启用的书源两列显示且已启用置顶 (#132) (6a427817)
+- :sparkles: (ui): 主题列表支持多列排布 (406fab8c)
+- :sparkles: (network): 新增休眠时自动关闭 Wi-Fi 开关 (91df481f)
+- :sparkles: (wallpaper): 设置壁纸时底栏选中色可半透明 (2b964fa9)
+- :sparkles: (bars): 替代系统栏时顶栏底栏背景透明 (44ffe4ec)
+- :sparkles: (security): 安全页新增自动锁屏时间，同步 KOReader 自动休眠设置 (6a0ef484)
+- :sparkles: (desktop): 长按底栏页签可换成自选图片，支持恢复默认 (eaf1801b)
+- :sparkles: (ui): 图标与底栏支持图片图标，底栏格子可长按 (c532a907)
+- :sparkles: (cover): 文字封面支持仅文字模式、白底黑字风格，标题过长可换列 (37675c55)
+
+#### 修复
+
+- :bug: (cover): 服务端 SVG 占位封面书名画不出，改用本地文字封面 (401aa233)
+
+#### 界面
+
+- :lipstick: (subscribe): 订阅页更紧凑，标题单行，已读空心圈 (486d3c5c)
+- :lipstick: (ui): 单行文字视觉垂直居中，按钮文字不再偏上 (4d78afaf)
+- :lipstick: (wallpaper): 界面壁纸预览改为等比缩放，不再宽度铺满 (5d749fc8)
+
+#### 变更
+
+- :globe_with_meridians: (security): 补充自动锁屏时间的英文与繁体译文 (27698d13)
+- :globe_with_meridians: (desktop): 补充底栏自定义图标的英文与繁体译文 (81e2c4be)
+- :globe_with_meridians: (cover): 补充文字封面设置项的英文与繁体译文 (5b26ecc5)
+
+### 完整对比
+
+https://github.com/AnkioTomas/moon/compare/v0.6.4...v0.6.5
+
 # v0.6.4 · 2026-11-17
 
 ## 月读 v0.6.4
@@ -107,34 +156,3 @@ KOReader 插件包：`book.koplugin-v0.6.1.zip`
 ### 完整对比
 
 https://github.com/AnkioTomas/moon/compare/v0.6.0...v0.6.1
-
-# v0.6.0 · 2026-11-16
-
-## 月读 v0.6.0
-
-正版书源已经全部移除，详情参考：https://moon.ankio.net/manual/library/sources/plugins
-
-### 更新内容
-
-相对上一版本 `v0.5.24`：
-
-#### 新功能
-
-- :sparkles: (scrape): 刮削内置多平台匿名搜索，不依赖书源插件 (e2efd58c)
-- :sparkles: (reviews): 段评可借用多个来源，关联时选择来源 (d7bb3226)
-- :sparkles: (extension): 第三方书源可复用旧 id，订阅页与刮削接入扩展挂点 (7cc1f20e)
-- :sparkles: (xray): X-Ray 画线支持点状、位置、灰度、透明度，与段评共用样式配置 (87d84d88)
-
-#### 修复
-
-- :bug: (iread): 发现页分类里的无 url 分隔项不再导致响应无效 (ff8c67a5)
-- :bug: (iread): 适配改版后的登录接口，账号校验改用 POST (39c2ac79)
-
-#### 变更
-
-- :white_check_mark: (source): 清理随书源迁出的测试，其余测试改用内置源 (56775f68)
-- :fire: (source): 官方平台书源迁出为第三方插件 (78de7965)
-
-### 完整对比
-
-https://github.com/AnkioTomas/moon/compare/v0.5.24...v0.6.0
