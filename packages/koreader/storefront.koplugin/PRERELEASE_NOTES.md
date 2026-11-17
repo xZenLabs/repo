@@ -1,3 +1,10 @@
+# 26.11.17-beta · 2026-11-17
+
+- Update font catalog logic to make it more efficient
+- Show the version number of plugins on the installed tab
+
+**Full Changelog**: https://github.com/ultimatejimmy/storefront.koplugin/compare/26.11.15-beta...26.11.17-beta
+
 # 26.11.15-beta · 2026-11-15
 
 - refine font catalog logic
@@ -35,9 +42,3 @@ The font catalog has been expanded with 35 new open-license fonts across classic
 - Load readme in the background without UI blocking
 
 **Full Changelog**: https://github.com/ultimatejimmy/storefront.koplugin/compare/26.11.2-beta...26.11.5-beta
-
-# 26.11.2-beta · 2026-11-02
-
-- Update delete logic
-
-**Full Changelog**: https://github.com/ultimatejimmy/storefront.koplugin/compare/26.11.1...26.11.2-beta
