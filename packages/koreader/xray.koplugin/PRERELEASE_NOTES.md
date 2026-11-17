@@ -1,3 +1,10 @@
+# 26.11.17-beta · 2026-11-17
+
+- Fix performance with entity underlines
+- some UI fixes
+
+**Full Changelog**: https://github.com/ultimatejimmy/xray.koplugin/compare/26.11.15-beta...26.11.17-beta
+
 # 26.11.15-beta · 2026-11-15
 
 - Various fixes
@@ -58,9 +65,3 @@ A huge thank you to @Dukko for creating the original user patch that inspired an
 Fix #164 
 
 **Full Changelog**: https://github.com/ultimatejimmy/xray.koplugin/compare/26.11.6-beta...26.11.6-beta2
-
-# 26.11.6-beta · 2026-11-06
-
-Fix #163 
-
-**Full Changelog**: https://github.com/ultimatejimmy/xray.koplugin/compare/26.11.5...26.11.6-beta
