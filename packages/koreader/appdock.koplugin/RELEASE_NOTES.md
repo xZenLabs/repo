@@ -1,3 +1,13 @@
+# v9.8.2 · 2026-11-17
+
+# AppDock 9.8.2
+
+## Deutsch
+- **Fix:** Behebt einen Homescreen-Startabsturz auf Farbgeräten. Ein KOReader-FFI-Farbobjekt wird nicht mehr mit `nil` verglichen.
+
+## English
+- **Fix:** Fixes a homescreen startup crash on color devices by avoiding comparison of a KOReader FFI color object with `nil`.
+
 # v9.8.1 · 2026-11-17
 
 # AppDock 9.8.1
@@ -37,13 +47,3 @@ Cyber-Theme mit Skyline-Hintergrund, neuen Kartenstilen und anpassbaren Kartensk
 ## English
 
 Cyber theme with a skyline wallpaper, new card styles and configurable skins; a homescreen shelf for recently read and featured books; an optional reading pet that grows with reading time; and a built-in file chooser replacing manual path entry for images, tools, music and output folders. This release also adds color-aware rendering and bundled Cyber skin artwork.
-
-# v9.6.2 · 2026-11-15
-
-# AppDock 9.6.2
-
-## Deutsch
-- **Theme-Auswahl repariert:** Der Theme-Editor überschattet die KOReader-Übersetzungsfunktion `_` nicht mehr mit seiner Schleifenvariable. Aurora- und andere Verlaufs-Themes lassen sich jetzt in den Einstellungen auswählen.
-
-## English
-- **Theme selection fixed:** The theme editor no longer shadows KOReader's gettext function `_` with its loop variable. Aurora and other gradient themes can now be selected in Settings.

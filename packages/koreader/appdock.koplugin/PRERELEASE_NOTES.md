@@ -15,7 +15,3 @@ Pre-release build created directly from the current GitHub main branch (commit d
 
 
 THIS RELEASE ISNT REAL. It is an error. DO NOT INSTALL.
-
-# v7.9.49-pre.3 · 2026-10-11
-
-## YouTube-Performance-Fix\n\n- Vier Frames pro UI-Tick statt eines einzelnen Reads reduzieren Lua/FFI-Overhead.\n- Zwei FFmpeg-Decodierthreads beschleunigen die Videoverarbeitung.\n- Filterung bleibt single-threaded, die globale Job-Sperre und die serielle Audio-Phase bleiben aktiv, um die bisherigen Crash-Ursachen zu vermeiden.\n\nYouTube-, YouTube-Music- und Setup-Regressionen sind erfolgreich.
