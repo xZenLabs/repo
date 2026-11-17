@@ -10,7 +10,7 @@
 
 *Em português: [LEIAME.md](LEIAME.md).*
 
-[![Support Silverfish on Ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/theusmaoliveira)
+[![Support Silverfish on Ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/theusmaoliveira) <a href="https://getbookbrood.com/?from=github"><img src="media/waitlist-button.png" alt="Join the BookBrood waitlist" height="30"></a>
 
 Silverfish hatches from an egg after your first pages. It feeds only on pages you actually read, grows through four stages, and slowly becomes what you read. A reader of science fiction raises a paranoid little futurist. A reader of satire raises a critic who rolls her eyes at prefaces.
 
@@ -140,6 +140,16 @@ Silverfish never blocks your reading. If something goes wrong, it says it trippe
 
 - In books without a table of contents, it counts a chapter every 25 pages.
 - It reads the book through its words; it doesn't understand the story like a person. Sometimes a comment about the chapter misses the point.
+
+## On your phone: BookBrood
+
+A lot of you asked for Silverfish on a phone, so I'm building it: **BookBrood**, a reading pet for your phone. It hatches from the books you read, paper books too, and grows a personality out of them, the same idea as here. The silverfish and the Ash Cat come along.
+
+It's a separate app and still in progress. Silverfish stays free and open source, and I'm still working on it.
+
+If you'd like to hear when it's ready, or to test it early, there's a waitlist:
+
+<a href="https://getbookbrood.com/?from=github"><img src="media/waitlist-button.png" alt="Join the BookBrood waitlist" height="30"></a>
 
 ## Support
 
