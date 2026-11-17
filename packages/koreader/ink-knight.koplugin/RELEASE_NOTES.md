@@ -1,5 +1,8 @@
 # v0.7.1 · 2026-11-17
 
+
+- Position analysis: when Lichess has no evaluation of the position, a button analyzes it with the plugin's Stockfish for a few seconds, and shows the evaluation and the best line marked as the plugin's engine. In the offline part, the editor has the analysis too, with only the plugin's engine, where it runs.
+
 # v0.7.0 · 2026-11-17
 
 
