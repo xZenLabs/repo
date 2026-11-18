@@ -97,7 +97,7 @@ project to distribute them: a few commands on a computer, then a copy to the e-r
 ([Optional dictionaries](#optional-dictionaries)). All explanatory text is in simplified
 characters ([Simplified text](#simplified-text)).
 
-Status: **2.8.0**, tested on a Boox Go 7 (Android, 300 dpi) with KOReader v2026.07.1.
+Status: **2.9.0**, tested on a Boox Go 7 (Android, 300 dpi) with KOReader v2026.07.1.
 
 ## Install
 
@@ -138,7 +138,7 @@ Tools menu). Settings apply to all books.
 
 | Menu item | |
 |---|---|
-| Show pinyin above rare characters | On / off (off when first installed) |
+| Show pinyin | On / off (off when first installed); **Which characters** sets which ones get it |
 | Tap characters for popup | On / off (on when first installed) |
 | Which characters | **All characters (learner mode)**, or pinyin for characters outside the 500 / 1,000 / 1,500 / 2,500 / 3,500 / 5,000 / 7,000 most common (default 3,500). See [Learner mode](#learner-mode) |
 | Pinyin size | 35–55% of the book's text size (default 40%) |
@@ -147,10 +147,10 @@ Tools menu). Settings apply to all books.
 | Known & remind-me readings | The counts; **Show marks** lists them (a tap clears one), **Clear all marks** (asks first). See [Known and remind-me readings](#known-and-remind-me-readings) |
 | Edge pass-through width | 0 mm (off) / 2.5 mm / 5 mm (default) / 7.5 mm / 10 mm. See [What a tap does](#what-a-tap-does) |
 | Popup text size | 40 / 60 (default) / 80 / 100 / 120% of the book's text size |
-| Chinese text size | 100 / 115 / 130 (default) / 150 / 175% of the popup text size, for the Chinese dictionaries' text (MOE, 成語典, Xinhua, Moegirlpedia). See [Tapping a character in the popup](#tapping-a-character-in-the-popup) |
+| Chinese text size | 100 / 115 / 130 (default) / 150 / 175% of the popup text size, for the Chinese dictionaries' text (MOE, 成語典, Xinhua, Moegirlpedia) and the line of text at the top of the popup. See [Tapping a character in the popup](#tapping-a-character-in-the-popup) |
 | Show character components | On (default) / off. See [Character components](#character-components) |
 | Show character frequency rank | On (default) / off. The small grey 字频 line on the tapped character's entry |
-| Show the text around the character in the popup | On (default) / off. See [The popup](#the-popup) |
+| Show the text around the character in the popup | On (default) / off; drawn at the Chinese text size. See [The popup](#the-popup) |
 | Underline the tapped character on the page | On (default) / off. See [The popup](#the-popup) |
 | Try to match the book's font | On (default) / off: Chinese text in the popup in the book's font. See [The popup](#the-popup) |
 | Dictionaries | Source labels (all entries / other dictionaries only (default) / none); **Order** of the dictionaries after CC-CEDICT; **Collapse long entries** (1 / 2 (default) / 3 lines / never); then each dictionary on/off, in that order (default: Wiktionary, CBDB office titles, MOE 重編國語辭典, MOE 成語典, Xinhua idioms, Wikipedia titles, Moegirlpedia slang), with **MOE for single characters** (off / fallback (default) / always) and **MOE for words** (off / fallback (default) / always) under MOE's. See [Fallback dictionaries](#fallback-dictionaries) and [MOE Always](#moe-always) |
@@ -162,7 +162,7 @@ For beginners: pinyin above every Chinese character on the page, so you can read
 from the start, and the plugin's job shifts from looking words up to taking the pinyin away as
 you learn.
 
-1. Turn it on: **Tools (🔧) → Chinese helper → Show pinyin above rare characters** on, then
+1. Turn it on: **Tools (🔧) → Chinese helper → Show pinyin** on, then
    **Which characters → All characters (learner mode)**.
 2. Read. Every character has its reading as the plugin resolves it in context (了 is *le* after a
    verb, *liǎo* in 了解; see [Readings](#readings)), repeats included.
@@ -233,7 +233,7 @@ stretch containing the tapped character, in simplified and traditional forms. No
 where the words break.
 
 - **The text around the character**, on one line at the top: as much of its sentence as fits,
-  at the popup's text size, the character in bold and underlined. It grows outwards from the
+  at the Chinese text size (130% of the popup's by default), the character in bold and underlined. It grows outwards from the
   character, a cut side ends in "…", and it stops at a sentence end, a paragraph break or the
   edge of the page. Popups from KOReader's dictionary that the word buttons open get the line
   too, with the whole word marked.
@@ -313,7 +313,8 @@ the entry is for), the components, or the English glosses.
   that, a tap says so and opens nothing.
 - **Chinese text size**: the Chinese dictionaries' text (definitions, short lines, the Origin &
   Usage view) is drawn larger than the rest of the popup, 130% by default, so its characters
-  are easier to tap. English glosses, source labels and buttons keep the popup text size. On a
+  are easier to tap. The line of text from the page at the top of the popup uses the same size
+  (also in KOReader's dictionary popup opened from a word button). English glosses, source labels and buttons keep the popup text size. On a
   Boox Go 7 (300 dpi) with 64 px book text and the default 60% popup text, that is 38 px
   (3.2 mm) for English and 49 px (4.2 mm) for Chinese.
 
@@ -407,13 +408,14 @@ popup and sends **the whole sentence containing the tapped character**:
 
 - **With [KOAssistant](https://github.com/zeeyado/koassistant.koplugin) installed** (tested with
   0.23.0; the button uses its internals, so a later version may fall back to the built-in
-  translator), it reads **Translate & analyze the surrounding sentence [AI]**: a built-in prompt asks for a natural English
-  translation, a chunk-by-chunk analysis (characters, pinyin, a literal gloss, the grammatical
-  role) and any construction that governs the sentence. The sentence goes to KOAssistant as a
-  selection, so it also gets the surrounding context, your provider and model, and the book's
-  title. The prompt is a snapshot of the author's own custom action (temperature 0.3, up to 2000
-  tokens): your custom actions do not change it, and nothing is written to KOAssistant's
-  settings.
+  translator), it reads **Translate & analyze the surrounding sentence [AI]**: a built-in prompt, written for learners, asks for a natural
+  English translation, then every word of the sentence in order (its characters, pinyin and a
+  plain-English meaning, with small words like 的 and 了 and measure words included), and a
+  short note on how the sentence fits together when its structure would surprise an English
+  speaker. The sentence goes to KOAssistant as a selection, so it also gets the surrounding
+  context, your provider and model, and the book's title. The prompt is built into the plugin
+  (temperature 0.3, up to 2000 tokens): your own custom actions do not change it, and nothing is
+  written to KOAssistant's settings.
 - **Without KOAssistant**, it reads **Translate** and uses **KOReader's built-in translator**.
   With "Translate from book language" on, a Chinese book whose metadata says English (common
   with converted EPUBs) comes back untranslated: set its language to zh-CN in Book information,
@@ -875,7 +877,7 @@ Standard-only readings.
 | `ch_bookfont.lua` | the popup's faces with the book's font first, for its Chinese text |
 | `ch_components.lua` | the character components lines |
 | `ch_sentence.lua` | the sentence around the tapped character |
-| `ch_translate.lua` | the Translate button: KOAssistant (with the prompt snapshot) or KOReader's translator |
+| `ch_translate.lua` | the Translate button: KOAssistant (with the built-in prompt) or KOReader's translator |
 
 ### The sample book
 

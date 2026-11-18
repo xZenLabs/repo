@@ -1,3 +1,40 @@
+# v2.9.0 · 2026-11-18
+
+Larger line of text at the top of the popup (#32)
+- **The line of text from the page at the top of the popup is now drawn at the Chinese text
+  size** (130% of the popup text by default) instead of the popup text size, so it reads like
+  the page and follows **Chinese text size**. The tapped character stays bold and underlined.
+  On a Boox Go 7 the 孔乙己 line (31 characters) still fits whole at 130%; at 175% the popup
+  shows 29 characters of it.
+- The same goes for the line under the title of **KOReader's dictionary popup** opened from a
+  word button: it is drawn at the Chinese text size of that popup's text.
+- The menu help for **Chinese text size** and **Show the text around the character in the popup**,
+  and the README, say so.
+
+# v2.8.2 · 2026-11-18
+
+Menu and description wording (#29)
+- The pinyin toggle is now **Show pinyin** (was "Show pinyin above rare characters"): with
+  **Which characters → All characters (learner mode)** it puts pinyin on every character, and
+  **Which characters** already says which ones. The setting itself is unchanged.
+- The **Dictionaries** help names MOE's items as they appear in the menu, **MOE for single
+  characters** and **MOE for words**.
+- The plugin description (KOReader's plugin manager) covers learner mode and known / remind-me
+  readings.
+
+# v2.8.1 · 2026-11-18
+
+Translate & Analyze for learners (#30)
+- **The popup's Translate & Analyze button now explains every word**, in order, for someone
+  learning Chinese: a natural English translation, then one line per word with its characters,
+  tone-marked pinyin and its meaning in this sentence, small words included (的, 了, 吧,
+  measure words), and a short note on how the sentence fits together when its structure would
+  surprise an English speaker. Grammar is described in plain words ("得 between a verb and a
+  result means 'able to'"), not named ("potential complement"). Before, the prompt was written
+  for advanced readers and skipped words they would know on sight.
+- On a Boox Go 7 a 69-character sentence from 阿Q正传 gets its whole reply (about five pages of
+  KOAssistant's viewer) within the 2000-token limit.
+
 # v2.8.0 · 2026-11-18
 
 
@@ -32,36 +69,3 @@ Every occurrence gets pinyin (#28)
   popup changes every occurrence at once.
 - Crowded lines drop pinyin about as rarely as before (on four sample books, roughly 1% of
   annotations at most, the most common characters first), and nothing overlaps.
-
-# v2.6.0 · 2026-11-18
-
-Known and remind-me readings (#26)
-- **A button at the right of the popup's title bar marks the tapped character's reading**:
-  **I know tāo** stops that reading from ever getting pinyin (any threshold, every book), and
-  **Remind me: shū** makes a reading that wouldn't be drawn always get pinyin, once per page.
-  Only that reading is affected: 刨 *bào* known leaves 刨 *páo* annotated. Marked, the button
-  reads **Known tāo ✓** or **Reminding shū ✓**; a tap clears it. The page under the popup
-  changes at once. An uncertain pair (xíng/háng) gets a button per reading and is hidden only
-  when both are known. Nested popups have no buttons.
-- **Known & remind-me readings** in the menu shows the counts, lists the marks (a tap clears
-  one) and has **Clear all marks**, which asks first.
-- Marks are kept by simplified form in `koreader/settings/chinesehelper_marks.lua`, which
-  survives plugin updates. It is written only when a mark changes, atomically; an unreadable
-  file is renamed aside, never overwritten.
-
-# v2.5.3 · 2026-11-18
-
-- **MOE for single characters defaults to fallback again** (#24): out of the box, a
-  single-character popup shows MOE's entry only for a character CC-CEDICT lacks, in full. Set
-  **MOE for single characters** to **always** (Dictionaries menu) to keep 2.5.0's MOE entry
-  under CC-CEDICT's for every character, collapsed as before. A mode already chosen in the menu
-  is kept; only the default changes.
-
-# v2.5.2 · 2026-11-16
-
-
-- **Words with no definition from any source are no longer listed in the popup.** A word known
-  only from pypinyin's segmentation (不畅 in 受阻不畅) used to show its pinyin and "no definition
-  in CC-CEDICT"; it is now left out, also when it is the word that decided the tapped
-  character's reading (that character's own entry already shows the reading). Words with a
-  fallback entry or a note still appear.
