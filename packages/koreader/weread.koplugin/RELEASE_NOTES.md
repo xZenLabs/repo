@@ -1,3 +1,9 @@
+# v1.7.1 · 2026-11-18
+
+## 新功能与改进
+
+- 一点稳定性优化
+
 # v1.7.0 · 2026-11-03
 
 ## 新功能与改进
@@ -73,18 +79,3 @@
 - 修复获取中断后，已完成章节的划线未及时显示的问题。
 
 **Full Changelog**: https://github.com/finlater/weread.koplugin/compare/v1.5.1...v1.5.2
-
-# v1.5.1 · 2026-09-19
-
-## 新功能与改进
-
-- 新增章节对应管理，支持手动调整匹配、按章获取或重新获取划线和想法，并显示“已获取”状态。
-- 优化获取想法时的暂停与断点续传，保留已完成进度。
-- 开书不再自动匹配划线位置；仅在章节预下载和预下载划线想法同时开启时，才在后台获取数据。
-- 新增独立的本地 Mock 测试模式，方便在 macOS 模拟器和 Kindle 上验证功能。
-
-## What's Changed
-* feat: 支持 macOS KOReader 集成测试与局域网 Mock 调试 by @finlater in https://github.com/finlater/weread.koplugin/pull/175
-
-
-**Full Changelog**: https://github.com/finlater/weread.koplugin/compare/v1.5.0...v1.5.1

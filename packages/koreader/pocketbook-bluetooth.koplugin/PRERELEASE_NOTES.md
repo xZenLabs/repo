@@ -1,3 +1,7 @@
+# 0.0.6-dev.3 · 2026-11-18
+
+- New Dispatcher actions: **Toggle Bluetooth**, **Turn on Bluetooth** and **Turn off Bluetooth** (Device section). Bind them to gestures or profiles, or add them to quick-action menus such as SimpleUI's. Closes #14.
+
 # 0.0.6-dev.2 · 2026-11-03
 
 Fixes
@@ -44,18 +48,3 @@ Fixes from the independent review of dev.10.
 - Works with BusyBox builds whose grep lacks -E.
 - A WARN is logged again when a tap during wake skips the reconnect.
 - Stronger pairing tests.
-
-# 0.0.5-dev.10 · 2026-10-26
-
-## Changes since 0.0.5-dev.9
-
-**New: Fast mode (D-Bus).** On PocketBook, Bluetooth now talks to BlueZ over D-Bus by default (Settings → Backend → Automatic). Reads take about 0.1 s instead of 0.4 s, and connect, disconnect, trust, block and unpair go over D-Bus too. If D-Bus doesn't work on a device, the plugin falls back to Compatible (bluetoothctl) by itself. You can pick a mode by hand under Backend.
-
-**New: Live updates (experimental, off by default).** Settings → Live updates. While the Bluetooth menu is open in Fast mode, it updates as soon as a device changes instead of every 3 seconds.
-
-**Fixes and changes**
-- Bluetooth restores its last state at start-up (from beta.3).
-- Disconnecting a device by hand keeps it off until you connect it again (from beta.4).
-- Phones now pair. The pairing session keeps an agent running, so the phone's prompt can be answered: tap Pair on the phone.
-- Blocked devices show "(blocked)" and are no longer ticked as connected. Tapping one explains how to unblock it.
-- Unpair is confirmed properly in Fast mode.

@@ -1,3 +1,21 @@
+# v1.8.9 · 2026-11-18
+
+## Added
+
+- Edge swipe gestures in panel views (off by default). Enable in Meguru → Settings → Edge swipe gestures in panel views. by @Charliechin in #15
+- "Meguru: toggle panel view" action, bindable to a gesture, quick menu or remote button. by @Charliechin in #17
+
+## Fixed
+
+- Panel Cut and Pan & Zoom now follow the Reading direction. by @Charliechin in #14
+- Bluetooth remote page buttons now work in Panel Cut and Pan & Zoom. by @Charliechin in #16
+
+## New contributors
+
+- @Charliechin made their first contribution in #14
+
+**Full Changelog**: https://github.com/Craftwork2720/meguru/compare/v1.8.7...v1.8.9
+
 # v1.8.8 · 2026-11-18
 
 ## Added
@@ -45,16 +63,3 @@ Fixes some `.cbz` files not opening.
 - Local `.cbz` covers are rendered with MuPDF again.
 
 **Full Changelog**: https://github.com/Craftwork2720/meguru/compare/v1.8.3...v1.8.5
-
-# v1.8.3 · 2026-11-10
-
-### Fixed
-
-- Page-turn buttons no longer invert when a wide page is auto-rotated.
-- Books without series information no longer show series navigation entries or a blank series name (#12).
-
-### Changed
-
-- **Rotate wide pages** now uses rotation arrows instead of "left 90°" and "right 90°".
-
-**Full Changelog**: https://github.com/Craftwork2720/meguru/compare/v1.8.2...v1.8.3
