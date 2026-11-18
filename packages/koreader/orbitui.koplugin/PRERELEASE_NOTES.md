@@ -1,3 +1,23 @@
+# v1.4.0-beta.7 · 2026-11-18
+
+Tap **Reading streak** on Home to open the new **Reading log**. See reading time and pages over the last seven days, explore a twelve-week calendar, and tap a day to see which books you read. The Goal tab follows the goal already configured on your dashboard.
+
+**BookOrbit achievements** is a new optional Home card. The connected BookOrbit plugin supplies the latest earned badge and the next goal. To browse the full catalogue of earned and remaining badges on BookOrbit 3.8.0 or later, add a read-only BookOrbit API key. The card keeps the last results available offline.
+
+### Library and search
+
+- Library and Manga do fewer filesystem checks when preparing large shelves. The Next shelf preloads progress in short steps so you can keep navigating.
+- Manga folder boxes retain their display order without sorting books twice. Library folder matching, typo-tolerant search and word suggestions do less work.
+- You can clear a rating by tapping the selected star again. The BookOrbit Want to Read action now shows its feedback dialog reliably.
+
+### Home and file browser
+
+- Closing a book refreshes enabled reading statistics even when Home is already waiting to rebuild. Empty book modules avoid unnecessary page redraws. A fix found during emulator testing also keeps lightweight modules from crashing Home when their first item appears.
+- The file browser has independent shadow settings for list and mosaic views, stacked folder covers in lists, and a reading progress bar that uses the available row width.
+- Includes the latest reviewed SimpleUI 3.1.0 fixes and translation updates. Bookshelf is at 6.5.2.
+
+Update through OrbitUI’s preview channel or install the attached **orbitui.koplugin.zip**. The stable channel continues to offer 1.3.0.
+
 # v1.4.0-beta.6 · 2026-11-16
 
 ## What’s new
@@ -47,16 +67,3 @@ Tested in KOReader emulators and with the updater from 1.4.0-beta.3 and stable 1
 - **Custom text-selection shortcuts.** Choose and reorder up to six actions for the first page of the selection menu. Select **Customize text selection menu** under **More…** while reading, or find it in **OrbitUI → Integrations → Reader panel & X-Ray**. **More…** still gives you the full action list.
 
 To update in KOReader, enable **Include preview releases** under **OrbitUI → System & maintenance → Update OrbitUI**, then check for updates and restart after installing.
-
-# v1.4.0-beta.2 · 2026-11-14
-
-## Bookshelf 6.5.0
-
-- Sort books by **Time left** when KOReader's reading statistics have enough data to estimate it.
-- Create collection shelves and arrange their books by hand in **Library (no fixed profile)**. Long-press a book and choose **Add to a shelf**.
-- Choose where progress bars and reading bookmarks appear, with separate controls for covers and spine shelves.
-- Bookshelf shows which Hardcover connection it uses. It can reuse the Hardcover or ShelfSync plugin, or use its own optional API key. Bulk linking can run in the background, and the existing edition-ID repair option is still available.
-
-## Updating
-
-Enable **Include preview releases** under **OrbitUI → System & maintenance → Update OrbitUI**, then check for updates. Reopen KOReader after installing. The stable channel remains on 1.3.0.
