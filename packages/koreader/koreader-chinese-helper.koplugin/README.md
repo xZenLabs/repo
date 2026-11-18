@@ -418,9 +418,8 @@ drawn above a rare character (刺猬 *cìwei*, 鼓捣 *gǔdao*, 疙瘩 *gēda*),
 
 What is drawn on a page:
 
-- A character gets pinyin only the first time it appears on the page with a given reading: later
-  repeats are left bare, but a repeat with a different reading (刨 *páo* in 刨根, then *bào* in
-  刨子) is annotated again.
+- A character that gets pinyin gets it at every occurrence on the page, each in the reading it
+  has there (刨 *páo* in 刨根, then *bào* in 刨子).
 - When a line is too crowded for all its pinyin to fit, the pinyin of the line's most common
   annotated character is dropped first, and so on until the rest fit; the rarest are kept.
 
@@ -442,7 +441,7 @@ would be drawn:
 - **I know háng**: that reading never gets pinyin again, at any threshold and in every book. The
   character's other readings are unaffected: marking 刨 *bào* known leaves 刨 *páo* annotated.
 - **Remind me: háng** (when that reading wouldn't otherwise get pinyin, usually because the
-  character is common): it always gets pinyin, the first time it appears on each page.
+  character is common): it always gets pinyin, wherever it appears.
 
 Once marked, the button reads **Known háng ✓** or **Reminding háng ✓**; tap it again to clear
 the mark. The page changes at once, under the popup. When the reading is uncertain and both are

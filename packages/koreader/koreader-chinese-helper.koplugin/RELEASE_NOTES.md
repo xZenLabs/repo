@@ -1,3 +1,14 @@
+# v2.7.0 · 2026-11-18
+
+Every occurrence gets pinyin (#28)
+- **A character that gets pinyin now gets it at every occurrence on the page**, not just the
+  first, each in the reading it has there: rare characters, unusual readings in special words,
+  the uncertain pair (xíng/háng) and remind-me readings alike. A reading marked known is bare
+  everywhere, so each reading is now all or nothing per page; marking or clearing one from the
+  popup changes every occurrence at once.
+- Crowded lines drop pinyin about as rarely as before (on four sample books, roughly 1% of
+  annotations at most, the most common characters first), and nothing overlaps.
+
 # v2.6.0 · 2026-11-18
 
 Known and remind-me readings (#26)
@@ -38,35 +49,3 @@ Known and remind-me readings (#26)
   expands the entry; expanded, it ends in **[Tap to show less]**. The label line is plain "MOE"
   again, with no "show all" and no tap action. The characters before the marker still open
   nested popups.
-
-# v2.5.0 · 2026-11-16
-
-MOE always shown for single characters (#11, #18)
-- **With the optional MOE dictionary, every single-character popup shows MOE's entry under
-  CC-CEDICT's**, even when CC-CEDICT has the character: 涓 gets 细流。/ 姓。/ 细缓的、细微的。/
-  清洁的。/ 选择。 under "brook; to select". Placement: CC-CEDICT's entry (with the 字频 rank),
-  then MOE's, then the components, then the words.
-- **MOE's entry is collapsed to two lines** as drawn, ending in "…", with all its readings as
-  one block (和's six). The grey label line reads **MOE · show all**; a tap there expands the
-  entry in place (**show less** cuts it again), and the popup keeps its scroll position. The
-  characters left visible can be tapped for a nested popup; the hidden ones can't. A new
-  **Collapse long entries** setting picks 1, 2 or 3 lines, or never.
-- MOE's readings follow CC-CEDICT's order (the likely reading first). A reading CC-CEDICT doesn't
-  list for the character is marked **· not in CC-CEDICT** (和 *hàn*, 亡 *wú*, 不 *fǒu*); 1,432 of
-  the 9,910 characters MOE shares with CC-CEDICT have one.
-- **MOE for single characters** and **MOE for words** are each off / fallback / always (defaults:
-  always, fallback). Fallback is 2.4.0's behaviour. The MOE switch overrides both, and existing
-  settings carry over (MOE off stays off).
-- **The menu's "Fallback dictionaries" is now "Dictionaries"**, with a new **Order** item
-  (KOReader's sort widget) instead of the hand-edited `fallback_order` setting, which still
-  holds the order. **Status** shows MOE's modes and whether its file is ready for Always.
-- **Rebuild the MOE file for Always** (`tools/build_moe.py`): it now keeps the headwords
-  CC-CEDICT has, as covered rows (11,871 character rows, 50,669 word rows). It grows from 17.0 MB
-  to 28.2 MB. Its 90,501 fallback rows are unchanged. With an older file, Always works as
-  Fallback, popups are identical to 2.4.0's, and Status says to rebuild. The plugin database
-  is unchanged.
-- **Readings are unchanged.** Covered rows never reach the fallback or reading path. MOE still
-  never decides a reading: `tools/eval_readings.py` gives byte-identical output to 2.4.0's, with
-  and without Wiktionary fallback (72/72 regression cases).
-- One query to MOE's file per tap, as before. On the Boox Go 7, building the popup takes a median
-  25 ms with MOE Always against 21.5 ms with Fallback (12 common characters, 2 rounds each).
