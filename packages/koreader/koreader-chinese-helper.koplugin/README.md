@@ -7,37 +7,46 @@ Chinese has no spaces between words, so an ordinary dictionary lookup means long
 dragging a selection and guessing where the word ends. Here you tap one character. The plugin
 reads the text on both sides of it, finds the dictionary words actually written there, and marks
 the reading the character takes in this context: 行 is *háng* in 银行 but *xíng* in 行人 (see
-[Readings](#readings)). You can also turn on pinyin, drawn only above characters rarer than a
-cutoff you choose: the hard ones get help and the rest of the page stays clean. It works on any
-reflowable book (EPUB, FB2, MOBI, TXT and the like) as soon as you open it.
+[Readings](#readings)). You can also turn on pinyin above the characters themselves, at the level
+you choose: from only the rarest characters all the way down to **every character on the page**
+([Learner mode](#learner-mode)). Tap a character whose reading you know, mark it known, and that
+reading goes bare everywhere, so the pinyin thins out as your reading grows. That makes the
+plugin useful from your first Chinese book to your hundredth: beginners can read with pinyin on
+everything, advanced readers keep it only for the hard characters. It works on any reflowable
+book (EPUB, FB2, MOBI, TXT and the like) as soon as you open it.
 
 It has only been tested on a Boox Go 7, but it should work on any e-reader that runs KOReader:
 Kobo, Kindle, PocketBook, and Android devices such as Boox.
 
-KOReader 中文阅读插件：点一个字，即可看到它在本句中组成的词及其释义，并标出它在此处的读音；还可在生僻字上方显示拼音。
+KOReader 中文阅读插件：点一个字，即可看到它在本句中组成的词及其释义，并标出它在此处的读音；还可在字上方显示拼音，从只标生僻字到每个字都标（学习模式），学会一个读音点一下即可隐去，初学者和熟练读者都适用。
 
-![The opening of 三国演义 第一回 on a Boox Go 7: the chapter title, then the popup on 密. At its top, the line 时有宦官曹节等弄权，窦武、陈蕃谋诛之，作事不密，反为所害，中涓自此愈横。 with 密 in bold and underlined; then 字频 646 in small grey, 密 mì, "dense; close; … (bound form) secret; confidential …", "Mì: surname Mi"; MOE's entry for 密 mì in larger Chinese type, labelled MOE: 不稀疏的。; 不宣露的。; …; 暗中。; its parts, labelled Wikt: 宓 mì still; silent → sound (same sound), 山 shān mountain → meaning; then 不密 bùmì "(literary) not well thought out; (literary) not secret", labelled Wikt; buttons 密 and 不密, then Translate & analyze the surrounding sentence [AI] on its own row, then Close at the bottom. Below the popup, the end of the paragraph's last line, 密，反为所害，中涓自此愈横。, with 密 underlined on the page](docs/main.png)
+![The opening of 三国演义 第一回 on a Boox Go 7: the chapter title, then the popup on 密. At its top, the line 时有宦官曹节等弄权，窦武、陈蕃谋诛之，作事不密，反为所害，中涓自此愈横。 with 密 in bold and underlined; the title bar, 密 on the left and a Remind me: mì button on the right; then 字频 646 in small grey, 密 mì, "dense; close; … (bound form) secret; confidential …", "Mì: surname Mi"; its parts, labelled Wikt: 宓 mì still; silent → sound (same sound), 山 shān mountain → meaning; then 不密 bùmì "(literary) not well thought out; (literary) not secret", labelled Wikt; buttons 密 and 不密, then Translate & analyze the surrounding sentence [AI] on its own row, then Close at the bottom. Below the popup, the end of the paragraph's last line, 密，反为所害，中涓自此愈横。, with 密 underlined on the page](docs/main.png)
 
 <table>
 <tr>
 <td width="50%"><img src="docs/off-on.png" alt="The 临江仙 that opens 三国演义, pinyin off (top) and on (bottom): with it on, only 樵 qiáo and 渚 zhǔ get pinyin, the rest of the page stays clean"><br><a href="#usage"><b>Pinyin only above the hard characters</b></a>, at the level you choose (here the default: outside the 3,500 most common)</td>
-<td width="50%"><img src="docs/context.png" alt="Popup for 间 in 孔乙己's 虽然间或没有现钱: at the top the line 但他在我们店里，品行却比别人都好，就是从不拖欠；虽然间或没有现钱，… with 间 marked; 字频 113, then 间 jiàn · likely here, jiān listed after it; MOE's entry for 间 in Chinese, jiàn then jiān; its parts 门 and 日 labelled MMAH; 间或 jiànhuò · decides 间's reading, occasionally; now and then"><br><a href="#the-popup"><b>The reading it has here</b></a>, and the word that decides it: 间 is <i>jiàn</i> in 间或</td>
+<td width="50%"><img src="docs/context.png" alt="Popup for 间 in 孔乙己's 虽然间或没有现钱: at the top the line 但他在我们店里，品行却比别人都好，就是从不拖欠；虽然间或没有现钱，… with 间 marked; 字频 113, then 间 jiàn · likely here, jiān listed after it; its parts 门 and 日 labelled MMAH; 间或 jiànhuò · decides 间's reading, occasionally; now and then"><br><a href="#the-popup"><b>The reading it has here</b></a>, and the word that decides it: 间 is <i>jiàn</i> in 间或</td>
 </tr>
 <tr>
-<td><img src="docs/components.png" alt="Popup for 茴 in 孔乙己's 要一碟茴香豆: at the top the line 他不回答，对柜里说：“温两碗酒，要一碟茴香豆。” with 茴 marked; 字频 4,633, then 茴 huí; MOE's 茴 huí 参见「茴香」条。; its parts, labelled Wikt: 艹 cǎo grass; plant (草字头) → meaning, 回 huí to go back → sound (same sound); then 茴香豆 and 茴香"><br><a href="#character-components"><b>What each character is made of</b></a>: 茴 is 艹 for the meaning and 回 <i>huí</i> for the sound</td>
-<td><img src="docs/traditional.png" alt="Popup for 观 in 阿Q正传's 观音娘娘: at the top the line …而且又不见了观音娘娘座前的一个宣德炉。 with 观 marked; 字频 407, then 观 guān · likely here; MOE's entry for 观, cut to two lines and ending in a small grey [Tap to show more]; traditional 觀: 雚 guàn (archaic) stork; heron → sound (same sound), 見 jiàn see → meaning, simplified: 雚 → 又; 观音 Guānyīn · decides 观's reading"><br><a href="#character-components"><b>Parts the simplification hid</b></a>: 观 is read through 觀, 雚 <i>guàn</i> → sound</td>
+<td><img src="docs/components.png" alt="Popup for 茴 in 孔乙己's 要一碟茴香豆: at the top the line 他不回答，对柜里说：“温两碗酒，要一碟茴香豆。” with 茴 marked; 字频 4,633, then 茴 huí (bound form) fennel; its parts, labelled Wikt: 艹 cǎo grass; plant (草字头) → meaning, 回 huí to go back → sound (same sound); then 茴香豆 and 茴香"><br><a href="#character-components"><b>What each character is made of</b></a>: 茴 is 艹 for the meaning and 回 <i>huí</i> for the sound</td>
+<td><img src="docs/traditional.png" alt="Popup for 观 in 阿Q正传's 观音娘娘: at the top the line …而且又不见了观音娘娘座前的一个宣德炉。 with 观 marked; 字频 407, then 观 guān · likely here, with guàn and Guàn after it; traditional 觀: 雚 guàn (archaic) stork; heron → sound (same sound), 見 jiàn see → meaning, simplified: 雚 → 又; 观音 Guānyīn · decides 观's reading"><br><a href="#character-components"><b>Parts the simplification hid</b></a>: 观 is read through 觀, 雚 <i>guàn</i> → sound</td>
 </tr>
 <tr>
-<td><img src="docs/chengyu.png" alt="Popup for 也 in 孔乙己's 满口之乎者也: at the top the line 他对人说话，总是满口之乎者也，教人半懂不懂的。 with 也 marked; then 字频 38, 也 yě; MOE's entry for 也 in larger type, cut to two lines and ending in a small grey [Tap to show more]; its Wikt line pictogram (象形), 满口之乎者也 and 之乎者也 from CC-CEDICT, 之乎者也 with a Chinese line labelled 新华: 这四个字都是文言虚词，讽刺人说话喜欢咬文嚼字。也形容半文不白的话或文章。; a 成语 Origin &amp; Usage button"><br><a href="#chengyu"><b>Chengyu explained</b></a>: 之乎者也 with Xinhua's line (optional file) …</td>
+<td><img src="docs/chengyu.png" alt="Popup for 也 in 孔乙己's 满口之乎者也: at the top the line 他对人说话，总是满口之乎者也，教人半懂不懂的。 with 也 marked; then 字频 38, 也 yě; its Wikt line pictogram (象形), 满口之乎者也 and 之乎者也 from CC-CEDICT, 之乎者也 with a Chinese line labelled 新华: 这四个字都是文言虚词，讽刺人说话喜欢咬文嚼字。也形容半文不白的话或文章。; a 成语 Origin &amp; Usage button"><br><a href="#chengyu"><b>Chengyu explained</b></a>: 之乎者也 with Xinhua's line (optional file) …</td>
 <td><img src="docs/chengyu-2.png" alt="The Origin &amp; Usage view for 之乎者也 from 新华成语: 释义; 出处 宋·文莹《湘山野录》：“之乎者也，助得甚事？”; 例句 他对人说话，总是满口之乎者也，叫人半懂不懂的。"><br>… and its <a href="#chengyu"><b>Origin &amp; Usage</b></a> view: the classical source and an example from this same passage of 孔乙己</td>
 </tr>
 <tr>
-<td><img src="docs/labels.png" alt="Popup for 秋 in the 临江仙's 惯看秋月春风: at the top the line 白发渔樵江渚上，惯看秋月春风。 with 秋 marked; 字频 1,442, then 秋 qiū from CC-CEDICT; MOE's entry for 秋 in larger type; its parts 禾 and 火 labelled MMAH; 秋月 labelled Wikt; last, 秋月春风 labelled MOE with its Chinese definition in larger type, its second line cut off where the popup scrolls; a 成语 Origin &amp; Usage button"><br><a href="#fallback-dictionaries"><b>Several dictionaries, each labelled</b></a>: CC-CEDICT, then MOE (optional) for 秋 in larger type, Wiktionary for 秋月, and last MOE for 秋月春风</td>
+<td><img src="docs/labels.png" alt="Popup for 秋 in the 临江仙's 惯看秋月春风: at the top the line 白发渔樵江渚上，惯看秋月春风。 with 秋 marked; 字频 1,442, then 秋 qiū from CC-CEDICT; its parts 禾 and 火 labelled MMAH; 秋月 labelled Wikt; last, 秋月春风 labelled MOE with its Chinese definition in larger type, quoting 白居易's 〈琵琶行〉; a 成语 Origin &amp; Usage button"><br><a href="#fallback-dictionaries"><b>Several dictionaries, each labelled</b></a>: CC-CEDICT for 秋, Wiktionary for 秋月, and MOE (optional) for 秋月春风, in larger type</td>
 <td><img src="docs/translate-result.png" alt="KOAssistant's Translate &amp; Analyze viewer, titled with the model gemini-3.5-flash-lite, its whole reply shown as its two pages, joined by a dashed line. Highlighted text: 孔乙己便涨红了脸，额上的青筋条条绽出，争辩道：“窃书不能算偷……窃书！ Translation: Kong Yiji immediately blushed, the veins on his forehead bulging out in cords, and argued, &quot;Book-stealing cannot be considered theft... Book-stealing!&quot; Analysis, one chunk per line: 涨红了脸 (zhǎng hóng le liǎn) &quot;swelled/flushed red [his] face&quot;, resultative compound; 额上的 (é shàng de) &quot;of the forehead's&quot;; 青筋 (qīng jīn) &quot;blue/green tendons/veins&quot;; 条条 (tiáo tiáo) &quot;strip by strip / cord by cord&quot;, reduplicated measure word; 绽出 (zhàn chū) &quot;burst/bulge out&quot;; 争辩道 (zhēng biàn dào) &quot;argued and said&quot;, verb + quotative marker 道; 窃书 (qiè shū) &quot;stealing books&quot;, classical/literary compound (窃 qiè meaning to steal covertly) used by Kong Yiji to euphemize and intellectualize his act; 不能算 (bù néng suàn) &quot;cannot be counted/considered&quot;; 偷 (tōu) &quot;steal&quot;, colloquial term for theft, contrasted sharply with the literary qiè. Below, the viewer's buttons: Reply, Copy, Save to Note, Notebook, Pin, Close and others"><br><a href="#translating-the-sentence"><b>Translate &amp; Analyze the sentence</b></a> with KOAssistant: a translation and a chunk-by-chunk breakdown of 孔乙己's 窃书不能算偷, down to why he says 窃 and not 偷 (your own AI provider, while Wi-Fi is on)</td>
+</tr>
+<tr>
+<td><img src="docs/learner.png" alt="A paragraph of 阿Q正传 in learner mode: pinyin above every character, 那还是上午的事 nà hái shi shàng wǔ de shì through 观音娘娘座前的一个宣德炉 guān yīn niáng niang zuò qián de yī ge xuān dé lú"><br><a href="#learner-mode"><b>From beginner to advanced</b></a>: pinyin on every character in learner mode …</td>
+<td><img src="docs/learner-known.png" alt="The same paragraph after the 80 commonest characters on the page were marked known: about half the pinyin is gone; what is left is mostly the less common characters, such as 赵 zhào, 辫 biàn, 庵 ān, 栗凿 lì záo, and 是 shi in 还是, whose shì alone was marked known"><br>… switched off one reading at a time as you learn them: the same paragraph with the 80 commonest readings on the page <a href="#learner-mode">marked known</a></td>
 </tr>
 </table>
 
-All screenshots: a Boox Go 7 (landscape), the [sample book](#the-sample-book), default settings,
+All screenshots: a Boox Go 7 (landscape), the [sample book](#the-sample-book), default settings
+(the learner ones: All characters, and 80 readings marked known in the second),
 with every [optional dictionary](#optional-dictionaries) installed. `tools/make_screenshots.py`
 takes them again; KOAssistant's response is taken separately, by name, and is not retaken by
 default, because the AI's answer differs from run to run.
@@ -49,9 +58,11 @@ default, because the AI's answer differs from run to run.
   so a sentence that could divide two ways shows both ([The popup](#the-popup)).
 - **A reading for every character**, common ones included, right 97.5% of the time on the hard
   cases ([Readings](#readings), [Accuracy](#accuracy)).
-- **Five pinyin levels**, from outside the 1,500 to outside the 7,000 most common characters;
-  common characters in an unusual reading (单 in 单于) get pinyin too
-  ([Unusual readings](#unusual-readings-of-common-characters)).
+- **Pinyin at any level**, from every character ([learner mode](#learner-mode)) through outside
+  the 500, 1,000 … 7,000 most common; common characters in an unusual reading (单 in 单于) get
+  pinyin too ([Unusual readings](#unusual-readings-of-common-characters)).
+- **Mark readings known as you learn them**, with one tap in the popup: that reading goes bare
+  everywhere, in every book ([Known and remind-me readings](#known-and-remind-me-readings)).
 - **The sentence on one line** at the top of every popup, the character marked, and the
   character underlined on the page while the popup is open ([The popup](#the-popup)).
 - **Translate** uses KOReader's built-in translator when KOAssistant is not installed
@@ -129,7 +140,7 @@ Tools menu). Settings apply to all books.
 |---|---|
 | Show pinyin above rare characters | On / off (off when first installed) |
 | Tap characters for popup | On / off (on when first installed) |
-| Which characters | Pinyin for characters outside the 1,500 / 2,500 / 3,500 / 5,000 / 7,000 most common (default 3,500) |
+| Which characters | **All characters (learner mode)**, or pinyin for characters outside the 500 / 1,000 / 1,500 / 2,500 / 3,500 / 5,000 / 7,000 most common (default 3,500). See [Learner mode](#learner-mode) |
 | Pinyin size | 35–55% of the book's text size (default 40%) |
 | When the reading is uncertain | Show both readings (default) / show the most likely reading / don't annotate |
 | Mark unusual readings of common characters (names, historical terms) | On (default) / off. See [Unusual readings](#unusual-readings-of-common-characters) |
@@ -144,6 +155,35 @@ Tools menu). Settings apply to all books.
 | Try to match the book's font | On (default) / off: Chinese text in the popup in the book's font. See [The popup](#the-popup) |
 | Dictionaries | Source labels (all entries / other dictionaries only (default) / none); **Order** of the dictionaries after CC-CEDICT; **Collapse long entries** (1 / 2 (default) / 3 lines / never); then each dictionary on/off, in that order (default: Wiktionary, CBDB office titles, MOE 重編國語辭典, MOE 成語典, Xinhua idioms, Wikipedia titles, Moegirlpedia slang), with **MOE for single characters** (off / fallback (default) / always) and **MOE for words** (off / fallback (default) / always) under MOE's. See [Fallback dictionaries](#fallback-dictionaries) and [MOE Always](#moe-always) |
 | Status | Version, data versions and load times, each fallback dictionary (version, entries, on or off, or not installed; MOE's modes and whether its file is ready for Always), what the current page needed, and any old plugin still installed |
+
+### Learner mode
+
+For beginners: pinyin above every Chinese character on the page, so you can read a real book
+from the start, and the plugin's job shifts from looking words up to taking the pinyin away as
+you learn.
+
+1. Turn it on: **Tools (🔧) → Chinese helper → Show pinyin above rare characters** on, then
+   **Which characters → All characters (learner mode)**.
+2. Read. Every character has its reading as the plugin resolves it in context (了 is *le* after a
+   verb, *liǎo* in 了解; see [Readings](#readings)), repeats included.
+3. When you're sure of a reading, tap the character and tap **I know …** at the right of the
+   popup's title bar. That reading goes bare at once, at every occurrence, in every book. Its
+   other readings keep their pinyin: knowing 还 *hái* leaves 还 *huán* in 还清 annotated.
+4. For a reading you keep forgetting, the same button on a character without pinyin reads
+   **Remind me: …**, which does the opposite: that reading always gets pinyin, at any level.
+
+![The popup for 盘 in 阿Q正传 in learner mode: at the top the sentence 赵秀才消息灵，一知道革命党已在夜间进城，便将辫子盘在顶上，一早去拜访那历来也不相能的钱洋鬼子。 with 盘 marked; then the title bar, 盘 on the left and a button I know pán on the right; below it 字频 1,107 and 盘 pán with its CC-CEDICT senses](docs/mark-button.png)
+
+Your marks are kept outside the plugin's folder, so updates and reinstalls keep them (see
+[Known and remind-me readings](#known-and-remind-me-readings) for the file to back up). When the
+page has thinned out enough, step up to a numeric level: **outside the 500 most common**, then
+1,000 and on. Characters more common than the level go bare, the rest keep their pinyin, and your
+known and remind-me marks still apply at every level.
+
+On a Boox Go 7 a page with pinyin on every character takes about 50 ms to prepare (30 ms at the
+default level; see [Speed](#speed)). A few characters keep two readings where nothing on the page
+decides between them (得 *de/děi*, 长 *cháng/zhǎng*), about one in a hundred in 鲁迅's stories;
+**When the reading is uncertain → Show the most likely reading** shows just the first.
 
 ### What a tap does
 
@@ -243,7 +283,7 @@ font chosen in KOReader's font menu, not a font the book embeds or sets in its C
 that font lacks comes from KOReader's usual fallback fonts. For a PDF, or when the font cannot be
 loaded, the popup uses the UI font. Turned off, the popup is exactly as before.
 
-![A tall popup for 观 in 阿Q正传: at the top the line 尼姑待他们走后，定了神来检点，龙牌固然已经碎在地上了，而且又不见了观音娘娘座前的一个宣德炉。 with 观 in bold and underlined, then 字频 407 and 观 guān · likely here, MOE's entry for 观 collapsed to two lines with [Tap to show more], its traditional form 觀's parts, and 观音 Guānyīn · decides 观's reading](docs/traditional.png)
+![A popup for 观 in 阿Q正传: at the top the line 尼姑待他们走后，定了神来检点，龙牌固然已经碎在地上了，而且又不见了观音娘娘座前的一个宣德炉。 with 观 in bold and underlined, then 字频 407 and 观 guān · likely here with its other readings, its traditional form 觀's parts, and 观音 Guānyīn · decides 观's reading](docs/traditional.png)
 
 ### Tapping a character in the popup
 
@@ -254,7 +294,7 @@ around it in that text that contains it), and stays underlined in the popup belo
 one is open. Nothing else in the popup is tappable: not the headlines (the character or word
 the entry is for), the components, or the English glosses.
 
-![Popup for 秋 in the 临江仙, and on top of it the popup for 欢, tapped in MOE's quotation of 〈琵琶行〉: its line at the top is 「今年欢笑复明年，秋月春风等闲度。」 with 欢 marked, then 字频 443, 欢 huān, MOE's entry for 欢, its traditional form 歡's parts, 欢笑 huānxiào, and the buttons 欢 and 欢笑, then Close at the bottom (no Translate in a popup opened from a popup)](docs/nested.png)
+![Popup for 秋 in the 临江仙, and on top of it the popup for 欢, tapped in MOE's quotation of 〈琵琶行〉: its line at the top is 「今年欢笑复明年，秋月春风等闲度。」 with 欢 marked, then 字频 443, 欢 huān, its traditional form 歡's parts, 欢笑 huānxiào, and the buttons 欢 and 欢笑, then Close at the bottom (no Translate in a popup opened from a popup)](docs/nested.png)
 
 - **Its text is the popup's, not the book's.** The line at the top is the sentence around the
   character in the popup text: cut at 。！？；, a line break, or a closing quote after one of
@@ -360,7 +400,7 @@ While Wi-Fi is on and connected, the popup from the page has one more button on 
 own (popups opened from a popup's text do not). It closes the
 popup and sends **the whole sentence containing the tapped character**:
 
-![Popup for 窃 at the top of the page, its line 孔乙己便涨红了脸，额上的青筋条条绽出，争辩道：“窃书不能算偷……窃书！ with 窃 marked; 字频 2,026, 窃 qiè to steal; secretly; (humble) I, MOE's entry for 窃 (盗取、偷。; 私下。…; 偷偷的。 and 「竊」的异体字。) labelled MOE, its parts 穴 xué and 切 qiè labelled MMAH, then a 窃 button, Translate & analyze the surrounding sentence [AI] and Close; above and below it the page of 孔乙己, the popup covering 窃's own line](docs/translate.png)
+![Popup for 窃 at the top of the page, its line 孔乙己便涨红了脸，额上的青筋条条绽出，争辩道：“窃书不能算偷……窃书！ with 窃 marked; 字频 2,026, 窃 qiè to steal; secretly; (humble) I, its parts 穴 xué and 切 qiè labelled MMAH, then a 窃 button, Translate & analyze the surrounding sentence [AI] and Close; above and below it the page of 孔乙己, the popup covering 窃's own line](docs/translate.png)
 
 - **With [KOAssistant](https://github.com/zeeyado/koassistant.koplugin) installed** (tested with
   0.23.0; the button uses its internals, so a later version may fall back to the built-in
@@ -395,7 +435,7 @@ Each character's reading is decided by the first of these that applies:
    characters, do not decide readings.
 3. **A context rule** for the character next to it: 952 rules, learned from labelled Wikipedia
    sentences.
-4. **A Wiktionary word**, for uncertain characters only: for the 535 characters whose most
+4. **A Wiktionary word**, for uncertain characters only: for the 518 characters whose most
    frequent reading is unreliable, a Wiktionary word around it can pick one of the two likeliest
    readings (累世 for 累 in 累世公卿), while that dictionary is on. Wiktionary words decide
    nothing else, since letting them override rules or reliable defaults broke more readings than
@@ -403,10 +443,12 @@ Each character's reading is decided by the first of these that applies:
 5. **The character's most frequent reading.**
 
 Particles take their neutral reading by default (吧 *ba*, 啦 *la*, 得 *de*), since their toned
-readings live in words (酒吧 *jiǔbā*, 啦啦队, 得到 *dédào*). An uncertain character that nothing
+readings live in words (酒吧 *jiǔbā*, 啦啦队, 得到 *dédào*). So do the commonest function words:
+的 *de*, 了 *le*, 着 *zhe*, 这 *zhè*, 都 *dōu*, 还 *hái*, 与 *yǔ* and a few more are hand-checked
+defaults that never show a pair; 的确 *díquè*, 了解 *liǎojiě*, 首都 *shǒudū* and the like are words. An uncertain character that nothing
 decides gets both likely readings, the most likely one, or none, as **When the reading is
 uncertain** says. The popup marks the same reading as the pinyin, for every character, common
-ones included (的 is *dí* in 的确, *de* or *dì* on its own). Some choices need the meaning, which
+ones included (的 is *dí* in 的确, *de* on its own). Some choices need the meaning, which
 the plugin does not have: 东西 is always marked *dōngxi* ("thing"), also where it means "east and
 west".
 
@@ -466,8 +508,8 @@ with several readings, so it is the hard case.
 
 | Pinyin for characters outside | Characters tested | Most likely reading right | Right counting both of a pair | Shown as a pair | Estimated, ordinary text (both shown) |
 |---|---|---|---|---|---|
-| 1,500 most common | 5,353 | 95.9% | 97.6% | 7.2% | 99.56% |
-| 2,500 | 3,189 | 96.2% | 97.8% | 8.0% | 99.61% |
+| 1,500 most common | 5,353 | 95.7% | 97.4% | 7.0% | 99.53% |
+| 2,500 | 3,189 | 95.9% | 97.5% | 7.7% | 99.50% |
 | 3,500 (default) | 1,482 | 96.0% | 97.6% | 10.7% | 99.67% |
 | 5,000 | 260 | 95.4% | 98.8% | 28.8% | 99.84% |
 | 7,000 | 42 | 97.6% | 100.0% | 45.2% | 100.00% |
@@ -476,7 +518,10 @@ The last column weights every character the plugin would draw by how often it oc
 text (wordfreq), counting characters with a single reading as right. It is an estimate from
 Wikipedia sentences, not a count on books, and it leans pessimistic, since CPP over-represents
 minority readings. The popup's markers on the 1,000 most common characters (3,687 test examples)
-are right 97.5% of the time, 98.2% counting both of a pair. CPP labels some neutral-tone words
+are right 97.5% of the time, 98.1% counting both of a pair (3.1% shown as a pair). CPP's
+sentences use 咯, 哩 and 啦 mostly in transliterations (吡咯 *luò*, 三哩岛 *lǐ*, 啦啦队): the
+plugin gives them their particle readings (*lo*, *li*, *la*) as a reader of fiction meets them,
+which costs 0.2–0.3 points at 1,500 and 2,500 here. CPP labels some neutral-tone words
 with the full tone (枇杷 *pá*, 收拾 *shí*), which counts against the plugin's spoken form. Unusual
 readings agree with CPP's label in 25 of the 36 test sentences that contain one; 8 of the 11
 others are the place name 黄陂 *Huángpí*, which CPP labels *bēi*.
@@ -490,8 +535,8 @@ included, as in the popup; a pair counts when either half is right):
 | A special word | 78 | 85.9% | likely here |
 | A fallback dictionary's word | 14 | 85.7% | likely here |
 | A context rule | 919 | 99.9% | likely here |
-| Nothing: the uncertainty pair | 630 | 99.4% | none (both listed) |
-| Nothing: the default reading | 2,029 | 97.2% | none |
+| Nothing: the uncertainty pair | 524 | 99.2% | none (both listed) |
+| Nothing: the default reading | 2,135 | 96.5% | none |
 
 ## Fallback dictionaries
 
@@ -759,7 +804,9 @@ converted.
 
 Measured on a Boox Go 7:
 
-- **A page turn**: working out the pinyin for a page takes 13.4 ms on average. The only query a
+- **A page turn**: working out the pinyin for a page takes 13.4 ms on average. (In 2.8.0, on a
+  dense page of a history book: median 30 ms at the default level, 51.5 ms with pinyin on every
+  character, about 200 per page.) The only query a
   page can make is one Wiktionary lookup, when an uncertain rare character on it is left
   undecided (results are cached).
 - **First load**: the reading tables are read into memory when the first page is drawn, in about
@@ -833,7 +880,8 @@ Lua code (`tools/shot_gate.py`, with every dictionary): the pinyin drawn must be
 hand-checked list, each popup must show the expected lines, and KOReader's log must agree (the
 number of characters annotated, and each tap's context and reading; for a character tapped in
 a popup, its sentence). Your `settings.reader.lua`
-is backed up and restored. KOAssistant's response (`translate-result`) can't be checked that
+and reading marks are backed up and restored (each shot runs with no marks, or the known readings
+it lists). KOAssistant's response (`translate-result`) can't be checked that
 way, so it is taken only when named (`make_screenshots.py translate-result`): the script waits
 for the reply to be complete, scrolls the viewer to its last page and joins the two pages
 (a reply longer than two pages stops the script: take it again), saves its text to `build/screenshots/translate-result.txt`, and

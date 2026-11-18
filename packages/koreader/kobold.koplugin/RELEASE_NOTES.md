@@ -1,3 +1,36 @@
+# v2.1.0 · 2026-11-18
+
+## Kobold 2.1.0
+
+<!--kobold-->
+Pick which tab Kobold opens on, set your own text size, and tidier popups and toolbar.
+<!--/kobold-->
+
+### New
+
+- **Set as Home**, any tab in the nav bar can be the one Kobold opens on. Tap it in Kobold Settings > Nav bar and choose Set as Home
+- **Text size**, make all of Kobold's text bigger or smaller with − and + (70% to 150%), the layout stays the same
+- **Battery as just the number**, show the percentage on its own or inside the battery icon
+
+### Improved
+
+- **Popup spacing**, rows with switches sit a little further from the lines above them in the brightness, clock and battery popups, and the Wi-Fi switch row has more room under it
+- **Toolbar stays put**, the other icons don't shift when the battery shows only the number
+
+### Fixed
+
+- A popup that got shorter could leave a strip of the old box behind
+
+### Install
+
+1. Download `Kobold.koplugin.zip` below
+2. Extract it and copy the `Kobold.koplugin` folder into KOReader's `plugins` folder
+3. Restart KOReader and open Kobold, or set it under **Start with > Kobold Home**
+
+On 1.1 or newer? Use **More > Check for updates** in Kobold.
+
+To uninstall, delete the `Kobold.koplugin` folder and restart KOReader.
+
 # v2.0 · 2026-11-11
 
 ## Kobold 2.0
@@ -141,42 +174,6 @@ A new book menu and book details page, filter, sort and search when adding books
 - **Series scrollbar** no longer jumps to the middle when only one series is left on a page
 - **Cover outlines** now sit right on the cover with no gap
 - **Italic text** in menus and settings uses a proper italic font instead of a wide one
-
-### Install
-
-1. Download `Kobold.koplugin.zip` below
-2. Extract it and copy the `Kobold.koplugin` folder into KOReader's `plugins` folder
-3. Restart KOReader and open Kobold, or set it under **Start with > Kobold Home**
-
-On 1.1 or newer? Use **More > Check for updates** in Kobold.
-
-To uninstall, delete the `Kobold.koplugin` folder and restart KOReader.
-
-# v1.2 · 2026-10-21
-
-## Kobold 1.2
-
-<!--kobold-->
-Instant return after closing a book, new icons, redesigned popups and settings, a Wi-Fi switch, and a cleaner Series tab.
-<!--/kobold-->
-
-### New
-
-- **Instant return** after closing a book, with no flash of KOReader's file browser
-- **Opening and closing panel**, an optional "Opening Book" / "Closing Book" panel instead of KOReader's messages. Off by default, turn it on in Settings 
-- **Wi-Fi switch** in the Wi-Fi popup to turn Wi-Fi on or off, plus a Wi-Fi Settings link to pick a network
-- **Book menu on Home**, hold any of the 4 recent books for the same menu as the "..." in My Books
-- **Setting tooltips**, tap a setting's name to see what it does
-
-### Improved
-
-- **New icons** for the status bar and navigation bar, white on black in night mode
-- **Popups** have square corners and an arrow pointing at the icon that opened them
-- **Settings** is a compact panel that fits more per page, with a page bar on the side
-- **About** is now a panel like Settings
-- **Series tab** shows the author and book count, with a small stack above the cover for series with more than one book
-- **Battery** shows its charge level while charging, with the lightning bolt on top
-- **Home** keeps the same collection and covers instead of changing them every time you close a book
 
 ### Install
 

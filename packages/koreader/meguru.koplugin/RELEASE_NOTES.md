@@ -1,3 +1,20 @@
+# v1.8.8 · 2026-11-18
+
+## Added
+
+- Edge swipe gestures in panel views (off by default): brightness on the left edge and warmth on the right, as set in Gestures. Enable in Meguru → Settings → Edge swipe gestures in panel views. by @Charliechin in #15
+
+## Fixed
+
+- Panel Cut and Pan & Zoom now follow the Reading direction. by @Charliechin in #14
+- Bluetooth remote page buttons now work in Panel Cut and Pan & Zoom. by @Charliechin in #16
+
+## New contributors
+
+- @Charliechin made their first contribution in #14
+
+**Full Changelog**: https://github.com/Craftwork2720/meguru/compare/v1.8.7...v1.8.8
+
 # v1.8.7 · 2026-11-15
 
 ## Fixed
@@ -41,12 +58,3 @@ Fixes some `.cbz` files not opening.
 - **Rotate wide pages** now uses rotation arrows instead of "left 90°" and "right 90°".
 
 **Full Changelog**: https://github.com/Craftwork2720/meguru/compare/v1.8.2...v1.8.3
-
-# v1.8.2 · 2026-11-08
-
-### Fixed
-
-- Page turning did not work on the KOReader stable version (#11).
-
-
-**Full Changelog**: https://github.com/Craftwork2720/meguru/compare/v1.8.1...v1.8.2

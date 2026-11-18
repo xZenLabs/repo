@@ -1,3 +1,27 @@
+# v2.8.0 · 2026-11-18
+
+
+Learner mode (#25)
+- **Which characters → All characters (learner mode)** puts pinyin above every Chinese character
+  on the page, repeats included. With **I know …** in the popup (2.6.0) a beginner switches each
+  reading off as they learn it, and the page thins out. Two more levels sit between that and the
+  old lowest, 1,500: **outside the 500** and **outside the 1,000 most common**.
+- **The commonest function words no longer show two readings**: 的 *de*, 了 *le*, 着 *zhe*, 这
+  *zhè*, 么 *me*, 呢 *ne*, 个 *gè*, 都 *dōu*, 还 *hái* and 与 *yǔ* are hand-checked defaults
+  (their other readings come from words: 的确, 了解, 睡着, 首都, 还清, 参与). Before, the
+  learned data put them in the uncertain list (的 *de/dì*, 了 *le/liǎo*), which never showed at
+  the old levels but would have put 25–35 pairs on a page of 鲁迅 in learner mode; now about
+  one character in a hundred keeps a pair there (得 *de/děi*, 过 *guò/guo*, 长). The popup marks
+  them the same way. Characters with a single hand-checked reading are now never listed as
+  uncertain, so the particles 哩 *li*, 咯 *lo* and 啦 *la* lose their pairs too (哩 showed *lǐ/li*
+  above every 哩 in 平凡的世界). 着 in 生活无着 is now drawn *zhuó*, in bold, as an unusual
+  reading. Nothing else changes at the other levels.
+- No pinyin is dropped on crowded lines in learner mode on the sample book's pages (at 35% and
+  40% size). On a Boox Go 7 a page takes a median 51.5 ms to prepare in learner mode, against
+  30 ms at the default level.
+- README: a **Learner mode** section, learner screenshots in the top grid, and the popup's
+  **I know …** button.
+
 # v2.7.0 · 2026-11-18
 
 Every occurrence gets pinyin (#28)
@@ -41,11 +65,3 @@ Known and remind-me readings (#26)
   in CC-CEDICT"; it is now left out, also when it is the word that decided the tapped
   character's reading (that character's own entry already shows the reading). Words with a
   fallback entry or a note still appear.
-
-# v2.5.1 · 2026-11-16
-
-- **A collapsed MOE entry ends in "[Tap to show more]"**, small and grey, right after its last
-  shown line, instead of an "…" that did nothing when tapped. Tapping it, or the space after it,
-  expands the entry; expanded, it ends in **[Tap to show less]**. The label line is plain "MOE"
-  again, with no "show all" and no tap action. The characters before the marker still open
-  nested popups.
