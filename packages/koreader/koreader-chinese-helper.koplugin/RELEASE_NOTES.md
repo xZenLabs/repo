@@ -1,3 +1,27 @@
+# v2.6.0 · 2026-11-18
+
+Known and remind-me readings (#26)
+- **A button at the right of the popup's title bar marks the tapped character's reading**:
+  **I know tāo** stops that reading from ever getting pinyin (any threshold, every book), and
+  **Remind me: shū** makes a reading that wouldn't be drawn always get pinyin, once per page.
+  Only that reading is affected: 刨 *bào* known leaves 刨 *páo* annotated. Marked, the button
+  reads **Known tāo ✓** or **Reminding shū ✓**; a tap clears it. The page under the popup
+  changes at once. An uncertain pair (xíng/háng) gets a button per reading and is hidden only
+  when both are known. Nested popups have no buttons.
+- **Known & remind-me readings** in the menu shows the counts, lists the marks (a tap clears
+  one) and has **Clear all marks**, which asks first.
+- Marks are kept by simplified form in `koreader/settings/chinesehelper_marks.lua`, which
+  survives plugin updates. It is written only when a mark changes, atomically; an unreadable
+  file is renamed aside, never overwritten.
+
+# v2.5.3 · 2026-11-18
+
+- **MOE for single characters defaults to fallback again** (#24): out of the box, a
+  single-character popup shows MOE's entry only for a character CC-CEDICT lacks, in full. Set
+  **MOE for single characters** to **always** (Dictionaries menu) to keep 2.5.0's MOE entry
+  under CC-CEDICT's for every character, collapsed as before. A mode already chosen in the menu
+  is kept; only the default changes.
+
 # v2.5.2 · 2026-11-16
 
 
@@ -46,46 +70,3 @@ MOE always shown for single characters (#11, #18)
   and without Wiktionary fallback (72/72 regression cases).
 - One query to MOE's file per tap, as before. On the Boox Go 7, building the popup takes a median
   25 ms with MOE Always against 21.5 ms with Fallback (12 common characters, 2 rounds each).
-
-# v2.4.0 · 2026-11-16
-
-
-The character's frequency rank (#17)
-- **Every popup shows the tapped character's frequency rank** on its own entry, in small grey
-  text: `字频 4,270` is its rank among characters in modern written Chinese (wordfreq, the same
-  ranking the pinyin threshold uses). Past 7,000 it reads `字频 7,000+`, since the data is too
-  thin there for an exact rank, and `字频 unranked` for a character not in the list.
-- It is on the character's own entry only, also in nested popups and for a character inside a
-  word or chengyu. Word entries, components and fallback words never show one. When the entry's
-  source label is shown too, both share one line (`CEDICT · 字频 4,270`).
-- New setting **Show character frequency rank**, on by default, next to **Show character
-  components**. No database change.
-
-# v2.3.0 · 2026-11-16
-
-
-Wiktionary readings: Standard Chinese only (#15)
-- **Wiktionary entries never show regional Mandarin pronunciations** (搛菜 is *jiāncài*, not
-  *jiǎncāi*). Dialect words without a Standard reading take their characters' readings when those
-  are unambiguous, and otherwise show no pinyin. The regional qualifier in the gloss ("(dialectal
-  Mandarin, Northern Wu)", "(Xi'an Mandarin)" …) stays.
-- How: a Wiktionary pinyin sound counts only when its tags are on an allow-list and include a
-  Standard marker (Standard-Chinese, Standard, Mainland-China or Taiwan), so Nanjing, Xi'an,
-  Sichuanese, Beijing-dialect, Harbin, Wuhan and other regional romanizations, and any tag added
-  later, are left out. 1,374 entries have only regional readings: 385 rows now take their
-  characters' readings (every character with exactly one CC-CEDICT reading; 子 *zǐ / zi* counts
-  as two) and 887 rows show the word and definition without pinyin. Only one row that already had
-  a Standard reading changed (悠千 *yōuqianr*, Wiktionary's Standard erhua form). Rows without
-  pinyin never decide a reading on the page.
-- The build now counts rows whose pinyin gives a character a toned reading CC-CEDICT doesn't
-  have: 1,025 → 891, the rest mostly literary or variant readings (善贾 *shànjià*, 渔父 *yúfǔ*).
-  Page readings on the CPP test split are unchanged.
-
-"Likely here" only with evidence (#16)
-- **The tapped character's reading is marked "likely here" only when something in the text
-  picked it**: a dictionary word or special word around it, a fallback dictionary's word, or a
-  context rule. When nothing did (传 in a title cut by the line, …传稿》), the usual reading
-  still comes first, but unlabelled, as the uncertainty pair already was.
-- `tools/eval_readings.py` reports accuracy by what decided the reading, now in the README's
-  Accuracy section: context rules are right 99.9% of the time (919 test examples), words 98.0%,
-  the plain default 97.2%.

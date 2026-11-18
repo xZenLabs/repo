@@ -1,7 +1,7 @@
 # koreader-chinese-helper
 
-**A [KOReader](https://github.com/koreader/koreader) plugin for reading Chinese: tap any character
-and see the words it forms in this sentence, with the reading it has here.**
+**A [KOReader](https://github.com/koreader/koreader) plugin for reading Chinese on e-ink readers:
+tap any character and see the words it forms in this sentence, with the reading it has here.**
 
 Chinese has no spaces between words, so an ordinary dictionary lookup means long-pressing,
 dragging a selection and guessing where the word ends. Here you tap one character. The plugin
@@ -10,6 +10,11 @@ the reading the character takes in this context: 行 is *háng* in 银行 but *x
 [Readings](#readings)). You can also turn on pinyin, drawn only above characters rarer than a
 cutoff you choose: the hard ones get help and the rest of the page stays clean. It works on any
 reflowable book (EPUB, FB2, MOBI, TXT and the like) as soon as you open it.
+
+It has only been tested on a Boox Go 7, but it should work on any e-reader that runs KOReader:
+Kobo, Kindle, PocketBook, and Android devices such as Boox.
+
+KOReader 中文阅读插件：点一个字，即可看到它在本句中组成的词及其释义，并标出它在此处的读音；还可在生僻字上方显示拼音。
 
 ![The opening of 三国演义 第一回 on a Boox Go 7: the chapter title, then the popup on 密. At its top, the line 时有宦官曹节等弄权，窦武、陈蕃谋诛之，作事不密，反为所害，中涓自此愈横。 with 密 in bold and underlined; then 字频 646 in small grey, 密 mì, "dense; close; … (bound form) secret; confidential …", "Mì: surname Mi"; MOE's entry for 密 mì in larger Chinese type, labelled MOE: 不稀疏的。; 不宣露的。; …; 暗中。; its parts, labelled Wikt: 宓 mì still; silent → sound (same sound), 山 shān mountain → meaning; then 不密 bùmì "(literary) not well thought out; (literary) not secret", labelled Wikt; buttons 密 and 不密, then Translate & analyze the surrounding sentence [AI] on its own row, then Close at the bottom. Below the popup, the end of the paragraph's last line, 密，反为所害，中涓自此愈横。, with 密 underlined on the page](docs/main.png)
 
@@ -58,8 +63,8 @@ default, because the AI's answer differs from run to run.
 
 CC-CEDICT comes first; the others, the [fallback dictionaries](#fallback-dictionaries), give
 entries for words it lacks. The rows are in the order the popup checks them (the default; the
-menu's **Order** changes it). The MOE dictionary also shows its entry for every single character
-it has, under CC-CEDICT's, collapsed to two lines ([MOE Always](#moe-always)).
+menu's **Order** changes it). The MOE dictionary can also show its entry for every single
+character it has, under CC-CEDICT's, collapsed to two lines ([MOE Always](#moe-always)).
 
 | Dictionary | Label | Entries added | | Mainly covers |
 |---|---|---|---|---|
@@ -81,7 +86,7 @@ project to distribute them: a few commands on a computer, then a copy to the e-r
 ([Optional dictionaries](#optional-dictionaries)). All explanatory text is in simplified
 characters ([Simplified text](#simplified-text)).
 
-Status: **2.1.1**, tested on a Boox Go 7 (Android, 300 dpi) with KOReader v2026.07.1.
+Status: **2.6.0**, tested on a Boox Go 7 (Android, 300 dpi) with KOReader v2026.07.1.
 
 ## Install
 
@@ -128,6 +133,7 @@ Tools menu). Settings apply to all books.
 | Pinyin size | 35–55% of the book's text size (default 40%) |
 | When the reading is uncertain | Show both readings (default) / show the most likely reading / don't annotate |
 | Mark unusual readings of common characters (names, historical terms) | On (default) / off. See [Unusual readings](#unusual-readings-of-common-characters) |
+| Known & remind-me readings | The counts; **Show marks** lists them (a tap clears one), **Clear all marks** (asks first). See [Known and remind-me readings](#known-and-remind-me-readings) |
 | Edge pass-through width | 0 mm (off) / 2.5 mm / 5 mm (default) / 7.5 mm / 10 mm. See [What a tap does](#what-a-tap-does) |
 | Popup text size | 40 / 60 (default) / 80 / 100 / 120% of the book's text size |
 | Chinese text size | 100 / 115 / 130 (default) / 150 / 175% of the popup text size, for the Chinese dictionaries' text (MOE, 成語典, Xinhua, Moegirlpedia). See [Tapping a character in the popup](#tapping-a-character-in-the-popup) |
@@ -136,7 +142,7 @@ Tools menu). Settings apply to all books.
 | Show the text around the character in the popup | On (default) / off. See [The popup](#the-popup) |
 | Underline the tapped character on the page | On (default) / off. See [The popup](#the-popup) |
 | Try to match the book's font | On (default) / off: Chinese text in the popup in the book's font. See [The popup](#the-popup) |
-| Dictionaries | Source labels (all entries / other dictionaries only (default) / none); **Order** of the dictionaries after CC-CEDICT; **Collapse long entries** (1 / 2 (default) / 3 lines / never); then each dictionary on/off, in that order (default: Wiktionary, CBDB office titles, MOE 重編國語辭典, MOE 成語典, Xinhua idioms, Wikipedia titles, Moegirlpedia slang), with **MOE for single characters** (off / fallback / always (default)) and **MOE for words** (off / fallback (default) / always) under MOE's. See [Fallback dictionaries](#fallback-dictionaries) and [MOE Always](#moe-always) |
+| Dictionaries | Source labels (all entries / other dictionaries only (default) / none); **Order** of the dictionaries after CC-CEDICT; **Collapse long entries** (1 / 2 (default) / 3 lines / never); then each dictionary on/off, in that order (default: Wiktionary, CBDB office titles, MOE 重編國語辭典, MOE 成語典, Xinhua idioms, Wikipedia titles, Moegirlpedia slang), with **MOE for single characters** (off / fallback (default) / always) and **MOE for words** (off / fallback (default) / always) under MOE's. See [Fallback dictionaries](#fallback-dictionaries) and [MOE Always](#moe-always) |
 | Status | Version, data versions and load times, each fallback dictionary (version, entries, on or off, or not installed; MOE's modes and whether its file is ready for Always), what the current page needed, and any old plugin still installed |
 
 ### What a tap does
@@ -203,9 +209,10 @@ where the words break.
   3,500 by default). Past 7,000 it shows **7,000+**, as the data is too thin there for an exact
   rank, and **unranked** for a character not in the list. It shares the line with the source
   label when that is shown (`CEDICT · 字频 4,270`). Words around the character never show one.
-- **MOE's entry for the character**, with the optional MOE dictionary: under CC-CEDICT's entry,
-  labelled MOE, cut to two lines ending in a small grey **[Tap to show more]** when longer. Tap
-  it to see all of it ([MOE Always](#moe-always)).
+- **MOE's entry for the character**, with the optional MOE dictionary: in place of CC-CEDICT's
+  when CC-CEDICT lacks the character. With MOE for single characters set to **always**, under
+  CC-CEDICT's entry too, cut to two lines ending in a small grey **[Tap to show more]** when
+  longer; tap it to see all of it ([MOE Always](#moe-always)).
 - **The character's components**, indented under its own entry ([below](#character-components)).
 - **Then every dictionary word containing it**, longest first; words of the same length in
   reading order. Entries from the Chinese-language dictionaries (MOE, the 成語典, Xinhua and
@@ -426,6 +433,31 @@ such words (65 hand-checked) and draws, in bold, only the characters whose readi
 from their usual one. A guard keeps them from matching by accident: 订单于3日发货 is 订单 + 于,
 not 单于.
 
+### Known and remind-me readings
+
+A popup opened from the page has a button at the right of its title bar for the tapped
+character, in the reading it has at that spot. Which button depends on whether that reading
+would be drawn:
+
+- **I know háng**: that reading never gets pinyin again, at any threshold and in every book. The
+  character's other readings are unaffected: marking 刨 *bào* known leaves 刨 *páo* annotated.
+- **Remind me: háng** (when that reading wouldn't otherwise get pinyin, usually because the
+  character is common): it always gets pinyin, the first time it appears on each page.
+
+Once marked, the button reads **Known háng ✓** or **Reminding háng ✓**; tap it again to clear
+the mark. The page changes at once, under the popup. When the reading is uncertain and both are
+shown (xíng/háng), there is a button for each, and the pair is hidden only when both readings
+are known. Popups opened from text inside a popup have no buttons. Marks are kept by simplified
+form, so a traditional book shares them.
+
+**Known & remind-me readings** in the menu lists the marks (`行  háng  known`); a tap on one
+clears it, and **Clear all marks** clears them all after asking. The marks are kept in
+`koreader/settings/chinesehelper_marks.lua`, outside the plugin's folder, so updates and
+reinstalls keep them; back that file up, or copy it to another device. It is written only when
+a mark changes, and atomically, so a write cut off part-way leaves the previous file. A file the
+plugin can't read is never overwritten: it is renamed aside
+(`chinesehelper_marks.lua.unreadable-<time>`) before the next mark is saved.
+
 ## Accuracy
 
 `tools/eval_readings.py` runs the plugin's own resolver over the test split of the
@@ -489,8 +521,10 @@ For words CC-CEDICT does not have, the popup also looks in the fallback dictiona
 ### MOE Always
 
 CC-CEDICT's entry for a single character is short and modern: 涓 is "brook; to select". The MOE
-dictionary has the classical senses too (细流。/ 姓。/ 细缓的、细微的。/ 清洁的。/ 选择。). With
-the optional MOE dictionary, a single-character popup shows both:
+dictionary has the classical senses too (细流。/ 姓。/ 细缓的、细微的。/ 清洁的。/ 选择。). By
+default MOE's entry is shown only for a character CC-CEDICT lacks. Switch **MOE for single
+characters** to **always** to see MOE's entry under CC-CEDICT's for every character; the
+popup then shows both:
 
 1. CC-CEDICT's entry, in full, with the 字频 rank;
 2. MOE's entry for the character, labelled MOE: all its readings as one block, cut to the first
@@ -507,8 +541,8 @@ They are shown, never used: MOE never decides the pinyin drawn on the page or th
 in the popup.
 
 Under MOE in the **Dictionaries** menu, **MOE for single characters** and **MOE for words** are
-each **off**, **fallback** (only when CC-CEDICT doesn't have it, as before 2.5.0) or **always**.
-The defaults are always for characters and fallback for words; words set to always show MOE's
+each **off**, **fallback** (only when CC-CEDICT doesn't have it) or **always**. Both default to
+fallback (characters were always in 2.5.0 to 2.5.2); words set to always show MOE's
 entry under CC-CEDICT's for every word around the character too. Switching MOE off turns off
 both. **Collapse long entries** sets the number of lines (1, 2 or 3) or never.
 
