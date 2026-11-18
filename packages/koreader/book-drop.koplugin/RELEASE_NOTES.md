@@ -1,3 +1,9 @@
+# v1.1.2 · 2026-11-18
+
+
+- After a full refresh, the next update waits for it to end, so a tap right after a flash no longer leaves part of the screen white on a Kindle. The refresh mode is now chosen when the screen is painted, so the wait happens at the right moment and an update asked for during sleep no longer counts.
+- If the screen cannot be drawn (it shows names and addresses that come from another device), a message takes its place, with the Close button, and the transfer stops, instead of a screen that cannot be used.
+
 # v1.1.1 · 2026-11-10
 
 
@@ -35,16 +41,3 @@
 - An upload refused while it is being sent now shows the reason instead of "connection lost".
 - The length of a download comes from the file itself.
 - Errors in requests go to KOReader's log.
-
-# v1.0.0 · 2026-11-05
-
-
-First public release.
-
-- Send books to the device from a browser, one or many at a time, with progress for each file.
-- Download books, in a grid with covers or in a list, and screenshots, one by one or all in a `.zip`.
-- A QR code to connect, with no app to install on the other device.
-- One device at a time, approved on the screen of the e-reader.
-- A screen that shows who is connected and what was received.
-- The device stays awake while the screen is open, so a transfer is not cut short.
-- In English, Portuguese and Spanish, following KOReader's language, on the device and in the browser.

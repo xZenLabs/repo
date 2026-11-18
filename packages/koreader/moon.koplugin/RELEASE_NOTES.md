@@ -1,3 +1,35 @@
+# v0.7.1 · 2026-11-18
+
+## 月读 v0.7.1
+
+KOReader 插件包：`book.koplugin-v0.7.1.zip`
+
+输入法词库（整库，手动 sideload）：`dictionary.sqlite3 dictionary-wubi.sqlite3 dictionary-cangjie.sqlite3 dictionary-zhuyin.sqlite3`
+
+安装：解压后将 `book.koplugin` 复制到 `koreader/plugins/`，然后重启。
+
+词库 sideload：下载对应布局的词库，直接放入 `koreader/.moon/`
+（与 `book.sqlite3` 同级）。附件已使用最终文件名，无需重命名。
+
+### 更新内容
+
+相对上一版本 `v0.7.0`：
+
+#### 新功能
+
+- :sparkles: (home): 首页文字封面改为独立选项，默认仍显示真实封面 (#140) (632e26fc)
+- :sparkles: (home): 首页组件可全部删除，空配置不再回填默认 (#141) (6c6ffb0f)
+- :sparkles: (reader): 追踪到期任务回调位置以辅助诊断阻塞 (c8fa0e6f)
+- :sparkles: (animation): 翻页动画风格新增「不显示」，可免重启临时关闭 (#139) (80fffa19)
+
+#### 修复
+
+- :bug: (animation): 补上「不显示」繁中译文，并修复风格开关测试桩 (55d19366)
+
+### 完整对比
+
+https://github.com/AnkioTomas/moon/compare/v0.7.0...v0.7.1
+
 # v0.7.0 · 2026-11-17
 
 ## 月读 v0.7.0
@@ -131,28 +163,3 @@ KOReader 插件包：`book.koplugin-v0.6.3.zip`
 ### 完整对比
 
 https://github.com/AnkioTomas/moon/compare/v0.6.2...v0.6.3
-
-# v0.6.2 · 2026-11-17
-
-## 月读 v0.6.2
-
-KOReader 插件包：`book.koplugin-v0.6.2.zip`
-
-输入法词库（整库，手动 sideload）：`dictionary.sqlite3 dictionary-wubi.sqlite3 dictionary-cangjie.sqlite3 dictionary-zhuyin.sqlite3`
-
-安装：解压后将 `book.koplugin` 复制到 `koreader/plugins/`，然后重启。
-
-词库 sideload：下载对应布局的词库，直接放入 `koreader/.moon/`
-（与 `book.sqlite3` 同级）。附件已使用最终文件名，无需重命名。
-
-### 更新内容
-
-相对上一版本 `v0.6.1`：
-
-#### 修复
-
-- :bug: (panel): 物理键盘接入后重建菜单前还原 menu_items，修复下拉崩溃 (81defd06)
-
-### 完整对比
-
-https://github.com/AnkioTomas/moon/compare/v0.6.1...v0.6.2
