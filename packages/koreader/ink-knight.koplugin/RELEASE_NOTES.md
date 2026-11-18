@@ -1,3 +1,12 @@
+# v0.7.2 · 2026-11-18
+
+
+- The analysis by the plugin's Stockfish marks far fewer good moves as mistakes. Each move is now judged against the best move of its own position, since the engine on the e-reader favors the side to move, and comparing the position before a move with the one after it made almost every move look like a loss, opening moves included. On 6 games compared with the analysis of Lichess, the moves marked by mistake went from 66 to 15.
+- The same game always gets the same marks: every position is searched to the same depth, in place of a fixed time for each.
+- Analysis depth: Quick, Normal or Deep, each with about how long a game takes, chosen in the settings, in the offline menu and where the analysis is offered at the end of a game. A deeper analysis makes fewer mistakes and takes longer.
+- Beside each player, the pieces that side has more than the other and "+n" for the side ahead, as on Lichess: in games on Lichess, correspondence, offline games, the review and broadcasts. With the same material nothing shows.
+- Computer's time, in the offline menu: Normal, Long (5 s) or Very long (15 s) for each move of the strongest level, which plays better with more time. While it thinks for long, its plate says so and the buttons that do nothing meanwhile are drawn in gray. A move with no other choice is played at once.
+
 # v0.7.1 · 2026-11-17
 
 
@@ -60,16 +69,3 @@
 - In the review of a game the site analyzed, More has a summary: the accuracy of each player, their inaccuracies, mistakes and blunders and the average centipawn loss, with the moves where the middlegame and the endgame begin, which the review and the list of moves also mark.
 - Puzzle history, in the puzzles menu: the puzzles you tried, the last first, with their rating, when and whether you solved them, and earlier ones a tap away. Any of them opens to be solved again.
 - Practice, in the offline menu: the practice lessons of Lichess, 308 of the 316 chapters in all 32 studies of checkmates, tactics and pawn and rook endgames. 165 are played against the engine until you mate, mate in so many moves or promote; 103 ask for an advantage or an equal position in so many moves, judged as the Lichess app judges them, with moves worked out with Stockfish beforehand, so no internet and no strong engine are needed; 3 ask you to hold the draw in king and pawn against king, judged exactly; 36 are guided, with the author's moves to find, comments, hints and the solution; and one is a commented game. The texts are in the three languages, translated from the English of Lichess, and the progress is kept.
-
-# v0.4.0 · 2026-11-12
-
-
-- The list of moves starts with the name of the opening, from the list Lichess publishes, kept in the plugin so it works without internet: in the game against the engine, between two people and in the review. In a Lichess game it shows once the game is over, since Lichess does not show it to the players while they play.
-- Correspondence games without internet: the games you have on Lichess stay on the device each time the list of games comes, and the offline menu shows them, your turn first. On your turn you can make a move with the Wi-Fi off, and take it back until it is sent. It goes to Lichess the next time you play online, or at once if the online part is open, only if the game is still in the position where you made it; if not, you are told it was not sent.
-- 5000 puzzles come with the plugin, from the open Lichess puzzle database, for playing with no account and no internet: in the offline menu, at five levels of difficulty and with the color to play, going on from where you stopped. Their results do not go to Lichess. The release also has packages with 20000 and 50000 puzzles.
-- A position editor, in the offline menu: put and take away pieces from a palette, choose the side to move and the castling, start from the usual position or an empty board, or paste a FEN. Done checks that the position can be played, says why when it cannot, and offers to play from it against the engine or between two people, with or without a clock, or to ask Lichess about it when the online part is open. The position is kept for the next time, and a game from it is continued later like any other.
-- Learn chess, in the offline menu: the 18 stages of the official Lichess app for beginners, from how each piece moves to castling, en passant, stalemate and piece value, 110 levels with stars to collect, the opponent's moves and the same scores and stars as the site, with the texts of the app in the three languages and the progress kept.
-- An optional clock in the game between two people, from 3+2 to 30+20: it starts with black's time after white's first move, adds the increment after each move, can be paused, keeps its time when the game is continued later and ends the game on time, a draw if the other side cannot give mate.
-- A chess clock for a game on a real board, in the offline menu: the screen in two halves, the top one turned round for the player across, the side to move shown inverted, with the moves counted, pause and restart. It keeps the device awake while it runs and pauses when the device sleeps.
-- Coordinate training, in the offline menu: tap the square named, or name the square marked, in 30 seconds or with no limit, from either side, with your best score kept. The board has no coordinates while training, and the clock waits while the device sleeps.
-- Puzzles have a difficulty, from easiest to hardest compared with your puzzle rating, and a color to play, both in the puzzles menu. The puzzles kept for offline stay until a new batch chosen that way arrives, so a change made without internet still leaves puzzles to solve.

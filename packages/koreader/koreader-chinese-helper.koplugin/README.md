@@ -41,7 +41,7 @@ KOReader 中文阅读插件：点一个字，即可看到它在本句中组成�
 </tr>
 <tr>
 <td><img src="docs/learner.png" alt="A paragraph of 阿Q正传 in learner mode: pinyin above every character, 那还是上午的事 nà hái shi shàng wǔ de shì through 观音娘娘座前的一个宣德炉 guān yīn niáng niang zuò qián de yī ge xuān dé lú"><br><a href="#learner-mode"><b>From beginner to advanced</b></a>: pinyin on every character in learner mode …</td>
-<td><img src="docs/learner-known.png" alt="The same paragraph after the 80 commonest characters on the page were marked known: about half the pinyin is gone; what is left is mostly the less common characters, such as 赵 zhào, 辫 biàn, 庵 ān, 栗凿 lì záo, and 是 shi in 还是, whose shì alone was marked known"><br>… switched off one reading at a time as you learn them: the same paragraph with the 80 commonest readings on the page <a href="#learner-mode">marked known</a></td>
+<td><img src="docs/learner-known.png" alt="The same paragraph after the 80 commonest readings on the page were marked known: about half the pinyin is gone; what is left is mostly the less common characters, such as 赵 zhào, 辫 biàn, 庵 ān, 栗凿 lì záo, and 是 shi in 还是, whose shì alone was marked known"><br>… switched off one reading at a time as you learn them: the same paragraph with the 80 commonest readings on the page <a href="#learner-mode">marked known</a></td>
 </tr>
 </table>
 
@@ -74,8 +74,8 @@ default, because the AI's answer differs from run to run.
 
 CC-CEDICT comes first; the others, the [fallback dictionaries](#fallback-dictionaries), give
 entries for words it lacks. The rows are in the order the popup checks them (the default; the
-menu's **Order** changes it). The MOE dictionary can also show its entry for every single
-character it has, under CC-CEDICT's, collapsed to two lines ([MOE Always](#moe-always)).
+menu's **Order** changes it). The MOE dictionary can also show its entry for every character
+(or word) it has, under CC-CEDICT's, collapsed to two lines ([MOE Always](#moe-always)).
 
 | Dictionary | Label | Entries added | | Mainly covers |
 |---|---|---|---|---|
@@ -97,7 +97,7 @@ project to distribute them: a few commands on a computer, then a copy to the e-r
 ([Optional dictionaries](#optional-dictionaries)). All explanatory text is in simplified
 characters ([Simplified text](#simplified-text)).
 
-Status: **2.6.0**, tested on a Boox Go 7 (Android, 300 dpi) with KOReader v2026.07.1.
+Status: **2.8.0**, tested on a Boox Go 7 (Android, 300 dpi) with KOReader v2026.07.1.
 
 ## Install
 
@@ -237,6 +237,9 @@ where the words break.
   character, a cut side ends in "…", and it stops at a sentence end, a paragraph break or the
   edge of the page. Popups from KOReader's dictionary that the word buttons open get the line
   too, with the whole word marked.
+- **The title bar**: the tapped character on the left and, in a popup opened from the page, a
+  button on the right that marks its reading here: **I know …** or **Remind me: …**
+  ([Known and remind-me readings](#known-and-remind-me-readings)).
 - **The tapped character first**, with all its readings. The reading drawn on the page comes
   first, unmarked (you can see it). When nothing is drawn, the reading the resolver picked comes
   first. It is marked **· likely here** only when something in the text picked it: a dictionary
@@ -462,13 +465,15 @@ What is drawn on a page:
 
 - A character that gets pinyin gets it at every occurrence on the page, each in the reading it
   has there (刨 *páo* in 刨根, then *bào* in 刨子).
+- A reading [marked known](#known-and-remind-me-readings) is never drawn, and one marked
+  remind-me always is, whatever the level.
 - When a line is too crowded for all its pinyin to fit, the pinyin of the line's most common
   annotated character is dropped first, and so on until the rest fit; the rarest are kept.
 
 ### Unusual readings of common characters
 
-Common characters are never annotated, but some take a rare reading in particular words, mostly
-historical names, titles and places: 单于 *chányú*, 冒顿 *mòdú*, 龟兹 *Qiūcí*, 尉迟 *Yùchí*,
+At the numeric levels common characters are not annotated, but some take a rare reading in
+particular words, mostly historical names, titles and places: 单于 *chányú*, 冒顿 *mòdú*, 龟兹 *Qiūcí*, 尉迟 *Yùchí*,
 番禺 *Pānyú*. With **Mark unusual readings of common characters** on, the plugin knows about 300
 such words (65 hand-checked) and draws, in bold, only the characters whose reading there differs
 from their usual one. A guard keeps them from matching by accident: 订单于3日发货 is 订单 + 于,
@@ -480,7 +485,7 @@ A popup opened from the page has a button at the right of its title bar for the 
 character, in the reading it has at that spot. Which button depends on whether that reading
 would be drawn:
 
-- **I know háng**: that reading never gets pinyin again, at any threshold and in every book. The
+- **I know háng**: that reading never gets pinyin again, at any level and in every book. The
   character's other readings are unaffected: marking 刨 *bào* known leaves 刨 *páo* annotated.
 - **Remind me: háng** (when that reading wouldn't otherwise get pinyin, usually because the
   character is common): it always gets pinyin, wherever it appears.
@@ -488,8 +493,8 @@ would be drawn:
 Once marked, the button reads **Known háng ✓** or **Reminding háng ✓**; tap it again to clear
 the mark. The page changes at once, under the popup. When the reading is uncertain and both are
 shown (xíng/háng), there is a button for each, and the pair is hidden only when both readings
-are known. Popups opened from text inside a popup have no buttons. Marks are kept by simplified
-form, so a traditional book shares them.
+are known. Popups opened from text inside a popup have no mark button. Marks are kept by
+simplified form, so a traditional book shares them.
 
 **Known & remind-me readings** in the menu lists the marks (`行  háng  known`); a tap on one
 clears it, and **Clear all marks** clears them all after asking. The marks are kept in
@@ -513,6 +518,10 @@ with several readings, so it is the hard case.
 | 3,500 (default) | 1,482 | 96.0% | 97.6% | 10.7% | 99.67% |
 | 5,000 | 260 | 95.4% | 98.8% | 28.8% | 99.84% |
 | 7,000 | 42 | 97.6% | 100.0% | 45.2% | 100.00% |
+
+Learner mode, 500 and 1,000 have no rows. The characters they add are common ones, and the
+pinyin drawn is always the reading the popup marks, so the popup's figures in the next paragraph
+largely cover them.
 
 The last column weights every character the plugin would draw by how often it occurs in ordinary
 text (wordfreq), counting characters with a single reading as right. It is an estimate from
@@ -684,7 +693,7 @@ the `plugins` folder you installed into. Plugin updates leave it alone, so this 
 - **Other devices**: connect over USB, open the KOReader folder that holds `plugins`, make
   `data/chinesehelper/` in it if it isn't there, and copy the `.sqlite` files in.
 
-Then restart KOReader. To check: under **Fallback dictionaries** each file you added is marked
+Then restart KOReader. To check: under **Dictionaries** each file you added is marked
 "(your own file)" rather than "(not installed)", and **Status** lists its version and size.
 
 ### Moegirlpedia slang
@@ -804,15 +813,17 @@ converted.
 
 Measured on a Boox Go 7:
 
-- **A page turn**: working out the pinyin for a page takes 13.4 ms on average. (In 2.8.0, on a
-  dense page of a history book: median 30 ms at the default level, 51.5 ms with pinyin on every
-  character, about 200 per page.) The only query a
-  page can make is one Wiktionary lookup, when an uncertain rare character on it is left
-  undecided (results are cached).
+- **A page turn**: working out the pinyin for a page takes 13.4 ms on average. On a dense page
+  of a history book (measured in 2.8.0) it is a median 30 ms at the default level and 51.5 ms in
+  learner mode, about 200 characters annotated. The only query a page can make is one
+  Wiktionary lookup, when an uncertain rare character on it is left undecided (results are
+  cached).
 - **First load**: the reading tables are read into memory when the first page is drawn, in about
   230 ms, once per KOReader session.
 - **A tap**: from the tap to the popup built, 17–20 ms median (18–29 ms mean) with Wiktionary,
-  CBDB, the MOE dictionary, Wikipedia titles and Moegirlpedia, with the Translate button showing.
+  CBDB, the MOE dictionary, Wikipedia titles and Moegirlpedia, with the Translate button showing,
+  measured in 1.5, before the components, the line of text and the book's font were added. In
+  2.5.0 the popup took a median 21.5 ms to build, 25 ms with [MOE Always](#moe-always).
   Each fallback dictionary adds at most one indexed query per tap; the two idiom files, each up
   to one more for their lines and Origin & Usage views, were not timed. The first tap after opening a book
   takes 20–30 ms; the optional files are opened when first needed (the MOE file in 1–3 ms).
@@ -834,12 +845,13 @@ tools/deploy.sh "/sdcard/Books/book.epub"   # check, push to a USB-connected And
 
 The tests (`tests/run.py`, LuaJIT through lupa) cover the reading resolver, page walking,
 layout, hit testing and the edge band, the popup's content and placement, the components, the
-popup's line of text around the character, the sentence finder and Translate button, the
-settings migration, the menu, and the database code (its real SQL against the built database).
-`test_integration.lua` checks that the popup marks the
-reading the pinyin layer draws. `tools/check.sh` also runs the build's Python
-unit tests (`tests/test_*.py`, needs OpenCC): the simplified-text converter and the idiom files'
-text repairs.
+popup's line of text around the character, MOE Always, popups opened from a popup and taps in
+their text, the reading marks, the sentence finder and Translate button, the settings migration,
+the menu, and the database code (its real SQL against the built database).
+`test_integration.lua` checks that the popup marks the reading the pinyin layer draws.
+`tools/check.sh` also runs the build's Python unit tests (`tests/test_*.py`, needs OpenCC): the
+simplified-text converter, the idiom files' text repairs, MOE's covered rows and Wiktionary's
+Standard-only readings.
 
 | File | |
 |---|---|
@@ -851,11 +863,14 @@ text repairs.
 | `ch_readings.lua` | the resolver's tables |
 | `ch_db.lua` | the database |
 | `ch_overlay.lua`, `ch_layout.lua`, `ch_hit.lua` | drawing the pinyin, spacing it, and which pinyin a tap is on |
-| `ch_tap.lua` | the one tap handler |
+| `ch_tap.lua` | the one tap handler, and popups opened from a popup |
+| `ch_area.lua` | the text area, and the nearest character to a tap |
 | `ch_edge.lua` | the edge band |
 | `ch_context.lua`, `ch_text.lua` | tap → character → the characters around it; candidate words |
 | `ch_pinyin.lua` | pinyin comparisons |
 | `ch_popup_model.lua`, `ch_popup.lua` | what the popup shows, and the popup |
+| `ch_glyphs.lua` | which character of the popup's text a tap is on, and its underline |
+| `ch_marks.lua` | known and remind-me readings, and their file |
 | `ch_snippet.lua` | the line of text around the tapped character, at the top of the popup |
 | `ch_bookfont.lua` | the popup's faces with the book's font first, for its Chinese text |
 | `ch_components.lua` | the character components lines |
