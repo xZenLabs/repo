@@ -11,7 +11,7 @@ If this plugin is useful to you, you can [support my work on Ko-fi](https://ko-f
 
 | | |
 |---|---|
-| **Version** | 2.0.1 |
+| **Version** | 2.0.2 |
 | **KOReader** | v2026.07 or newer |
 | **Needs** | [bookshelf.koplugin](https://github.com/AndyHazz/bookshelf.koplugin) (Bookshelf 6.x recommended) and bookorbit.koplugin, signed in |
 | **Optional** | SimpleUI (for the footer critter) |
@@ -223,6 +223,7 @@ orbitshelf.koplugin/
 
 The full history is at the top of `main.lua`.
 
+- **2.0.2:** Add To Collection uses a BookOrbit API key (server 3.8.0+, Read and write) instead of the website password — shared with BookOrbit Tweaks 2.17.0, same encrypted store; Create API Key File in BookOrbit Sign-In. Downloads › Book Type: Text Only / With Narration / Both / Same As BookOrbit for read-along EPUBs.
 - **2.0.1:** A reading status set with Wi-Fi off can be dropped before it's sent (**Don't Send** in Reading Status…, the hero says **Status · Queued** meanwhile), and the covers go back. The **BookOrbit · Queue** shelf shows only books waiting to download, so **Remove Queue** takes a book off it at once.
 - **2.0.0:** OrbitShelf 2.0 ("your library, ready offline"), tested as 1.3.11–1.3.24 and 2.0.1–2.0.4. The Book Page grown up: buttons beside the cover, last read and finished dates, Bulk Download / Remove and Help in its top bar, statuses on every cover, Similar books one swipe or tap from the series or More by, a Book Page card in Bookshelf's book menu for books on the device, and BookOrbit opened from it coming back to it. A sent reading status sticks after a refresh. Up Next shelf. Remove Finished Books and a Finished Books select in Bulk Remove. Hero Status button. Help menu with What's New. Bigger footer critter. Bookshelf no longer pops up after waking to Simple UI's home. Fix: a long series' later books never showed in the strip. Start-up environment lines only with Diagnostics on; unused code removed. Nothing you set is changed by the update.
 - **1.3.10:** Fix: the Book Page closes on sleep, so it isn't left open (and glitched) behind the home screen after waking.

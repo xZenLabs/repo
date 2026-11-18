@@ -1,3 +1,21 @@
+# v2.0.2 · 2026-11-17
+
+## 2.0.2 (2026-11-17)
+
+- **Add To Collection uses a BookOrbit API key** (needs BookOrbit 3.8.0+ on the server) instead of the website password.
+  - Create a key under Settings > You > API keys with **Read and write**.
+  - Easiest: OrbitShelf → BookOrbit Sign-In → **Create API Key File** (writes `koreader/orbitshelf_api_key.txt`), paste the key on the marked line over USB, then Add To Collection or Set API Key… — imported, encrypted (AES-256), temp file deleted.
+  - Or: Set API Key… on device.
+  - Menu shows **BookOrbit Sign-In · API key active** / **API Key Active** when a key is saved.
+  - Forget Saved API Key clears it (shared with BookOrbit Tweaks).
+  - Shared with BookOrbit Tweaks 2.17.0+: same encrypted key and temp file.
+  - About The API Key opens a scrollable window.
+- **Downloads › Book Type** — how a read-along EPUB (with narration) downloads:
+  - **Text Only** (default) — without narration, as before
+  - **With Narration** — the book with its audio (for apps that play EPUB narration). If the book has no narration file: **No narration file for this book.** (nothing is downloaded)
+  - **Both** — text-only copy plus "… - With Narration" beside it; remove takes both. The done note lists what arrived and what didn't (text / narration none / narration failed)
+  - **Same As BookOrbit** — follow the server's EPUB delivery setting for this device
+
 # v2.0.1 · 2026-11-15
 
 2.0.0 was never released on its own, so this release carries both 2.0.0 and 2.0.1.
@@ -49,9 +67,3 @@ Note: Spines (Series / Authors / Genres shelves as runs of book spines) needs Bo
 OrbitShelf 1.2.23 — Spines for BookOrbit shelves: Series, Authors and Genres (and Group By shelves) stand as runs of their books' spines under each group's name, like Bookshelf's own Series shelf. Covers view is unchanged: groups are still folders there.
 
 Note: Spines is for the Spines view when Bookshelf 6.4 drops — it needs Bookshelf 6.4 (or its feat-588 test branch). On older Bookshelf, everything works as before; the Spines option simply isn't there yet.
-
-# v1.2.21 · 2026-11-07
-
-OrbitShelf 1.2.21 — Footer critter stands on SimpleUI 3.0.3's ground shadow, like the home screen's.
-
-Install: unzip, copy the orbitshelf.koplugin folder into KOReader's plugins folder (.adds/koreader/plugins/ on Kobo, koreader/plugins/ on Kindle), restart KOReader, open Tools → OrbitShelf.
