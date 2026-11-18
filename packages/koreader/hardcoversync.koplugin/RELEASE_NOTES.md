@@ -1,3 +1,32 @@
+# v2.5.0 · 2026-11-18
+
+## ✨ New
+- Add reading history, layout A details and offline read edits (#306)
+- Add new-install defaults and fix rating and note privacy (#328)
+- Add Abandon reread to reading history (#329)
+
+## 🐛 Fixes
+- Fix edition lookup crash on partial reads response (#299)
+- Fix reading state refresh after saves (#320)
+- Fix status menu book removal confirmation (#322)
+- Fix the date picker's drifting month and year controls (#325)
+- Fix removal confirmation to say journal entries stay on Hardcover (#330)
+- Fix review scope, held-change UX, and signed-out Home (#323)
+- Fix reviews histogram label collision (#324)
+
+## 🛠 For developers
+- Gate emulator CI behind path and skip checks (#298)
+- Fix read history emulator date check (#326)
+
+## Other
+- Share Bookshelf module plugin lookup (#302)
+- Consolidate shallow table copies (#303)
+- Share text trimming and local search filtering (#304)
+- Park sync conflicts and recheck library removals (#305)
+- Queue shelf changes when Hardcover does not answer (#319)
+
+**Full changelog**: https://github.com/CaptainCamin/HardcoverSync.koplugin/compare/v2.4.0...v2.5.0
+
 # v2.4.0 · 2026-11-09
 
 ## ✨ New
@@ -223,90 +252,3 @@ Install from branch: new developer option (#143)
 
 
 **Full Changelog**: https://github.com/CaptainCamin/HardcoverSync.koplugin/compare/v2.0.0...v2.1.0
-
-# v2.0.0 · 2026-10-13
-
-## What's Changed
-* Split DialogManager: pure loaders and decision modules for Home, Shelf, Lists and Goals by @CaptainCamin in https://github.com/CaptainCamin/HardcoverSync.koplugin/pull/40
-* Keep open screens in a registry and remove the unused done_callback by @CaptainCamin in https://github.com/CaptainCamin/HardcoverSync.koplugin/pull/41
-* Fix Scheduler:clear(), which cancelled no retry loops by @CaptainCamin in https://github.com/CaptainCamin/HardcoverSync.koplugin/pull/42
-* Give the three offline queues a shared base by @CaptainCamin in https://github.com/CaptainCamin/HardcoverSync.koplugin/pull/43
-* Extract the book details flows from DialogManager by @CaptainCamin in https://github.com/CaptainCamin/HardcoverSync.koplugin/pull/44
-* Make charts' atan2 work on Lua 5.3+ as well as LuaJIT by @CaptainCamin in https://github.com/CaptainCamin/HardcoverSync.koplugin/pull/45
-* API layer: generate async wrappers, move the UI and HTTP out of hardcover_api by @CaptainCamin in https://github.com/CaptainCamin/HardcoverSync.koplugin/pull/46
-* Fix stale emulator reviews scenario (spoiler is on page 2) by @CaptainCamin in https://github.com/CaptainCamin/HardcoverSync.koplugin/pull/47
-* Bring 1.6.3-beta.3 into main: update-check fixes and changelog by @CaptainCamin in https://github.com/CaptainCamin/HardcoverSync.koplugin/pull/48
-* Order hardcover_api.lua by area, async wrappers last by @CaptainCamin in https://github.com/CaptainCamin/HardcoverSync.koplugin/pull/49
-* Release 1.6.3 by @CaptainCamin in https://github.com/CaptainCamin/HardcoverSync.koplugin/pull/50
-* theme.lua: pill buttons, serif headings, solid black progress bars, hatching and icon helpers by @CaptainCamin in https://github.com/CaptainCamin/HardcoverSync.koplugin/pull/51
-* Bundle plugin icons by @CaptainCamin in https://github.com/CaptainCamin/HardcoverSync.koplugin/pull/52
-* Beta 1.7.0-beta.1: lists kept on the device by @CaptainCamin in https://github.com/CaptainCamin/HardcoverSync.koplugin/pull/54
-* Beta 1.7.0-beta.2: shelves, book details and covers kept on the device by @CaptainCamin in https://github.com/CaptainCamin/HardcoverSync.koplugin/pull/56
-* Fix list covers drawn too small or spilling out of their row by @CaptainCamin in https://github.com/CaptainCamin/HardcoverSync.koplugin/pull/58
-* Sharper covers: details at their exact size and quality 90, all covers dithered by @CaptainCamin in https://github.com/CaptainCamin/HardcoverSync.koplugin/pull/59
-* Lists kept on the device: offline, and downloaded only when they change by @CaptainCamin in https://github.com/CaptainCamin/HardcoverSync.koplugin/pull/53
-* Shelves, book details and covers kept on the device (stacked on #53) by @CaptainCamin in https://github.com/CaptainCamin/HardcoverSync.koplugin/pull/57
-* Release 1.7.0 by @CaptainCamin in https://github.com/CaptainCamin/HardcoverSync.koplugin/pull/60
-* Sync beta with main after 1.7.0 by @CaptainCamin in https://github.com/CaptainCamin/HardcoverSync.koplugin/pull/61
-* Stats: a genres donut, a Pace line for a year, and a range for book length by @CaptainCamin in https://github.com/CaptainCamin/HardcoverSync.koplugin/pull/73
-* MMD design overhaul on the beta, nav bar indicator at the bottom by @CaptainCamin in https://github.com/CaptainCamin/HardcoverSync.koplugin/pull/74
-* Scroll control on every long screen by @CaptainCamin in https://github.com/CaptainCamin/HardcoverSync.koplugin/pull/62
-* Design tokens: secondary text setting, dotted rule, MMD metrics by @CaptainCamin in https://github.com/CaptainCamin/HardcoverSync.koplugin/pull/63
-* Ship Lato and install it into KOReader's fonts folder by @CaptainCamin in https://github.com/CaptainCamin/HardcoverSync.koplugin/pull/65
-* Merge main into beta after the 2.0.0 betas by @CaptainCamin in https://github.com/CaptainCamin/HardcoverSync.koplugin/pull/75
-* Merge beta into main (move to trunk-based) by @CaptainCamin in https://github.com/CaptainCamin/HardcoverSync.koplugin/pull/76
-* Hardcover shelves and lists as Bookshelf sources by @CaptainCamin in https://github.com/CaptainCamin/HardcoverSync.koplugin/pull/78
-* Scroll control: rounded track, inset bar by @CaptainCamin in https://github.com/CaptainCamin/HardcoverSync.koplugin/pull/79
-* Setting to choose the book search plugin by @CaptainCamin in https://github.com/CaptainCamin/HardcoverSync.koplugin/pull/80
-* Shelf and list changes work offline by @CaptainCamin in https://github.com/CaptainCamin/HardcoverSync.koplugin/pull/83
-* Settings: grouped options with folding headings by @CaptainCamin in https://github.com/CaptainCamin/HardcoverSync.koplugin/pull/81
-* Reader sheet: Change status; radios for single choices in Settings by @CaptainCamin in https://github.com/CaptainCamin/HardcoverSync.koplugin/pull/82
-* Publish any tag containing beta as a pre-release by @CaptainCamin in https://github.com/CaptainCamin/HardcoverSync.koplugin/pull/84
-* Number betas automatically when a beta is typed without one by @CaptainCamin in https://github.com/CaptainCamin/HardcoverSync.koplugin/pull/85
-* Bookshelf sources: make sorting work by @CaptainCamin in https://github.com/CaptainCamin/HardcoverSync.koplugin/pull/89
-* Leave Finished and Did not finish books alone at the end of a book by @CaptainCamin in https://github.com/CaptainCamin/HardcoverSync.koplugin/pull/90
-* Archive goals from the goal screen, offline too by @CaptainCamin in https://github.com/CaptainCamin/HardcoverSync.koplugin/pull/86
-* Bookshelf: cheaper shelf sorting on slow devices by @CaptainCamin in https://github.com/CaptainCamin/HardcoverSync.koplugin/pull/92
-* Reading a Want to Read or unshelved book puts it on Currently Reading by @CaptainCamin in https://github.com/CaptainCamin/HardcoverSync.koplugin/pull/93
-* Answer user actions with the snackbar by @CaptainCamin in https://github.com/CaptainCamin/HardcoverSync.koplugin/pull/97
-* No grey for unavailable buttons and rules by @CaptainCamin in https://github.com/CaptainCamin/HardcoverSync.koplugin/pull/101
-* MMD search field for Home and search results by @CaptainCamin in https://github.com/CaptainCamin/HardcoverSync.koplugin/pull/103
-* One MMD chip for goal and shelf state by @CaptainCamin in https://github.com/CaptainCamin/HardcoverSync.koplugin/pull/105
-* Docs: which MMD components are used, and why the rest are not by @CaptainCamin in https://github.com/CaptainCamin/HardcoverSync.koplugin/pull/107
-* docs: Home shows one reading card by @CaptainCamin in https://github.com/CaptainCamin/HardcoverSync.koplugin/pull/100
-* No goals reads the same saved or fresh by @CaptainCamin in https://github.com/CaptainCamin/HardcoverSync.koplugin/pull/99
-* Drop Bookshelf's shelves only when a book's status really changes by @CaptainCamin in https://github.com/CaptainCamin/HardcoverSync.koplugin/pull/98
-* Shape shelf rows only for the page on screen by @CaptainCamin in https://github.com/CaptainCamin/HardcoverSync.koplugin/pull/102
-* Home's Sync now works in every language by @CaptainCamin in https://github.com/CaptainCamin/HardcoverSync.koplugin/pull/94
-* A tab that fails to load says so instead of loading for good by @CaptainCamin in https://github.com/CaptainCamin/HardcoverSync.koplugin/pull/95
-* Sync opens the pending changes; Home's sync box opens them too by @CaptainCamin in https://github.com/CaptainCamin/HardcoverSync.koplugin/pull/87
-* Shelf counts on Home and Shelves follow a moved book by @CaptainCamin in https://github.com/CaptainCamin/HardcoverSync.koplugin/pull/96
-* Bookshelf: open a saved shelf without decoding every book by @CaptainCamin in https://github.com/CaptainCamin/HardcoverSync.koplugin/pull/108
-* Bookshelf: open a saved list without decoding every book by @CaptainCamin in https://github.com/CaptainCamin/HardcoverSync.koplugin/pull/109
-* perf_screens: reader panel fixture and budget match the real sheet by @CaptainCamin in https://github.com/CaptainCamin/HardcoverSync.koplugin/pull/112
-* Stretch shelf rows to fill the page by @CaptainCamin in https://github.com/CaptainCamin/HardcoverSync.koplugin/pull/111
-* perf_home: allow 4 full-panel refreshes on the cold open by @CaptainCamin in https://github.com/CaptainCamin/HardcoverSync.koplugin/pull/115
-* Emulator scenarios: skip the snackbar when finding the top window by @CaptainCamin in https://github.com/CaptainCamin/HardcoverSync.koplugin/pull/114
-* book_rating scenario: hold the dialog the call returns, skip unnamed windows by @CaptainCamin in https://github.com/CaptainCamin/HardcoverSync.koplugin/pull/117
-* Reader panel: where the book is and how far, Read again beside it by @CaptainCamin in https://github.com/CaptainCamin/HardcoverSync.koplugin/pull/110
-* Ask before starting to track a book that is not Currently Reading by @CaptainCamin in https://github.com/CaptainCamin/HardcoverSync.koplugin/pull/113
-* Emulator: wipe the screen between scenario cases by @CaptainCamin in https://github.com/CaptainCamin/HardcoverSync.koplugin/pull/118
-* Search results: flash the panel as they appear so covers do not ghost on Home by @CaptainCamin in https://github.com/CaptainCamin/HardcoverSync.koplugin/pull/119
-* Scroll bar: hold the up or down triangle to jump to the start or end by @CaptainCamin in https://github.com/CaptainCamin/HardcoverSync.koplugin/pull/120
-* Book and edition pickers on the shelf screen by @CaptainCamin in https://github.com/CaptainCamin/HardcoverSync.koplugin/pull/121
-* Change a linked book's edition from the reader panel by @CaptainCamin in https://github.com/CaptainCamin/HardcoverSync.koplugin/pull/122
-* One Add button replaces Shelf and Lists on the book details screen by @CaptainCamin in https://github.com/CaptainCamin/HardcoverSync.koplugin/pull/123
-* Edition button on the book details screen by @CaptainCamin in https://github.com/CaptainCamin/HardcoverSync.koplugin/pull/124
-* Reader panel: look the book up in the saved shelves by @CaptainCamin in https://github.com/CaptainCamin/HardcoverSync.koplugin/pull/126
-* Reader status changes update the saved shelves by @CaptainCamin in https://github.com/CaptainCamin/HardcoverSync.koplugin/pull/127
-* Fix Edition button crash on the book details screen by @CaptainCamin in https://github.com/CaptainCamin/HardcoverSync.koplugin/pull/128
-* Remove the old Home screen by @CaptainCamin in https://github.com/CaptainCamin/HardcoverSync.koplugin/pull/129
-* Book details: use the full width when the page does not scroll by @CaptainCamin in https://github.com/CaptainCamin/HardcoverSync.koplugin/pull/131
-* Open the home screen with a full refresh by @CaptainCamin in https://github.com/CaptainCamin/HardcoverSync.koplugin/pull/130
-* Home: fit the Read shelf on a small screen by @CaptainCamin in https://github.com/CaptainCamin/HardcoverSync.koplugin/pull/125
-* Fix offline Currently Reading shelf after cancel and for uncached books by @CaptainCamin in https://github.com/CaptainCamin/HardcoverSync.koplugin/pull/133
-* Open every full-screen screen with a full refresh by @CaptainCamin in https://github.com/CaptainCamin/HardcoverSync.koplugin/pull/134
-* Release 2.0.0 by @CaptainCamin in https://github.com/CaptainCamin/HardcoverSync.koplugin/pull/132
-
-
-**Full Changelog**: https://github.com/CaptainCamin/HardcoverSync.koplugin/compare/v1.6.2...v2.0.0
