@@ -1,3 +1,11 @@
+# 26.11.18-beta · 2026-11-18
+
+## What's Changed
+
+* Some UI updates
+
+**Full Changelog**: https://github.com/ultimatejimmy/xray.koplugin/compare/26.11.17-beta...26.11.18-beta
+
 # 26.11.17-beta · 2026-11-17
 
 - Fix performance with entity underlines
@@ -59,9 +67,3 @@ A huge thank you to @Dukko for creating the original user patch that inspired an
 *Note for users who previously installed Dukko's `2-xray-entity-footnotes.lua` patch: entity underlining is now built directly into the plugin, so the old patch file in your patches folder can be safely removed.*
 
 **Full Changelog**: https://github.com/ultimatejimmy/xray.koplugin/compare/26.11.6-beta2...26.11.7-beta
-
-# 26.11.6-beta2 · 2026-11-06
-
-Fix #164 
-
-**Full Changelog**: https://github.com/ultimatejimmy/xray.koplugin/compare/26.11.6-beta...26.11.6-beta2

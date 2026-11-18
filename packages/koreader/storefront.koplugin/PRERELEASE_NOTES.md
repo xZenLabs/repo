@@ -1,3 +1,9 @@
+# 26.11.18-beta · 2026-11-18
+
+Fix a bug with the likes not always updating
+
+**Full Changelog**: https://github.com/ultimatejimmy/storefront.koplugin/compare/26.11.17-beta...26.11.18-beta
+
 # 26.11.17-beta · 2026-11-17
 
 - Update font catalog logic to make it more efficient
@@ -36,9 +42,3 @@ The font catalog has been expanded with 35 new open-license fonts across classic
 - Update version check logic
 
 **Full Changelog**: https://github.com/ultimatejimmy/storefront.koplugin/compare/26.11.5-beta...26.11.6-beta
-
-# 26.11.5-beta · 2026-11-05
-
-- Load readme in the background without UI blocking
-
-**Full Changelog**: https://github.com/ultimatejimmy/storefront.koplugin/compare/26.11.2-beta...26.11.5-beta
