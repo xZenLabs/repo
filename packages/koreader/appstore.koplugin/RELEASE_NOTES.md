@@ -1,3 +1,28 @@
+# v1.15.0 · 2026-11-18
+
+## Every Plugin, Every Time
+
+**Refresh** now finds the whole catalogue. GitHub only hands out 1,000 results per search, and until now anything past that was either missing from the list or made the refresh fail. Now App Store splits the search into smaller pieces and collects them all.
+
+- If GitHub asks App Store to slow down, it **waits and shows a countdown** instead of giving up. You can still press **Back** to stop.
+- If GitHub answers only part of a search, App Store **adds what it got and removes nothing**, and tells you so. The next refresh tries again.
+
+## Clearer When Something Is Wrong
+
+- **No internet:** when Wi-Fi is connected but the internet can't be reached, App Store now says so, instead of closing or doing nothing. Turning Wi-Fi off and on, or restarting KOReader, usually fixes it.
+- **Restart prompt:** after installing, updating, enabling or deleting a plugin or patch, the "Restart now" prompt now appears **in front** of the list instead of hidden behind it.
+
+## Details Are Back
+
+- Tapping a plugin or patch under **Installed plugins/patches** now shows its version and repository details again, not just its name.
+- The patch file details and the manual match dialog show their details again too.
+- **View release notes** shows the notes again, in front of the download options. This also fixes empty or hidden dialogs for **Simple UI** users: release notes, plugin and patch details, and the "also delete settings" checkbox when deleting a plugin.
+
+## Other Fixes
+
+- Fixed an error when a tracked patch had been removed from its repository, or when a release had no tag.
+- **Slovak** translation added, thanks to @misko903. Thanks also to @Claudio911015 and @AsmaraLehrmann for their fixes.
+
 # v1.14.0 · 2026-09-11
 
 ## Faster Update Checks
@@ -86,7 +111,3 @@ Thanks to @iav, @koma52, @THE-XSX and @ksaMask123 for their contributions to thi
 ### Update detection fix
 
 - Fixed plugins with a "v"-prefixed version number (e.g. v1.4.2) being incorrectly flagged as needing an update.
-
-# v1.9.1 · 2026-06-05
-
-- release options pagination when there are more than 8 assests.
