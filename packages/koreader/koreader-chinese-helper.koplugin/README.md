@@ -37,7 +37,7 @@ KOReader 中文阅读插件：点一个字，即可看到它在本句中组成�
 </tr>
 <tr>
 <td><img src="docs/labels.png" alt="Popup for 秋 in the 临江仙's 惯看秋月春风: at the top the line 白发渔樵江渚上，惯看秋月春风。 with 秋 marked; 字频 1,442, then 秋 qiū from CC-CEDICT; its parts 禾 and 火 labelled MMAH; 秋月 labelled Wikt; last, 秋月春风 labelled MOE with its Chinese definition in larger type, quoting 白居易's 〈琵琶行〉; a 成语 Origin &amp; Usage button"><br><a href="#fallback-dictionaries"><b>Several dictionaries, each labelled</b></a>: CC-CEDICT for 秋, Wiktionary for 秋月, and MOE (optional) for 秋月春风, in larger type</td>
-<td><img src="docs/translate-result.png" alt="KOAssistant's Translate &amp; Analyze viewer, titled with the model gemini-3.5-flash-lite, its whole reply shown as its two pages, joined by a dashed line. Highlighted text: 孔乙己便涨红了脸，额上的青筋条条绽出，争辩道：“窃书不能算偷……窃书！ Translation: Kong Yiji immediately blushed, the veins on his forehead bulging out in cords, and argued, &quot;Book-stealing cannot be considered theft... Book-stealing!&quot; Analysis, one chunk per line: 涨红了脸 (zhǎng hóng le liǎn) &quot;swelled/flushed red [his] face&quot;, resultative compound; 额上的 (é shàng de) &quot;of the forehead's&quot;; 青筋 (qīng jīn) &quot;blue/green tendons/veins&quot;; 条条 (tiáo tiáo) &quot;strip by strip / cord by cord&quot;, reduplicated measure word; 绽出 (zhàn chū) &quot;burst/bulge out&quot;; 争辩道 (zhēng biàn dào) &quot;argued and said&quot;, verb + quotative marker 道; 窃书 (qiè shū) &quot;stealing books&quot;, classical/literary compound (窃 qiè meaning to steal covertly) used by Kong Yiji to euphemize and intellectualize his act; 不能算 (bù néng suàn) &quot;cannot be counted/considered&quot;; 偷 (tōu) &quot;steal&quot;, colloquial term for theft, contrasted sharply with the literary qiè. Below, the viewer's buttons: Reply, Copy, Save to Note, Notebook, Pin, Close and others"><br><a href="#translating-the-sentence"><b>Translate &amp; Analyze the sentence</b></a> with KOAssistant: a translation and a chunk-by-chunk breakdown of 孔乙己's 窃书不能算偷, down to why he says 窃 and not 偷 (your own AI provider, while Wi-Fi is on)</td>
+<td><img src="docs/translate-result.png" alt="KOAssistant's Translate &amp; Analyze viewer, titled with the model gemini-3.5-flash-lite, its whole reply shown as its two pages, joined by a dashed line. Highlighted text: 孔乙己便涨红了脸，额上的青筋条条绽出，争辩道：“窃书不能算偷……窃书！ Translation: Kong Yiji flushed red right away, the veins on his forehead bulging out one by one, and he argued, &quot;Stealing books cannot be considered stealing... stealing books!&quot; Then one line per word, in bold characters with pinyin: 孔乙己 (Kǒng Yǐjǐ) Kong Yiji, the name of the character; 便 (biàn) right away, then; 涨红了脸 (zhǎng hóng le liǎn) flushed red in the face [涨 swell/flush + 红 red + 了 shows change + 脸 face]; 额 (é) forehead; 上 (shàng) on, placed after a noun; 的 (de) connects the forehead to the veins that belong to it; 青筋 (qīng jīn) blue veins; 条条 (tiáo tiáo) strip by strip, one by one, repeated to show multiple veins standing out; 绽出 (zhàn chū) burst out, bulge out; 争辩 (zhēng biàn) argue, debate; 道 (dào) say, used here to introduce spoken words; 窃书 (qiè shū) stealing books, literary, old-fashioned words [窃 steal secretly + 书 book]; 不能 (bù néng) cannot; 算 (suàn) count as; 偷 (tōu) steal, the everyday, common word for stealing, unlike the literary 窃 used earlier. Below, the viewer's buttons: Reply, Copy, Save to Note, Notebook, Pin, Close and others"><br><a href="#translating-the-sentence"><b>Translate &amp; Analyze the sentence</b></a> with KOAssistant: a translation and a plain-English, word-by-word breakdown of 孔乙己's 窃书不能算偷, down to why he says 窃 and not 偷 (your own AI provider, while Wi-Fi is on)</td>
 </tr>
 <tr>
 <td><img src="docs/learner.png" alt="A paragraph of 阿Q正传 in learner mode: pinyin above every character, 那还是上午的事 nà hái shi shàng wǔ de shì through 观音娘娘座前的一个宣德炉 guān yīn niáng niang zuò qián de yī ge xuān dé lú"><br><a href="#learner-mode"><b>From beginner to advanced</b></a>: pinyin on every character in learner mode …</td>
@@ -119,18 +119,6 @@ Status: **2.9.0**, tested on a Boox Go 7 (Android, 300 dpi) with KOReader v2026.
 The folder must keep its name, `chinesehelper.koplugin`. The repository does not contain the
 database; to install from a clone, [build it](#building-the-database) first.
 
-### Moving from the two old plugins
-
-This plugin replaces
-[koreader-interlinear-pinyin](https://github.com/scartoon/koreader-interlinear-pinyin) (the pinyin)
-and [koreader-chinese-popup](https://github.com/scartoon/koreader-chinese-popup) (the popup), which
-are no longer developed. Delete `interlinearpinyin.koplugin` and `chinesepopup.koplugin` from
-KOReader's `plugins` folder, install this one and restart KOReader. On its first start it copies
-your settings from both; your old settings are left in place. While either old plugin is
-installed, a message asks you to remove it, since two plugins listening for taps can open the
-wrong popup. "Tap annotated character for definitions" has no successor: the popup covers every
-character.
-
 ## Usage
 
 Open a book, then **Tools (🔧) → Chinese helper** (the entry may be on the second page of the
@@ -154,7 +142,7 @@ Tools menu). Settings apply to all books.
 | Underline the tapped character on the page | On (default) / off. See [The popup](#the-popup) |
 | Try to match the book's font | On (default) / off: Chinese text in the popup in the book's font. See [The popup](#the-popup) |
 | Dictionaries | Source labels (all entries / other dictionaries only (default) / none); **Order** of the dictionaries after CC-CEDICT; **Collapse long entries** (1 / 2 (default) / 3 lines / never); then each dictionary on/off, in that order (default: Wiktionary, CBDB office titles, MOE 重編國語辭典, MOE 成語典, Xinhua idioms, Wikipedia titles, Moegirlpedia slang), with **MOE for single characters** (off / fallback (default) / always) and **MOE for words** (off / fallback (default) / always) under MOE's. See [Fallback dictionaries](#fallback-dictionaries) and [MOE Always](#moe-always) |
-| Status | Version, data versions and load times, each fallback dictionary (version, entries, on or off, or not installed; MOE's modes and whether its file is ready for Always), what the current page needed, and any old plugin still installed |
+| Status | Version, data versions and load times, each fallback dictionary (version, entries, on or off, or not installed; MOE's modes and whether its file is ready for Always), and what the current page needed |
 
 ### Learner mode
 
@@ -858,7 +846,7 @@ Standard-only readings.
 | File | |
 |---|---|
 | `main.lua` | lifecycle, menu, data loading, old-plugin check |
-| `ch_settings.lua` | settings and the migration from the old plugins |
+| `ch_settings.lua` | settings |
 | `ch_annotator.lua` | the pinyin layer: line spacing, page refresh |
 | `ch_page.lua` | walks the page through the rendering engine |
 | `ch_resolve.lua` | the reading resolver, for the pinyin and the popup |
@@ -900,20 +888,19 @@ a popup, its sentence). Your `settings.reader.lua`
 and reading marks are backed up and restored (each shot runs with no marks, or the known readings
 it lists). KOAssistant's response (`translate-result`) can't be checked that
 way, so it is taken only when named (`make_screenshots.py translate-result`): the script waits
-for the reply to be complete, scrolls the viewer to its last page and joins the two pages
-(a reply longer than two pages stops the script: take it again), saves its text to `build/screenshots/translate-result.txt`, and
+for the reply to be complete, turns the viewer's pages one by one and joins them into one image,
+saves its text to `build/screenshots/translate-result.txt`, and
 the README's alt text for it has to be rewritten by hand to match.
 
 ## Credits and licences
 
 The annotation code comes from **[WordGloss](https://github.com/GangYe293/wordgloss.koplugin)** by
-GangYe293 (GPL-3.0), which koreader-interlinear-pinyin was forked from: the paint layer, layout
-and line-height injection (`ch_overlay.lua`, `ch_layout.lua`, parts of `ch_annotator.lua` and
-`ch_page.lua`). WordGloss credits its inline-gloss rendering approach to
+GangYe293 (GPL-3.0): the paint layer, layout and line-height injection (`ch_overlay.lua`,
+`ch_layout.lua`, parts of `ch_annotator.lua` and `ch_page.lua`). WordGloss credits its inline-gloss rendering approach to
 [inlinehints.koplugin](https://github.com/omer-faruq/inlinehints.koplugin) by omer-faruq.
 
 The code is licensed under the **GNU General Public License v3.0** (see [`LICENSE`](LICENSE)),
-like WordGloss and both plugins it replaces.
+like WordGloss.
 
 The data (the database, and the files in `data/`) is derived from, and distributed under,
 [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/), except as noted for Make Me a

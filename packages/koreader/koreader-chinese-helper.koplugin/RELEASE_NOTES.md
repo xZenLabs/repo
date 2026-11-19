@@ -1,3 +1,15 @@
+# v2.9.1 · 2026-11-18
+
+
+No punctuation lines in Translate & Analyze (#31)
+- **Translate & Analyze no longer gives punctuation marks a line of their own.** The learner
+  prompt (2.8.1) said to skip punctuation, but gemini-3.5-flash-lite listed every mark anyway
+  (often with an empty meaning: "，(,):"), 4–7 lines per reply in three takes out of three. The
+  rule is now said outright, in the system prompt too, and the example ends in a ！ that gets no
+  line. Three takes with the new prompt: no punctuation lines, 15–18 entries.
+- The README's Translate & Analyze screenshot is retaken with the learner reply, and its alt text
+  rewritten.
+
 # v2.9.0 · 2026-11-18
 
 Larger line of text at the top of the popup (#32)
@@ -58,14 +70,3 @@ Learner mode (#25)
   30 ms at the default level.
 - README: a **Learner mode** section, learner screenshots in the top grid, and the popup's
   **I know …** button.
-
-# v2.7.0 · 2026-11-18
-
-Every occurrence gets pinyin (#28)
-- **A character that gets pinyin now gets it at every occurrence on the page**, not just the
-  first, each in the reading it has there: rare characters, unusual readings in special words,
-  the uncertain pair (xíng/háng) and remind-me readings alike. A reading marked known is bare
-  everywhere, so each reading is now all or nothing per page; marking or clearing one from the
-  popup changes every occurrence at once.
-- Crowded lines drop pinyin about as rarely as before (on four sample books, roughly 1% of
-  annotations at most, the most common characters first), and nothing overlaps.
