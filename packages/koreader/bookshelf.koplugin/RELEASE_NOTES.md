@@ -1,3 +1,11 @@
+# v6.5.3 · 2026-11-19
+
+## Fixes
+
+- Taps made while a book is opening no longer turn pages once it appears, on devices where opening a book is slow (#610)
+- Kavita: books downloaded over OPDS show their description instead of the file type (#613, thanks @Charliechin)
+- The analog clock's date is no longer cut off in the top panel on high-resolution screens set to Auto DPI (#615)
+
 # v6.5.2 · 2026-11-15
 
 ## Fixes
@@ -63,7 +71,3 @@
 - Performance improvement for Spines shelves with covers facing out
 - Performance improvement for page turns through covers not seen before
 - Performance improvement for expanding and collapsing the shelf
-
-# v6.4.1 · 2026-11-08
-
-- Book sizes > Equal height: a new option for spine shelves (long-press the shelf > View mode). Every book stands at the same height while keeping its own width, so landscape books facing out show their full cover, uncropped.
