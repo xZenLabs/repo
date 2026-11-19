@@ -1,0 +1,3 @@
+{
+  "releases": [{"tag_name":"v1.0","assets":[{"name":"Marginalia_v1.0.zip","url":"https://github.com/rmmr111/Marginalia.Koplugin/releases/download/v1.0/Marginalia_v1.0.zip","size":19358342,"digest":"sha256:d0160cdc9adf919995875a826112873d5dc76a1c4daf92ca5dea6a818581cb21"},{"name":"Marginalia_v1.0_No_Images.zip","url":"https://github.com/rmmr111/Marginalia.Koplugin/releases/download/v1.0/Marginalia_v1.0_No_Images.zip","size":2275542,"digest":"sha256:1359891a36c54074081285af8c435b1da27adfff437a9d3c396ca5725f2a6696"}],"name":"Marginalia v1.0"}]
+}
