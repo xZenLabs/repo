@@ -1,3 +1,15 @@
+# v3.0.0 · 2026-11-19
+
+v3.0.0
+
+Converted from a single module into a standalone KOReader plugin (simpleui_plus.koplugin) with zero SimpleUI core file edits and a setup wizard.
+Added a 1/3/5/7-book Cover Deck with swipe/tap switching and flexible cover spacing/sizing controls.
+Expanded stats from 10 to 39 metrics across 7 groups with a live Stat Picker, 1–4 columns, and 10 header styles.
+Expanded visuals from 6 bars to 45 variants (15 Rings, 15 Vertical Bars, 15 Horizontal Bars), multi-period goals, and a Book Stats popup.
+Added RGB32 color theming, rounded borders (0–30 px), and a 2D live X/Y position editor with fluid partial e-ink repaints.
+Added landscape orientation scaling & overflow protection.
+Added a full Profile System with 12 presets, locking, export, and Quick Profile Switch.
+
 # v2.10 · 2026-08-31
 
 Simpleui v2.7 and Simpleui_ext v1.15.0 support added.

@@ -1,97 +1,65 @@
-# Koreader Enhanced Currently Reading
+# SimpleUI Plus (v3.0.0)
+
 <p align="center">
-  <img src="scr-1.png" alt="Hata Ekranı">
+  <img src="_screenshots/1.png" alt="Screenshot 1" width="48%">
+  <img src="_screenshots/2.png" alt="Screenshot 2" width="48%">
 </p>
-# 📖 Enhanced Currently Reading  (SimpleUI Dashboard Module)
+<p align="center">
+  <img src="_screenshots/3.png" alt="Screenshot 3" width="48%">
+  <img src="_screenshots/4.png" alt="Screenshot 4" width="48%">
+</p>
+<p align="center">
+  <img src="_screenshots/5.png" alt="Screenshot 3" width="48%">
+  <img src="_screenshots/6.png" alt="Screenshot 4" width="48%">
+</p>
+# 📖 SimpleUI Plus (`simpleui_plus.koplugin`)
 
-Enhanced Currently Reading is a completely redesigned, highly detailed, and fully dynamic reading statistics dashboard module. This module (`module_currently_yanllsama.lua`) is built as an extension for the `simpleui_ext.koplugin` to provide a premium, modern reading dashboard on KOReader.
+**SimpleUI Plus** is the next-generation evolution of Enhanced Currently Reading — transformed from a standalone `module_currently_yanllsama.lua` file into a full, independent KOReader plugin (`simpleui_plus.koplugin`) for **SimpleUI**.
 
-While maintaining the solid foundation of the original concept, it offers enriched data, gorgeous modern design, dynamic grid management, vertical progress tracking, and flexible interface options. It features a crash-safe architecture fully compatible with the KOReader UI engine.
-
----
-
-## ✨ Features
-
-### 🎨 Modern & Aesthetic Design
-* **Redesigned UI**: Enjoy a premium, modern layout where statistics and vertical bars are elegantly grouped inside a thinly outlined, rounded capsule-style table.
-* **Full Typographic Control**: Completely customize the font family, font size, and font weight (Normal/Bold) for Book Titles, Author Names, Labels, and Data Numbers.
-* **Pill-Shaped Progress Bars**: Visually pleasing, fully rounded capsule-style vertical bars. 
-
-### 🖼️ Seamless CoverDeck Integration
-* **Visual Harmony**: Integrates perfectly with CoverDeck to fetch and display high-quality book covers directly on your KOReader home screen.
-* **Gesture Controls**: Simply use a **swipe up/down gesture** on the cover image area to smoothly interact with the CoverDeck features!
-
-### 📈 Vertical Progress Bars & Daily Goals
-* **Daily Page Goal**: Set a daily reading target (e.g., 50 pages) and watch your progress fill up a dedicated vertical bar.
-* **Adjustable Bar Thickness**: Choose from 4 different thickness levels (Thin, Normal, Bold, Extra Bold) for your vertical bars.
-
-### 📐 Fully Dynamic Grid System
-* **Custom Layouts**: Say goodbye to fixed templates! Freely determine the layout of the statistics on your screen by selecting the Number of Columns (1-3) and Number of Rows (1-5).
-* **Customizable Category Headers**: Change the text of the column headers (e.g., THIS BOOK, SPEED, EXTRA 1). You can also adjust the header thickness (Thin, Medium, Bold) or hide them completely.
-
-### 📊 Rich Statistics
-Deeply analyze your reading habits with:
-* Time Left & Time Spent
-* Pages Read & Pages Left
-* Days Reading & Days to Go
-* Daily Average & Pages/Minute Speed
-* Last Session Pages
-
-### 🎛️ Full Control (Edit Items)
-* **Toggle & Sort**: Show or hide any statistic you want. Rearrange the display order exactly as you like. Your dynamic grid will automatically populate based on this order.
-
-### ℹ️ Smart Info Screen & Insights
-* **Book Blurb**: Avoids cluttering the screen with buttons. Tap on the Book or Author name to open an elegant info window displaying the book's blurb/summary.
-* **Reading Insights**: Tap directly on the statistics area to bring up the detailed Reading Insights popup (if the patch is installed).
+It integrates cleanly with SimpleUI at runtime via in-memory hooks without modifying any `simpleui.koplugin` files on disk, delivering a multi-book Cover Deck, 39 reading metrics, 45 progress visual variants, color screen (RGB32) theming, 2D live positioning, and a built-in profile manager.
 
 ---
 
-## 📥 Installation
+##  Highlights (v3.0.0)
 
-This module requires the `simpleui_ext.koplugin` to function correctly. 
-
-**Step 1: Install `simpleui_ext.koplugin` (if you haven't already)**
-1. Download the `simpleui_ext.koplugin` package.
-2. Connect your e-reader to your computer.
-3. Extract and copy the entire `simpleui_ext.koplugin` folder to your KOReader plugins directory:
-   `koreader/plugins/`
-
-**Step 2: Install this Enhanced Module**
-1. Download the `module_currently_yanllsama.lua` file from this repository.
-2. Copy the downloaded file into the desktop modules directory of the plugin:
-   `koreader/plugins/simpleui_ext.koplugin/desktop_modules/`
-
-**Step 3: Enable the Plugin in KOReader**
-1. Safely disconnect your e-reader and open KOReader.
-2. Open the top menu and navigate to **Tools (Wrench/Gear icon) -> Plugin Management**.
-3. Find the SimpleUI Ext plugin in the list and check the box to enable it.
-4. **Restart KOReader** for the changes to take effect.
-5. Once restarted, ensure the module is active in the SimpleUI settings menu.
+* **Standalone Plugin & Setup Wizard**: Works alongside `simpleui.koplugin` with zero core file edits and includes a first-run setup wizard (`wizard.lua`).
+* **Cover Deck (1 / 3 / 5 / 7 Books)**: Stacked multi-book cover deck with vertical swipe and tap-to-switch between recent or TBR books.
+* **39 Statistics Metrics (7 Groups)**: Chapter pages/time left, highlights & notes counts, today/week/month/year/all-time stats, reading streak, estimated finish date, and a compact live Stat Picker (`stats_editor.lua`).
+* **45 Progress Visual Variants**: 15 Ring styles (`15%–150%`), 15 Vertical Bar styles, and 15 Horizontal Bar styles backed by daily, weekly, monthly, and yearly goals, plus a detailed **Book Stats** popup (`module_currently_books_stat.lua`).
+* **Color Screen (RGB32), Borders & Headers**: Custom colors for text, backgrounds, borders, and visuals, `0–30 px` corner radius, `1–4` columns × `1–7` rows, and 10 category header styles.
+* **2D Live Position Editor & Fluid Previews**: Single-window X/Y slider with `-`/`+` fine-tuning, selectable window sizes/positions, partial e-ink repaints, and landscape orientation support.
+* **Profile System**: 12 built-in presets (`default_profiles.lua`), save/lock/export, bulk-purge unlocked presets, and Quick Profile Switch.
 
 ---
 
-## ⚙️ How to Use & Settings
+##  How to Install
 
-All settings are configured via the SimpleUI configuration menu (Wrench icon -> Currently Reading):
-
-* **CoverDeck Gesture**: Simply **Swipe Up or Down** on the book cover to interact with CoverDeck.
-* **Grid Settings**: Select how many columns and rows of statistics you want, and configure the Category Headers.
-* **Edit Statistics Items**: Toggle the visibility of statistics and change their order.
-* **Text and Font Settings**: Grouped settings for "Book and Author", "Data", and "Labels" to fine-tune your typography.
-* **Vertical Bar Settings**: Adjust the height, thickness, and font of the vertical progress bars.
-* **Daily Page Goal**: Set your target reading pages for the day to fill the vertical progress bar.
-* **Time Format**: Set the time display format as Readable (e.g., 3.5 hours) or XhYm (e.g., 3h 30 min).
+1. **Remove the Old Module (If Installed):**
+   If you previously placed `module_currently_yanllsama.lua` manually inside `simpleui.koplugin` (or `simpleui_ext.koplugin`), delete it to avoid conflicts.
+2. **Copy the Plugin Folder:**
+   Copy `simpleui_plus.koplugin` from this repository into KOReader's `plugins` directory:
+   * **Kobo:** `.adds/koreader/plugins/simpleui_plus.koplugin`
+   *(Requires **SimpleUI** to be installed and enabled under `plugins/simpleui.koplugin`.)*
+3. **Restart KOReader:**
+   On startup, the **SimpleUI Plus Setup Wizard** will guide you through enabling the module. You can also enable or customize it anytime from **SimpleUI → Homescreen Settings → Modules**.
 
 ---
 
-## 📝 Change Log
+##  Change Log
 
-**v2.0.0 (Latest)**
+**v3.0.0 (Latest)**
+* **Architecture & Setup**: Transformed from a single drop-in module (`module_currently_yanllsama.lua`) into a full KOReader plugin (`simpleui_plus.koplugin`) that integrates via in-memory hooks (`main.lua`) without modifying `simpleui.koplugin` files on disk; added a first-run Setup Wizard (`wizard.lua`).
+* **Cover Deck & Layout**: Replaced the single cover with a 1 / 3 / 5 / 7 book Cover Deck (swipe vertically or tap stacked covers to switch recent/TBR books); added cover spacing, cover size, Stats/Visuals width ratio (`40%–85%`), and side padding controls.
+* **Statistics & Grid**: Expanded from 10 to 39 metrics across 7 groups (chapter left, highlights/notes, today/week/month/year/all-time, streak, estimated finish); added a live docked Stat Picker (`stats_editor.lua`), `1–4` columns × `1–7` rows, and 10 header styles.
+* **Progress Visuals & Goals**: Expanded from 6 bars to 45 visual variants (15 Rings `15%–150%`, 15 Vertical Bars, 15 Horizontal Bars) with daily/weekly/monthly/yearly page, time, and book goals, plus a detailed Book Stats window (`module_currently_books_stat.lua`).
+* **Appearance, Positioning & Responsiveness**: Added RGB32 color theming, `0–30 px` rounded borders, a 2D X/Y Live Position Editor (`position_editor.lua`) with Small/Medium/Large sizes and Bottom/Center/Top placement, fluid partial e-ink repaints, and landscape orientation support.
+* **Profiles**: Added a full profile manager with 12 built-in presets, save/lock/export, bulk-purge of unlocked presets, and Quick Profile Switch.
+
+**v2.0.0**
 * **Added**: Full CoverDeck integration with swipe up/down gesture support.
 * **Added**: Vertical data bars tracking daily page goals and total book progress.
 * **Added**: Complete UI overhaul with rounded frames and a boxed statistics layout.
 * **Added**: Dedicated "Text and Font Settings" menu to fully customize typography (font face, size, and weight).
-* **Added**: Deep localization support (fully compatible with `tr.po` for Turkish).
 * **Improved**: Restructured the Settings Menu into logical sub-menus (Grid Settings, Bar Settings, etc.).
 * **Renamed**: Official module name updated to `module_currently_yanllsama.lua` for use with `simpleui_ext.koplugin`.
 
@@ -102,4 +70,4 @@ All settings are configured via the SimpleUI configuration menu (Wrench icon -> 
 
 ---
 
-*This module was developed by Yanllsama, based on the original open-source codes, to contribute to the KOReader and SimpleUI community. This project is licensed under the MIT License. You are free to use, modify, and distribute the code as you wish. Feedback and Pull Requests are always welcome!*
+*Developed by Yanllsama for the KOReader and SimpleUI community. Licensed under the MIT License. Feedback and Pull Requests are always welcome!*
