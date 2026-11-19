@@ -11,19 +11,17 @@ Their code, interfaces and features are OrbitUI's foundation, not just
 inspiration. OrbitUI adds a shared workflow and its own optional features on
 top. Please support and credit the original creators.
 
-**[Download OrbitUI 1.3.0](https://github.com/komadorirobin/orbitui.koplugin/releases/tag/v1.3.0)**
+**[Download OrbitUI 1.4.0](https://github.com/komadorirobin/orbitui.koplugin/releases/tag/v1.4.0)**
 | [Installation](#installation)
 | [What OrbitUI adds](#what-orbitui-adds)
 | [Feature guide](docs/FEATURES.md)
 | [Report a problem](https://github.com/komadorirobin/orbitui.koplugin/issues)
 
-**New in 1.3** · Open OrbitUI beside Quick Actions to change Home, Library or
-dock settings. Long-press a dock icon to add, replace or remove a shortcut.
-
-**[Try 1.4.0-beta.7](https://github.com/komadorirobin/orbitui.koplugin/releases/tag/v1.4.0-beta.7)** ·
-Tap your reading streak for a seven-day log and a twelve-week calendar.
-Add the optional BookOrbit achievements card to see your latest badge.
-This beta also speeds up library and manga shelf preparation on large collections.
+**New in 1.4** · Tap **Reading streak** to see which books you read on a given
+day, how much you read this week and your activity over the last twelve weeks.
+Add the optional **BookOrbit achievements** card for your latest badge and
+next goal. You can also choose the first six actions in the text selection
+menu. Library and Manga do less work when opening large shelves.
 
 > **OrbitUI replaces the standalone SimpleUI and Bookshelf plugins.**
 > Neither is required separately. If either is installed, disable it and restart
@@ -52,6 +50,13 @@ ornaments and manga ratings are optional. Manga ratings use the separate
 | [![OrbitUI tab beside Quick Actions with Home, Library and Dock settings](docs/screenshots/orbitui-menu.jpg)](docs/screenshots/orbitui-menu.jpg) | [![Dock editor with reorder arrows, remove buttons and Add shortcut](docs/screenshots/dock-editor.jpg)](docs/screenshots/dock-editor.jpg) |
 
 The menu and dock editor above were captured in the Kobo emulator.
+
+| Reading log | Reading calendar |
+| --- | --- |
+| [![Weekly reading time, pages, current streak and recent books](docs/screenshots/reading-log.jpg)](docs/screenshots/reading-log.jpg) | [![Twelve-week reading calendar with daily activity and a reading-time legend](docs/screenshots/reading-calendar.jpg)](docs/screenshots/reading-calendar.jpg) |
+
+These views show example reading sessions in KOReader on an emulated Tolino
+Vision Color. Open them from the **Reading streak** card on Home.
 
 ## What OrbitUI adds
 
@@ -266,7 +271,7 @@ recommended by Bookshelf. Keep KOReader's **Cover browser** plugin enabled.
 2. Disable standalone **SimpleUI and Bookshelf**, if installed, and restart
    KOReader. Keep their files and settings for rollback.
 3. Download **`orbitui.koplugin.zip`** from the
-   [stable 1.3.0 release](https://github.com/komadorirobin/orbitui.koplugin/releases/tag/v1.3.0).
+   [stable 1.4.0 release](https://github.com/komadorirobin/orbitui.koplugin/releases/tag/v1.4.0).
    Do not use **Code → Download ZIP**, **Source code**, checksum files or an
    ornament-only release.
 4. Fully exit KOReader. Extract the ZIP and copy **`orbitui.koplugin`** into
@@ -310,7 +315,7 @@ disable OrbitUI and restart before re-enabling the old plugins. Never run both.
 ### Community app stores
 
 Independent stores can find **`komadorirobin/orbitui.koplugin`**. Choose the
-**v1.3.0** release and **`orbitui.koplugin.zip`**, not a repository/source ZIP
+**v1.4.0** release and **`orbitui.koplugin.zip`**, not a repository/source ZIP
 or an add-on release. Their listing is not an endorsement or compatibility
 certification; refresh a stale catalog or install manually.
 
@@ -330,7 +335,9 @@ lägga till, byta eller ta bort en genväg. Vid nyinstallation är **Historik** 
 av standardgenvägarna. Dina sparade genvägar följer med vid uppgradering och
 Manga går att lägga till från genvägsväljaren.
 
-[Versionshistorik](docs/OTA.md#orbitui-130).
+I 1.4 öppnar du läsloggen genom att trycka på **Lässvit** på hemskärmen.
+Kalendern visar tolv veckor. Tryck på en dag för att se vilka böcker du läste.
+[Versionshistorik](docs/OTA.md#orbitui-140).
 
 Automated Lua/LuaJIT, native-fixture, packaging and update/rollback checks
 complement user testing. Stable does not certify every device, third-party

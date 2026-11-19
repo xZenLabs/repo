@@ -1,3 +1,24 @@
+# v1.4.0 · 2026-11-19
+
+OrbitUI 1.4 brings the Reading log, customizable reader shortcuts and faster library navigation to the stable channel. It includes the runtime tested in 1.4.0-beta.7, with SimpleUI 3.1.0 and Bookshelf 6.5.2.
+
+### Home and reading history
+
+- Tap **Reading streak** to explore reading time, pages and recent books over the past seven days. Tap a date in the twelve-week calendar to see what you read that day.
+- The reading row starts with four covers and progress percentages. Choose up to five covers, switch the captions to book titles, or tap **See all** for your ongoing reads.
+- Add the optional **BookOrbit achievements** card to see the latest earned badge and the next goal through your connected BookOrbit plugin. On BookOrbit 3.8 or later, a read-only API key opens the full catalogue of earned and remaining badges.
+- Add the separately downloadable **Literary Clock** from the module library.
+
+### Library and reader
+
+- Large Library and Manga shelves use fewer filesystem checks and less sorting. The Next shelf prepares cover paths in short steps. Typo-tolerant search and word suggestions do less work.
+- Choose up to six actions for the first page of the text selection menu, including actions offered by installed plugins. The reader panel can also show KOAssistant’s X-Ray coverage and open Mentions.
+- Bookshelf supports manually ordered collection shelves and an optional Hardcover API key. The file browser gains independent shadows for list and mosaic views. You can hide the clock and battery in the top-menu footer.
+
+### Updating
+
+Open **OrbitUI → System & maintenance → Updates**, install **1.4.0** and restart KOReader. This release is available to users on the stable and preview channels. For a manual installation, use the attached **orbitui.koplugin.zip**. [Installation guide and screenshots](https://github.com/komadorirobin/orbitui.koplugin/blob/v1.4.0/README.md).
+
 # v1.3.0 · 2026-11-13
 
 ## OrbitUI 1.3

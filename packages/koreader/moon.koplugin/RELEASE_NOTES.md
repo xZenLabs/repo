@@ -1,3 +1,38 @@
+# v0.7.2 · 2026-11-19
+
+## 月读 v0.7.2
+
+KOReader 插件包：`book.koplugin-v0.7.2.zip`
+
+输入法词库（整库，手动 sideload）：`dictionary.sqlite3 dictionary-wubi.sqlite3 dictionary-cangjie.sqlite3 dictionary-zhuyin.sqlite3`
+
+安装：解压后将 `book.koplugin` 复制到 `koreader/plugins/`，然后重启。
+
+词库 sideload：下载对应布局的词库，直接放入 `koreader/.moon/`
+（与 `book.sqlite3` 同级）。附件已使用最终文件名，无需重命名。
+
+### 更新内容
+
+相对上一版本 `v0.7.1`：
+
+#### 新功能
+
+- :sparkles: feat: 锁屏海报墙可只用指定书源的书生成 (725b4242)
+- :sparkles: feat: 混合模式封面左上角显示书源，可在图书馆封面设置关闭 (372c70b6)
+- :sparkles: feat: 占位封面竖排书名中括号、标点与英文单词顺时针转 90° (45817db8)
+
+#### 修复
+
+- :bug: (toc): 空目录拉取失败不再每次翻页重试，目录重读加次数上限 (d5987fab)
+
+#### 性能
+
+- :zap: perf: 开书进度回调只重画弹窗面板，不再重复画遮罩与壁纸 (986f54f2)
+
+### 完整对比
+
+https://github.com/AnkioTomas/moon/compare/v0.7.1...v0.7.2
+
 # v0.7.1 · 2026-11-18
 
 ## 月读 v0.7.1
@@ -138,28 +173,3 @@ KOReader 插件包：`book.koplugin-v0.6.4.zip`
 ### 完整对比
 
 https://github.com/AnkioTomas/moon/compare/v0.6.3...v0.6.4
-
-# v0.6.3 · 2026-11-17
-
-## 月读 v0.6.3
-
-KOReader 插件包：`book.koplugin-v0.6.3.zip`
-
-输入法词库（整库，手动 sideload）：`dictionary.sqlite3 dictionary-wubi.sqlite3 dictionary-cangjie.sqlite3 dictionary-zhuyin.sqlite3`
-
-安装：解压后将 `book.koplugin` 复制到 `koreader/plugins/`，然后重启。
-
-词库 sideload：下载对应布局的词库，直接放入 `koreader/.moon/`
-（与 `book.sqlite3` 同级）。附件已使用最终文件名，无需重命名。
-
-### 更新内容
-
-相对上一版本 `v0.6.2`：
-
-#### 修复
-
-- :bug: (panel): 菜单排序前把函数型 text 纠正为 text_func，避免第三方菜单项拖垮下拉面板 (3905e94c)
-
-### 完整对比
-
-https://github.com/AnkioTomas/moon/compare/v0.6.2...v0.6.3
