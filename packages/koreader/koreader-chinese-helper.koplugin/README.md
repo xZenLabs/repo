@@ -836,8 +836,8 @@ tools/deploy.sh "/sdcard/Books/book.epub"   # check, push to a USB-connected And
 The tests (`tests/run.py`, LuaJIT through lupa) cover the reading resolver, page walking,
 layout, hit testing and the edge band, the popup's content and placement, the components, the
 popup's line of text around the character, MOE Always, popups opened from a popup and taps in
-their text, the reading marks, the sentence finder and Translate button, the settings migration,
-the menu, and the database code (its real SQL against the built database).
+their text, the reading marks, the sentence finder and Translate button, the menu, and the
+database code (its real SQL against the built database).
 `test_integration.lua` checks that the popup marks the reading the pinyin layer draws.
 `tools/check.sh` also runs the build's Python unit tests (`tests/test_*.py`, needs OpenCC): the
 simplified-text converter, the idiom files' text repairs, MOE's covered rows and Wiktionary's

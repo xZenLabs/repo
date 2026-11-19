@@ -1,3 +1,13 @@
+# v2.9.2 · 2026-11-19
+
+Popup buttons outlined in night mode (#43)
+- **In KOReader's night mode, the lines between the popup's bottom buttons are visible again.**
+  KOReader draws them light grey (0xAA); night mode inverted that to a dark grey (0x55) on
+  black, which the Boox's e-ink hardly shows, so the word buttons, Translate & analyze and
+  Close read as loose text. In night mode they are now drawn so they come out light grey
+  (0xAA) on black, as day mode's are on white. Day mode is unchanged (same pixels). The
+  popup's other lines and grey text were already visible in night mode.
+
 # v2.9.1 · 2026-11-18
 
 
@@ -46,27 +56,3 @@ Translate & Analyze for learners (#30)
   for advanced readers and skipped words they would know on sight.
 - On a Boox Go 7 a 69-character sentence from 阿Q正传 gets its whole reply (about five pages of
   KOAssistant's viewer) within the 2000-token limit.
-
-# v2.8.0 · 2026-11-18
-
-
-Learner mode (#25)
-- **Which characters → All characters (learner mode)** puts pinyin above every Chinese character
-  on the page, repeats included. With **I know …** in the popup (2.6.0) a beginner switches each
-  reading off as they learn it, and the page thins out. Two more levels sit between that and the
-  old lowest, 1,500: **outside the 500** and **outside the 1,000 most common**.
-- **The commonest function words no longer show two readings**: 的 *de*, 了 *le*, 着 *zhe*, 这
-  *zhè*, 么 *me*, 呢 *ne*, 个 *gè*, 都 *dōu*, 还 *hái* and 与 *yǔ* are hand-checked defaults
-  (their other readings come from words: 的确, 了解, 睡着, 首都, 还清, 参与). Before, the
-  learned data put them in the uncertain list (的 *de/dì*, 了 *le/liǎo*), which never showed at
-  the old levels but would have put 25–35 pairs on a page of 鲁迅 in learner mode; now about
-  one character in a hundred keeps a pair there (得 *de/děi*, 过 *guò/guo*, 长). The popup marks
-  them the same way. Characters with a single hand-checked reading are now never listed as
-  uncertain, so the particles 哩 *li*, 咯 *lo* and 啦 *la* lose their pairs too (哩 showed *lǐ/li*
-  above every 哩 in 平凡的世界). 着 in 生活无着 is now drawn *zhuó*, in bold, as an unusual
-  reading. Nothing else changes at the other levels.
-- No pinyin is dropped on crowded lines in learner mode on the sample book's pages (at 35% and
-  40% size). On a Boox Go 7 a page takes a median 51.5 ms to prepare in learner mode, against
-  30 ms at the default level.
-- README: a **Learner mode** section, learner screenshots in the top grid, and the popup's
-  **I know …** button.
