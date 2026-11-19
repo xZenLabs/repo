@@ -1,3 +1,9 @@
+# 26.11.19-beta · 2026-11-19
+
+De-duplicate repos with the same name for likes
+
+**Full Changelog**: https://github.com/ultimatejimmy/storefront.koplugin/compare/26.11.18-beta...26.11.19-beta
+
 # 26.11.18-beta · 2026-11-18
 
 Fix a bug with the likes not always updating
@@ -36,9 +42,3 @@ The font catalog has been expanded with 35 new open-license fonts across classic
 - **Pirate & Nautical:** *Pirata One*, *Trade Winds*, *Grenze Gotisch*, *Jolly Lodger*, *Seaweed Script*, *The Nautigal*
 
 **Full Changelog**: https://github.com/ultimatejimmy/storefront.koplugin/compare/26.11.9...26.11.13-beta
-
-# 26.11.6-beta · 2026-11-07
-
-- Update version check logic
-
-**Full Changelog**: https://github.com/ultimatejimmy/storefront.koplugin/compare/26.11.5-beta...26.11.6-beta

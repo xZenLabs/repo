@@ -1,3 +1,11 @@
+# v2.5.1 · 2026-11-19
+
+## 🐛 Fixes
+- Fix low-priority UI consistency and layout issues 
+- Fix the two data-loss edges 
+
+**Full changelog**: https://github.com/CaptainCamin/HardcoverSync.koplugin/compare/v2.5.0...v2.5.1
+
 # v2.5.0 · 2026-11-18
 
 ## ✨ New
@@ -207,48 +215,3 @@ This release gives the plugin's dialogs and messages a consistent new look, and 
 
 
 **Full Changelog**: https://github.com/CaptainCamin/HardcoverSync.koplugin/compare/v2.1.0...v2.2.0
-
-# v2.1.0 · 2026-10-21
-
-Bulk linking is the big change in this release: link every book on your device in one go, and get guesses for books that don't match exactly.
-
-✨ **New**
-Link all books on this device, 25 at a time (#149). Details and shelves are saved afterwards (#153).
-Guess unmatched books from title and author, then review the guesses before they're applied (#154)
-Hardcover details button in the file dialog (#142)
-Goal and stats cards for Bookshelf micro-modules (#151)
-Set a page by hand on a book set to Reading while offline (#145)
-New UI components: button sizes, a round button and a floating action button (#157, #158)
-🐛 **Fixes**
-Progress is now sent to the read Hardcover already has (#147)
-Book details no longer does the cover work twice or runs full refreshes when it opens (#141)
-Lists now page correctly while covers are loading (#155, #159)
-"Add to lists" changes are applied when you press Done (#160)
-🛠 **For developers**
-Install from branch: new developer option (#143)
-
-
-## What's Changed
-* Run the emulator scenarios in CI by @CaptainCamin in https://github.com/CaptainCamin/HardcoverSync.koplugin/pull/140
-* Hardcover details button in the file dialog by @CaptainCamin in https://github.com/CaptainCamin/HardcoverSync.koplugin/pull/142
-* Install from branch (developer option) by @CaptainCamin in https://github.com/CaptainCamin/HardcoverSync.koplugin/pull/143
-* Book details: fix doubled cover work and full refreshes on open by @CaptainCamin in https://github.com/CaptainCamin/HardcoverSync.koplugin/pull/141
-* Emulator: un-park the two offline scenarios by @CaptainCamin in https://github.com/CaptainCamin/HardcoverSync.koplugin/pull/144
-* Add a nightly live check against the real Hardcover API by @CaptainCamin in https://github.com/CaptainCamin/HardcoverSync.koplugin/pull/146
-* Send progress to the read Hardcover already has by @CaptainCamin in https://github.com/CaptainCamin/HardcoverSync.koplugin/pull/147
-* Allow setting a page by hand on a book set to Reading offline by @CaptainCamin in https://github.com/CaptainCamin/HardcoverSync.koplugin/pull/145
-* Emulator: fix the last three parked scenarios by @CaptainCamin in https://github.com/CaptainCamin/HardcoverSync.koplugin/pull/148
-* Link all books on this device, 25 at a time by @CaptainCamin in https://github.com/CaptainCamin/HardcoverSync.koplugin/pull/149
-* Tests: one shared check helper, totals in run_all, a spec README by @CaptainCamin in https://github.com/CaptainCamin/HardcoverSync.koplugin/pull/150
-* Lint with luacheck in CI by @CaptainCamin in https://github.com/CaptainCamin/HardcoverSync.koplugin/pull/152
-* Save details and shelves after "Link all books" by @CaptainCamin in https://github.com/CaptainCamin/HardcoverSync.koplugin/pull/153
-* Hardcover goal and stats cards for Bookshelf micro-modules by @CaptainCamin in https://github.com/CaptainCamin/HardcoverSync.koplugin/pull/151
-* Snackbar passthrough and list paging while covers load (for testing together) by @CaptainCamin in https://github.com/CaptainCamin/HardcoverSync.koplugin/pull/159
-* Fix lists not paging while covers load by @CaptainCamin in https://github.com/CaptainCamin/HardcoverSync.koplugin/pull/155
-* Button sizes and a round button by @CaptainCamin in https://github.com/CaptainCamin/HardcoverSync.koplugin/pull/157
-* Apply Add to lists changes when Done is pressed by @CaptainCamin in https://github.com/CaptainCamin/HardcoverSync.koplugin/pull/160
-* Guess unmatched books from title and author, and review the guesses by @CaptainCamin in https://github.com/CaptainCamin/HardcoverSync.koplugin/pull/154
-* Floating action button component by @CaptainCamin in https://github.com/CaptainCamin/HardcoverSync.koplugin/pull/158
-
-
-**Full Changelog**: https://github.com/CaptainCamin/HardcoverSync.koplugin/compare/v2.0.0...v2.1.0
