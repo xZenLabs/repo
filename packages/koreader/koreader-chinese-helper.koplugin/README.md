@@ -40,7 +40,7 @@ KOReader 中文阅读插件：点一个字，即可看到它在本句中组成�
 <td><img src="docs/translate-result.png" alt="KOAssistant's Translate &amp; Analyze viewer, titled with the model gemini-3.5-flash-lite, its whole reply shown as its two pages, joined by a dashed line. Highlighted text: 孔乙己便涨红了脸，额上的青筋条条绽出，争辩道：“窃书不能算偷……窃书！ Translation: Kong Yiji flushed red right away, the veins on his forehead bulging out one by one, and he argued, &quot;Stealing books cannot be considered stealing... stealing books!&quot; Then one line per word, in bold characters with pinyin: 孔乙己 (Kǒng Yǐjǐ) Kong Yiji, the name of the character; 便 (biàn) right away, then; 涨红了脸 (zhǎng hóng le liǎn) flushed red in the face [涨 swell/flush + 红 red + 了 shows change + 脸 face]; 额 (é) forehead; 上 (shàng) on, placed after a noun; 的 (de) connects the forehead to the veins that belong to it; 青筋 (qīng jīn) blue veins; 条条 (tiáo tiáo) strip by strip, one by one, repeated to show multiple veins standing out; 绽出 (zhàn chū) burst out, bulge out; 争辩 (zhēng biàn) argue, debate; 道 (dào) say, used here to introduce spoken words; 窃书 (qiè shū) stealing books, literary, old-fashioned words [窃 steal secretly + 书 book]; 不能 (bù néng) cannot; 算 (suàn) count as; 偷 (tōu) steal, the everyday, common word for stealing, unlike the literary 窃 used earlier. Below, the viewer's buttons: Reply, Copy, Save to Note, Notebook, Pin, Close and others"><br><a href="#translating-the-sentence"><b>Translate &amp; Analyze the sentence</b></a> with KOAssistant: a translation and a plain-English, word-by-word breakdown of 孔乙己's 窃书不能算偷, down to why he says 窃 and not 偷 (your own AI provider, while Wi-Fi is on)</td>
 </tr>
 <tr>
-<td><img src="docs/learner.png" alt="A paragraph of 阿Q正传 in learner mode: pinyin above every character, 那还是上午的事 nà hái shi shàng wǔ de shì through 观音娘娘座前的一个宣德炉 guān yīn niáng niang zuò qián de yī ge xuān dé lú"><br><a href="#learner-mode"><b>From beginner to advanced</b></a>: pinyin on every character in learner mode …</td>
+<td><img src="docs/learner.png" alt="A paragraph of 阿Q正传 in learner mode: pinyin above every character, 那还是上午的事 nà hái shi shàng wǔ de shì through 观音娘娘座前的一个宣德炉 guān yīn niáng niang zuò qián de yí ge xuān dé lú"><br><a href="#learner-mode"><b>From beginner to advanced</b></a>: pinyin on every character in learner mode …</td>
 <td><img src="docs/learner-known.png" alt="The same paragraph after the 80 commonest readings on the page were marked known: about half the pinyin is gone; what is left is mostly the less common characters, such as 赵 zhào, 辫 biàn, 庵 ān, 栗凿 lì záo, and 是 shi in 还是, whose shì alone was marked known"><br>… switched off one reading at a time as you learn them: the same paragraph with the 80 commonest readings on the page <a href="#learner-mode">marked known</a></td>
 </tr>
 </table>
@@ -153,7 +153,8 @@ you learn.
 1. Turn it on: **Tools (🔧) → Chinese helper → Show pinyin** on, then
    **Which characters → All characters (learner mode)**.
 2. Read. Every character has its reading as the plugin resolves it in context (了 is *le* after a
-   verb, *liǎo* in 了解; see [Readings](#readings)), repeats included.
+   verb, *liǎo* in 了解; see [Readings](#readings)), repeats included. 一 and 不 get their spoken
+   tones (一个 *yí gè*, 不是 *bú shì*); the popup still lists the dictionary's *yī* and *bù*.
 3. When you're sure of a reading, tap the character and tap **I know …** at the right of the
    popup's title bar. That reading goes bare at once, at every occurrence, in every book. Its
    other readings keep their pinyin: knowing 还 *hái* leaves 还 *huán* in 还清 annotated.
@@ -445,8 +446,20 @@ ones included (的 is *dí* in 的确, *de* on its own). Some choices need the m
 the plugin does not have: 东西 is always marked *dōngxi* ("thing"), also where it means "east and
 west".
 
-Readings are dictionary readings: 一 is *yī* and 不 is *bù* everywhere, without the spoken tone
-changes (一定 *yídìng*). Where CC-CEDICT gives a word's syllable only as a neutral tone, that is
+一 and 不 change tone in speech with the next syllable, and **Spoken tones for 一 and 不** draws
+them that way, as beginners' textbooks do: 一个 *yí gè*, 一天 *yì tiān*, 不是 *bú shì*, 是不是
+*shì bu shì*, 看不见 *kàn bu jiàn*. 一 stays *yī* as a number or ordinal (第一, 十一, 一九九八,
+一月, 统一, 之一) and before punctuation. It is on in learner mode by default (**In learner
+mode**); **Always** also draws the spoken tone above a remind-me 一 or 不 at a numeric level, and
+**Never** keeps the dictionary's *yī* and *bù*. The popup's entries keep the dictionary readings,
+with a grey note on the character's own entry (**spoken here: bú**), and known and remind-me marks
+stay on the dictionary reading: **I know bù** hides 不 whatever its tone. On 49 books (1.5 million
+一 and 不), about 800 sampled changes were judged by an AI reviewer in context: each rule was
+right 97–100% of the time. Without word classes a verb and its complement (拿不到 *ná bu dào*) can't
+always be told from a plain negation, so where no word confirms it, 不 keeps the dictionary's
+*bù*.
+
+Where CC-CEDICT gives a word's syllable only as a neutral tone, that is
 drawn above a rare character (刺猬 *cìwei*, 鼓捣 *gǔdao*, 疙瘩 *gēda*), and its popup entry (猬
 *wèi*) is marked with the same letters. Where CC-CEDICT lists the word both ways (大爷 *dàyé*
 "idler" / *dàye* "uncle"), the toned reading is drawn and the popup marks the neutral one.

@@ -33,6 +33,8 @@ The dictionary-popup button needs KOReader **v2026.07.1** or newer — older bui
 
 **Full Changelog**: https://github.com/nar-io/localwiki.koplugin/compare/v0.6.9...v0.6.10
 
+**Full Changelog**: https://github.com/nar-io/localwiki.koplugin/compare/v0.6.9...v0.6.10
+
 # v0.6.9 · 2026-11-17
 
 ## What's fixed
@@ -75,6 +77,8 @@ KOReader **v2026.07.1** or newer for the in-dictionary button — earlier versio
 - Kindle (KOReader v2026.07.1): a real Dune article decompresses in 45 ms
 - Test suite: 29 lua smoke checks, 35 KOReader checks, 50 python tests
 
+
+**Full Changelog**: https://github.com/nar-io/localwiki.koplugin/compare/v0.6.5...v0.6.9
 
 **Full Changelog**: https://github.com/nar-io/localwiki.koplugin/compare/v0.6.5...v0.6.9
 
