@@ -1,3 +1,13 @@
+# v9.12.0 · 2026-11-20
+
+# AppDock 9.12.0
+## DockAI-Sicherheit
+- DockAI nutzt den dchat-Supabase-Proxy; Groq-API-Keys werden serverseitig gespeichert und nicht an AppDock zurückgegeben.
+- Tageslimit 25 und Wochenlimit 100 werden serverseitig pro TBS-Geräte-ID atomar erzwungen; zurückgewiesene/fehlgeschlagene Provider-Anfragen werden wieder freigegeben.
+- Admin kann in AppDock API-Keys hinzufügen. Anzeigen, Löschen, Dateiimport und lokale Limitänderungen wurden entfernt.
+- DockAI benötigt ein angemeldetes TBS-Konto. Zähler setzen um Mitternacht UTC bzw. Montag UTC zurück.
+- Admin-Passwortprüfung erfolgt auf dem Server; das frühere im Plugin enthaltene Passwort wurde aus dem Client entfernt.
+
 # v9.8.2 · 2026-11-17
 
 # AppDock 9.8.2
@@ -35,15 +45,3 @@
 # Fixes:
 - bookshelf now opens in DReader
 - book titles in Bookshelf fixed
-
-# v9.7.0 · 2026-11-15
-
-# AppDock 9.7.0
-
-## Deutsch
-
-Cyber-Theme mit Skyline-Hintergrund, neuen Kartenstilen und anpassbaren Kartenskins; ein Regal mit zuletzt gelesenen und empfohlenen Büchern; ein optionales Lese-Haustier, das sich mit der Lesezeit entwickelt; sowie ein integrierter Dateiwähler statt manueller Pfadeingabe für Bilder, Werkzeuge, Musik- und Ausgabeordner. Die Version ergänzt außerdem farb-aware Darstellung und passende Cyber-Skin-Grafiken.
-
-## English
-
-Cyber theme with a skyline wallpaper, new card styles and configurable skins; a homescreen shelf for recently read and featured books; an optional reading pet that grows with reading time; and a built-in file chooser replacing manual path entry for images, tools, music and output folders. This release also adds color-aware rendering and bundled Cyber skin artwork.

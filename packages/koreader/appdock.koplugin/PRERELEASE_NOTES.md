@@ -5,13 +5,3 @@ Pre-release build from the current GitHub main branch (commit d02ef54101fed5f698
 # v7.9.100 · 2026-10-11
 
 Pre-release build created directly from the current GitHub main branch (commit d681ca3274d4b9c731180b7fefb1d89815162f1b).\n\nThe plugin archive contains the AppDock plugin directory only. The repository metadata currently reports version 8.0.0 on main; this release is intentionally tagged v7.9.100 as requested.
-
-# v7.9.99 · 2026-10-11
-
-{[0x1BADDESCRIPTION]}
-
-
-
-
-
-THIS RELEASE ISNT REAL. It is an error. DO NOT INSTALL.
