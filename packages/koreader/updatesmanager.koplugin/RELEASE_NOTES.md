@@ -1,3 +1,9 @@
+# v1.6.2 · 2026-11-20
+
+
+### Added
+- Added new plugin repositories
+
 # v1.6.1 · 2026-09-14
 
 
@@ -32,9 +38,3 @@
 
 ### Fixed
 - Crash on **Check for Updates**: `loadIgnoredPatches` was a `local function` defined after `checkForUpdates`, so Lua looked up a nil global.
-
-# v1.4.12 · 2026-08-29
-
-
-### Added
-- Added new patch and plugin repositories

@@ -1,3 +1,11 @@
+# v0.7.2 · 2026-11-20
+
+
+### Fixed
+- No more **Livelib: No network connection** dialog when the device wakes with Wi‑Fi
+  off or while the radio has no IP yet (auto-tracking waits for connectivity;
+  background sync uses quiet API).
+
 # v0.7.1 · 2026-11-01
 
 
@@ -28,17 +36,3 @@
 
 ### Fixed
 - Search results no longer crash on first paint: cover placeholders used an empty `CenterContainer` (`paintTo` on nil).
-
-# v0.4.0 · 2026-09-24
-
-
-### Added
-- Search results show covers in a left slot; they load in the background after the list is shown (Hardcover-style, via Trapper subprocess so the UI stays usable).
-- Author names in search results are **bold**.
-
-### Changed
-- Search results keep KOReader `Menu` chrome (title bar, back, paging, search icon) with custom rows for covers and author styling.
-- Search results are a centered dialog (not fullscreen), with table-style separator lines between rows.
-
-### Fixed
-- Auto-track sets **Currently reading** as soon as the book is linked (and on the first pages). It no longer waits for 1% progress. Opening an unlinked book no longer burns the 2s ensure before search/link finishes.
