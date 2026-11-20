@@ -1,3 +1,13 @@
+# v1.6.3 · 2026-11-20
+
+### 中文
+
+- 黑白阅读时，部分原先因内存不足而打不开的大幅渐进式 JPEG 漫画现在可以按原图清晰度显示，无需切换缩略图。
+
+### English
+
+- In grayscale reading, some large progressive JPEG comic pages that previously ran out of memory can now open at their original resolution without switching to thumbnails.
+
 # v1.6.2 · 2026-11-19
 
 ### 中文
@@ -53,15 +63,3 @@
 
 - Retry temporary cover-loading failures to reduce intermittent missing covers across sources.
 - Keep saved credentials when automatic sign-in recovery encounters an unexpected response.
-
-# v1.5.11 · 2026-11-12
-
-### 中文
-
-- 改善漫画增强预处理连续失败时的恢复，减少重复后台处理。
-- 修复漫画图片获取失败时丢失具体原因的问题，提供更明确的网络错误提示。
-
-### English
-
-- Improve recovery after repeated comic enhancement preprocessing failures and reduce repeated background processing.
-- Preserve the specific cause of comic image retrieval failures and show clearer network errors.

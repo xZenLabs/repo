@@ -36,7 +36,7 @@ For example, hold a bear in **bears**, then open **Saved Favorites** to find it 
 
 **Charm Studio** lets you choose an image, adjust its size, and move it relative to the top and right edges. Use the buttons for incremental adjustments, or tap a position value to enter it with the keyboard. Position values range from 0 to 20.
 
-For example, set the top position to 6, the right position to 2, and adjust the size. Press **Save** to keep your changes. When you select another image from the gallery or favorites, the current position and size are retained.
+For example, set the top position to 10, the right position to 2, and adjust the size. Press **Save** to keep your changes. When you select another image from the gallery or favorites, the current position and size are retained.
 
 **Default** saves the current look as your default. **Cancel** restores the state from before you opened Studio. Reset options and looks saved for an individual book can apply their own settings.
 

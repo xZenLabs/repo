@@ -1,0 +1,23 @@
+# Ko Pageturner plugin for KOReader
+# https://github.com/AnkioTomas/ko-pageturner
+# zenpm:auto-scraped
+id=ko-pageturner
+name=Ko Pageturner
+version=0.2.7
+description=KOReader 蓝牙翻页器插件（Kindle）+ 想法选择器 / Bluetooth page-turner plugin for KOReader on Kindle
+author=AnkioTomas
+category=utility
+platforms=koreader
+dependencies=
+source=https://github.com/AnkioTomas/ko-pageturner
+stars=5
+updated_at=2026-11-20T16:01:04Z
+published_at=2026-11-17T03:57:41Z
+readme_url=packages/koreader/ko-pageturner.koplugin/README.md
+readme_hash=5db0c71e5279a238a6a7c8bcc9de30c840ddd0af
+release_notes_url=packages/koreader/ko-pageturner.koplugin/RELEASE_NOTES.md
+release_notes_hash=74e4ea8cccbc9a4dc50ab498866c598449ca57aa3827eead18cc13de504a009a
+releases=[{"tag_name":"v0.2.7","assets":[{"name":"pageturner.koplugin-v0.2.7.zip","url":"https://github.com/AnkioTomas/ko-pageturner/releases/download/v0.2.7/pageturner.koplugin-v0.2.7.zip","size":33097,"digest":"sha256:b73dbb70d4797a65f13a86d9bbb5e2d6941c94cd74bc27f85b8a6b7778c0583b"}],"name":"翻页器 v0.2.7"},{"tag_name":"v0.2.6","assets":[{"name":"pageturner.koplugin-v0.2.6.zip","url":"https://github.com/AnkioTomas/ko-pageturner/releases/download/v0.2.6/pageturner.koplugin-v0.2.6.zip","size":32989,"digest":"sha256:d5ba7659d63a97f48b0755d10a94ee7694282437ebcd72095913543c2cbd1c55"}],"name":"翻页器 v0.2.6"},{"tag_name":"v0.2.5","assets":[{"name":"pageturner.koplugin-v0.2.5.zip","url":"https://github.com/AnkioTomas/ko-pageturner/releases/download/v0.2.5/pageturner.koplugin-v0.2.5.zip","size":32492,"digest":"sha256:537aa6cea50178eb766719b89bd4d918150250879d98bc3fdcd96d51ce41bfea"}],"name":"翻页器 v0.2.5"},{"tag_name":"v0.2.4","assets":[{"name":"pageturner.koplugin-v0.2.4.zip","url":"https://github.com/AnkioTomas/ko-pageturner/releases/download/v0.2.4/pageturner.koplugin-v0.2.4.zip","size":32314,"digest":"sha256:52d1b915780d42c976ea28089f2e6c223f8df874f1613b7982b84d02b0c2fc6e"}],"name":"翻页器 v0.2.4"},{"tag_name":"v0.2.3","assets":[{"name":"pageturner.koplugin-v0.2.3.zip","url":"https://github.com/AnkioTomas/ko-pageturner/releases/download/v0.2.3/pageturner.koplugin-v0.2.3.zip","size":31842,"digest":"sha256:21c7959ae1114c37dc85d86c8b43a733010beadb3b08193a8f48be8e38d0add2"}],"name":"翻页器 v0.2.3"},{"tag_name":"v0.2.2","assets":[{"name":"pageturner.koplugin-v0.2.2.zip","url":"https://github.com/AnkioTomas/ko-pageturner/releases/download/v0.2.2/pageturner.koplugin-v0.2.2.zip","size":30831,"digest":"sha256:fba5d888bb38504cd1221b48a416d341d6d6652a80c929f979a9ca8e6d24c660"}],"name":"翻页器 v0.2.2"},{"tag_name":"v0.2.1","assets":[{"name":"pageturner.koplugin-v0.2.1.zip","url":"https://github.com/AnkioTomas/ko-pageturner/releases/download/v0.2.1/pageturner.koplugin-v0.2.1.zip","size":30339,"digest":"sha256:e7e6e4c94965225230315d6d521196f8cc61dc3ec3aeef844b5517c00420d18b"}],"name":"翻页器 v0.2.1"},{"tag_name":"v0.2.0","assets":[{"name":"pageturner.koplugin-v0.2.0.zip","url":"https://github.com/AnkioTomas/ko-pageturner/releases/download/v0.2.0/pageturner.koplugin-v0.2.0.zip","size":22253,"digest":"sha256:21405d40d13e0af5bcb2f0c165b6a76deed6cc767f9b8fefb4021d1e19301432"}],"name":"翻页器 v0.2.0"},{"tag_name":"v0.1.1","assets":[{"name":"pageturner.koplugin-v0.1.1.zip","url":"https://github.com/AnkioTomas/ko-pageturner/releases/download/v0.1.1/pageturner.koplugin-v0.1.1.zip","size":21202,"digest":"sha256:13633e8be64105afd5922da4345ca7247cbbdf3550870e024082123ac0d18ceb"}],"name":"翻页器 v0.1.1"},{"tag_name":"v0.1.0","assets":[{"name":"pageturner.koplugin-v0.1.0.zip","url":"https://github.com/AnkioTomas/ko-pageturner/releases/download/v0.1.0/pageturner.koplugin-v0.1.0.zip","size":19824,"digest":"sha256:8e53da4074853d0a83d2e0a646d3e37782296cda9550aea048f5a66afbe2769e"}],"name":"翻页器 v0.1.0"}]
+source_type=release
+source_asset=pageturner.koplugin-v0.2.7.zip
+size=33097

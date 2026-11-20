@@ -1,3 +1,25 @@
+# v2.15.0 · 2026-11-20
+
+Classical mode (#53) and the Classical dictionary (#55)
+- A new **文言** button in the popup's title bar, left of the reading-mark button, turns
+  Classical mode on (**文言 ✓**). It stays on for later popups, in every book and after a
+  restart, until tapped again; it is also **Classical mode** in Popup → Dictionaries (off by
+  default). Popups opened from a popup's text follow it but have no button.
+- With it on, the popup shows the tapped character's **Classical dictionary** entry right under
+  its CC-CEDICT entry, labelled 文言: up to five senses classical texts use and modern Chinese
+  mostly doesn't (之 *him; her; it*, 說 = 悅 *pleased*), cut to two lines with
+  [Tap to show more]. A simplified character shows the traditional form its word uses (发 in 头发
+  → 髮); a variant form (説) shows its standard form's entry (說).
+- The dictionary covers 21,292 characters and 184 variant forms. It was condensed once by Claude
+  Haiku (`tools/build_classical.py`, Batch API, $1.37) from Chinese Notes' *Literary Chinese*
+  senses (CC BY-SA 3.0), English Wiktionary (CC BY-SA 4.0) and, for characters outside the 3,000
+  most common, Unihan (Unicode License v3); the result is CC BY-SA 4.0. Senses that cite no
+  source line, or that only restate a reading, are dropped. On the research note's sample,
+  CC-CEDICT alone had the needed sense 84% of the time, with the Classical dictionary under it
+  95%.
+- The database grows from 37.8 MB to 43.1 MB (the zip by 1.5 MB).
+- README screenshots retaken with the 文言 button.
+
 # v2.14.3 · 2026-11-20
 
 
@@ -50,24 +72,3 @@ Simplified forms for traditional taps (#50)
   common simplified words). A fallback row with an empty or other-length simplified form, or
   one outside the BMP that would draw as a box, adds nothing.
 - Same setting, **Show traditional forms**; off, head lines are exactly as in 2.13.0.
-
-# v2.13.0 · 2026-11-20
-
-Dictionary text as each source writes it (#48)
-- Each dictionary's text is now shown as its source writes it, by default: MOE 重編國語辭典 and
-  the 成語典 (short lines and Origin & Usage) in MOE's traditional characters, Wiktionary's
-  glosses with their Chinese as written (`original form of 廩／廪`), and CC-CEDICT's
-  cross-references with both forms (`variant of 夠|够 gòu`, `used in 鞦韆|秋千 qiūqiān`).
-- **New setting, Dictionary text** (Popup → Dictionaries): **Original** (default) or
-  **Simplified**, which gives exactly the text of 2.12.0 (`variant of 够 gòu`). It applies from
-  the next popup, to every block, MOE Always blocks, idiom short lines, the Origin & Usage view
-  and nested popups. Head lines are unchanged (**头发** 頭髮), and so are the dictionaries that
-  are simplified or English already (Xinhua, Moegirlpedia, CBDB, Wikipedia titles).
-- Both versions are stored; nothing is converted on the device. **Rebuild your MOE and 成語典
-  files** (`tools/build_optional.py --only moe,idioms --force`, then copy them over): files
-  built before 2.13.0 hold one version, which the popup shows whatever the setting, and
-  **Status** says so. `--traditional` is gone from the build scripts.
-- Sizes: the release database 36.3 → 37.8 MB (the zip 17.4 → 17.6 MB); the MOE file 28.2 →
-  45.2 MB, the 成語典 file 21.7 → 36.3 MB.
-- MOE's popup label is now **國語辭典** (was MOE); the menu and Status still say MOE 重編國語辭典.
-- A self-referring "variant of" sense is dropped in either form (`variant of 個|个 gè` on 个).
