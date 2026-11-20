@@ -2,7 +2,7 @@
 
 Add more collection pack
 
-# koreader · 2026-11-19
+# v1.5 · 2026-11-19
 
 DogEarBooks 1.5 builds on KitanaCode’s Book Nook Charms with a visual gallery, folder browsing, and new polar bear and cinema-themed bookmark collections.
 
