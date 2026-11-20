@@ -1,3 +1,38 @@
+# v2.13.0 · 2026-11-20
+
+Dictionary text as each source writes it (#48)
+- Each dictionary's text is now shown as its source writes it, by default: MOE 重編國語辭典 and
+  the 成語典 (short lines and Origin & Usage) in MOE's traditional characters, Wiktionary's
+  glosses with their Chinese as written (`original form of 廩／廪`), and CC-CEDICT's
+  cross-references with both forms (`variant of 夠|够 gòu`, `used in 鞦韆|秋千 qiūqiān`).
+- **New setting, Dictionary text** (Popup → Dictionaries): **Original** (default) or
+  **Simplified**, which gives exactly the text of 2.12.0 (`variant of 够 gòu`). It applies from
+  the next popup, to every block, MOE Always blocks, idiom short lines, the Origin & Usage view
+  and nested popups. Head lines are unchanged (**头发** 頭髮), and so are the dictionaries that
+  are simplified or English already (Xinhua, Moegirlpedia, CBDB, Wikipedia titles).
+- Both versions are stored; nothing is converted on the device. **Rebuild your MOE and 成語典
+  files** (`tools/build_optional.py --only moe,idioms --force`, then copy them over): files
+  built before 2.13.0 hold one version, which the popup shows whatever the setting, and
+  **Status** says so. `--traditional` is gone from the build scripts.
+- Sizes: the release database 36.3 → 37.8 MB (the zip 17.4 → 17.6 MB); the MOE file 28.2 →
+  45.2 MB, the 成語典 file 21.7 → 36.3 MB.
+- MOE's popup label is now **國語辭典** (was MOE); the menu and Status still say MOE 重編國語辭典.
+- A self-referring "variant of" sense is dropped in either form (`variant of 個|个 gè` on 个).
+
+# v2.12.0 · 2026-11-20
+
+Traditional forms on the head lines (#47)
+- Each popup entry's head line shows the word's traditional form beside it, in the same
+  typeface, smaller (0.8×) and grey, when it differs: **头发** 頭髮, **中国** 中國; nothing for
+  人民. A word shows the one form its entry gives (发现 發現, 干净 乾淨). A single character with
+  several shows them all, "/"-joined, the one the word around it uses first (发 in 头发:
+  髮/發; 干 in 干净: 乾/干/幹), the character itself included when it is one of them.
+- Applies to every block: CC-CEDICT's, the fallback dictionaries', MOE Always blocks and
+  nested popups. A Wiktionary "traditional" form of another length (a longer wording, another
+  word) is not shown. A book in traditional characters adds nothing. The entries' text and the
+  components block are unchanged.
+- **New setting, Show traditional forms** (on by default), after Show character frequency rank.
+
 # v2.11.1 · 2026-11-19
 
 Frequency ranks labels (#45, #46)
@@ -49,25 +84,3 @@ Leftovers of the two retired plugins removed (#34)
   and the Status line naming them are gone, along with their tests. Settings already copied
   stay as they are. Code comments no longer cite the two old repos (the WordGloss credits
   stay), and tools/plugin_runtime.py no longer runs an interlinear-pinyin 0.5.0 copy.
-
-# v2.9.2 · 2026-11-19
-
-Popup buttons outlined in night mode (#43)
-- **In KOReader's night mode, the lines between the popup's bottom buttons are visible again.**
-  KOReader draws them light grey (0xAA); night mode inverted that to a dark grey (0x55) on
-  black, which the Boox's e-ink hardly shows, so the word buttons, Translate & analyze and
-  Close read as loose text. In night mode they are now drawn so they come out light grey
-  (0xAA) on black, as day mode's are on white. Day mode is unchanged (same pixels). The
-  popup's other lines and grey text were already visible in night mode.
-
-# v2.9.1 · 2026-11-18
-
-
-No punctuation lines in Translate & Analyze (#31)
-- **Translate & Analyze no longer gives punctuation marks a line of their own.** The learner
-  prompt (2.8.1) said to skip punctuation, but gemini-3.5-flash-lite listed every mark anyway
-  (often with an empty meaning: "，(,):"), 4–7 lines per reply in three takes out of three. The
-  rule is now said outright, in the system prompt too, and the example ends in a ！ that gets no
-  line. Three takes with the new prompt: no punctuation lines, 15–18 entries.
-- The README's Translate & Analyze screenshot is retaken with the learner reply, and its alt text
-  rewritten.
