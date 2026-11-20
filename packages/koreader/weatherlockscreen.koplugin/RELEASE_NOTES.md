@@ -1,3 +1,30 @@
+# v1.2.0 · 2026-11-20
+
+## New Features
+
+* **Automatic updates.** Once a day, the plugin checks GitHub for a new release. When there is one, a popup offers to install it, and the plugin's menu entry shows "(update available)". Tap "Update now" and restart KOReader when asked. You can turn this off by unchecking "Check for updates automatically".
+* **Battery indicator.** The lockscreen can now show the battery level: as a bar along the bottom edge (with adjustable thickness) or as an icon and percentage in the header. It's off by default; turn it on under "Battery indicator".
+* Thanks to @rogervokma-stack, WeatherLockscreen is now available in Japanese.
+
+## Changes
+
+* The scaling and rotation overrides are combined into a single "Overrides" entry to keep the menu compact. 
+* The plugin's menu entry now shows an icon for the current weather, and the "Battery indicator" entry shows the live battery state.
+* Added missing Chinese and Japanese translations. "Unknown Title" and "No book" on the Reading display are now translated in all languages.
+
+## Notes
+
+This is the last release you have to install by hand. From now on, new versions can be installed from within KOReader. Installing updates this way needs a recent KOReader version; on older versions, update manually as before.
+
+## What's Changed
+* Add Japanese translation by @rogervokma-stack in https://github.com/loeffner/WeatherLockscreen/pull/41
+* Feature/battery indicator by @loeffner in https://github.com/loeffner/WeatherLockscreen/pull/42
+
+## New Contributors
+* @rogervokma-stack made their first contribution in https://github.com/loeffner/WeatherLockscreen/pull/41
+
+**Full Changelog**: https://github.com/loeffner/WeatherLockscreen/compare/v1.1.0...v1.2.0
+
 # v1.1.0 · 2026-11-01
 
 ## New Features
@@ -84,42 +111,3 @@ Well, here we go:
 * Bugfixes and refactorings by @loeffner in https://github.com/loeffner/WeatherLockscreen/pull/29
 
 **Full Changelog**: https://github.com/loeffner/WeatherLockscreen/compare/v0.9.6-beta.1...v0.9.6-beta.2
-
-# v0.9.6-beta.1 · 2026-02-03
-
-### This is a beta release.
-
-## New Features
-* The sun and moon icons previously used as a fallback have been removed. Instead, you can now select one of the default screen savers as a fallback in case of a missing internet connection or a faulty API.
-* New “Today-focused” display mode (with “feels like” information) by @moyencourt.
-* The “Cover” display mode is now also available outside the reader (i.e., in the file browser).
-* The “Cover” display mode has a new option to “Stretch to fill” the cover (in addition to “Zoom to fill” and “Fit to screen”).
-* Thanks to @omer-faruq, the WeatherLockscreen plugin is now available in Turkish.
-
-
-## Changes
-
-* Some display modes have been renamed to be more descriptive:
-
-  * Detailed → Today & Tomorrow
-  * Minimal → Current
-  * Today (new)
-
-* Check out my [patches](https://github.com/loeffner/KOReader.patches) if you want to customize which hours are shown in the "Today & Tomorrow" and "Today" views.
-
-## Bugs fixed
-
-* Temperature was sometimes rounded incorrectly. This has been fixed by @moyencourt.
-* The header font size (which shows the location and timestamp of the weather data) is now the same across all display modes. It has been increased slightly for some modes to make it easier to read.
-
-## What's Changed
-* Translation for Turkish by @omer-faruq in https://github.com/loeffner/WeatherLockscreen/pull/19
-* fix: round to nearest integer by @moyencourt in https://github.com/loeffner/WeatherLockscreen/pull/23
-* add day-focused display by @moyencourt in https://github.com/loeffner/WeatherLockscreen/pull/24
-* Add option to configure the fallback by @loeffner in https://github.com/loeffner/WeatherLockscreen/pull/27
-* Better cover option by @loeffner in https://github.com/loeffner/WeatherLockscreen/pull/28
-
-## New Contributors
-* @moyencourt made their first contribution in https://github.com/loeffner/WeatherLockscreen/pull/23
-
-**Full Changelog**: https://github.com/loeffner/WeatherLockscreen/compare/v0.9.5-beta.1...v0.9.6-beta.1

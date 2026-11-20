@@ -4,14 +4,14 @@
 id=pocketbook-bluetooth
 name=PocketBook Bluetooth
 version=0.0.5
-description=--
+description=Bluetooth for KOReader on PocketBook, Kobo and Kindle: scan, pair and connect page-turn remotes and keyboards, reconnect them after wake, and bind their buttons to any KOReader action.
 author=sabrina553
 category=utility
 platforms=koreader
 dependencies=
 source=https://github.com/sabrina553/bluetooth.koplugin
 stars=7
-updated_at=2026-11-20T16:01:04Z
+updated_at=2026-11-20T17:01:01Z
 published_at=2026-11-01T12:00:50Z
 prerelease_version=0.0.6-dev.4
 prerelease_published_at=2026-11-20T13:09:12Z
