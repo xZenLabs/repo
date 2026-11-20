@@ -1,3 +1,16 @@
+# 0.0.6-dev.4 · 2026-11-20
+
+**Kindle: Set up remotes from the plugin** (Settings → Set up remotes…)
+
+Kindle only pairs headphones on its own. This adds the one-time setup that lets remotes, keyboards and controllers pair, which used to need SSH.
+
+- Explains the risks first, with a checklist of what to back up. Older models known to white-screen (Oasis 1, Paperwhite 3 and earlier) get a second warning. Other models can try.
+- Every changed file is backed up to `koreader/settings/bluetooth_kindle_setup/`, the system partition is always locked again, and a failed step rolls back.
+- **Undo remote setup…** restores the originals.
+- **Untested on a Kindle so far.** Please report success or failure in an issue, with the model and firmware the setup screen shows.
+
+Also in this build (same as 0.0.6-beta.1): Turn off if none reconnect, and notification settings with Silent mode.
+
 # 0.0.6-beta.1 · 2026-11-20
 
 First beta of 0.0.6: everything since 0.0.5.
@@ -36,20 +49,3 @@ Work held back during the 0.0.5 freeze, now on the development channel.
 - **Smaller fixes:** device info skips Trusted/Blocked where unsupported and skips reads for devices paired by address.
 
 Kobo and Kindle testers wanted. PocketBook remains the tested platform.
-
-# 0.0.5-beta.5 · 2026-10-27
-
-Everything from 0.0.5-dev.10 and 0.0.5-dev.11 since beta.4.
-
-New
-- Fast mode (D-Bus) for device reads and actions, next to Compatible (bluetoothctl). Automatic is the default and picks for you. Live updates are opt-in.
-- Phones pair: the pairing session now answers the phone's request.
-- Blocked devices show in the menu with how to unblock them.
-
-Fixes
-- Extra taps on the Bluetooth switch are ignored only while your own switch is under way; wake, connect and suspend no longer swallow a tap.
-- One pairing session at a time, and a sleep during pairing no longer abandons it.
-- The scan screen says why a pairing didn't start (another pairing running, or an invalid address).
-- Pairing ends straight away on "not available" or no controller, instead of after about 20 s.
-- Works with BusyBox builds whose grep lacks -E.
-- Clearer logs around wake reconnects.
