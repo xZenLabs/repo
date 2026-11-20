@@ -29,7 +29,7 @@ KOReader 中文阅读插件：点一个字，即可看到它在本句中组成�
 </tr>
 <tr>
 <td><img src="docs/components.png" alt="Popup for 茴 in 孔乙己's 要一碟茴香豆: at the top the line 他不回答，对柜里说：“温两碗酒，要一碟茴香豆。” with 茴 marked; 字频 4,633, then 茴 huí (bound form) fennel; its parts, labelled Wikt: 艹 cǎo grass; plant (草字头) → meaning, 回 huí to go back → sound (same sound); then 茴香豆 and 茴香"><br><a href="#character-components"><b>What each character is made of</b></a>: 茴 is 艹 for the meaning and 回 <i>huí</i> for the sound</td>
-<td><img src="docs/traditional.png" alt="Popup for 观 in 阿Q正传's 观音娘娘: at the top the line …而且又不见了观音娘娘座前的一个宣德炉。 with 观 marked; 字频 407, then 观 觀 guān · likely here (觀 smaller, in grey), with guàn and Guàn after it; traditional 觀: 雚 guàn (archaic) stork; heron → sound (same sound), 見 jiàn see → meaning, simplified: 雚 → 又; 观音 觀音 Guānyīn · decides 观's reading"><br><a href="#character-components"><b>Parts the simplification hid</b></a>: 观 is read through 觀, 雚 <i>guàn</i> → sound</td>
+<td><img src="docs/traditional.png" alt="Popup for 观 in 阿Q正传's 观音娘娘: at the top the line …而且又不见了观音娘娘座前的一个宣德炉。 with 观 marked; 字频 407, then 观 觀 guān · likely here (觀 smaller), with guàn and Guàn after it; traditional 觀: 雚 guàn (archaic) stork; heron → sound (same sound), 見 jiàn see → meaning, simplified: 雚 → 又; 观音 觀音 Guānyīn · decides 观's reading"><br><a href="#character-components"><b>Parts the simplification hid</b></a>: 观 is read through 觀, 雚 <i>guàn</i> → sound</td>
 </tr>
 <tr>
 <td><img src="docs/chengyu.png" alt="Popup for 也 in 孔乙己's 满口之乎者也: at the top the line 他对人说话，总是满口之乎者也，教人半懂不懂的。 with 也 marked; then 字频 38, 也 yě; its Wikt line pictogram (象形), 满口之乎者也 (滿口之乎者也 beside it) and 之乎者也 from CC-CEDICT, 之乎者也 with a Chinese line labelled 新华: 这四个字都是文言虚词，讽刺人说话喜欢咬文嚼字。也形容半文不白的话或文章。; a 成语 Origin &amp; Usage button"><br><a href="#chengyu"><b>Chengyu explained</b></a>: 之乎者也 with Xinhua's line (optional file) …</td>
@@ -278,13 +278,13 @@ where the words break.
   label when that is shown (`CEDICT · 字频 4,270`). Words around the character never show one.
   With [your own frequency ranks](#your-own-frequency-ranks) on, it shows your rank, or the
   bundled one marked **(bundled)** for a character not in your books.
-- **The traditional form** beside each entry's headword, smaller and grey, when it is not the
+- **The traditional form** beside each entry's headword, smaller, when it is not the
   same: **头发** 頭髮, **中国** 中國, and nothing for 人民. A word shows the one form it is
   written with (发现 發現, 头发 頭髮). A single character with several shows them all, the one
   the word around it uses first: 发 in 头发 is **发** 髮/發, 干 in 干净 **干** 乾/干/幹. Only
   the head lines change. **Show traditional forms** in the menu turns it off.
 - **Tapped in traditional characters** (a traditional book, or MOE's text in a popup), the head
-  line leads with the simplified form instead, the form as tapped grey beside it: 頭 in 頭髮 is
+  line leads with the simplified form instead, the form as tapped beside it, smaller: 頭 in 頭髮 is
   **头** 頭, the word **头发** 頭髮. A character shows the one simplified form the word around
   it uses: 乾 in 乾淨 is **干** 乾, in 乾隆 just 乾. Same setting.
 - **MOE's entry for the character**, with the optional MOE dictionary: in place of CC-CEDICT's
@@ -509,7 +509,8 @@ Where CC-CEDICT gives a word's syllable only as a neutral tone, that is
 drawn above a rare character (刺猬 *cìwei*, 鼓捣 *gǔdao*, 疙瘩 *gēda*), and its popup entry (猬
 *wèi*) is marked with the same letters. When the character has several entries with those
 letters, the one whose traditional form the word uses is marked (发 in 头发 *tóufa*: 髮 *fà*,
-not 發 *fā*), else the character's default. Where CC-CEDICT lists the word both ways (大爷 *dàyé*
+not 發 *fā*), else the word's citation tone from a short hand-checked list (处 in 好处 *hǎochu*:
+*chù*; 应 in 答应 *dāying*: *yìng*), else the character's default. Where CC-CEDICT lists the word both ways (大爷 *dàyé*
 "idler" / *dàye* "uncle"), the toned reading is drawn and the popup marks the neutral one.
 
 What is drawn on a page:

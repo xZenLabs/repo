@@ -1,0 +1,27 @@
+# Apikomicreader plugin for KOReader
+# https://github.com/ivo-hr/apikomicreader.koplugin
+# zenpm:auto-scraped
+id=apikomicreader
+name=Apikomicreader
+version=.1.1.3
+description=🍵 KOReader plugin to read manga & comics from the web (MangaDex, Internet Archive & more) on your e-reader. || 🥘 Plugin de KOReader para leer manga y cómics de internet (MangaDex, Internet Archive...
+author=ivo-hr
+category=media
+platforms=koreader
+dependencies=
+source=https://github.com/ivo-hr/apikomicreader.koplugin
+stars=5
+updated_at=2026-11-20T15:01:06Z
+published_at=2026-11-06T21:17:28Z
+prerelease_version=.1.0.1a
+prerelease_published_at=2026-11-06T20:34:53Z
+readme_url=packages/koreader/apikomicreader.koplugin/README.md
+readme_hash=7a80d83be5d7008769bfad826b72a5621144739c
+release_notes_url=packages/koreader/apikomicreader.koplugin/RELEASE_NOTES.md
+release_notes_hash=1e0718d0f87c6a551c645a831efbecd5a742b1404e9848168a99fd34f1f1c026
+prerelease_notes_url=packages/koreader/apikomicreader.koplugin/PRERELEASE_NOTES.md
+prerelease_notes_hash=85798930416b42a0cd563fe3346ac6872ab71c3a139d3983e0ec73b6e2a26b22
+releases=[{"tag_name":"v.1.1.3","assets":[{"name":"APIKOmicReader-v1.1.3.zip","url":"https://github.com/ivo-hr/apikomicreader.koplugin/releases/download/v.1.1.3/APIKOmicReader-v1.1.3.zip","size":155665,"digest":"sha256:33a307e9b28514c96e69681bf2215f6571117ccfac89fedd6d5028e3a53bf33c"}],"name":"Library sorting, queue, simultaneous downloads and more!"},{"tag_name":"v.1.0.0","assets":[{"name":"APIKOmicReader-v1.0.0.zip","url":"https://github.com/ivo-hr/apikomicreader.koplugin/releases/download/v.1.0.0/APIKOmicReader-v1.0.0.zip","size":146903,"digest":"sha256:db6b4a191851a811579febb6566530bd343fd67715065e73a885965d82c36126"}],"name":"FIRST RELEASE!"},{"tag_name":"v.1.0.1a","assets":[{"name":"apikomicreader-v1.0.1a.zip","url":"https://github.com/ivo-hr/apikomicreader.koplugin/releases/download/v.1.0.1a/apikomicreader-v1.0.1a.zip","size":155665,"digest":"sha256:05c0c246431d84b41b37a9bc9fc247301a9f3410025f59152ac9cfd4ec44bb67"}],"name":"Library sorting and simultaneous downloads","prerelease":true}]
+source_type=release
+source_asset=APIKOmicReader-v1.1.3.zip
+size=155665

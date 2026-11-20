@@ -1,3 +1,12 @@
+# v1.4.3 · 2026-11-20
+
+
+- While sharing, the power button puts the e-reader to sleep again, which ends the session. The e-reader still stays awake on its own while the screen is open.
+- The network port opened for sharing only accepts connections from private networks, and a port that cannot be opened stops sharing with a message.
+- When the e-reader sleeps while sharing, the message about it shows up after waking, instead of being drawn over the sleep screen.
+- On devices with keys, the back key goes back from the share screen to the cards, and both screens close properly when KOReader quits.
+- Titles in capital letters on the cards keep accented letters such as ä, è, ö and ø.
+
 # v1.4.2 · 2026-11-12
 
 
@@ -17,13 +26,3 @@
 
 
 - The Book Rewind cover on the sleep screen while the plugin is open.
-
-# v1.3.0 · 2026-11-06
-
-
-- **Save all** on the share page saves every card together in a zip file.
-- Every card now redraws the whole screen with a flash, to reduce the ghost of the previous card.
-- A checkbox on the cover flashes the screen twice on each card, for screens where one flash still leaves marks.
-- On color e-ink, cards use the color modes of the screen, the same KOReader uses for covers.
-- Texts on the share page and screen say "e-reader" instead of "Kindle".
-- On the summary card, "Author" and "Month" are now "Top author" and "Best month".

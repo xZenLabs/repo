@@ -1,4 +1,4 @@
-# version1.6 · 2026-11-19
+# v1.6 · 2026-11-19
 
 Add more collection pack
 

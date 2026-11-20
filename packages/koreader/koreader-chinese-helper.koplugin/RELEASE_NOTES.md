@@ -1,3 +1,27 @@
+# v2.14.3 · 2026-11-20
+
+
+Neutral tones the traditional form can't decide (#52)
+- 处 in 好处 is now marked **chù** "likely here" and listed first (was chǔ, the character's
+  default). The same goes for 坏处, 害处 and 难处 (chù), 答应, 照应 and 满口答应 (yìng),
+  裁缝 (féng), 思量 and 掂量 (liáng), 停当 (dàng), 大部分 (fèn), 松散 (sǎn) and
+  哭丧(着)脸 (sāng), in simplified and traditional text.
+- These come from a short hand-checked list, used only where #51's scan found that the
+  traditional form can't decide and that MOE's citation tone differs. Each one is a reading MOE
+  and pypinyin's phrase data agree on (难处: the neutral word nánchu, "difficulty").
+  Taiwan readings (悄悄话 qiǎo, 连累 lèi) and 生分, where the sources disagree, are left out.
+- Only the popup's marking changes; the pinyin drawn on the page is the same.
+
+# v2.14.2 · 2026-11-20
+
+
+Head line's second form in the text's shade (#54)
+- The traditional form beside a headword (**观** 觀), and the form as tapped beside a
+  traditional tap (**头** 頭), are now the same shade as the text, not grey. They are still
+  smaller and not bold. The label line, 字频, the spoken-tone note and [Tap to show more] stay
+  grey.
+- README screenshots with a second form retaken.
+
 # v2.14.1 · 2026-11-20
 
 Neutral tones marked by the word's traditional form (#51)
@@ -47,27 +71,3 @@ Dictionary text as each source writes it (#48)
   45.2 MB, the 成語典 file 21.7 → 36.3 MB.
 - MOE's popup label is now **國語辭典** (was MOE); the menu and Status still say MOE 重編國語辭典.
 - A self-referring "variant of" sense is dropped in either form (`variant of 個|个 gè` on 个).
-
-# v2.12.0 · 2026-11-20
-
-Traditional forms on the head lines (#47)
-- Each popup entry's head line shows the word's traditional form beside it, in the same
-  typeface, smaller (0.8×) and grey, when it differs: **头发** 頭髮, **中国** 中國; nothing for
-  人民. A word shows the one form its entry gives (发现 發現, 干净 乾淨). A single character with
-  several shows them all, "/"-joined, the one the word around it uses first (发 in 头发:
-  髮/發; 干 in 干净: 乾/干/幹), the character itself included when it is one of them.
-- Applies to every block: CC-CEDICT's, the fallback dictionaries', MOE Always blocks and
-  nested popups. A Wiktionary "traditional" form of another length (a longer wording, another
-  word) is not shown. A book in traditional characters adds nothing. The entries' text and the
-  components block are unchanged.
-- **New setting, Show traditional forms** (on by default), after Show character frequency rank.
-
-# v2.11.1 · 2026-11-19
-
-Frequency ranks labels (#45, #46)
-- The bundled option is now **Bundled: web, books, news, subtitles**, and its help names all of
-  wordfreq's sources for Chinese: web pages, Google Books, news, film and TV subtitles,
-  Wikipedia, Twitter and Jieba's wordlist (#45).
-- With From my books on, the 字频 line shows just your rank (**字频 3,504**, or **5,700+** past
-  your file's exact ranks), without "(my books)". A character not in your books still says
-  **(bundled)**, since that rank is on a different scale (#46).

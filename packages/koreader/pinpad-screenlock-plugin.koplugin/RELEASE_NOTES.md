@@ -1,3 +1,9 @@
+# v1.2.2 · 2026-11-20
+
+- Fixed a bug where the screensaver disappeared behind the pinpad dialog.
+
+**Full Changelog**: https://github.com/Lena2309/pinpad_screenlock_plugin/compare/v1.2.1...v1.2.2
+
 # v1.2.1 · 2026-11-16
 
 * A few fixes to improve how the plugin is integrated in Koreader 2026.07..
@@ -32,8 +38,3 @@
 
 **Fix:**
 * The PIN pad does not appear anytime the UIManager runs, which was annoying. Instead the plugin entirely runs via event listening.
-
-# v1.0.4 · 2025-10-26
-
-**Features:**
-* on boot display when launching KOReader (solution from @oleasteo)

@@ -1,3 +1,9 @@
+# v3.0.1 · 2026-11-20
+
+Changelog
+• Added 8 languages
+• Fixed menu issues
+
 # v3.0.0 · 2026-11-19
 
 v3.0.0
