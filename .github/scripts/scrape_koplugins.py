@@ -37,6 +37,7 @@ from scrape_common import (
     newest_stable_release,
     normalize_repo_ref,
     package_dir_name,
+    pinned_name,
     repository_identity,
     scraper_timestamp,
     save_category_cache,
@@ -252,7 +253,7 @@ def main():
             continue
         _meta_id, meta_text, summary = build_meta(
             repo, release, known_ids, category, meta_id=record["id"],
-            kind=kind, name_override=record["name"],
+            kind=kind, name_override=pinned_name(record),
             readme_url=readme_url, readme_hash=readme_hash,
             release_notes_url=release_notes_url, release_notes_hash=release_notes_hash,
             prerelease=prerelease, prerelease_notes_url=prerelease_notes_url,

@@ -1,8 +1,8 @@
-# PocketBook Bluetooth plugin for KOReader
+# Bluetooth plugin for KOReader
 # https://github.com/sabrina553/bluetooth.koplugin
 # zenpm:auto-scraped
 id=pocketbook-bluetooth
-name=PocketBook Bluetooth
+name=Bluetooth
 version=0.0.5
 description=Bluetooth for KOReader on PocketBook, Kobo and Kindle: scan, pair and connect page-turn remotes and keyboards, reconnect them after wake, and bind their buttons to any KOReader action.
 author=sabrina553

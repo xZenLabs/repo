@@ -455,11 +455,82 @@ class PluginScraperTests(unittest.TestCase):
             self.assertIn("prerelease_version=2.1.0-beta1\n", meta)
             self.assertIn("alpha_version=2.1.0-alpha2\n", meta)
             self.assertIn("source=https://github.com/xZenLabs/zen-os\n", meta)
+            self.assertIn("id=zen-ui\n", meta)
+            self.assertIn("name=Zen UI\n", meta)
             with open(other_meta_path, encoding="utf-8") as fh:
                 self.assertIn("version=1.0.0\n", fh.read())
             added, updated = write_results.call_args.args
             self.assertEqual(added, [])
             self.assertEqual([item["id"] for item in updated], ["zen-ui"])
+
+    def test_derived_name_follows_an_upstream_repository_rename(self):
+        repo = {
+            "owner": {"login": "owner"},
+            "name": "new-name.koplugin",
+            "full_name": "owner/new-name.koplugin",
+            "html_url": "https://github.com/owner/new-name.koplugin",
+            "default_branch": "main",
+            "stargazers_count": 15,
+            "description": "Renamed plugin",
+            "topics": ["koplugin"],
+        }
+
+        with tempfile.TemporaryDirectory() as temp_dir:
+            original_root = scrape_common.REPO_ROOT
+            original_koreader_dir = scrape_common.KOREADER_DIR
+            scrape_common.REPO_ROOT = temp_dir
+            scrape_common.KOREADER_DIR = os.path.join(
+                temp_dir, "packages", "koreader"
+            )
+            package_dir = os.path.join(scrape_common.KOREADER_DIR, "old-name.koplugin")
+            os.makedirs(package_dir)
+            meta_path = os.path.join(package_dir, ".meta")
+            with open(meta_path, "w", encoding="utf-8") as fh:
+                fh.write(
+                    "# zenpm:auto-scraped\n"
+                    "id=old-name\n"
+                    "name=Old Name\n"
+                    "version=source\n"
+                    "description=Plugin\n"
+                    "author=owner\n"
+                    "category=utility\n"
+                    "platforms=koreader\n"
+                    "dependencies=\n"
+                    "source=https://github.com/owner/old-name.koplugin\n"
+                )
+            try:
+                with mock.patch.object(
+                    scrape_koplugins, "fetch_repo", return_value=repo
+                ), mock.patch.object(
+                    scrape_koplugins, "fetch_releases", return_value=[]
+                ), mock.patch.object(
+                    scrape_koplugins, "cache_release_notes",
+                    return_value=(None, None, False, True),
+                ), mock.patch.object(
+                    scrape_koplugins, "cache_readme",
+                    return_value=(None, None, False, True),
+                ), mock.patch.object(
+                    scrape_koplugins, "load_blacklist", return_value=set()
+                ), mock.patch.object(
+                    scrape_koplugins, "load_category_cache", return_value={}
+                ), mock.patch.object(
+                    scrape_koplugins, "save_category_cache"
+                ), mock.patch.object(
+                    scrape_koplugins, "write_results"
+                ), mock.patch.object(
+                    sys, "argv", ["scrape_koplugins.py", "--package", "old-name"]
+                ):
+                    self.assertEqual(scrape_koplugins.main(), 0)
+            finally:
+                scrape_common.REPO_ROOT = original_root
+                scrape_common.KOREADER_DIR = original_koreader_dir
+
+            with open(meta_path, encoding="utf-8") as fh:
+                meta = fh.read()
+            self.assertIn("# New Name plugin for KOReader\n", meta)
+            self.assertIn("id=old-name\n", meta)
+            self.assertIn("name=New Name\n", meta)
+            self.assertIn("source=https://github.com/owner/new-name.koplugin\n", meta)
 
 
 if __name__ == "__main__":

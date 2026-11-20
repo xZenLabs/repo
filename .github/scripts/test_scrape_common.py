@@ -561,6 +561,17 @@ class CachedPackageMetadataTests(unittest.TestCase):
             ("xzenlabs", "zenmtp"),
         )
 
+    def test_only_hand_set_names_are_pinned(self):
+        self.assertIsNone(scrape_common.pinned_name(
+            {"ref": "owner/old-name.koplugin", "name": "Old Name"}
+        ))
+        self.assertEqual(scrape_common.pinned_name(
+            {"ref": "owner/bluetooth.koplugin", "name": "PocketBook Bluetooth"}
+        ), "PocketBook Bluetooth")
+        self.assertEqual(scrape_common.pinned_name(
+            {"ref": "owner/zen_ui.koplugin", "name": "Zen UI"}
+        ), "Zen UI")
+
 
 if __name__ == "__main__":
     unittest.main()

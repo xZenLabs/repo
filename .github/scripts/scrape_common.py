@@ -536,6 +536,18 @@ def display_name(repo_name):
     return name.title() if name else repo_name
 
 
+def pinned_name(record):
+    """Return a hand-set listing name, or None when the scraper derived it.
+
+    A name that still matches the one derived from the recorded repository is
+    scraper-owned, so it is re-derived on refresh and follows upstream renames.
+    """
+    repo_name = record["ref"].rsplit("/", 1)[-1]
+    if record["name"] == display_name(repo_name):
+        return None
+    return record["name"]
+
+
 def package_dir_name(meta_id, kind):
     if kind == KIND_ICON_PACK:
         return f"{meta_id}.iconpack"

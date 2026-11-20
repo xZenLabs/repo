@@ -270,6 +270,12 @@ corresponding content changes. Cached releases let clients populate their
 version pickers without calling the GitHub API. When a release has no uploaded
 ZIP asset, its automatically generated GitHub source-code ZIP is cached instead.
 
+When an upstream repository is renamed or transferred, the next scan follows
+GitHub's redirect and updates the package's `source` and download URLs. The
+display `name` follows too, unless it was set by hand (it differs from the name
+the scraper derives from the repository name). The package `id` and directory
+never change, because ZenPM tracks installed packages by ID.
+
 ### Refreshing KOReader packages locally
 
 Run both scrapers with a GitHub token, then regenerate the manifest:
