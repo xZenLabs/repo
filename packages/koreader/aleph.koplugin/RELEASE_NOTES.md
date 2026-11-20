@@ -1,3 +1,61 @@
+# v1.3.0 · 2026-11-20
+
+## Aleph 1.3.0
+
+**Goodreads is built in, fourteen new widgets, a richer X-Ray, Collections from Calibre, French and Italian, and a lighter Aleph on low-memory devices.**
+
+Download **aleph.koplugin.zip** below and follow the [Updating guide](https://github.com/lara-2-ko/aleph.koplugin/wiki/Updating): delete the old `aleph.koplugin` folder, copy the new one in its place, restart KOReader. Your settings, Home layouts, pins and library are kept.
+
+### Goodreads, built in
+- Aleph keeps Goodreads up to date itself: **Currently reading** when you start a book, your **progress**, **Read** with the day you finished and your stars, and status changes from a book's page, Home or KOReader. All in the background, so reading never waits.
+- **A book is never marked Read twice.** Aleph asks Goodreads first every time.
+- **Offline?** Changes wait and are sent later. **Waiting to send** shows them.
+- **You no longer need the Goodreads plugin by advokatb.** If it is still on, Aleph offers to turn it off. Your sign-in, settings and book links carry over.
+- The sign-in row now says **Signed in** or **Not signed in**.
+
+### New widgets
+- **Goals** (with rings on a large tile), **Daily goal**, **Weekly goal**, **Monthly goal**
+- **Reading DNA**, **Monthly challenge**, **Reading rhythm**, **Year projection**, **Diversity score** (after BookOrbit's)
+- **Reading bingo**: a card of 12 or 24 reading challenges, filled as you finish books
+- **Weather**, from Open-Meteo, only when Wi-Fi is already on
+- **Hours read**: all your hours read, since when, this year and how many books
+- **Time read**: this year's hours month by month, and **Books and pages**: books finished and pages read each month (after the Reading Log plugin's charts)
+- Every widget in its own colour on colour screens, and **you can choose any widget's colour**: Customize Home → select it → **Colour** (eleven colours, or its own)
+
+### X-Ray
+- A name's card shows **where it comes up** (chapter by chapter, first seen, most mentions, latest) and **who it is often with**.
+- **Detailed descriptions** (optional, with AI): main characters in three or four sentences.
+
+### Library
+- **Collections from Calibre:** a `#collections` column in Calibre puts your books in KOReader collections.
+- **Rename and delete collections:** hold one in the collection list.
+- **Sort Reading by progress**, most or least read first.
+- **Tap an author** on a book's page to see their books.
+
+### Home and reading
+- **Font for Home** and its own **font and size for the top menu**.
+- **Home's text stays readable over any wallpaper:** Auto, Dark or Light, with an Outline option. The picture picker opens in your e-reader's `images` folder.
+- **A way back after any jump:** after the contents, Go to page, a link, a bookmark or a pin, "Go to most recent page" takes you back.
+- **Finish forecast** uses a new book's real pace.
+- **Hold Wi-Fi** in the top menu for the networks in range; the **Bluetooth switch** works with the Kobo plugin.
+- Aleph's pages follow the screen when it turns.
+- **Goal pace** says both what is left and how far you are from pace ("10 to go · 8 behind pace"). **Rename a Home page** from Customize Home → Pages, and empty pages are skipped. Customize Home's bar fits at large interface sizes. (#5, thanks @N9TailedFOX)
+
+### Languages
+- **French** and **Italian**. Portuguese and Spanish checked and corrected.
+
+### Lighter and steadier
+- Background work (weather, collections, Goodreads, covers) waits when memory is low, and Home frees memory when it runs low.
+- A timer that piled up while reading is fixed.
+- A tap on a text field always brings the keyboard up.
+- `crash.log` now records memory use and background jobs, to help with any report.
+
+Full list of changes: [MODIFICATIONS.md](https://github.com/lara-2-ko/aleph.koplugin/blob/main/MODIFICATIONS.md). Screenshots: [wiki](https://github.com/lara-2-ko/aleph.koplugin/wiki/Screenshots).
+
+**Also attached:** `aleph-wallpapers.zip` (seven seasonal wallpapers, now at the Kindle Colorsoft's size, with Three Kings and St Patrick's Day new) and the optional Goodreads cookie browser extension, unchanged (1.0.4): `aleph-goodreads-cookie-1.0.4-chrome.zip` for Chrome, Edge and Brave, and for Firefox the signed `.xpi` (drag it onto a Firefox window to install) or `aleph-goodreads-cookie-1.0.4-firefox.zip`. See [Goodreads Cookie Extension](https://github.com/lara-2-ko/aleph.koplugin/wiki/Goodreads-Cookie-Extension).
+
+Tested with KOReader 2026.07.1 on Kindle Paperwhite and Kindle Colorsoft. Not compatible with Zen UI (ZenOS) or Simple UI.
+
 # v1.2.7 · 2026-11-15
 
 # Aleph 1.2.7
@@ -348,37 +406,3 @@ A small update with two fixes.
 ## Updating
 
 Replace the `aleph.koplugin` folder in KOReader's `plugins` folder with the one in **aleph.koplugin.zip** below, then restart KOReader. Your settings and data are kept. If you installed through Storefront, you can update from there.
-
-# v1.0.0 · 2026-11-09
-
-**Aleph** brings your books, reading, highlights and shelves together in one place: a customizable home screen, local library and reader tools for KOReader. Everything works with the books and reading data on your device. No account or server needed.
-
-This is the first public release.
-
-## Highlights
-
-- **Home dashboard:** four pages (Home, Insights, Library, Decor) of widgets you can move, resize and add: continue reading, streaks, reading calendar, yearly goal, highlight of the day, word of the day, clocks, reading companions and more.
-- **Library:** grid and list views, search, sorting and filters, authors, series, genres, collections and history, plus book pages with rating, status and description.
-- **Reader tools:** a new bottom reader menu, a page browser on swipe up, pinned pages and images, top and bottom page stats (Book margins), restyled bookmarks, contents, dictionary and highlights.
-- **Top menu:** Controls and Apps tabs with quick settings and a launcher for your plugins.
-- **One look throughout:** KOReader's own dialogs, pickers and messages follow Aleph's style. You can turn this off in Settings.
-- **Optional integrations:** Reading statistics, Reading insights, X-Ray, KOSyncthing+, Silverfish and Vocabulary builder.
-
-## Installation
-
-1. Download **aleph.koplugin.zip** below.
-2. Extract it and copy the whole **aleph.koplugin** folder into KOReader's `plugins` folder.
-3. Restart KOReader and open **Tools → Aleph**.
-4. In Aleph, open **Menu → Settings → Library folders** and add your books folder.
-
-## Compatibility
-
-Tested with KOReader 2026.07.1 on a Kindle Paperwhite and a Kindle Colorsoft. Other devices and KOReader versions should work but haven't been tested yet. Please report anything that looks off.
-
-## Reporting issues
-
-Open an issue with your device, KOReader version, the steps to reproduce and the relevant lines from `koreader/crash.log`. Aleph's lines start with "Aleph:".
-
-## Credits
-
-Based on [BookOrbit](https://github.com/bookorbit/bookorbit). It also draws on ZenOS, Bookends and Lucide icons. Licensed under AGPL-3.0 with additional terms. See the notices included in the plugin.
