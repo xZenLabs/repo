@@ -1,3 +1,11 @@
+# v1.4.8 · 2026-11-20
+
+### 更新说明
+- 修复自动同步排除目录未持久化保存的问题
+
+### What's Changed
+- Fix the issue where auto-sync excluded directories were not persisted
+
 # v1.4.5-beta.1 · 2026-09-02
 
 ## 更新说明
