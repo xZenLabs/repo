@@ -1,3 +1,20 @@
+# 0.0.6-beta.1 · 2026-11-20
+
+First beta of 0.0.6: everything since 0.0.5.
+
+**New**
+- Button binding: bind a remote's buttons to any KOReader action (Settings → Buttons).
+- Dispatcher actions: Bluetooth on, off and toggle, for gestures and profiles.
+- Turn off if none reconnect (optional): after a wake or start-up, Bluetooth turns off when no starred or last-connected device reconnects within 15 s. It tries again on the next wake.
+- Notifications: Silent mode and per-kind switches for confirmation pop-ups. Errors always show.
+- Kindle backend (tested on Paperwhite 5 and 6). Remotes need a one-time setup: see "Kindle" in the README.
+- Kobo backend for MTK models. **Untested on a real Kobo**: please report how it goes in an issue.
+- Pair by address, and menus hide what the device can't do.
+
+**Fixes**
+- Bindings re-applied after a view change; Cancel goes back a step in the bind flows.
+- Several Kobo, Kindle and menu fixes from review.
+
 # 0.0.6-dev.3 · 2026-11-18
 
 - New Dispatcher actions: **Toggle Bluetooth**, **Turn on Bluetooth** and **Turn off Bluetooth** (Device section). Bind them to gestures or profiles, or add them to quick-action menus such as SimpleUI's. Closes #14.
@@ -36,15 +53,3 @@ Fixes
 - Pairing ends straight away on "not available" or no controller, instead of after about 20 s.
 - Works with BusyBox builds whose grep lacks -E.
 - Clearer logs around wake reconnects.
-
-# 0.0.5-dev.11 · 2026-10-27
-
-Fixes from the independent review of dev.10.
-
-- The Bluetooth switch ignores extra taps only while your own switch is under way; wake, connect and suspend no longer swallow a tap.
-- Pairing: one session at a time, guarded so an old session can't unlock a newer one, and a sleep during pairing no longer abandons the session.
-- The scan screen says why a pairing didn't start (another pairing running, or an invalid address).
-- Pairing ends straight away on "not available" or no controller, instead of after about 20 s.
-- Works with BusyBox builds whose grep lacks -E.
-- A WARN is logged again when a tap during wake skips the reconnect.
-- Stronger pairing tests.
