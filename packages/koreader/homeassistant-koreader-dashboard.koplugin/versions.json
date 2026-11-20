@@ -1,0 +1,3 @@
+{
+  "releases": [{"tag_name":"v0.1.0","assets":[{"name":"homedash.koplugin-0.1.0.zip","url":"https://github.com/wroblisko/homeassistant-koreader-dashboard/releases/download/v0.1.0/homedash.koplugin-0.1.0.zip","size":37353,"digest":"sha256:807edddf80cb9db3f4e1e2065899b5b3008d5d929219da8ee82e7b791d686965"},{"name":"homedash.koplugin.zip","url":"https://github.com/wroblisko/homeassistant-koreader-dashboard/releases/download/v0.1.0/homedash.koplugin.zip","size":37353,"digest":"sha256:807edddf80cb9db3f4e1e2065899b5b3008d5d929219da8ee82e7b791d686965"}],"name":"homedash v0.1.0"}]
+}

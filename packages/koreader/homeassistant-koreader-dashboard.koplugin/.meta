@@ -1,0 +1,29 @@
+# Homeassistant Koreader Dashboard plugin for KOReader
+# https://github.com/wroblisko/homeassistant-koreader-dashboard
+# zenpm:auto-scraped
+id=homeassistant-koreader-dashboard
+name=Homeassistant Koreader Dashboard
+version=0.1.0
+description=KOReader plugin that turns an old Kindle into an e-ink Home Assistant dashboard: weather, forecast chart, sensors and buttons.
+author=wroblisko
+category=utility
+platforms=koreader
+dependencies=
+source=https://github.com/wroblisko/homeassistant-koreader-dashboard
+stars=5
+updated_at=2026-11-20T09:01:02Z
+published_at=2026-11-20T07:34:56Z
+readme_url=packages/koreader/homeassistant-koreader-dashboard.koplugin/README.md
+readme_hash=d13628d74443bace85e1d0ffcc8b46d9ae96fc7d
+release_notes_url=packages/koreader/homeassistant-koreader-dashboard.koplugin/RELEASE_NOTES.md
+release_notes_hash=033414bda1a9298aa87208a7d0111d81d602e29ee819a66539be0437a3cd729a
+releases=[{"tag_name":"v0.1.0","assets":[{"name":"homedash.koplugin-0.1.0.zip","url":"https://github.com/wroblisko/homeassistant-koreader-dashboard/releases/download/v0.1.0/homedash.koplugin-0.1.0.zip","size":37353,"digest":"sha256:807edddf80cb9db3f4e1e2065899b5b3008d5d929219da8ee82e7b791d686965"},{"name":"homedash.koplugin.zip","url":"https://github.com/wroblisko/homeassistant-koreader-dashboard/releases/download/v0.1.0/homedash.koplugin.zip","size":37353,"digest":"sha256:807edddf80cb9db3f4e1e2065899b5b3008d5d929219da8ee82e7b791d686965"}],"name":"homedash v0.1.0"}]
+source_type=release
+assets.0.arch=any
+assets.0.asset=homedash.koplugin-0.1.0.zip
+assets.0.url=https://github.com/wroblisko/homeassistant-koreader-dashboard/releases/download/v0.1.0/homedash.koplugin-0.1.0.zip
+assets.0.size=37353
+assets.1.arch=any
+assets.1.asset=homedash.koplugin.zip
+assets.1.url=https://github.com/wroblisko/homeassistant-koreader-dashboard/releases/download/v0.1.0/homedash.koplugin.zip
+assets.1.size=37353
