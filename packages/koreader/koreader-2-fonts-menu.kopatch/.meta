@@ -3,7 +3,7 @@
 # zenpm:auto-scraped
 id=koreader-2-fonts-menu
 name=Koreader 2 Fonts Menu
-version=koreader-user-patch
+version=1.2
 description=Fonts menù link in the character panel
 author=Wolfazzo
 category=patches
@@ -11,13 +11,13 @@ platforms=koreader
 dependencies=
 source=https://github.com/Wolfazzo/Koreader-2-fonts-menu
 stars=21
-updated_at=2026-11-20T17:36:09Z
+updated_at=2026-11-20T18:09:36Z
 published_at=2026-11-08T18:44:59Z
 readme_url=packages/koreader/koreader-2-fonts-menu.kopatch/README.md
 readme_hash=00b97f207efef213aaecc4dc6af5f6f8b179f970
 release_notes_url=packages/koreader/koreader-2-fonts-menu.kopatch/RELEASE_NOTES.md
-release_notes_hash=4f4acbbed655e197af20403f2f4990bcb932f578312f6eeaf2125231b908d1cb
-releases=[{"tag_name":"koreader-user-patch","assets":[{"name":"source-code.zip","url":"https://api.github.com/repos/Wolfazzo/Koreader-2-fonts-menu/zipball/koreader-user-patch"}],"name":"Koreader-2-fonts-menu"}]
+release_notes_hash=f2a3f501e0468d7f1c622a6a7bd5b34d0aad44a14f30916140fe504faefceede
+releases=[{"tag_name":"v1.2","assets":[{"name":"source-code.zip","url":"https://api.github.com/repos/Wolfazzo/Koreader-2-fonts-menu/zipball/v1.2"}],"name":"Koreader-2-fonts-menu"}]
 source_type=source
 assets.0.arch=any
 assets.0.asset=2-fonts-menu-profile.lua
