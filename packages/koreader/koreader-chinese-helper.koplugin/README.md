@@ -140,7 +140,7 @@ Tools menu). Settings apply to all books.
 | Chinese text size | 100 / 115 / 130 (default) / 150 / 175% of the popup text size, for the Chinese dictionaries' text (MOE, 成語典, Xinhua, Moegirlpedia) and the line of text at the top of the popup. See [Tapping a character in the popup](#tapping-a-character-in-the-popup) |
 | Show character components | On (default) / off. See [Character components](#character-components) |
 | Show character frequency rank | On (default) / off. The small grey 字频 line on the tapped character's entry |
-| Show traditional forms | On (default) / off. A word's traditional form beside it on each head line, when it differs: **头发** 頭髮 |
+| Show traditional forms | On (default) / off. A word's traditional form beside it on each head line, when it differs: **头发** 頭髮; tapped in traditional characters, the simplified form first: **头** 頭 |
 | Show the text around the character in the popup | On (default) / off; drawn at the Chinese text size. See [The popup](#the-popup) |
 | Underline the tapped character on the page | On (default) / off. See [The popup](#the-popup) |
 | Try to match the book's font | On (default) / off: Chinese text in the popup in the book's font. See [The popup](#the-popup) |
@@ -282,8 +282,11 @@ where the words break.
   same: **头发** 頭髮, **中国** 中國, and nothing for 人民. A word shows the one form it is
   written with (发现 發現, 头发 頭髮). A single character with several shows them all, the one
   the word around it uses first: 发 in 头发 is **发** 髮/發, 干 in 干净 **干** 乾/干/幹. Only
-  the head lines change; a book in traditional characters adds nothing. **Show traditional
-  forms** in the menu turns it off.
+  the head lines change. **Show traditional forms** in the menu turns it off.
+- **Tapped in traditional characters** (a traditional book, or MOE's text in a popup), the head
+  line leads with the simplified form instead, the form as tapped grey beside it: 頭 in 頭髮 is
+  **头** 頭, the word **头发** 頭髮. A character shows the one simplified form the word around
+  it uses: 乾 in 乾淨 is **干** 乾, in 乾隆 just 乾. Same setting.
 - **MOE's entry for the character**, with the optional MOE dictionary: in place of CC-CEDICT's
   when CC-CEDICT lacks the character. With MOE for single characters set to **always**, under
   CC-CEDICT's entry too, cut to two lines ending in a small grey **[Tap to show more]** when
@@ -504,7 +507,9 @@ always be told from a plain negation, so where no word confirms it, 不 keeps th
 
 Where CC-CEDICT gives a word's syllable only as a neutral tone, that is
 drawn above a rare character (刺猬 *cìwei*, 鼓捣 *gǔdao*, 疙瘩 *gēda*), and its popup entry (猬
-*wèi*) is marked with the same letters. Where CC-CEDICT lists the word both ways (大爷 *dàyé*
+*wèi*) is marked with the same letters. When the character has several entries with those
+letters, the one whose traditional form the word uses is marked (发 in 头发 *tóufa*: 髮 *fà*,
+not 發 *fā*), else the character's default. Where CC-CEDICT lists the word both ways (大爷 *dàyé*
 "idler" / *dàye* "uncle"), the toned reading is drawn and the popup marks the neutral one.
 
 What is drawn on a page:

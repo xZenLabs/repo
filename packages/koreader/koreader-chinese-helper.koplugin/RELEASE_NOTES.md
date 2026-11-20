@@ -1,3 +1,32 @@
+# v2.14.1 · 2026-11-20
+
+Neutral tones marked by the word's traditional form (#51)
+- 发 in 头发 is now marked **fà** "likely here" and listed first (was fā, "to send out"). The
+  word draws 发 neutral (tóufa), and two of 发's entries have those letters. The popup now
+  picks the one whose traditional form the word uses (頭髮 → 髮 → fà), and falls back to the
+  character's default reading only when that doesn't separate them (含糊's 糊: hú).
+- A scan of every CC-CEDICT word with such a tie (`tools/scan_neutral_ties.py`: 323 ties on 76
+  characters) found 6 changes, all for the better: 头发, 剪头发, 烫头发, 耳发 and 头发胡子一把抓 (fà), and
+  跟斗 (dǒu, was dòu). The other 317 ties keep the default.
+- Only the popup's marking changes; the pinyin drawn on the page is the same.
+
+# v2.14.0 · 2026-11-20
+
+Simplified forms for traditional taps (#50)
+- A character or word tapped in traditional characters (a page of a traditional book, or MOE's
+  and the 成語典's text in a popup, now in MOE's own characters since 2.13.0) shows its
+  simplified form on the head line, in bold, with the form as tapped beside it, small and grey,
+  just like a simplified tap: 頭 in 頭髮花白 is **头** 頭 *tóu*, the word **头发** 頭髮 *tóufa*;
+  發 in 發現 **发** 發, 東西 **东西** 東西.
+- A character shows **one** simplified form, the one the word around it uses (乾 in 乾淨 →
+  **干** 乾; 噁 in 噁心 → **恶** 噁), else its head line's reading's (乾 on its own, read gān → **干** 乾).
+  Nothing is added where the form is the same in both scripts (乾 in 乾隆, 著 in 著名, 人民).
+- Applies to every block with a head line: CC-CEDICT's, the fallback dictionaries', MOE Always
+  blocks, idiom blocks and nested popups. Simplified taps are unchanged (checked on 18,090
+  common simplified words). A fallback row with an empty or other-length simplified form, or
+  one outside the BMP that would draw as a box, adds nothing.
+- Same setting, **Show traditional forms**; off, head lines are exactly as in 2.13.0.
+
 # v2.13.0 · 2026-11-20
 
 Dictionary text as each source writes it (#48)
@@ -42,45 +71,3 @@ Frequency ranks labels (#45, #46)
 - With From my books on, the 字频 line shows just your rank (**字频 3,504**, or **5,700+** past
   your file's exact ranks), without "(my books)". A character not in your books still says
   **(bundled)**, since that rank is on a different scale (#46).
-
-# v2.11.0 · 2026-11-19
-
-Your own frequency ranks (#42)
-- **New setting, Frequency ranks**: **Bundled (modern Chinese)** (the default, as before) or
-  **From my books**. On a computer, `tools/build_user_ranks.py` ranks characters by your own
-  books (from `tools/fetch_books.py`, or `--epubs DIR`): by how many works a character appears
-  in, then how often, so one novel's cast of names cannot make rare characters common. Volumes
-  of one work and duplicate copies count once; traditional forms count as simplified, 〇 as 零.
-  `--push` copies the file to `koreader/settings/chinesehelper_ranks.tsv` over USB.
-- With From my books on, the ranks decide which characters get pinyin, the popup's 字频 line
-  and which pinyin is dropped first on a crowded line. Characters not in your books keep their
-  bundled rank. 字频 says which it shows, **(my books)** or **(bundled)**, and shows **N+**
-  past the ranks the library can tell apart (the file's exact cut-off).
-- Nothing about the data changes: which words are held in memory and everything the database
-  build decided keep the bundled rank. The release ships no one's ranks; From my books is
-  disabled until you have a file.
-- `tools/compare_user_ranks.py` compares a rank file with the bundled ranks (crossings at a
-  threshold, and page-sized passages run through the plugin's own code).
-
-# v2.10.0 · 2026-11-19
-
-Spoken tones for 一 and 不, on in learner mode (#37)
-- **New setting, Spoken tones for 一 and 不** (In learner mode, the default; Always; Never). The
-  pinyin shows the tones of speech, as beginners' textbooks do: 一个 *yí gè*, 一天 *yì tiān*,
-  不是 *bú shì*, 是不是 *shì bu shì*, 看不见 *kàn bu jiàn*, 吃不了 *chī bu liǎo*, 看一看
-  *kàn yi kàn*. 一 stays *yī* as a number or ordinal (第一, 十一, 一九九八, 一月, 统一, 之一,
-  一等奖) and before punctuation; between two units it is a quantity again (一万一千 *yíwàn
-  yìqiān*). A verb and complement no dictionary word confirms keeps *bù*.
-- Known and remind-me marks stay on the dictionary reading (**I know bù** hides 不 in every
-  tone). The popup's entries keep *yī* and *bù*; the character's own entry gets a grey
-  **spoken here: bú**.
-- Measured on 49 books: about 800 sampled changes judged in context by AI reviewers over six rounds; each rule 97–100%
-  right on the final code. tools/measure_sandhi.py does the scan and the judging batches.
-- The README's learner-mode shots are retaken.
-
-Leftovers of the two retired plugins removed (#34)
-- No visible change. The one-time copy of koreader-interlinear-pinyin's and
-  koreader-chinese-popup's settings (from 1.0.0), the warning when either was still installed,
-  and the Status line naming them are gone, along with their tests. Settings already copied
-  stay as they are. Code comments no longer cite the two old repos (the WordGloss credits
-  stay), and tools/plugin_runtime.py no longer runs an interlinear-pinyin 0.5.0 copy.
