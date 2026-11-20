@@ -1,3 +1,33 @@
+# 26.11.20 · 2026-11-20
+
+This release includes a major behind-the-scenes cleanup of the plugin, a fix for underlines not showing up on Kobo devices, and several fixes for spoiler gating, character detection, and unit conversion.
+
+### Underlines & Kobo Fixes
+- **Fixed underlines on Kobo:** Entity and unit conversion underlines now use KOReader's native view module system instead of hooking into the page paint loop, which fixes missing underlines on Kobo devices.
+- **Wavy underline fallback:** If wavy SVG rendering fails or isn't supported on a device, underlines now fall back cleanly to a solid line instead of disappearing.
+- **More reliable unit scanning:** If a background unit scan doesn't produce a usable cache, the plugin now falls back to scanning in-process.
+- **Cleaner entity underlines & tooltips:** Overlapping matches on the same phrase are now deduplicated so longer names win cleanly, entity footnote taps respect your toggle state, and tooltip auto-dismissal no longer hits timer cancellation errors.
+- **Sidecar cache reliability:** Improved directory creation when saving unit and entity caches.
+
+### Character & Spoiler Fixes
+- **Better protagonist & family name handling:** Improved AI prompts and name-matching logic so first-person protagonists are reliably extracted, and relational names (like *"Nick"* and *"Nick's Dad"*) are kept as separate characters instead of being merged or flagged as duplicates.
+- **Spoiler-safe incremental updates:** Batch and incremental fetches now preserve each character's earliest introduction and story-arc states properly, so characters stay visible on earlier pages of a fetched window without leaking future descriptions.
+- **Spoiler-safe mention highlighting:** Highlighting mentions on a page now respects unlocked aliases instead of revealing spoiler-gated ones.
+
+### Other Improvements
+- **Major code refactor:** Split the oversized main plugin and UI files into smaller, focused modules to make future updates easier and safer.
+- **Updated default Gemini model:** Switched the default primary model to `gemini-4-hydrogen` with Gemini 4 thinking-level support.
+- **Cleaner request cancellation:** Canceling an active AI request now also stops any running sequential background tasks.
+
+### What's Changed
+* fix: guard nameless terms during X-Ray merge by @thankarezos in https://github.com/ultimatejimmy/xray.koplugin/pull/166
+* Some UI tweaks
+
+### New Contributors
+* @thankarezos made their first contribution in https://github.com/ultimatejimmy/xray.koplugin/pull/166
+
+**Full Changelog**: https://github.com/ultimatejimmy/xray.koplugin/compare/26.11.9...26.11.20
+
 # 26.11.9 · 2026-11-09
 
 ## Entity Underlining (optional new feature)
@@ -146,20 +176,3 @@ Thanks to our new contributors for helping improve the plugin:
 * [@misko903](https://github.com/misko903) in [#138](https://github.com/ultimatejimmy/xray.koplugin/pull/138)
 * [@Gargoyle-Gecko](https://github.com/Gargoyle-Gecko) in [#146](https://github.com/ultimatejimmy/xray.koplugin/pull/146)
 **Full Changelog**: https://github.com/ultimatejimmy/xray.koplugin/compare/26.9.30.1...26.10.8
-
-# 26.9.30.1 · 2026-09-30
-
-## What's Changed
-- Add gpt-6-luna support by @abs3ntdev in https://github.com/ultimatejimmy/xray.koplugin/pull/141
-- ix claude bugs
-- update series logic
-- fix unit converter range logic
-- Fix series bug
-- Fix alias/lookup bug
-- fix overlapping save bug
-
-
-## New Contributors
-* @abs3ntdev made their first contribution in https://github.com/ultimatejimmy/xray.koplugin/pull/141
-
-**Full Changelog**: https://github.com/ultimatejimmy/xray.koplugin/compare/26.9.30...26.9.30.1
