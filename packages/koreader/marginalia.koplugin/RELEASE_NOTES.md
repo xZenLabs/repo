@@ -1,3 +1,28 @@
+# V1.0.1 · 2026-11-20
+
+Marginalia v1.0.1 — Performance Hotfix
+
+A maintenance release focused on improving reading performance, preventing unwanted margin persistence, and ensuring proper cleanup when disabling or uninstalling the plugin.
+
+Fixed
+
+- Page-turn performance: Removed automatic margin recovery during page changes to prevent unnecessary repagination.
+- Margin persistence: Temporary ornament margins no longer overwrite the book's original margin preferences when settings are saved.
+- Plugin cleanup: Improved removal of graphical overlays, cached image resources, and gesture handlers when disabling or uninstalling Marginalia.
+- Margin restoration: Improved restoration of original margins, including recovery from previous v1.0 settings when the original values are available.
+- Stability: Prevented pending redraw operations from restoring visual elements after the plugin has stopped.
+
+Unchanged
+
+- All 249 included ornaments are preserved.
+- Existing profiles, compositions, and personal libraries remain compatible.
+- No changes to the main interface or ornament positioning.
+- Original ebook files remain untouched.
+
+Installation
+
+Close KOReader, replace the existing plugin files, and restart. Use the No Images package to preserve your existing collection.
+
 # v1.0 · 2026-11-18
 
 # Marginalia for KOReader
