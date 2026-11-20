@@ -1,3 +1,12 @@
+# v5.1 · 2026-11-19
+
+**Frame margins:** 
+fixed the frame flashing (disappearing and redrawing) on every page turn on e-ink devices in day mode. Page turns now refresh with the same waveform the page animation uses, so the frame stays still. I didn't notice this happened as I only tested it with my own page animation turned on.
+
+
+**Page animation:**
+ removed the automatic step limits on e-ink (Wipe was capped at 5 steps and Blinds at 2). You can now choose any value up to 15 and decide what works best for your device, keep in mind that the higher the steps the higher the battery consumption (this is all in theory, you can do your own tests as I'm not really sure how much battery consumption each step will take).
+
 # v5.0 · 2026-11-19
 
 ## What's new
@@ -42,7 +51,3 @@ Fixed slowdown when rotating the screen for kindle devices.
 
 **Known issue**
 - On kindle basic 2024, Fibers can still be slower than the other styles.
-
-# v3.1 · 2026-11-02
-
-Fixed slowness when changing orientation

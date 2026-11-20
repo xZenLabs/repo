@@ -129,6 +129,7 @@ Tools menu). Settings apply to all books.
 | Show pinyin | On / off (off when first installed); **Which characters** sets which ones get it |
 | Tap characters for popup | On / off (on when first installed) |
 | Which characters | **All characters (learner mode)**, or pinyin for characters outside the 500 / 1,000 / 1,500 / 2,500 / 3,500 / 5,000 / 7,000 most common (default 3,500). See [Learner mode](#learner-mode) |
+| Frequency ranks | **Bundled: web, books, news, subtitles** (default) / **From my books**, once you have built your own file. See [Your own frequency ranks](#your-own-frequency-ranks) |
 | Pinyin size | 35–55% of the book's text size (default 40%) |
 | When the reading is uncertain | Show both readings (default) / show the most likely reading / don't annotate |
 | Mark unusual readings of common characters (names, historical terms) | On (default) / off. See [Unusual readings](#unusual-readings-of-common-characters) |
@@ -173,6 +174,38 @@ On a Boox Go 7 a page with pinyin on every character takes about 50 ms to prepar
 default level; see [Speed](#speed)). A few characters keep two readings where nothing on the page
 decides between them (得 *de/děi*, 长 *cháng/zhǎng*), about one in a hundred in 鲁迅's stories;
 **When the reading is uncertain → Show the most likely reading** shows just the first.
+
+### Your own frequency ranks
+
+"Outside the 3,500 most common" means most common in modern written Chinese: the bundled ranks
+are wordfreq's for Chinese, mixed from web pages, Google Books, news, film and TV subtitles,
+Wikipedia, Twitter and Jieba's wordlist. If you mostly read novels or histories, you can rank
+characters by your own books instead, so that the characters that get pinyin are the ones that
+are rare in what you read. On a computer, with the e-reader connected over USB:
+
+```sh
+python3 tools/fetch_books.py               # copy your EPUBs' text into build/ (when your library changes)
+python3 tools/build_user_ranks.py          # count it into build/user-ranks.tsv
+python3 tools/build_user_ranks.py --push   # copy that file to the e-reader (adb)
+```
+
+(`build_user_ranks.py --epubs DIR` reads a folder of EPUBs on the computer instead, and needs
+no e-reader; copy the file across by hand then.) Then choose **Frequency ranks → From my books**.
+The file goes to `koreader/settings/chinesehelper_ranks.tsv`, next to the reading marks, so
+plugin updates keep it; the menu item's help gives its date and how many books it counts.
+
+- A character is ranked by **how many of your books** it appears in, then by how often, so one
+  long novel's cast of names cannot make rare name characters "common". The volumes of one
+  work, and the same text twice (a book on the device and again as a file on the computer, or
+  inside a boxed set), count once.
+- Characters that are not in your books keep their bundled rank.
+- The ranks decide which characters get pinyin, the popup's 字频 line and which pinyin goes
+  first when a line is crowded. The 字频 line then shows your rank, **字频 3,405**, or, for a
+  character not in your books, the bundled one marked as such: **字频 6,500 (bundled)**. Past the ranks your library
+  is big enough to tell apart, it shows **N+** (for 42 books, 5,700+).
+- Nothing else changes: the plugin's data, and which words it loads, are the same either way.
+- Your books stay on your computer, in `build/` (not committed); the file holds only characters
+  and counts.
 
 ### What a tap does
 
@@ -241,6 +274,8 @@ where the words break.
   3,500 by default). Past 7,000 it shows **7,000+**, as the data is too thin there for an exact
   rank, and **unranked** for a character not in the list. It shares the line with the source
   label when that is shown (`CEDICT · 字频 4,270`). Words around the character never show one.
+  With [your own frequency ranks](#your-own-frequency-ranks) on, it shows your rank, or the
+  bundled one marked **(bundled)** for a character not in your books.
 - **MOE's entry for the character**, with the optional MOE dictionary: in place of CC-CEDICT's
   when CC-CEDICT lacks the character. With MOE for single characters set to **always**, under
   CC-CEDICT's entry too, cut to two lines ending in a small grey **[Tap to show more]** when
@@ -789,7 +824,9 @@ To measure what the fallback dictionaries add on your own books: `tools/fetch_bo
 the EPUBs from a USB-connected device into `build/`; `--local NAME BOOK.epub` for a book on this
 computer), `tools/download_sources.sh`, then `tools/measure_fallback.py` (reports in
 `build/measure/`; `--book NAME` for one book) and `tools/measure_book.py --book NAME` (what a
-book still lacks, and what candidate sources would add).
+book still lacks, and what candidate sources would add). `tools/build_user_ranks.py` ranks
+characters by the same books ([Your own frequency ranks](#your-own-frequency-ranks));
+`tools/compare_user_ranks.py` compares those ranks with the bundled ones.
 
 ### Simplified text
 
