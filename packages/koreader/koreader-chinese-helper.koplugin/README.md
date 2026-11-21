@@ -116,6 +116,9 @@ menu's **Order** changes it). The MOE dictionary can also show its entry for eve
 | Moegirlpedia slang | Moegirl | 350 | [optional](#optional-dictionaries) | internet slang (in Chinese) |
 | Classical dictionary | 文言 | 21,292 characters | bundled, [Classical mode](#classical-mode) only | the senses of single characters in classical Chinese, condensed from Chinese Notes, Wiktionary and Unihan |
 
+An entry CC-CEDICT gives only as a cross-reference (贤惠: "variant of 賢慧|贤慧 xiánhuì", 河北:
+"see 河北省") also shows the definitions of the word it points to, on a line led by that word.
+
 \* Chengyu CC-CEDICT lacks. Both files also add a Chinese line and an Origin & Usage view to chengyu the
 other dictionaries have: MOE idioms covers 5,470 chengyu in all, Xinhua idioms 30,200
 ([Chengyu](#chengyu)).
@@ -665,6 +668,15 @@ letters, the one whose traditional form the word uses is marked (发 in 头发 *
 not 發 *fā*), else the word's citation tone from a short hand-checked list (处 in 好处 *hǎochu*:
 *chù*; 应 in 答应 *dāying*: *yìng*), else the character's default. Where CC-CEDICT lists the word both ways (大爷 *dàyé*
 "idler" / *dàye* "uncle"), the toned reading is drawn and the popup marks the neutral one.
+
+CC-CEDICT keeps full tones for words Standard Mandarin usually reads with a neutral syllable
+(喷嚏 *pen1 ti4*, said *pēnti*). Those are listed in
+[`data/neutral_tone_overrides.tsv`](data/neutral_tone_overrides.tsv), which the build puts into
+CC-CEDICT's line as it reads it: the pinyin drawn (嚏 *ti*) and the popup's word line (*pēnti*)
+both follow, and the character's own entry stays *tì*. To add a word, add a line with the
+simplified word, a tab, its numbered pinyin with 5 for the neutral syllable (`pen1 ti5`), a
+tab and a short note; only the tones may differ from CC-CEDICT's line. Then rebuild the database
+([Building the database](#building-the-database)).
 
 What is drawn on a page:
 

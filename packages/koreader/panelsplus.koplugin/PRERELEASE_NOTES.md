@@ -7,13 +7,22 @@
 I think Panels+ is good enough as is, but what about its surrounding KOReader ecosystem?. It's time to sail beyond the horizon. Lets expand this ship (Panels+) to work together with other plugins!.
 
 ## Ink-away compatibility
-
-<video width="100%" height="auto" src="https://github.com/user-attachments/assets/fdf3ef83-c7df-48f4-bb30-ca32a2305b90"></video>
+<div align="center">
+  <video width="100%" height="auto" src="https://github.com/user-attachments/assets/fdf3ef83-c7df-48f4-bb30-ca32a2305b90"></video>
+</div>
 
 Yep, if *Ink-Away* is installed along with Panels+, you'll be able to use Ink-away annotations while panning!, it means that all rendered annotations made by ink-reader are visible from Panels+ custom viewer, including smooth transitions and drawing outside the panel when using no-crop mode.
 
 Ink-Away + PanelsPlus Discussion: https://github.com/EmirErtorer/ink-away.koplugin/discussions/69
 PanelsPlus PR: https://github.com/EmirErtorer/ink-away.koplugin/pull/80  (Merged!)
+
+## Panels+ Official Page
+
+<div align="center">
+  <img width="60%" height="auto" alt="image" src="https://github.com/user-attachments/assets/608e1366-75b3-4a9a-8175-20a1f73c2165" />
+</div>
+
+I've coded the landing page for this project here: https://www.panelsplus.site/, it's still in development I'll be adding more sections eventually. Looks cool for me.
 
 ---
 

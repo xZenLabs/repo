@@ -1,3 +1,15 @@
+# v1.6.5 · 2026-11-21
+
+### 中文
+
+- 黑白阅读时，部分大型 JPEG 漫画页显示更快，在可用内存较少时也能直接打开。
+- 翻页后若可用内存已经恢复，回翻时可以直接显示仍在缓存中的上一页。
+
+### English
+
+- Some large JPEG comic pages render faster in grayscale and can open with less available memory.
+- When memory has already recovered after a page turn, turning back can immediately show the previous page if it is still cached.
+
 # v1.6.4 · 2026-11-20
 
 ### 中文
@@ -47,23 +59,3 @@
 
 - Fixed an issue where cancelling a search across sources could still send a request to the next source.
 - Reduced redundant work when searching through multiple pages of results across sources.
-
-# v1.6.0 · 2026-11-16
-
-### 中文
-
-- 首次进入可一键安装内置订阅的漫画和小说源，也可选择稍后安装。
-- 插件包不再附带源；订阅更新支持补齐未安装源及新增源。
-- 新用户默认开启插件和源更新检查，保留已有设置。
-- 安装结果区分新增与更新，改善更新提示在中断后的恢复。
-- 减少源更新检查的重复计算，避免失效弹窗继续触发下载。
-- 加快聚合搜索排序，改善主页收藏刷新与详情简介布局。
-
-### English
-
-- Install manga and novel sources from the built-in subscription on first entry, or choose Later.
-- Source-free plugin packages; subscription updates include missing and newly added sources.
-- Automatic update checks default to on for new users; existing settings are preserved.
-- Installation results distinguish added sources from updates; interrupted update prompts can be offered again.
-- Fewer repeated subscription checks, with stale dialogs prevented from starting downloads.
-- Faster aggregate search ranking and improved favorites refresh and detail layout.

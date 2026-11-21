@@ -1,3 +1,39 @@
+# v2.18.0 · 2026-11-21
+
+Cross-reference-only CC-CEDICT entries show their target's definitions (#61)
+- An entry whose only sense is a cross-reference now shows what it means: 贤惠 still reads
+  "variant of 賢慧|贤慧 xiánhuì", and below it "贤慧: (of a wife) wise and kind; perfect in her
+  traditional roles". The same for 7,213 entries: "variant of" in all its forms (old, erhua,
+  archaic, ...), "see" and "same as". The borrowed line follows the tapped form (賢慧: when
+  賢惠 was tapped) and the Dictionary text setting; a chain of references (利是 → 利事 → 红包) ends
+  on the word with the definitions, its pinyin shown.
+- "used in", "abbr. for" and "see also" entries are unchanged, as are entries whose references
+  lead to several different words (北海: see 北海公园, see 北海市). The build prints the counts.
+- The database grows by 1.5 MB (44.6 MB).
+
+# v2.17.2 · 2026-11-21
+
+Neutral tones: the 普通话水平测试 must-read list (#60)
+- 42 more words now read with their standard neutral syllable, on the page and in the popup's
+  word line: 37 from the 普通话水平测试 must-read neutral-tone list where CC-CEDICT had a full
+  tone (灯笼 *dēnglong*, 队伍 *duìwu*, 打算 *dǎsuan*, 老婆 *lǎopo*, 疟疾 *nüèji*, ...), and 5 rare-
+  character words with dictionary evidence found by web lookup (喜鹊 *xǐque*, 鹌鹑 *ānchun*, 荸荠
+  *bíqi*, 蹊跷 *qīqiao*, 腌臜 *āza*). The other 503 words on the list already read correctly.
+- A character's own default reading is unchanged (笼 stays *lóng*).
+- `docs/neutral-tone-candidates.tsv` and `docs/neutral-tone-evidence.tsv` list every candidate
+  and the evidence; the scripts that build them are in `tools/`.
+
+# v2.17.1 · 2026-11-21
+
+Neutral tones CC-CEDICT writes as full tones (#60)
+- 喷嚏 and 打喷嚏 now read *pēnti* / *dǎpēnti*, as they are said in Standard Mandarin: the
+  pinyin drawn above 嚏 is *ti* (it was *tì*), and the popup's word line reads *pēnti*. 嚏's own
+  entry stays *tì*.
+- New hand-edited list, `data/neutral_tone_overrides.tsv`, for words CC-CEDICT gives full tones
+  that are usually read with a neutral syllable. The build puts the neutral tone into CC-CEDICT's
+  line, so the existing neutral-tone rule draws it. The README says how to add a word. More words
+  will follow.
+
 # v2.17.0 · 2026-11-21
 
 
@@ -31,49 +67,3 @@ Night mode: no grey text in the popup (#57)
   labels, [Tap to show more]/[Tap to show less]) is drawn in the normal text colour, in every
   popup and in Origin & Usage: inverted grey was hard to read on the Boox's e-ink. Day mode and
   the button separators are unchanged.
-
-# v2.15.0 · 2026-11-20
-
-Classical mode (#53) and the Classical dictionary (#55)
-- A new **文言** button in the popup's title bar, left of the reading-mark button, turns
-  Classical mode on (**文言 ✓**). It stays on for later popups, in every book and after a
-  restart, until tapped again; it is also **Classical mode** in Popup → Dictionaries (off by
-  default). Popups opened from a popup's text follow it but have no button.
-- With it on, the popup shows the tapped character's **Classical dictionary** entry right under
-  its CC-CEDICT entry, labelled 文言: up to five senses classical texts use and modern Chinese
-  mostly doesn't (之 *him; her; it*, 說 = 悅 *pleased*), cut to two lines with
-  [Tap to show more]. A simplified character shows the traditional form its word uses (发 in 头发
-  → 髮); a variant form (説) shows its standard form's entry (說).
-- The dictionary covers 21,292 characters and 184 variant forms. It was condensed once by Claude
-  Haiku (`tools/build_classical.py`, Batch API, $1.37) from Chinese Notes' *Literary Chinese*
-  senses (CC BY-SA 3.0), English Wiktionary (CC BY-SA 4.0) and, for characters outside the 3,000
-  most common, Unihan (Unicode License v3); the result is CC BY-SA 4.0. Senses that cite no
-  source line, or that only restate a reading, are dropped. On the research note's sample,
-  CC-CEDICT alone had the needed sense 84% of the time, with the Classical dictionary under it
-  95%.
-- The database grows from 37.8 MB to 43.1 MB (the zip by 1.5 MB).
-- README screenshots retaken with the 文言 button.
-
-# v2.14.3 · 2026-11-20
-
-
-Neutral tones the traditional form can't decide (#52)
-- 处 in 好处 is now marked **chù** "likely here" and listed first (was chǔ, the character's
-  default). The same goes for 坏处, 害处 and 难处 (chù), 答应, 照应 and 满口答应 (yìng),
-  裁缝 (féng), 思量 and 掂量 (liáng), 停当 (dàng), 大部分 (fèn), 松散 (sǎn) and
-  哭丧(着)脸 (sāng), in simplified and traditional text.
-- These come from a short hand-checked list, used only where #51's scan found that the
-  traditional form can't decide and that MOE's citation tone differs. Each one is a reading MOE
-  and pypinyin's phrase data agree on (难处: the neutral word nánchu, "difficulty").
-  Taiwan readings (悄悄话 qiǎo, 连累 lèi) and 生分, where the sources disagree, are left out.
-- Only the popup's marking changes; the pinyin drawn on the page is the same.
-
-# v2.14.2 · 2026-11-20
-
-
-Head line's second form in the text's shade (#54)
-- The traditional form beside a headword (**观** 觀), and the form as tapped beside a
-  traditional tap (**头** 頭), are now the same shade as the text, not grey. They are still
-  smaller and not bold. The label line, 字频, the spoken-tone note and [Tap to show more] stay
-  grey.
-- README screenshots with a second form retaken.
