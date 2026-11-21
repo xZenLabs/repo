@@ -1,0 +1,23 @@
+# Fingertips plugin for KOReader
+# https://github.com/ironicsans/fingertips.koplugin
+# zenpm:auto-scraped
+id=fingertips
+name=Fingertips
+version=0.1.0
+description=Select text in KOReader without your finger covering what you're selecting, and get a popup that stays clear of your highlight.
+author=ironicsans
+category=productivity
+platforms=koreader
+dependencies=
+source=https://github.com/ironicsans/fingertips.koplugin
+stars=7
+updated_at=2026-11-21T06:01:03Z
+published_at=2026-11-20T23:40:45Z
+readme_url=packages/koreader/fingertips.koplugin/README.md
+readme_hash=7b4988880b50dbf1c67cc8094d36d7f0d40f2b7d
+release_notes_url=packages/koreader/fingertips.koplugin/RELEASE_NOTES.md
+release_notes_hash=3cd2c62534ab2de5e90ea9b385322341aaf64b29e8cc66bfb4c30d3dcd23d41c
+releases=[{"tag_name":"v0.1.0","assets":[{"name":"fingertips.koplugin.zip","url":"https://github.com/ironicsans/fingertips.koplugin/releases/download/v0.1.0/fingertips.koplugin.zip","size":20499,"digest":"sha256:62e9f4e34be3770a4e0a8146621938074e3c8be8ba3d59f09dd03c1758d87e9c"}],"name":"FingerTips 0.1.0"}]
+source_type=release
+source_asset=fingertips.koplugin.zip
+size=20499

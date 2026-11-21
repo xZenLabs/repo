@@ -1,0 +1,3 @@
+{
+  "releases": [{"tag_name":"v0.1.0","assets":[{"name":"fingertips.koplugin.zip","url":"https://github.com/ironicsans/fingertips.koplugin/releases/download/v0.1.0/fingertips.koplugin.zip","size":20499,"digest":"sha256:62e9f4e34be3770a4e0a8146621938074e3c8be8ba3d59f09dd03c1758d87e9c"}],"name":"FingerTips 0.1.0"}]
+}
