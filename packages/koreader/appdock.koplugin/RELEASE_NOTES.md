@@ -1,3 +1,15 @@
+# v9.13.0 · 2026-11-21
+
+# AppDock 9.13.0
+
+## DockAI-Korrekturen und Chat-Verwaltung
+- Chatverläufe werden als mehrere getrennte Unterhaltungen gespeichert; bestehende Einzelverläufe werden beim ersten Laden übernommen.
+- DockAI ergänzt gespeicherte Erinnerungen zum Nutzer und beschränkt den an das Modell gesendeten Gesprächskontext auf die letzten fünf verwendbaren Nachrichten.
+- Die Nutzungsdaten des dchat-Proxys werden zwischengespeichert, sodass UI-Neuaufbauten nicht wiederholt langsame Netzwerkaufrufe auslösen.
+- Fehler beim Abrufen der Nutzungsdaten werden abgefangen und mit einer kurzen Wiederholungsfrist versehen.
+
+Der Release enthält dieselben 97 Plugin-Dateien wie 9.12.0. Daher ist keine Änderung an DockUpdates Dateiliste oder Versionsschranken nötig.
+
 # v9.12.0 · 2026-11-20
 
 # AppDock 9.12.0
@@ -39,9 +51,3 @@
 ## English
 - **Per-role gradients in themes:** besides the background gradient, a theme can now define a gradient for the primary, button, secondary, tertiary, surface and surface-variant colors (`gradients = { button = ... }`). Aurora uses it for buttons, tiles and chips. Text contrast is checked against every gradient stop; grayscale panels and high contrast keep flat colors.
 - **New settings category "Lockscreen":** unlock method, name, profile image and the new **clock style**: Standard, Liquid Glass or Color (hours and minutes big on 2 lines, one color per digit).
-
-# v9.7.1 · 2026-11-16
-
-# Fixes:
-- bookshelf now opens in DReader
-- book titles in Bookshelf fixed

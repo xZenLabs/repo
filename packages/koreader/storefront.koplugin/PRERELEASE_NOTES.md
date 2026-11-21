@@ -1,3 +1,23 @@
+# 26.11.21-beta · 2026-11-21
+
+### What's New: Storefront Memory Conductor
+
+Storefront now includes a built-in **Memory Conductor** (`storefront_conductor`) that coordinates background tasks, `fork()` subprocesses, and cache eviction across **all installed KOReader plugins**—preventing Kindle's memory watchdog and Linux OOM killer from terminating KOReader when multiple plugins run simultaneously.
+
+#### Key Features
+* **Automatic Cross-Plugin Protection (Zero Configuration):**
+  * **Background Timer Serialization:** Transparently wraps `UIManager:scheduleIn` and `unschedule` to serialize background plugin timers into a single-lane priority queue, preventing startup, wake, and Wi-Fi reconnect stampedes. Foreground UI actions, core KOReader timers, micro-timers (`<= 0.25s`), and active subprocess pollers continue with zero delay.
+  * **Pre-`fork()` Copy-On-Write Stabilization:** Wraps `ffiutil.runInSubProcess`, `isSubProcessDone`, and `terminateSubProcess` to reclaim soft caches and flush LuaJIT GC debt before any plugin forks a child process, preventing parent-process CoW RAM duplication while background workers run.
+  * **Kindle-Aware `/proc/meminfo` Thresholds:** Accurately accounts for `Shmem` on legacy Kindle kernels (Linux 3.0) and enforces safe RAM floors (`45 MB` soft / `28 MB` critical on `<= 512 MB` devices) before dispatching background work.
+* **Developer API & Event Protocol (Zero Hard Dependency):**
+  * **Level 1 (`MemoryReclaim` Event):** Plugins can implement `function MyPlugin:onMemoryReclaim(level)` to shed private in-memory caches on demand without importing Storefront.
+  * **Level 2 (`storefront_conductor` API):** Plugins can request priority-managed execution slots (`foreground`, `interactive_bg`, `idle_bg`) via `pcall(require, "storefront_conductor")` with `Conductor.requestSlot()`, `Conductor.registerPlugin()`, `Conductor.reclaimMemory()`, and `Conductor.getMemoryStatus()`.
+
+#### Documentation
+* Full architecture details, standalone fallback templates, and API reference: **[Memory Conductor & Developer API (Wiki)](https://github.com/ultimatejimmy/storefront.koplugin/wiki/9.-Memory-Conductor)**
+
+**Full Changelog**: https://github.com/ultimatejimmy/storefront.koplugin/compare/26.11.20...26.11.21-beta
+
 # 26.11.19-beta · 2026-11-19
 
 De-duplicate repos with the same name for likes
@@ -22,23 +42,3 @@ Fix a bug with the likes not always updating
 - refine font catalog logic
 
 **Full Changelog**: https://github.com/ultimatejimmy/storefront.koplugin/compare/26.11.13-beta...26.11.15-beta
-
-# 26.11.13-beta · 2026-11-13
-
-## What's New
-
-### Font Catalog & Live Previews
-Redid the font catalog to be more efficient and easier to add new fonts.
-
-- **New Display category:** Added a **Display** filter to both the plugin and the web catalog so decorative, handwritten, and thematic fonts are easier to find.
-- **Sort by downloads:** Replaced *Stars* sorting on the Fonts tab with **Most Downloaded** as the default sort, alongside Rating and Name.
-
-### 35 New Open-License Fonts (56 Total)
-The font catalog has been expanded with 35 new open-license fonts across classic book serifs, handwritten styles, fantasy/storybook lettering, and nautical themes:
-
-- **Classic & Book Serifs:** *EB Garamond*, *Crimson Pro*, *Vollkorn*, *Alegreya*, *Spectral*, *Gelasio*, *Ibarra Real Nova*, *Junicode*
-- **Handwritten & Casual:** *Shantell Sans*, *Caveat*, *Patrick Hand*, *Comic Neue*, *Fredoka*
-- **Fantasy, Storybook & Medieval:** *Fraunces*, *IM Fell English*, *Cormorant Garamond*, *Cinzel*, *Fondamento*, *MedievalSharp*, *UnifrakturMaguntia*, *Uncial Antiqua*, *Metamorphous*, *Almendra*, *Almendra Display*, *Eagle Lake*, *Macondo Swash Caps*, *Berkshire Swash*, *Basteleur*, *Avara*
-- **Pirate & Nautical:** *Pirata One*, *Trade Winds*, *Grenze Gotisch*, *Jolly Lodger*, *Seaweed Script*, *The Nautigal*
-
-**Full Changelog**: https://github.com/ultimatejimmy/storefront.koplugin/compare/26.11.9...26.11.13-beta

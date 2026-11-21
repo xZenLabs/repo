@@ -1,3 +1,15 @@
+# v2.19.0 · 2026-11-21
+
+Tap a cross-reference to open its word (#62)
+- In CC-CEDICT's text, a word given with its pinyin can now be tapped: the 贤慧 in "variant of
+  賢慧|贤慧 xiánhuì", 东西 in "see 东西 dōngxi", 家伙 in "used in 傢伙|家伙 jiāhuo", 个 in "CL: 個|个
+  gè", 惠顾 in "(as in 惠顧|惠顾 huìgù)", and the word leading a variant's definition line ("贤慧:
+  ..."). One tap, on any of its characters, either form of a traditional|simplified pair, or its
+  pinyin, opens a popup for the whole word, titled with it, with its entry first and the reading
+  the reference gives first.
+- Taps anywhere else in CC-CEDICT's text still do nothing, and the Chinese dictionaries' text
+  works as before.
+
 # v2.18.0 · 2026-11-21
 
 Cross-reference-only CC-CEDICT entries show their target's definitions (#61)
@@ -47,23 +59,3 @@ Popup labels: the source label on its own row, CC-CEDICT always labelled (#59)
 - **Source labels** now offers **All entries** (default) and **None**; "Other dictionaries only"
   is gone, and a saved "other dictionaries only" setting reads as All entries.
 - Menu help, README text and screenshots updated.
-
-# v2.16.0 · 2026-11-21
-
-
-Classical mode: the Classical entry first, in full (#56)
-- With Classical mode on, the tapped character's 文言 entry is now the first entry in the popup,
-  above its CC-CEDICT entry, and shown in full: every sense, no [Tap to show more]. The 字频 rank
-  moves up with it, onto its label line. Everything else follows below, in the same order as with
-  the mode off. A simplified character with two Classical entries (发: 發, 髮) shows both on top.
-  Popups opened from a popup's text do the same.
-- The title-bar button now reads **文言 Mode** (on: **文言 Mode ✓**). The entry's own source label
-  stays 文言.
-- With the mode off, or for a character with no Classical entry (吗), the popup is unchanged.
-- README text, menu help and screenshots updated for the new order and label.
-
-Night mode: no grey text in the popup (#57)
-- In KOReader's night mode, the popup's small grey text (source labels, 字频, spoken here, note
-  labels, [Tap to show more]/[Tap to show less]) is drawn in the normal text colour, in every
-  popup and in Origin & Usage: inverted grey was hard to read on the Boox's e-ink. Day mode and
-  the button separators are unchanged.

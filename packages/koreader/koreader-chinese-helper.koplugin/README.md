@@ -402,8 +402,15 @@ The Chinese dictionaries' own text (MOE, the 成語典, Xinhua and Moegirlpedia:
 and quotations, an idiom's short line, the Origin & Usage view) can be read by tapping: a character in it
 opens its own popup on top, looked up like a tap in the book (the character and every word
 around it in that text that contains it), and stays underlined in the popup below while the new
-one is open. Nothing else in the popup is tappable: not the headlines (the character or word
-the entry is for), the components, or the English glosses.
+one is open.
+
+CC-CEDICT's cross-references can be tapped too: the word after **variant of**, **see**, **used
+in**, **CL:** and the like, wherever a word is given with its pinyin ("variant of 賢慧|贤慧
+xiánhuì", "(as in 惠顧|惠顾 huìgù)"), and the word leading a [target's line](#dictionaries)
+("贤慧: ..."). A tap on any of its characters, on either form of a traditional|simplified pair,
+or on the pinyin opens a popup for that whole word, titled with it, its entry first and the
+reading the reference gives first. Nothing else in the popup is tappable: not the headlines
+(the character or word the entry is for), the components, or the rest of the English glosses.
 
 <details>
 <summary>How popups on popups work</summary>
