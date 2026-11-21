@@ -1,17 +1,18 @@
 # v1.4.8 · 2026-11-21
 
 ## 更新说明
+> 本次更新重点在于书籍同步功能不再仅仅适用于书籍，其他任何文件包括图片或设置类文件（比如`settings.reader.lua`也可以上传/下载），只是书籍文件可以自己选择不同云端文件命名模式，其他文件直接以原文件名上传）`  
 - 排除目录: 修复元数据自动同步排除目录未持久化保存的问题
 - 进度合并: 修复进度合并时 xpointer 跨位数比较错误导致最远进度选择错误的问题
-- 书籍同步: 将 is_supported_book 判断后移，允许全部文件上传下载，原书籍上传命名逻辑仅对书籍类有效，非书籍类文件直接按文件名上传
+- 书籍同步: 将`is_supported_book`判断后移，允许全部文件上传下载，原书籍上传命名逻辑仅对书籍类有效，非书籍类文件直接按文件名上传
 - 元数据同步：过滤非书籍文件并增加相关提示
 - 书籍同步：上传/下载对话框文件夹快捷导航行根目录与父目录按钮对调
 
 ## What's Changed
-
+> **Key update highlights**: Book‑sync functionality is no longer limited to book files. It supports upload and download for arbitrary file types including images and configuration files (e.g. `settings.reader.lua`). Books offer configurable cloud‑side filename naming schemes; other files are uploaded using their original filenames.
 - Excluded_dir: Fix the issue where auto-sync excluded directories were not persisted
 - Progress merge: fix incorrect farthest progress selection due to cross-length xpointer comparison
-- Book_sync: Postpone is_supported_book check, allow all files for upload/download with different upload‑naming branches
+- Book_sync: Postpone`is_supported_book`check, allow all files for upload/download with different upload‑naming branches
 - Metadata Sync: filter out non‑book files and add relevant prompts.
 - Book Sync: Swap Root Directory and Parent Directory Buttons in Upload/Download Dialog Folder Quick‑Navigation Row
 
