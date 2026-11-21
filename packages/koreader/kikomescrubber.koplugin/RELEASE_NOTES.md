@@ -1,3 +1,63 @@
+# v2.4.0 · 2026-11-21
+
+## What's new
+
+## Action center
+A new first tab in KOReader's menu, available on Home and inside books. It is off by default: turn it on in **Settings > Actions > Action center**.
+
+- **The book you're reading**: cover, title, author, progress and pages, with a pill showing the minutes left in the chapter. A round button next to it opens that book's Book details.
+- **Your actions as round buttons**: icon-only circles in one row, next to the Library button (at the start on Home). If they don't all fit, a chevron appears and you can swipe the row, like the chips of Home.
+- **Recent books**: swipe on the bottom part to get a second page with your recent books (without the one you're reading). Tap one to open it.
+- **Hide / Show**: a button next to the book card hides KOReader's other menu tabs and brings them back when you tap it again. It works without restarting KOReader, and turning the Action center off brings the tabs back too.
+
+### Manage your actions from Settings
+**Settings > Actions** is now the one place where actions live. Make a new action (a KOReader action or a plugin, plus a name and an icon) and rename it, change its icon, change what it runs or delete it later. Each action can then be used in:
+- **Home (Chip)**: the Actions chip of Home.
+- **Action center**: the new first tab of KOReader's menu.
+
+You can toggle any action on or off in each of the two places independently. In the Action center you can also choose where each action shows: **Show in Home** and **Show in documents** (inside the reader).
+
+## New "Statistics" tab in Book details
+A third tab next to Synopsis and Details, with the reading numbers of that one book:
+- **Time read, Pages read and Reading days**, plus an estimated **Time left** when it can be worked out.
+- **Last 7 days**: soft bars with today in black. Tap a day to see its minutes, tap again to go back to the week.
+- Under the bars: **Daily average** and **Per page** (time per page).
+- **First read** and **Last read** on one line, when there is room.
+- Books with no statistics yet show a short message instead.
+
+### Multiple "Top of Home" views
+In **Settings > Home > Top of Home** you can now turn on more than one view (Recent books, Current book, Literary clock) and put them in the order you want. The first one is the default. On Home, swipe left or right over the top area to move between them. In Recent books, the swipe scrolls the covers first and then moves on to the next view.
+
+## Fixes
+
+### Plugin actions now show their on/off state
+- FileBrowser, FileBrowser Plus, ZenFM and Tailscale actions now turn black when they are on, in the Actions chip, the Action center and the menu tab. Before, only Wi-Fi, night mode, the frontlight and the G-sensor did.
+
+### "Minutes left in chapter"
+in action center and top of home (current book), should always be correct.
+
+## Performance and memory fixes for low-RAM devices
+Fixes KiKome getting slower and slower on devices with little RAM (reported on a basic Kindle). Big books could take 20 to 40 seconds to open after a few books had been opened, and quitting KOReader took longer than usual.
+
+- **Adaptive memory (new `kobold/data/memory.lua`).** KiKome reads the free RAM and sizes its cover cache accordingly, using less when memory is short.
+- **When a book is about to open**, the cover cache is cut down and Lua's garbage is collected, so the book finds as much free memory as possible.
+- **Shortly after the book is open**, if memory is still short, the KiKome screen parked under the book is released. It is rebuilt when the book is closed.
+- **When you leave a book**, the cover cache gets its normal budget back.
+- **Instant exit from books** (hot parking) is skipped automatically when memory is critical, so the book is fully closed and the next one starts with free memory.
+- **Warm-up of other screens** is skipped when memory is short.
+- **Home clock** no longer wakes up every minute while a book is open. It resumes when Home is painted again.
+
+
+feedbacks are welcomed 
+
+
+## Installation
+1. Download `KiKomeScrubber.koplugin.zip` from the **Assets** section below (not "Source code").
+2. Unzip it and copy the `KiKomeScrubber.koplugin` folder into `koreader/plugins/`.
+3. Restart KOReader.
+
+To update, use **Check for updates** in KiKome's Settings, or replace the folder. To uninstall, delete it.
+
 # v2.3.0 · 2026-11-15
 
 ## What's new
@@ -155,79 +215,6 @@ A new **+** button moves books into the folder you have open.
 - Holding a book in Home, or in Library tabs other than Files and Collections, opens its details directly.
 - In Files and Collections, **KOReader menu** is now **Edit book**, and opens the Edit screen.
 - Holding a folder or collection in Home shows the same menu as in Library.
-
-## Installation
-1. Download `KiKomeScrubber.koplugin.zip` from the **Assets** section below (not "Source code").
-2. Unzip it and copy the `KiKomeScrubber.koplugin` folder into `koreader/plugins/`.
-3. Restart KOReader.
-
-To update, use **Check for updates** in KiKome's Settings, or replace the folder. To uninstall, delete it.
-
-# v1.1.0 · 2026-11-01
-
-# KiKome 1.1.0
-
-KiKome 1.1.0 brings a Library with easier-to-manage folders and collections, allowing you to create them directly from books, as well as add or remove multiple books in batches. The Home screen now features filters by status, alphabetical order, and language, supporting up to 12 chips (including collections and a new genres chip) alongside a customizable Genres tab that you can reorder or disable. Additionally, the plugin is faster on startup, when opening Home from a book, and when loading covers, introducing a new keyboard, reduced screen flashing, and improved landscape support.
-
-## New in Library
-
-**New menus**
-- **New Folder:** move any books you want into a new folder and give it a name. Each book shows its path, so you always know where it's coming from. Find it in Library › Files › More.
-- **New Collection:** pick the books you want and name your new collection.
-- **Add to Collection:** select books to add to a specific collection.
-- All three menus include the plugin's sort, filters and search.
-
-**Collections and folders**
-- Select several books inside a collection, by holding a book or from More, and remove them all at once.
-- Hold a collection or folder to open its menu:
-  - Collection: Rename, Remove
-  - Folder: Rename, Set as home, Delete
-
-**Tabs**
-- New **Genres** tab.
-- New **Library › Tabs** option: reorder every tab however you like, or turn them off.
-- **To be read** and **Favorites** can now be turned off in Collections, just like the Collections chip on Home.
-
-**More menu**
-- Tapping More on Home and on some tabs now opens a menu with **Refresh Library**. Handy after adding a book.
-
-## New on Home
-
-**Filters**
-- **Status:** Read, Unread, On hold, Reading
-- **Alphabetical:** A–Z, Z–A #1 
-- **By language**
-
-**Shelves chips**
-- The limit goes up to **12 chips**.
-- Collections can now be chips.
-- New **Genres** chip, off by default.
-
-## Design
-
-- **New messages and popups.** Simpler and more consistent with the plugin, used everywhere in KiKome, including a new confirmation popup (for example, when deleting a folder).
-- **New keyboard.** It doesn't replace KOReader's; KiKome simply uses it whenever you need to type.
-- **New book state: On hold.** It now shows in cover badges, Book Details and Info.
-- **Status bar and its popups.** Redesigned to match the rest of the plugin.
-
-## Performance
-
-The whole plugin has been optimized.
-- KiKome loads much faster, both when KOReader starts and when you open its screens.
-- Leaving a book and getting back to Home is much quicker. The book stays parked in the background and closes later, while you're not using the device.
-- Reopening a book you just left is almost immediate.
-- Covers are cached, in memory and on disk, so they don't have to be decoded and scaled again each time.
-- Your library's information is read in a single pass and saved, so after a restart it loads without searching every book again.
-- Screens hidden behind KiKome no longer refresh the display for no reason.
-- Menus that sometimes stayed blank until you touched a button now appear right away.
-- The keyboard only refreshes the key you press and the text field, instead of the whole screen, so there's much less ghosting.
-
-## Fixes
-
-- In grid view, the number of books and folders per row is now calculated automatically instead of always being fixed. The spacing between covers has also been tightened.
-- Optimized for landscape mode.
-- Improved scroll bar: hold it and drag up or down.
-- Technical improvements to copy, cut and delete.
 
 ## Installation
 1. Download `KiKomeScrubber.koplugin.zip` from the **Assets** section below (not "Source code").
