@@ -23,6 +23,17 @@ Add the optional **BookOrbit achievements** card for your latest badge and
 next goal. You can also choose the first six actions in the text selection
 menu. Library and Manga do less work when opening large shelves.
 
+**[Try 1.5.0-beta.1](https://github.com/komadorirobin/orbitui.koplugin/releases/tag/v1.5.0-beta.1)** · FingerTips is included on touchscreens. While you
+select text, you can see the line above your finger. Lift your finger and drag
+either handle to adjust the selection. The floating menu uses your six OrbitUI
+shortcuts. To turn it off, open **OrbitUI settings → Integrations → Reader
+panel & X-Ray → FingerTips text selection**. An active standalone FingerTips
+installation takes priority. Both versions use your existing FingerTips settings.
+
+The beta also adds a monthly chart and goal pace to the Reading log.
+Bookshelf’s optional **Vocab Word** start-menu card revisits saved Vocabulary
+Builder words with definitions from your installed dictionaries.
+
 > **OrbitUI replaces the standalone SimpleUI and Bookshelf plugins.**
 > Neither is required separately. If either is installed, disable it and restart
 > KOReader before installing OrbitUI. Never run them alongside OrbitUI. Keep
@@ -356,13 +367,16 @@ Redact tokens, account details and private paths; do not upload settings backups
   [retained](components/simpleui/LICENSE-MIT-ORIGINAL.txt) for previously imported code.
 - **Bookshelf:** [AndyHazz and contributors](https://github.com/AndyHazz/bookshelf.koplugin),
   [AGPL-3.0 license](components/bookshelf/LICENSE).
+- **FingerTips** by David Friedman provides the touchscreen selection preview and
+  handles. [Upstream v0.1.0](https://github.com/ironicsans/fingertips.koplugin/tree/v0.1.0)
+  · [AGPL-3.0 license](components/fingertips/LICENSE).
 - **OrbitUI integration and customizations:** [komadorirobin](https://github.com/komadorirobin),
   [AGPL-3.0](LICENSE). Independent project, not an upstream endorsement.
 - **Icons and artwork:** original creators retain credit and separate licenses.
   See [icon credits](docs/ICONS.md) and each pack's **Credits and licenses**.
   Free download does not make every asset public domain.
 
-Both component licenses, notices and imported Git histories are retained.
+The SimpleUI and Bookshelf notices and imported Git histories are retained.
 [sources.json](sources.json) records the exact imported/reviewed revisions;
 release numbers are not source pins. Updates are reviewed, never auto-merged.
 

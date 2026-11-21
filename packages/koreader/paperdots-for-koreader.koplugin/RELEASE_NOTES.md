@@ -1,3 +1,7 @@
+# v5.2 · 2026-11-21
+
+**New margin styles**
+
 # v5.1 · 2026-11-19
 
 **Frame margins:** 
@@ -44,10 +48,3 @@ fixed the frame flashing (disappearing and redrawing) on every page turn on e-in
 - **Page turn animations:** new Wipe and Blinds transitions that move toward the side you turn to. Configurable steps, optional skip for comics/manga, and a gesture to toggle them (general -> toggle paper dots page animation)
 
 - **Fast painting fixed:** it was silently failing because of a wrong buffer field, so it never actually ran. It now works, and it is enabled by default on supported screens.
-
-# v3.2 · 2026-11-07
-
-Fixed slowdown when rotating the screen for kindle devices. 
-
-**Known issue**
-- On kindle basic 2024, Fibers can still be slower than the other styles.

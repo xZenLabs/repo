@@ -1,3 +1,23 @@
+# v1.5.0-beta.1 · 2026-11-21
+
+### Select text with FingerTips
+
+Touch and drag to see the line above your finger. After lifting your finger, drag either handle to adjust the selection. The floating bar uses your six OrbitUI shortcuts, including actions provided by KOAssistant. FingerTips is bundled and enabled by default on touchscreens. An enabled standalone copy takes priority and existing FingerTips preferences carry over. You can turn it off under **OrbitUI → Integrations → Reader panel & X-Ray → FingerTips text selection**.
+
+### Revisit words from your books
+
+Add **Vocab Word** to the Bookshelf start menu to review words saved in KOReader’s Vocabulary Builder. It uses your installed dictionaries offline and can show the original sentence and book. Tap the word to open its dictionary entry or mark it as known to remove it from rotation. Opening the module picker skips the dictionary lookup.
+
+### Home, Reading log and shelves
+
+- Home can adapt text contrast to the wallpaper. The Reading log adds a monthly books/pages chart and shows your pace towards the annual goal.
+- Bookshelf 6.5.3 discards taps queued while a book opens. The reviewed SimpleUI 3.1.0 updates include statistics-card actions, clock date formats and subview navigation fixes.
+- Optional Library and Manga diagnostics measure the time to first paint on the device.
+
+To update, enable **Include preview releases** under **OrbitUI → System & maintenance → Updates**, check for updates, then restart KOReader. For manual installation, use the attached **orbitui.koplugin.zip**. The stable channel offers **1.4.0**.
+
+Tested in KOReader 2026.07.1 on an emulated Tolino Vision Color with a local dictionary and an EPUB. Physical Bigme and Kobo checks are still open for this beta.
+
 # v1.4.0-beta.7 · 2026-11-18
 
 Tap **Reading streak** on Home to open the new **Reading log**. See reading time and pages over the last seven days, explore a twelve-week calendar, and tap a day to see which books you read. The Goal tab follows the goal already configured on your dashboard.
@@ -58,12 +78,3 @@ Tested with KOReader 2026.07.1 in the Tolino emulator, with KOAssistant and a te
 Enable **Include preview releases** under **OrbitUI → System & maintenance → Update OrbitUI**, then check for updates and restart after installing.
 
 Tested in KOReader emulators and with the updater from 1.4.0-beta.3 and stable 1.3.0. Physical Bigme testing of this combined build is still pending.
-
-# v1.4.0-beta.3 · 2026-11-15
-
-## What’s new
-
-- **Clearer top-menu footer.** The page number and arrows take priority when the clock and battery crowd the row. To hide device status throughout the top menu, turn off **Dock & interface → Quick controls → Show clock and battery in the top menu** in OrbitUI.
-- **Custom text-selection shortcuts.** Choose and reorder up to six actions for the first page of the selection menu. Select **Customize text selection menu** under **More…** while reading, or find it in **OrbitUI → Integrations → Reader panel & X-Ray**. **More…** still gives you the full action list.
-
-To update in KOReader, enable **Include preview releases** under **OrbitUI → System & maintenance → Update OrbitUI**, then check for updates and restart after installing.
