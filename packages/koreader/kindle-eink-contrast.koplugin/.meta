@@ -1,0 +1,23 @@
+# Kindle Eink Contrast plugin for KOReader
+# https://github.com/mkdayyyy/kindle-eink-contrast
+# zenpm:auto-scraped
+id=kindle-eink-contrast
+name=Kindle Eink Contrast
+version=source
+description=A KOReader plugin that helps darken washed-out Kindle text and reduce E Ink ghosting.
+author=mkdayyyy
+category=utility
+platforms=koreader
+dependencies=
+source=https://github.com/mkdayyyy/kindle-eink-contrast
+stars=5
+updated_at=2026-11-21T11:00:58Z
+prerelease_version=0.3.3-preview
+prerelease_published_at=2026-11-19T17:00:05Z
+readme_url=packages/koreader/kindle-eink-contrast.koplugin/README.md
+readme_hash=71b6ddc0e94f8e61560087d7c516a5815913914b
+prerelease_notes_url=packages/koreader/kindle-eink-contrast.koplugin/PRERELEASE_NOTES.md
+prerelease_notes_hash=4d0ef92c44598c794e94a1c305fab47c4d7df9b28c36c1e27e3e226ad666d3c6
+releases=[{"tag_name":"v0.3.3-preview","assets":[{"name":"kindle-eink-contrast-v0.3.3-preview-plugin.zip","url":"https://github.com/mkdayyyy/kindle-eink-contrast/releases/download/v0.3.3-preview/kindle-eink-contrast-v0.3.3-preview-plugin.zip","size":3146,"digest":"sha256:559d1d69cf2bf648430773599c088ca929aa62a518b1fb5591b7586a573d60cf"}],"name":"Kindle E Ink Contrast v0.3.3-preview","prerelease":true},{"tag_name":"v0.3.2-preview","assets":[{"name":"kindle-eink-contrast-v0.3.2-preview-plugin.zip","url":"https://github.com/mkdayyyy/kindle-eink-contrast/releases/download/v0.3.2-preview/kindle-eink-contrast-v0.3.2-preview-plugin.zip","size":3095,"digest":"sha256:87cc553cb4b1c1f0c7eff1fbe218df866d95856ab54b5b6d4d572be7c0ac55d7"}],"name":"Kindle E Ink Contrast v0.3.2-preview","prerelease":true}]
+source_type=source
+source_url=https://codeload.github.com/mkdayyyy/kindle-eink-contrast/zip/refs/heads/main

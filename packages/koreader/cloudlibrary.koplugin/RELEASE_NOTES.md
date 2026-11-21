@@ -1,3 +1,18 @@
+# v1.4.8 · 2026-11-21
+
+## 更新说明
+- 排除目录: 修复元数据自动同步排除目录未持久化保存的问题
+- 进度合并: 修复进度合并时 xpointer 跨位数比较错误导致最远进度选择错误的问题
+- 书籍同步: 将 is_supported_book 判断后移，允许全部文件上传下载，原书籍上传命名逻辑仅对书籍类有效，非书籍类文件直接按文件名上传
+- 元数据同步：过滤非书籍文件并增加相关提示
+
+## What's Changed
+
+- Excluded_dir: Fix the issue where auto-sync excluded directories were not persisted
+- Progress merge: fix incorrect farthest progress selection due to cross-length xpointer comparison
+- Book_sync: Postpone is_supported_book check, allow all files for upload/download with different upload‑naming branches
+- Metadata Sync: filter out non‑book files and add relevant prompts.
+
 # v1.4.7 · 2026-11-15
 
 ## 更新说明
@@ -64,11 +79,3 @@
 - Improved Chinese translations #11 
 
 Thanks to @iav  for contributions to improving the K3 device experience.
-
-# v1.4.3 · 2026-07-06
-
-## What's Changed
-
-- Added Auto Sync Exclude Directories feature #9  #10 
-- Optimized gesture registration: merged reader/filemanager paired gestures into unified general gestures
-- Remove logger.info

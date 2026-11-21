@@ -3,7 +3,7 @@
 # zenpm:auto-scraped
 id=dogearbooks-koreader
 name=Dogearbooks Koreader
-version=1.6
+version=1.7
 description=A KOReader plugin for customizable bookmark charms, with visual galleries, themed collections, and automatic day and night variants.
 author=Wolfazzo
 category=productivity
@@ -11,13 +11,13 @@ platforms=koreader
 dependencies=
 source=https://github.com/Wolfazzo/dogearbooks-koreader
 stars=5
-updated_at=2026-11-21T10:01:04Z
-published_at=2026-11-19T23:54:27Z
+updated_at=2026-11-21T11:00:58Z
+published_at=2026-11-21T10:07:52Z
 readme_url=packages/koreader/dogearbooks-koreader.koplugin/README.md
 readme_hash=e19b7d56551e2fc0d7b6754325cd2ded86a8874b
 release_notes_url=packages/koreader/dogearbooks-koreader.koplugin/RELEASE_NOTES.md
-release_notes_hash=59a163827d79bc71591d4c20ec90d6cb25ca9b2ecb9f73486aaf29f11cb831b3
-releases=[{"tag_name":"v1.5","assets":[{"name":"dogearbooks.koplugin.zip","url":"https://github.com/Wolfazzo/dogearbooks-koreader/releases/download/v1.5/dogearbooks.koplugin.zip","size":333900,"digest":"sha256:da2ce6cab3ae8ffaa6b4e4c2b139e35adc03e07aa52341fd2322e0504bf82b9d"}],"name":"dogearbooks-koreader"},{"tag_name":"v1.6","assets":[{"name":"dogearbooks.koplugin.zip","url":"https://github.com/Wolfazzo/dogearbooks-koreader/releases/download/v1.6/dogearbooks.koplugin.zip","size":1418242,"digest":"sha256:244b5a0bae36274705ea43ae9e5e5dff15c78a43f6622d80d5d4460e5a83af3a"}],"name":"dogearbooks-koreader"}]
+release_notes_hash=035e3436bd585f0993a4c6f69188ac537d2c158e59437bcaf01cbbc97b3a09b9
+releases=[{"tag_name":"v1.7","assets":[{"name":"dogearbooks.koplugin.zip","url":"https://github.com/Wolfazzo/dogearbooks-koreader/releases/download/v1.7/dogearbooks.koplugin.zip","size":3019984,"digest":"sha256:97d881ded8a3fd14faea5661dc5dbedc6c28e858d2f80e430ef570d5e791b7d3"}],"name":"dogearbooks-koreader"}]
 source_type=release
 source_asset=dogearbooks.koplugin.zip
-size=1418242
+size=3019984

@@ -1,6 +1,22 @@
+# v1.0.2 · 2026-11-21
+
+Marginalia v1.0.2 — Stability & Performance
+This update focuses on smoother reading, more reliable margin handling, and easier access to Marginalia.
+What's new
+- Fixed repeated “Reloading”: resolved the loop that reopened books and reapplied margins over and over.
+- Improved performance: faster drawing of prepared ornaments, fewer redundant screen updates, and less unnecessary work when opening the gallery.
+- Better activation flow: when Marginalia is disabled, its shortcut now opens a Capitulares-style popup to enable it or close the popup.
+- New menu symbol: added ❈ Marginalia to the KOReader menu.
+- Preserved your setup: existing profiles, per-book compositions, and all 249 bundled ornaments remain unchanged.
+Installation: Use the full ZIP for a new installation or No Images to update while keeping your ornament library.
+
+Important: Disable Marginalia from the Tools menu before uninstalling it, so the original book margins are restored.
+
 # V1.0.1 · 2026-11-20
 
 Marginalia v1.0.1 — Performance Hotfix
+
+Superseded — known repeated “Reloading” bug. Marginalia v1.0.1 can repeatedly reload books with decorative margins. Please update to v1.0.2 (see Releases), which fixes the issue and includes performance/UI improvements. Keep a backup of book .sdr settings and disable Marginalia via its Tools menu before manually uninstalling it, to restore original margins.
 
 A maintenance release focused on improving reading performance, preventing unwanted margin persistence, and ensuring proper cleanup when disabling or uninstalling the plugin.
 
