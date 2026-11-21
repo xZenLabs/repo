@@ -20,6 +20,10 @@ DogEarBooks customizes the bookmark displayed on bookmarked pages while reading.
 
 Gesture availability can depend on your device and KOReader version.
 
+Added new sets, the ability to delete individual images and folders, and a size setting of up to 10
+
+**For delete folder or image: hold folder or image and delete.**
+
 ## Gallery and folders
 
 The library presents image previews across multiple pages. The **Folders** menu lets you browse individual collections and their subfolders.
@@ -103,12 +107,9 @@ Original project created by **KitanaCode**. Fork modified by **Wolfazzo**. The o
 
 Distributed under the MIT license. See [LICENSE](LICENSE).
 
-<img width="310" height="437" alt="ksnip_20261119-172153" src="https://github.com/user-attachments/assets/3258092e-cfbe-4884-abc5-386a5c86450b" />
-
-<img width="310" height="438" alt="ksnip_20261119-172135" src="https://github.com/user-attachments/assets/f0faa219-71c4-4b15-97d0-eb41345124d6" />
-
-<img width="308" height="437" alt="ksnip_20261119-172120" src="https://github.com/user-attachments/assets/177ea507-c98e-4204-b78b-bd87596f8cec" />
-
-<img width="309" height="439" alt="ksnip_20261119-172101" src="https://github.com/user-attachments/assets/19817e8b-1902-4112-adcc-48bffc820354" />
-
+<img width="480" height="683" alt="qew59bmlql2i1" src="https://github.com/user-attachments/assets/6c2839da-cc40-4ad6-b562-455f34949b48" />
+<img width="480" height="677" alt="3pplgbmlql2i1" src="https://github.com/user-attachments/assets/20f90f0a-44bc-442d-9d17-e73866017c83" />
+<img width="480" height="678" alt="yjuaeamlql2i1" src="https://github.com/user-attachments/assets/7896b183-c607-42d1-82e9-94fce633e1c1" />
+<img width="480" height="680" alt="xt4apamlql2i1" src="https://github.com/user-attachments/assets/a03c5e31-36c3-422f-899b-4af626f04daa" />
+<img width="480" height="1340" alt="all_sets" src="https://github.com/user-attachments/assets/24003020-3013-45fb-ab5d-a60b90f44dfb" />
 
