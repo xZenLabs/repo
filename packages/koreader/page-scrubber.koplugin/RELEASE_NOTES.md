@@ -1,3 +1,70 @@
+# v8.6.0 · 2026-11-21
+
+# Patch Notes
+
+## Summary
+
+This update adds a **Swipe Up menu** to Reading Pop-Ups and unlocks every KOReader typography option in the Quick Menu, so replacing KOReader's own typography menu never leaves you without access to them. The **Aa tab** was redesigned for PDF/CBZ, gained a **More** button in EPUBs, and now lets you see the page behind it while you change settings.
+
+---
+
+## Swipe Up menu in Reading Pop-Ups
+
+Choose what opens when you **swipe up from the bottom edge**, instead of KOReader's typography menu.
+
+**Settings > Reading Pop-Ups > Swipe up to:** Off *(default)*, Grid, Simple Grid, Index, Index (Table of Content), Multi-Grid, Quick Menu.
+
+Since this can replace KOReader's typography menu, the **Aa tab** now exposes all the format options KOReader has. If you cancel KOReader's own menu, you are never left without them.
+
+---
+
+## Aa tab
+
+**Live preview:** opening the Aa tab now keeps the page visible in the background, so you can see your changes applied automatically.
+
+### PDF / CBZ
+
+A completely different tab, adapted to fixed documents: three submenus with icons and a summary of their current value, plus the view / rotate row.
+
+| Entry | Options |
+| --- | --- |
+| **Page** | Rotation, Page crop, Margin, Auto straighten, Fit zoom to, Fit, Rows, Zoom factor, Direction |
+| **Reflow** | Reflow on/off, Font size, Word gap, Line spacing, Alignment |
+| **Visual** | Contrast, Saturation, White threshold, Dewatermark, Background cleanup, Dithering, Render quality *(Reflow on)* |
+
+Order follows KOReader (Page first, Rotation first inside it). Options that don't apply to the current document are hidden.
+
+### EPUB: new More (⋮) button
+
+Placed at the right end of the bottom row, with every option that was missing:
+
+- **Main list:** Rotation, Margin L/R, Margin T/B.
+- **View options:** Render mode (how the layout engine renders the book), Zoom dpi (scales images and size-based CSS), Word spacing, Word expansion (how much words may stretch in justified text).
+- **Style options:** Contrast, Font weight, Font hinting, Font kerning, Embedded style (publisher's styles), Embedded fonts (the book's own fonts), Image scaling (fast or best quality).
+
+---
+
+## Option picker
+
+A new picker opens for each option in the Aa tab and its submenus:
+
+- Shows a description of the option and of each value.
+- Includes a star to set the option as your default.
+- Toggles (Reflow, Background cleanup, Embedded style, Image scaling, ...) keep their switch in place; tapping the **name** opens the picker with the explanation.
+
+---
+
+## Quick Menu visual refresh
+
+A more subtle and elegant design, with buttons on a soft gray background, and icons at the start of the submenu entries.
+
+## Installation
+1. Download the zip named `page_scrubber.koplugin-<version>.zip` from the **Assets** section below (not "Source code").
+2. Unzip it and copy the `page_scrubber.koplugin` folder into `koreader/plugins/`.
+3. Restart KOReader.
+
+To update, replace the folder. To uninstall, delete it (and `koreader/patches/2--page-scrubber-font.lua` if you used the system font).
+
 # v8.5.0 · 2026-11-13
 
 ## What's new
@@ -110,40 +177,6 @@ To update, replace the folder. To uninstall, delete it (and `koreader/patches/2-
 
 - Updated spanish and Portuguese. 
 - **Help translate:** If you'd like to help update the translation into your language, contributions are welcome!
-
-## Installation
-1. Download the zip named `page_scrubber.koplugin-<version>.zip` from the **Assets** section below (not "Source code").
-2. Unzip it and copy the `page_scrubber.koplugin` folder into `koreader/plugins/`.
-3. Restart KOReader.
-
-To update, replace the folder. To uninstall, delete it (and `koreader/patches/2--page-scrubber-font.lua` if you used the system font).
-
-# v8.1.0 · 2026-10-18
-
-## Settings & Split Menu Redesign
-
-### Visual updates
-- **Settings menu redesign:** new header with back and close buttons, options grouped into sections, the current value shown on the right of each row, and a cleaner, lighter look.
-- **Split menu refresh:** the selected row is now a rounded pill, the pinned row has a softer selected state, the color filter arrows are chevron icons, and page numbers are centered. Landscape got the same changes.
-- The book title and chapter name now match the size of the "Library" label, and the selection menu has a thicker outline.
-
-### New book title style: Bar
-- Under **Settings > Appearance > Top bar > Book title style** there is a new **Bar** style. It draws the book title on a full-width white bar, vertically centered.
-- Turn on **Top bar separator line** together with the **Bar** style and the result looks very similar to the Kindle's own top bar.
-
-### Selection menu
-- **New option: Size of selection menu** (Small / Medium / Large) under Settings > Reading Pop-Ups. It scales the icons, the buttons and the outline. Medium is the previous size.
-
-### New: Advanced settings
-A new **Advanced** submenu (Settings > Other > Advanced):
-- **Settings**
-  - **Back up settings:** saves all your PageScrubber options and your favorite images to `page_scrubber_backup.lua` in KOReader's `settings` folder.
-  - **Restore settings from backup:** brings back the options and favorite images saved in that file. To restore on another device, copy the file to the same folder first.
-  - **Reset all settings:** back to defaults. Asks for confirmation, and also clears your favorite fonts, quick actions and favorite images. Back up first if you want to keep them.
-- **Cache**
-  - **Clear image cache:** deletes the scan cache of the Images tab (the current size is shown next to it). Your favorite images are kept.
-- **Updates**
-  - **Check for updates:** looks for a newer release on GitHub, shows its notes and installs it from the reader. It keeps a backup and restores the previous version if the install fails. Restart KOReader when it finishes.
 
 ## Installation
 1. Download the zip named `page_scrubber.koplugin-<version>.zip` from the **Assets** section below (not "Source code").
