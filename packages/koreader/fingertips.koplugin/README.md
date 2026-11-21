@@ -6,7 +6,7 @@ A KOReader plugin that makes selecting text work more like it does on a phone. W
 - **Handles** at both ends let you adjust the selection after you lift your finger.
 - The selection **sticks to its line** while you slide sideways, so a small wobble doesn't jump to the line above or below.
 - Sliding down a page, the end of the selection **stays just above your finger**, so your finger never covers it.
-- KOReader's highlight popup is replaced by a **compact popup** that sits above the selection instead of on top of it, with the actions you choose.
+- KOReader's highlight popup is replaced by a **compact menu** that sits above the selection instead of on top of it, with the actions you choose — or you can turn that off and keep the highlight menu you already use.
 
 | Without FingerTips | With FingerTips |
 |:---:|:---:|
@@ -44,22 +44,23 @@ A long-press on a single word without dragging still opens the dictionary, as us
 
 ### After you lift your finger
 
-- A **compact popup** appears above the selection, or below it when there's no room. It has the same buttons as KOReader's own highlight popup, including buttons that other plugins add.
+- A **compact menu** appears above the selection, or below it when there's no room. It has the same buttons as KOReader's own highlight popup, including buttons that other plugins add. (You can turn this off under **Use FingerTips menu** and keep your usual menu.)
 - It shows a few actions at a time. **More** shows the next set, and wraps around to the first set.
 - **Drag either handle** to adjust the selection. The popup goes away while you adjust.
 - **Tap elsewhere** to close the popup and drop the selection, as usual. **Long-press elsewhere** to start a new selection.
 
 ### Settings
 
-Top menu → Tools tab (wrench icon) → FingerTips:
+Top menu → Tools tab (wrench icon) → FingerTips. These are reachable any time, whether you're reading or on the home screen:
 
 - **FingerTips on**: the main on/off switch. When it's off, selecting text works exactly as it does without the plugin.
-- **Customize popup**: choose which actions appear and in what order.
+- **Use FingerTips menu**: keep this on to use FingerTips' compact menu above the selection. Turn it off if you'd rather keep the highlight menu you already use: KOReader's own, or another plugin's. FingerTips still works for selecting text, but when you lift your finger your usual menu appears.
+- **Customize menu**: choose which actions appear and in what order. (Available while you're reading a book, when **Use FingerTips menu** is on.)
   - **One row per set** shows 3 actions plus More; **Two rows per set** shows 7 plus More.
-  - You can move your most-used actions to the first set for easy access. Tap an action to pick it, then use **Move up** and **Move down**. Tap its box to put it in the popup or take it out entirely.
-  - The list is grouped the way the popup shows it: first set, second set, and so on. Actions you've taken off are listed last.
+  - You can move your most-used actions to the first set for easy access. Tap an action to pick it, then use **Move up** and **Move down**. Tap its box to put it in the menu or take it out entirely.
+  - The list is grouped the way the menu shows it: first set, second set, and so on. Actions you've taken off are listed last.
 
-![The Customize popup screen: switching from two rows per set to one, then moving an action up](images/settings.gif)
+![The Customize menu screen: switching from two rows per set to one, then moving an action up](images/settings.gif)
 
 ## Where it works
 

@@ -574,6 +574,8 @@ PRs or FRs are welcome.
 ## Data Sources
 
 - **Arabic text**: [Quran.com API v4](https://quran.com/) — QPC Uthmani Hafs encoding (Riwayat Hafs 'an 'Asim), Madinah Mushaf V1 (1405 AH) page mapping
+- **Arabic text, one spelling**: the word كلا as the King Fahd Complex's Hafs data version 2.0 writes it (without a tatweel, in 33 places); every build checks the whole Hafs text against the text of that file
+- **Arabic text (Warsh)**: the King Fahd Complex's own Warsh data, version 2.1 (2022), kept unchanged in [`data/warshData_v2-1.json`](data/warshData_v2-1.json)
 - **Translations**: [Quran.com API v4](https://quran.com/) + [fawazahmed0/quran-api](https://github.com/fawazahmed0/quran-api) — 42 languages, 46 translators (see [configs/](configs/) for full list)
 - **Surah names**: [Quran.com API v4](https://quran.com/) for most languages; [QuranEnc](https://quranenc.com/) for languages not on the API (e.g. Fulfulde)
 - **Surah overviews**: [Quran.com API v4](https://quran.com/) — `/chapters/{id}/info` endpoint, available in English, Urdu, Indonesian, Malayalam, Tamil, Italian
@@ -582,7 +584,7 @@ PRs or FRs are welcome.
 - **I'rab**: [Quranic Arabic Corpus](https://corpus.quran.com/) — traditional Arabic grammatical analysis prose (GPL)
 - **Root definitions**: [Lane's Lexicon](https://github.com/aliozdenisik/quran-arabic-roots-lane-lexicon) — root meanings (public domain)
 - **Primary font (Hafs)**: KFGQPC Uthmanic Script Hafs — King Fahd Complex, via [Tarteel CDN](https://qul.tarteel.ai/)
-- **Primary font (Warsh)**: KFGQPC Warsh Uthmanic Script v0.10 — King Fahd Complex, via [thetruetruth/quran-data-kfgqpc](https://github.com/thetruetruth/quran-data-kfgqpc)
+- **Primary font (Warsh)**: KFGQPC Warsh Uthmanic Script v2.1 (King Fahd Complex), from the same package as its Warsh data v2.1
 - **Symbol font**: [Scheherazade New](https://software.sil.org/scheherazade/) (SIL International) — rub al-hizb markers, surah header numerals, TOC labels, and in-book cover text
 - **Basmala font**: [Quran Common](https://qul.tarteel.ai/resources/font/459) (QUL / King Fahd Complex) — ornamental bismillah ligature (U+FDFD)
 - **Header font**: [Surah Name V4](https://qul.tarteel.ai/resources/font/457) (QUL / King Fahd Complex) — calligraphic surah name glyphs
@@ -593,13 +595,13 @@ PRs or FRs are welcome.
 
 An experimental Arabic-only EPUB for Riwayat Warsh 'an Nafi' is included in the release. See the [Arabic EPUB table](#arabic-only) for the download link.
 
-**Data source:** [KFGQPC](https://fonts.qurancomplex.gov.sa/) (King Fahd Glorious Quran Printing Complex) via [thetruetruth/quran-data-kfgqpc](https://github.com/thetruetruth/quran-data-kfgqpc). This is the only freely available digital Warsh package with matched text and font. The same data is used by most open-source multi-qiraat projects.
+**Data source:** [KFGQPC](https://fonts.qurancomplex.gov.sa/) (King Fahd Glorious Quran Printing Complex): its own Warsh package, version 2.1 (2022-09-07), text and font together. The publisher took its download pages down in 2026; the package is the one the Internet Archive kept, and it matches the SHA-1 the publisher printed beside it. The text file is in this repo unchanged ([`data/warshData_v2-1.json`](data/warshData_v2-1.json)); the build checks it against its checksum. Three sajdah signs that this file carries (at the end of surah 53, at 84:21 and at the end of surah 96) are left out of the books: the publisher's own note says they were removed, its earlier file has none there, and its printed Warsh mushaf (the 604-page edition the file follows) has none.
 
-**Font:** KFGQPC Warsh Uthmanic Script v0.10 (2018, Ashfaq Ahmad Niazi). The text encoding is inseparable from its font — Warsh text rendered with a Hafs font produces broken diacritics, and vice versa. The font uses Maghribi orthographic conventions: dot under fa (ف), compact comma-style damma, hamzat al-wasl markers (U+06EC), and the distinctive North African kaf.
+**Font:** KFGQPC Warsh Uthmanic Script v2.1 (2022, Ashfaq Ahmad Niazi), unchanged. The text encoding is inseparable from its font: Warsh text rendered with a Hafs font produces broken diacritics, and vice versa. The font uses Maghribi orthographic conventions: dot under fa (ف), compact comma-style damma, hamzat al-wasl markers (U+06EC), and the distinctive North African kaf.
 
 **What this edition is:** The Quranic text follows Warsh 'an Nafi' with Madani ayah numbering (6,214 ayahs across 114 surahs, vs 6,236 in Hafs). The basmala is unnumbered and absent from Al-Fatiha's ayah count. 50 surahs have different ayah counts compared to Hafs. All 30 juz boundaries are present and correct for the Warsh tradition (12 of 30 differ from Hafs). Orthographic conventions such as sun-letter assimilation marking (shadda placement) follow the Medina Warsh printing tradition.
 
-**Page numbers:** The KFGQPC data uses a 604-page digital layout that mirrors the Hafs Madinah Mushaf grid structure. These are **not** physical Warsh mushaf page numbers — the printed Warsh Madinah Mushaf has ~576 pages. All 114 surah start pages are identical between the KFGQPC Warsh and Hafs datasets. Page references in the EPUB footer are KFGQPC virtual pages, not references to any specific printed Warsh mushaf.
+**Page numbers:** The KFGQPC data counts 604 pages. They are the pages of the Warsh mushaf that the King Fahd Complex prints in its newer edition (1440 AH, 604 pages): seven places were compared with the publisher's print file, each on the page the data names. The publisher's older printing (1428 AH) has 559 pages and other page numbers.
 
 **What works:**
 
@@ -611,12 +613,12 @@ An experimental Arabic-only EPUB for Riwayat Warsh 'an Nafi' is included in the 
 | Juz boundaries & TOC | Correct for Warsh (from KFGQPC data) |
 | Hizb/rub markers | Present (from KFGQPC data) |
 | Basmala | QPC-encoded text with correct Warsh diacritics (extracted from S27:30) |
-| Surah headers | Plain Arabic text in Warsh font (no calligraphic glyph, no side columns) |
-| Page numbers in footer | Functional but virtual (see above) |
+| Surah headers | The framed header of the other books: number, name and count of ayahs (Warsh's own count); the name is written in the Warsh font, not drawn |
+| Page numbers in footer | The pages of the 604-page printed Warsh mushaf (see above) |
 
 **Known limitations:**
 
-- **No calligraphic surah headers or ornamental basmala.** The Hafs decorative fonts (surah-name-v4, quran-common) use Mashriqi orthographic marks (different sukun, hamza shapes) that do not match Warsh/Maghribi conventions. No Warsh-specific decorative fonts exist in the digital Quran font ecosystem. The EPUB falls back to plain Arabic text in the Warsh font for both.
+- **No calligraphic surah headers or ornamental basmala.** The Hafs decorative fonts (surah-name-v4, quran-common) use Mashriqi orthographic marks (different sukun, hamza shapes) that do not match Warsh/Maghribi conventions. No Warsh-specific decorative fonts exist in the digital Quran font ecosystem. The EPUB writes both in the Warsh font; the surah's name stands in the same frame as in the other books.
 - **Single waqf marker type.** The KFGQPC Warsh data uses only U+06D6 (صلى) for pause marking, consistent with the simplified waqf system used in many Medina Warsh mushafs. The multi-symbol waqf system (قلى, مـ, لا, ج, three dots) common in Hafs mushafs is not present in this data source.
 - **KOReader plugin:** The Quran navigation plugin hardcodes Hafs ayah counts and juz boundaries. Surah-level navigation works (reads the EPUB TOC), but ayah-level prev/next navigation will be incorrect. The juz status bar reads the EPUB TOC and should display correctly.
 - **Dictionaries:** The WBW, grammar, and tafsir dictionaries are keyed to Hafs ayah numbers (6,236 ayahs). Since Warsh has different ayah boundaries in 50 surahs, dictionary lookups will be misaligned for those surahs for now. The surah overview dictionary is also differently keyed.

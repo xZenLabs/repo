@@ -1,3 +1,9 @@
+# v0.2.0 · 2026-11-21
+
+New: You can now turn off FingerTips' own highlight menu and keep whichever menu you already use if that's your preference. FingerTips highlighting method remains. Toggle the menu at Tools → FingerTips → Use FingerTips menu.
+
+Also new: You can turn FingerTips on or off any time through the Tools menu, whether or not you have a book open.
+
 # v0.1.0 · 2026-11-20
 
 First release.
