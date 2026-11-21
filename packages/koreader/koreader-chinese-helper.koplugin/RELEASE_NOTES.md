@@ -1,3 +1,17 @@
+# v2.17.0 · 2026-11-21
+
+
+Popup labels: the source label on its own row, CC-CEDICT always labelled (#59)
+- The small grey lines above an entry are now two rows: first the tapped character's 字频 rank
+  (and **spoken here**, when shown), then the entry's source label on a row of its own. A label
+  and 字频 no longer share a line (it read `文言 · 字频 16`, as if 字频 belonged to the
+  dictionary).
+- CC-CEDICT entries are now always labelled **CEDICT**, with Classical mode on or off, so the
+  文言 entry and CC-CEDICT's are easy to tell apart.
+- **Source labels** now offers **All entries** (default) and **None**; "Other dictionaries only"
+  is gone, and a saved "other dictionaries only" setting reads as All entries.
+- Menu help, README text and screenshots updated.
+
 # v2.16.0 · 2026-11-21
 
 
@@ -63,15 +77,3 @@ Head line's second form in the text's shade (#54)
   smaller and not bold. The label line, 字频, the spoken-tone note and [Tap to show more] stay
   grey.
 - README screenshots with a second form retaken.
-
-# v2.14.1 · 2026-11-20
-
-Neutral tones marked by the word's traditional form (#51)
-- 发 in 头发 is now marked **fà** "likely here" and listed first (was fā, "to send out"). The
-  word draws 发 neutral (tóufa), and two of 发's entries have those letters. The popup now
-  picks the one whose traditional form the word uses (頭髮 → 髮 → fà), and falls back to the
-  character's default reading only when that doesn't separate them (含糊's 糊: hú).
-- A scan of every CC-CEDICT word with such a tie (`tools/scan_neutral_ties.py`: 323 ties on 76
-  characters) found 6 changes, all for the better: 头发, 剪头发, 烫头发, 耳发 and 头发胡子一把抓 (fà), and
-  跟斗 (dǒu, was dòu). The other 317 ties keep the default.
-- Only the popup's marking changes; the pinyin drawn on the page is the same.
