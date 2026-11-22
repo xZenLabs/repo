@@ -1,0 +1,25 @@
+# Bookshelf Description Search patch for KOReader
+# https://github.com/readinpixels/bookshelf-description-search
+# zenpm:auto-scraped
+id=bookshelf-description-search
+name=Bookshelf Description Search
+version=1.0.0
+description=Find book descriptions (blurbs) on Apple Books and Google Books for the Bookshelf plugin of KOReader (userpatch)
+author=readinpixels
+category=patches
+platforms=koreader
+dependencies=
+source=https://github.com/readinpixels/bookshelf-description-search
+stars=5
+updated_at=2026-11-22T22:07:08Z
+published_at=2026-11-21T11:54:10Z
+readme_url=packages/koreader/bookshelf-description-search.kopatch/README.md
+readme_hash=6592fdac84ff522bdfabd571025112bb46b744c5
+release_notes_url=packages/koreader/bookshelf-description-search.kopatch/RELEASE_NOTES.md
+release_notes_hash=6cb72f817cee3c7af91341090deb3608d22d7a1d8d1d9bddd01ce892207e0f18
+releases=[{"tag_name":"v1.0.0","assets":[{"name":"source-code.zip","url":"https://api.github.com/repos/readinpixels/bookshelf-description-search/zipball/v1.0.0"}],"name":"v1.0.0"}]
+source_type=source
+assets.0.arch=any
+assets.0.asset=2-bookshelf-description-search.lua
+assets.0.url=https://raw.githubusercontent.com/readinpixels/bookshelf-description-search/main/2-bookshelf-description-search.lua
+assets.0.size=34884

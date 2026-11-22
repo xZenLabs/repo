@@ -1,3 +1,16 @@
+# v1.18.2 · 2026-11-22
+
+### What's new
+
+- Reading time is now read from every record KOReader keeps for a book. When KOReader had filed a book's reading under more than one record, the add-on only looked at the first, so some reading never reached Seekquel.
+- Your reader's hourly report now says what KOReader's statistics hold for the book you last read, so a reading-time problem can be found without you sending anything.
+
+### Install
+
+Already paired? The add-on updates itself: open Seekquel in KOReader's menu and accept the update when it is offered.
+
+New install: download seekquel.koplugin-v1.18.2.zip below, unzip it, and copy the seekquel.koplugin folder into KOReader's plugins folder. Restart KOReader, then open Seekquel from the menu to pair.
+
 # v1.18.1 · 2026-11-14
 
 ### What's new
@@ -48,15 +61,3 @@ New install: download seekquel.koplugin-v1.17.0.zip below, unzip it, and copy th
 Already paired? The add-on updates itself: open Seekquel in KOReader's menu and accept the update when it is offered.
 
 New install: download seekquel.koplugin-v1.16.0.zip below, unzip it, and copy the seekquel.koplugin folder into KOReader's plugins folder. Restart KOReader, then open Seekquel from the menu to pair.
-
-# v1.15.1 · 2026-10-14
-
-### What's new
-
-- **Sync no longer says "Sync complete" for a book Seekquel has not matched yet.** If the book you are reading is not linked to a Seekquel book, Sync now tells you to choose which book it is, because nothing is sent until you do. If Seekquel could not be reached to look the book up, it says your reading is still waiting to sync instead.
-
-### Install
-
-Already using the add-on? It updates itself; open the Seekquel menu in KOReader and accept the update.
-
-Installing for the first time: download `seekquel.koplugin-v1.15.1.zip`, unzip it, and copy the `seekquel.koplugin` folder into KOReader's `plugins` folder on your e-reader. Restart KOReader, then pair from the Seekquel menu.
