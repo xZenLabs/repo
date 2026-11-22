@@ -1,3 +1,17 @@
+# v1.6.6 · 2026-11-22
+
+### 中文
+
+- 漫画单页加载较慢时仍会提前下载下一页。连续下载失败后会尝试恢复预取，翻过大图后也会重新判断下一页可用的内存。
+- 点列表封面可放大查看，再点屏幕任意位置关闭。点标题仍可进入详情。
+- 返回、关闭和更新失败等提示改为短暂显示，操作提前完成时立即收起返回提示。
+
+### English
+
+- Manga preloading continues after a slow page. The reader can resume preloading after consecutive download failures and reassesses available memory after you turn past a large image.
+- Tap a list cover to enlarge it, then tap anywhere to close it. Tap the title to open details.
+- Return, close, and update error notices now appear briefly. The return notice closes as soon as navigation finishes.
+
 # v1.6.5 · 2026-11-21
 
 ### 中文
@@ -47,15 +61,3 @@
 
 - Automatic source checks retry once after a temporary network failure on wake or reconnection, reducing error messages just after wake-up.
 - Reduced cache writes when closing a comic so you can return to the previous screen sooner.
-
-# v1.6.1 · 2026-11-19
-
-### 中文
-
-- 修复取消聚合搜索后仍可能向下一个来源发出请求的问题。
-- 减少聚合搜索翻查多页结果时的重复调度和清理。
-
-### English
-
-- Fixed an issue where cancelling a search across sources could still send a request to the next source.
-- Reduced redundant work when searching through multiple pages of results across sources.
