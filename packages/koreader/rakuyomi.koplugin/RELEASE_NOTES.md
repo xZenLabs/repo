@@ -1,3 +1,13 @@
+# v1.43.8 · 2026-11-22
+
+## [1.43.8](https://github.com/yuuki-kagura/rakuyomi/compare/v1.43.7...v1.43.8) (2026-11-22)
+
+
+### Bug Fixes
+
+* **reader:** compare ReadHistory paths with realpath ([#5](https://github.com/yuuki-kagura/rakuyomi/issues/5)) ([b3303ad](https://github.com/yuuki-kagura/rakuyomi/commit/b3303ad994751be59b38ab785ff363352ee99ebf))
+* tolerate broken source lists and source files ([#2](https://github.com/yuuki-kagura/rakuyomi/issues/2)) ([80ee2ad](https://github.com/yuuki-kagura/rakuyomi/commit/80ee2ad7423f15f04cde4231c4b9366e7971072e))
+
 # v1.43.7 · 2026-11-16
 
 ## [1.43.7](https://github.com/yuuki-kagura/rakuyomi/compare/v1.43.6...v1.43.7) (2026-11-16)
@@ -39,5 +49,3 @@
 ### Performance Improvements
 
 * **cookie-bot:** stop registering bot commands on every cold isolate ([30d8002](https://github.com/yuuki-kagura/rakuyomi/commit/30d80029c0566587edc415dd23a57561d948a720))
-
-# v1.43.3 · 2026-11-14
