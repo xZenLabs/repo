@@ -1,3 +1,19 @@
+# v2.24.0 · 2026-11-22
+
+
+Headwords: simplified • traditional, at the same size (#73)
+- Each entry's headword shows its traditional form after the simplified one, at the same size
+  and separated by a dot: **头发** • 頭髮, **门** • 門. The simplified form is bold. Nothing is
+  added when the two are the same (人, 大人).
+- A single character lists only its other forms, not itself: 干 • 乾/幹/榦 (it used to list
+  乾/干/幹). In a word, the form the word uses comes first: 发 • 髮/發 in 头发.
+- Tapped in traditional characters, the simplified form still comes first: 頭髮 shows
+  **头发** • 頭髮.
+- The setting is renamed **Show traditional in headwords** (still on by default). Off, every
+  headword is simplified only, including traditional taps.
+- The head line is now a single line of text, so in night mode the traditional form uses the
+  normal text colour.
+
 # v2.23.0 · 2026-11-22
 
 Words first: the words around the tapped character come above the character's own entry (#71, #68)
@@ -61,17 +77,3 @@ Words first: the words around the tapped character come above the character's ow
   of the time (57% before), the whole entry 93% (73%), and the whole popup 95% (unchanged).
 - 21,191 characters (21,292 before; the ones dropped had only modern senses, such as 氟 and 乒).
   The database grows by 1.8 MB, to 46.4 MB.
-
-# v2.19.3 · 2026-11-22
-
-Neutral tones: the remaining Wiktionary candidates
-- 25 more words take the neutral tone where CC-CEDICT gave a full tone: 这里 zhèli, 因为 yīnwei,
-  意识 yìshi, 下面 xiàmian, 前面 qiánmian, 下去 xiàqu, 气氛 qìfen, 住处 zhùchu, 神仙 shénxian,
-  牢骚 láosao, 荒唐 huāngtang, 滑稽 huáji, 孝顺 xiàoshun, 随和 suíhe, 黄瓜 huánggua, 斧头 fǔtou,
-  干粮 gānliang, 围裙 wéiqun, 翻腾 fānteng, 饭量 fànliang and 阵势 zhènshi; also 把头 bǎtou,
-  套近乎 tàojìnhu, 严紧 yánjin and 坷垃 kēla. Each has the 现代汉语词典 dot, or a 轻声 note, on a
-  dictionary page or a page quoting 现汉. 下麵 "to boil noodles" keeps xiàmiàn.
-- These are the 540 candidates whose neutral reading is not Wiktionary's main one, looked up with
-  Claude Haiku and web search ($11.46). Not approved: 来往, 编辑, 枪手 and 烧纸, whose neutral
-  reading belongs to another sense, and 父亲, 道行, 做学问 and 出落, whose only evidence was a
-  Q&A site, Baidu Baike or a blog. No character's default reading changes.

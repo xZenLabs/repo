@@ -26,7 +26,7 @@ never modified.
 
 KOReader 中文阅读插件：点一个字，即可看到它在本句中组成的词及其释义，并标出它在此处的读音；还可在字上方显示拼音，从只标生僻字到每个字都标（学习模式），学会一个读音点一下即可隐去，初学者和熟练读者都适用。
 
-![The opening of 三国演义 第一回 on a Boox Go 7: the chapter title, then the popup on 密. At its top, the line 时有宦官曹节等弄权，窦武、陈蕃谋诛之，作事不密，反为所害，中涓自此愈横。 with 密 in bold and underlined; the title bar, 密 on the left and the buttons 文言 Mode and Remind me: mì on the right; then 字频 646 in small grey and, on the row below, the label CEDICT; 密 mì, "dense; close; … (bound form) secret; confidential …", "Mì: surname Mi"; its parts, labelled Wikt: 宓 mì still; silent → sound (same sound), 山 shān mountain → meaning; then 不密 bùmì "(literary) not well thought out; (literary) not secret", labelled Wikt; buttons 密 and 不密, then Translate & analyze the surrounding sentence [AI] on its own row, then Close at the bottom. Below the popup, the end of the paragraph's last line, 密，反为所害，中涓自此愈横。, with 密 underlined on the page](docs/main.png)
+![The opening of 三国演义 第一回 on a Boox Go 7: the chapter title, then the popup on 密. At its top, the line 时有宦官曹节等弄权，窦武、陈蕃谋诛之，作事不密，反为所害，中涓自此愈横。 with 密 in bold and underlined; the title bar, 密 on the left and the buttons 文言 Mode and Remind me: mì on the right; first the word around it, labelled Wikt: 不密 bùmì "(literary) not well thought out; (literary) not secret"; then 字频 646 in small grey and, on the row below, the label CEDICT; 密 mì, "dense; close; … (bound form) secret; confidential …", "Mì: surname Mi"; its parts, labelled Wikt: 宓 mì still; silent → sound (same sound), 山 shān mountain → meaning; buttons 密 and 不密, then Translate & analyze the surrounding sentence [AI] on its own row, then Close at the bottom. Below the popup, the end of the paragraph's last line, 密，反为所害，中涓自此愈横。, with 密 underlined on the page](docs/main.png)
 
 It has only been tested on a Boox Go 7, but it should work on any e-reader that runs KOReader:
 Kobo, Kindle, PocketBook, and Android devices such as Boox.
@@ -38,22 +38,22 @@ Kobo, Kindle, PocketBook, and Android devices such as Boox.
 </tr>
 <tr>
 <td><img src="docs/off-on.png" alt="The 临江仙 that opens 三国演义, pinyin off (top) and on (bottom): with it on, only 樵 qiáo and 渚 zhǔ get pinyin, the rest of the page stays clean"><br><a href="#usage"><b>Pinyin only above the hard characters</b></a>, at the level you choose (here the default: outside the 3,500 most common)</td>
-<td><img src="docs/context.png" alt="Popup for 间 in 孔乙己's 虽然间或没有现钱: at the top the line 但他在我们店里，品行却比别人都好，就是从不拖欠；虽然间或没有现钱，… with 间 marked; the 文言 Mode and reading-mark buttons in the title bar; 字频 113, then the label CEDICT, then 间 間 jiàn · likely here, jiān listed after it; its parts 门 and 日 labelled MMAH; labelled CEDICT, 间或 間或 jiànhuò · decides 间's reading, occasionally; now and then"><br><a href="#the-popup"><b>The reading it has here</b></a>, and the word that decides it: 间 is <i>jiàn</i> in 间或</td>
+<td><img src="docs/context.png" alt="Popup for 间 in 孔乙己's 虽然间或没有现钱: at the top the line 但他在我们店里，品行却比别人都好，就是从不拖欠；虽然间或没有现钱，… with 间 marked; the 文言 Mode and reading-mark buttons in the title bar; first, labelled CEDICT, 间或 • 間或 jiànhuò · decides 间's reading, occasionally; now and then; then 字频 113, the label CEDICT and 间 • 間 jiàn · likely here, jiān listed after it; its parts 门 and 日 labelled MMAH"><br><a href="#the-popup"><b>The reading it has here</b></a>, and the word that decides it: 间 is <i>jiàn</i> in 间或</td>
 </tr>
 <tr>
-<td><img src="docs/components.png" alt="Popup for 茴 in 孔乙己's 要一碟茴香豆: at the top the line 他不回答，对柜里说：“温两碗酒，要一碟茴香豆。” with 茴 marked; the 文言 Mode and reading-mark buttons in the title bar; 字频 4,633, then the label CEDICT, then 茴 huí (bound form) fennel; its parts, labelled Wikt: 艹 cǎo grass; plant (草字头) → meaning, 回 huí to go back → sound (same sound); then 茴香豆 and 茴香, each labelled CEDICT"><br><a href="#character-components"><b>What each character is made of</b></a>: 茴 is 艹 for the meaning and 回 <i>huí</i> for the sound</td>
-<td><img src="docs/traditional.png" alt="Popup for 观 in 阿Q正传's 观音娘娘: at the top the line …而且又不见了观音娘娘座前的一个宣德炉。 with 观 marked; the 文言 Mode and reading-mark buttons in the title bar; 字频 407, then the label CEDICT, then 观 觀 guān · likely here (觀 smaller), with guàn and Guàn after it; traditional 觀: 雚 guàn (archaic) stork; heron → sound (same sound), 見 jiàn see → meaning, simplified: 雚 → 又; labelled CEDICT, 观音 觀音 Guānyīn · decides 观's reading"><br><a href="#character-components"><b>Parts the simplification hid</b></a>: 观 is read through 觀, 雚 <i>guàn</i> → sound</td>
+<td><img src="docs/components.png" alt="Popup for 茴 in 孔乙己's 要一碟茴香豆: at the top the line 他不回答，对柜里说：“温两碗酒，要一碟茴香豆。” with 茴 marked; the 文言 Mode and reading-mark buttons in the title bar; first 茴香豆 and 茴香, each labelled CEDICT; then 字频 4,633, the label CEDICT and 茴 huí (bound form) fennel; its parts, labelled Wikt: 艹 cǎo grass; plant (草字头) → meaning, 回 huí to go back → sound (same sound)"><br><a href="#character-components"><b>What each character is made of</b></a>: 茴 is 艹 for the meaning and 回 <i>huí</i> for the sound</td>
+<td><img src="docs/traditional.png" alt="Popup for 观 in 阿Q正传's 观音娘娘: at the top the line …而且又不见了观音娘娘座前的一个宣德炉。 with 观 marked; the 文言 Mode and reading-mark buttons in the title bar; first, labelled CEDICT, 观音 • 觀音 Guānyīn · decides 观's reading; then 字频 407, the label CEDICT and 观 • 觀 guān · likely here, the same size, with guàn and Guàn after it; traditional 觀: 雚 guàn (archaic) stork; heron → sound (same sound), 見 jiàn see → meaning, simplified: 雚 → 又"><br><a href="#character-components"><b>Parts the simplification hid</b></a>: 观 is read through 觀, 雚 <i>guàn</i> → sound</td>
 </tr>
 <tr>
-<td><img src="docs/chengyu.png" alt="Popup for 也 in 孔乙己's 满口之乎者也: at the top the line 他对人说话，总是满口之乎者也，教人半懂不懂的。 with 也 marked; the 文言 Mode and reading-mark buttons in the title bar; then 字频 38 and the label CEDICT, 也 yě; its Wikt line pictogram (象形), 满口之乎者也 (滿口之乎者也 beside it) and 之乎者也, each labelled CEDICT, 之乎者也 with a Chinese line labelled 新华: 这四个字都是文言虚词，讽刺人说话喜欢咬文嚼字。也形容半文不白的话或文章。; a 成语 Origin &amp; Usage button"><br><a href="#chengyu"><b>Chengyu explained</b></a>: 之乎者也 with Xinhua's line (optional file) …</td>
+<td><img src="docs/chengyu.png" alt="Popup for 也 in 孔乙己's 满口之乎者也: at the top the line 他对人说话，总是满口之乎者也，教人半懂不懂的。 with 也 marked; the 文言 Mode and reading-mark buttons in the title bar; first 满口之乎者也 • 滿口之乎者也 and 之乎者也, each labelled CEDICT, 之乎者也 with a Chinese line labelled 新华: 这四个字都是文言虚词，讽刺人说话喜欢咬文嚼字。也形容半文不白的话或文章。; then 字频 38, the label CEDICT, 也 yě and its Wikt line pictogram (象形); a 成语 Origin &amp; Usage button"><br><a href="#chengyu"><b>Chengyu explained</b></a>: 之乎者也 with Xinhua's line (optional file) …</td>
 <td><img src="docs/chengyu-2.png" alt="The Origin &amp; Usage view for 之乎者也 from 新华成语: 释义; 出处 宋·文莹《湘山野录》：“之乎者也，助得甚事？”; 例句 他对人说话，总是满口之乎者也，叫人半懂不懂的。"><br>… and its <a href="#chengyu"><b>Origin &amp; Usage</b></a> view: the classical source and an example from this same passage of 孔乙己</td>
 </tr>
 <tr>
-<td><img src="docs/classical.png" alt="Popup for 之 in 三国演义's 窦武、陈蕃谋诛之: the line 时有宦官曹节等弄权，窦武、陈蕃谋诛之，作事不密，反为所害，中涓自此愈横。 with 之 marked; the title bar, 之 on the left and the buttons 文言 Mode ✓ and Remind me: zhī on the right; first 字频 69, then the label 文言 on a row of its own and the Classical entry, in full: 之, him; her; it; them (object pronoun in non-subject position), genitive or attributive marker (possession or modification), nominalizer or subordinate-clause particle in a subject-predicate construct, this; these; that, to go; to arrive; below it, labelled CEDICT, 之 zhī (possessive particle, literary equivalent of 的 de); him; her; it; then its parts, labelled Wikt: 止 zhǐ foot → meaning, 一 yī the beginning place → meaning"><br><a href="#classical-mode"><b>Classical mode</b></a>: one tap on 文言 Mode puts the senses classical texts use first, here 之 as <i>him; her; it; them</i> in 窦武、陈蕃谋诛之</td>
-<td><img src="docs/nested.png" alt="Popup for 秋 in the 临江仙, its title bar with the buttons 文言 Mode and Remind me: qiū, and on top of it the popup for 歡, tapped in MOE's quotation of 〈琵琶行〉: its line at the top is 「今年歡笑復明年，秋月春風等閒度。」 with 歡 marked and no buttons in its title bar, then 字频 443 and the label CEDICT, 欢 歡 huān, its parts 雚 and 欠 labelled Wikt, 欢笑 歡笑 huānxiào labelled CEDICT, and the buttons 歡 and 歡笑, then Close at the bottom (no Translate in a popup opened from a popup)"><br><a href="#tapping-a-character-in-the-popup"><b>Read the dictionary by tapping</b></a>: 歡, tapped in MOE's quotation of 〈琵琶行〉, opens its own popup on top</td>
+<td><img src="docs/classical.png" alt="Popup for 之 in 三国演义's 窦武、陈蕃谋诛之: the line 时有宦官曹节等弄权，窦武、陈蕃谋诛之，作事不密，反为所害，中涓自此愈横。 with 之 marked; the title bar, 之 on the left and the buttons 文言 Mode ✓ and Remind me: zhī on the right; first 字频 69, then the label 文言 on a row of its own and the Classical entry, its senses numbered: 之, 1. him; her; them; that, 2. it (object pronoun), 3. genitive marker; of (possession), 4. attributive marker…, 5. particle infixed in a subject-predicate construction…, 6. to go, 7. to arrive; to go to, and on to 18, with a scroll bar; then the buttons 之, Translate & analyze the surrounding sentence [AI] and Close"><br><a href="#classical-mode"><b>Classical mode</b></a>: one tap on 文言 Mode puts the senses classical texts use first, here 之 as <i>him; her; them</i> in 窦武、陈蕃谋诛之</td>
+<td><img src="docs/nested.png" alt="Popup for 秋 in the 临江仙, its title bar with the buttons 文言 Mode and Remind me: qiū, and on top of it the popup for 歡, tapped in MOE's quotation of 〈琵琶行〉: its line at the top is 「今年歡笑復明年，秋月春風等閒度。」 with 歡 marked and no buttons in its title bar, then, labelled CEDICT, 欢笑 • 歡笑 huānxiào; then 字频 443, the label CEDICT, 欢 • 歡 huān and its parts 雚 and 欠 labelled Wikt; the buttons 歡 and 歡笑, then Close at the bottom (no Translate in a popup opened from a popup)"><br><a href="#tapping-a-character-in-the-popup"><b>Read the dictionary by tapping</b></a>: 歡, tapped in MOE's quotation of 〈琵琶行〉, opens its own popup on top</td>
 </tr>
 <tr>
-<td><img src="docs/labels.png" alt="Popup for 秋 in the 临江仙's 惯看秋月春风: at the top the line 白发渔樵江渚上，惯看秋月春风。 with 秋 marked; the 文言 Mode and reading-mark buttons in the title bar; 字频 1,442, then the label CEDICT on a row of its own, then 秋 秋/鞦 qiū (used in 鞦韆|秋千 qiūqiān); its parts 禾 and 火 labelled MMAH; 秋月 labelled Wikt; last, 秋月春风 秋月春風 labelled 國語辭典 with MOE's definition in its own traditional characters, in larger type, quoting 白居易's 〈琵琶行〉: 「今年歡笑復明年，秋月春風等閒度。」; a 成语 Origin &amp; Usage button"><br><a href="#fallback-dictionaries"><b>Several dictionaries, each labelled</b></a>: CC-CEDICT for 秋, Wiktionary for 秋月, and MOE (optional) for 秋月春风, in larger type</td>
+<td><img src="docs/labels.png" alt="Popup for 秋 in the 临江仙's 惯看秋月春风: at the top the line 白发渔樵江渚上，惯看秋月春风。 with 秋 marked; the 文言 Mode and reading-mark buttons in the title bar; first 秋月 labelled Wikt; then 字频 1,442, the label CEDICT on a row of its own, 秋 • 鞦 qiū (used in 鞦韆|秋千 qiūqiān) and its parts 禾 and 火 labelled MMAH; last, 秋月春风 • 秋月春風 labelled 國語辭典 with MOE's definition in its own traditional characters, in larger type, quoting 白居易's 〈琵琶行〉: 「今年歡笑復明年，秋月春風等閒度。」; a 成语 Origin &amp; Usage button"><br><a href="#fallback-dictionaries"><b>Several dictionaries, each labelled</b></a>: CC-CEDICT for 秋, Wiktionary for 秋月, and MOE (optional) for 秋月春风, in larger type</td>
 <td><img src="docs/translate-result.png" alt="KOAssistant's Translate &amp; Analyze viewer, titled with the model gemini-3.5-flash-lite, its whole reply shown as its two pages, joined by a dashed line. Highlighted text: 孔乙己便涨红了脸，额上的青筋条条绽出，争辩道：“窃书不能算偷……窃书！ Translation: Kong Yiji flushed red right away, the veins on his forehead bulging out one by one, and he argued, &quot;Stealing books cannot be considered stealing... stealing books!&quot; Then one line per word, in bold characters with pinyin: 孔乙己 (Kǒng Yǐjǐ) Kong Yiji, the name of the character; 便 (biàn) right away, then; 涨红了脸 (zhǎng hóng le liǎn) flushed red in the face [涨 swell/flush + 红 red + 了 shows change + 脸 face]; 额 (é) forehead; 上 (shàng) on, placed after a noun; 的 (de) connects the forehead to the veins that belong to it; 青筋 (qīng jīn) blue veins; 条条 (tiáo tiáo) strip by strip, one by one, repeated to show multiple veins standing out; 绽出 (zhàn chū) burst out, bulge out; 争辩 (zhēng biàn) argue, debate; 道 (dào) say, used here to introduce spoken words; 窃书 (qiè shū) stealing books, literary, old-fashioned words [窃 steal secretly + 书 book]; 不能 (bù néng) cannot; 算 (suàn) count as; 偷 (tōu) steal, the everyday, common word for stealing, unlike the literary 窃 used earlier. Below, the viewer's buttons: Reply, Copy, Save to Note, Notebook, Pin, Close and others"><br><a href="#translating-the-sentence"><b>Translate &amp; Analyze the sentence</b></a> with KOAssistant: a translation and a plain-English, word-by-word breakdown of 孔乙己's 窃书不能算偷, down to why he says 窃 and not 偷 (your own AI provider, while Wi-Fi is on)</td>
 </tr>
 </table>
@@ -174,7 +174,7 @@ Tools menu). Settings apply to all books.
 | Show character components | On (default) / off. See [Character components](#character-components) |
 | Words first | On (default) / off: the entries of the words around the tapped character above its own entry (with its MOE entry and components); off, the character first. See [The popup](#the-popup) |
 | Show character frequency rank | On (default) / off. The small grey 字频 line on the tapped character's entry |
-| Show traditional forms | On (default) / off. A word's traditional form beside it on each head line, when it differs: **头发** 頭髮; tapped in traditional characters, the simplified form first: **头** 頭 |
+| Show traditional in headwords | On (default) / off. Each headword's traditional form after it, same size, when it differs: **头发** • 頭髮; tapped in traditional characters, the simplified form still first: **头** • 頭. Off, headwords are simplified only |
 | Show the text around the character in the popup | On (default) / off; drawn at the Chinese text size. See [The popup](#the-popup) |
 | Underline the tapped character on the page | On (default) / off. See [The popup](#the-popup) |
 | Try to match the book's font | On (default) / off: Chinese text in the popup in the book's font. See [The popup](#the-popup) |
@@ -211,7 +211,7 @@ you learn.
 4. For a reading you keep forgetting, the same button on a character without pinyin reads
    **Remind me: …**, which does the opposite: that reading always gets pinyin, at any level.
 
-![The popup for 盘 in 阿Q正传 in learner mode: at the top the sentence 赵秀才消息灵，一知道革命党已在夜间进城，便将辫子盘在顶上，一早去拜访那历来也不相能的钱洋鬼子。 with 盘 marked; then the title bar, 盘 on the left and the buttons 文言 Mode and I know pán on the right; below it 字频 1,107, the label CEDICT and 盘 盤 pán with its senses](docs/mark-button.png)
+![The popup for 盘 in 阿Q正传 in learner mode: at the top the sentence …才消息灵，一知道革命党已在夜间进城，便将辫子盘在顶上，一早去拜访那历来也不相能的钱洋鬼子。 with 盘 marked; then the title bar, 盘 on the left and the buttons 文言 Mode and I know pán on the right; below it 字频 1,107, the label CEDICT and 盘 • 盤 pán with its senses](docs/mark-button.png)
 
 Your marks are kept outside the plugin's folder, so updates and reinstalls keep them (see
 [Known and remind-me readings](#known-and-remind-me-readings) for the file to back up). When the
@@ -317,7 +317,7 @@ tighter lines, because the plugin replaces the book's line height rather than ad
 
 ### The popup
 
-Every popup shows the sentence around the character, then every dictionary word around it, longest first, then the character with all its readings (the one it has here first), its frequency rank, traditional form and components. Nothing guesses where the words break. With **Words first** off, the character comes first and the words follow it (as in the screenshots).
+Every popup shows the sentence around the character, then every dictionary word around it, longest first, then the character with all its readings (the one it has here first), its frequency rank, traditional form and components. Nothing guesses where the words break. With **Words first** off, the character comes first and the words follow it.
 
 <details>
 <summary>Everything in the popup, in order</summary>
@@ -355,15 +355,16 @@ entries stay at the top. The buttons keep their order either way.
   row of its own just below it. Words around the character never show one.
   With [your own frequency ranks](#your-own-frequency-ranks) on, it shows your rank, or the
   bundled one marked **(bundled)** for a character not in your books.
-- **The traditional form** beside each entry's headword, smaller, when it is not the
-  same: **头发** 頭髮, **中国** 中國, and nothing for 人民. A word shows the one form it is
-  written with (发现 發現, 头发 頭髮). A single character with several shows them all, the one
-  the word around it uses first: 发 in 头发 is **发** 髮/發, 干 in 干净 **干** 乾/干/幹. Only
-  the head lines change. **Show traditional forms** in the menu turns it off.
+- **The traditional form** after each entry's headword, at the same size, when it is not the
+  same: **头发** • 頭髮, **中国** • 中國, and just **人民** for 人民. A word shows the one form
+  it is written with (**发现** • 發現, **学习** • 學習). A single character with several shows
+  them all, the one the word around it uses first: 发 in 头发 is **发** • 髮/發, 干 alone
+  **干** • 乾/幹/榦. Only the head lines change. **Show traditional in headwords** in the menu
+  turns it off, leaving simplified headwords only.
 - **Tapped in traditional characters** (a traditional book, or MOE's text in a popup), the head
-  line leads with the simplified form instead, the form as tapped beside it, smaller: 頭 in 頭髮 is
-  **头** 頭, the word **头发** 頭髮. A character shows the one simplified form the word around
-  it uses: 乾 in 乾淨 is **干** 乾, in 乾隆 just 乾. Same setting.
+  line still leads with the simplified form, the form as tapped after it: 頭 in 頭髮 is
+  **头** • 頭, the word **头发** • 頭髮. A character shows the one simplified form the word around
+  it uses: 乾 in 乾淨 is **干** • 乾, in 乾隆 just **乾**. Same setting.
 - **MOE's entry for the character**, with the optional MOE dictionary: in place of CC-CEDICT's
   when CC-CEDICT lacks the character. With MOE for single characters set to **always**, under
   CC-CEDICT's entry too, cut to two lines ending in a small grey **[Tap to show more]** when
@@ -400,7 +401,7 @@ font chosen in KOReader's font menu, not a font the book embeds or sets in its C
 that font lacks comes from KOReader's usual fallback fonts. For a PDF, or when the font cannot be
 loaded, the popup uses the UI font. Turned off, the popup is exactly as before.
 
-![A popup for 观 in 阿Q正传: at the top the line 尼姑待他们走后，定了神来检点，龙牌固然已经碎在地上了，而且又不见了观音娘娘座前的一个宣德炉。 with 观 in bold and underlined, then 字频 407, the label CEDICT and 观 觀 guān · likely here with its other readings, its traditional form 觀's parts, and, labelled CEDICT, 观音 觀音 Guānyīn · decides 观's reading](docs/traditional.png)
+![A popup for 观 in 阿Q正传: at the top the line 尼姑待他们走后，定了神来检点，龙牌固然已经碎在地上了，而且又不见了观音娘娘座前的一个宣德炉。 with 观 in bold and underlined; first, labelled CEDICT, 观音 • 觀音 Guānyīn · decides 观's reading; then 字频 407, the label CEDICT and 观 • 觀 guān · likely here with its other readings, and its traditional form 觀's parts](docs/traditional.png)
 
 </details>
 
@@ -423,7 +424,7 @@ reading the reference gives first. Nothing else in the popup is tappable: not th
 <details>
 <summary>How popups on popups work</summary>
 
-![Popup for 秋 in the 临江仙, its title bar with the buttons 文言 Mode and Remind me: qiū, and on top of it the popup for 歡, tapped in MOE's quotation of 〈琵琶行〉: its line at the top is 「今年歡笑復明年，秋月春風等閒度。」 with 歡 marked and no buttons in its title bar, then 字频 443 and the label CEDICT, 欢 歡 huān, its parts 雚 and 欠 labelled Wikt, 欢笑 歡笑 huānxiào labelled CEDICT, and the buttons 歡 and 歡笑, then Close at the bottom (no Translate in a popup opened from a popup)](docs/nested.png)
+![Popup for 秋 in the 临江仙, its title bar with the buttons 文言 Mode and Remind me: qiū, and on top of it the popup for 歡, tapped in MOE's quotation of 〈琵琶行〉: its line at the top is 「今年歡笑復明年，秋月春風等閒度。」 with 歡 marked and no buttons in its title bar, then, labelled CEDICT, 欢笑 • 歡笑 huānxiào; then 字频 443, the label CEDICT, 欢 • 歡 huān and its parts 雚 and 欠 labelled Wikt; the buttons 歡 and 歡笑, then Close at the bottom (no Translate in a popup opened from a popup)](docs/nested.png)
 
 - **Its text is the popup's, not the book's.** The line at the top is the sentence around the
   character in the popup text: cut at 。！？；, a line break, or a closing quote after one of
@@ -550,7 +551,7 @@ switch the same setting. It is off until you turn it on.
 have one (賤人 *a lowly person*, 北面 *to face north as a subject*). Each entry is the complete set
 of classical senses the sources give, in English, numbered, the commonest in classical texts
 first, and always shown in full. It includes the senses classical and modern Chinese share (而
-*and*, 知 *to know*) and the ones modern Chinese lost (是 *this*, 之 *him; her; it; them*, 说 (說)
+*and*, 知 *to know*) and the ones modern Chinese lost (是 *this*, 之 *him; her; them*, 说 (說)
 *to be delighted*), and leaves out senses that are modern only (的 as a structural particle, 就
 *then*). For the commonest function characters the entry is long (之, 為, 將 run to 15–30 senses),
 and you scroll to reach the rest of the popup.
@@ -577,7 +578,7 @@ has to cite the source lines it came from, and the build drops any that cite not
 machine-made, and the order is the model's judgement, so if a sense looks odd, check it against
 CC-CEDICT or MOE. The details are below.
 
-<img src="docs/classical.png" alt="Popup for 之 in 三国演义's 窦武、陈蕃谋诛之: the line 时有宦官曹节等弄权，窦武、陈蕃谋诛之，作事不密，反为所害，中涓自此愈横。 with 之 marked; the title bar, 之 on the left and the buttons 文言 Mode ✓ and Remind me: zhī on the right; first 字频 69, then the label 文言 on a row of its own and the Classical entry, in full: 之, him; her; it; them (object pronoun in non-subject position), genitive or attributive marker (possession or modification), nominalizer or subordinate-clause particle in a subject-predicate construct, this; these; that, to go; to arrive; below it, labelled CEDICT, 之 zhī (possessive particle, literary equivalent of 的 de); him; her; it; then its parts, labelled Wikt: 止 zhǐ foot → meaning, 一 yī the beginning place → meaning">
+<img src="docs/classical.png" alt="Popup for 之 in 三国演义's 窦武、陈蕃谋诛之: the line 时有宦官曹节等弄权，窦武、陈蕃谋诛之，作事不密，反为所害，中涓自此愈横。 with 之 marked; the title bar, 之 on the left and the buttons 文言 Mode ✓ and Remind me: zhī on the right; first 字频 69, then the label 文言 on a row of its own and the Classical entry, its senses numbered: 之, 1. him; her; them; that, 2. it (object pronoun), 3. genitive marker; of (possession), 4. attributive marker…, 5. particle infixed in a subject-predicate construction…, 6. to go, 7. to arrive; to go to, and on to 18, with a scroll bar; then the buttons 之, Translate & analyze the surrounding sentence [AI] and Close">
 
 <details>
 <summary>How the Classical dictionary was built, and how well it does</summary>
@@ -624,7 +625,7 @@ While Wi-Fi is on and connected, the popup from the page has one more button on 
 own (popups opened from a popup's text do not). It closes the
 popup and sends **the whole sentence containing the tapped character**:
 
-![Popup for 窃 at the top of the page, its line 孔乙己便涨红了脸，额上的青筋条条绽出，争辩道：“窃书不能算偷……窃书！ with 窃 marked; the buttons 文言 Mode and Remind me: qiè in the title bar; 字频 2,026, the label CEDICT, 窃 竊 qiè to steal; secretly; (humble) I, its parts 穴 xué and 切 qiè labelled MMAH, then a 窃 button, Translate & analyze the surrounding sentence [AI] and Close; above and below it the page of 孔乙己, the popup covering 窃's own line](docs/translate.png)
+![Popup for 窃 at the top of the page, its line 孔乙己便涨红了脸，额上的青筋条条绽出，争辩道：“窃书不能算偷……窃书！ with 窃 marked; the buttons 文言 Mode and Remind me: qiè in the title bar; 字频 2,026, the label CEDICT, 窃 • 竊 qiè to steal; secretly; (humble) I, its parts 穴 xué and 切 qiè labelled MMAH, then a 窃 button, Translate & analyze the surrounding sentence [AI] and Close; above and below it the page of 孔乙己, the popup covering 窃's own line](docs/translate.png)
 
 - **With [KOAssistant](https://github.com/zeeyado/koassistant.koplugin) installed** (tested with
   0.23.0; the button uses its internals, so a later version may fall back to the built-in
@@ -1116,7 +1117,7 @@ MOE's traditional characters, Wiktionary's glosses with their Chinese as Wiktion
 (`original form of 廩／廪`), CC-CEDICT's cross-references with both of its forms
 (`variant of 夠|够 gòu`, `used in 鞦韆|秋千 qiūqiān`). **Popup → Dictionaries → Dictionary text →
 Simplified** shows the same text in simplified characters instead (`variant of 够 gòu`), from the
-next popup on. The head lines are the same either way (**头发** 頭髮), and so is the text of
+next popup on. The head lines are the same either way (**头发** • 頭髮), and so is the text of
 dictionaries that are simplified, or English, already (Xinhua, Moegirlpedia, CBDB, Wikipedia
 titles).
 
