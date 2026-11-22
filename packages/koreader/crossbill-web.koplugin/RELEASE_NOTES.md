@@ -1,3 +1,17 @@
+# v0.33.3 · 2026-11-22
+
+## Docker Image
+```bash
+docker pull tumetsu/crossbill:v0.33.3
+```
+
+
+## What's Changed
+* Combine Dependabot updates (Nov 2026, #2) by @Tumetsu in https://github.com/Crossbill-App/crossbill-web/pull/996
+
+
+**Full Changelog**: https://github.com/Crossbill-App/crossbill-web/compare/v0.33.2...v0.33.3
+
 # v0.33.2 · 2026-11-08
 
 ## Docker Image
@@ -67,19 +81,3 @@ docker pull tumetsu/crossbill:v0.32.0
 
 
 **Full Changelog**: https://github.com/Crossbill-App/crossbill-web/compare/v0.31.1...v0.32.0
-
-# v0.31.1 · 2026-09-26
-
-## Docker Image
-```bash
-docker pull tumetsu/crossbill:v0.31.1
-```
-
-
-## What's Changed
-* Fix reader crash when adding a note to a highlight (#919) by @Tumetsu in https://github.com/Crossbill-App/crossbill-web/pull/922
-* Ban unittest.mock outside infrastructure unit tests and migrate application-layer tests by @Tumetsu in https://github.com/Crossbill-App/crossbill-web/pull/923
-* Let browser Back return from a link followed in the reader (#921) by @Tumetsu in https://github.com/Crossbill-App/crossbill-web/pull/925
-
-
-**Full Changelog**: https://github.com/Crossbill-App/crossbill-web/compare/v0.31.0...v0.31.1
