@@ -115,7 +115,7 @@ menu's **Order** changes it). The MOE dictionary can also show its entry for eve
 | Xinhua idioms | 新华 | 23,500\* | [optional](#optional-dictionaries) | chengyu and set phrases, with classical sources (in Chinese) |
 | Wikipedia titles | WP | 39,000 | bundled | technology, engineering, military and history terms, and proper names (English article title) |
 | Moegirlpedia slang | Moegirl | 350 | [optional](#optional-dictionaries) | internet slang (in Chinese) |
-| Classical dictionary | 文言 | 20,620 characters, 26,093 words | bundled, [Classical mode](#classical-mode) only | every classical sense of characters and words, commonest first, no modern-only senses, from Chinese Notes, Wiktionary, Unihan and CC-CEDICT |
+| Classical dictionary | 文言 | 21,394 characters, 28,933 words | bundled, [Classical mode](#classical-mode) only | every classical sense of characters and words, commonest first, each marked classical by a dictionary or quoted from a pre-1911 classical work in MOE, from Chinese Notes, Wiktionary, Unihan and CC-CEDICT |
 
 An entry CC-CEDICT gives only as a cross-reference (贤惠: "variant of 賢慧|贤慧 xiánhuì", 河北:
 "see 河北省") also shows the definitions of the word it points to, on a line led by that word.
@@ -172,6 +172,7 @@ Tools menu). Settings apply to all books.
 | Popup text size | 40 / 60 (default) / 80 / 100 / 120% of the book's text size |
 | Chinese text size | 100 / 115 / 130 (default) / 150 / 175% of the popup text size, for the Chinese dictionaries' text (MOE, 成語典, Xinhua, Moegirlpedia) and the line of text at the top of the popup. See [Tapping a character in the popup](#tapping-a-character-in-the-popup) |
 | Show character components | On (default) / off. See [Character components](#character-components) |
+| Words first | On (default) / off: the entries of the words around the tapped character above its own entry (with its MOE entry and components); off, the character first. See [The popup](#the-popup) |
 | Show character frequency rank | On (default) / off. The small grey 字频 line on the tapped character's entry |
 | Show traditional forms | On (default) / off. A word's traditional form beside it on each head line, when it differs: **头发** 頭髮; tapped in traditional characters, the simplified form first: **头** 頭 |
 | Show the text around the character in the popup | On (default) / off; drawn at the Chinese text size. See [The popup](#the-popup) |
@@ -316,7 +317,7 @@ tighter lines, because the plugin replaces the book's line height rather than ad
 
 ### The popup
 
-Every popup shows the sentence around the character, then the character with all its readings (the one it has here first), its frequency rank, traditional form and components, then every dictionary word around it, longest first. Nothing guesses where the words break.
+Every popup shows the sentence around the character, then every dictionary word around it, longest first, then the character with all its readings (the one it has here first), its frequency rank, traditional form and components. Nothing guesses where the words break. With **Words first** off, the character comes first and the words follow it (as in the screenshots).
 
 <details>
 <summary>Everything in the popup, in order</summary>
@@ -325,6 +326,12 @@ The plugin reads up to 7 Chinese characters before and after the tapped one (sto
 punctuation, a paragraph break or any non-Chinese character) and looks up every 1–8 character
 stretch containing the tapped character, in simplified and traditional forms. Nothing guesses
 where the words break.
+
+The list below is the order with **Words first** off. With it on (the default), the words come
+first, longest first, each with its own MOE Always entry; then the character's own entry, its
+MOE Always entry and its components, together; then the Chinese-language dictionaries' entries,
+last as always. The rank and the spoken-tone note stay on the character's own entry, and 文言 Mode's
+entries stay at the top. The buttons keep their order either way.
 
 - **The text around the character**, on one line at the top: as much of its sentence as fits,
   at the Chinese text size (130% of the popup's by default), the character in bold and underlined. It grows outwards from the
@@ -561,11 +568,13 @@ button of their own.
 **Where the senses come from.** The Classical dictionary was built once, from the senses open
 dictionaries mark as classical, literary or archaic (Chinese Notes, English Wiktionary, Unihan,
 and CC-CEDICT's labelled senses) together with CC-CEDICT's other senses. An AI model (Claude
-Haiku) merged each headword's senses, ordered them for classical texts and marked the modern-only
-ones; a second model (Claude Sonnet) checked again the senses that came only from CC-CEDICT. Every
-sense has to cite the source lines it came from, and the build drops any that cite nothing; in
-checks no sense was found that the sources lacked. It is still machine-made, and the order and
-the classical/modern line are the models' judgement, so if a sense looks odd, check it against
+Haiku) merged each headword's senses and ordered them for classical texts. Which senses count as
+classical is decided by evidence, not by the AI: a sense stays if a dictionary marks it classical,
+or if MOE (重編國語辭典) gives the same sense with a quotation from a classical work written up to
+1911. Senses classical and modern Chinese share but MOE quotes no classical text for, often the
+plainest ones (一 *one*, 有 *to have*), are left to the CC-CEDICT entry right below. Every sense
+has to cite the source lines it came from, and the build drops any that cite nothing. It is still
+machine-made, and the order is the model's judgement, so if a sense looks odd, check it against
 CC-CEDICT or MOE. The details are below.
 
 <img src="docs/classical.png" alt="Popup for 之 in 三国演义's 窦武、陈蕃谋诛之: the line 时有宦官曹节等弄权，窦武、陈蕃谋诛之，作事不密，反为所害，中涓自此愈横。 with 之 marked; the title bar, 之 on the left and the buttons 文言 Mode ✓ and Remind me: zhī on the right; first 字频 69, then the label 文言 on a row of its own and the Classical entry, in full: 之, him; her; it; them (object pronoun in non-subject position), genitive or attributive marker (possession or modification), nominalizer or subordinate-clause particle in a subject-predicate construct, this; these; that, to go; to arrive; below it, labelled CEDICT, 之 zhī (possessive particle, literary equivalent of 的 de); him; her; it; then its parts, labelled Wikt: 止 zhǐ foot → meaning, 一 yī the beginning place → meaning">
@@ -573,21 +582,31 @@ CC-CEDICT or MOE. The details are below.
 <details>
 <summary>How the Classical dictionary was built, and how well it does</summary>
 
-The dictionary covers 20,620 characters (and 200 variant forms) and 26,093 words. It was built
+The dictionary covers 21,394 characters (and 182 variant forms) and 28,933 words. It was built
 once by `tools/build_classical.py` from [Chinese Notes](https://github.com/alexamies/chinesenotes.com)'
 *Literary Chinese* senses, English Wiktionary's classical, literary and archaic senses, Unihan's
 definitions for characters outside the 3,000 most common, and CC-CEDICT's senses (its labelled
 classical ones, and its others as candidates). A character or word with only modern CC-CEDICT
 senses gets no entry. Claude Haiku merged each headword's senses, ordered them by how common they
-are in classical texts, marked the modern-only ones and cited the lines each came from; the build
-drops senses that cite nothing or are marked modern, and flags those whose words aren't in their
-sources. Claude Sonnet then checked the 9,927 senses of common characters and words that came only
-from CC-CEDICT, and 3,103 of them were left out as modern-only (`data/classical_modern.tsv`). The
-result is CC BY-SA 4.0. On 128 judged words from classical texts, the 文言 entry has the needed
-sense 95% of the time, in its first two senses 73% of the time, and the whole popup 95%
-([research note](docs/research/classical-dictionary.md)). MOE's classical senses are not in it
-(its licence does not allow it); with the MOE file installed, [MOE Always](#moe-always) shows
-them.
+are in classical texts and cited the lines each came from; the build drops senses that cite
+nothing, and flags those whose words aren't in their sources.
+
+Which senses stay is decided by evidence (`tools/moe_match.py`). A sense citing a line a
+dictionary marks classical always stays. A sense that comes only from CC-CEDICT's unmarked lines
+(18,612 of them) stays only if MOE gives the same sense with a quotation from a classical-register
+work written up to 1911: the classics, histories, essays and poetry of any dynasty to the Qing, but
+not vernacular novels (a work MOE cites by 第…回), drama (第…折), 散曲, story collections or
+anything 民國 or later (`tools/moe_evidence.py`). Claude Haiku only compares the texts in front of
+it: for each English sense, which of the headword's MOE definitions has the same meaning. 4,798
+senses have that evidence and stay (邦交 *diplomatic relations*, from 《周禮》); the rest are left
+out (就 *then*, 要 *need to*, 的 *of*). MOE rarely quotes a classical text for a character's
+plainest sense, so some senses shared by classical and modern Chinese drop too (一 *one*, 人
+*person*, 有 *to have*); they are still in the CC-CEDICT entry below. Nothing of MOE's text is in
+the result, only the decision; it is CC BY-SA 4.0. On 128 judged words from classical texts, the
+文言 entry has the needed sense 91% of the time, in its first two senses 73% of the time, and the
+whole popup 95% ([research note](docs/research/classical-dictionary.md)). MOE's own classical
+senses are not in it (its licence does not allow it); with the MOE file installed,
+[MOE Always](#moe-always) shows them.
 
 A simplified character that stands for several traditional ones shows the one its word uses (发 in
 头发: 髮 *hair*), otherwise each; a variant form (説) shows its standard form's entry (說).
@@ -844,7 +863,7 @@ popup then shows both:
    (or the space after it) to show the rest in place; **[Tap to show less]** at the end cuts it
    again. Characters in the visible lines can
    be tapped as usual; those hidden by the cut can't;
-3. the components, then the words.
+3. the components, then the words (with **Words first** on, the default, the words come above 1).
 
 MOE's readings come in the order of CC-CEDICT's (the likely one first), then those CC-CEDICT
 doesn't list for the character, each marked **· not in CC-CEDICT**: about 1 in 7 characters have
@@ -1035,8 +1054,8 @@ Everything the plugin needs is in one SQLite database,
   lists and some kinds of place, organisation and work (towns, stations, companies, films…;
   others remain: glaciers, museums, TV series). Neither has a row for a headword CC-CEDICT has,
   or for everyday combinations it leaves out on purpose (很多, 这次, 脸上).
-- **The Classical dictionary** (`classical`, `classical_variant`): the classical senses of 20,620
-  characters and 26,093 words, all of them, commonest first, and 200 variant forms ([Classical mode](#classical-mode)).
+- **The Classical dictionary** (`classical`, `classical_variant`): the classical senses of 21,394
+  characters and 28,933 words, commonest first, and 182 variant forms ([Classical mode](#classical-mode)).
   Its source is `data/classical.tsv.gz`, condensed once by `tools/build_classical.py`, so a
   database build needs no API key.
 - **Character components** (`components`): 13,362 characters' parts, roles, readings, glosses and

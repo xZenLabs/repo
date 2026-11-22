@@ -1,3 +1,33 @@
+# v2.23.0 · 2026-11-22
+
+Words first: the words around the tapped character come above the character's own entry (#71, #68)
+- A new popup setting, **Words first**, on by default: the words around the tapped character,
+  longest first, now come first; the character's own entry, its MOE entry and its components
+  follow them, together. Tap 发 in 头发 and 头发 is at the top.
+- The 字频 rank and the spoken-tone note stay on the character's own entry. 文言 Mode's entries
+  stay at the top, and the Chinese-language dictionaries' entries last. The buttons are unchanged.
+- Turn it off in the popup settings (after **Show character components**) to have the character
+  first, as before. It applies to popups opened from a popup too.
+- Suggested by Generalhooha in #68.
+
+# v2.22.0 · 2026-11-22
+
+文言 Mode: evidence, not an AI's judgement, decides which senses are classical (#69)
+- A sense stays in the 文言 entry if a dictionary marks it classical (Chinese Notes, Wiktionary,
+  CC-CEDICT's own labels), or if MOE (重編國語辭典) gives the same sense with a quotation from a
+  classical work written up to 1911. Vernacular novels, drama and anything after the Qing don't
+  count. This replaces 2.21.0's AI check, which wrongly left out about 1 in 6 of the senses it
+  removed.
+- Back in: 邦交 *diplomatic relations* (《周禮》), 外侮 *foreign aggression* (《左傳》), 先行 *to
+  proceed in advance* (《漢書》), and about 6,700 other senses. Still out: 就 *then*, 要 *need
+  to*, 的 *of*.
+- Left to the CC-CEDICT entry below: shared senses MOE quotes no classical text for, often a
+  character's plainest one (一 *one*, 人 *person*, 有 *to have*, 是 *to be*). About 6,400 senses
+  leave the 文言 entry.
+- On 128 judged words from classical texts, the 文言 entry has the needed sense 91% of the time
+  (95% in 2.21.0), first 65% (61%), in its first two 73% (73%); the whole popup still 95%.
+- MOE's text is not bundled: only the yes/no decision is. The database grows by 0.5 MB, to 53.0 MB.
+
 # v2.21.0 · 2026-11-22
 
 文言 Mode: complete, purely classical entries, for characters and words (#67)
@@ -45,24 +75,3 @@ Neutral tones: the remaining Wiktionary candidates
   Claude Haiku and web search ($11.46). Not approved: 来往, 编辑, 枪手 and 烧纸, whose neutral
   reading belongs to another sense, and 父亲, 道行, 做学问 and 出落, whose only evidence was a
   Q&A site, Baidu Baike or a blog. No character's default reading changes.
-
-# v2.19.2 · 2026-11-21
-
-狗狗 is gǒugōu again (#64)
-- 2.19.1 changed 狗狗 to gǒugou on a single Zhihu note. It now reads gǒugōu again, as in
-  CC-CEDICT, and the lookup script won't approve it again.
-
-# v2.19.1 · 2026-11-21
-
-Neutral tones checked against Baidu Hanyu, and ü in cross-references (#63, #64)
-- 外面 wàimian, 进去 jìnqu, 摇晃 yáohuang, 风水 fēngshui and 狗狗 gǒugou now take the neutral
-  tone, where CC-CEDICT gave a full tone. The first four have the 现代汉语词典 dot in Baidu Hanyu,
-  and 狗狗 has a written 轻声 note. Words that have the dot in only one of their senses keep
-  CC-CEDICT's reading: 大大 "greatly" / dà·da "uncle", 过年, 憋屈, 隔断 and 小月. No character's
-  default reading changes.
-- The other 224 main-reading candidates were looked up too, through Baidu Hanyu's JSON or,
-  after Baidu's captcha, Claude Haiku with web search. They had no evidence or a full tone,
-  so they keep CC-CEDICT's reading. The evidence is in docs/neutral-tone-evidence.tsv.
-- Some CC-CEDICT references spell ü as "u : ". They now show it correctly: "see 吕梁市
-  Lǚliáng Shì" instead of "Lu:'liáng Shì", and the same in 律所, 功放, 女孩儿 and about 45
-  other entries.
