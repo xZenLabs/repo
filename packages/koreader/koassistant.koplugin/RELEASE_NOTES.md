@@ -2,303 +2,188 @@
 
 # KOAssistant v0.25.0 Release Notes
 
-Answers now arrive in Markdown (bold, headings, lists) while they stream, and stay on their first page so you can read from the top. The minimal popup shows its answer the way the chat window does, and Arabic, Hebrew, Devanagari and emoji get proper fonts. X-Rays can match a name by its capitals alone, end with a Conclusion at the end of the book and say what each way to build gives; AI merge between books is experimental for now. There are new models, Amazon Bedrock as a provider, and many fixes, among them a rare crash after background work and a freeze when the screen turned while the chat input was open.
+Answers are easier to read while they arrive, you get more control over the names an X-Ray underlines in your book, pictures get one popup for all their settings, and there are new models and a new provider, Amazon Bedrock. A long list of bugs is fixed, among them a rare crash and a freeze when the screen turned with the chat input open.
 
 ## Highlights
 
-- **Answers arrive in Markdown while they stream, and stay on their first page.** Bold, headings and lists show as the answer comes in (Markdown While Streaming, on by default), and Auto-scroll is off, so you read from the top at your own pace while the rest arrives.
-- **The minimal popup shows its answer the way the chat window does** (bold, lists, the right fonts), as a floating box or a footnote panel; set to Always, it scrolls a long answer.
-- **Proper fonts for Arabic, Persian, Urdu, Hebrew, Devanagari and emoji**, with nothing to install, and right-to-left lines and tables laid out in the right direction.
-- **X-Ray names you control**: one Names and matching… screen, capitals only (decided automatically from how the book writes each name), and names with an apostrophe or a hyphen found in typeset books.
-- **X-Ray**: a Conclusion once it reaches the end of the book, a Who's who preset, First appears and Last seen on an entry's page, and a creation form that says what each way to build gives.
-- **AI merge between books is experimental for now**; what the earlier books know is still carried over on its own, for free.
-- **Pictures**: one popup with your note, the X-Ray entries to draw from and every picture setting, and a picture remembers the entries it shows.
-- **New models** (Claude Fable 5.2, GPT-6.2 Sol and Astra, Gemini 4 Carbon and Hydrogen, Qwen4-Max, Kimi K3, Mistral Large 4) **and Amazon Bedrock** as a provider.
-- **Crashes and freezes fixed**: a rare crash a few seconds after background work, a freeze when the screen turned with the chat input open, waits that stopped on some Android e-readers until a touch, and a slow start.
-- **Your own writing and your backups are safer**: a deleted book's notebook is kept, a backup that cannot be written whole says so, and a Merge restore keeps what you made since the backup.
+- **Answers arrive formatted.** Bold, headings and lists (Markdown) show as the text comes in, and the window stays on the first page so you can start reading at the top.
+- **The minimal popup shows formatted text too**, and can sit at the bottom of the screen like a footnote.
+- **Proper fonts for Arabic, Persian, Urdu, Hindi (and other Devanagari languages) and emoji**, with nothing to install. Right-to-left text reads in the right direction.
+- **You decide which names an X-Ray underlines.** A new screen, Names and matching…, can stop a name from being underlined, or underline it only when it is written with a capital.
+- **X-Rays tell you more**: a Conclusion at the end of the book, where a name first appears and where you last saw it, and a new short preset, Who's who.
+- **Pictures have one popup** for a note to guide the picture, the X-Ray entries to draw from and every picture setting.
+- **New models** from Anthropic, OpenAI, Google and others, **and a new provider**, Amazon Bedrock.
+- **Deleting a book keeps its notebook**, and backup and restore take better care of what you made.
 
-## What Works Differently After the Update
+## Changes
 
-- A streamed answer stays on its first page while the rest arrives (Auto-scroll Streaming is off by default now), so you read at your own pace and turn the pages yourself; the finished chat opens on the page you are on. The update turns the switch off once for everyone; turn it on again under Settings → Chat & Export Settings → Streaming, or tap the window's Autoscroll button to follow one answer. An X-Ray build is still followed.
-- Answers are rendered while they stream (Markdown While Streaming, on by default; Settings → Chat & Export Settings → Streaming turns it off): bold, headings, lists and every script in its own face, instead of plain text swapped for the rendered view at the end. A phrase is bold from its first letter, a link shows its words while its address arrives and a table grows one whole row at a time; on a slow device, or as the answer grows, it is drawn less often. It applies to answers shown in Markdown, not to an X-Ray build, whose answer is data, and never to hidden streams.
-- The newest reply opens its own page: your question, the usage line (reasoning, web search, book lookups) and the KOAssistant label stay on the page before, and the page you land on starts with the reply's first line, the first answer of a chat included. A chat that opens at the top instead (Open Chats at Latest Exchange off, the Chat button of a dictionary or translate window) keeps the label with its reply, as before.
-- The three plain-text switches for right-to-left text are gone (Auto RTL mode for Chat, Text Mode for RTL Dictionary, Text Mode for RTL Translate): every window stays in your View Mode whatever the language, each paragraph laid out in its own direction and each script in its own face. A switch you had on is cleared, so the Markdown view shows, and a dictionary window of a right-to-left language, which opened in plain text by default, now opens in Markdown; Text Mode for Dictionary and the MD ON / TXT ON button remain your plain-text choices.
-- **AI merge between books is experimental for now.** How well it links names that differ between two books has not been measured, and for most series the free carry already brings over what the earlier books know. It stays in an X-Ray's **Link and merge…** group. The app no longer offers it before a new X-Ray in a series, and the Group Hub has no row for it. It is being reworked for a later release.
-- Quick Explain uses your domain and the book's Background note, as Explain does: the two differ in length and model, not in what they know. It left both out until now. To have that back, hold Quick Explain, tap Edit… and set its Domain to None.
-- The X-Ray action's long-press menu no longer offers Without book info: an X-Ray is built by many requests, and the choice reached the first one at most (a build in checkpoints ignored it and named the book). To build an X-Ray that never names the book, set Book info to None for that book (Book Settings → Privacy & Data).
-- A deleted book's notebook is kept. When you delete a book in KOReader, its KOAssistant notebook is moved to the KOAssistant notebooks folder under the book's name, a message says where it is, and Browse Notebooks lists it as a book that is not on this device (View, Delete Notebook). Until now it was deleted with the book's other KOAssistant files, though it is the one of them that can hold your own writing. The book's chats and saved results are still deleted with it, and a whole folder deleted in KOReader takes the notebooks inside it along.
+- **Answers no longer scroll by themselves.** A new answer stays on its first page while the rest arrives, and you turn the pages. To have it follow the text again: Settings → Chat & Export Settings → Streaming → Auto-scroll Streaming, or tap Autoscroll in the window for one answer. An X-Ray being built is still followed.
+- **Formatting shows while the answer arrives.** Markdown While Streaming, in the same menu, turns it off.
+- **When a chat opens on its newest reply, the reply starts on a page of its own.** Your question is on the page before it.
+- **Three right-to-left switches are gone** (Auto RTL mode for Chat, Text Mode for RTL Dictionary, Text Mode for RTL Translate). Right-to-left text now displays properly in the normal view: each paragraph, list and table in its own direction, also where Arabic is mixed with English. A dictionary window for a right-to-left language now opens formatted, where it used to open in plain text. If you prefer plain text, Text Mode for Dictionary and the MD ON / TXT ON button are still there.
+- **AI merge between books is experimental for now.** It is a paid step that combines the X-Rays of two books, and it can attach a name to the wrong entry; how often has not been measured yet. The app no longer offers it by itself and the Group Hub has no row for it, but you can still start one from an X-Ray's Link and merge… menu. What the earlier books of a series know is still carried into the later ones automatically, for free.
+- **Some default models changed.** If you never picked a model yourself, you move to your provider's new default, and a notice tells you once: OpenAI now defaults to GPT-6.1 Terra, Mistral to Mistral Large 4, Kimi to Kimi K3 and Qwen to Qwen4-Max, among others. A model you picked yourself stays, unless its provider retired it: then it moves to the replacement, also with a notice.
+- **Pictures: your chat model now writes the picture's description (its prompt).** It follows the book more closely than the fast model did, and it is slower and costs more. To go back: Settings → Advanced → Image Generation → Prompt writer.
+- **Quick Explain uses your domain and the book's Background note**, as Explain does. To switch that off, hold Quick Explain, tap Edit… and set its Domain to None.
+- **Deleting a book keeps its notebook.** It moves to the KOAssistant notebooks folder, a message says where, and Browse Notebooks lists it. The book's chats and saved results are still deleted with the book, and a whole folder deleted in KOReader still takes the notebooks inside it along.
+- **The X-Ray action's long-press menu no longer offers Without book info.** It did not fully work: an X-Ray built in checkpoints still sent the book's title. To build an X-Ray that never names the book, set Book info to None for that book (Book Settings → Privacy & Data).
 
-## Crashes and Freezes Fixed
+## New and Improved
 
-- Fixed a crash that could close KOReader a few seconds after work in the background finished: the name index's pass after an X-Ray is built or its book opened, Fetch models, Test provider, the update check, a search of the book's text, a picture request and the subscription sign-in read their result into memory that could already have been released. It was rare and looked random.
-- KOReader no longer freezes when the screen turns (an Android device with rotation on) or its window is resized while KOAssistant's chat input is open; the box is laid out again for the new size with what you typed. The freeze was in v0.24.1 and earlier releases.
-- On Android e-readers that sleep a few seconds after the last touch (a Boox, for one), a lookup, a download or a book search no longer stops until you touch the screen: every wait keeps something moving (the seconds and dots under a waiting message, dots after an answer that pauses), which keeps the device awake (ref #126).
-- Fetch models from provider and Test provider no longer freeze the app while they run: each waits behind a message with the seconds and moving dots (Test provider's names its step), a tap on the message stops it, and on an e-reader that sleeps between screen updates they no longer pause until a touch (ref #126).
-- KOReader no longer exits when a held word, a lookup or a PDF mention carries a damaged character, or when Generate Image is tapped on a highlight that crosses an indented paragraph: such text reached the case fold of the name matching, which KOReader's library cannot take.
-- KOReader no longer starts slowly every time because one book's data could not be moved out of KOReader's metadata files (the one-time move of v0.22.0, for readers who used the plugin before it): the move went through every book in your history again at each start. It now runs once, and a book it could not move is moved the next time KOAssistant reads it (opening the book, its chats or its Book Hub).
-- Building the underline index for a book with thousands of entities (a long series with carried entries) no longer freezes the reader for seconds: the pass that finds names inside longer names is hashed (about 40 times faster at two thousand entities).
-- Book Settings → Privacy & Data: the Reading position, Library and Reading habits rows no longer crash on their "For this book" tab (those three kinds have no per-book value, so the tab is gone).
-- A quiz question with an empty field from the model no longer crashes the quiz window on Show Answer or on export.
+### Chat windows
 
-## Chat Windows and Streaming
+- Dots move after the window's title until the answer is complete, and the window no longer jumps when the answer finishes.
+- Numbered lists keep their numbers (no more 1, 1, 1), and checklists show boxes (☐ ☑).
+- A message you typed on several lines is shown that way, and a highlight of several paragraphs keeps its paragraphs.
+- Your place in a chat is kept when you turn the device, resize the window or switch between Markdown and Plain Text, and the reply box, Save Chat and New Tag stay on top with what you typed. On Kobo and Kindle models with a rotation sensor, the chat window now turns with the device.
+- Minimal popup: set to Always, it scrolls a long answer. Hold a word in it to look the word up, or select more text for the usual menu. The new Popup Style setting (Settings → Minimal Popup) chooses between a floating box and a panel at the bottom of the screen.
+- A new setting picks the font for Arabic-script text: Settings → Display Settings → Rendering → Right-to-left text font.
 
-### Streaming
+### X-Ray
 
-- While an answer streams, dots move after the window's title from the first words to the end: with the page standing still, they show that the rest is still arriving.
-- When a streamed answer finishes, the chat window takes the stream window's place without a shift: the two share one frame, one title bar and one place for the text, so an answer of one page does not move (its first line stood most of a line higher in the chat window, and a word could wrap onto another line). The stream window's title is in the regular face, as the chat window's.
-- After pausing the follow in the streaming window, the chat lands on the copy of the phrase you were reading when that phrase repeats inside the reply, in Markdown and in plain text; it landed on the first copy.
-- In the plain text stream view, a window that does not follow the text was redrawn with the screen's fast refresh, which is black and white only on e-ink: the text looked rough until the answer was complete. It is drawn like the Markdown view now.
-- A streamed answer whose last chunk carries both text and the stop reason keeps that text; some hosts send the last words with the stop.
-- Tapping Stop while a repaint of the streaming window is queued no longer paints the closed window once more.
+- A new screen for an entry's names, **Names and matching…** (in the entry's More… menu). Any name can be switched off, so a name that is also an everyday phrase stops marking ordinary sentences, or set to capitals only, so a character called Will is not underlined in every "will". KOAssistant also decides the capitals question by itself from how the book writes each name, and the screen shows what it counted.
+- An X-Ray that reaches the end of the book ends with a **Conclusion** instead of Current State. An X-Ray that is already at 100% gets one when it is rebuilt.
+- The creation form explains each way of building under the option you pick: what you get and what it costs. A line under the checkpoint options says what spoiler protection will show you (tap it to change the setting), and another warns when a fast model is a poor fit for your choice. The form now fits on an e-reader's screen without scrolling.
+- A new preset, **Who's who**: just the cast, one line each. The shortest and cheapest X-Ray.
+- An X-Ray's last section is called **Current State** in every setting (some screens said "status block"), the Categories button lists what is ticked instead of a preset's name, and Info (in the X-Ray's ☰ menu) shows what an X-Ray was built with.
+- Names with an apostrophe or a hyphen (King's Landing, Mary-Jane) are found in books that print curly apostrophes and typographic hyphens.
+- A change to an X-Ray shows in the page's underlines right away, with no page turn.
+- When you read along, a new character who shares a name with one already in the X-Ray gets an entry of their own instead of taking over the other one's.
+- An entry's page shows **First appears** and **Last seen** with chapter and page (EPUB). With spoiler protection on, Last seen stops where you have read.
+- When a word on your page is underlined because it matches someone who appears only later in the book, the card lets you switch that underline off without telling you who it is.
 
-### The minimal popup
+### Series and groups
 
-- The minimal popup shows its answer the way the chat window would: bold, italics, lists, each script in its own face and each paragraph in its own direction (it was plain text, and an italic showed its asterisks). It is as wide as the chat window, and with Always a long answer scrolls inside it (a swipe, or the page-turn keys) instead of being cut off.
-- New: Popup Style (Settings → Minimal Popup, and the tile's hold menu). The minimal popup can be a floating box next to the selection, as before, or a footnote panel at the bottom of the screen from edge to edge, like KOReader's footnote popups. The X-Ray card's Floating Popup is the same box, so it is wider too and scrolls a long entry.
-- A word held in the minimal popup is looked up, and a longer selection or a long hold opens the selection popup (Copy, Dictionary, Translate and the rest), as in the chat window. The popup stays underneath.
-- The Minimal Popup quick settings (a long-press on its Quick Settings tile) show a double line between their two settings rows and the list of actions.
+- Carried entries stay in step with your groups. If you take a book out of a group, delete a group, change its kind or reorder a series, each X-Ray lets go of what it carried from books it no longer takes entries from. Entries you carried or added by hand stay, and so does what an AI merge added.
+- In a series, the Group Hub asks before it opens a later volume than the one you came from.
 
-### The Markdown and Plain Text views
+### Dictionary and translation
 
-- A numbered list keeps the numbers the answer wrote. Items with blank lines between them count 1, 2, 3 (they showed 1, 1, 1, since each became a list of its own); a list that goes on after a paragraph, a quote, a code block, a table or bullets, or that starts past 1, is shown with the answer's own numbers instead of starting again at 1.
-- Task lists (`- [ ] to do`, `- [x] done`) are drawn as boxes, ☐ and ☑, in the Markdown and the Plain Text view; they showed their brackets.
-- A message you typed with line breaks in it is shown with each line as a paragraph of its own in the Markdown view (it was joined into one block); a list or code you typed is shown as before.
-- A highlight of several paragraphs is quoted at the top of a chat with its paragraphs apart (the Markdown view showed it as one block).
-- A code block under a list item (a numbered step with its command) no longer turns the whole answer into raw text when the answer stops inside the block, or, with Markdown While Streaming, while the block is still arriving.
-- In the Markdown view, two marked words side by side (bold then italic, two code spans, two links in a row) keep the space between them; since v0.24.0 they ran together.
-- A word in a table's narrow column is no longer split over two lines (in a column of single words a word could be broken after a letter or two, or lose its full stop to the next line).
-- In the Plain Text view the window opens on the newest reply's first line. In a chat of several exchanges it opened some lines above it, further off with every exchange, with a cursor mark in the text.
-- Emoji and other characters outside the basic plane are shown whole when a provider sends them as escape pairs (many self-hosted servers do): they came out as six replacement characters and were saved broken in the chat.
-- Changing the font size or the alignment, Reset to Defaults, and Hide/Show Original in a translate window keep the rendered math and the right-to-left alignment; they rebuilt the view without them until the chat was reopened.
-- The chat window's reasoning line no longer appears for a request that sent no reasoning setting at all.
+- KOReader's own dictionary can be reached while the dictionary bypass is on: use the Dictionary row in the highlight menu (a very long press on a word opens that menu). It also opens for a word that is an X-Ray name, as does Dictionary in KOAssistant's own selection popup.
+- Translate Page shows the page's paragraphs apart instead of as one block. (A PDF page keeps its lines joined, as before.)
 
-### Right-to-left text and other scripts
+### Pictures
 
-- The Markdown view draws each script in its own face. Arabic, Persian and Urdu letters come in Noto Naskh Arabic, the face KOReader gives Arabic books, with real bold, wherever they appear: a whole paragraph or a word quoted inside an English sentence (they had a plain serif fallback). Hebrew and Devanagari take the faces KOReader's own interface uses for them, and emoji are drawn with the plugin's bundled emoji font, no install needed (they showed as boxes).
-- A new row, Settings → Display Settings → Rendering → Right-to-left text font, picks Noto Sans Arabic UI (the face of KOReader's own text windows), any font KOReader knows, or None. The plugin keeps a copy of each font it draws with in `koassistant_fonts/` under KOReader's data folder (safe to delete, refilled when needed): KOReader's builds from November 2026 on read a window's fonts only from a folder the window hands them.
-- In the Markdown view, a line that begins in the answer's own language keeps that language's direction: in an English answer, a label such as "Synonyms:" followed by Arabic words stays on the left (it was laid out right-to-left, the label on the right with its colon before it), and each message of a chat is judged on its own.
-- A dictionary window that shows the book's sentence above the answer judges the answer by its own words: an English definition under an Arabic sentence stays left-to-right even where it opens with the Arabic headword (the sentence's words outvoted it, and the definition was laid out right-to-left, its full stop on the left).
-- In the Plain Text view and the minimal popup, a line that mixes right-to-left and Latin words takes the direction the Markdown view gives it: an Arabic sentence with an English name in it is laid out right-to-left (every mixed line was laid out left-to-right, so such a sentence came out in the wrong order), and an English definition that opens with an Arabic headword stays left-to-right.
-- A table in a right-to-left answer is laid out right-to-left: its first column is on the right, each cell's text starts at the right of its cell, and an English cell keeps its full stop at its end (every cell's text sat on the far side of its cell, and English cells were laid out right-to-left). A table too wide for a grid, shown as lines, has its rule on the right. A table with an Arabic column in an English answer keeps its order.
+- Generate Image, Illustrate… and a gallery picture's Image settings… all open the same popup: a note to guide the picture, the X-Ray entries to draw from, then Prompt, Style, Shape, Detail, Provider and Model.
+- A note that names a character or a place brings in that X-Ray entry, so a passage that only says "she" can still be drawn right.
+- A picture remembers which X-Ray entries it shows, and an entry's More… menu has Pictures (N)… to see them.
+- Pictures invent less: when the text does not say where a moment happens, the background stays simple.
+- A picture appears sooner on a slow e-reader once the provider has answered.
 
-### A turned screen or a resized window
+### Models and providers
 
-- Rotating the device, resizing the screen, switching the window size or switching a chat between Markdown and Plain Text keeps your place: the window shows the text you were reading. A rebuilt window used to open at the top, and the view switch went back to the chat's start.
-- After a turn, Save Chat, New Tag and the reply box stay on top of the chat window with what you typed (the rebuilt chat window covered them), and the chat window opens on the page that holds your place also when your top line began with a page's last word (it showed the page before).
-- On a device whose own rotation sensor KOReader reads (some Kobo and Kindle models), turning it with a chat window open turns the screen and the chat window follows; the screen used to stay as it was.
-- After a rotation, the Save Chat and New Tag dialogs' buttons act on the dialog on screen.
+- New models: Claude Fable 5.2; GPT-6.2 Sol and Astra, and GPT-6.1 Terra; Gemini 4 Carbon and Hydrogen; Qwen4-Max; Kimi K3 and K3.1 Pro; Mistral Large 4; and the picture models gpt-image-2.6-flare (OpenAI's default) and gpt-image-2.6-sunburst. OpenRouter and similar services list the same models.
+- **Amazon Bedrock** is a new provider, contributed by a user (#113): enter a Bedrock API key and pick your region under Settings → Advanced → Provider Settings. For now its answers appear all at once instead of word by word, and the reasoning settings have no effect on it.
+- API keys (#125): the key window reminds you to check the start of a key you copied inside KOReader, where a selection can miss the first characters. An "API key not valid" error now shows which key was sent: its name, its first 3 characters and its length.
+- X-Rays, summaries and other saved results built with Claude cost less: about 18% for an X-Ray of a whole book on Claude Sonnet 5.5.
 
-## X-Ray
+### Actions and settings
 
-### Building an X-Ray
+- An action run on one section of a book (a summary, a quiz, the Reading Guide and others) now tells the model that it is looking at that section, not at the whole book. Small models used to reply that they could not summarize a whole book from one chapter.
+- Built-in actions that leave your domain out (Translate, Fact Check and others; the wiki lists them) can now be set to use it: choose Global for Domain in the action's settings.
+- The highlight menu shows up to 30 KOAssistant actions (15 before).
 
-- An X-Ray that reaches the end of the book ends with a **Conclusion**: the last checkpoint, an update to 100% and an X-Ray built with your position on the last page now ask for it in place of Current State (Current Position in nonfiction). Until now only a whole-book build in one request did, so a book finished in checkpoints still said what things were building toward. An X-Ray already at 100% keeps what it has until it is rebuilt.
-- The X-Ray creation form says under the picked row what that way to build gives, in two or three sentences: one request is the cheapest and writes every entry with the whole book in view; checkpoints give a version for every stretch of the book and find more of the minor names and hard words, for more requests. A rebuild's form no longer opens with lines of text above its first row (its text ends with what happens to the X-Ray that is there), and the form no longer needs scrolling on an e-reader's screen. The wiki has the measured comparison.
-- The X-Ray creation form says what you will be shown of an X-Ray built in checkpoints: under "In checkpoints, now" and "In checkpoints, as I read" a line of its own gives the book's own case (spoiler protection on: each checkpoint appears when you reach it; off: the newest checkpoint is shown as soon as it is built), and a tap on that line opens the book's Spoiler Protection setting. Both rows build the same versions either way.
-- The creation form shows a gray **⚠ Fast model** line when the model in use is its provider's fast one and the pick is checkpoints or Deep depth; a tap on it says why: in our runs such a model mixed up people who share a name when it built in checkpoints, and kept them apart in one request.
-- A new preset, **Who's who**: the cast alone, one line each, no Current State. The shortest and cheapest X-Ray; it is smaller, not more accurate.
-- One name for the last section of an X-Ray wherever it is a setting: **Current State**, as the browser calls it (it was "status block" in the presets and Info, "Where things stand" in the picker). And the **Categories** button and rows list what is ticked ("People, Timeline", or "4 of 5" where room is short): they never show a preset's name, so "Preset: Reference" no longer stands above "Categories: Reference".
-- The X-Ray's Info (the browser's ☰ menu) now says what it was built with: the preset, or Custom with its categories, depth and Current State. It reads the saved X-Ray's own record, so it is right for a version or a section X-Ray too.
-- Reading along, a new person who only shares a name with someone already in the X-Ray no longer takes that person's entry over (a maid with her mistress's first name, a grandfather with the title and surname his grandson was first met under): they get an entry of their own, and the duplicate review can still merge two entries that are one. An update can no longer replace a description with an empty or a stub text.
-- X-Rays are saved to their book again after a library dialog was open. Once a Library chat, a Series or Group chat or a multi-book compare had been opened, an X-Ray of the open book was shown in a chat window and not saved, and a checkpoint build stopped at its first step, until KOReader was restarted (ref #123).
-- With spoiler protection on, a checkpoint build no longer installs a checkpoint ahead of where you are. Right after reading the book's text the plugin could read a wrong reading position (until the page was drawn again), and a checkpoint whose answer arrived in that moment was installed although it reached past your page.
-- Large checkpoint chains pause at an oversized step for review again, and a one-step build offers its extra button; the safeguard read a flag the request had already cleared.
-- The confirmation before an X-Ray is rebuilt in checkpoints no longer promises that the old version is archived when version archiving is off.
-- Settings → Reading & Library → X-Ray: the Preset, Categories, Depth, Type and Carried Entries rows open their pickers again. They did nothing in v0.24.0 and v0.24.1 (the same defaults could be set from any book's Book Settings → X-Ray on the Global tab); reported with a tested patch in #123.
-- "Delete All" artifacts (the artifact browser, the Book Hub) now pins the book's automatic X-Ray off as every other delete of a live X-Ray does, and the underlines of the open book go at once.
+## Fixed
 
-### Names, matching and underlines
+### Crashes and freezes
 
-- An entry's names have one screen, Names and matching…: every name, the main one included, says whether it is matched in the text, so a name that is also an everyday phrase can stop marking ordinary sentences. Renaming no longer asks about matching, your own names can be deleted, and Reset to the AI's names undoes it all.
-- A name can be set to capitals only in Names and matching…: a faction named "The Drowned" then marks "the Drowned" but no longer "the drowned trees", in the underlines, the counts and KOReader's search after a mention.
-- Capitals are decided automatically from how the book writes each name: once the book's names are indexed, a name written both ways, with its capitals at least three times mid-sentence and a quarter of the time, matches with capitals only. Names and matching… says "capitals only (automatic)" or "any case (automatic)", and a name's choices (Automatic, Capitals only, Any case, Not matched) mark the one in force and stay open when you pick another.
-- A name's choices in Names and matching… say what the automatic rule saw: how many of its counted uses have its capitals, or that the book's names are not indexed yet.
-- Capitals are decided automatically for upcoming entities too, the entries known only from the next checkpoint: a title the book also writes as a name ("my lady" against an entry named Lady) no longer underlines the lowercase word once the book's names are indexed.
-- The automatic capitals and a name's counts are read from the stored layout that has the name, so a name first indexed after a font or orientation change is judged too; a page with a ligature, a superscript or a full-width mark no longer passes every later name's capitals unread; and a capital after an abbreviation's period ("No. 5. Summer") is no longer counted as a capital mid-sentence, with quotes of every tradition opening a sentence.
-- Look up in X-Ray on a book with one X-Ray honours Not matched and Capitals only: a name set to not matched no longer opens its entry, and a capitals-only name opens it only when selected with its capitals. In PDFs, Mentions and Chapter Appearances no longer count a name inside a longer word ("Ann" in "Hannah").
-- Names with an apostrophe or a hyphen now match a typeset book: the AI writes King's Landing or Mary-Jane with the plain characters, the book prints curly apostrophes and typographic hyphens, and no underline, count, card, lookup or chapter count found them. The book's name index is rebuilt once in the background.
-- X-Ray names in Vietnamese, Hindi and the other Indic scripts, Hebrew, polytonic Greek and Georgian are matched as whole words: a short name counted inside longer words (underlines, Mentions, Chapter Appearances, the automatic capitals), as if those scripts had no word boundaries. The name index is rebuilt once per book for this.
-- Looking up or searching an X-Ray name typed in capitals, or a lowercase one, finds it in every script (Cyrillic, Greek, accented Latin), not only in ASCII.
-- Names in a Chinese or Japanese PDF keep their mentions, a name set to capitals only that starts with the Turkish dotted capital I or a full-width capital matches again, Armenian and Ethiopic names match before their script's own comma and full stop, and Look up in X-Ray finds a name with a typeset apostrophe or hyphen.
-- Look up in X-Ray on a book with section X-Rays also starts its results with Add "…" as an alias…, so a first name that only partly matches an entry can be added to it there too.
-- A change to an X-Ray shows in the page's underlines at once, with no page turn: a name added, renamed or set to capitals only, an entry merged or deleted.
-- The Marking Density and Mark rows under Settings → Reading & Library → X-Ray redraw the underlines at once; a pick there used to show at the next book open.
-- Turning the X-Ray underlines off (or a search closing) no longer cancels the background pass that builds the name index; Mentions and Chapter Appearances kept waiting for a pass that had been dropped.
-- The Mentions view and Chapter Appearances skip the costly containment pass for names the text does not hold at all.
-- Your X-Ray name edits (names, matching choices, never-merge pairs) are written through a temp file: a write cut short by a full card keeps the old file instead of leaving a torn one.
+- A rare crash that closed KOReader a few seconds after work in the background finished: the indexing of names after an X-Ray is built or its book opened, Fetch models, Test provider, an update check, a book search, a picture request.
+- A freeze when the screen turned, or the window was resized, while the chat input was open.
+- On Android e-readers that go to sleep a few seconds after the last touch (a Boox, for one), a lookup, a download or a book search stopped until you touched the screen. Waiting screens now keep moving, which keeps the device awake (#126).
+- Fetch models and Test provider froze the app while they ran. They now show their progress, and a tap stops them (#126).
+- KOReader could crash on text with a broken character (a held word, a lookup), and when Generate Image was tapped on a highlight that crossed an indented paragraph.
+- KOReader started slowly every time for people who have used the plugin since before v0.22.0, when one book's data could not be moved during that update.
+- KOReader froze for seconds on a book with thousands of X-Ray entries (a long series).
+- The Reading position, Library and Reading habits rows of Book Settings → Privacy & Data crashed on their For this book tab, and the quiz window could crash on Show Answer.
 
-### Entries, cards and the browser
+### Chat windows
 
-- An entry's page says where the book first writes its name and where you last saw it, chapter and page (**First appears**, **Last seen**). It is read from the book's own name index, so it costs no request; with spoiler protection on, the last place is the last one up to where you have read. In EPUBs, once the index holds the entry's names.
-- The X-Ray card set to **Card Shows: Full entry** shows the entry's own text: its description and what its page has under it (other names, Details, Evidence, Significance, what other books add). It showed the description alone, so an entry's Significance never reached the card. Its connections stay on the entry's page.
-- The X-Ray card's footnote panel shows Arabic, Persian, Urdu, Hebrew and Devanagari names and text in the same faces as the chat windows (your Right-to-left text font for Arabic script); it used a fallback face whatever was set.
-- An upcoming entity's card offers its one-line description on a tap for every name, a first name or a nickname included; before, only a tap on the entry's exact name got it.
-- An upcoming entity's full entry opens behind its confirmation whatever the spoiler setting, and the confirmation box and its page both offer Matching…, the names' choices for an entry the X-Ray browser cannot hold yet, so a wrong underline is switched off without reading the entry.
-- An upcoming entity's confirmation box lists, under Matching…, the name you tapped alone: it used to be titled with the entry's name and to list every alias, which gave away whose nickname you had tapped before you chose to reveal it. The full entry's Matching… still lists every name.
-- The help texts of Entity Card First, Upcoming Entity Cards, Card Style and Spoiler Protection describe the card as it is: the next checkpoint past your position, the stages, the confirmation whatever the spoiler setting, a Finished book unprotected.
-- A chat started from an X-Ray entry by tapping one of the dialog's actions (Explain, ELI5 and the others) is listed on the X-Ray browser's X-Ray chats row; only a chat started with a typed question was. Chats saved before this stay in the book's Chat History.
-- A Story Arc entry, or an Argument Development entry of a nonfiction X-Ray, no longer repeats the names it links to under its text (they are its buttons), and a chat about an Argument Development entry no longer calls its concepts and key figures "Characters".
-- Merge with another entry… keeps the entry page open while you pick: Cancel or Back returns to it, and a merge opens the entry you kept instead of the X-Ray's first page.
-- After you tap a mention, the magnifier in KOReader's search window opens the search box on the entry's name instead of your own last search.
-- An X-Ray lookup from an entity card or the dictionary bypass is about the open book, even after a chat about another book from the file browser.
-- A chat or an AI Wiki article about an X-Ray entry of another book than the open one uses that book's own domain, languages, research mode and spoiler setting, not the open book's.
-- The duplicate-entities offer after an X-Ray install no longer appears over the file browser when the book was closed in the meantime, and no longer spends the pair's one offer there.
+- Two formatted words in a row (bold then italic, two links) lost the space between them, since v0.24.0.
+- An answer with a command or code under a numbered step could show as unformatted text.
+- A word in a narrow table column could be split over two lines.
+- Emoji sent by some local or self-hosted AI servers came out as broken characters, in the window and in the saved chat.
+- The Plain Text view opened a few lines above the newest reply.
+- The last words of an answer could be missing with some providers.
+- A request to answer in another language ("answer in Arabic") was often ignored.
 
-## Book Groups and Series
+### X-Ray
 
-- Carried entries follow the group: when a book leaves a group, a group is deleted, a series is put in another order or a group changes kind, each X-Ray drops the carried entries and "From" lines of the books it no longer takes from (in a series, never a later book). What an AI merge added stays, and so do the entries you carried or added by hand.
-- An earlier book's entry is carried even when this book has an entry of another kind by a similar name (the character "the Warden" beside the term "Warden"), and its read-only view no longer says it is already in this book's X-Ray.
-- In a series, the Group Hub's book rows hold a later volume back as the → Group list does: the row says (later in the series) and asks before that volume's Book Hub opens, when the hub was reached from an earlier book.
-- Move back to carried list is offered only on entries you added from the carried list, no longer on every entry that has history from another book.
-- An X-Ray update or rebuild, and a checkpoint install, no longer forget the AI merges the X-Ray holds, so AI merging a series no longer runs merges again that were already done.
-- A carried entry seeded from an earlier book before that book's entry had aliases now receives the aliases a later re-seed brings.
-- "Add to <group>" in a book's Groups popup no longer leaves two copies of the popup.
-- Adding a folder, a collection or a series' books to a group writes the groups file once, not once per book; so does ordering a series by its index.
-- With thirteen or more X-Rayed books in a group, every page turn re-parsed every one of them (the memo was wiped at twelve); the memo now keeps the books of the walk in progress.
+- After a Library, Series or Group chat had been opened, X-Rays were shown but not saved and checkpoint builds stopped, until KOReader was restarted (#123).
+- The Preset, Categories, Depth, Type and Carried Entries rows under Settings → Reading & Library → X-Ray did nothing in v0.24.0 and v0.24.1 (#123).
+- With spoiler protection on, an X-Ray built in checkpoints could, in rare cases, show a version that reached past where you had read.
+- A chat or an AI Wiki article about an X-Ray entry of another book than the open one used the open book's spoiler setting, domain and languages.
+- With Card Shows: Full entry, the X-Ray card showed only the description. It now shows the entry's full text.
+- A short name was counted inside longer words: in Vietnamese, Hindi and other Indic scripts, polytonic Greek and Georgian, and in PDFs ("Ann" in "Hannah").
+- Look up in X-Ray could ignore a name's Not matched or Capitals only choice, and missed names typed in another case in Cyrillic, Greek and accented Latin letters.
+- Mentions and Chapter Appearances could wait for ever after the underlines had been turned off.
+- A chat started from an X-Ray entry with one of the action buttons was missing from the X-Ray chats row.
+- After an X-Ray was updated or rebuilt, AI merging the series ran, and charged for, merges that were already done.
+- A long checkpoint build pauses again for your review before an unusually large step; that safeguard had stopped working.
+- The confirmation before an X-Ray is rebuilt in checkpoints promised that the old version would be archived even when version archiving was off.
+- After Delete All, a book's automatic X-Ray could start again by itself.
+- In a group with thirteen or more X-Rayed books, every page turn was slow.
 
-## Dictionary, Translation and Selections
+### Privacy and spoilers
 
-- KOReader's own dictionary is reachable while the dictionary bypass is on: KOReader's Dictionary row in the highlight menu (a very long press on a word opens that menu) opens KOReader's dictionary, also for a word that is an X-Ray name; it ran the bypass action or opened the X-Ray entry. Dictionary (KOA) stays KOAssistant's action.
-- Dictionary in the selection popup of a chat window, an X-Ray page or any other KOAssistant window opens the dictionary also for a word that is an X-Ray name; it opened the entry, which Look up in X-Ray beside it already does.
-- A word tapped in the Vocabulary builder's review list opens in KOReader's dictionary again, with the builder's Forgot and Got it buttons, when the dictionary bypass is on or the word is an X-Ray name (it went to the bypass action or the X-Ray entry, and the two buttons never showed).
-- The two Bypass Action rows name your own actions; a bypass whose action was deleted says so once and opens KOReader's dictionary or the highlight menu, and deleting an action clears a bypass that pointed at it.
-- The dictionary popup's "Look up in X-Ray" and "Generate Image" buttons, and the dictionary bypass, no longer act on a book you chatted about earlier from the file browser or a Book Hub: they take the open book (or the chat's own book).
-- The Deep Analysis dictionary action is found by its id again (a custom action override, a bypass or a gesture pointing at it works).
-- After a word lookup inside one of KOReader's HTML text windows the word's highlight is cleared, as in the plain-text ones.
-- In a translate window every line is its own paragraph, the original's and the translation's alike: Translate Page showed a page's paragraphs as one block in the Markdown view whenever the model answered with single line breaks, which is how KOReader hands the page over. A PDF or DjVu page, whose text comes as printed lines, keeps its lines joined as before.
-- In a translate window in the Plain Text view, Show Original no longer changes the line spacing.
-- The sentence around a selection ends at 。！？ (Chinese and Japanese), । (Hindi) and ؟ (Arabic) too; those scripts write no space after the mark, so a sentence-sized context kept the whole paragraph.
-- A prompt line or typed text that happens to say "In context" is no longer dropped when the dictionary context is off; only the line holding the context placeholder goes.
+- With Book info on None, sending your notebook revealed the book's title: the title line at the top of the notebook went along. It is no longer sent.
+- With Book info on Title only, some actions still sent the author's name.
+- Page bookmarks were sent along with your highlights.
+- A saved result made from your notes was treated as holding highlights only. It now asks before your notes are shared again, when you chat about it, attach it or update it; pinned answers ask the same way.
+- An X-Ray that was built with your highlights could not be continued when Highlights was set to Ask.
+- AI Wiki from a highlight or the dictionary popup silently left out the text around the selection instead of asking.
+- After you cancelled the question about sharing your data, the options you had picked for that cancelled action (another model, a part of the book) could still apply to your next request.
+- If you had switched the Spoiler chip off in a chat, an action started afterwards from the file browser, or from Quick Actions right after a library chat, could run without spoiler protection. A later part of the book that you confirmed for one message also switched the spoiler reminder off for the first message of your next chat.
+- In Chinese, Japanese, Hindi and Arabic text, "the sentence around your selection" was the whole paragraph.
+- The Reading position setting now says when your position is sent. The setting itself did not change.
 
-## Image Generation
+### Chats and attachments
 
-- Generate Image opens a popup on a tap: a note and the X-Ray entries the prompt writer will read (at first the ones the passage names, carried entries included, up to five, to change by hand), then Prompt, Style, Shape, Detail, Provider and Model, two to a row, each a button showing its value, where a change is the setting itself.
-- Illustrate… and a gallery picture's Image settings… open the same popup: Illustrate with a note for this picture, the gallery's with Regenerate and Regenerate and replace.
-- A picture remembers the X-Ray entries it shows, and an entry's More… has Pictures (N)… beside Illustrate…, opening the gallery on its pictures.
-- A note that names a character or place brings that X-Ray entry to the prompt writer, so a passage that only says "she" can still be drawn right.
-- The prompt writer reads more of the text around the passage (up to 1,000 characters on each side, up from 400) and takes the setting from the passage's own moment: where nothing says where the moment happens, it keeps the background simple instead of inventing a room and its furniture, and it keeps characters' names out of the prompt while saying who they are (their people, age and role) when the book does. The note box's hint now starts with the setting or context, the place to say it.
-- Illustrate draws a person or a thing on a simple background unless its X-Ray description says where it is, instead of inventing a room around them; a place named in the note still gives it one.
-- The prompt writer now uses your chat model instead of its provider's fast model, which followed the writer's rules less closely; the new Settings → Advanced → Image Generation → Prompt writer switches back to the fast model, quicker and cheaper.
-- A picture arrives sooner on a slow reader once the provider has answered: a large answer (one model sends 10 MB for a picture) is read in quickly instead of a little at a time, which could add half a minute, and the window says "Saving the picture…" while the picture is saved and opened.
-- The picture window's dots move while it waits, as chat's do: on an Onyx Boox the window had frozen about ten seconds in, until the screen was tapped.
-- The image prompt writer and the picture popup's entry list honour a name set to "Match capitals only": a passage saying "will" no longer names an entry called Will.
+- Every reply in a chat also sent your first question a second time, so chats cost more than they should.
+- Some answers could damage your saved chats so that they would not open. They open again.
+- Add to Notebook could write into the wrong book's notebook: in a saved Summary or Recap opened after you had continued another book's chat from Chat History.
+- After a chat about another book from the file browser, the dictionary popup's Look up in X-Ray and Generate Image buttons, the dictionary bypass and the X-Ray card could act on that book instead of the open one.
+- A chat about a saved result that you started with another model ran on your main model once the question about your data had been answered.
+- Library chats could not be tagged.
+- Text with a word in curly brackets, such as "{title}", in a selection, a typed message or the book's text had that word replaced before it was sent.
+- A scanned PDF with no text was sent as empty pages. An action now says that no text could be extracted.
+- Attachments waiting in the chat box when you ran an action that takes none were sent later with your first reply. They are now dropped, and a message says so. A text file that is not UTF-8 is refused instead of being sent as unreadable characters.
 
-## Providers and Models
+### Providers and answers
 
-### New models and providers
+- An answer cut off at the provider's length limit could be saved as if it were complete (an X-Ray, a summary). It is now recognized as cut on every provider.
+- On e-readers and Android, an error that arrived in the middle of an answer lost the provider's own reason: an account that was out of credit was told it had sent too many requests.
+- A reasoning level that your model does not offer made the request fail. The model's default level is used instead.
+- A key you add in the API key window is used right away. Before, a second key waited until you tapped it in the key list, so replacing a dead key kept sending the old one (#125).
+- Test provider called correct answers from OpenAI and DeepSeek unreadable.
+- Saving a first API key switched the provider if you used the OpenAI Subscription, Ollama or a key in configuration.lua.
+- Answers from some self-hosted AI servers were marked as stopped early, so X-Rays and other results were not saved.
 
-- More new models, each probed on 2026-11-18: Claude Fable 5.2 is Anthropic's most capable pick (it always thinks; Fable 5.1 stays listed), GPT-6.2 Sol and Astra are OpenAI's flagship and most capable picks (neither can turn reasoning off; GPT-6.1 Sol and GPT-6 Astra stay listed), Gemini 4 Carbon (Google's strongest, paid only) and Gemini 4 Hydrogen (its general-purpose model) join the Gemini list, and Qwen4-Max is Qwen's default. The same models appear where OpenRouter, Perplexity, A2Agent and Requesty serve them.
-- New models, each probed: GPT-6.1 Terra is OpenAI's default (it reasons by default and can be turned off; gpt-5.6-terra stays listed), Mistral Large 4 is Mistral's default (the Large alias is refused on the free plan, which also allows no requests on Medium, Small or Magistral), Kimi K3 is Kimi's default with K3.1 Pro as the flagship (Moonshot closed K2.6 to new accounts and retires it in late December; the two older Kimi ids move to K3), Fireworks' default is DeepSeek V4.1 Flash (gpt-oss-120b leaves its serverless endpoints on 2026-11-07; a saved pick of either gpt-oss id moves), A2Agent's default is DeepSeek V4.1 Flash 1017 with MiniMax M3.1 Flash beside it, and the same new models appear where Model Studio, Fireworks, Perplexity, OpenCode Zen, NVIDIA (Step 5 preview, Nemotron 3.5 Bolt) and OpenRouter serve them. GPT-5.6 now counts as reasoning by default, so its Off setting is sent as "none".
-- Amazon Bedrock is a built-in provider (community, docs-based; contributed in #113): a Bedrock API key and a region picked under Settings → Advanced → Provider Settings, every model the account enables in that region (Fetch models lists them), book tools on the models the contributor probed. Answers arrive whole for now (no streaming), and reasoning settings do not reach it yet.
-- Image generation: gpt-image-2.6-flare is OpenAI's default picture model with gpt-image-2.6-sunburst beside it; a saved pick of gpt-image-1, which OpenAI shut down, moves to gpt-image-2.5-flare.
-- The dated retirements are taken ahead of their dates: a saved pick of claude-sonnet-4-5-20250929 is sent as Claude Sonnet 5.5, gemini-2.5-pro as Gemini 3.8 Flash, gemini-2.5-flash as Gemini 3.5 Flash Lite and kimi-k2.6 as Kimi K3, which leaves the Kimi list; gpt-image-1-mini leaves the OpenAI image list and a saved pick draws with gpt-image-2.5-flare. The startup notice for a moved pick says the provider retired the model or is about to.
-- NVIDIA ended openai/gpt-oss-20b on November 18: its fast speed tier uses Nemotron 3.5 Bolt now, a saved pick of the ended model moves there, and Mistral Large 4 joins NVIDIA's list. SambaNova no longer serves Llama 3.3 70B (a saved pick moves to gpt-oss-120b), and Qwen's Standard speed tier moved from qwen3.5-plus, which Qwen retires on January 19, 2027, to qwen3.8-flash.
-- SambaNova, Together and OpenCode Go: models their catalogs no longer serve (SambaNova's DeepSeek V3.1 and V3.2 and MiniMax M3, Together's DeepSeek V4 Flash 0731, OpenCode Go's MiMo v2.5 pair) are replaced by the ids they serve now, and a saved pick of a gone model moves to its replacement.
+### Actions and menus
 
-### API keys, provider tools and cost
+- Saving one of your own actions keeps everything you did not change. Before, every Save dropped the action's domain, temperature and several other settings. A built-in action saved with nothing changed stays a built-in and keeps following updates.
+- A custom_actions.lua file with an error removed its actions from every menu for good. Their places are now kept, and a notice names the error and its line.
+- Deleting one of your actions removes its gestures and clears a dictionary bypass that pointed at it. Settings → Gestures lists a gesture whose action is gone, so you can remove it.
+- The X-Ray popup and the other result popups end with Close instead of Cancel: closing them cancels nothing, and a build that is running goes on.
+- Cancelling a section list, the reasoning model list or the Quick Answer preset's model lists returns you to the popup you came from instead of leaving you on the page.
+- A new domain or behavior could silently take the place of one you had deleted, in the books and actions that used the deleted one.
 
-- The API key window's gray note says to check the start of a key copied in KOReader: a selection that does not begin on the key's first character leaves out its first few characters (the "AQ." of a new Gemini key, the "sk-" of an OpenAI key), and the provider then answers "API key not valid" (#125).
-- A key you save in the API key window is the one in use from then on: a key added with Add API key... used to wait behind the first one until tapped in the key list, so a reader replacing a dead key kept sending it (#125).
-- When a provider refuses a request for its key ("API key not valid", an authentication error), the error names the key that was sent: its name, where it came from (the app or apikeys.lua), its first 3 characters and its length, so a key that lost its start or is not the one you meant shows right there (#125).
-- Test provider no longer calls a correct OpenAI or DeepSeek answer unreadable.
-- Test provider: a model that refuses a forced tool call is no longer recorded as taking tools (the book tools' gather round could not use it).
-- An X-Ray, a summary or any other saved result built with Claude (Anthropic directly, or through OpenRouter) no longer pays the prompt cache's write surcharge for the book's text, since no later request reads that cache: an X-Ray of a whole book costs about 18% less (measured on Claude Sonnet 5.5). Chats keep their cache as before.
-- A result saved for one section (a section X-Ray, a section summary, a chapter quiz) built with Claude no longer pays that surcharge either.
-- Saving a first API key no longer switches the provider of a reader using the OpenAI Subscription, Ollama or a configuration.lua key; a switch picks the new provider's default model.
-- Settings → Model: "Add custom model…" in another provider's panel now selects that provider with the model; removing or clearing custom models only resets the selection when it belonged to the active provider.
-- Quick Settings, the reasoning popup, the Model row's label and the temperature note name the provider in use for a reader whose provider is set in configuration.lua; they said Anthropic.
+### Backups, notebooks and updates
 
-### Answers, limits and reasoning
+- A backup that could not be written completely (a nearly full card) reported success. It now fails and says why.
+- A restore in Merge mode replaced what you had made after the backup. It now keeps your newer groups, your general and library pinned answers and your own domains, behaviors and providers.
+- A restore that failed halfway could report success, or say "rolled back" while newer chats or groups were gone.
+- After a restore, the next settings change could write the old settings back, and groups or the menu places of your actions could be overwritten.
+- Changing where notebooks are saved could lose a notebook when the copy failed (a full card).
+- A failed automatic update check was tried again every time you opened or closed a book. Attempts are now at least 30 minutes apart (#121).
 
-- An answer the provider cut at its output limit is now marked as cut on every provider, not only Anthropic, OpenAI, Gemini, DeepSeek, NVIDIA and Z.AI, so a cut X-Ray step or summary is no longer saved as if it were whole.
-- On e-readers and Android, a provider's error shown while an answer streams keeps its HTTP status and the provider's own reason (it showed the bare message), so the tip under it fits: an account out of credit is no longer told it hit a rate limit and offered Try again.
-- Answers from servers that end a normal answer with `eos` or `eos_token` (text-generation-inference and the hosts built on it, reached as a custom provider) are no longer marked as stopped early, so X-Rays and other saved results are kept there.
-- A model the provider retired (sent as its replacement) takes the replacement's reasoning settings, so an "off" that the old model understood no longer sends a value the new one refuses.
-- A reasoning level the model does not offer (a setting kept from another model, an action's level from another provider) falls back to the model's default level instead of being sent as is and refused.
-- OpenRouter: a model whose output limit was learned from a rejection before its capabilities were fetched keeps its reasoning and tools; the learned entry read as "supports nothing".
-
-## Privacy and Data
-
-- With Book info on None, a request that carries your notebook no longer names the book: the title line KOAssistant writes at the top of a notebook file went along with the notebook. Requests now carry the notebook's entries without that line, at every Book info level.
-- Book info set to Title only leaves the author out of the prompt's own words too ({author} and {author_clause} resolve to nothing), as it already left the author out of the context line.
-- Page bookmarks are no longer sent or counted as highlights: KOReader keeps them in the same list, so a bookmarked page's first words rode along with your highlights, and the data question counted them.
-- An X-Ray that was built when X-Rays also read your highlights can be continued again with Highlights on Ask: the data question names the saved X-Ray and what it was built with, and Allow once covers it. Before, an update was sent as a full rebuild and a background or checkpoint update did nothing.
-- A result built with your notes (Analyze Notes, for one) is saved as built with notes, so a chat about it, attaching it or updating it asks for notes; it was saved as built with highlights alone. Results saved earlier keep their old label until they are updated or redone.
-- A chat that was given your highlights without your notes (notes refused) is recorded that way: continuing it with another provider was asked about, or refused over, notes it never held.
-- Pinned answers keep the record of what they were built from (the book's text, highlights, notes, the notebook) and which provider answered, so a chat about a pin, or attaching it, asks the data question the same way as any stored result.
-- Settings → Privacy & Data → Reading position says when the position is sent: only where something uses it (an action that asks for it, the spoiler reminder while protection is on, and every request only when Book info is set to Title, author & position). The setting did not change; its text read as "always sent".
-- AI Wiki from a highlight or the dictionary popup asks for the text around the selection when that kind is on Ask, as the X-Ray browser's AI Wiki does; before, the text was dropped silently.
-- The reading position line of a Send follows the provider a long-press pick sends it to.
-- Cancelling the data question leaves nothing behind: a run option, the chips' state or a scope pick set for the cancelled run no longer rides the next request.
-- Reading habits count a book opened under two ids (a move, a re-import) once, with its reading time summed; the last row read used to win.
-
-## Actions, Menus and Settings
-
-- An action run on one section of a book (Document Summary, Key Arguments, a quiz, the Reading Guide and the others) asks about that section alone: the request no longer also says "summarize the book" and "cover the entire work", which made a small model reply that it could not summarize a whole book from one chapter. A run up to your position gives the model your real position where it said 100%.
-- Saving one of your own actions keeps what you did not change: Quick Edit and the full editor dropped the action's domain, its Quick switch, its temperature and maximum length, its spoiler and surrounding-text settings and its description at a Save, changed or not, and the full editor turned Web "Never" into "Follow global". Duplicate keeps the action's domain, and from Manage Actions its spoiler and surrounding-text settings and requirements too.
-- A built-in action saved with nothing changed stores nothing (it stored the shipped temperature, reasoning and behavior, showed the changed mark and stopped following releases), and a Save from Manage Actions no longer erases a built-in's own domain. A stored change that only repeats the shipped values is dropped at the next Save.
-- A built-in action that leaves your domain out by default (Translate, Fact Check, the library actions and the others, now listed in the wiki) can be given it: Domain: Global in its settings is saved. The pick was dropped at Save, so the action went on leaving the domain out.
-- A custom_actions.lua that fails to load no longer strips its actions from every menu for good: their places are kept until the file loads again, and the first time you use KOAssistant after a start a notice names the error and its line.
-- Deleting one of your own actions removes its gestures with it, and Settings → Gestures lists a gesture whose action no longer exists, with Remove, instead of leaving it out (KOReader's gesture manager showed it as Unknown item).
-- Removing a default such as News Update from the gesture menu now sticks; it came back whenever the gesture list was read.
-- The highlight menu shows up to 30 KOAssistant actions (15 before); members past the cap were silently left out while the ordering manager listed them as shown.
-- The X-Ray popup and the other result popups (View, Update, Regenerate) end with **Close**, not Cancel: closing the popup cancels nothing, and a build that is running goes on.
-- On a device with keys, Back closes the scope and source popup and the X-Ray creation form, as it closes other dialogs.
-- Cancelling a section picker (Focus on a section, Start from a section, a range, Generate Section X-Ray) or its name input returns to the popup that opened it instead of leaving you on the page.
-- Closing the reasoning model list, or cancelling the Quick Answer preset's model pickers (a tier, a provider, a model), returns to the screen that opened them instead of leaving you on the page.
-- The chat input's Domain chip opens the same Domain & Research screen as Book Settings, with its Follow group row: a book that followed its group's domain stopped following as soon as the chip's own list was tapped.
-- Domain & Research: a book whose Research mode is set to Off shows Off, not "Not set", when the global setting is on.
-- Editing a custom domain or behavior and picking "Use as Template" fills the editor with the template; it kept the entry's own text.
-- A deleted custom domain or behavior's id is never given to a new one: a book or action set to the deleted entry used to follow the new one silently.
-- Restore defaults on custom behaviors and Fresh Start no longer let a new behavior or domain take the id of a deleted one.
-- A custom action's hallucination reminder no longer tells the model to search the web when a run option or the Quick preset turned web search off for that request.
-- The reminder against made-up facts now follows a run option's web pick and the Quick preset; the earlier fix read those values after the request had used them up.
-- Show Debug names the behavior and the domain the request carried: it named your settings, so an action that leaves the domain out (Translate, Grammar) or a book with its own domain still read as your global domain. It also says when the book's Background note went along.
-- The Setup Wizard's icons step says what the emoji font is for when the icons are off, which is how they start; it told a new reader that the icons "show as empty boxes".
-- Setup Wizard, Connection: cancelling the key entry (Cancel, an empty Save, the Back key) returns to the provider list instead of leaving the wizard.
-- Settings → Setup Wizard → Icons: after "Install" and "Restart now", the next start shows the glyph test alone instead of running the whole wizard chain.
-- KOReader's Irish, Indonesian and Slovenian UI languages are detected as the response language at first start; they fell back to English.
-- The notice about a configuration.lua that failed to load is shown once per session, not at every switch between the file browser and a book.
-- The Translate button on the release notes popup uses your current provider instead of the one seeded at first start.
-
-## Chats, Attachments and Book Tools
-
-- A reply no longer sends the chat's first question twice: every reply carried it inside the chat's opening message and once more as a message of its own, which cost its length again each time and which a model could remark on.
-- A provider's empty "reasoning" or "content" field (a JSON null) no longer corrupts the saved chats file; chats saved after such an answer load again.
-- Asking for an answer in another language works ("answer in Arabic", written in your own language): the language instruction allowed a switch only when your message itself was written in another of your languages, so a model that followed it stayed in your primary language.
-- After continuing a chat from Chat History, a saved result's window (a Summary, a Recap, an X-Ray's Full View) no longer acts on the continued chat's book: Add to Notebook wrote into that book's notebook and a held word was looked up in that book's X-Ray. Such a window always uses its own book, so Add to Notebook is offered there for it.
-- Analyze Notes opened for another book (a Book Hub beside the open book): View, Delete, Regenerate and "Redo complete" act on that book, not on the open one.
-- "Generate Analyze Notes (complete)" from a closed book's dialog (the file browser, a hub beside an open book) analyzes to 100%; it ran to the position with the spoiler framing.
-- X-Ray, Recap and the other book-level runs started from Quick Actions right after a library chat no longer run as a library request (their answer was not saved) and no longer inherit that chat's Spoiler chip.
-- A part of the book past your position that you confirmed for one message (the Scope chip) no longer switches the spoiler reminder off for the first message of the next chat.
-- An action run from the file browser's long-press menu (Book info and the others), and Regenerate on a closed book's result, no longer take the last chat's Spoiler chip: a protected book could run unprotected.
-- A chat about an artifact started with a run option (another model, No reasoning) keeps it past the data question; the request after the question ran on the main model.
-- Library chats can be tagged; they answered "Cannot tag: no document context".
-- Compare with KOAssistant on several selected books runs on the file browser in front of you; it was bound to the first plugin instance of the session.
-- Attachments staged in a chat's input dialog are dropped, with a notice, when you run an action that takes none (one that saves a result, or a dictionary or translate action), instead of riding the first reply of its result's chat.
-- Attaching a file that is not UTF-8 text (Latin-1, UTF-16) is refused with a notice instead of reaching the model as mojibake; a UTF-8 byte order mark is dropped.
-- Braces inside a selection, typed text or the book's text stay as written: a "{title}" or "{highlights}" inside the text was treated as a placeholder and replaced.
-- A scanned PDF (page images without a text layer) counts as having no text: an action asks "No text could be extracted" before it sends, instead of sending empty pages that passed for the book's text.
-- Deleting a chat of a book that was moved or renamed updates the chat index under the book's current path; it wrote a stale entry under the old path and left the count wrong.
-- Book tools: the note after a lookup that found nothing says "search the web" for the model the request goes to, the provider's default included; it read the model as unset.
-- Book tools and the X-Ray's table of contents outline see a book's chapters even when KOReader has not built the table of contents yet (it builds it on first use); such a book read as having none.
-
-## Notebooks, Backups and Updates
-
-- Changing the notebook save location no longer removes the old notebook before the new copy is proven written; a failed copy (a full card) keeps the old file and counts as failed, and any notebook write that fails now says so.
-- A backup fails with its reason when a file cannot be copied or written whole (a nearly full card) instead of reporting success with a file missing, and a restore that cannot make a complete restore point stops before it changes anything: a failed restore could say "rolled back" while chats or groups made since the backup were gone.
-- A restore in Merge mode keeps what you made after the backup: book groups, general and library pinned answers and the custom domains, behaviors and providers created in the app are joined with the backup's (they were replaced by the backup's lists, so newer ones were gone), and no restore, in either mode, makes a new domain, behavior or group take the id of one it removed.
-- A restore whose file copy fails (a full card) now fails as a whole, with the reason, and rolls back to the restore point; it reported success with files missing.
-- After a restore, book groups and the menu placements of custom actions are no longer overwritten by what was in memory before it (they were, at the next change before a restart).
-- A restored backup takes effect in this session: the next setting change no longer writes the pre-restore settings back over it.
-- The warnings at the end of a restore (the keys you had are kept, a backup made by another plugin version, a skipped action) are translated like the rest of the screen.
-- A failed automatic update check (Wi-Fi on, but GitHub unreachable) is no longer tried again each time you open or close a book: automatic attempts are at least 30 minutes apart, and a check that succeeded still holds for 24 hours.
+And many smaller fixes.
 
 ## How You Can Help
 
-- **Device reports.**
+- **Bug reports, device reports and feature requests**: [open an issue](https://github.com/zeeyado/koassistant.koplugin/issues) and say which device you use.
 - **Translations**: review passes on [Weblate](https://hosted.weblate.org/engage/koassistant/).
-- **Bug reports and feature requests.**
+
+Every feature is described in the [wiki](https://github.com/zeeyado/koassistant.koplugin/wiki).
 
 # v0.24.1 · 2026-10-20
 

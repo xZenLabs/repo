@@ -1,3 +1,24 @@
+# v2.19.2 · 2026-11-21
+
+狗狗 is gǒugōu again (#64)
+- 2.19.1 changed 狗狗 to gǒugou on a single Zhihu note. It now reads gǒugōu again, as in
+  CC-CEDICT, and the lookup script won't approve it again.
+
+# v2.19.1 · 2026-11-21
+
+Neutral tones checked against Baidu Hanyu, and ü in cross-references (#63, #64)
+- 外面 wàimian, 进去 jìnqu, 摇晃 yáohuang, 风水 fēngshui and 狗狗 gǒugou now take the neutral
+  tone, where CC-CEDICT gave a full tone. The first four have the 现代汉语词典 dot in Baidu Hanyu,
+  and 狗狗 has a written 轻声 note. Words that have the dot in only one of their senses keep
+  CC-CEDICT's reading: 大大 "greatly" / dà·da "uncle", 过年, 憋屈, 隔断 and 小月. No character's
+  default reading changes.
+- The other 224 main-reading candidates were looked up too, through Baidu Hanyu's JSON or,
+  after Baidu's captcha, Claude Haiku with web search. They had no evidence or a full tone,
+  so they keep CC-CEDICT's reading. The evidence is in docs/neutral-tone-evidence.tsv.
+- Some CC-CEDICT references spell ü as "u : ". They now show it correctly: "see 吕梁市
+  Lǚliáng Shì" instead of "Lu:'liáng Shì", and the same in 律所, 功放, 女孩儿 and about 45
+  other entries.
+
 # v2.19.0 · 2026-11-21
 
 Tap a cross-reference to open its word (#62)
@@ -34,28 +55,3 @@ Neutral tones: the 普通话水平测试 must-read list (#60)
 - A character's own default reading is unchanged (笼 stays *lóng*).
 - `docs/neutral-tone-candidates.tsv` and `docs/neutral-tone-evidence.tsv` list every candidate
   and the evidence; the scripts that build them are in `tools/`.
-
-# v2.17.1 · 2026-11-21
-
-Neutral tones CC-CEDICT writes as full tones (#60)
-- 喷嚏 and 打喷嚏 now read *pēnti* / *dǎpēnti*, as they are said in Standard Mandarin: the
-  pinyin drawn above 嚏 is *ti* (it was *tì*), and the popup's word line reads *pēnti*. 嚏's own
-  entry stays *tì*.
-- New hand-edited list, `data/neutral_tone_overrides.tsv`, for words CC-CEDICT gives full tones
-  that are usually read with a neutral syllable. The build puts the neutral tone into CC-CEDICT's
-  line, so the existing neutral-tone rule draws it. The README says how to add a word. More words
-  will follow.
-
-# v2.17.0 · 2026-11-21
-
-
-Popup labels: the source label on its own row, CC-CEDICT always labelled (#59)
-- The small grey lines above an entry are now two rows: first the tapped character's 字频 rank
-  (and **spoken here**, when shown), then the entry's source label on a row of its own. A label
-  and 字频 no longer share a line (it read `文言 · 字频 16`, as if 字频 belonged to the
-  dictionary).
-- CC-CEDICT entries are now always labelled **CEDICT**, with Classical mode on or off, so the
-  文言 entry and CC-CEDICT's are easy to tell apart.
-- **Source labels** now offers **All entries** (default) and **None**; "Other dictionaries only"
-  is gone, and a saved "other dictionaries only" setting reads as All entries.
-- Menu help, README text and screenshots updated.
