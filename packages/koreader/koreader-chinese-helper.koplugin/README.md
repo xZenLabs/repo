@@ -85,9 +85,9 @@ default, because the AI's answer differs from run to run.
   everywhere, in every book ([Known and remind-me readings](#known-and-remind-me-readings)).
 - **The sentence on one line** at the top of every popup, the character marked, and the
   character underlined on the page while the popup is open ([The popup](#the-popup)).
-- **Classical Chinese**: the popup's 文言 Mode button puts a Classical dictionary's entry first,
-  its senses in order of how common they are in classical texts. On 128 words from classical
-  texts, its first two senses had the needed one 77% of the time, and the whole popup 95%
+- **Classical Chinese**: the popup's 文言 Mode button puts the Classical dictionary's entries first,
+  for the character and the words around it: every classical sense, commonest first, nothing
+  modern. On 128 words from classical texts the entry had the needed sense 95% of the time
   ([Classical mode](#classical-mode)).
 - **Chinese definitions you can read**: tap any character in MOE's or an idiom dictionary's
   text and it opens its own popup on top
@@ -115,7 +115,7 @@ menu's **Order** changes it). The MOE dictionary can also show its entry for eve
 | Xinhua idioms | 新华 | 23,500\* | [optional](#optional-dictionaries) | chengyu and set phrases, with classical sources (in Chinese) |
 | Wikipedia titles | WP | 39,000 | bundled | technology, engineering, military and history terms, and proper names (English article title) |
 | Moegirlpedia slang | Moegirl | 350 | [optional](#optional-dictionaries) | internet slang (in Chinese) |
-| Classical dictionary | 文言 | 21,191 characters | bundled, [Classical mode](#classical-mode) only | the senses of single characters in classical Chinese, commonest first, condensed from Chinese Notes, Wiktionary, Unihan and CC-CEDICT |
+| Classical dictionary | 文言 | 20,620 characters, 26,093 words | bundled, [Classical mode](#classical-mode) only | every classical sense of characters and words, commonest first, no modern-only senses, from Chinese Notes, Wiktionary, Unihan and CC-CEDICT |
 
 An entry CC-CEDICT gives only as a cross-reference (贤惠: "variant of 賢慧|贤慧 xiánhuì", 河北:
 "see 河北省") also shows the definitions of the word it points to, on a line led by that word.
@@ -137,7 +137,7 @@ Status: **2.15.0**, tested on a Boox Go 7 (Android, 300 dpi) with KOReader v2026
 1. Download `chinesehelper.koplugin.zip` from the
    [latest release](https://github.com/scartoon/koreader-chinese-helper/releases/latest) and unzip
    it. You get a `chinesehelper.koplugin` folder, which includes the database
-   (`data/chinesehelper.sqlite`, 46.4 MB).
+   (`data/chinesehelper.sqlite`, 52.5 MB).
 2. Copy that folder into KOReader's `plugins` folder:
    - **Android** (Boox and others): `/sdcard/koreader/plugins/`, which appears as
      `koreader/plugins` in the device's internal storage over USB. With adb:
@@ -538,19 +538,20 @@ classical passages modern books quote. Turn it on with the **文言 Mode** butto
 popup, left of the reading-mark button, or with **Classical mode** in the Dictionaries menu: both
 switch the same setting. It is off until you turn it on.
 
-**What it adds.** With the mode on, every popup shows one extra entry for the tapped character,
-labelled 文言, from the bundled **Classical dictionary**. It comes first in the popup, above the
-character's CC-CEDICT entry, and is shown in full: the senses, in English, a reader of classical
-texts needs most, the commonest first. That includes the senses classical and modern Chinese
-share when they are among the commonest (而 *and*, 知 *to know*), and the ones modern Chinese
-mostly lost: 是 *this*, 之 *him; her; it; them*, 说 (說) *to be delighted*. The 500 commonest
-characters get up to eight senses, the next 2,500 up to six, the rest up to five.
+**What it adds.** With the mode on, every popup starts with the 文言 entries from the bundled
+**Classical dictionary**: first the tapped character's, then those of the words around it that
+have one (賤人 *a lowly person*, 北面 *to face north as a subject*). Each entry is the complete set
+of classical senses the sources give, in English, numbered, the commonest in classical texts
+first, and always shown in full. It includes the senses classical and modern Chinese share (而
+*and*, 知 *to know*) and the ones modern Chinese lost (是 *this*, 之 *him; her; it; them*, 说 (說)
+*to be delighted*), and leaves out senses that are modern only (的 as a structural particle, 就
+*then*). For the commonest function characters the entry is long (之, 為, 將 run to 15–30 senses),
+and you scroll to reach the rest of the popup.
 
-**What it doesn't change.** It only adds that one entry, and only for the tapped single character,
-never for words. Pinyin on the page, the reading the popup picks, the words listed and Translate &
-analyze all stay the same, and every other entry is still there, below it, in the same order. A
-character with no classical senses (吗, say) gets nothing extra: its popup looks the same with the
-mode on or off.
+**What it doesn't change.** Pinyin on the page, the reading the popup picks, the words listed and
+Translate & analyze all stay the same, and every other entry is still there, below the 文言
+entries, in the same order. A character or word with no classical senses (吗, say) gets nothing
+extra: its popup looks the same with the mode on or off.
 
 **On and off.** The button reads **文言 Mode ✓** while the mode is on and **文言 Mode** while it's off.
 The setting is global: it stays on for every popup, in every book and after a restart, until you tap
@@ -560,28 +561,30 @@ button of their own.
 **Where the senses come from.** The Classical dictionary was built once, from the senses open
 dictionaries mark as classical, literary or archaic (Chinese Notes, English Wiktionary, Unihan,
 and CC-CEDICT's labelled senses) together with CC-CEDICT's other senses. An AI model (Claude
-Haiku) then picked and ordered each character's senses for classical texts and condensed them.
-Every sense has to cite the source lines it came from, and the build drops any that cite nothing;
-in checks no sense was found that the sources lacked. It is still machine-condensed, and the
-order is the model's judgement, so if a sense looks odd, check it against CC-CEDICT or MOE. The
-details are below.
+Haiku) merged each headword's senses, ordered them for classical texts and marked the modern-only
+ones; a second model (Claude Sonnet) checked again the senses that came only from CC-CEDICT. Every
+sense has to cite the source lines it came from, and the build drops any that cite nothing; in
+checks no sense was found that the sources lacked. It is still machine-made, and the order and
+the classical/modern line are the models' judgement, so if a sense looks odd, check it against
+CC-CEDICT or MOE. The details are below.
 
 <img src="docs/classical.png" alt="Popup for 之 in 三国演义's 窦武、陈蕃谋诛之: the line 时有宦官曹节等弄权，窦武、陈蕃谋诛之，作事不密，反为所害，中涓自此愈横。 with 之 marked; the title bar, 之 on the left and the buttons 文言 Mode ✓ and Remind me: zhī on the right; first 字频 69, then the label 文言 on a row of its own and the Classical entry, in full: 之, him; her; it; them (object pronoun in non-subject position), genitive or attributive marker (possession or modification), nominalizer or subordinate-clause particle in a subject-predicate construct, this; these; that, to go; to arrive; below it, labelled CEDICT, 之 zhī (possessive particle, literary equivalent of 的 de); him; her; it; then its parts, labelled Wikt: 止 zhǐ foot → meaning, 一 yī the beginning place → meaning">
 
 <details>
 <summary>How the Classical dictionary was built, and how well it does</summary>
 
-The dictionary covers 21,191 characters (and 184 variant forms). It was built
+The dictionary covers 20,620 characters (and 200 variant forms) and 26,093 words. It was built
 once by `tools/build_classical.py` from [Chinese Notes](https://github.com/alexamies/chinesenotes.com)'
 *Literary Chinese* senses, English Wiktionary's classical, literary and archaic senses, Unihan's
 definitions for characters outside the 3,000 most common, and CC-CEDICT's senses (its labelled
-classical ones, and its others as candidates). A character with only modern CC-CEDICT senses gets
-no entry. Claude Haiku ordered each character's senses by how common they are in classical texts,
-kept the commonest (up to eight, six or five, by the character's rank), left out modern-only ones
-and cited the lines each came from; the build drops senses that cite nothing and flags those whose
-words aren't in their sources. The result is CC BY-SA 4.0. On 128 judged words from classical
-texts, the 文言 entry's first two senses had the needed one 77% of the time (57% before this
-ordering), the whole entry 93%, and the whole popup, CC-CEDICT included, 95%
+classical ones, and its others as candidates). A character or word with only modern CC-CEDICT
+senses gets no entry. Claude Haiku merged each headword's senses, ordered them by how common they
+are in classical texts, marked the modern-only ones and cited the lines each came from; the build
+drops senses that cite nothing or are marked modern, and flags those whose words aren't in their
+sources. Claude Sonnet then checked the 9,927 senses of common characters and words that came only
+from CC-CEDICT, and 3,103 of them were left out as modern-only (`data/classical_modern.tsv`). The
+result is CC BY-SA 4.0. On 128 judged words from classical texts, the 文言 entry has the needed
+sense 95% of the time, in its first two senses 73% of the time, and the whole popup 95%
 ([research note](docs/research/classical-dictionary.md)). MOE's classical senses are not in it
 (its licence does not allow it); with the MOE file installed, [MOE Always](#moe-always) shows
 them.
@@ -1017,13 +1020,13 @@ Whatever the licence, the files you build are for your own reading: don't share 
 
 ### Bundled data
 
-Everything the plugin needs is in one SQLite database (46.4 MB): CC-CEDICT, the Wiktionary and Wikipedia fallback dictionaries, the Classical dictionary, character components and the reading tables.
+Everything the plugin needs is in one SQLite database (52.5 MB): CC-CEDICT, the Wiktionary and Wikipedia fallback dictionaries, the Classical dictionary, character components and the reading tables.
 
 <details>
 <summary>What the database holds</summary>
 
 Everything the plugin needs is in one SQLite database,
-`chinesehelper.koplugin/data/chinesehelper.sqlite` (46.4 MB):
+`chinesehelper.koplugin/data/chinesehelper.sqlite` (52.5 MB):
 
 - **CC-CEDICT** (`entries`): 125,397 entries, the popup's dictionary.
 - **Fallback dictionaries** (`fallback`): English **Wiktionary** entries for words CC-CEDICT does
@@ -1032,8 +1035,8 @@ Everything the plugin needs is in one SQLite database,
   lists and some kinds of place, organisation and work (towns, stations, companies, films…;
   others remain: glaciers, museums, TV series). Neither has a row for a headword CC-CEDICT has,
   or for everyday combinations it leaves out on purpose (很多, 这次, 脸上).
-- **The Classical dictionary** (`classical`, `classical_variant`): 21,191 characters' classical
-  senses, commonest first, at most eight each, and 184 variant forms ([Classical mode](#classical-mode)).
+- **The Classical dictionary** (`classical`, `classical_variant`): the classical senses of 20,620
+  characters and 26,093 words, all of them, commonest first, and 200 variant forms ([Classical mode](#classical-mode)).
   Its source is `data/classical.tsv.gz`, condensed once by `tools/build_classical.py`, so a
   database build needs no API key.
 - **Character components** (`components`): 13,362 characters' parts, roles, readings, glosses and

@@ -1,3 +1,21 @@
+# v2.21.0 · 2026-11-22
+
+文言 Mode: complete, purely classical entries, for characters and words (#67)
+- The 文言 entry now lists every classical sense the sources give, numbered, commonest first, and
+  always in full (no more caps of 8, 6 or 5). Senses that exist only in modern Chinese are left
+  out: 的 keeps *target; bull's-eye*, not the structural particle; 就 keeps *to approach*, not
+  *then*; 要 drops *need to*.
+- Words get 文言 entries too: 26,093 words, from Chinese Notes, Wiktionary and CC-CEDICT
+  (賤人 *a lowly person*, 北面 *to face north as a subject*, 所以 *that by which*). In 文言 Mode
+  they follow the tapped character's entry, above everything else.
+- Long entries: the commonest function characters run to 15–30 senses (之, 為, 將), and the popup
+  scrolls to the rest.
+- How it's built: Claude Haiku merged, ordered and marked each headword's senses; Claude Sonnet
+  checked again the senses that came only from CC-CEDICT and left out 3,103 as modern-only. On
+  128 judged words from classical texts, the entry has the needed sense 95% of the time (93%
+  before), in its first two senses 73% (77%), and the whole popup 95%.
+- The database grows by 6.1 MB, to 52.5 MB.
+
 # v2.20.0 · 2026-11-22
 
 文言 Mode: the Classical dictionary rebuilt for the top of the popup (#65)
@@ -48,15 +66,3 @@ Neutral tones checked against Baidu Hanyu, and ü in cross-references (#63, #64)
 - Some CC-CEDICT references spell ü as "u : ". They now show it correctly: "see 吕梁市
   Lǚliáng Shì" instead of "Lu:'liáng Shì", and the same in 律所, 功放, 女孩儿 and about 45
   other entries.
-
-# v2.19.0 · 2026-11-21
-
-Tap a cross-reference to open its word (#62)
-- In CC-CEDICT's text, a word given with its pinyin can now be tapped: the 贤慧 in "variant of
-  賢慧|贤慧 xiánhuì", 东西 in "see 东西 dōngxi", 家伙 in "used in 傢伙|家伙 jiāhuo", 个 in "CL: 個|个
-  gè", 惠顾 in "(as in 惠顧|惠顾 huìgù)", and the word leading a variant's definition line ("贤慧:
-  ..."). One tap, on any of its characters, either form of a traditional|simplified pair, or its
-  pinyin, opens a popup for the whole word, titled with it, with its entry first and the reading
-  the reference gives first.
-- Taps anywhere else in CC-CEDICT's text still do nothing, and the Chinese dictionaries' text
-  works as before.
