@@ -11,6 +11,16 @@ Forget what I said. Why should anyone want to do this? But after all it is possi
 
 # Announcements
 
+## INFO: AppDock 10 Requirements
+*AppDock 10 will be released on 15th December, 2026.*
+#### IMPORTANT
+**AppDock 10 supports only Kobo based eReaders on Firmware <5.x. 5.x support will be added in AppDock 10.1.x**
+#### Changes
+* AppDock will no longer be a plugin for KOReader; it'll come up with its own addon, "DockLauncher". NickelMenu or KFMon is required to use it.
+* The Updater (DockUpdate) will automatically add AppDock to NickelMenu/KFMon (after explicit confirmation of the user)
+* Because of AppDock's new Launcher, AppDock gained speed and control, which means at first that processes like WiFi can run in background, Bluetooth controls are fixed and it can control the CPU so that some actions are done faster while others can explicit use the powersave mode of the CPU.
+#### AppDock Legacy
+AppDock 9.x.x, from now on "AppDock Legacy", **will recieve patches and updates until 31st December 2026**. From there on, AppDock Legacy won't be maintained.
 
 ## INTRODUCING: Health and reading
 *Scedule brightness and warmth plans, manage break reminders and look at your reading statistics.*
