@@ -53,9 +53,11 @@ At the top, the chart and its legend: books, KOReader's data, other files and fr
 
 Under it, your files, largest first. Each row has a tile for its type, a colour for its kind, how far through a book you are, its size, and a checkbox.
 
+At the top of the library, two badges point at what frees the most space: **Finished · 2.1 GB** (the books you have finished, and how much they take) and **3 over 100 MB** (the files of 100 MB or more). Tap one for that list from the whole library, biggest first, ready to select and delete. A badge only appears when it has something in it.
+
 - **Open things.** Tap a folder to go in; the first row in a folder is `../`, to go back up. Tap a file, or press and hold any row, for its card: type, size, where it is, when it changed, when you last opened it and your progress, with **Open** and **Book info**. For the book you have open there is **Close book**, so you can delete it.
 - **Search** (the magnifier) looks by name through the folder you are in and everything under it. Once you have searched, the button shows your search and tapping it clears it.
-- **Filter** by file type, or by **Show**: every book in the library, the books you have finished, or the ones never opened, wherever they are. What is narrowing the list appears as chips with a ✕, each undoing just that. When nothing matches, you are told why and given a button that undoes it.
+- **Filter** by file type, or by **Show**: every book in the library, the books you have finished, the ones never opened, or the large files (over 100 MB), wherever they are. What is narrowing the list appears as chips with a ✕, each undoing just that. When nothing matches, you are told why and given a button that undoes it.
 - **Sort** by size, name, date or last opened; the arrow beside it flips the direction.
 
 #### Deleting
@@ -157,9 +159,9 @@ Anything else is untested. If you try it on another device, please [tell us how 
 | --- | --- | --- |
 | <img src="assets/formats.png" width="260"> | <img src="assets/menu.png" width="260"> | <img src="assets/locked-rows.png" width="260"> |
 
-| Why it is locked | Chart hidden | |
+| Why it is locked | Chart hidden | Large files |
 | --- | --- | --- |
-| <img src="assets/locked-card.png" width="260"> | <img src="assets/hidden.png" width="260"> | |
+| <img src="assets/locked-card.png" width="260"> | <img src="assets/hidden.png" width="260"> | <img src="assets/large.png" width="260"> |
 
 | Sets of copies | Compare and choose | Confirm |
 | --- | --- | --- |

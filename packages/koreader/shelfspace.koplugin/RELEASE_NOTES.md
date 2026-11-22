@@ -1,3 +1,19 @@
+# v0.15.0 · 2026-11-22
+
+## [0.15.0](https://github.com/ghepting/shelfspace.koplugin/compare/v0.14.0...v0.15.0) (2026-11-22)
+
+
+### Features
+
+* Finished and large-file badges at the top of the Library ([#105](https://github.com/ghepting/shelfspace.koplugin/issues/105)) ([12bef9a](https://github.com/ghepting/shelfspace.koplugin/commit/12bef9a659af764f64a0f6acc10bf0f8fe369f2c))
+* the pager is KOReader's own: its chevron buttons, and a tap on the page number to go to a page ([#103](https://github.com/ghepting/shelfspace.koplugin/issues/103)) ([5dad53a](https://github.com/ghepting/shelfspace.koplugin/commit/5dad53a0cdb2bd4a35b549ec7c36412fc2765439))
+
+
+### Bug Fixes
+
+* centre a row's name when nothing is written under it ([#106](https://github.com/ghepting/shelfspace.koplugin/issues/106)) ([280c3d0](https://github.com/ghepting/shelfspace.koplugin/commit/280c3d0ab6faf6875e616a4ade6704c41eaef670))
+* the full refresh gesture refreshes the screen while ShelfSpace is open ([#102](https://github.com/ghepting/shelfspace.koplugin/issues/102)) ([230cdf5](https://github.com/ghepting/shelfspace.koplugin/commit/230cdf51387cd3734483c1cad2fc3375006a0871))
+
 # v0.14.0 · 2026-11-14
 
 ## [0.14.0](https://github.com/ghepting/shelfspace.koplugin/compare/v0.13.0...v0.14.0) (2026-11-14)
@@ -34,12 +50,3 @@
 ### Features
 
 * redesign the Duplicates compare view as compact rows with a green keep and a finished screen ([#92](https://github.com/ghepting/shelfspace.koplugin/issues/92)) ([2f89e7c](https://github.com/ghepting/shelfspace.koplugin/commit/2f89e7c5e9ac96f057fa9579c022ff86bd20fd7a))
-
-# v0.11.1 · 2026-11-02
-
-## [0.11.1](https://github.com/ghepting/shelfspace.koplugin/compare/v0.11.0...v0.11.1) (2026-11-02)
-
-
-### Bug Fixes
-
-* keep the item count at the right of the list, and make the chart's legend plain text with the info icon right after Other ([#90](https://github.com/ghepting/shelfspace.koplugin/issues/90)) ([6327870](https://github.com/ghepting/shelfspace.koplugin/commit/6327870d4d7515d51f4fbcca386472a86b7db6dd))

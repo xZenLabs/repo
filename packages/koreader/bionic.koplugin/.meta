@@ -1,0 +1,23 @@
+# Bionic plugin for KOReader
+# https://github.com/wj-fr/bionic.koplugin
+# zenpm:auto-scraped
+id=bionic
+name=Bionic
+version=1.0.3
+description=为Kindle 上的 KOReader 和月读打造的 EPUB 仿生阅读插件，支持中英文。
+author=wj-fr
+category=media
+platforms=koreader
+dependencies=
+source=https://github.com/wj-fr/bionic.koplugin
+stars=5
+updated_at=2026-11-22T14:00:58Z
+published_at=2026-11-20T08:50:43Z
+readme_url=packages/koreader/bionic.koplugin/README.md
+readme_hash=bb0f9a2467b96cf06ed1e1d973891a178aa7f59f
+release_notes_url=packages/koreader/bionic.koplugin/RELEASE_NOTES.md
+release_notes_hash=bfd4a3eea395d3c3d8bf6211f8faa3075e0a12af00d7b6ee7ae17cd8e461f940
+releases=[{"tag_name":"v1.0.3","assets":[{"name":"bionic.koplugin-v1.0.3.zip","url":"https://github.com/wj-fr/bionic.koplugin/releases/download/v1.0.3/bionic.koplugin-v1.0.3.zip","size":63177,"digest":"sha256:0273c6c72e37f9e14458802a8944b5bf9b827253eda14bfb8ef81f6af336c12a"}],"name":"v1.0.3"},{"tag_name":"v1.0.2","assets":[{"name":"bionic.koplugin-v1.0.2.zip","url":"https://github.com/wj-fr/bionic.koplugin/releases/download/v1.0.2/bionic.koplugin-v1.0.2.zip","size":63172,"digest":"sha256:c5001567d994f24b3b98b416949d93e8a496c80a3bc3d76b9cd6a455ffb5ccf7"}],"name":"v1.0.2"},{"tag_name":"v1.0.1","assets":[{"name":"bionic.koplugin-v1.0.1.zip","url":"https://github.com/wj-fr/bionic.koplugin/releases/download/v1.0.1/bionic.koplugin-v1.0.1.zip","size":44696,"digest":"sha256:2424b9ff7b742136091257280dd6fe3a7508c099c6be901980c23359d61f6d4a"}],"name":"v1.0.1"},{"tag_name":"v1.0.0","assets":[{"name":"bionic.koplugin-v1.0.0.zip","url":"https://github.com/wj-fr/bionic.koplugin/releases/download/v1.0.0/bionic.koplugin-v1.0.0.zip","size":42415,"digest":"sha256:f3c2963635b1986083156140d9104cd888d609bb0f4e02efe12b7c9f5f4a5d1b"}],"name":"v1.0.0"}]
+source_type=release
+source_asset=bionic.koplugin-v1.0.3.zip
+size=63177

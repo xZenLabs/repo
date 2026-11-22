@@ -12,7 +12,8 @@ What changed in this version is listed in
 
 This plugin is maintained in my spare time, and Z-library changes often enough to
 keep it that way. If you like it and want it to keep working:
-[buy me a coffee](https://ko-fi.com/zlibraryko) ☕
+buy me a coffee on [Ko-fi](https://ko-fi.com/zlibraryko) or
+[Buy Me a Coffee](https://buymeacoffee.com/zlibraryko) ☕
 
 # v1.0.60-2ee74fb918f4ce6dbb38ab5144efdd4ac5482b51 · 2026-11-22
 
@@ -28,7 +29,8 @@ What changed in this version is listed in
 
 This plugin is maintained in my spare time, and Z-library changes often enough to
 keep it that way. If you like it and want it to keep working:
-[buy me a coffee](https://ko-fi.com/zlibraryko) ☕
+buy me a coffee on [Ko-fi](https://ko-fi.com/zlibraryko) or
+[Buy Me a Coffee](https://buymeacoffee.com/zlibraryko) ☕
 
 # v1.0.59-21b0ebcb2662f91c870ba6451d859f2906dcd264 · 2026-11-14
 
