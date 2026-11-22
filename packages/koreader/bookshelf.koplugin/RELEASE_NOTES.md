@@ -1,3 +1,25 @@
+# v6.6.0 · 2026-11-22
+
+## New
+
+- **Vocab Word** module: a word from your Vocabulary builder list, with its dictionary definition and the sentence you looked it up in. Tap the word for KOReader's dictionary popup, or mark it "I know it" to drop it. If Vocabulary builder is off or has no words yet, the card says how to fill it (#263, thanks @xerraires)
+- Extract page counts now counts unopened books at your Characters per page default, so their count no longer changes the first time you open them
+- The see-through parts of a PNG wallpaper now show Color behind wallpaper instead of black (#612)
+- Faded books stay readable over a busy wallpaper, and pick up the blur when Blur wallpaper behind panels is on
+- New Settings > Advanced > Performance tweaks > **Compiled code cache** switch. Bookshelf turns it off by itself if it fails to start twice in a short time
+
+## Fixes
+
+- A start that froze right after the shelf appeared, until the cache folder was emptied by hand, now clears its own start-up caches (#621)
+- Series boxes on a grouped spine shelf stay inside their author or folder group (#620)
+- Countdown counts dates after 2038 correctly on Kobo and older Kindles (#616)
+- A Kindle home folder set to /mnt or / no longer shows every book twice (#619)
+- Opening the previous book from the file browser's menu or gesture while the shelf is open returns to the shelf on close
+- Android: Restart after an update no longer shows KOReader's crash screen
+- Hardcover: the edition list no longer crashes KOReader when the hardcoverapp plugin is installed (#624, thanks @will-darwin)
+- Faster first load of the shelf for anyone who has ever used KOReader's hash sidecar location
+- Translations: "Read now" and the single Series button now translate separately from the "Read" date and the Series group (#618, thanks @johannesbehr)
+
 # v6.5.3 · 2026-11-19
 
 ## Fixes
@@ -59,15 +81,3 @@
 
 - Performance improvement for switching between shelves
 - Performance improvement for shelves of shelves
-
-# v6.4.2 · 2026-11-09
-
-- Comics from OPDS catalogs that serve CBZ files as ZIP now download as CBZ and show on the shelf (#592)
-- Coloured text keeps its colour over a wallpaper or on a Dark shelf, on colour screens
-- In night mode, the colour picker's swatches show their own colours, and a picked colour is saved as the one shown
-- On Android in night mode, text and swatch colours are no longer inverted
-- The status line shows the current time straight after waking (#596)
-- Performance improvement for the first page turn after waking or restarting
-- Performance improvement for Spines shelves with covers facing out
-- Performance improvement for page turns through covers not seen before
-- Performance improvement for expanding and collapsing the shelf
