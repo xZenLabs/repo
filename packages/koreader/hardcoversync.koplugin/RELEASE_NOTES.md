@@ -1,19 +1,10 @@
 # v2.5.2 · 2026-11-22
 
-## ✨ New
-- Add regression coverage for unrated rating dialogs (#321)
-
-## 🎨 Improved
-- Move Reviews above About on book details [skip emu] (#332)
-
 ## 🐛 Fixes
 - Fix conflict count wording for multiple questions on one book (#348)
 - Fix stacked panel after Start reading (#349)
 - Fix snackbar X opening the Stats tab (#347)
 - Fix offline library removal from both entry points (#346)
-
-## Other
-- Strengthen Start reading panel regression assertions (#351)
 
 **Full changelog**: https://github.com/CaptainCamin/HardcoverSync.koplugin/compare/v2.5.1...v2.5.2
 
