@@ -3,7 +3,7 @@
 # zenpm:auto-scraped
 id=minimenu
 name=Minimenu
-version=1.2.0
+version=1.3.0
 description=Create popup menus you can open from a tap, gesture, or another plugin.
 author=vishnumad
 category=utility
@@ -11,13 +11,13 @@ platforms=koreader
 dependencies=
 source=https://github.com/vishnumad/minimenu.koplugin
 stars=10
-updated_at=2026-11-22T22:00:58Z
-published_at=2026-11-07T19:57:43Z
+updated_at=2026-11-22T23:01:05Z
+published_at=2026-11-22T22:48:48Z
 readme_url=packages/koreader/minimenu.koplugin/README.md
 readme_hash=d4359d1cdedcecb5e4b9c875f2a5633ab2526dee
 release_notes_url=packages/koreader/minimenu.koplugin/RELEASE_NOTES.md
-release_notes_hash=e7041892302945160be7102590eebb4bd9875512f52dd2269c751f3994d7f9af
-releases=[{"tag_name":"v1.2.0","assets":[{"name":"minimenu.koplugin.zip","url":"https://github.com/vishnumad/minimenu.koplugin/releases/download/v1.2.0/minimenu.koplugin.zip","size":107318,"digest":"sha256:e0e80e3080adbd1459aa2962713f87a5d01aa0a8cc083ee26ab03b9e974ba940"}],"name":"v1.2.0"},{"tag_name":"v1.1.0","assets":[{"name":"minimenu.koplugin.zip","url":"https://github.com/vishnumad/minimenu.koplugin/releases/download/v1.1.0/minimenu.koplugin.zip","size":104511,"digest":"sha256:6fa7ac9d7e8b60cedba25f789fef36a76fd8a9ec8068ab0ca910c7becf4f498b"}],"name":"v1.1.0"},{"tag_name":"v1.0.1","assets":[{"name":"minimenu.koplugin.zip","url":"https://github.com/vishnumad/minimenu.koplugin/releases/download/v1.0.1/minimenu.koplugin.zip","size":97379,"digest":"sha256:63ef131cd4fa792adbef743b3e9fb33ec7a492fcdbdc2b515a11820d05d48ecd"}],"name":"v1.0.1"},{"tag_name":"v1.0.0","assets":[{"name":"minimenu.koplugin.zip","url":"https://github.com/vishnumad/minimenu.koplugin/releases/download/v1.0.0/minimenu.koplugin.zip","size":95045,"digest":"sha256:0b82fe5458a3c3cb2f585ea325e44aa60e13de0b5a2962b34470e09605afd342"}],"name":"v1.0.0"}]
+release_notes_hash=c3887c2ae960600d7ce8e11bcab0a553de77a143765ddbd549bece3a654227f3
+releases=[{"tag_name":"v1.3.0","assets":[{"name":"minimenu.koplugin.zip","url":"https://github.com/vishnumad/minimenu.koplugin/releases/download/v1.3.0/minimenu.koplugin.zip","size":113935,"digest":"sha256:724e224800384b7fb18e11309bea1f0e9ebaade416bd3075cbfadcbaadbb6024"}],"name":"v1.3.0"},{"tag_name":"v1.2.0","assets":[{"name":"minimenu.koplugin.zip","url":"https://github.com/vishnumad/minimenu.koplugin/releases/download/v1.2.0/minimenu.koplugin.zip","size":107318,"digest":"sha256:e0e80e3080adbd1459aa2962713f87a5d01aa0a8cc083ee26ab03b9e974ba940"}],"name":"v1.2.0"},{"tag_name":"v1.1.0","assets":[{"name":"minimenu.koplugin.zip","url":"https://github.com/vishnumad/minimenu.koplugin/releases/download/v1.1.0/minimenu.koplugin.zip","size":104511,"digest":"sha256:6fa7ac9d7e8b60cedba25f789fef36a76fd8a9ec8068ab0ca910c7becf4f498b"}],"name":"v1.1.0"},{"tag_name":"v1.0.1","assets":[{"name":"minimenu.koplugin.zip","url":"https://github.com/vishnumad/minimenu.koplugin/releases/download/v1.0.1/minimenu.koplugin.zip","size":97379,"digest":"sha256:63ef131cd4fa792adbef743b3e9fb33ec7a492fcdbdc2b515a11820d05d48ecd"}],"name":"v1.0.1"},{"tag_name":"v1.0.0","assets":[{"name":"minimenu.koplugin.zip","url":"https://github.com/vishnumad/minimenu.koplugin/releases/download/v1.0.0/minimenu.koplugin.zip","size":95045,"digest":"sha256:0b82fe5458a3c3cb2f585ea325e44aa60e13de0b5a2962b34470e09605afd342"}],"name":"v1.0.0"}]
 source_type=release
 source_asset=minimenu.koplugin.zip
-size=107318
+size=113935
