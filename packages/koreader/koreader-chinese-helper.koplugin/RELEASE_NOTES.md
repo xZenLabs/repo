@@ -1,3 +1,17 @@
+# v2.19.3 · 2026-11-22
+
+Neutral tones: the remaining Wiktionary candidates
+- 25 more words take the neutral tone where CC-CEDICT gave a full tone: 这里 zhèli, 因为 yīnwei,
+  意识 yìshi, 下面 xiàmian, 前面 qiánmian, 下去 xiàqu, 气氛 qìfen, 住处 zhùchu, 神仙 shénxian,
+  牢骚 láosao, 荒唐 huāngtang, 滑稽 huáji, 孝顺 xiàoshun, 随和 suíhe, 黄瓜 huánggua, 斧头 fǔtou,
+  干粮 gānliang, 围裙 wéiqun, 翻腾 fānteng, 饭量 fànliang and 阵势 zhènshi; also 把头 bǎtou,
+  套近乎 tàojìnhu, 严紧 yánjin and 坷垃 kēla. Each has the 现代汉语词典 dot, or a 轻声 note, on a
+  dictionary page or a page quoting 现汉. 下麵 "to boil noodles" keeps xiàmiàn.
+- These are the 540 candidates whose neutral reading is not Wiktionary's main one, looked up with
+  Claude Haiku and web search ($11.46). Not approved: 来往, 编辑, 枪手 and 烧纸, whose neutral
+  reading belongs to another sense, and 父亲, 道行, 做学问 and 出落, whose only evidence was a
+  Q&A site, Baidu Baike or a blog. No character's default reading changes.
+
 # v2.19.2 · 2026-11-21
 
 狗狗 is gǒugōu again (#64)
@@ -43,15 +57,3 @@ Cross-reference-only CC-CEDICT entries show their target's definitions (#61)
 - "used in", "abbr. for" and "see also" entries are unchanged, as are entries whose references
   lead to several different words (北海: see 北海公园, see 北海市). The build prints the counts.
 - The database grows by 1.5 MB (44.6 MB).
-
-# v2.17.2 · 2026-11-21
-
-Neutral tones: the 普通话水平测试 must-read list (#60)
-- 42 more words now read with their standard neutral syllable, on the page and in the popup's
-  word line: 37 from the 普通话水平测试 must-read neutral-tone list where CC-CEDICT had a full
-  tone (灯笼 *dēnglong*, 队伍 *duìwu*, 打算 *dǎsuan*, 老婆 *lǎopo*, 疟疾 *nüèji*, ...), and 5 rare-
-  character words with dictionary evidence found by web lookup (喜鹊 *xǐque*, 鹌鹑 *ānchun*, 荸荠
-  *bíqi*, 蹊跷 *qīqiao*, 腌臜 *āza*). The other 503 words on the list already read correctly.
-- A character's own default reading is unchanged (笼 stays *lóng*).
-- `docs/neutral-tone-candidates.tsv` and `docs/neutral-tone-evidence.tsv` list every candidate
-  and the evidence; the scripts that build them are in `tools/`.
