@@ -1,3 +1,18 @@
+# v1.7 · 2026-11-22
+
+New
+
+Progress centre: four tabs (Progression, Quests, Ranking, Achievements). Guided tour on first opening, replayable with the "i" button. Unique public username, required to appear in the ranking. Profile picture chosen from your e-reader or online. Podium and recent reads.
+Recent reads: your profile shows covers of your latest books under your stats.
+Reading settings: new panel for font, size, line spacing, width and margins (Small, Medium, Large). Settings are saved in KOReader.
+
+Fixes
+
+Beast Novels: Premium chapters are no longer listed. "Chapter N" labels are translated.
+Freezes when changing chapter: automatic translation no longer runs while reading. It happens during download or in the background. Without background tasks, the original text is shown with a message instead of freezing.
+Manga batch download: chapters are saved as page images (CBZ). Before, the progress bar moved without saving anything.
+Translations: missing messages added in all languages.
+
 # v1.6.1 · 2026-11-10
 
 ### Fixes
@@ -41,25 +56,3 @@ Opening Sefirah: fixed a name conflict with other plugins (“attempt to call me
 New
 
 TruyenDichAI extension, with its icon.
-
-# v1.4 · 2026-10-24
-
-Sefirah v1.4
-
-New
-Progress center: XP, levels, quests (daily, weekly, monthly) and achievements (easy, medium, hard).
-"i" button (top right): explains every way to earn XP and how levels work. Also shown on first open.
-XP for manga: 2 XP per page and 10 XP per chapter (novels: 5 and 20).
-Community leaderboard, friends and profile picture.
-New source: MangaBall.
-Night mode for the whole plugin.
-New icons in settings.
-
-Improvements
-Changes made to the WEBTOON source files.
-Smoother and faster: disk writes batched (settings, library, reading progress), lighter quest checks on every page turn, more responsive download tracking.
-Reading settings: you now return to the same page of the chapter (no longer page 1).
-Updated translations.
-
-Removed
-AniList integration and the old reading statistics screen.
