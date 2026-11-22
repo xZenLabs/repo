@@ -1,3 +1,19 @@
+# v2.20.0 · 2026-11-22
+
+文言 Mode: the Classical dictionary rebuilt for the top of the popup (#65)
+- The 文言 entry now lists a character's senses in order of how common they are in classical
+  texts, and it includes the senses classical and modern Chinese share when they are among the
+  commonest: 而 now opens with *and*, 于 (於) has *in; at*, *from*, *than* and *by*, and 陰 has
+  *secretly*. Modern-only senses are left out.
+- Up to eight senses for the 500 commonest characters, six for the next 2,500, five for the rest
+  (five for every character before).
+- CC-CEDICT's senses are now among the sources the entry is built from. A character with only
+  modern senses still gets no entry.
+- On 128 judged words from classical texts, the entry's first two senses have the needed one 77%
+  of the time (57% before), the whole entry 93% (73%), and the whole popup 95% (unchanged).
+- 21,191 characters (21,292 before; the ones dropped had only modern senses, such as 氟 and 乒).
+  The database grows by 1.8 MB, to 46.4 MB.
+
 # v2.19.3 · 2026-11-22
 
 Neutral tones: the remaining Wiktionary candidates
@@ -44,16 +60,3 @@ Tap a cross-reference to open its word (#62)
   the reference gives first.
 - Taps anywhere else in CC-CEDICT's text still do nothing, and the Chinese dictionaries' text
   works as before.
-
-# v2.18.0 · 2026-11-21
-
-Cross-reference-only CC-CEDICT entries show their target's definitions (#61)
-- An entry whose only sense is a cross-reference now shows what it means: 贤惠 still reads
-  "variant of 賢慧|贤慧 xiánhuì", and below it "贤慧: (of a wife) wise and kind; perfect in her
-  traditional roles". The same for 7,213 entries: "variant of" in all its forms (old, erhua,
-  archaic, ...), "see" and "same as". The borrowed line follows the tapped form (賢慧: when
-  賢惠 was tapped) and the Dictionary text setting; a chain of references (利是 → 利事 → 红包) ends
-  on the word with the definitions, its pinyin shown.
-- "used in", "abbr. for" and "see also" entries are unchanged, as are entries whose references
-  lead to several different words (北海: see 北海公园, see 北海市). The build prints the counts.
-- The database grows by 1.5 MB (44.6 MB).
