@@ -1,3 +1,45 @@
+# v1.22 · 2026-11-23
+
+## v1.22
+
+### Auto-annotated translation (Readlang-style)
+
+- New "Translate as Annotation" switch (Other Settings): when the built-in
+  KOReader Translate action is replaced by the Assistant, its answer is
+  saved as the note of a fresh highlight and shown in a small floating
+  overlay just above the selection (below it when there is no room above,
+  centered when neither side fits), with the save status as the title line.
+  Tap or Back dismisses it, and it closes itself after a few seconds.
+- The Assistant's own Translate buttons keep the result window; any failure
+  falls back to it, so nothing is lost. Built-in translation keeps the
+  source formatting and offline availability; the plugin version gives the
+  full AI answer in the configured response language.
+
+### Flashcards and AnkiDroid
+
+- New flashcard feature: build editable cards from a look-up, with AnkiDroid
+  TSV export, so vocabulary moves into AnkiDroid in one step.
+- Viewer closes after a successful Annotate; manual and automatic paths
+  share one save function.
+
+### Dictionary
+
+- AI Dictionary output gains a pronunciation section.
+
+### OTA / updates
+
+- Updates download straight from codeload.github.com, and the OTA input
+  accepts user/repo[@ref] so updates can come from a fork or a specific ref.
+- Hardened flashcards preview fallback, trimmed reuse and menu truncation.
+- ARMv7 softfp builds stay compatible with ARMv6 (Kindle K3); CPU
+  instruction-set mismatches no longer crash.
+
+### Fixes
+
+- JSON schema auto-downgrade forgives reordered percent signs in translation
+  placeholders.
+- Translating a look-up no longer leaves the viewer open.
+
 # v1.21 · 2026-10-22
 
 ## v1.21
@@ -159,35 +201,3 @@ More places inside KOReader where AI is one tap away:
 
 #### Translations
 All languages refreshed with the new dictionary, viewer, and notebook strings.
-
-# v1.17 · 2026-09-07
-
-> 📦 **Android users:** this release repairs the accelerated text renderer that was silently broken on Android — AI answers and dictionary results will render noticeably faster after updating.
-
-#### Highlights
-Do more from the screen: tune your AI providers, test them, and update the plugin — without opening a configuration file.
-
-#### What's New
-
-**Provider Setup, Now Fully On-Screen**
-- **Reasoning Option** — dial back (or off) a model's "thinking" in one tap. The dialog shows only the choices your selected provider understands, applies immediately, and never touches your config file.
-- **Test Connection** — probe a new provider right from the add/edit form; tells you instantly if the address, key, or model name is wrong, with the provider's own explanation (your key is never shown).
-- **Cleaner provider management** — Add moved to the presets menu, Delete now lives inside Edit with a confirmation, simplified button row.
-- **Better model picker** — title names the provider, "Manual" renamed to **Custom**, explicit **OK** to confirm.
-
-**OTA Updates You Can Trust**
-- The update dialog now pre-fills the right target for you: stable installs upgrade to the latest stable release by default, development installs stay on the bleeding edge — unless you explicitly type a different branch or tag to switch.
-- New releases are checked quietly in the background (at most once per 48 hours) with a toast when one is out.
-- Failed downloads are reported persistently instead of flashing by, Android installs are far more robust, and only the files the plugin actually needs are installed.
-
-#### Improvements & Fixes
-- **Your Ask dialog choices stick** — Web Search and Copy-to-Clipboard now keep their state after a restart instead of resetting.
-- **Consistent dialog buttons** — confirm buttons are now uniformly **OK** across all dialogs instead of a mix of Save/OK.
-- **Errors in plain language** — see what the provider actually said ("invalid API key", "model not found") instead of a raw data blob.
-- **Quicker recovery from rate limits** — retries now wait at most 5 seconds (was up to a minute) and show the reason.
-- **Follow-up suggestions per prompt** — each prompt decides whether the model offers follow-up questions, instead of one global switch.
-- **Simpler config template** — fresh setups are built around four clearly-labelled service types; existing configs unaffected.
-- **Cleaner debug logs** — verbose request data trimmed, so logs attached to bug reports stay readable.
-
-#### Translations
-All languages refreshed with the new on-screen settings.
