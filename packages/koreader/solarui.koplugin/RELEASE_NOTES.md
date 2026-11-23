@@ -1,3 +1,21 @@
+# v1.0.3 · 2026-11-23
+
+
+A black and white mode for screens without colour, fixes from your reports, and a white page for the Custom scheme.
+
+### Added
+
+- **Black and white:** everything in ink and page only, the drawings as clean ink outlines, for screens without colour (Settings, Look). The garden keeps its colours unless you turn it black and white too. Yüzsüz keeps her own fur either way.
+- **Custom scheme paper:** cream, white or mist in light mode, and a forest, black or slate page in dark mode (Settings, Look, with Custom chosen).
+- **Switching to CyberUI asks first**, so a stray tap never swaps the whole look.
+
+### Fixed
+
+- **Translations were missing from the release download**, so SolarUI showed in English whatever KOReader's language. All ten languages now ship: Deutsch, Ελληνικά, Español, Français, Italiano, Polski, Português (Brasil), Português (Portugal), Русский and Türkçe.
+- **Home's books this year** now counts the books you finished this year, the same number as the reading log's Goal tab.
+- **KOReader crashed when opening Settings, About** on newer KOReader versions, whose QR codes are made differently now.
+- **White boxes round the clock, the top bar and the garden's animals** on e-ink screens: those parts now refresh without losing the page's colours.
+
 # v1.0.2 · 2026-11-17
 
 

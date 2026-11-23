@@ -1,3 +1,7 @@
+# v0.2.5 · 2026-11-23
+
+This update adds a cancel button to the search. In case you want to cancel a long running search you can press it and exit the search  process early on. The plugin will quit on cancel.
+
 # v0.2.4 · 2026-10-09
 
 Correctly switch to next mirror if unavailable, fix error message.
@@ -37,15 +41,3 @@ Fixes issue where format of search result is not shown.
 Please note that the associated plugins dispatcher action was renamed in this process, which might lead to your saved gestures / shortcuts connected to this plugin to be silently deleted. Please check and rebind them to this plugin.
 
 **Full Changelog**: https://github.com/fischer-hub/annas.koplugin/compare/v0.1.8...v0.2.0
-
-# v0.1.8 · 2026-03-02
-
-## What's Changed
-* Fix bugs and crashes (make this work again) by @ThePixelPro366 in https://github.com/fischer-hub/annas.koplugin/pull/4
-* Fix: Resolved Crash caused by FBI killing Domain, changed scraping to… by @DerSchmachtin in https://github.com/fischer-hub/annas.koplugin/pull/5
-
-## New Contributors
-* @ThePixelPro366 made their first contribution in https://github.com/fischer-hub/annas.koplugin/pull/4
-* @DerSchmachtin made their first contribution in https://github.com/fischer-hub/annas.koplugin/pull/5
-
-**Full Changelog**: https://github.com/fischer-hub/annas.koplugin/compare/v0.1.7...v0.1.8
