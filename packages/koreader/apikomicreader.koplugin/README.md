@@ -13,6 +13,14 @@
 
 ## What's new
 
+**v.1.1.6-2** (2026-11-23)
+- Chikari: lots of manga, manhwa and manhua, in English.
+- ManhwaWeb: lots of manhwa, manga and manhua, in Spanish.
+- Settings shows the plugin version. Tap it to see the changelog.
+
+<details>
+<summary>Older versions</summary>
+
 **v.1.1.6** (2026-11-23)
 - Atsumaru (no AVIF support, see [Pages KOReader can't show](#pages-koreader-cant-show)).
 - Warning before downloading pages KOReader can't show (AVIF, HEIC, JPEG XL).
@@ -20,9 +28,6 @@
 - Add comics to KOReader's own collections.
 - Adult content notice moved to a banner at the top.
 - Easier `_template.lua`, and [potential_sources.md](potential_sources.md).
-
-<details>
-<summary>Older versions</summary>
 
 **v.1.1.3** (2026-11-06)
 - Download queue, parallel page downloads, stays awake while downloading.
@@ -53,6 +58,8 @@ I wanted to read comics and manga on my Kindle without downloading stuff on my P
 | --- | --- |
 | MangaDex | Loads of manga, in lots of languages. |
 | Atsumaru | Loads of manga and manhwa, in English. Lots of newer chapters only come as AVIF images, which KOReader can't show yet (see [Pages KOReader can't show](#pages-koreader-cant-show)). |
+| Chikari | Lots of manga, manhwa and manhua, in English. The site also has novels, but those don't show up here. |
+| ManhwaWeb | Lots of manhwa, manga and manhua, in Spanish. Adult titles are hidden unless you turn adult content on. There's no "Popular" sort, because the site's popular list doesn't say which titles are adult. |
 | Internet Archive | Western comics people have uploaded to archive.org, from Golden Age classics to Marvel and DC runs. Only uploads that contain actual comic files (CBZ/CBR) show up, so you skip most of the junk. |
 | nhentai | Adult (18+) comics. Hidden unless you turn adult content on. |
 
@@ -200,6 +207,7 @@ If you use the [ZenOS](https://github.com/xZenLabs/zen-os) launcher, the plugin 
 | Parental controls PIN | Set, change or remove the PIN. |
 | Test connection | Checks the current site works. |
 | Clear history | Deletes the comics in History. Your library stays. |
+| Version | The plugin's version. Tap it to see what's new. |
 
 The Library sort order and the chapter sort order are changed with the Sort button, not here.
 
@@ -249,6 +257,8 @@ tools/setup.ps1                 What the installer runs
 docs/                           The pictures in this README
 potential_sources.md            Sites that could be added (or not), and why
 APIKOmicReader.koplugin/        The plugin, goes in koreader/plugins/
+  _meta.lua                     Plugin name and version
+  CHANGELOG.md                  What's new, shown from Settings > Version
   main.lua                      Screens, navigation, downloads, queue, parental controls
   apiko/home.lua                Home screen
   apiko/browser.lua             Grid and list views with covers

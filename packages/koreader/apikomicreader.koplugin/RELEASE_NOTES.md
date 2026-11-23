@@ -1,3 +1,22 @@
+# v.1.1.6-2 · 2026-11-23
+
+Two new sites, both tested on a device! These are centred on manhwa, but have manga and other stuff as well:
+
+1. Chikari: lots of manga, manhwa and manhua, in English. The site's novels don't show up.
+2. ManhwaWeb: lots of manhwa, manga and manhua, in Spanish. Adult titles stay hidden unless adult content is on.
+
+The plugin version now shows at the bottom of Settings. Tap it to see the changelog.
+
+To update, replace the APIKOmicReader.koplugin folder in koreader/plugins/ and restart KOReader.
+___
+¡Dos webs nuevas, las dos probadas en un dispositivo! Van más de manhwa, pero también tienen manga y más cosas:
+1. Chikari: mazo de manga, manhwa y manhua, en inglés. Las novelas de la web no salen.
+2. ManhwaWeb: mazo de manhwa, manga y manhua, en español. Los títulos para adultos siguen ocultos salvo que actives el contenido adulto.
+
+La versión del plugin ahora sale al final de los ajustes. Tócala para ver el historial de cambios (en inglés).
+
+Para actualizar, sustituye la carpeta APIKOmicReader.koplugin en koreader/plugins/ y reinicia KOReader.
+
 # v.1.1.6 · 2026-11-23
 
 # Glow-up sesh + Atsumaru! Shiny covers, markers and a new source (AVIF not included 😔)
