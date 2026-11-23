@@ -3,10 +3,10 @@
 **A minimal, text-based home screen for KOReader.**
 ennUI replaces KOReader's file browser with a quiet, distraction-free landing screen: just the information and shortcuts you actually want, arranged the way you want them, in a typeface you chose.
 
-<img width="200" height="*" alt="FileManager_2026-10-04_144015" src="https://github.com/user-attachments/assets/69381b7c-c4a4-490f-9307-6c1c87409cee" />
+<img width="200" height="*" alt="Screenshot 2026-11-23 153449" src="https://github.com/user-attachments/assets/1e9ad25b-ae6c-4778-8c6c-ef4f1b15d6f3" />
+<img width="200" height="*" alt="FileManager_2026-11-23_161250" src="https://github.com/user-attachments/assets/0ca47f2c-faef-4590-9a47-0f447c9c9bc3" />
 <img width="200" height="*" alt="FileManager_2026-10-04_143851" src="https://github.com/user-attachments/assets/c44cf933-fee4-431a-9ff7-09db95dceb38" />
 <img width="200" height="*" alt="FileManager_2026-10-04_143939" src="https://github.com/user-attachments/assets/378cb20a-3a12-4e6e-8868-9ad1290b518f" />
-<img width="200" height="*" alt="FileManager_2026-10-04_143751" src="https://github.com/user-attachments/assets/fb826f22-7eac-4524-9c0a-43451f244f0f" />
 
 
 

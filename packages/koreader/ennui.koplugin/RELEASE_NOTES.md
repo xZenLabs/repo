@@ -1,3 +1,213 @@
+# v3.0 · 2026-11-23
+
+
+# ennUI 3.0
+
+A minimal, text-based home screen for KOReader.
+
+## Install
+Copy the `ennui.koplugin` folder into KOReader's `plugins` folder (replacing your
+current version) and restart KOReader. Disable any other home screen plugin (for
+example Simple UI) while using ennUI. Your existing settings carry over.
+
+## What's new in 3.0
+Built from 2.9. Nothing here has been run on a device or in the emulator.
+
+1. **The quote's glow is fixed.** The quote body was the one piece of text the glow could not fade: its words sit
+   in a list the recoloring code never looked inside, so every ring of the halo came out at full strength and the
+   glow was a solid smear. It now fades exactly like the entries' and everything else's glow.
+2. **The 2.9 glow size scaling is gone.** The Glow radius works as it did in 2.8, for all text.
+3. **Swap colors for time** (Settings > Clock, directly under Time size; On / Off, Off by default). When On, the time's
+   words in the quote take the effect color for their letters and the text color for their outline, shadow or glow
+   (the opposite of the rest of the quote). Only the colors swap; the text and effect opacities stay where they were.
+   With the effect set to Off, the time's letters still take the effect color.
+4. Version 3.0.
+
+## From 2.9 (still true unless 3.0 says otherwise above)
+Built from 2.8. Nothing here has been run on a device or in the emulator.
+
+1. **One folder for everything outside the plugin folder.** The literary clock's quotes file, the highlight
+   index (`ennui_highlights.lua`), the word definitions, the recent files list and the saved covers now all live
+   in `koreader/cache/ennUI`. Files an older version left in the plugin folder or in `cache` are moved there the
+   first time they are needed, so nothing is downloaded or scanned again. (The settings file stays where KOReader
+   keeps all plugin settings, and `ennui_debug.log` stays in the plugin folder.) Anything new ennUI saves outside
+   its own folder goes there too.
+2. **Physical button mode starts off.** On a device with buttons, no focus mark shows until a direction key,
+   Press or Enter is pressed. That first press only shows the mark (it does nothing else). Touching a row with a
+   finger switches the mode off again.
+3. **Home screen focus is a rounded border** (thick black line with a thin white line each side, so it shows on
+   any wallpaper) instead of an inverted box. The other screens still invert the row.
+4. **The gear is reachable by the keys.** Pushing up from the top entry on the first page moves to the gear;
+   Press opens the gear menu, and any other direction goes back to the entries. (On later pages Up still goes back a
+   page; the Menu key opens the gear menu from anywhere.)
+5. **Left / Right turn the page in menus** like a swipe: the font list and other long lists turn the page, and on
+   a one-page Settings screen they move between the tabs. Where a row has neighbours beside it (the tabs, the page
+   arrows) the keys still move between them first. Also: Up from the first row of a list goes back a page (landing
+   on its last row), like Down already went forward.
+6. **Enter and the centre D-pad button both confirm** (Shift + either long-presses at once; holding either for a
+   second long-presses).
+7. (Removed again in 3.0.) **The glow scales with the text size.** The Glow radius setting is what it means at the size entries start at (30);
+   smaller text gets a proportionally smaller halo, so the literary clock's quote shows a glow instead of a haze.
+   Text at 30 or bigger is unchanged.
+8. Version 2.9.
+
+## From 2.8 (still true unless 2.9 or 3.0 says otherwise above)
+- Colored text: home entries, the literary clock, outline / shadow text, rack text and the glow halo show a chosen
+  full color on a color screen (grays and KOReader builds without `colorblitFromRGB32` draw as before).
+
+## From 2.7 (still true unless 2.8, 2.9 or 3.0 says otherwise above)
+- **Full colors now actually show.** In 2.6 the color picker's bars and swatches (and any solid fill in a
+  chosen color) came out gray: KOReader's plain rectangle drawing only handles grays, and only its newer
+  color-aware drawing keeps a color. Now every solid fill in a color you picked uses the color-aware calls
+  (falling back to the blend call the Module Rack already used, and last of all to the old gray drawing):
+  the picker's Hue / Saturation / Brightness bars and swatches, the Module Rack's panel, cards, borders,
+  bars and rules, and the Book Cover module's solid outline and shadow. Grays are drawn exactly as before.
+  (Text, glow and anything see-through already kept their color.)
+- **The Settings tabs work with the D-pad.** Pushing down from the last row now lands on the open tab along
+  the bottom; Left and Right move between the tabs, Up goes back to the rows, and the centre button opens the
+  tab and keeps the focus on it. (On a screen with several pages, pushing down from a tab still turns the
+  page, as pushing down from the last row did.)
+- Version 2.7.
+
+## From 2.6 (still true unless 2.7, 2.8, 2.9 or 3.0 says otherwise above)
+- **The gear menu no longer cuts its words.** The pop-up now sizes itself to its buttons: it is never
+  narrower than before, and grows only as wide as the labels need, up to nearly the whole screen. Each
+  button is as wide as its own label and icon (as before), so "ennUI settings" gets the most room. If the
+  labels still would not fit, the text shrinks a point at a time (down to about 60%) before anything is cut.
+- **Full color pickers on color e-readers.** Where the screen is a color screen *and* KOReader's color
+  rendering is on, every color picker (text color, drop shadow / outline / glow color, and the three Module
+  Rack colors) replaces its gray bar with three: **Hue**, **Saturation** and **Brightness**, each with - and
+  + buttons (5 degrees or 5 percent at a time), a bar you can tap to jump, a swatch and a label. The opacity
+  bar stays. A color with no color in it (saturation or brightness at zero) is saved as the gray level it
+  always was; anything else is saved as `#RRGGBB`. **Copy color to...** and Homescreen / Module Rack presets
+  carry full colors. On any other device nothing changes: the gray bar is used, and a saved color is drawn as
+  its nearest gray (and stays saved, so turning color back on brings it back). Gray colors you already chose
+  load into the sliders as gray and are left alone until you move one.
+- **Extras > Force Color** (off by default): treats the screen as color even if ennUI does not recognise it
+  as one, for a color e-reader where the pickers do not appear on their own.
+- **Literary clock > Time size** (default +2 pt, 0 to 10): the words that give the time are drawn that many
+  points bigger than the rest of the quote. The words share a baseline with the ordinary text, and lines keep
+  the spacing of ordinary text, so the bigger words run a little above and below their line and may come
+  close to the lines next to them. Words wrap as wide as they really are; at +0 the quote is drawn exactly as
+  in 2.5.
+- On a color screen, a see-through outline now keeps its color (it was being flattened to gray).
+- Version 2.6.
+
+## Not tried on a device yet
+This version was built and checked in a stand-in KOReader on a computer (layout, painting, key
+handling, opacity blending and the pop-ups were run there), not on a Kindle. New in 2.8, 2.9 and 3.0 and not yet confirmed on the device: colored text and glow on a color screen, the cache folder move, the key changes and the scaled glow.
+New in 2.7 and not yet confirmed on the device: the color fills (this was found in the
+emulator, where the picker showed gray) and the tabs on a real D-pad. New in 2.6 and not yet confirmed on the device: the gear menu
+sizing itself, the full-color pickers (they need a color screen), Force Color, and the literary clock's bigger time words. New in 2.5 and not yet confirmed on the device: the rack cards opening their plugins, the logo icons,
+the literary clock's time format and 24-hour filter, and Copy color to... New in 2.4 and not yet
+confirmed on the device: the literary clock (its look, size and speed, the
+download, the once-a-minute option) and the gear menu without its blank space. New in 2.3 and not yet
+confirmed on the device: that it starts with Glow on (the crash fix). New in 2.2 and
+not yet confirmed on the device: the remembered glow and radius 20, the debug mode
+and its log, the three-button gear menu with its icons, the 15% smaller pop-ups, the titles in the
+header strips, and the tabbed settings with swipe-only paging. New in 2.1 and not yet confirmed
+on the device: the fix for cut-off letters, the
+glow (its look and speed on e-ink, and on covers), swiping through a long Vocabulary entry, the
+menu pop-up for the gear, the Battery statistics tap, and the Reading stats tap with its
+fallbacks and the plugin picker. New in 2.0 and not
+yet confirmed on the device: the dictionary-entry layout with your real dictionary's text (the
+splitting was tested on made-up strings), the outline stroke (its speed and how the edges look on
+e-ink), the new look of the Settings screens (the tab, the heavier borders, and whether the main
+Settings screen's shorter rows feel right), the Darken / Lighten look on a real wallpaper, KOReader's
+entry box over the number pop-up, and the Build Mode long press on the rack. From 1.9: every part of the hardware-button support (a Paperwhite 2015 has
+no buttons, so this was only simulated), the new pop-up look on the e-ink panel (the slanted
+tab, the diagonals and the exact icons), opacity on text and in the rack (the blend itself
+works in the stand-in; the speed on the device is unknown), the vertical cover stack with a
+real library, the Recently added check, the Reading progress tap, the Vocabulary long press
+(see the log), and, from 1.8, the see-through rack panel, the gear overlay, dictionary
+lookups and the Vocabulary Builder reading, the "Open book" box with a long highlight, the
+highlight tap, long-pressing the Book Cover module in Build Mode, and the narrower tap areas.
+
+## If the gear is ever lost
+The gear can't be switched off, kept below size 24 or moved off screen, but if Settings
+ever can't be reached: open `settings/ennui.lua` (in KOReader's folder) in a text editor
+while KOReader is closed, change `["settings_access"] = "gear"` to `"swipe"`, save, and
+start KOReader. Then swipe up from the bottom edge of the home screen.
+
+## Use
+- Open Settings with the gear icon (or by swiping up from the bottom edge of the home
+  screen, if Extras > Settings access is set to swipe), any time.
+- Settings lists, in three cards: General (Date, Clock, Weather, Plugin entries, Book
+  Cover module, Settings gear), Layout (Section order, Module Rack, Wallpaper, Extras) and
+  About (the version). Tapping any of the General entries opens: Enabled, Alignment,
+  Padding, Text Style (not for the Book Cover module or the gear), Drop Shadow / Outline
+  (not for the gear), plus whatever's specific to that item (the gear has no Enabled):
+  - Book Cover module: Books shown, Layout, Number of covers (1 to 12), Cover size (50 to
+    500 pixels tall) and Spacing (-100 to 100).
+  - Settings gear: Size, Alignment and Padding.
+  - Clock: Show AM/PM (the clock is always 12-hour).
+  - Weather: ZIP code, country, units, Show last refreshed, Update now. Tap
+    the weather line on the home screen to refresh it on the spot (Wi-Fi is
+    never turned on for you).
+  - Plugin entries: Add or remove plugins (including "Resume current book"
+    and File Manager), Edit entries (reorder, rename, folders — tap a folder
+    to edit what's inside; folders are one level deep), Row spacing (-40 to 40), Max
+    entries per page (shows "Auto-fit to page" when uncapped), and Show page
+    number. On the home screen, tapping a folder swaps the list for its
+    contents, with a "←" row to return; long-pressing a section (Build Mode
+    on) jumps straight to its settings.
+- Color settings (in Text Style, Drop Shadow / Outline and the rack's Colors) open the
+  color screen: the - and + buttons (or tap the bar), Copy color, Paste color.
+- Section order: reorder the sections with the arrows, and switch "Hide lower sections
+  in folders" on or off.
+- Wallpaper: enable, select image, fit (Fit / Fill / Stretch / Original size),
+  darken / lighten (-100% to +100%).
+- Module Rack: Enabled, Modules, Side, Width, Edge sensitivity, Colors and Font settings.
+  The modules are System (battery, frontlight, storage and used and total space, each
+  switchable), Reading stats, Highlights and Vocabulary; it opens with a swipe inward from
+  the chosen edge and closes with a tap outside it, a swipe back toward the edge, or Back.
+  Swipe up or down to page through the cards.
+- Extras: Build Mode, Settings access, Homescreen Presets, Module Rack presets and Refresh
+  cover cache.
+- The Settings menu also has Restart KOReader and Quit KOReader.
+- Pull down from the top edge for KOReader's own top menu at any time. It also
+  has Tools > ennUI, which opens the home screen.
+- Optional: assign the action "ennUI: home screen" to a gesture.
+
+## One-time tutorials
+Toasts, each shown once, ever:
+- Right after your first setup, a reminder of how to open Settings (the gear icon or the
+  swipe up, whichever is chosen; the other one is shown the first time you switch to it).
+- The first time you turn weather on, a reminder that tapping it refreshes it.
+
+## About the file-browser flash
+ennUI builds its screen the moment a book closes and reacts the instant
+KOReader shows the file browser, when that signal is available, so the switch
+back is close to instant on most setups. This is working within what a plugin
+can do without changing how KOReader's own file browser gets shown, so it
+isn't an absolute guarantee in every situation.
+
+## Safety
+- Errors while building or showing a screen leave the normal file browser in place.
+- If the gear can't be built, the swipe up from the bottom edge opens Settings anyway.
+- The loading splash (used only on the slower fallback path) closes itself
+  after 5 seconds if nothing replaces it.
+- If a start never finished drawing the home screen, the next start skips it once.
+- To remove ennUI: delete the `ennui.koplugin` folder (and `settings/ennui.lua`).
+
+## Known limits
+- Very high outline thickness still means more paint work than none at all —
+  it's linear in thickness, not free.
+- White text will be invisible against the default blank background unless
+  paired with an outline or a dark wallpaper.
+- Covers can only be read from books KOReader can open and that contain a cover
+  image. Opening a book to read its cover takes a moment on slower e-readers, which
+  is why it happens in the background, once per book.
+- Vertical covers fill all the height left on the screen when there are enough of them, so
+  sections below the Book Cover module get squeezed (put it last in Section order, or lower
+  the number or size of covers).
+- A see-through rack panel is shaded in as many gray levels as the screen has; on a
+  16-gray screen the blend is smooth in the framebuffer but shows in 16 steps.
+- The menus (the gear menu and the preset actions list), the image chooser and KOReader's own
+  entry box (used to type a number, a ZIP code or a name) are still KOReader's standard ones.
+- The outline/drop shadow effects won't apply to a character your font draws
+  as a picture-style glyph rather than a plain shape.
+
 # v2.6 · 2026-11-19
 
 # ennUI 2.6
