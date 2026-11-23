@@ -2,6 +2,8 @@
 
 Your books, reading, highlights and shelves in one place: a customizable home screen, local library and reader tools for KOReader.
 
+[![Buy Me a Coffee](https://img.shields.io/badge/Buy%20me%20a%20coffee-FFDD00?logo=buymeacoffee&logoColor=black)](https://buymeacoffee.com/lara.2.ko)
+
 Aleph works with books and reading data on your device. No Aleph account or BookOrbit server is required. Optional author portraits use the internet; optional integrations can launch other plugins and their network features.
 
 **This is a modified version of BookOrbit and is not an official BookOrbit release. Modified 20 November 2026.**
