@@ -1,3 +1,82 @@
+# v.1.1.6 · 2026-11-23
+
+# Glow-up sesh + Atsumaru! Shiny covers, markers and a new source (AVIF not included 😔)
+`v.1.1.6`
+
+[English](#english) · [Español](#español)
+
+---
+
+## English
+
+### Atsumaru
+
+New site: loads of English manga and manhwa. The website is behind Cloudflare but its API isn't, so it works fine from the plugin.
+Heads-up: lots of newer chapters only come as AVIF images, which KOReader can't show yet (see below). A chapter often has uploads from several groups, so if one is AVIF, look for the same chapter number in the list; another upload might be WebP, which works.
+
+### Warning for pages KOReader can't show
+
+Before downloading or queueing, the plugin now checks the page format on any site. If a chapter is AVIF, HEIC or JPEG XL, it tells you and lets you cancel, skip it, or download it anyway and convert it yourself on a PC.
+When downloading several chapters or running the queue, you're only asked once.
+AVIF support in KOReader itself is tracked in koreader/koreader#10973.
+
+### Prettier library
+
+- Reading progress is now a bar on the cover, read comics get a ✓ badge, and titles show their chapter count in the corner.
+- Collections look like a pile of covers, with a bold name, so they don't look like just another book.
+- Long titles no longer get mangled by brackets and percentages.
+
+### KOReader collections
+
+Hold a comic, a title or a collection in the Library and tap "KOReader collections..." to add them to KOReader's own collections (Favorites and the rest). Needs KOReader 2024.04 or newer.
+
+### Other
+
+- The adult content notice is now a black banner at the top, next to the X, instead of a bubble at the bottom.
+- `_template.lua` has been rewritten: you can add a site by filling in blanks, no programming needed.
+- New `potential_sources.md`: every site people have asked for, and whether it can be added (short version: it needs a simple open API).
+- Both READMEs (English and Spanish) are updated, with a changelog at the top.
+
+### Upgrading
+
+Copy the new `APIKOmicReader.koplugin` folder over the old one and restart KOReader. Your library, bookmarks, queue and settings are kept.
+
+---
+
+## Español
+
+### Atsumaru
+
+Nueva web: una gran cantidad de manga y manhwa en inglés. La web está detrás de Cloudflare, pero su API no, así que funciona sin problemas desde el plugin.
+Aviso: muchos de los capítulos más recientes solo están disponibles en imágenes AVIF, que KOReader todavía no puede mostrar (ver más abajo). Muchos capítulos tienen subidas de varios grupos, así que si uno está en AVIF, busca el mismo número de capítulo en la lista; es posible que otra subida esté en WebP, que sí funciona.
+
+### Aviso para páginas que KOReader no puede mostrar
+
+Antes de descargar o añadir algo a la cola, el plugin comprueba el formato de las páginas, en cualquier web. Si un capítulo está en AVIF, HEIC o JPEG XL, te avisa y puedes cancelar, omitirlo o descargarlo de todos modos y convertirlo en el PC.
+Al descargar varios capítulos o al procesar la cola, solo se pregunta una vez.
+El soporte para AVIF en KOReader se sigue en koreader/koreader#10973.
+
+### Biblioteca mejorada
+
+- El progreso de lectura ahora se muestra como una barra en la portada, los cómics leídos llevan una insignia con ✓ y los títulos muestran en la esquina cuántos capítulos tienen.
+- Las colecciones se muestran como un montón de portadas, con el nombre en negrita, para distinguirlas de los demás títulos.
+- Los títulos largos ya no se ven afectados por corchetes y porcentajes.
+
+### Colecciones de KOReader
+
+Mantén pulsado un cómic, un título o una colección en la Library y toca "KOReader collections..." para añadirlos a las colecciones de KOReader (Favoritos y las demás). Requiere KOReader 2024.04 o posterior.
+
+### Otros cambios
+
+- El aviso de contenido adulto ahora es una franja negra en la parte superior, junto a la X, en lugar de un recuadro en la parte inferior.
+- `_template.lua` se ha reescrito: puedes añadir una web rellenando campos, sin necesidad de programar.
+- Nuevo `potential_sources.md` (en inglés): todas las webs que se han solicitado, y si se pueden añadir o no (en resumen: necesitan una API abierta y sencilla).
+- Los dos README (inglés y español) están actualizados, con un registro de cambios al principio.
+
+### Actualizar
+
+Copia la nueva carpeta `APIKOmicReader.koplugin` sobre la anterior y reinicia KOReader. Tu biblioteca, marcadores, cola y ajustes se conservan.
+
 # v.1.1.3 · 2026-11-06
 
 What’s new

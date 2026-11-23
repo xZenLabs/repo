@@ -1,3 +1,27 @@
+# v1.5.0 · 2026-11-23
+
+Speed everywhere: starts, book opens and closes, library pages and sorting, with the jack-in card up the moment you tap. Also the eddies on every book's dossier, and the fixes that were waiting as 1.4.1.
+
+### Added
+
+- **Switching to SolarUI asks first**, so a stray tap never swaps the whole look.
+- **Every book's dossier shows its eddies**: a bar of its ten payouts and the finish, what it has paid out of its price, the next payout, what is still to earn, and how its pages are counting (tap it to see the rule), compact enough to leave the synopsis its room. The Gigs page's Active tab now lists every book that is paying, not only gigs, each with the same bar.
+- **Long press on the < and > of a list** goes to its first or last page.
+
+### Changed
+
+- **Faster everywhere.** Closing a book back to home no longer rebuilds KOReader's file browser hidden under it (nor lets CoverBrowser extract covers for it): the browser lists its folder only when it is actually shown. Opening a book draws only the jack-in card, which now goes up the moment you tap, before KOReader even looks the book up, and stays until the book appears. Turning library pages no longer sorts the whole folder again, and KOReader starts to home sooner: fewer modules load at start, CyberUI's own are kept compiled (together in one file) after their first load, icons are drawn from saved copies, and the home screen shows the last counts until the library has been looked through. Changing the sort order is about a third quicker, page turns redraw less, a book reopened shows its cover on the jack-in card without drawing it again, and opening a book from home no longer sets off a needless full memory clean-up a moment later. Going Home while home is already shown no longer redraws it (and flashes the screen) unless something on it changed. Less memory too.
+- **Pages count by how much is on them, not by a fixed 15 seconds.** A book is measured once when it opens, and a page counts once its words could have been read, even very fast: in a large font or at a quick pace, pages count in a couple of seconds, while flipping through still pays nothing. Comics and scans count by your own pace in that book. Page turns do no extra work.
+
+### Fixed
+
+- **KOReader opened to the plain file browser instead of CyberUI** after a KOReader update or on a fresh install (CoverBrowser's "database updated" notice at start left the file browser on top of home), and the top menu did not open until a book was closed.
+- **KOReader crashed** when going home from a book while the top menu waited for a plugin's window (Reading style, for one), and the top menu could stop opening in books after changing such a plugin's settings.
+- **The page turn keys did nothing in styled lists**, such as Rakuyomi's chapters, history or the table of contents.
+- **A swipe down closes a styled list** again, as it does in KOReader.
+- **KOReader crashed when opening System, About** on newer KOReader versions, whose QR codes are made differently now.
+- **Progress under covers in the library** now fills to the exact share; it showed only empty or full.
+
 # v1.4.0 · 2026-11-16
 
 
@@ -54,15 +78,3 @@ Everything since 1.1.2: KOReader's own windows in CyberUI's style, a rebuilt boo
 - KOReader quit to the device's own system when a swipe began on the tab bar.
 - In a book, KOReader's drop-down menu stayed over a plugin's dialog opened from it (Bookends' settings, for one); it now steps aside.
 - The selected-text menu showed blank buttons on KOReader versions that build it differently; it is recognised on any KOReader and keeps every icon.
-
-# v1.1.2 · 2026-11-01
-
-## Fixed
-- **Night mode no longer crashes KOReader on colour screens.** On a Kindle Colorsoft or a Kobo Clara Colour, turning on night mode (or going home from a book while it was on) closed KOReader, and it kept closing at every start. Covers are now drawn in the screen's own pixel type.
-- **No more freeze on phones.** CyberUI no longer follows linked folders or Android's own data folder while it looks for books, and stops after a few thousand folders.
-- **ZenOS:** its Home tab in the toolbar now goes to CyberUI home when CyberUI is the chosen home screen.
-
-## Changed
-- A list of choices too long for the screen (the collections when adding a book to one, filters, and the like) is now split into pages with previous and next buttons, so every entry can be reached.
-
-Thanks to everyone who reported these.

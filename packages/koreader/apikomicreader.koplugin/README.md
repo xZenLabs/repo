@@ -11,6 +11,33 @@
 
 ---
 
+## What's new
+
+**v.1.1.6** (2026-11-23)
+- Atsumaru (no AVIF support, see [Pages KOReader can't show](#pages-koreader-cant-show)).
+- Warning before downloading pages KOReader can't show (AVIF, HEIC, JPEG XL).
+- Library covers show progress bars, ✓ badges and chapter counts. Collections look like a pile.
+- Add comics to KOReader's own collections.
+- Adult content notice moved to a banner at the top.
+- Easier `_template.lua`, and [potential_sources.md](potential_sources.md).
+
+<details>
+<summary>Older versions</summary>
+
+**v.1.1.3** (2026-11-06)
+- Download queue, parallel page downloads, stays awake while downloading.
+- Library grouped by title, with read markers, collections and sorting.
+
+**v.1.0.1a** (2026-11-06)
+- ZenOS icon fix.
+
+**v.1.0.0** (2026-11-06)
+- First release: MangaDex, Internet Archive and nhentai, library, history, bookmarks, parental controls, Panels+ and ZenOS support.
+
+</details>
+
+---
+
 I wanted to read comics and manga on my Kindle without downloading stuff on my PC and copying it over every time, and I discovered that my main source for comics (mangadex) had an open API sooo... here it is.  You search a title/tag/number/whatever from the plugin, tap what you want and read it. The comics stay inside the plugin, so they don't end up mixed with your books.
 
 <p align="center">
@@ -25,17 +52,20 @@ I wanted to read comics and manga on my Kindle without downloading stuff on my P
 | Site | What's there |
 | --- | --- |
 | MangaDex | Loads of manga, in lots of languages. |
+| Atsumaru | Loads of manga and manhwa, in English. Lots of newer chapters only come as AVIF images, which KOReader can't show yet (see [Pages KOReader can't show](#pages-koreader-cant-show)). |
 | Internet Archive | Western comics people have uploaded to archive.org, from Golden Age classics to Marvel and DC runs. Only uploads that contain actual comic files (CBZ/CBR) show up, so you skip most of the junk. |
 | nhentai | Adult (18+) comics. Hidden unless you turn adult content on. |
 
 A couple of things about the Internet Archive: it's whatever people upload, so quality and naming vary a lot. Sorting by "Most downloaded" (the default) helps. Uploads often contain a whole run, so you get one chapter per issue. It has no age ratings, so the adult content filter can't hide anything there, and pages always come in original quality. You can also paste an archive.org link in the search box to open that upload directly.
 
-> **About that third one** 👀
+> **About that last one** 👀
 > Yes, I know. In my defence, it's one of the very few comic sites with a proper f**king open API, and I needed something to check that the parental controls actually work. Purely for testing. Strictly professional. Nothing to see here.
 >
 > It is locked away by default, so unless you go looking for it (you degen) you won't even know it's there. You can also just delete `APIKOmicReader.koplugin/apiko/sources/nhentai.lua` if you dont want this depravity on your device.
 
-You can add more sites yourself, see [For tinkerers](#for-tinkerers).
+A thing about Atsumaru: a chapter often has uploads from several groups, so if one is AVIF, look for the same chapter number in the list, because another upload might be WebP (which works).
+
+**Want another site?** Check [potential_sources.md](potential_sources.md). It's every site I've looked at (and that people have asked for), which ones can be added and why the rest can't. Short version: the site needs a simple open API, so no scraping, cookies or weird tricks. You can also add sites yourself, see [For tinkerers](#for-tinkerers).
 
 ## Installing
 
@@ -102,18 +132,28 @@ Pages are fetched several at a time, which makes chapters download a lot faster.
 
 While a download or the queue is running, the plugin keeps the device awake so it doesn't go to sleep or lose Wi-Fi halfway through a big batch. Normal sleep comes back as soon as it's done.
 
+### Pages KOReader can't show
+
+KOReader shows JPG, PNG, GIF and WebP, but not AVIF, HEIC or JPEG XL (for now...). AVIF support is requested in KOReader's [feature request #10973](https://github.com/koreader/koreader/issues/10973), so keep an eye on it. There was a pull request adding it ([koreader-base#2383](https://github.com/koreader/koreader-base/pull/2383)), but it was closed without being merged (one thing is to code using AI, another is to pull request without even testing lolol). Some sites, like Atsumaru, use AVIF for a lot of their newer chapters. When a chapter has pages like that, the plugin warns you before downloading, on any site:
+
+- **One chapter:** "Cancel" or "Download anyway". If you download it anyway it won't open on the device. The plugin tells you where the file is, so you can copy it to your PC and convert the pages to a format that works.
+- **Several chapters or the queue:** you get asked once, and your answer goes for the rest of that download. Skipped chapters show up in the summary.
+- **Adding one chapter to the queue:** it gets checked right away, so you know before it's in the queue. A whole title gets checked when the queue runs.
+
 ### Library, collections and sorting
 
 The Library groups the chapters you saved by title, so one manga is one entry instead of fifty. Tap a title to see its chapters. A title with a single saved chapter just shows up as that comic.
 
-Each chapter shows whether it's unread, half-read (with a percentage) or read (✓). A title counts as read once you're about 97% of the way through, or if you mark it finished in KOReader.
+Each chapter shows whether it's unread, half-read (a progress bar on the cover) or read (a ✓ badge). Titles with several chapters show how many they have in the top corner, and their bar fills up as you read them. A title counts as read once you're about 97% of the way through, or if you mark it finished in KOReader.
 
 **Collections** are your own groups of titles ("Reading now", "Superheroes", "Dropped"...):
 
 - Hold your finger on a title and tap Collections... to add it to one or make a new collection.
-- Collections show up first in the Library, in square brackets. Tap one to see its titles.
+- Collections show up first in the Library, as a pile of covers with a bold name (or with a "/" at the end in the simple list). Tap one to see its titles.
 - Hold a collection to rename or delete it. Deleting a collection never deletes the comics inside it.
 - Inside a collection, hold a title and pick "Remove from this collection".
+
+**KOReader collections.** Your comics normally only show up inside the plugin. To also have them in KOReader's own collections (Favorites and the ones in its file browser), hold a comic, a title or a collection in the Library and tap "KOReader collections...". Tap a collection to add them (✓ means they're already in it, tap again to take them out), or make a new one. Holding a collection adds every chapter of every title in it. Deleted comics leave KOReader's collections by themselves. Adult comics still ask for the PIN when opened from there. Needs KOReader 2024.04 or newer.
 
 **Sorting:** tap the Sort button at the bottom (or the first row in the simple list view).
 
@@ -135,7 +175,7 @@ To get rid of a whole title, hold your finger on it and pick "Delete all chapter
 
 Adult content is hidden by default. Adult sites don't show up, searches only give all-ages stuff, and any adult comics you already have are hidden too (that includes the download queue).
 
-To show it, long-press the logo on the home screen. The logo blushes and a warning stays at the bottom of the screen while adult content is visible. Long-press the logo again to hide it.
+To show it, long-press the logo on the home screen. The logo blushes and a black banner stays at the top of the screen, next to the X, while adult content is visible. Long-press the logo again to hide it.
 
 If you don't want other people turning it on, set a PIN in Settings > Parental controls PIN. After that, long-pressing the logo asks for the PIN first, and everything hides again when you close the plugin or the device goes to sleep.
 
@@ -171,6 +211,9 @@ Some Wi-Fi networks (work, school) block comic sites. Try another one, like your
 **A download failed halfway.**
 Try lowering Settings > Parallel page downloads to 1 or 2. Failed titles stay in the download queue marked "failed", and hold/tap them to see the reason.
 
+**It says the pages are AVIF (or HEIC, or JPEG XL).**
+KOReader can't show those images yet. See [Pages KOReader can't show](#pages-koreader-cant-show). On Atsumaru, try another group's upload of the same chapter.
+
 **My comics aren't with my books.**
 That's on purpose. They're kept in a hidden folder and only show up in the plugin. They don't appear in KOReader's reading history either.
 
@@ -189,10 +232,14 @@ Try Settings > Test connection first. If that doesn't help, look in `koreader/cr
 Every site is one file in `APIKOmicReader.koplugin/apiko/sources/`. Whatever is in that folder gets loaded when KOReader starts.
 
 1. Copy `apiko/sources/_template.lua` and give it a new name, like `mysite.lua`.
-2. Fill it in. The template explains each part and has an example. `mangadex.lua` (manga with chapters) and `nhentai.lua` (single comics) are real ones you can look at.
+2. Fill it in. You don't need to know how to program: you only fill in the site's name, its API addresses and the names of a few fields, and the template explains how to find each one. `mangadex.lua` (manga with chapters) and `nhentai.lua` (single comics) are real ones you can look at.
 3. Copy the plugin to the device and restart KOReader.
 
 Search, covers, downloads (parallel too), the queue, history, library, collections, bookmarks and the parental controls all work for the new site without changing anything else. If your site gives chapters a `number`, "Download a range" and the library's chapter order use it. If a site file has a mistake it just gets skipped and the reason goes in `crash.log` (search for `skipping source`). Files starting with `_` are ignored.
+
+For sites that don't fit the template, `mangadex.lua` and `atsumaru.lua` are hand-written ones. The warning about unsupported images works by itself: the plugin reads each page's format from its address, or from an `ext` the site file can set. A site file can also add its own tip to that warning with `unsupported_hint`.
+
+Not sure which site to try? [potential_sources.md](potential_sources.md) has a list of candidates, with links to code that already talks to their APIs.
 
 ### Files
 
@@ -200,6 +247,7 @@ Search, covers, downloads (parallel too), the queue, history, library, collectio
 unsetup.bat                     Windows installer
 tools/setup.ps1                 What the installer runs
 docs/                           The pictures in this README
+potential_sources.md            Sites that could be added (or not), and why
 APIKOmicReader.koplugin/        The plugin, goes in koreader/plugins/
   main.lua                      Screens, navigation, downloads, queue, parental controls
   apiko/home.lua                Home screen
@@ -209,6 +257,7 @@ APIKOmicReader.koplugin/        The plugin, goes in koreader/plugins/
   apiko/comics.lua              Downloaded comics and their reading progress
   apiko/library.lua             Groups the library by title and sorts it
   apiko/store.lua               Bookmarks, searches, collections and the download queue
+  apiko/kocollections.lua       Adds comics to KOReader's own collections
   apiko/paths.lua               Where files go
   apiko/http.lua                Talks to the sites
   apiko/settings.lua            Settings
