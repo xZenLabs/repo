@@ -1,3 +1,43 @@
+# v2.25.0 · 2026-11-24
+
+One popup on screen at a time (#82)
+- A popup opened from another (a character tapped in a popup, or Origin & Usage) now takes its
+  place instead of being drawn on top of it, so there is only ever one **Close** row on the
+  screen. It is placed like the first popup, away from the character tapped on the page.
+- **Close** (and the Back key) goes back one step: the popup below comes back as you left it,
+  scrolled where it was, with its title-bar buttons and Translate row. A tap outside still
+  closes them all.
+- A nested popup's title shows the way you came: 崇 › 莞, cut from the left with … when it is
+  too long.
+
+Headwords that follow the text you tapped (#80)
+- **Show traditional in headwords** is replaced by **Headwords**, with four choices:
+  **Simplified • traditional** (the default, as before: **头发** • 頭髮 for any tap),
+  **As written • other form** (the form the text uses first: **頭髮** • 头发 in a traditional
+  book, **髮** • 发 for a single character), **As written only** (頭髮 in a traditional book,
+  头发 in a simplified one) and **Simplified only**.
+- It applies to every head line: the tapped character, the words around it, 文言 Mode and MOE
+  entries, and popups opened from a popup.
+- If you had turned **Show traditional in headwords** off, Headwords starts on Simplified only.
+- Suggested by Generalhooha in #78.
+
+Popup text size in 10% steps (#81)
+- **Popup text size** now offers every 10% from 40 to 120% of the book's text size (50, 70, 90
+  and 110% are new). The default stays 60%.
+- Suggested by Generalhooha in #78.
+
+Word choice by segmentation (#75)
+- The word that decides a character's reading (the pinyin on the page and the popup's "likely
+  here") now comes from the most probable split of the surrounding text into words, using every
+  CC-CEDICT word's frequency, instead of the longest word through the character. 到了 is read
+  dào le (not liǎo from 到了 "finally"), 手中的诏书 zhōng de (not zhòng dì from 中的 "hit the
+  target"), 一个劲敌 yī ge jìngdí (not 一个劲).
+- Checked on three books and the two samples with every character drawn: 3,122 readings change
+  in about 560,000 characters; of 30 checked by hand, 25 are better, 4 the same and 1 worse
+  (占梦). The regression set has no regressions.
+- A learner-mode page (pinyin on every character) builds in about 56 ms on a Boox Go 7, 8 ms
+  more than 2.24.0. The database grows from 53 to 56 MB.
+
 # v2.24.0 · 2026-11-22
 
 
@@ -61,19 +101,3 @@ Words first: the words around the tapped character come above the character's ow
   128 judged words from classical texts, the entry has the needed sense 95% of the time (93%
   before), in its first two senses 73% (77%), and the whole popup 95%.
 - The database grows by 6.1 MB, to 52.5 MB.
-
-# v2.20.0 · 2026-11-22
-
-文言 Mode: the Classical dictionary rebuilt for the top of the popup (#65)
-- The 文言 entry now lists a character's senses in order of how common they are in classical
-  texts, and it includes the senses classical and modern Chinese share when they are among the
-  commonest: 而 now opens with *and*, 于 (於) has *in; at*, *from*, *than* and *by*, and 陰 has
-  *secretly*. Modern-only senses are left out.
-- Up to eight senses for the 500 commonest characters, six for the next 2,500, five for the rest
-  (five for every character before).
-- CC-CEDICT's senses are now among the sources the entry is built from. A character with only
-  modern senses still gets no entry.
-- On 128 judged words from classical texts, the entry's first two senses have the needed one 77%
-  of the time (57% before), the whole entry 93% (73%), and the whole popup 95% (unchanged).
-- 21,191 characters (21,292 before; the ones dropped had only modern senses, such as 氟 and 乒).
-  The database grows by 1.8 MB, to 46.4 MB.
