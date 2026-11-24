@@ -1,3 +1,23 @@
+# v1.5.0-beta.2 · 2026-11-24
+
+### Your next BookOrbit milestone on Home
+
+The optional **BookOrbit achievements** card now shows your latest award alongside the milestone you are closest to earning. See how many books, pages, reading hours or streak days remain. For other goals, the card shows the current count and target. The summary uses your existing BookOrbit plugin login and works without a separate API key or server changes. Tap the card to browse the available badges.
+
+### Bookshelves and Android covers
+
+- Bookshelf 6.6.0 keeps series boxes inside their author or section group and preserves cover contrast over wallpaper.
+- In Android safe mode, reopening a shelf skips books already checked for a cover when their file size and modification time match. Adding a custom cover, changing the book file or choosing **Refresh metadata** triggers another check.
+- Library metadata lookup skips per-book hashing when the hash-sidecar storage contains no custom metadata.
+
+### Home and reading statistics
+
+Home skips redundant repaints while a full-screen window is open. Reading-day statistics handle UTC offset changes, and finished-book actions let you correct a status or exclude a book from goals. This release also includes updated date formatting and Czech and Chinese translations.
+
+The milestone and cover handling were tested on a physical HiBreak. All 96 navigation taps in the Library and Manga comparison reached the expected view. The cover optimization applies to Android safe mode.
+
+To update, enable **Include preview releases** under **OrbitUI → System & maintenance → Updates**, check for updates, then restart KOReader. For a manual install, download **orbitui.koplugin.zip** below. The stable channel offers **1.4.0**.
+
 # v1.5.0-beta.1 · 2026-11-21
 
 ### Select text with FingerTips
@@ -62,19 +82,3 @@ Tested with KOReader 2026.07.1 in the Tolino emulator. Physical Bigme and Kindle
 To update in KOReader, enable **Include preview releases** under **OrbitUI → System & maintenance → Update OrbitUI**, check for updates and restart after installing.
 
 Tested with KOReader 2026.07.1 in the Tolino emulator, with KOAssistant and a test button that uses the same label mechanism as Hardcover. Physical Bigme testing is pending.
-
-# v1.4.0-beta.4 · 2026-11-15
-
-## What’s new
-
-- **Customize the reading row on Home.** Choose up to five books in **Straight cover row** and show titles or reading percentages under the covers. The default is four books with percentages. **See all** opens the books in progress from your local reading history.
-- **Assign shortcuts to dashboard cards.** Use **When tapped** in the card’s settings to pick an action.
-- **Literary Clock.** Install the optional add-on from **Get more modules…**, restart KOReader, then add its card from **Shelf modules**. It works offline and uses English quotes.
-- **Reader tools.** Hold **Bookmarks** in the reader panel to choose a color for the current page bookmark. Filter the bookmark list by color. When a saved KOAssistant X-Ray is available, the reader panel shows its coverage and can open KOAssistant’s Mentions view.
-- **Book information.** The overview shows book language and page count when available.
-- **Bookshelf 6.5.1 and SimpleUI fixes.** Arrange Favorites in collection order, see Hardcover ratings rounded to the nearest half star, and use the library in Turkish. SimpleUI keeps goal columns aligned as percentages change and improves compatibility with older KOReader versions.
-- **Less background work on Home and in the library.** Statistics updates reuse the cover lists. Android batches cover repaints, and cold library metadata snapshots are written after opening.
-
-Enable **Include preview releases** under **OrbitUI → System & maintenance → Update OrbitUI**, then check for updates and restart after installing.
-
-Tested in KOReader emulators and with the updater from 1.4.0-beta.3 and stable 1.3.0. Physical Bigme testing of this combined build is still pending.
