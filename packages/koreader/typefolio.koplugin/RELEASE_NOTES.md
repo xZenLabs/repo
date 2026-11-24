@@ -1,3 +1,62 @@
+# v3.3.0 · 2026-11-24
+
+# 文笺 (Type Folio) v3.3.0 Release Notes
+
+> **版本定位**：智能对话副本无缝切换、对话深浅配色与专属字体、系统状态栏防误触锁定、界面去技术化全面收敛。
+
+---
+
+## 🌟 核心更新亮点
+
+### 1. ⚡ 智能对话副本无缝切换与双向进度同步
+* **开书自动探测与跳转**：打开未标注的原书时，插件自动检测是否存在对应的 `.tf_dlg.epub` 对话副本；若已开启自动打开，将直接无缝切入副本阅读，无需读者在文件管理器中手动翻找。
+* **双向阅读进度实时同步**：
+  * 打开或切换副本时，自动将原书的阅读进度（页码、百分比、书签与 XPointer 位置）同步至副本；
+  * 在副本中退出或返回原书时，同样自动将最新进度无损回写至原书。
+* **安全返回原书**：副本菜单提供「返回原书…」快捷操作，确认返回时自动暂停该书的自动跳转，保留随时切换自由。
+
+### 2. 🎨 对话样式全面升级：字体深浅颜色与独立底色
+* **字体颜色（5 档精选灰阶）**：支持将对话文字设为 `默认`、`纯黑`、`深灰`、`中灰`、`浅灰`，通过底层 CSS 高效注入，翻页零卡顿。
+* **字体底色（独立调节）**：独立子菜单提供 `底色开启` 开关与 `浅灰` / `中灰` / `深灰` 3 档灰度选择，同时支持父菜单勾选框一键快速启闭。
+* **对话字体、加粗与斜体**：自由指定设备已安装字体作为对话专属字体，勾选「字体斜体」，**人物台词自动呈现特色字效，而旁白叙述文字（如“他问我。”）严格保留原生宋体正文字形**！
+
+### 3. 🛡️ 状态栏新增「禁用系统状态栏」防误触锁定
+* **单手握持防误触**：在「状态栏」菜单中勾选 **「禁用系统状态栏」**，将一键隐藏 KOReader 原生底栏，并同步开启系统的「设置 → 状态栏 → 锁定状态栏」。
+* **彻底告别误触弹窗**：在屏幕下边缘轻触翻页时不再触发系统底栏弹出；取消勾选时自动对称恢复原有状态栏模式并解除锁定。
+
+### 4. 🧹 菜单全面「去技术化」与结构收敛
+* **面向读者视角重塑术语**：彻底移除底层实现术语（如「按 class 标记着色」、「DOM 标记」等），全界面统一采用「对话样式」、「对话副本」等直观概念。
+* **移除冗余选项**：精简正文与章节菜单，移除着重号与对话动态画笔入口，主菜单更加纯粹专注。
+* **全新出版级展示大图**：README 迎来全新大字版 6 大排版特性全景示意海报，零文字遮挡、一目了然。
+
+---
+
+## 📋 详细更新日志
+
+* **对话与副本管理**：
+  * [新增] `tools/epub_dialogue_tagger.lua` 增加原书关联元数据，支持根据原书路径/哈希自动寻址对应 `.tf_dlg.epub`。
+  * [新增] `main.lua` 增加 `onReaderReady` 钩子，开书自动探测副本并以 `UIManager:nextTick` 调度切换，避免阻塞主线程。
+  * [优化] 阅读进度双向互通引擎：在开书与关闭时安全读取并写回 `ReaderSettings`。
+  * [新增] 对话菜单精简为视觉样式（开关/字体/颜色/底色/加粗/斜体）与副本管理两段式结构。
+* **状态栏**：
+  * [新增] `core/koreader_settings.lua` 增加 `isSystemStatusBarDisabled` 与 `setSystemStatusBarDisabled` 接口。
+  * [新增] 状态栏主菜单快捷项 `Disable system status bar`（禁用系统状态栏）。
+  * [优化] `KOReaderSettings.syncNativeFooterBar` 适配：在锁定禁用状态下防止外部被动重绘。
+* **正文与排版**：
+  * [精简] 移除「正文与章节」中的着重号相关子菜单。
+  * [优化] CSS 生成器支持 `color` 与 `background-color` 灰度变量精确渲染。
+* **文档与多语言**：
+  * [双语] `zh_CN.lua` 与 `en.lua` 补全所有新增对话参数与状态栏防误触词条。
+  * [README] 重构排版特性展示图（超清大字版、避开文字零遮挡、页眉页脚合并说明）。
+
+---
+
+## 📦 安装与升级指南
+
+1. 下载 Release 压缩包解压得到 `typefolio.koplugin` 文件夹。
+2. 将其完整复制到阅读设备的 KOReader 插件目录（例如 `koreader/plugins/typefolio.koplugin`）。
+3. 重启 KOReader 即可体验全新特性。
+
 # v3.1.0 · 2026-08-30
 
 # Release v3.1.0
@@ -90,41 +149,3 @@
 * `_meta.lua`: Bumped plugin version to `2.1.1`.
 * `main.lua`: Added `keep_menu_open = true` across all preset callbacks, help topics, and input dialog triggers.
 * `locales/` & `README.md`: Synchronized robust multi-nesting Calibre title matching regex across `zh_CN.lua`, `en.lua`, and `README.md`.
-
-# v2.1.0 · 2026-08-04
-
-# Release v2.1.0
-
-## What's Changed / 变更说明
-
-### 🇨🇳 中文
-
-* **对话高亮 (Dialogue Highlight)**：新增对话样式微调，支持背景底色（浅/中/深 3 档）、加粗、斜体独立组合，兼容 `.dialogue` 等 class。
-* **自定义预设 (Custom Presets)**：支持将当前排版快照保存为自定义预设，提供套用、重命名及删除功能。
-* **内置使用指南 (In-Reader User Guide)**：主菜单顶部新增「使用指南」入口，弹窗提供功能原理、Calibre 正则标记教程及手势绑定说明。
-* **菜单交互与状态指示 (UI Improvements)**：子菜单首行统一显示 `功能名：已开启/已关闭` 实时状态，提升墨水屏可读性。
-* **双语与文档更新 (i18n & Docs)**：补充中英文语言包 (`locales/en.lua`, `locales/zh_CN.lua`)，同步更新 README 架构与 Changelog。
-
----
-
-### 🇬🇧 English
-
-* **Dialogue Highlight**: Added dialogue text styling supporting background tint (Light/Medium/Strong), bold, and italic, compatible with `.dialogue` and related CSS classes.
-* **Custom Presets**: Added ability to save current settings as named custom presets with options to apply, rename, and delete.
-* **In-Reader User Guide**: Added a Help entry at the top of the main menu explaining rendering modes, Calibre regex tagging, and gesture shortcuts.
-* **UI & Submenu Status Labels**: Updated first-row submenu toggles to display live state (`<Feature>: Enabled/Disabled`) for better legibility on e-ink screens.
-* **i18n & Documentation**: Updated English and Simplified Chinese locale dictionaries (`en.lua`, `zh_CN.lua`) and updated README project guidelines.
-
----
-
-## Detailed Changes / 详细变更分类
-
-### Added / 新增
-* `css_templates.lua`: Added `dialogue_style` CSS template with configurable tint, tint level, bold, and italic parameters.
-* `main.lua`: Added `Custom presets` submenu logic allowing preset saving, loading, renaming, and deletion.
-* `main.lua`: Added `Help / user guide` menu entry and `InfoMessage` modal with usage instructions.
-* `locales/`: Added dictionary strings for Dialogue Highlight, Custom Presets, and User Guide in both `en.lua` and `zh_CN.lua`.
-
-### Changed / 优化
-* `main.lua`: Standardized submenu header toggles via `_tweakEnableItem` to render `<Title>: Enabled/Disabled`.
-* `README.md`: Updated plugin architecture description, settings key definitions, and changelog section.
