@@ -14,14 +14,14 @@
 
 ## Android Support
 
-rakuyomi runs on Android via the **Rakuyomi Bridge** companion app ([Rakuyomi Bridge](https://github.com/tachibana-shin/rakuyomi_bridge/)), which loads the Rust server via JNI and runs it as a foreground service.
+rakuyomi runs on Android via the **Rakuyomi Bridge** companion app ([Rakuyomi Bridge](https://github.com/yuuki-kagura/rakuyomi_bridge/)), which loads the Rust server via JNI and runs it as a foreground service.
 
 | Variant | Android Support |
 |---|---|
 | Rakuyomi Bridge (Compose) | Android 5.0+ (API 21+) |
 | Rakuyomi Bridge (Headless) | Android 4.3+ (API 18+) |
 
-Both are available on the [Releases](https://github.com/tachibana-shin/rakuyomi_bridge/releases) page.
+Both are available on the [Releases](https://github.com/yuuki-kagura/rakuyomi_bridge/releases) page.
 
 > [!TIP]
 > If you want to run Rakuyomi as soon as you open Koreader, use this plugin: https://github.com/mgrimace/startrakuyomi.koplugin
@@ -72,7 +72,7 @@ This fork:
 
 ## Installation & Usage
 
-For detailed installation and usage instructions, please check out the [Installation](https://tachibana-shin.github.io/rakuyomi/user-guide/installation/README.html) and [Quickstart](https://tachibana-shin.github.io/rakuyomi/user-guide/quickstart) sections on our user guide!
+For detailed installation and usage instructions, please check out the [Installation](https://yuuki-kagura.github.io/rakuyomi/user-guide/installation/README.html) and [Quickstart](https://yuuki-kagura.github.io/rakuyomi/user-guide/quickstart) sections on our user guide!
 
 ## Cookie Sync Bot
 
@@ -94,5 +94,5 @@ See [telegram-cookie-bot/README.md](telegram-cookie-bot/README.md) for deploymen
 
 ## Contributing
 
-For information on how to contribute to rakuyomi, please check out the [Setting up the Environment](https://tachibana-shin.github.io/rakuyomi/contributing/setting-up-the-environment.html) section on our guide!
+For information on how to contribute to rakuyomi, please check out the [Setting up the Environment](https://yuuki-kagura.github.io/rakuyomi/contributing/setting-up-the-environment.html) section on our guide!
 

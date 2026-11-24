@@ -1,3 +1,12 @@
+# v1.43.9 · 2026-11-24
+
+## [1.43.9](https://github.com/yuuki-kagura/rakuyomi/compare/v1.43.8...v1.43.9) (2026-11-24)
+
+
+### Bug Fixes
+
+* **update:** point updater and project links at yuuki-kagura/rakuyomi ([#3](https://github.com/yuuki-kagura/rakuyomi/issues/3)) ([8443f38](https://github.com/yuuki-kagura/rakuyomi/commit/8443f3841d1024f12c0d6011fd3d8906c6edd44c))
+
 # v1.43.8 · 2026-11-22
 
 ## [1.43.8](https://github.com/yuuki-kagura/rakuyomi/compare/v1.43.7...v1.43.8) (2026-11-22)
@@ -34,18 +43,3 @@
 ### Bug Fixes
 
 * recover from a silently dead backend and stop leaking temp files ([8be3a90](https://github.com/yuuki-kagura/rakuyomi/commit/8be3a90fd432ff300a2c608e4e5d41cdd490456a))
-
-# v1.43.4 · 2026-11-14
-
-## [1.43.4](https://github.com/yuuki-kagura/rakuyomi/compare/v1.43.3...v1.43.4) (2026-11-14)
-
-
-### Bug Fixes
-
-* **ci:** use macos-latest for the macOS build job ([85e3b78](https://github.com/yuuki-kagura/rakuyomi/commit/85e3b7815efe2750b157955e1f5689e5ac99cb6e))
-* trigger release ([17c7c96](https://github.com/yuuki-kagura/rakuyomi/commit/17c7c9615b532e46f7847860259b847da22314b0))
-
-
-### Performance Improvements
-
-* **cookie-bot:** stop registering bot commands on every cold isolate ([30d8002](https://github.com/yuuki-kagura/rakuyomi/commit/30d80029c0566587edc415dd23a57561d948a720))
