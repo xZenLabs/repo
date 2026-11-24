@@ -1,3 +1,21 @@
+# v1.5.0-beta.3 · 2026-11-24
+
+### Swap a dashboard card in place
+
+Long-press the heading or background of a card in the Reading dashboard, then choose its replacement. It keeps the same position and size. To bring back a built-in card, long-press its replacement and choose **Restore**.
+
+### Cards adapt to their space
+
+Book grids show more covers as a card grows. Small cards use short progress labels, clocks prioritize their first visible item, and action shortcuts show their icons. Fixed-size plugin widgets scale to fit, with taps mapped to their buttons and covers.
+
+### BookOrbit achievement medals
+
+The Home card and the achievement catalogue display BookOrbit’s icons and rarity colors. A small card can show three medals across or two in a vertical list. A larger card can show more when the data is available. Tap the card to browse earned and locked achievements. This uses your existing BookOrbit plugin connection.
+
+Tested in KOReader on an emulated Tolino Vision Color with 66 modules and shortcuts at three sizes. The same seven test books produced rows or grids of three, four and seven covers. A tap selected the expected book at each size. Physical HiBreak testing of these changes is still pending.
+
+To update, enable **Include preview releases** under **OrbitUI → System & maintenance → Updates**, check for updates, install and restart KOReader. For manual installation, download **orbitui.koplugin.zip** below.
+
 # v1.5.0-beta.2 · 2026-11-24
 
 ### Your next BookOrbit milestone on Home
@@ -70,15 +88,3 @@ Update through OrbitUI’s preview channel or install the attached **orbitui.kop
 Enable **Include preview releases** under **OrbitUI → System & maintenance → Update OrbitUI**, check for updates, and restart after installing.
 
 Tested with KOReader 2026.07.1 in the Tolino emulator. Physical Bigme and Kindle testing is pending.
-
-# v1.4.0-beta.5 · 2026-11-15
-
-## Text selection shortcuts
-
-- Select text and open **More… → Customize text selection menu**. Tap any of the six positions to choose what goes there.
-- Use actions offered by installed plugins, including **Hardcover quote** and KOAssistant quick actions. A KOAssistant shortcut follows the chosen action when the plugin reorders its list.
-- **More…** continues to show the full list for the current selection.
-
-To update in KOReader, enable **Include preview releases** under **OrbitUI → System & maintenance → Update OrbitUI**, check for updates and restart after installing.
-
-Tested with KOReader 2026.07.1 in the Tolino emulator, with KOAssistant and a test button that uses the same label mechanism as Hardcover. Physical Bigme testing is pending.

@@ -1,3 +1,20 @@
+# 26.11.24-beta · 2026-11-24
+
+### Memory Conductor v2 — Hardening & API Upgrades
+
+* **Earlier Startup Protection:** Installs Conductor hooks at module load time so plugins alphabetically before Storefront are protected during `:init()`.
+* **Long-Running Subprocess Support:** Auto-extends slot leases (up to `600s`) for active child processes, probes `waitpid` (`WNOHANG`) to reap leaked PIDs immediately, and skips locking `double_fork` spawns.
+* **NTP-Immune Monotonic Timing:** Uses KOReader's monotonic clock (`ui/time`) so Wi-Fi NTP time jumps cannot break subprocess TTLs or `1.5s` cooldowns.
+* **Faster Pre-`fork()` & Reclaim Handling:** Debounces `stabilizeBeforeFork` (`2.0s`) to avoid double GC sweeps, adds post-subprocess cooldowns, directly fans out `onMemoryReclaim(level)` so `return true` cannot block other plugins, and rate-limits repeat reclaims (`5s`/`10s`).
+* **Unschedule Fix:** Preserves `UIManager:unschedule`'s boolean return value and cancels multi-scheduled callbacks cleanly.
+* **Developer API:** Added `dedupe_key`, `lease_s`, tracked `foreground` slots (with idempotent `done()`), and `Conductor.getStats()`.
+
+**Docs:** [Memory Conductor & Developer API (Wiki)](https://github.com/ultimatejimmy/storefront.koplugin/wiki/9.-Memory-Conductor)
+
+
+
+**Full Changelog**: https://github.com/ultimatejimmy/storefront.koplugin/compare/26.11.21-beta...26.11.24-beta
+
 # 26.11.21-beta · 2026-11-21
 
 ### What's New: Storefront Memory Conductor
@@ -36,9 +53,3 @@ Fix a bug with the likes not always updating
 - Show the version number of plugins on the installed tab
 
 **Full Changelog**: https://github.com/ultimatejimmy/storefront.koplugin/compare/26.11.15-beta...26.11.17-beta
-
-# 26.11.15-beta · 2026-11-15
-
-- refine font catalog logic
-
-**Full Changelog**: https://github.com/ultimatejimmy/storefront.koplugin/compare/26.11.13-beta...26.11.15-beta

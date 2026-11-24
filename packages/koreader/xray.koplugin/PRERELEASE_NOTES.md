@@ -1,3 +1,22 @@
+# 26.11.24-beta · 2026-11-24
+
+## What's Changed
+
+### New Features
+- **Custom HTTP headers for Custom APIs**: Added `custom1_headers` and `custom2_headers` options to `xray_config.lua` so you can pass extra headers (one `Header-Name: value` per line) with your requests. Handy if your self-hosted endpoint or proxy sits behind something like Cloudflare Access.
+
+### Improvements
+- **Better memory management and background task coordination**: Added optional integration with Storefront's Memory Conductor. When Storefront is installed, X-Ray coordinates its background scans, catch-up fetches, and update checks to avoid memory spikes on low-RAM e-readers, clears caches when memory gets tight, and cleanly cancels background work when your device goes to sleep.
+- **Translation updates**: Updated UI translations and localized AI prompts across all supported languages.
+
+### Fixes
+* Translate Polish UI strings and fix README duplication by @Pepe-PL in https://github.com/ultimatejimmy/xray.koplugin/pull/171
+
+## New Contributors
+* @Pepe-PL made their first contribution in https://github.com/ultimatejimmy/xray.koplugin/pull/171
+
+**Full Changelog**: https://github.com/ultimatejimmy/xray.koplugin/compare/26.11.20...26.11.24-beta
+
 # 26.11.18-beta · 2026-11-18
 
 ## What's Changed
@@ -44,26 +63,3 @@ This release includes a major behind-the-scenes cleanup of the plugin, a fix for
 - **Cleaner request cancellation:** Canceling an active AI request now also stops any running sequential background tasks.
 
 **Full Changelog**: https://github.com/ultimatejimmy/xray.koplugin/compare/26.11.9...26.11.13-beta
-
-# 26.11.7-beta · 2026-11-07
-
-## Entity Underlining (optional new feature)
-
-You can now have X-Ray underline characters, locations, historical figures, and terms directly on your book pages as you read. Tapping any underlined name brings up an instant description pop-up without losing your place.
-
-A huge thank you to @Dukko for creating the original user patch that inspired and kicked off this native feature!
-
-**This feature is opt-in and fully configurable.**
-
-### What's New
-
-- **In-Book Entity Underlining**: Automatically underlines people, places, and terms found in your X-Ray data. Tapping an underlined item opens its summary right on the page.
-- **Customizable Underline Styles**: Choose from solid, wavy, dotted, dashed, or double underlines with adjustable line thickness and contrast to suit your screen.
-- **Tooltip & Footnote Displays**: Pick between a compact tooltip bubble pointing to the word or a bottom panel, along with customizable auto-close timers.
-- **Frequency & Category Controls**: Highlight every mention or keep things tidy by only underlining the first appearance per chapter. You can also toggle characters, locations, terms, or historical figures independently.
-- **Instant Inline Fetch Support**: When you look up and fetch a new entity while reading, it gets underlined across your book immediately.
-- **Smart Matching**: Dialogue transcripts, all-caps speaker tags, and chapter headings are cleanly detected without accidental matches on common lowercase words.
-
-*Note for users who previously installed Dukko's `2-xray-entity-footnotes.lua` patch: entity underlining is now built directly into the plugin, so the old patch file in your patches folder can be safely removed.*
-
-**Full Changelog**: https://github.com/ultimatejimmy/xray.koplugin/compare/26.11.6-beta2...26.11.7-beta

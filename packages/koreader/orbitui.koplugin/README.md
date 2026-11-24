@@ -22,7 +22,7 @@ day, how much you read this week and your activity over the last twelve weeks.
 Add the optional **BookOrbit achievements** card to browse badges and track your next goal. You can also choose the first six actions in the text selection
 menu. Library and Manga do less work when opening large shelves.
 
-**[Try 1.5.0-beta.2](https://github.com/komadorirobin/orbitui.koplugin/releases/tag/v1.5.0-beta.2)** · The BookOrbit achievements card shows your next milestone on Home, including how many books, pages, hours or days you have left when that unit is known. Bookshelf 6.6.0 keeps series boxes in their author or section group. On Android, safe mode skips an unchanged book once it has checked that the book has no cover. Adding a custom cover or choosing **Refresh metadata** triggers another check.
+**[Try 1.5.0-beta.3](https://github.com/komadorirobin/orbitui.koplugin/releases/tag/v1.5.0-beta.3)** · Long-press a Reading dashboard card to swap its module in place. Book grids show more covers in larger cards, and the BookOrbit achievements card displays medals with their icons and rarity colors. Tap it to browse the catalogue.
 
 FingerTips is included on touchscreens. While you
 select text, you can see the line above your finger. Lift your finger and drag
