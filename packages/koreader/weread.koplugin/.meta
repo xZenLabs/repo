@@ -4,14 +4,14 @@
 id=weread
 name=Weread
 version=1.7.1
-description=微信读书 koreader 插件，在 koreader 里阅读微信读书里的书籍、公众号文章，支持阅读进度同步，阅读时长上报和统计，本地书籍支持获取微信读书划线和想法内容，支持Kindle、Kobo等所有能安装 koreader 的设备。
+description=一款轻量、简约、省电的微信读书 koreader 插件，在 koreader 里阅读微信读书里的书籍、公众号文章，支持阅读进度同步，阅读时长上报和统计，本地书籍支持获取微信读书划线和想法内容，支持Kindle、Kobo等所有能安装 koreader 的设备。
 author=finlater
 category=media
 platforms=koreader
 dependencies=
 source=https://github.com/finlater/weread.koplugin
 stars=1112
-updated_at=2026-11-24T13:01:09Z
+updated_at=2026-11-24T14:01:10Z
 published_at=2026-11-18T17:57:29Z
 readme_url=packages/koreader/weread.koplugin/README.md
 readme_hash=50a2e9999ecc9f58d8e231e2d0dc65d812e2aea0
