@@ -1,3 +1,29 @@
+# v2.2.0 · 2026-11-25
+
+## Kobold 2.2.0
+
+<!--kobold-->
+Filter and sort the Files tab, and KOReader's Exit now quits properly.
+<!--/kobold-->
+
+### New
+
+- **Filter and sort in the Files tab**, next to the folder pill. Filter by All, Reading, Unread or Finished, and sort by name (A–Z or Z–A), date added, last opened or size. Folders stay on top, and your choice is remembered
+
+### Fixed
+
+- Exit KOReader (from the menu, a gesture, a custom action or More) didn't quit while Kobold was open. You went back to Kobold and then the file browser. It now quits straight away, from a book too
+
+### Install
+
+1. Download `Kobold.koplugin.zip` below
+2. Extract it and copy the `Kobold.koplugin` folder into KOReader's `plugins` folder
+3. Restart KOReader and open Kobold, or set it under **Start with > Kobold Home**
+
+On 1.1 or newer? Use **More > Check for updates** in Kobold.
+
+To uninstall, delete the `Kobold.koplugin` folder and restart KOReader.
+
 # v2.1.0 · 2026-11-18
 
 ## Kobold 2.1.0
@@ -142,38 +168,6 @@ A new search page, collections that work like the stock reader, Add to collectio
 - **Collections list** shows the book count beside each collection
 - **About page** now links to the source code and Ko-fi
 - **Menus** open beside the "..." you tapped, with an arrow pointing at it
-
-### Install
-
-1. Download `Kobold.koplugin.zip` below
-2. Extract it and copy the `Kobold.koplugin` folder into KOReader's `plugins` folder
-3. Restart KOReader and open Kobold, or set it under **Start with > Kobold Home**
-
-On 1.1 or newer? Use **More > Check for updates** in Kobold.
-
-To uninstall, delete the `Kobold.koplugin` folder and restart KOReader.
-
-# v1.3 · 2026-10-23
-
-## Kobold 1.3
-
-<!--kobold-->
-A new book menu and book details page, filter, sort and search when adding books to a collection, an icon style option, and fixes for the Series scrollbar and cover outlines.
-<!--/kobold-->
-
-### New
-
-- **Book menu**, tap the "..." on a book in My Books for Read now, View Details and KOReader Details. Hold any of the 4 recent books on Home for the same menu
-- **Book details page** with the cover, series, author and progress, a Read now button, and Synopsis and Details tabs
-- **Add books to a collection** now has filter, sort and search, tap the search pill to go back to the full list
-- **Book menu setting**, use Kobold's menu or go straight to KOReader's book menu
-- **Icons setting**, use Kobold's icons or KOReader's default icons for the status bar and nav bar
-
-### Fixed
-
-- **Series scrollbar** no longer jumps to the middle when only one series is left on a page
-- **Cover outlines** now sit right on the cover with no gap
-- **Italic text** in menus and settings uses a proper italic font instead of a wide one
 
 ### Install
 

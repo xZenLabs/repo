@@ -22,7 +22,7 @@ day, how much you read this week and your activity over the last twelve weeks.
 Add the optional **BookOrbit achievements** card to browse badges and track your next goal. You can also choose the first six actions in the text selection
 menu. Library and Manga do less work when opening large shelves.
 
-**[Try 1.5.0-beta.4](https://github.com/komadorirobin/orbitui.koplugin/releases/tag/v1.5.0-beta.4)** · Long-press a Reading dashboard card for its usual menu, then choose **Replace module…** to pick a new card. BookOrbit achievements appear on the first screen. The Day Mode button now shows the Solar Colour sun.
+**[Try 1.5.0-beta.5](https://github.com/komadorirobin/orbitui.koplugin/releases/tag/v1.5.0-beta.5)** · Browse your current books in a cover fan, put one book in focus, or keep the straight row. Hold the card to switch. A pictured invitation lets you add the Reading dashboard to Home after upgrading.
 
 FingerTips is included on touchscreens. While you
 select text, you can see the line above your finger. Lift your finger and drag
@@ -158,7 +158,14 @@ Library roots and configured scan depth determine coverage.
 ## Make Home useful to you
 
 On a fresh install, the setup guide preselects **Reading dashboard** with
-**Straight cover row**. Review and apply to add it as the first Home page.
+**Cover fan**. Review and apply to add it as the first Home page.
+After an update, a one-time invitation offers the same view if your Home
+dashboard is off. Choose **Enable Reading dashboard** or **No thanks**.
+If you already use the dashboard, OrbitUI keeps your chosen book display.
+Hold the ongoing-books card and choose **Ongoing book display** to switch between
+its original layout, **Book in focus** and **Cover fan**. Tap a smaller cover to
+preview that book, then tap **Read on** or the featured cover to open it. Swipe
+across the fan to browse. The choice is saved for this Home screen.
 Choose its cards, headings, colours, order and row sources:
 local To Be Read, new books, history, collections, saved shelves or BookOrbit.
 Each book row has its own paging arrows and swipe navigation.

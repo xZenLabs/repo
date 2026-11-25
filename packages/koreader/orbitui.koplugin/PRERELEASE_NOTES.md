@@ -1,3 +1,21 @@
+# v1.5.0-beta.5 · 2026-11-25
+
+### Pick how your current books look on Home
+
+Hold the ongoing-books card and choose **Ongoing book display**. **Cover fan** places your selected book in front. Swipe through the fan or tap a smaller cover to bring it forward. **Book in focus** pairs a large cover with the author, reading progress and time remaining. **Straight cover row** keeps several books side by side. If you use Silverfish, the footer can also show your pet’s reading days, books and generation.
+
+Fresh installations start with Cover fan. If you already have OrbitUI and your Reading dashboard is off, a one-time invitation shows a screenshot before you choose whether to add it. Existing dashboard users keep their chosen layout.
+
+### Dock, shelves and dashboard fixes
+
+- Hold a dock shortcut to make its destination your startup view.
+- Large Library and Manga shelves reuse sort orders and book details across visits and background index refreshes.
+- Fixed a redraw error that could leave part of Home visible again beneath the dock after replacing a dashboard card. BookOrbit achievement medals now blend into the card in day and night modes.
+
+The book displays and Silverfish footer were tested on a physical HiBreak. The invitation was tested in Swedish and English in KOReader on an emulated Tolino Vision Color, including a 600 × 800 screen.
+
+To install, enable **Include preview releases** under **OrbitUI → System & maintenance → Updates**, check for updates and restart KOReader after installation. For manual installation, download **orbitui.koplugin.zip**.
+
 # v1.5.0-beta.4 · 2026-11-25
 
 ### Dashboard long presses
@@ -74,23 +92,3 @@ Add **Vocab Word** to the Bookshelf start menu to review words saved in KOReader
 To update, enable **Include preview releases** under **OrbitUI → System & maintenance → Updates**, check for updates, then restart KOReader. For manual installation, use the attached **orbitui.koplugin.zip**. The stable channel offers **1.4.0**.
 
 Tested in KOReader 2026.07.1 on an emulated Tolino Vision Color with a local dictionary and an EPUB. Physical Bigme and Kobo checks are still open for this beta.
-
-# v1.4.0-beta.7 · 2026-11-18
-
-Tap **Reading streak** on Home to open the new **Reading log**. See reading time and pages over the last seven days, explore a twelve-week calendar, and tap a day to see which books you read. The Goal tab follows the goal already configured on your dashboard.
-
-**BookOrbit achievements** is a new optional Home card. The connected BookOrbit plugin supplies the latest earned badge and the next goal. To browse the full catalogue of earned and remaining badges on BookOrbit 3.8.0 or later, add a read-only BookOrbit API key. The card keeps the last results available offline.
-
-### Library and search
-
-- Library and Manga do fewer filesystem checks when preparing large shelves. The Next shelf preloads progress in short steps so you can keep navigating.
-- Manga folder boxes retain their display order without sorting books twice. Library folder matching, typo-tolerant search and word suggestions do less work.
-- You can clear a rating by tapping the selected star again. The BookOrbit Want to Read action now shows its feedback dialog reliably.
-
-### Home and file browser
-
-- Closing a book refreshes enabled reading statistics even when Home is already waiting to rebuild. Empty book modules avoid unnecessary page redraws. A fix found during emulator testing also keeps lightweight modules from crashing Home when their first item appears.
-- The file browser has independent shadow settings for list and mosaic views, stacked folder covers in lists, and a reading progress bar that uses the available row width.
-- Includes the latest reviewed SimpleUI 3.1.0 fixes and translation updates. Bookshelf is at 6.5.2.
-
-Update through OrbitUI’s preview channel or install the attached **orbitui.koplugin.zip**. The stable channel continues to offer 1.3.0.

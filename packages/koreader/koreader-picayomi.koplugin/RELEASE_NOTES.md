@@ -1,3 +1,13 @@
+# v1.6.8 · 2026-11-25
+
+### 中文
+
+- 修复源状态发生冲突后，关闭更新失败提示仍反复弹出、无法退出首页的问题。
+
+### English
+
+- Fixed an update error that repeatedly reopened after dismissal and prevented leaving the home screen when source settings conflicted.
+
 # v1.6.7 · 2026-11-22
 
 ### 中文
@@ -57,13 +67,3 @@
 - In paginated comics, repeated taps in the same direction that were queued together during a stall now turn just one page.
 - When memory is low, background processing skips large pages that cannot fit, leaving resources for the current page.
 - Readest now skips automatic pulls when opening or waking a comic or novel chapter and avoids checking Wi-Fi for automatic sync on exit. Manual sync remains available.
-
-# v1.6.3 · 2026-11-20
-
-### 中文
-
-- 黑白阅读时，部分原先因内存不足而打不开的大幅渐进式 JPEG 漫画现在可以按原图清晰度显示，无需切换缩略图。
-
-### English
-
-- In grayscale reading, some large progressive JPEG comic pages that previously ran out of memory can now open at their original resolution without switching to thumbnails.
