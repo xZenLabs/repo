@@ -1,3 +1,11 @@
+# v9.1.0 · 2026-11-25
+
+### New
+- Long-press a row in the "Mark book finished" list to change the date the book was finished.
+- The date can be moved to another year if the statistics DB has reading data in that year. The book is then ticked as finished there and unticked in the original year.
+- "Restore last read date" button: goes back to the book's last reading entry in the statistics DB. If that entry is in another year, the book moves back to it.
+- Rows with a hand-set date carry the usual "*" marker.
+
 # v9.0.0 · 2026-11-18
 
 ### New
@@ -26,9 +34,3 @@
 ### Changed
 - All-time "pages read" is now counted per book/page/day, the same way as Last 7 days, the monthly and yearly totals and the streak periods. A page read on several days counts once per day, so the all-time total always matches the sum of the per-day totals.
 - After updating, run "Reload data" once to refresh the cached all-time figure.
-
-# v8.7.8 · 2026-10-24
-
-### Changed
-
-- Reading calendar: without the cover shadow, a day's books are stacked from the bottom left (first book in front, the others behind it, up and to the right), which looks better than the shadowed layout without its shadow. The layout with the shadow is unchanged.
