@@ -1,0 +1,23 @@
+# Booksheet plugin for KOReader
+# https://github.com/ironicsans/booksheet.koplugin
+# zenpm:auto-scraped
+id=booksheet
+name=Booksheet
+version=1.0.0
+description=A one-page newspaper of book news for KOReader
+author=ironicsans
+category=utility
+platforms=koreader
+dependencies=
+source=https://github.com/ironicsans/booksheet.koplugin
+stars=5
+updated_at=2026-11-25T10:01:00Z
+published_at=2026-11-24T01:04:27Z
+readme_url=packages/koreader/booksheet.koplugin/README.md
+readme_hash=740ac5fd94b7d2b43c19afbaccb1bf0e20da2cdf
+release_notes_url=packages/koreader/booksheet.koplugin/RELEASE_NOTES.md
+release_notes_hash=6597f2ef48ce7826d2b49c73b7fc5d21a64fb93ead130f49324fe93802f29bae
+releases=[{"tag_name":"v1.0.0","assets":[{"name":"booksheet.koplugin.zip","url":"https://github.com/ironicsans/booksheet.koplugin/releases/download/v1.0.0/booksheet.koplugin.zip","size":26662,"digest":"sha256:5f60dde07fda6f15742df3ee1700ed07b88abf195360e7a5cdb3855f62782969"}],"name":"v1.0.0"}]
+source_type=release
+source_asset=booksheet.koplugin.zip
+size=26662
