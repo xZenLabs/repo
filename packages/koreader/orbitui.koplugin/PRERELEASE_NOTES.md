@@ -1,3 +1,22 @@
+# v1.5.0-beta.4 · 2026-11-25
+
+### Dashboard long presses
+
+Long-press a card to open its usual menu. Choose **Replace module…** to swap the card in place. **BookOrbit achievements** is on the first screen of the picker. Holding a book cover still opens its book actions.
+
+### A sun for Day Mode
+
+When night mode is active, the button for switching back to Day Mode shows the Solar Colour sun. You can pick separate icons for Day Mode and Night Mode. An existing Day Mode choice takes precedence.
+
+### Library search and finished books
+
+- Bookshelf search now matches uppercase and lowercase accented and Cyrillic letters. Searching for `ångström` finds `ÅNGSTRÖM`.
+- Two finished books that share a partial file checksum keep separate entries. Moving one or marking it as reading again keeps the other book’s completion record.
+
+Verified in Swedish KOReader on an emulated Tolino Vision Color. Physical HiBreak testing is still pending.
+
+To update, enable **Include preview releases** under **OrbitUI → System & maintenance → Updates**, check for updates, install and restart KOReader. For manual installation, download **orbitui.koplugin.zip** below.
+
 # v1.5.0-beta.3 · 2026-11-24
 
 ### Swap a dashboard card in place
@@ -75,16 +94,3 @@ Tap **Reading streak** on Home to open the new **Reading log**. See reading time
 - Includes the latest reviewed SimpleUI 3.1.0 fixes and translation updates. Bookshelf is at 6.5.2.
 
 Update through OrbitUI’s preview channel or install the attached **orbitui.koplugin.zip**. The stable channel continues to offer 1.3.0.
-
-# v1.4.0-beta.6 · 2026-11-16
-
-## What’s new
-
-- **Hide Home pages.** Open **OrbitUI → Home → Layout & modules** to hide a page and bring it back with its configured modules.
-- **Hide books from reading history.** Use **Hide from history** in History. Restore books from **Hidden books** in the Recent Books source settings. OrbitUI also excludes those books from its ongoing reading lists.
-- **File browser views.** SimpleUI 3.1.0 adds per-tab view and sort options, updated list rows and a flat view that includes books in subfolders. Open **OrbitUI → Dock & interface → File browser appearance** for the file browser’s settings.
-- **Bookshelf 6.5.2.** Spine marks such as the favorite icon update after a setting change. Kindle read flags and custom title and author metadata are handled more accurately.
-
-Enable **Include preview releases** under **OrbitUI → System & maintenance → Update OrbitUI**, check for updates, and restart after installing.
-
-Tested with KOReader 2026.07.1 in the Tolino emulator. Physical Bigme and Kindle testing is pending.
