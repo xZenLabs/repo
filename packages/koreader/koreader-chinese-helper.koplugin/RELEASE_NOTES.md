@@ -1,3 +1,21 @@
+# v2.26.0 · 2026-11-25
+
+Neutral tones of everyday words in learner mode (#83)
+- Learner mode now draws the neutral tone of common words the dictionary gives one: 时候
+  *shí hou*, 事情 *shì qing*, 回来 *huí lai*, 明白 *míng bai*, 名字 *míng zi*, 朋友 *péng you*
+  (447 words). Before, a word whose characters each have only one reading had no reading of
+  its own, so 时候 was drawn *shí hòu*.
+- Also inside longer words that the dictionary writes with full tones: 做生意 *zuò shēng yi*,
+  到时候, 儿媳妇, 发脾气, 晒太阳, 做买卖 and a few more.
+- Only learner mode is affected: the other settings never draw these characters.
+
+Reduplicated words (#77)
+- Repeated characters that no dictionary lists as a word now take one reading instead of the
+  uncertainty pair: 尽尽 *jìn jìn*, 撇撇嘴 *piě piě*, 写写画画 *xiě xiě*, 咋咋呼呼 *zhā zhā*
+  (it showed *zǎ/zé*), 长长的 *cháng cháng*, 晕晕乎乎, 挑挑拣拣 and about 40 more, found in
+  the reader's own books.
+- Repeats that are not one word keep their readings: 都得得罪 (*děi dé*), 吐蕃蕃部.
+
 # v2.25.0 · 2026-11-24
 
 One popup on screen at a time (#82)
@@ -83,21 +101,3 @@ Words first: the words around the tapped character come above the character's ow
 - On 128 judged words from classical texts, the 文言 entry has the needed sense 91% of the time
   (95% in 2.21.0), first 65% (61%), in its first two 73% (73%); the whole popup still 95%.
 - MOE's text is not bundled: only the yes/no decision is. The database grows by 0.5 MB, to 53.0 MB.
-
-# v2.21.0 · 2026-11-22
-
-文言 Mode: complete, purely classical entries, for characters and words (#67)
-- The 文言 entry now lists every classical sense the sources give, numbered, commonest first, and
-  always in full (no more caps of 8, 6 or 5). Senses that exist only in modern Chinese are left
-  out: 的 keeps *target; bull's-eye*, not the structural particle; 就 keeps *to approach*, not
-  *then*; 要 drops *need to*.
-- Words get 文言 entries too: 26,093 words, from Chinese Notes, Wiktionary and CC-CEDICT
-  (賤人 *a lowly person*, 北面 *to face north as a subject*, 所以 *that by which*). In 文言 Mode
-  they follow the tapped character's entry, above everything else.
-- Long entries: the commonest function characters run to 15–30 senses (之, 為, 將), and the popup
-  scrolls to the rest.
-- How it's built: Claude Haiku merged, ordered and marked each headword's senses; Claude Sonnet
-  checked again the senses that came only from CC-CEDICT and left out 3,103 as modern-only. On
-  128 judged words from classical texts, the entry has the needed sense 95% of the time (93%
-  before), in its first two senses 73% (77%), and the whole popup 95%.
-- The database grows by 6.1 MB, to 52.5 MB.

@@ -1,3 +1,47 @@
+# v9.0.0 · 2026-11-25
+
+## Page Scrubber — Patch notes
+
+## Summary
+
+Version 9.0 adds a new notes editor with the KiKome keyboard, a compact menu when you tap a highlight, and draggable cursors to adjust selections and highlights. The split menu gets a filter button (order, bookmarks, highlights or notes, style and color). There is also a new Automatic text size; Small, Medium and Large will be removed in a future release. You can now also add your own buttons to the selection menu: any button other plugins put in the highlight dialog can become its own button, with the icon you pick.
+
+## What's new
+
+### Notes menu (new) — Reading Pop-Ups → Notes menu
+- **Menu notes**: a new editor for writing notes, with a gray rounded field, **Cancel** / **Save** in the bottom corners and **Paste** for the selected text. Tap outside to cancel. Falls back to KOReader's dialog if it fails to load.
+- **Menu on highlight tap** (a compact pill next to the highlight: Delete, Style, Note, Copy, More) moved here from *Selection menu*.
+- Both are **off by default**, but turn on by themselves if the Scrubber Selection Menu is already enabled.
+- **KiKome keyboard** (on by default): used in the note editor and the *Export as…* prompt. It has ñ and accents, slide on the space bar to move the caret, and hold delete to clear. Turn it off to go back to KOReader's keyboard.
+
+### Selection menu and cursors
+- Cursors at each end of a selection (and of a highlight): drag them to adjust it.
+- **Auto (follows selection)** menu position: above the selection, or below if there is no room.
+- **Add button**: turn any button other plugins add to the highlight dialog (under *More*) into its own button, and pick an SVG icon for it.
+- Dictionary and Selection Menu visual resign.
+
+### Split menu
+- New **filter button**: order, show (All / Bookmarks / Highlights / Notes), highlight style and color. It turns black while a filter is on.
+
+### Look and feel
+- KiKome-style dialogs (list picker, bottom sheets, toasts, SVG picker) replace KOReader's pop-ups, and fall back to them if they fail to load.
+- *Reading Pop-Ups* is now split into submenus: **Dictionary**, **Selection menu** and **Notes menu**.
+- New **Automatic** text size, matched to KiKome.
+
+> [!IMPORTANT]
+> **Small / Medium / Large text sizes will be removed in a future release.** Try **Automatic** (Settings → Text size) and tell me if you don't like it before they go.
+
+### Other
+- Spanish strings for everything new.
+
+
+## Installation
+1. Download the zip named `page_scrubber.koplugin-<version>.zip` from the **Assets** section below (not "Source code").
+2. Unzip it and copy the `page_scrubber.koplugin` folder into `koreader/plugins/`.
+3. Restart KOReader.
+
+To update, replace the folder. To uninstall, delete it (and `koreader/patches/2--page-scrubber-font.lua` if you used the system font).
+
 # v8.6.1 · 2026-11-21
 
 ## Bug Fixes
@@ -139,26 +183,6 @@ To update, replace the folder. To uninstall, delete it (and `koreader/patches/2-
 *Small visual tweaks in formating. 
 
 
-
-## Installation
-1. Download the zip named `page_scrubber.koplugin-<version>.zip` from the **Assets** section below (not "Source code").
-2. Unzip it and copy the `page_scrubber.koplugin` folder into `koreader/plugins/`.
-3. Restart KOReader.
-
-To update, replace the folder. To uninstall, delete it (and `koreader/patches/2--page-scrubber-font.lua` if you used the system font).
-
-# v8.3.0 · 2026-10-26
-
-## 8.3 New features: Breadcrumb pins on the progress bar. 
-
-- **Breadcrumb pins on the progress bar.** New option *Breadcrumb pins in slider* under Settings → Layout → Progress bar (pin icon). When you jump from one page to another, the origin page is saved as a pin on the bar.
-  - Up to 3 dots are shown: the **origin** in dark gray, always visible (tap it to return there), and the **2 most recent** history pins in black.
-  - Works on the scrubber bar, the grids, and the TOC view.
-  - Mutually exclusive with the bookmark dots: when the option is on, the bar shows only breadcrumbs.
-
-### Details:
-- Pins are stored per book, in the document's metadata.
-- In EPUB, each pin also stores its position in the text (xpointer). If you change font, margins, or DPI, the pin still points to the same place.
 
 ## Installation
 1. Download the zip named `page_scrubber.koplugin-<version>.zip` from the **Assets** section below (not "Source code").
