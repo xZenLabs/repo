@@ -88,14 +88,13 @@ default, because the AI's answer differs from run to run.
   character underlined on the page while the popup is open ([The popup](#the-popup)).
 - **Classical Chinese**: the popup's 文言 Mode button puts the Classical dictionary's entries first,
   for the character and the words around it: every classical sense, commonest first, nothing
-  modern. On 128 words from classical texts the entry had the needed sense 95% of the time
+  modern. On 128 words from classical texts the popup had the needed sense 95% of the time
   ([Classical mode](#classical-mode)).
 - **Chinese definitions you can read**: tap any character in MOE's or an idiom dictionary's
   text and it opens its own popup in its place
   ([Tapping a character in the popup](#tapping-a-character-in-the-popup)).
 - **Translate** the whole sentence with KOAssistant and your own AI provider, or with KOReader's
-  built-in translator when KOAssistant is not installed
-  ([Translating the sentence](#translating-the-sentence)).
+  built-in translator ([Translating the sentence](#translating-the-sentence)).
 - **Pinyin and popup are separate switches**; nothing is prepared per book, the book file is
   never modified, and long-press and KOReader's own dictionary are untouched.
 
@@ -125,33 +124,30 @@ An entry CC-CEDICT gives only as a cross-reference (贤惠: "variant of 賢慧|�
 other dictionaries have: MOE idioms covers 5,470 chengyu in all, Xinhua idioms 30,200
 ([Chengyu](#chengyu)).
 
-Optional dictionaries are files you build yourself, because their licences do not allow this
-project to distribute them: a few commands on a computer, then a copy to the e-reader
-([Optional dictionaries](#optional-dictionaries)). Each dictionary's text is shown as its source
-writes it (MOE in traditional characters), or in simplified characters if you prefer
-([Dictionary text](#dictionary-text)).
+Optional dictionaries are files you build yourself on a computer, because their licences don't
+let this project distribute them ([Optional dictionaries](#optional-dictionaries)). Each
+dictionary's text is shown as its source writes it (MOE in traditional characters), or in
+simplified characters if you prefer ([Dictionary text](#dictionary-text)).
 
-Status: **2.15.0**, tested on a Boox Go 7 (Android, 300 dpi) with KOReader v2026.07.1.
+Tested on a Boox Go 7 (Android, 300 dpi) with KOReader v2026.07.1.
 
 ## Install
 
 1. Download `chinesehelper.koplugin.zip` from the
    [latest release](https://github.com/scartoon/koreader-chinese-helper/releases/latest) and unzip
    it. You get a `chinesehelper.koplugin` folder, which includes the database
-   (`data/chinesehelper.sqlite`, 52.5 MB).
+   (`data/chinesehelper.sqlite`, about 54 MB).
 2. Copy that folder into KOReader's `plugins` folder:
    - **Android** (Boox and others): `/sdcard/koreader/plugins/`, which appears as
      `koreader/plugins` in the device's internal storage over USB. With adb:
      `adb push chinesehelper.koplugin /sdcard/koreader/plugins/`
    - Other devices: the `plugins` folder inside KOReader's own folder.
 3. Restart KOReader.
-4. Optional: [build the optional dictionaries](#optional-dictionaries). Their licences don't let
-   this project share them, so you make them yourself on a computer; they add most of the
-   Chinese-language explanations and chengyu sources (the MOE dictionary alone adds 90,500
-   entries).
+4. Optional: [build the optional dictionaries](#optional-dictionaries) on a computer. They add
+   most of the Chinese-language explanations and chengyu sources.
 
-The folder must keep its name, `chinesehelper.koplugin`. The repository does not contain the
-database; to install from a clone, [build it](#building-the-database) first.
+The folder must keep its name, `chinesehelper.koplugin`. To install from a clone instead, [build
+the database](#building-the-database) first: the repository doesn't contain it.
 
 ## Usage
 
@@ -232,11 +228,9 @@ By default, "the 3,500 most common" means most common in modern written Chinese 
 <details>
 <summary>How to build and use your own ranks</summary>
 
-"Outside the 3,500 most common" means most common in modern written Chinese: the bundled ranks
-are wordfreq's for Chinese, mixed from web pages, Google Books, news, film and TV subtitles,
-Wikipedia, Twitter and Jieba's wordlist. If you mostly read novels or histories, you can rank
-characters by your own books instead, so that the characters that get pinyin are the ones that
-are rare in what you read. On a computer, with the e-reader connected over USB:
+The bundled ranks are wordfreq's for Chinese, mixed from web pages, Google Books, news, film and
+TV subtitles, Wikipedia, Twitter and Jieba's wordlist. To rank by your own books instead, on a
+computer with the e-reader connected over USB:
 
 ```sh
 python3 tools/fetch_books.py               # copy your EPUBs' text into build/ (when your library changes)
@@ -325,14 +319,14 @@ Every popup shows the sentence around the character, then every dictionary word 
 
 The plugin reads up to 7 Chinese characters before and after the tapped one (stopping at
 punctuation, a paragraph break or any non-Chinese character) and looks up every 1–8 character
-stretch containing the tapped character, in simplified and traditional forms. Nothing guesses
-where the words break.
+stretch containing the tapped character, in simplified and traditional forms
+([How it works](#how-it-works)).
 
-The list below is the order with **Words first** off. With it on (the default), the words come
-first, longest first, each with its own MOE Always entry; then the character's own entry, its
-MOE Always entry and its components, together; then the Chinese-language dictionaries' entries,
-last as always. The rank and the spoken-tone note stay on the character's own entry, and 文言 Mode's
-entries stay at the top. The buttons keep their order either way.
+From top to bottom, by default: the line of text and the title bar; 文言 Mode's entries, when it
+is on; the words around the character, longest first; the character's own entry, with its MOE
+entry and components; and last, the Chinese-language dictionaries' entries. With **Words first**
+off, the character's group comes before the words. The buttons keep their order either way.
+Each part:
 
 - **The text around the character**, on one line at the top: as much of its sentence as fits,
   at the Chinese text size (130% of the popup's by default), the character in bold and underlined. It grows outwards from the
@@ -342,7 +336,7 @@ entries stay at the top. The buttons keep their order either way.
 - **The title bar**: the tapped character on the left and, in a popup opened from the page, a
   button on the right that marks its reading here: **I know …** or **Remind me: …**
   ([Known and remind-me readings](#known-and-remind-me-readings)).
-- **The tapped character first**, with all its readings. The reading drawn on the page comes
+- **The tapped character's own entry**, with all its readings. The reading drawn on the page comes
   first, unmarked (you can see it). When nothing is drawn, the reading the resolver picked comes
   first. It is marked **· likely here** only when something in the text picked it: a dictionary
   word or special word around the character, a fallback dictionary's word, or a context rule.
@@ -376,7 +370,7 @@ entries stay at the top. The buttons keep their order either way.
   CC-CEDICT's entry too, cut to two lines ending in a small grey **[Tap to show more]** when
   longer; tap it to see all of it ([MOE Always](#moe-always)).
 - **The character's components**, indented under its own entry ([below](#character-components)).
-- **Then every dictionary word containing it**, longest first; words of the same length in
+- **Every dictionary word containing it**, longest first; words of the same length in
   reading order. Entries from the Chinese-language dictionaries (MOE, the 成語典, Xinhua and
   Moegirlpedia) for words CC-CEDICT lacks come last, after everything else, in larger type
   (**Chinese text size**). A word with several readings (东西 *dōngxī* "east and west" / *dōngxi*
@@ -513,9 +507,6 @@ With the optional MOE idioms or Xinhua idioms file, a chengyu gets a line of Chi
 <details>
 <summary>What the idiom files add, and how much they cover</summary>
 
-With the optional MOE idioms or Xinhua idioms file installed, a chengyu in the popup gets more
-than CC-CEDICT's English gloss:
-
 - **One line of Chinese explanation** under CC-CEDICT's (or Wiktionary's) entry, with its own
   small label: 一毛不拔 → *形容人非常吝啬。贬义。* (成语典). It comes from MOE idioms when it has
   the chengyu, otherwise from Xinhua idioms. Entries already in Chinese get no extra line.
@@ -576,17 +567,12 @@ The setting is global: it stays on for every popup, in every book and after a re
 the button again or untick the menu item. Popups opened from a popup's text follow it but have no
 button of their own.
 
-**Where the senses come from.** The Classical dictionary was built once, from the senses open
-dictionaries mark as classical, literary or archaic (Chinese Notes, English Wiktionary, Unihan,
-and CC-CEDICT's labelled senses) together with CC-CEDICT's other senses. An AI model (Claude
-Haiku) merged each headword's senses and ordered them for classical texts. Which senses count as
-classical is decided by evidence, not by the AI: a sense stays if a dictionary marks it classical,
-or if MOE (重編國語辭典) gives the same sense with a quotation from a classical work written up to
-1911. Senses classical and modern Chinese share but MOE quotes no classical text for, often the
-plainest ones (一 *one*, 有 *to have*), are left to the CC-CEDICT entry right below. Every sense
-has to cite the source lines it came from, and the build drops any that cite nothing. It is still
-machine-made, and the order is the model's judgement, so if a sense looks odd, check it against
-CC-CEDICT or MOE. The details are below.
+**Where the senses come from.** Open dictionaries (Chinese Notes, English Wiktionary, Unihan,
+CC-CEDICT), merged and ordered for classical texts by an AI model (Claude Haiku). Whether a sense counts as classical is decided
+by evidence, not by the AI: a dictionary marks it classical, or MOE quotes a classical work for
+it. Some plain senses shared with modern Chinese (一 *one*, 有 *to have*) are left to the
+CC-CEDICT entry below. The order is still the model's judgement, so if a sense looks odd, check
+it against CC-CEDICT or MOE. Details below.
 
 <img src="docs/classical.png" alt="Popup for 之 in 三国演义's 窦武、陈蕃谋诛之: the line 时有宦官曹节等弄权，窦武、陈蕃谋诛之，作事不密，反为所害，中涓自此愈横。 with 之 marked; the title bar, 之 on the left and the buttons 文言 Mode ✓ and Remind me: zhī on the right; first 字频 69, then the label 文言 on a row of its own and the Classical entry, its senses numbered: 之, 1. him; her; them; that, 2. it (object pronoun), 3. genitive marker; of (possession), 4. attributive marker…, 5. particle infixed in a subject-predicate construction…, 6. to go, 7. to arrive; to go to, and on to 18, with a scroll bar; then the buttons 之, Translate & analyze the surrounding sentence [AI] and Close">
 
@@ -631,9 +617,9 @@ While Wi-Fi is on, the popup's Translate button sends the whole sentence around 
 <details>
 <summary>How the sentence is found and sent</summary>
 
-While Wi-Fi is on and connected, the popup from the page has one more button on a row of its
-own (popups opened from a popup's text do not). It closes the
-popup and sends **the whole sentence containing the tapped character**:
+The button is on a row of its own in the popup from the page (not in popups opened from a
+popup's text). It closes the popup and sends **the whole sentence containing the tapped
+character**:
 
 ![Popup for 窃 at the top of the page, its line 孔乙己便涨红了脸，额上的青筋条条绽出，争辩道：“窃书不能算偷……窃书！ with 窃 marked; the buttons 文言 Mode and Remind me: qiè in the title bar; 字频 2,026, the label CEDICT, 窃 • 竊 qiè to steal; secretly; (humble) I, its parts 穴 xué and 切 qiè labelled MMAH, then a 窃 button, Translate & analyze the surrounding sentence [AI] and Close; above and below it the page of 孔乙己, the popup covering 窃's own line](docs/translate.png)
 
@@ -682,6 +668,14 @@ flowchart LR
     P --> U["Popup"]
     Q --> U
 ```
+
+The data behind those steps is more than dictionaries: word frequencies from a large mixed
+corpus (wordfreq) score the split and pick each character's default reading; 952 context rules
+learned from 79,117 labelled sentences are right 99.9% of the time they apply, on held-out
+ones; and a few
+hundred checked corrections sit on top (function-word defaults, unusual readings such as 单于
+*chányú*, neutral tones CC-CEDICT misses). No model runs on the e-reader, only lookup tables
+built in advance. See [Where the knowledge comes from](docs/how-it-works.md#where-the-knowledge-comes-from).
 
 ## Readings
 
@@ -821,9 +815,17 @@ with several readings, so it is the hard case.
 | 5,000 | 260 | 93.8% | 97.3% | 28.8% | 99.67% |
 | 7,000 | 42 | 97.6% | 100.0% | 45.2% | 100.00% |
 
-Learner mode, 500 and 1,000 have no rows. The characters they add are common ones, and the
-pinyin drawn is always the reading the popup marks, so the popup's figures in the next paragraph
-largely cover them.
+**Learner mode** (every character drawn) was measured separately, on the reader's own books
+(#35): 300 occurrences of characters with several readings, drawn at random from 10 books held
+out of all tuning, each judged by Claude (not by a person) from the sentence and the
+dictionary's readings. Before the 2.27.0 fixes, 282 were right, 7 were drawn as a pair that
+includes the right reading (得 *de/děi*), and 11 differed: 7 of those were neutral-tone
+conventions rather than errors (一个 *ge* or *gè*, 战术上 *shàng* or *shang*), 4 were real
+errors, since fixed. So about 98.7% of these characters get the right letters and tone, 94.0%
+counting pairs and every neutral-tone difference as wrong. They make up 34% of the characters in
+those books, so overall about 99.5% (98.0% on the strict count). With 300 items the
+uncertainty is roughly ±2 points. Levels 500 and 1,000 have no rows: the pinyin drawn is
+always the reading the popup marks, so the popup's figures below largely cover them.
 
 The last column weights every character the plugin would draw by how often it occurs in ordinary
 text (wordfreq), counting characters with a single reading as right. It is an estimate from
@@ -907,14 +909,12 @@ They are shown, never used: MOE never decides the pinyin drawn on the page or th
 in the popup.
 
 Under MOE in the **Dictionaries** menu, **MOE for single characters** and **MOE for words** are
-each **off**, **fallback** (only when CC-CEDICT doesn't have it) or **always**. Both default to
-fallback (characters were always in 2.5.0 to 2.5.2); words set to always show MOE's
-entry under CC-CEDICT's for every word around the character too. Switching MOE off turns off
+each **off**, **fallback** (only when CC-CEDICT doesn't have it, the default) or **always**.
+Words set to always show MOE's entry under CC-CEDICT's for every word around the character too. Switching MOE off turns off
 both. **Collapse long entries** sets the number of lines (1, 2 or 3) or never.
 
-Always needs a MOE file built with 2.5.0 or later, which also keeps the headwords CC-CEDICT has
-(in 2.5.0, 28.2 MB instead of 17.0 MB). With an older file, Always works as fallback and **Status** says to
-rebuild it: `git pull`, then `.venv/bin/python tools/build_moe.py` (or `tools/build_optional.py
+Always needs a MOE file built with 2.5.0 or later, which also keeps the headwords CC-CEDICT has.
+With an older file, Always works as fallback and **Status** says to rebuild it: `git pull`, then `.venv/bin/python tools/build_moe.py` (or `tools/build_optional.py
 --only moe --force`), and copy the new file over the old one ([below](#optional-dictionaries)).
 On a Boox Go 7 the popup takes about 4 ms longer to build with MOE Always (25 ms against 21.5
 ms, median of 24 taps on common characters).
@@ -991,7 +991,7 @@ goes on the device. `--all` adds CBDB office titles; `--only moe,cbdb` builds ju
 builds it again.
 
 The scripts also read the plugin's database, to leave out words CC-CEDICT already has. The
-repository doesn't contain it, so they take it from the latest release the first time (19 MB).
+repository doesn't contain it, so they take it from the latest release the first time (a 22 MB download).
 
 Or run one script for each dictionary you want:
 
@@ -1074,13 +1074,12 @@ Whatever the licence, the files you build are for your own reading: don't share 
 
 ### Bundled data
 
-Everything the plugin needs is in one SQLite database (52.5 MB): CC-CEDICT, the Wiktionary and Wikipedia fallback dictionaries, the Classical dictionary, character components and the reading tables.
+Everything the plugin needs is in one SQLite database (about 54 MB): CC-CEDICT, the Wiktionary and Wikipedia fallback dictionaries, the Classical dictionary, character components and the reading tables.
 
 <details>
 <summary>What the database holds</summary>
 
-Everything the plugin needs is in one SQLite database,
-`chinesehelper.koplugin/data/chinesehelper.sqlite` (52.5 MB):
+The database is `chinesehelper.koplugin/data/chinesehelper.sqlite`:
 
 - **CC-CEDICT** (`entries`): 125,397 entries, the popup's dictionary.
 - **Fallback dictionaries** (`fallback`): English **Wiktionary** entries for words CC-CEDICT does
@@ -1113,7 +1112,7 @@ The database is not in the repository; it comes in each release's zip. You only 
 <summary>How to build it, and its sources' versions</summary>
 
 The database changes completely with each CC-CEDICT update, so it is **not committed** (every
-rebuild would add another 36 MB of binary history); it is attached to each GitHub release inside
+rebuild would add another 54 MB of binary history); it is attached to each GitHub release inside
 the ready-to-install zip. The small hand-made and learned inputs it is built from are in
 [`data/`](data/README.md). To rebuild it (Python 3):
 
@@ -1193,20 +1192,16 @@ On a Boox Go 7, working out a page's pinyin takes about 13 ms on average (about 
 Measured on a Boox Go 7:
 
 - **A page turn**: working out the pinyin for a page takes 13.4 ms on average. On a dense page
-  of a history book (measured in 2.8.0) it is a median 30 ms at the default level and 51.5 ms in
-  learner mode, about 200 characters annotated; in 2.25.0, which splits every run into words, a
-  median 56 ms in learner mode (47 ms in 2.24.0 on the same pages). The only query a page can make is one
-  Wiktionary lookup, when an uncertain rare character on it is left undecided (results are
-  cached).
+  of a history book it is a median 30 ms at the default level (measured in 2.8.0) and 56 ms in
+  learner mode, about 200 characters annotated (2.25.0, which added splitting each run into
+  words; 47 ms before). The only query a page can make is one Wiktionary lookup, when an
+  uncertain rare character on it is left undecided (results are cached).
 - **First load**: the reading tables are read into memory when the first page is drawn, in about
   230 ms, once per KOReader session.
-- **A tap**: from the tap to the popup built, 17–20 ms median (18–29 ms mean) with Wiktionary,
-  CBDB, the MOE dictionary, Wikipedia titles and Moegirlpedia, with the Translate button showing,
-  measured in 1.5, before the components, the line of text and the book's font were added. In
-  2.5.0 the popup took a median 21.5 ms to build, 25 ms with [MOE Always](#moe-always).
-  Each fallback dictionary adds at most one indexed query per tap; the two idiom files, each up
-  to one more for their lines and Origin & Usage views, were not timed. The first tap after opening a book
-  takes 20–30 ms; the optional files are opened when first needed (the MOE file in 1–3 ms).
+- **A tap**: from the tap to the popup built, a median 21.5 ms, 25 ms with
+  [MOE Always](#moe-always) (measured in 2.5.0). Each fallback dictionary adds at most one indexed query per tap, and
+  each idiom file up to one more (not timed). The first tap after opening a book takes 20–30 ms;
+  the optional files are opened when first needed (the MOE file in 1–3 ms).
 - **Memory**: the dictionaries are read from the database, not loaded into memory; using them
   adds about 2 MB (KOReader about 133 MB in all).
 
@@ -1282,8 +1277,7 @@ glyph variants (偸, 淸, 鎗) become the standard forms and its corner quotes �
 <details>
 <summary>How the screenshots are taken and checked</summary>
 
-`tools/make_screenshots.py` regenerates every image in this README on a Boox Go 7 over adb: it
-opens the sample book at fixed pages with fixed reader settings, taps, and saves cropped 16-grey
+The script opens the sample book at fixed pages with fixed reader settings, taps, and saves cropped 16-grey
 PNGs to `docs/`. Before an image is saved, the page's exact text goes through the plugin's own
 Lua code (`tools/shot_gate.py`, with every dictionary): the pinyin drawn must be the shot's
 hand-checked list, each popup must show the expected lines, and KOReader's log must agree (the

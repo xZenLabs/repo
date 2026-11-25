@@ -1,3 +1,16 @@
+# v2.27.0 · 2026-11-25
+
+
+Learner-mode accuracy on the reader's own books (#35)
+- Measured: 300 random occurrences of characters with several readings, from 10 held-out
+  books, judged by Claude. About 98.7% get the right letters and tone; 94.0% counting pairs
+  (得 *de/děi*) and neutral-tone differences as wrong. The README's Accuracy section has the
+  details.
+- Fixed the four errors it found: 咳咳 (a cough) *ké ké*, adverb + 地点头 *de diǎn tóu*, the
+  rank title 五大夫 *wǔ dà fū*, and the name 李泌 *Lǐ Bì*.
+- g2pW (a neural model) was compared over 262,634 sampled occurrences. Most of its
+  disagreements were its own Taiwan readings (和 *hàn*, 包括 *guā*), so no other fixes came from it.
+
 # v2.26.0 · 2026-11-25
 
 Neutral tones of everyday words in learner mode (#83)
@@ -83,21 +96,3 @@ Words first: the words around the tapped character come above the character's ow
 - Turn it off in the popup settings (after **Show character components**) to have the character
   first, as before. It applies to popups opened from a popup too.
 - Suggested by Generalhooha in #68.
-
-# v2.22.0 · 2026-11-22
-
-文言 Mode: evidence, not an AI's judgement, decides which senses are classical (#69)
-- A sense stays in the 文言 entry if a dictionary marks it classical (Chinese Notes, Wiktionary,
-  CC-CEDICT's own labels), or if MOE (重編國語辭典) gives the same sense with a quotation from a
-  classical work written up to 1911. Vernacular novels, drama and anything after the Qing don't
-  count. This replaces 2.21.0's AI check, which wrongly left out about 1 in 6 of the senses it
-  removed.
-- Back in: 邦交 *diplomatic relations* (《周禮》), 外侮 *foreign aggression* (《左傳》), 先行 *to
-  proceed in advance* (《漢書》), and about 6,700 other senses. Still out: 就 *then*, 要 *need
-  to*, 的 *of*.
-- Left to the CC-CEDICT entry below: shared senses MOE quotes no classical text for, often a
-  character's plainest one (一 *one*, 人 *person*, 有 *to have*, 是 *to be*). About 6,400 senses
-  leave the 文言 entry.
-- On 128 judged words from classical texts, the 文言 entry has the needed sense 91% of the time
-  (95% in 2.21.0), first 65% (61%), in its first two 73% (73%); the whole popup still 95%.
-- MOE's text is not bundled: only the yes/no decision is. The database grows by 0.5 MB, to 53.0 MB.
