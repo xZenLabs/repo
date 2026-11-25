@@ -1,3 +1,11 @@
+# v9.2.0 · 2026-11-25
+
+### New
+
+- Achievement cards in the Cards look now show each achievement's description under its name. #111 Thanks: @NijatTagizada 
+- Locked achievements with a numeric goal show their progress (e.g. 19 / 24 or 01:53 / 05:00) plus a full-width progress bar.
+- New Fonts → Achievements group with separate fonts for the title, description/date/progress, big value and label. The Classic look shows only the title font.
+
 # v9.1.0 · 2026-11-25
 
 ### New
@@ -28,9 +36,3 @@
 ### Fixed
 
 - The Achievements info dialog appearing behind the list when SimpleUI is installed #87 (Thanks: @NijatTagizada )
-
-# v8.7.9 · 2026-10-28
-
-### Changed
-- All-time "pages read" is now counted per book/page/day, the same way as Last 7 days, the monthly and yearly totals and the streak periods. A page read on several days counts once per day, so the all-time total always matches the sum of the per-day totals.
-- After updating, run "Reload data" once to refresh the cached all-time figure.

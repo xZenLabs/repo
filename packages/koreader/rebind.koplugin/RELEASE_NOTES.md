@@ -1,3 +1,39 @@
+# v2.5.0 · 2026-11-25
+
+## [2.5.0](https://github.com/rameezk/rebind.koplugin/compare/v2.4.0...v2.5.0) (2026-11-25)
+
+Rebind can now give your books an ISBN, and use the ISBN printed inside a book to find the right match.
+
+Most EPUBs carry no ISBN in their metadata. Rebind then has to search by title and author, which often turns up several matches or the wrong edition. Plenty of those books still print their ISBN on the copyright page, so Rebind now reads it and looks the book up by it first. When you rebind a book, it also writes the ISBN of the edition you picked into the book, so it is easier to match next time.
+
+### The ISBN field
+
+- The picker has an "ISBN" field, just after "Publisher". It shows the ISBN your book already has and the ISBN of the edition you picked.
+- Picking a different edition changes the proposed ISBN to match it.
+- You can type your own ISBN or clear the field. An ISBN-10 is saved as its ISBN-13. If what you type isn't a valid ISBN, Rebind says "Enter a valid ISBN, or leave it empty to clear."
+- Clearing the field only removes the ISBN Rebind wrote. The identifier the EPUB uses for itself is never changed.
+
+### Finding books by the ISBN inside them
+
+- If a book's metadata has no valid ISBN, Rebind looks for one at the start and end of the book, such as on the copyright page. If it finds one, it tries that ISBN first and falls back to title and author.
+- When a book prints several ISBNs, the one labelled as the ebook edition comes first.
+- When you search a single provider, the "ISBN" box is already filled in with the ISBN found in the book.
+
+### Rebinding several books
+
+- A book matched by an ISBN found in the book becomes a sure match if the match has the same title or author as the book. A folder of books with no ISBN in their metadata can now mostly be rebound in one tap.
+- If neither matches, the book goes to review with that match ready to check, so nothing is written without you seeing it.
+- These rows say "ISBN from the book" above the provider, so you can tell them apart from books matched by the ISBN in their metadata.
+- "Rebind N sure matches" also writes each book's ISBN along with its other changes.
+
+
+### Features
+
+* books with an isbn from their copyright page rebind in one tap when the title or author agrees ([#177](https://github.com/rameezk/rebind.koplugin/issues/177)) ([dbff305](https://github.com/rameezk/rebind.koplugin/commit/dbff305aca4a5a8ba269e1fd9640e4d1f7c0af5b))
+* books without a metadata isbn are looked up by the isbn on their copyright page ([#174](https://github.com/rameezk/rebind.koplugin/issues/174)) ([f147cc1](https://github.com/rameezk/rebind.koplugin/commit/f147cc19a39822429a94e0f405230f180c429eb1))
+* rebinding a book gives it the isbn of the edition you picked ([#176](https://github.com/rameezk/rebind.koplugin/issues/176)) ([dcae7ea](https://github.com/rameezk/rebind.koplugin/commit/dcae7ea7b41dd698a5db87d46fc82c216c3f5d3e))
+* see, edit and clear a book's isbn in the picker ([#173](https://github.com/rameezk/rebind.koplugin/issues/173)) ([605f4d2](https://github.com/rameezk/rebind.koplugin/commit/605f4d27125eab4de483fb7f96e72f429703e484))
+
 # v2.4.0 · 2026-11-16
 
 ## [2.4.0](https://github.com/rameezk/rebind.koplugin/compare/v2.3.0...v2.4.0) (2026-11-15)
@@ -121,20 +157,3 @@ Long-pressing a book in Collections, History or file search now shows the Rebind
 
 * pick an edition automatically when a book matches by title and author ([#85](https://github.com/rameezk/rebind.koplugin/issues/85)) ([ac567e1](https://github.com/rameezk/rebind.koplugin/commit/ac567e1a2230013439828315b3f6da7082dd421a))
 * tidy the picker screens so lists close from the header and long labels fit ([#83](https://github.com/rameezk/rebind.koplugin/issues/83)) ([b4fe5ae](https://github.com/rameezk/rebind.koplugin/commit/b4fe5ae01ef728c3d16241b8c9cb050c28e43746))
-
-# v2.0.0 · 2026-10-07
-
-## [2.0.0](https://github.com/rameezk/rebind.koplugin/compare/v1.6.0...v2.0.0) (2026-10-07)
-
-Rebind 2.0 redesigns its interface so fixing a book takes less scrolling, fewer taps and less guessing.
-
-- **Far less scrolling.** Each field is now a short list of values instead of rows of buttons, so a whole book fits on one or two screens of a 6" e-reader.
-- **Only what needs a decision.** Fields that already match Hardcover are folded away, so you only look at the ones that differ.
-- **You know where a value came from.** Each value is tagged book, Hardcover, custom, translated or removed, and machine translations are shown in italics so they stand out.
-- **Mistakes are caught before anything is written.** A name clash at the destination is flagged before Apply instead of after the book is saved, and closing only asks to discard when you've changed something.
-- **Renaming and sorting are in one place.** Backup, folder and filename settings moved to one Save as screen. It shows the exact destination path and remembers your choices, and the "Move into" popup after Apply is gone.
-- **Templates you can judge at a glance.** Each folder and filename template is shown as it will look for this book, not just as a pattern.
-- **Write your own templates.** When none of the ready-made templates fit, write a custom folder or filename template. Tap to insert tokens like Title, Author and Series #, check the Example preview as you go, and use Help to see each token's value for this book.
-- **Rename or move on its own.** Apply now renames or moves a book even when its metadata doesn't change.
-- **Works without Hardcover.** Choose "Don't use Hardcover", or carry on when the plugin is missing or a lookup fails, and edit every field by hand.
-- **New field:** first published, saved as the book's year.
