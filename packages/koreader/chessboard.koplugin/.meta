@@ -1,0 +1,22 @@
+# Chessboard plugin for KOReader
+# https://github.com/FelipeMarelli/chessboard.koplugin
+# zenpm:auto-scraped
+id=chessboard
+name=Chessboard
+version=0.17.1
+description=Read chess books without a real board. A floating, interactive chessboard for your e-reader that lets you play out every move right on the page. KOReader plugin.
+author=FelipeMarelli
+category=games
+platforms=koreader
+dependencies=
+source=https://github.com/FelipeMarelli/chessboard.koplugin
+stars=5
+updated_at=2026-11-26T19:01:03Z
+published_at=2026-11-22T03:01:04Z
+readme_url=packages/koreader/chessboard.koplugin/README.md
+readme_hash=347ec22afc2edb150ca635c4e714daaa5fe764d0
+release_notes_url=packages/koreader/chessboard.koplugin/RELEASE_NOTES.md
+release_notes_hash=80c8c41d4acbd8b416c2953378c9c2a510cb67dbb4fdbf3d68329a1cb385d79a
+releases=[{"tag_name":"v0.17.1","assets":[{"name":"source-code.zip","url":"https://api.github.com/repos/FelipeMarelli/chessboard.koplugin/zipball/v0.17.1"}],"name":"v0.17.1"},{"tag_name":"v0.17.0","assets":[{"name":"source-code.zip","url":"https://api.github.com/repos/FelipeMarelli/chessboard.koplugin/zipball/v0.17.0"}],"name":"v0.17.0"},{"tag_name":"v0.10.1","assets":[{"name":"source-code.zip","url":"https://api.github.com/repos/FelipeMarelli/chessboard.koplugin/zipball/v0.10.1"}],"name":"v0.10.1"},{"tag_name":"v0.10.0","assets":[{"name":"source-code.zip","url":"https://api.github.com/repos/FelipeMarelli/chessboard.koplugin/zipball/v0.10.0"}],"name":"v0.10.0"}]
+source_type=source
+source_url=https://codeload.github.com/FelipeMarelli/chessboard.koplugin/zip/refs/heads/main
