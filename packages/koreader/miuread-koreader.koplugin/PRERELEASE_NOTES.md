@@ -1,3 +1,9 @@
+# v6.7.0-beta.19 · 2026-11-26
+
+- 从已下载 EPUB 恢复微信读书的同步信息。阅读时长可独立补传，保留手机上的较新进度。
+- 登录凭据在书架加载前保存。批注和书架操作优先采用服务端明确的回执。
+- 在线正文优先于封面、书籍信息和预取。打开书后菜单响应恢复及时。
+
 # v6.7.0-beta.18 · 2026-11-26
 
 - 内核改造，全面切换为原生
@@ -18,7 +24,3 @@
 - fix(readtime): aggregate E-Ink offline reports and preserve unsent time (#184)
 - fix(readtime): reserve safe Web retries before dispatch
 - fix(readtime): exclude inactive gaps from Web reading time
-
-# v6.5.0-beta.25 · 2026-11-07
-
-- 本次更新准备发布 MiuRead 6.5.0-beta.24，重点修复 EPUB 多级目录问题，并完善 GitHub Release 与 Issue 自动关联机制。
