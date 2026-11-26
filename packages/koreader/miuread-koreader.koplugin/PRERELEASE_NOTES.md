@@ -1,3 +1,7 @@
+# v6.7.0-beta.18 · 2026-11-26
+
+- 内核改造，全面切换为原生
+
 # v6.6.0-beta.1 · 2026-11-21
 
 - fix: 修复 E-Ink 授权续期与优化交互层级 (#191, #192)
@@ -18,15 +22,3 @@
 # v6.5.0-beta.25 · 2026-11-07
 
 - 本次更新准备发布 MiuRead 6.5.0-beta.24，重点修复 EPUB 多级目录问题，并完善 GitHub Release 与 Issue 自动关联机制。
-
-# v6.5.0-beta.24 · 2026-11-07
-
-- perf(reader): skip toolbar state refresh when reader toolbar is disabled
-- perf(store): use ZIP central directory for EPUB identity instead of 1.75MB read and unzip subprocesses
-- perf(reader): gate WeRead-only and toolbar-only onReaderReady tasks on local books
-- fix(lifecycle): avoid 18s rebuild candidate false positive on CloseDocument
-- perf(store): bound settings_equal seen stack, deduplicate incremental flush pass, and skip clean native close flushes
-- perf(reader): isolate plugin-mode native books from recent-read writes, idle transition timers, and eager thought link guard
-- fix(readtime): allow time reports when rereading finished books (#183)
-- fix(readtime): preserve Web report status and failure scope
-- feat(readtime): include Web reports in opt-in diagnostics
