@@ -1,3 +1,22 @@
+# v2.2.0 · 2026-11-26
+
+## 2.2.0 (2026-11-26)
+
+The big one since 2.0.2, tested on the Kobo as 2.1.7 to 2.1.37 (their notes are below). Nothing you set is changed by the update; new options are off, except Reading Stats on a new install.
+
+- **Reading Stats** (Books › Book Page: Reading Stats; on for new installs). **Book | Stats | All Time** at the top of the Book Page.
+  - **Stats:** one book at a glance in tiles: time, days, pace, what's left and when you'll likely finish, this week, Day by Day (a ring of the whole read, a wedge a day), the calendar (tap a day), chapters, pages you came back to, your reads, habits and **Moments**. Highlights, bookmarks, X-Ray and Glimpse chips open their own windows.
+  - **This Kobo | BookOrbit:** your KOReader statistics, or BookOrbit's reading sessions with the API key (every device and listening). A book never read on this Kobo opens on BookOrbit.
+  - **All Time:** all your reading: total time (tap: the calendar in time), days (tap: in pages), books finished, the months ring, this week, authors, genres, habits, moments; marked-finished books count.
+  - **Your Year:** a ring of the year coloured by book, the books finished, and the year's shelf (Bookshelf's spines; tap one for that book).
+  - **Moments and rewards:** ReadMastery's achievements, levels and tiers for the book (with the page and chapter from now on), X-Ray (or KOAssistant's X-Ray) and Glimpse's pictures, all spoiler-free (only up to where you are).
+  - **Offline:** everything you've opened is saved; **BookOrbit Account › Save All Stats For Offline** saves all your BookOrbit stats at once (Wi-Fi on, only when you tap it).
+- **The Book Page, redesigned:** ‹ OrbitShelf · Book | Stats | All Time · More ▾ · ✕; one main button beside the cover, the book's files as chips (tap to pick what Download gets for this book), the description, the series strip and More by / Similar books. **More ▾**: Sync (ShelfSync, BookOrbit), Link, Highlights / Bookmarks / X-Ray, Manage Downloads, Settings.
+- **Settings is a window:** groups on the left, their settings on the right, each in its own box; open until ✕ or Back; hold one for what it does. Advanced sits above Help. **Help › Quick Setup** (also shown once after this update): Hold A Book Opens, Reading Stats, Colour, Popup Style, Cover Marks, Hero Buttons, Footer Critter in one popup.
+- **Look:** **Colour** (off: everything plain; on: buttons, sections, boxes and Settings in colour), **Colour Theme** (Vibrant, Pastel, Ocean, Sunset, Forest, Kobo Mono, Custom), **Popup Style** (Standard, Rainbow, or Solid in a colour you pick) and **Screen Flashes** for each kind of screen. Popups are sheets in sections with a line between each item.
+- **Fixes:** Look's choices (Colour Theme, Popup Style, Screen Flashes) are kept after a restart; the API key saved by BookOrbit Tweaks opens in OrbitShelf (shared keyring); Bookshelf no longer flashes or ghosts the cover when closing with a book open or opening one. Create API Key File: a missing file-system reference fixed.
+- **Diagnostics** (Advanced › Diagnostics) also logs the BookOrbit stats look-ups and Your Year shelf taps, and times the Book Page and stats pages.
+
 # v2.0.2 · 2026-11-17
 
 ## 2.0.2 (2026-11-17)
@@ -61,9 +80,3 @@ Show On Device / Not On Device: a shelf can show only the books on the device, o
 Download progress: big downloads show their % in the corner.
 
 Note: Spines (Series / Authors / Genres shelves as runs of book spines) needs Bookshelf 6.4 — on older Bookshelf everything works as before, the option just isn't there.
-
-# v1.2.23 · 2026-11-07
-
-OrbitShelf 1.2.23 — Spines for BookOrbit shelves: Series, Authors and Genres (and Group By shelves) stand as runs of their books' spines under each group's name, like Bookshelf's own Series shelf. Covers view is unchanged: groups are still folders there.
-
-Note: Spines is for the Spines view when Bookshelf 6.4 drops — it needs Bookshelf 6.4 (or its feat-588 test branch). On older Bookshelf, everything works as before; the Spines option simply isn't there yet.
