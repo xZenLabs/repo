@@ -1,3 +1,8 @@
+# v6.7.0-beta.21 · 2026-11-26
+
+- 想法详情缺少版本号时，按官方章节和范围核对当前正文。跨章时在目标章继续定位。
+- 微信读书 EPUB 的公开想法标记和个人想法共用原始范围转换。
+
 # v6.7.0-beta.19 · 2026-11-26
 
 - 从已下载 EPUB 恢复微信读书的同步信息。阅读时长可独立补传，保留手机上的较新进度。
@@ -18,9 +23,3 @@
 - 将本地 EPUB 关联、章节匹配、评论回复以及私人上传书籍空划线补充查询的离线回归正式加入 `release-beta` 发布前检查，避免新功能未经 CI 验证就发包。
 - 保留 beta.27 的本地 EPUB 社区评论功能及 beta.26 的下载、阅读时间、精确进度、多设备同步；不改变实际业务协议，Schema 仍为 136。
 - 微信读书私人上传书籍的接口返回、EPUB 正文标记点击和 Kindle/KOReader 真机行为仍需在线与设备验收。
-
-# v6.5.0-beta.26 · 2026-11-07
-
-- fix(readtime): aggregate E-Ink offline reports and preserve unsent time (#184)
-- fix(readtime): reserve safe Web retries before dispatch
-- fix(readtime): exclude inactive gaps from Web reading time

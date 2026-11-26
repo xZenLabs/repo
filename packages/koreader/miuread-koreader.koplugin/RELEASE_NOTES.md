@@ -1,3 +1,10 @@
+# v6.5.0 · 2026-11-26
+
+- fix: 修复 E-Ink 授权续期与优化交互层级 (#191, #192)
+- 内核改造，全面切换为原生
+- 无用内核删除
+- 双向定位补丁
+
 # v6.4.1 · 2026-11-09
 
 - perf(reader): skip toolbar state refresh when reader toolbar is disabled
@@ -38,16 +45,3 @@
 - 进度安全测试
 - 进度/时间稳定
 - 第三方元数据请求的限流隔离
-
-# v6.3.5 · 2026-10-30
-
-- feat(readtime): preserve complete offline reading-time upload implementation
-- fix(readtime): adapt Web outbox to upstream and preserve close tails
-- fix(readtime): preserve upstream Web reporting and isolate E-Ink outbox
-- 修复弹窗空白和美化评论获取进度条
-- 实现 Web/E-Ink 智能阅读时间同步与离线补传，修复授权和同步稳定性问题，并全面优化菜单交互逻辑及黑白 SVG 图标体系
-- 整合优化阅读时间记录与同步、评论下载及下一章自动预载，统一主页快捷操作和多级菜单，并新增 KOReader 原生锁屏支持
-- 修复评论菜单调整后导致的发布测试失败，完善版本验证，保留此前阅读时间、评论下载及界面优化
-- 阅读进度修复
-- 稳定性修复
-- 打包流程修复
