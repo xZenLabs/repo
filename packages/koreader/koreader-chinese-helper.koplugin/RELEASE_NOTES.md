@@ -1,3 +1,64 @@
+# v2.29.0 · 2026-11-26
+
+
+CBDB: well-known people, office titles of every dynasty, book titles (#87)
+- `tools/build_cbdb.py` builds a new CBDB file (8.7 MB, still your own file, never shared): 381
+  well-known people (dates, 字, 號, 諡, home town, 進士 year), 25,822 office titles of three or more
+  characters from every dynasty (with CBDB's English), and 35,297 book titles. Until now it held
+  2,900 Ming office titles. Rebuild it to get the new entries; Status says so for an old file.
+- What is in it was decided by testing CBDB on 150,000 simulated taps in 50 books and judging
+  1,358 matches in context (`tools/measure_cbdb.py`). People are those another dictionary also
+  knows (69 of 70 right), office titles leave out modern ones like 副总裁 (93% right), and book
+  titles show only when the tapped text is exactly a title in 《》 (109 of 109). Alternative names
+  (字, 號), places and lesser-known people were left out: CBDB has ordinary words among them
+  (知道 is somebody's 字), so they were mostly wrong.
+- CBDB entries show only where the word fits the plugin's word segmentation (not 试百户 inside
+  考试百户).
+- Readings take their tones from CC-CEDICT, matched to CBDB's toneless pinyin (王安石 Wáng
+  Ānshí; 单 Shàn as a surname); CBDB's own letters stay where nothing settles a tone.
+- In menus and on Status, "CBDB office titles" is now just "CBDB".
+
+CBDB on by default, right after CC-CEDICT, even for words CC-CEDICT has (#88)
+- With the CBDB file installed, CBDB's entry now comes right after CC-CEDICT's for the same word,
+  collapsed like MOE Always and before MOE's own Always entry: 王安石's dates, 字, 號, home town
+  and 進士 year under CC-CEDICT's one line. With **Words first**, each word's CBDB entry follows
+  its CC-CEDICT entry; in **Classical mode** the 文言 entry stays at the top.
+- A new **CBDB** item under CBDB's switch in the **Dictionaries** menu: off / fallback (only words
+  CC-CEDICT lacks, as before) / always (the default). Status shows the mode.
+- CBDB is now first in the order after CC-CEDICT. **If you had saved your own order, CBDB is moved
+  to its front once**; the rest of your order is kept, and you can move CBDB back with **Order**.
+- About 6 taps in 1,000 get a CBDB entry in the books it was tested on.
+
+# v2.28.0 · 2026-11-26
+
+
+MOE's dictionaries come with the plugin, unmodified (#86)
+- 教育部《重編國語辭典修訂本》 and 《成語典》 are now in the release zip (`data/moe/`): nothing to
+  build. They come straight from MOE's own downloads (2026-09-29), not g0v/moedict-data, and hold
+  every record and every field exactly as MOE publishes them. They ship with MOE's usage notes
+  (使用說明) and a `LICENSE.txt` with the CC BY-ND 3.0 TW licence and MOE's attribution, which
+  Status also shows.
+- MOE's text is always shown as MOE writes it, in traditional characters. **Dictionary text:
+  Simplified** no longer applies to MOE or the 成語典, since the licence doesn't allow changing
+  them.
+- A MOE definition now shows MOE's whole definition field, line by line: part-of-speech labels
+  ([名]), sense numbers, examples and quotations (until now: the bare sense from g0v's copy).
+  Collapsed to two lines under MOE Always, as before.
+- A related idiom's short line keeps MOE's own punctuation: 即「胸有成竹」。比喻處事有定見。
+  (it was 即「胸有成竹」：比喻…). A line of the 成語典 holding one of MOE's image codes
+  (&25cd1.jpg;) is now left out instead of shown as code (31 idioms).
+- MOE files you built yourself (`chinesehelper-moe.sqlite`, `chinesehelper-idioms.sqlite` in
+  KOReader's data folder) are no longer read. Status says they can be deleted.
+  `tools/build_idioms.py` is gone; `tools/build_moe.py` now builds the bundled folder.
+- Sizes: release zip 23.4 MB → 57.7 MB; `data/moe/moe.sqlite` 78.6 MB unzipped (the two
+  self-built files were 45.2 MB and 36.3 MB); the main database is unchanged.
+- Entries: 重編國語辭典 163,909 records, all of them in the file (before: 153,041 rows kept from
+  g0v's copy). The popup looks up 153,140, 90,519 of them for words CC-CEDICT lacks (before:
+  90,501); everyday combinations and headwords that are not 1–8 Han characters stay in the file
+  but are not looked up, as before. 成語典 5,489 records, 5,474 looked up, 3,705 for idioms
+  CC-CEDICT lacks (before: 5,473 and 3,704).
+- The reading tables are unchanged: MOE still never decides the pinyin drawn.
+
 # v2.27.0 · 2026-11-25
 
 
@@ -68,31 +129,3 @@ Word choice by segmentation (#75)
   (占梦). The regression set has no regressions.
 - A learner-mode page (pinyin on every character) builds in about 56 ms on a Boox Go 7, 8 ms
   more than 2.24.0. The database grows from 53 to 56 MB.
-
-# v2.24.0 · 2026-11-22
-
-
-Headwords: simplified • traditional, at the same size (#73)
-- Each entry's headword shows its traditional form after the simplified one, at the same size
-  and separated by a dot: **头发** • 頭髮, **门** • 門. The simplified form is bold. Nothing is
-  added when the two are the same (人, 大人).
-- A single character lists only its other forms, not itself: 干 • 乾/幹/榦 (it used to list
-  乾/干/幹). In a word, the form the word uses comes first: 发 • 髮/發 in 头发.
-- Tapped in traditional characters, the simplified form still comes first: 頭髮 shows
-  **头发** • 頭髮.
-- The setting is renamed **Show traditional in headwords** (still on by default). Off, every
-  headword is simplified only, including traditional taps.
-- The head line is now a single line of text, so in night mode the traditional form uses the
-  normal text colour.
-
-# v2.23.0 · 2026-11-22
-
-Words first: the words around the tapped character come above the character's own entry (#71, #68)
-- A new popup setting, **Words first**, on by default: the words around the tapped character,
-  longest first, now come first; the character's own entry, its MOE entry and its components
-  follow them, together. Tap 发 in 头发 and 头发 is at the top.
-- The 字频 rank and the spoken-tone note stay on the character's own entry. 文言 Mode's entries
-  stay at the top, and the Chinese-language dictionaries' entries last. The buttons are unchanged.
-- Turn it off in the popup settings (after **Show character components**) to have the character
-  first, as before. It applies to popups opened from a popup too.
-- Suggested by Generalhooha in #68.

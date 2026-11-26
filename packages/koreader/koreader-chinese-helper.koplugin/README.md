@@ -109,9 +109,9 @@ two lines ([MOE Always](#moe-always)).
 |---|---|---|---|---|
 | CC-CEDICT | CEDICT | 125,000 | bundled | modern vocabulary, in English |
 | Wiktionary | Wikt | 61,000 | bundled | historical and literary terms, chengyu, technical terms, some slang |
-| CBDB office titles | CBDB | 2,900 | [optional](#optional-dictionaries) | Ming and Southern Ming office titles |
-| MOE dictionary | 國語辭典 | 90,500 (of its 161,000) | [optional](#optional-dictionaries) | historical and literary vocabulary (in Chinese) |
-| MOE idioms | 成语典 | 3,700\* | [optional](#optional-dictionaries) | chengyu, with source texts and stories (in Chinese) |
+| CBDB | CBDB | 61,500 | [optional](#optional-dictionaries) | well-known historical people (dates, 字, 號, home town, 進士), office titles of every dynasty, book titles in 《》 ([CBDB](#cbdb)) |
+| MOE dictionary | 國語辭典 | 90,500 (of its 161,000) | bundled, [unmodified](#moes-dictionaries) | historical and literary vocabulary (in Chinese) |
+| MOE idioms | 成语典 | 3,700\* | bundled, [unmodified](#moes-dictionaries) | chengyu, with source texts and stories (in Chinese) |
 | Xinhua idioms | 新华 | 23,500\* | [optional](#optional-dictionaries) | chengyu and set phrases, with classical sources (in Chinese) |
 | Wikipedia titles | WP | 39,000 | bundled | technology, engineering, military and history terms, and proper names (English article title) |
 | Moegirlpedia slang | Moegirl | 350 | [optional](#optional-dictionaries) | internet slang (in Chinese) |
@@ -126,8 +126,9 @@ Origin & Usage view to chengyu that other dictionaries already have. In all, MOE
 
 Optional dictionaries are files you build yourself on a computer, because their licences don't
 let this project distribute them ([Optional dictionaries](#optional-dictionaries)). Each
-dictionary's text is shown as its source writes it (MOE in traditional characters), or in
-simplified characters if you prefer ([Dictionary text](#dictionary-text)).
+dictionary's text is shown as its source writes it, or in simplified characters if you prefer
+([Dictionary text](#dictionary-text)); MOE's two dictionaries are always shown as MOE writes
+them, in traditional characters, because their licence allows sharing them only unmodified.
 
 Tested on a Boox Go 7 (Android, 300 dpi) with KOReader v2026.07.1.
 
@@ -136,15 +137,16 @@ Tested on a Boox Go 7 (Android, 300 dpi) with KOReader v2026.07.1.
 1. Download `chinesehelper.koplugin.zip` from the
    [latest release](https://github.com/scartoon/koreader-chinese-helper/releases/latest) and unzip
    it. You get a `chinesehelper.koplugin` folder, which includes the database
-   (`data/chinesehelper.sqlite`, about 54 MB).
+   (`data/chinesehelper.sqlite`, about 54 MB) and MOE's two dictionaries (`data/moe/`, about
+   79 MB).
 2. Copy that folder into KOReader's `plugins` folder:
    - **Android** (Boox and others): `/sdcard/koreader/plugins/`, which appears as
      `koreader/plugins` in the device's internal storage over USB. With adb:
      `adb push chinesehelper.koplugin /sdcard/koreader/plugins/`
    - Other devices: the `plugins` folder inside KOReader's own folder.
 3. Restart KOReader.
-4. Optional: [build the optional dictionaries](#optional-dictionaries) on a computer. They add
-   most of the Chinese-language explanations and chengyu sources.
+4. Optional: [build the optional dictionaries](#optional-dictionaries) on a computer: Xinhua
+   idioms, CBDB and Moegirlpedia slang.
 
 The folder must keep its name, `chinesehelper.koplugin`. To install from a clone instead, [build
 the database](#building-the-database) first: the repository doesn't contain it.
@@ -176,7 +178,7 @@ Tools menu). Settings apply to all books.
 | Underline the tapped character on the page | On (default) / off. See [The popup](#the-popup) |
 | Try to match the book's font | On (default) / off: show the popup's Chinese text in the book's font. See [The popup](#the-popup) |
 | Dictionaries | A submenu: see the table below |
-| Status | The plugin's version, its data versions and load times, each fallback dictionary (version, entries, on, off or not installed; for MOE, its modes and whether its file supports Always), and the work the current page needed |
+| Status | The plugin's version, its data versions and load times, each fallback dictionary (version, entries, on, off or not installed; for MOE, its modes, its attribution and licence, and any MOE file you built before 2.28.0 that can now be deleted), and the work the current page needed |
 
 The **Dictionaries** submenu:
 
@@ -187,7 +189,8 @@ The **Dictionaries** submenu:
 | Classical mode | Off (default) / on; the same as the popup's 文言 Mode button. See [Classical mode](#classical-mode) |
 | Order | The order of the dictionaries after CC-CEDICT |
 | Collapse long entries | 1 / 2 (default) / 3 lines / never |
-| Each dictionary | On / off, listed in that order (default: Wiktionary, CBDB office titles, MOE 重編國語辭典, MOE 成語典, Xinhua idioms, Wikipedia titles, Moegirlpedia slang). See [Fallback dictionaries](#fallback-dictionaries) |
+| Each dictionary | On / off, listed in that order (default: CBDB, Wiktionary, MOE 重編國語辭典, MOE 成語典, Xinhua idioms, Wikipedia titles, Moegirlpedia slang). See [Fallback dictionaries](#fallback-dictionaries) |
+| CBDB | Under CBDB's switch: off / fallback / always (default). See [CBDB](#cbdb) |
 | MOE for single characters | Under MOE's switch: off / fallback (default) / always. See [MOE Always](#moe-always) |
 | MOE for words | Under MOE's switch: off / fallback (default) / always. See [MOE Always](#moe-always) |
 
@@ -366,8 +369,8 @@ way. In more detail:
   book's form (頭髮 or 头发), and **Simplified only** just the simplified form. The setting
   applies to every heading: the character, the words around it, 文言 Mode's and MOE's entries,
   and popups opened from a popup.
-- **MOE's entry for the character**, if you've installed the optional MOE dictionary. By
-  default it only appears when CC-CEDICT doesn't have the character. With **MOE for single
+- **MOE's entry for the character.** By default it only appears when CC-CEDICT doesn't have
+  the character. With **MOE for single
   characters** set to **always**, it also appears under CC-CEDICT's entry, cut to two lines with
   a small grey **[Tap to show more]** if it's longer ([MOE Always](#moe-always)).
 - **The character's components**, indented under its own entry ([below](#character-components)).
@@ -508,13 +511,13 @@ Characters with none are mostly those whose only analyses use characters that ca
 
 ### Chengyu
 
-With the optional MOE idioms or Xinhua idioms file, a chengyu gets a line of Chinese explanation and a **成语 Origin & Usage** button: its classical source, the story behind it, and examples. With these files and the MOE dictionary, every chengyu in the 46 test books gets an entry.
+A chengyu gets a line of Chinese explanation from MOE idioms (bundled) or the optional Xinhua idioms file, and a **成语 Origin & Usage** button: its classical source, the story behind it, and examples. With MOE's two dictionaries and Xinhua idioms, every chengyu in the 46 test books gets an entry.
 
 <details>
-<summary>What the idiom files add, and how much they cover</summary>
+<summary>What the idiom dictionaries add, and how much they cover</summary>
 
 - **One line of Chinese explanation** under CC-CEDICT's (or Wiktionary's) entry, with its own
-  small label: 一毛不拔 → *形容人非常吝啬。贬义。* (成语典). It comes from MOE idioms if it has the
+  small label: 一毛不拔 → *形容人非常吝嗇。貶義。* (成语典). It comes from MOE idioms if it has the
   chengyu, and otherwise from Xinhua idioms. Entries that are already in Chinese don't get the
   extra line.
 - **A 成语 Origin & Usage button** opens a full-screen view in the larger Chinese text size. Its
@@ -526,10 +529,10 @@ With the optional MOE idioms or Xinhua idioms file, a chengyu gets a line of Chi
   source and an example. When both have the chengyu, MOE idioms comes first. With several chengyu
   in one popup, each button is named (九牛一毛 - Origin & Usage). There's no button when there's
   nothing beyond the one line.
-- **Chengyu CC-CEDICT doesn't have** (精兵强将, 科班出身, 十二万分) get an entry from these files,
-  in the [fallback order](#fallback-dictionaries).
+- **Chengyu CC-CEDICT doesn't have** (精兵强将, 科班出身, 十二万分) get an entry from these
+  dictionaries, in the [fallback order](#fallback-dictionaries).
 
-These files' readings only appear in their own entries; they never decide the pinyin drawn.
+Their readings only appear in their own entries; they never decide the pinyin drawn.
 Measured with `tools/measure_chengyu.py` on the 46 Chinese books on the test device (202,036 chengyu
 occurrences) and on 临高启明 (38,398):
 
@@ -612,8 +615,8 @@ in the result, only the yes-or-no decision, and the dictionary is CC BY-SA 4.0.
 On 128 words from classical texts, judged one by one, the 文言 entry has the needed sense 91% of
 the time, among its first two senses 73% of the time, and somewhere in the whole popup 95% of the
 time ([research note](docs/research/classical-dictionary.md)). MOE's own classical senses aren't
-included, because its licence doesn't allow it; with the MOE file installed,
-[MOE Always](#moe-always) shows them.
+included, because its licence doesn't allow it; [MOE Always](#moe-always) shows them, as MOE
+writes them.
 
 A simplified character that stands for several traditional ones shows the entry for the one its
 word uses (发 in 头发: 髮 *hair*), or all of them if no word decides. A variant form (説) shows its
@@ -879,10 +882,12 @@ For words CC-CEDICT doesn't have, the popup also looks in the other dictionaries
 <details>
 <summary>Order, labels, readings and switches</summary>
 
-- **Order.** A word CC-CEDICT has never gets a fallback entry. Any other word gets the entry
-  from the first fallback dictionary that has it, in the table's order. CBDB's narrow office
-  titles come before MOE's general definitions; an English article title is more a label than a
-  definition, so it comes after the real dictionaries; and Moegirlpedia is only for words nothing
+- **Order.** A word CC-CEDICT has never gets a fallback entry, except from MOE and CBDB set to
+  Always ([MOE Always](#moe-always), [CBDB](#cbdb)). Any other word gets the entry
+  from the first fallback dictionary that has it, in the table's order. CBDB comes first:
+  its entries are narrow (people, office titles, book titles) and were checked to be right where
+  they show; then Wiktionary, then MOE's general definitions. An English article title is more a
+  label than a definition, so it comes after the real dictionaries; and Moegirlpedia is only for words nothing
   else has. To change the order, use **Order** in the **Dictionaries** menu: tap a dictionary,
   move it with the arrows, then tap ✓. CC-CEDICT always stays first.
 - **Labels.** A small grey line above each entry names its dictionary, using the labels in the
@@ -891,7 +896,7 @@ For words CC-CEDICT doesn't have, the popup also looks in the other dictionaries
   tapped character's entry, the label sits on its own row below the 字频 line. **Source labels**
   can turn them all off.
 - **Readings.** A fallback entry shows its own dictionary's reading (Taiwan standard in the MOE
-  dictionary; no tone marks in CBDB) and is never marked *likely here*, because that label comes
+  dictionary; CBDB's, with tones taken from CC-CEDICT, [CBDB](#cbdb)) and is never marked *likely here*, because that label comes
   from the plugin's own reading code, which keeps the popup and the pinyin in agreement.
   Wikipedia titles and Moegirlpedia give no readings, so the popup shows one generated with
   pypinyin, marked *generated pinyin*. Only Wiktionary words can decide a reading, and only for
@@ -902,10 +907,46 @@ For words CC-CEDICT doesn't have, the popup also looks in the other dictionaries
 
 </details>
 
+### MOE's dictionaries
+
+The Taiwan Ministry of Education's 《重編國語辭典修訂本》 and 《成語典》 come with the plugin,
+complete and exactly as MOE publishes them: every entry and every field, in MOE's own characters.
+
+<details>
+<summary>Their licence, and what "unmodified" means here</summary>
+
+Both are licensed [CC BY-ND 3.0 TW](https://creativecommons.org/licenses/by-nd/3.0/tw/): they may
+be shared, but not changed, and MOE's usage notes (使用說明) must travel with them. So
+`data/moe/` holds:
+
+- `moe.sqlite`: MOE's two spreadsheets as SQLite tables, one row per entry, every field as
+  published (only the file format is converted), plus the plugin's own lookup tables, which
+  hold no MOE text;
+- MOE's usage notes, `reviseddict_10312.pdf`/`.odt` and `idiomsdict_10409.pdf`/`.odt`, byte for
+  byte;
+- `LICENSE.txt`: the licence, the attribution and the files the data was built from.
+
+The popup chooses what to show (a definition field, cut to two lines in [MOE Always](#moe-always);
+the 成語典's Origin & Usage sections) and lays it out, but never rewords it or converts it to
+simplified characters, so **Dictionary text → Simplified** doesn't apply to these two. A
+character MOE couldn't encode is drawn as □ in a definition, and a line of the 成語典 that holds
+one is left out. **Status** shows the version (the date of MOE's download) and the attribution:
+
+> 中華民國教育部（Ministry of Education, R.O.C.）。《重編國語辭典修訂本》（版本編號：2026-09-29）網址：http://dict.revised.moe.edu.tw/
+
+> 中華民國教育部（Ministry of Education, R.O.C.）。《成語典》（版本編號：2026-09-29）網址：http://dict.idioms.moe.edu.tw/
+
+Errors in MOE's text are reported to MOE, never fixed in this copy. Until 2.28.0 MOE's
+dictionaries were files you built yourself; a `chinesehelper-moe.sqlite` or
+`chinesehelper-idioms.sqlite` left in KOReader's data folder is no longer read, and **Status**
+says you can delete it.
+
+</details>
+
 ### MOE Always
 
 CC-CEDICT's entry for a single character is short and modern: 涓 is "brook; to select". The MOE
-dictionary has the classical senses too (细流。/ 姓。/ 细缓的、细微的。/ 清洁的。/ 选择。). By
+dictionary has the classical senses too ([名] 1.細流。… 2.姓。 [形] 1.細緩的、細微的。… [動] 選擇。…). By
 default, MOE's entry only appears for characters CC-CEDICT doesn't have. Set **MOE for single
 characters** to **always** to see MOE's entry under CC-CEDICT's for every character.
 
@@ -915,7 +956,9 @@ characters** to **always** to see MOE's entry under CC-CEDICT's for every charac
 The popup then shows:
 
 1. CC-CEDICT's entry, in full, with the 字频 rank.
-2. MOE's entry for the character, labelled 國語辭典, with all its readings in one block. It's cut
+2. MOE's entry for the character, labelled 國語辭典, with all its readings in one block: each
+   line of MOE's definition field (a part-of-speech line such as [名] joined to the line after
+   it), examples and quotations included. It's cut
    to two lines, the second ending in a small grey **[Tap to show more]**. Tap that (or the space
    after it) to show the rest, and **[Tap to show less]** at the end to shorten it again. You
    can tap characters in the visible lines as usual, but not ones hidden by the cut.
@@ -934,12 +977,55 @@ With words set to always, MOE's entry also appears under CC-CEDICT's for every w
 character. Turning MOE off turns off both. **Collapse long entries** sets how many lines to show
 (1, 2 or 3), or turns the shortening off.
 
-Always needs a MOE file built with 2.5.0 or later, which also keeps entries for words CC-CEDICT has. With
-an older file, Always behaves like fallback and **Status** tells you to rebuild it: `git pull`,
-then `.venv/bin/python tools/build_moe.py` (or `tools/build_optional.py --only moe --force`), and
-copy the new file over the old one ([below](#optional-dictionaries)). On a Boox Go 7 the popup
+On a Boox Go 7 the popup
 takes about 4 ms longer to build with MOE Always (25 ms instead of 21.5 ms, median of 24 taps on
 common characters).
+
+</details>
+
+### CBDB
+
+The [China Biographical Database](https://cbdb.hsites.harvard.edu/) documents about 660,000 people
+of imperial China and the offices they held. Built from it ([Optional
+dictionaries](#optional-dictionaries)), the CBDB dictionary adds three kinds of entry:
+
+- **Well-known people.** 曾国藩: *Qing · 1811–1872 · 字 伯涵 · 號 求闕齋 · 諡 文正 · 湘鄉 · 進士
+  1838*. A name is there only when another dictionary of the plugin also knows it and CBDB has at
+  least 10 records for the person: 381 names. Several people with one name are listed best
+  documented first, at most three, then "+N more in CBDB".
+- **Office titles** of three or more characters, from every dynasty, with CBDB's English where it
+  has one: 侍讲学士, *office title · Ming, Qing: Academician Expositor-in-waiting*. Modern titles
+  (副总裁, 副局长) are left out: 25,822 titles.
+- **Book titles**, only when the tapped text is exactly a title in 《》 (or the book before a ·, as
+  in 《新唐书·地理志》), with its authors: 35,297 titles.
+
+**CBDB** under CBDB's switch in the **Dictionaries** menu is **always** by default: CBDB's entry
+comes right after CC-CEDICT's for the same word, even when CC-CEDICT has the word, collapsed like
+[MOE Always](#moe-always) and before MOE's own Always entry. CC-CEDICT's 王安石 is one line; CBDB's
+adds his dates, 字, 號, home town and 進士 year. **Fallback** shows CBDB only for words CC-CEDICT
+lacks, and **off** turns it off. CBDB comes first in the order after CC-CEDICT.
+
+CBDB entries show only where the word fits the plugin's word segmentation, so 试百户 is not offered
+inside 考试百户. Readings: CBDB's pinyin has no tones; they are taken from CC-CEDICT, choosing the
+reading whose letters match CBDB's (单 *Shàn*, 解 *Xiè* as surnames).
+
+<details>
+<summary>What was left out, and how accurate it is</summary>
+
+Before it was built, CBDB was tested on 150,000 simulated taps in 50 books, and 1,358 of the
+matches were judged in context (`tools/measure_cbdb.py`). Without filters every category was
+mostly wrong, because CBDB's names include ordinary words: 知道 and 皇帝 are both somebody's 字, and
+美国 is a place. With the filters above:
+
+| Category | Right | Shows on (taps per 1,000) |
+|---|---|---|
+| Well-known people | 69 of 70 | 3.5 |
+| Office titles, 3+ characters | 100 of 108 (93%) | 1.7 |
+| Book titles in 《》 | 109 of 109 | 0.8 |
+
+Left out: alternative names (字, 號; at best 13% right: 姚汝能's 汝能 is 陳亮's name in CBDB);
+people no other dictionary knows (51% per tap: a novel's hero who shares a name with a Tang
+official appears on every page); and places (太平军 is a Song prefecture in CBDB).
 
 </details>
 
@@ -963,25 +1049,23 @@ technical compounds are covered in part (典史 and 红夷大炮 are in; 赵老�
 
 ## Optional dictionaries
 
-Five of the dictionaries can't come with the plugin: their licences let you copy them for your
+Three of the dictionaries can't come with the plugin: their licences let you copy them for your
 own use, but don't let this project distribute them. Instead, you build each one on a computer
 with a script from this repository, then copy the file to the e-reader. The plugin works without
-them, but they provide most of its Chinese-language explanations. The MOE dictionary alone adds
-90,500 entries, and with it and the two idiom files, the share of chengyu in the 46 test books
-that get an entry goes from 93% to 100% ([Chengyu](#chengyu)). The screenshots on this page were
-taken with all five installed.
+them; Xinhua idioms takes the share of chengyu in the 46 test books that get an entry to 100%
+([Chengyu](#chengyu)). The screenshots on this page were taken with all three installed. (MOE's
+two dictionaries were optional files too until 2.28.0; they now come with the plugin:
+[MOE's dictionaries](#moes-dictionaries).)
 
-**Which to build.** For most readers: the MOE dictionary, MOE idioms and Xinhua idioms. Add CBDB
-office titles if you read books set in the Ming. Moegirlpedia slang adds only 350 internet-slang
+**Which to build.** For most readers: Xinhua idioms. Add CBDB if you read history or historical
+novels. Moegirlpedia slang adds only 350 internet-slang
 words but needs a 1.4 GB download and an extra library ([below](#moegirlpedia-slang)), so skip
 it unless you read web fiction.
 
 | Dictionary | Script | Download | File | Licence |
 |---|---|---|---|---|
-| MOE dictionary | `tools/build_moe.py` | 15 MB | 45.2 MB | [CC BY-ND 3.0 TW](https://creativecommons.org/licenses/by-nd/3.0/tw/) |
-| MOE idioms | `tools/build_idioms.py` | 5 MB | 36.3 MB | [CC BY-ND 3.0 TW](https://creativecommons.org/licenses/by-nd/3.0/tw/) |
 | Xinhua idioms | `tools/build_xinhua.py` | 10 MB | 14.9 MB | none for the text ([below](#the-sources)) |
-| CBDB office titles | `tools/build_cbdb.py` | 140 MB (590 MB unzipped) | 0.5 MB | [CBDB Data Licensing Terms](https://cbdb.hsites.harvard.edu/cbdb-data-licensing-terms) |
+| CBDB | `tools/build_cbdb.py` | 140 MB (590 MB unzipped) | 8.7 MB | [CBDB Data Licensing Terms](https://cbdb.hsites.harvard.edu/cbdb-data-licensing-terms) |
 | Moegirlpedia slang | `tools/build_moegirl.py` | 1.4 GB | 0.1 MB | [CC BY-NC-SA 3.0 CN](https://creativecommons.org/licenses/by-nc-sa/3.0/cn/) |
 
 The downloads go into `build/sources/` in your copy of the repository, and you can delete them
@@ -1002,15 +1086,15 @@ The commands are for macOS and Linux. On Windows (not tested), write `py` for `p
 
 ### 2. Build
 
-One command builds the recommended three (MOE dictionary, MOE idioms, Xinhua idioms):
+One command builds the recommended one, Xinhua idioms:
 
 ```sh
 .venv/bin/python tools/build_optional.py
 ```
 
 It first tells you how much it will download and how much disk space it needs, and at the end
-lists each file it wrote and where it goes on the device. `--all` adds CBDB office titles, and
-`--only moe,cbdb` builds just the ones you name (`moe`, `idioms`, `xinhua`, `cbdb`, `moegirl`).
+lists each file it wrote and where it goes on the device. `--all` adds CBDB, and
+`--only xinhua,cbdb` builds just the ones you name (`xinhua`, `cbdb`, `moegirl`).
 Files that are already built are skipped; `--force` builds them again.
 
 The scripts also need the plugin's database, to leave out words CC-CEDICT already has. It isn't in
@@ -1019,13 +1103,11 @@ the repository, so the first time they download it from the latest release (22 M
 Or run one script for each dictionary you want:
 
 ```sh
-.venv/bin/python tools/build_moe.py
-.venv/bin/python tools/build_idioms.py
 .venv/bin/python tools/build_xinhua.py
 .venv/bin/python tools/build_cbdb.py
 ```
 
-Each writes `build/chinesehelper-NAME.sqlite` (`chinesehelper-moe.sqlite` and so on).
+Each writes `build/chinesehelper-NAME.sqlite` (`chinesehelper-xinhua.sqlite` and so on).
 
 ### 3. Copy the files to the e-reader
 
@@ -1066,19 +1148,11 @@ and copy the file as in step 3. Reading every page of the 1.4 GB snapshot takes 
 <details>
 <summary>Where each optional dictionary comes from</summary>
 
-- **MOE dictionary**: 教育部《重編國語辭典修訂本》, from
-  [g0v/moedict-data](https://github.com/g0v/moedict-data). The file holds MOE's own text and a
-  simplified copy ([Dictionary text](#dictionary-text)); **Status** says when a file built
-  before 2.13.0 has only one.
-- **MOE idioms**: 教育部《成語典》, from the ministry's
-  [download page](https://language.moe.gov.tw/001/Upload/Files/site_content/M0001/respub/dict_idiomsdict_download.html)
-  (the script finds the current file there). Like the MOE dictionary, its own text and a
-  simplified copy.
 - **Xinhua idioms**: `data/idiom.json` of [chinese-xinhua](https://github.com/pwxcoo/chinese-xinhua).
   The repository's MIT licence covers its code; the text was scraped from a published
   dictionary. The build puts back punctuation lost in scraping where that is reliable
   (首鼠鼠性多疑 → 首鼠：鼠性多疑) and shows symbols standing for lost text as …; typos stay.
-- **CBDB office titles**: from the [China Biographical Database](https://cbdb.hsites.harvard.edu/)'s
+- **CBDB**: from the [China Biographical Database](https://cbdb.hsites.harvard.edu/)'s
   [SQLite release](https://huggingface.co/datasets/cbdb/cbdb-sqlite). Its terms are CC BY-NC-SA
   4.0 for the standalone release's data and CBDB's own non-commercial, no-derivatives,
   no-redistribution terms beyond it; this project follows the stricter: the file is for your own
@@ -1097,7 +1171,7 @@ Whatever the licence, the files you build are for your own reading: don't share 
 
 ### Bundled data
 
-Everything the plugin needs is in one SQLite database (about 54 MB): CC-CEDICT, the Wiktionary and Wikipedia fallback dictionaries, the Classical dictionary, character components and the reading tables.
+Everything the plugin needs is in one SQLite database (about 54 MB): CC-CEDICT, the Wiktionary and Wikipedia fallback dictionaries, the Classical dictionary, character components and the reading tables. MOE's two dictionaries are a second, separate folder, `data/moe/` (about 79 MB, [MOE's dictionaries](#moes-dictionaries)), built by `tools/build_moe.py` from MOE's own downloads.
 
 <details>
 <summary>What the database holds</summary>
@@ -1171,27 +1245,25 @@ characters by the same books ([Your own frequency ranks](#your-own-frequency-ran
 
 ### Dictionary text
 
-Each dictionary's text is shown the way its source writes it: the MOE dictionary and MOE idioms
-in MOE's traditional characters, Wiktionary's definitions with the Chinese as Wiktionary writes it
+Each dictionary's text is shown the way its source writes it: Wiktionary's definitions with the Chinese as Wiktionary writes it
 (`original form of 廩／廪`), and CC-CEDICT's cross-references with both forms
 (`variant of 夠|够 gòu`, `used in 鞦韆|秋千 qiūqiān`). **Chinese helper → Dictionaries →
 Dictionary text → Simplified** shows the same text in simplified characters instead
 (`variant of 够 gòu`), starting from the next popup. The headings look the same either way
 (**头发** • 頭髮), and so does the text of dictionaries that are already in simplified Chinese or
-English (Xinhua, Moegirlpedia, CBDB, Wikipedia titles).
+English (Xinhua, Moegirlpedia, Wikipedia titles). CBDB's Chinese (字 介甫 · 臨川) is converted like
+CC-CEDICT's. MOE's dictionary and MOE idioms are
+always shown as MOE writes them, in traditional characters: their licence doesn't allow changing
+them ([MOE's dictionaries](#moes-dictionaries)).
 
 <details>
 <summary>How the simplified text is made</summary>
 
-Both versions are stored in the files, so nothing is converted on the device. That adds 1.4 MB
-to the release database, and makes the MOE and MOE idioms files you build 45.2 MB and 36.3 MB
-instead of 28.2 MB and 21.7 MB. Files built before 2.13.0 have only one version (the simplified
-one, unless built with the old `--traditional` option), which the popup shows whatever the
-setting; **Status** tells you to rebuild them.
+Both versions are stored in the database, so nothing is converted on the device. That adds
+1.4 MB to the release database.
 
-`tools/simplify.py` makes the simplified text when the files are built, character by character,
-with OpenCC: `tw2s` for the MOE dictionary and MOE idioms (Taiwan standard) and `t2s` for
-Wiktionary. It doesn't use `tw2sp`, which also swaps vocabulary (滑鼠 → 鼠标) and would rewrite
+`tools/simplify.py` makes the simplified text when the database is built, character by character,
+with OpenCC's `t2s`. It doesn't use `tw2sp`, which also swaps vocabulary (滑鼠 → 鼠标) and would rewrite
 classical quotations. On top of OpenCC:
 
 - **著 meaning "to write" stays 著** (著有, 所著, 撰著, 土著, 著《…》, 书名。清王国维著。), where OpenCC
@@ -1228,8 +1300,8 @@ Measured on a Boox Go 7:
 - **A tap**: from the tap to the finished popup, a median 21.5 ms, or 25 ms with
   [MOE Always](#moe-always) (measured in 2.5.0). Each fallback dictionary adds at most one
   database query per tap, and each idiom file up to one more (not timed). The first tap after
-  opening a book takes 20–30 ms, because the optional files are only opened when first needed
-  (the MOE file in 1–3 ms).
+  opening a book takes 20–30 ms, because MOE's data and the optional files are only opened when
+  first needed (MOE's in 1–3 ms).
 - **Memory**: the dictionaries are read from the database as needed, not loaded into memory, and
   add about 2 MB (KOReader uses about 133 MB in all).
 
@@ -1335,7 +1407,20 @@ like WordGloss.
 
 The data (the database and the files in `data/`) is derived from sources under, and distributed
 under, [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/), except as noted below for
-Make Me a Hanzi and yi-bai/ids:
+Make Me a Hanzi and yi-bai/ids, and except MOE's dictionaries in `chinesehelper.koplugin/data/moe/`:
+
+**MOE's dictionaries** are not under the plugin's GPL or the CC BY-SA licence. They are
+中華民國教育部《[重編國語辭典修訂本](https://dict.revised.moe.edu.tw/)》 and
+《[成語典](https://dict.idioms.moe.edu.tw/)》, © Ministry of Education, Republic of China (Taiwan),
+distributed unmodified under [CC BY-ND 3.0 TW](https://creativecommons.org/licenses/by-nd/3.0/tw/)
+with MOE's usage notes (使用說明), from MOE's
+[open-data downloads](https://language.moe.gov.tw/001/Upload/Files/site_content/M0001/respub/index.html):
+
+- 中華民國教育部（Ministry of Education, R.O.C.）。《重編國語辭典修訂本》（版本編號：2026-09-29）網址：http://dict.revised.moe.edu.tw/
+- 中華民國教育部（Ministry of Education, R.O.C.）。《成語典》（版本編號：2026-09-29）網址：http://dict.idioms.moe.edu.tw/
+
+The usage notes, the licence and the source files' checksums are in `data/moe/`
+([MOE's dictionaries](#moes-dictionaries)).
 
 <details>
 <summary>The bundled data's sources and licences</summary>
@@ -1385,13 +1470,8 @@ links each licence):
 <details>
 <summary>The optional dictionaries' sources and licences</summary>
 
-- the MOE dictionary, 中華民國教育部《[重編國語辭典修訂本](https://dict.revised.moe.edu.tw/)》,
-  © Ministry of Education, Republic of China (Taiwan), CC BY-ND 3.0 TW, read from
-  g0v/moedict-data (`tools/build_moe.py`);
-- CBDB office titles, from the China Biographical Database (Harvard University, Academia Sinica
+- CBDB (people, office titles, book titles), from the China Biographical Database (Harvard University, Academia Sinica
   and Peking University), CBDB Data Licensing Terms and CC BY-NC-SA 4.0 (`tools/build_cbdb.py`);
-- MOE idioms, 中華民國教育部《[成語典](https://dict.idioms.moe.edu.tw/)》, © Ministry of Education,
-  Republic of China (Taiwan), CC BY-ND 3.0 TW (`tools/build_idioms.py`);
 - Xinhua idioms, from chinese-xinhua's `data/idiom.json` (text scraped from a published
   dictionary) (`tools/build_xinhua.py`);
 - Moegirlpedia slang, from 萌娘百科 by its contributors, CC BY-NC-SA 3.0 CN, via a third party's
