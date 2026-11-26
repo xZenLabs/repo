@@ -67,7 +67,7 @@ Files are written locally on your e-reader first (`clipboard/tomedown/` by defau
 1. **Via AppStore (easiest):** Install wirelessly through **Storefront** or **KOReader AppStore**.
 2. **Manual install:** Download `tomedown.koplugin-v*.zip` from [Releases](https://github.com/imanubdesigner/tomedown.koplugin/releases) (or the [Download page](https://imanubdesigner.github.io/tomedown.koplugin/download/)) and unzip it into your KOReader `plugins/` folder (e.g., `/mnt/us/koreader/plugins/` on Kindle).
 3. Restart KOReader (or go to `☰` → *Plugin management* and enable *Tomedown*).
-4. You will find **Tomedown** at the top of KOReader's menu (and optionally in the top bar via *Settings → Style → Show Tomedown icon in the top bar*).
+4. You will find **Tomedown** at the top of KOReader's menu (and optionally in the top bar via *Settings → App & updates → Top bar icon*).
 
 <details>
 <summary>Installing from a git clone</summary>
@@ -80,7 +80,6 @@ rsync -a --exclude tests --exclude site --exclude docs \
       --exclude .gitattributes --exclude .gitignore \
       --exclude '*.md' \
       --exclude assets/menu --exclude assets/obsidian \
-      --exclude assets/obsidian-guide --exclude assets/tutorials \
       --exclude 'assets/banner-*' \
       . /mnt/us/koreader/plugins/tomedown.koplugin/
 ```
@@ -94,7 +93,7 @@ rsync -a --exclude tests --exclude site --exclude docs \
 Open `☰` → **Tomedown**:
 
 1. On a fresh install, Tomedown offers a one-tap export of your existing reading history (*Export* / *Not now*).
-2. At any time, pick **Export this book**, **Export new and changed books**, or **Choose books…**.
+2. At any time, pick **Export this book**, **All books → Export changed books**, or **All books → Select books…**.
 3. Your files appear in the local folder right away:
 
 ```text
@@ -105,7 +104,7 @@ koreader/clipboard/tomedown/
 └── Author - Book Title.md
 ```
 
-Enable *Export when I close a book* in *Settings → Files* to automatically export silently whenever you close a book or put your e-reader to sleep.
+Enable *Export when closing a book* in *Settings → Export* to automatically export silently whenever you close a book or put your e-reader to sleep.
 
 ---
 
@@ -114,7 +113,7 @@ Enable *Export when I close a book* in *Settings → Files* to automatically exp
 A few key things worth knowing right from the start:
 
 - **Protecting your own notes:** By default, exports rewrite the generated files. If you plan to write personal notes or edit frontmatter in Obsidian, turn on **Keep my notes** (*Settings → My notes* or per-book under *Current book*). Tomedown also keeps rotating `.bak` / `.bak.1`–`.bak.3` safety copies when needed.
-- **Backing up your settings:** Before resetting your device or reinstalling KOReader, use **Settings → Files → Export settings to file**. It saves all global and per-book preferences to `tomedown_settings_backup.lua` inside your local folder so you can restore everything in one tap later.
+- **Backing up your settings:** Before resetting your device or reinstalling KOReader, use **Settings → Export → Export settings to file**. It saves all global and per-book preferences to `tomedown_settings_backup.lua` inside your local folder so you can restore everything in one tap later.
 - **Cloud sync & Obsidian (optional):** If you want automatic WebDAV sync (for example with Koofr) and two-way vault sync with Obsidian's *Remotely Save* plugin, follow the step-by-step **[Cloud & Obsidian Tutorial](https://imanubdesigner.github.io/tomedown.koplugin/docs/tutorial/)**.
 
 ---
@@ -126,7 +125,7 @@ All detailed guides live on the **[Tomedown Docs Wiki](https://imanubdesigner.gi
 | Topic | What you will find |
 | --- | --- |
 | **[Getting Started](https://imanubdesigner.github.io/tomedown.koplugin/docs/quickstart/)** | Installation, first local export, and quickstart overview |
-| **[Menu & Settings](https://imanubdesigner.github.io/tomedown.koplugin/docs/settings/)** | Every option in Files, Index, Style, Book info, Cloud, My notes, and Updates |
+| **[Menu & Settings](https://imanubdesigner.github.io/tomedown.koplugin/docs/settings/)** | Every option in Export, Index & library, Notes & highlights, Book info, Cloud upload, My notes, and App & updates |
 | **[Keep My Notes](https://imanubdesigner.github.io/tomedown.koplugin/docs/keep-my-notes/)** | How note merging works, `.bak` safety copies, and editing in Obsidian |
 | **[Formats & Output](https://imanubdesigner.github.io/tomedown.koplugin/docs/file-format/)** | Markdown/TXT layout, frontmatter, covers, `00 - Index.md`, and link IDs |
 | **[Highlight Styles & Frontmatter](https://imanubdesigner.github.io/tomedown.koplugin/docs/universal-highlights/)** | 6 highlight styles, inline/footnote comments, custom YAML, and per-book rules |

@@ -1,3 +1,54 @@
+# v3.0.0 · 2026-11-26
+
+# Tomedown v3.0.0
+
+### Added
+
+- **Dedicated 3-profile Markdown style selector (`tomedown_shared.lua`, `tomedown_render.lua`, `tomedown_cover.lua`)**:
+  - `Markdown style`: available both globally (`Settings → Export → Markdown style`) and per book (`Current book → Format & layout → Markdown style`), independent of `Export format` (`.md`, `.txt`, or `Both`), with three profiles: `Obsidian`, `Standard (GitHub / HTML)`, and `CommonMark (no HTML)`.
+  - **Standard (GitHub / HTML)**: renders book notes, `00 - Index.md`, and `00 - Reading Digest.md` with clean headings, lists, `<details>` synopses, sized `<img>` covers, and `[Title](file.md)` links, omitting Obsidian-only callouts (`[!book]`, `[!abstract]-`, `[!summary]`, `[!highlight]`), wikilinks, and `^hl-` block IDs.
+  - **CommonMark (no HTML)**: omits all inline HTML tags (`<details>`, `<img>`, `<br>`) and `&nbsp;` entities for Zettlr, Pandoc, Logseq, and iA Writer, rendering `###` + `>` synopses, nested Markdown index lists, underscore emphasis, and compact `260×390 px` covers via pure `![Title](covers/...)` syntax (automatically re-extracting `800×1200 px` covers when switched back to `Obsidian` or `Standard`).
+- **Nested vault asset folders (`tomedown_shared.lua`, `tomedown_cover.lua`, `tomedown_handwritten.lua`, `tomedown_upload.lua`)**:
+  - `Covers folder` and `Drawings folder` under `Settings → Export → File names & folders` now accept nested vault-relative paths up to 3 levels (such as `assets/covers` and `assets/drawings` for Logseq, Obsidian, and Zettlr), automatically migrating existing files, pruning empty old directories, creating multi-level WebDAV folders (`MKCOL`), and resolving relative links across subfolder layouts.
+- **Harmonized visual styles (`tomedown_render.lua`)**:
+  - Unified 4 visual themes across book header modules, `00 - Index.md`, and `00 - Reading Digest.md`: `Minimal symbols (● / ◐)`, `Emoji (🟢 / 🟡)`, `Code badges (READING)`, and `Editorial (Reading)`.
+  - **Independent catalog styling**: dedicated `Index style` and `Digest style` selectors with a `Follow book style` toggle enabled by default so one choice themes the entire vault, or configurable independently.
+- **Full per-book configuration parity (`tomedown_menu.lua`)**:
+  - **Unified per-book layout**: `Current book → Format & layout` mirrors all global visual and structural options onto a single 6-inch e-reader screen (`Export format`, `Markdown style`, `Notes & highlights`, `Book page`, `YAML frontmatter`, `Frontmatter fields`, and `Reset to global style settings`).
+  - **Granular per-book overrides**: every option defaults to `Follow global setting` (`Global` / `Custom` status indicator), including `Book cover`, `Personal notes format`, `Special highlight style` (all 6 markers), `Link IDs on highlights`, `Every highlight is special`, and individual `Book page` modules.
+- **In-reader dashboard cards and annotation browser (`tomedown_menu.lua`, `tomedown_upload.lua`)**:
+  - **Book summary card**: `Current book → Book summary` opens a rounded e-ink card showing title, author, 3 interactive KPI counters (**Highlights**, **Special**, **Notes**), effective format and style, sync status, tags, and a direct `Export this book` button.
+  - **Paginated annotation browser**: tapping any KPI counter opens a paginated card adapted to 6-inch Kindle and Kobo displays; short tap jumps directly to the passage (`GotoXPointer` / `GotoPage`), while long press toggles `Special` status or edits the note in place.
+  - **Last export dashboard**: redesigned `Tomedown → Last export` into a 3-column KPI card (`Exported`, `Skipped`, `Errors` / `Backups`) with literary timestamp, active configuration, recent book titles, cloud status, and quick sync actions.
+- **Personal note formats and highlight context (`tomedown_render.lua`, `tomedown_export.lua`)**:
+  - **Callout note style**: added `Callout ([!note])` alongside `Inline` and `Footnotes` under `Personal notes format`, rendering reader commentary inside a dedicated `> [!note]` block below the citation while keeping `^hl-xxxxxxxx` block IDs anchored to the quote.
+  - **Surrounding sentence context**: optional context extraction on reflowable documents (`Highlight context`) placing the surrounding passage directly beneath the highlight.
+
+### Changed
+
+- **Contextual e-ink menus (`tomedown_menu.lua`)**:
+  - Dependent rows (such as `Digest style` under `Reading digest` and `Synopsis display` under `Book synopsis`) appear only while their parent toggle is active, Obsidian-only options disable in `Standard` / `CommonMark` / `.txt` modes, and foldable synopsis options adapt automatically in `CommonMark` mode.
+- **Two-way vault merge and YAML serialization (`tomedown_merge.lua`, `tomedown_shared.lua`)**:
+  - Improved quote canonicalization and note block preservation in `Keep my notes` so personal commentary and manual edits survive re-exports without duplication.
+  - Native ISO date output (`YYYY-MM-DD`) and safe YAML quoting for colons, wikilinks, and commas inside custom frontmatter values for direct compatibility with Obsidian Bases and Dataview.
+- **Localization**:
+  - Updated and shortened single-line `TouchMenu` labels across Italian (`it`), French (`fr`), German (`de`), Spanish (`es`), and Brazilian Portuguese (`pt_BR`) to prevent truncation on 6-inch screens.
+- **Website and online documentation**:
+  - Redesigned homepage, About, Download, 404, and Documentation hub with an interactive live note specimen, `Obsidian` vs. `Standard` comparison slider, updated vault screenshots, `Current book` reference guide, and calm `100%` lightbox image inspection.
+
+### Fixed
+
+- **Cloud upload serialization on book close (`main.lua`, `tomedown_upload.lua`, `tomedown_export.lua`)**: coordinated pending-upload flushes across `ReaderUI` and `FileManager` plugin instances, serialized overlapping `uploadPaths` batches so transient covers and drawings are never deleted while still queued, and prevented pointless backoff retries when a local file is missing.
+- **Strict per-book override isolation (`tomedown_shared.lua`, `tomedown_export.lua`, `tomedown_menu.lua`)**: preserved empty-set `fm_hidden` overrides when re-enabling globally hidden frontmatter fields on a single book, respected per-book `Book cover` disabling in `00 - Index.md`, and synchronized `digest_dirty` on per-book style changes without invalidating other books.
+- **Per-book section style availability**: unlocked `Book style` under `Harmonize book styles` in `Current book → Format & layout → Book page → Section styles` even when optional header modules are disabled.
+- **Custom e-ink card repainting**: added `onShow` and `onCloseWidget` dirty refresh regions (`movable.dimen`), `show_parent` button wiring, and `DocSettings` offline fallback across all rounded cards.
+- **Kindle Lua 5.1 compatibility**: kept module upvalue counts below the 60-upvalue ceiling enforced by LuaJIT / Lua 5.1 on e-reader firmware.
+- **Website showcase and navigation**: locked showcase stage geometry to eliminate height jumps, restored smooth automatic slide rotation, and resolved broken internal documentation anchors.
+
+---
+
+**Full Changelog**: https://github.com/imanubdesigner/tomedown.koplugin/compare/v2.1.0...v3.0.0
+
 # v2.1.0 · 2026-11-17
 
 # Tomedown v2.1.0 is Here
@@ -112,29 +163,3 @@ Improvement
 • Verified with 1,954 automated assertions passing on Lua 5.4, LuaJIT, and Kindle's Lua 5.1 bytecode check.
 
 Install it from **Check for updates** inside the plugin, or download the zip below.
-
-# v1.4.0 · 2026-11-07
-
-**New**
-
-- Universal Markdown highlights: choose how special highlights are formatted when exported (Obsidian Callout [!highlight], GFM Alert [!IMPORTANT], Standard highlight ==highlight==, Highlight & bold, Star & bold, or Bold).
-- Reading Digest: a consolidated chronological summary file (00 - Reading Digest.md) grouping highlights across your library by day, with an epigraph and a one-tap export shortcut.
-- KOReader metadata import: import book ratings, reviews, reading status, reading dates, and collections from KOReader directly into note frontmatter.
-- Reading now section: optional dedicated section at the top of the index table for books currently being read.
-- Subfolder organization & filename templates: organize notes into folders by author, series, or status, and customize filename patterns (Author - Title, Title (Author)).
-- Native Bookshelf integration: quick actions (Export this book, Tags..., Book visibility...) integrated into the bottom action bar of each book.
-- Tag suggestions & manager: fast tag suggestion dialog based on library tags and a tool to clean up unused tags.
-
-**Improvement**
-
-- Polished index tables: cover images optimized to 90×120 for balanced rows, compact 5-block progress bars, and added vertical breathing room for multi-line tags.
-- Calibre tag facet splitting: hierarchical category tags (e.g. Fiction.Mystery) are automatically split into clean individual #tag values.
-- Reorganized settings: settings split into dedicated, uncluttered Index and Style submenus with dedicated icons.
-- Book visibility: exclude specific volumes from the index or from export without deleting existing notes.
-
-**Fix**
-
-- Reading digest heading links: wikilink headings render with unescaped pipes so they display cleanly without raw bracket syntax in Markdown viewers.
-- Under-the-hood stability: verified with 1,929 automated assertions passing on both Lua 5.4 and LuaJIT.
-
-Install it from Check for updates, or the zip below.

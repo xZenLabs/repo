@@ -1,3 +1,15 @@
+# v4.5.4 · 2026-11-26
+
+A fix that brings back the ink of books that showed up empty. **If a book you wrote a lot in opened with no ink, update and open it again: the ink comes back.** After updating from inside Ink Away, restart KOReader before opening the book.
+
+### Fixed
+
+- **Ink on a book that showed up empty is back.** A book with a great deal of ink, such as a PDF used as a daily journal, could open with none of it, though its files were still in the book's folder. Up to 4.5.2, Ink Away could not read a book's ink past a size limit of the Lua engine KOReader uses (the same limit as in #92), so it put the file aside as `inkaway.lua.unreadable` and showed the book empty. 4.5.3 reads ink of any size, but did not look at files already put aside. Now that ink is brought back when the book is opened, before any ink drawn since and with nothing twice, and the files put aside are kept as `inkaway.lua.recovered`. Nothing is deleted.
+
+**Install:** download `ink-away.koplugin-v4.5.4.zip` below, unzip it, and copy the `ink-away.koplugin` folder into KOReader's `plugins` folder, replacing the old one. Or update from inside Ink Away (Settings, Updates), then restart KOReader. Guide: https://ink-away-docs.vercel.app
+
+**Full changelog:** https://github.com/EmirErtorer/ink-away.koplugin/compare/v4.5.3...v4.5.4
+
 # v4.5.3 · 2026-11-25
 
 A fix for big notebooks that would no longer open, plus night mode, Kobo and Simplified Chinese. If a notebook of yours showed "main function has more than 65536 constants", update and it opens again, with nothing lost.
@@ -74,20 +86,3 @@ Fixes:
 - Fixed during the test builds: the "Preparing this book for rooms" note stuck on Kobo, a crash from a late cloud sync answer, Google Drive sign-in on Android, sync safety copies on Kindles, and several Make room and screen clip glitches. The full list is in CHANGELOG.md.
 
 To update from inside Ink Away: Settings, Updates, Install. Or download `ink-away.koplugin-v4.5.0.zip` below and put the `ink-away.koplugin` folder in KOReader's plugins folder.
-
-# v4.4.0 · 2026-10-31
-
-Ink Away 4.4.0 is the stable release of everything since 4.3.0. The big one is Export: your annotations now leave the reader as an editable PDF, a PDF of any book, or images. Plus Ink Away in ten languages, a toolbar you can move to the left or right, PDFs opened as notebooks from KOReader's own menus, and KOReader's gestures working inside Ink Away.
-
-Highlights:
-- **Editable PDF.** Annotate a PDF while you read, then export it: you get a copy of the original with your ink and highlights as real PDF annotations. The text stays selectable, the file stays about the size of the original, and any PDF viewer can edit or remove your annotations. Text boxes, pictures and fills can't be annotations, so Ink Away lists them first and either leaves them out or keeps the ink of just those pages as a picture over the page.
-- **Any book as a PDF.** Export an EPUB, MOBI or other book you annotated as a fixed PDF, laid out as you read it now, with your ink, shapes and highlights where they are on the screen. The text sits under each page, so you can search, select and copy it. Export the pages with ink, a range or the whole book. Pages are pictures, so long books make big files.
-- **Images.** Save pages as PNGs (the page you are on, the pages with ink or a range, one file each in a folder), or only your ink on white or transparent pages. A progress bar shows the way and Stop ends an export and deletes what it wrote. Find Export in Book ink settings, or under Tools, Ink Away.
-- German, Greek, Spanish, French, Italian, Polish, Brazilian Portuguese, Portuguese, Russian and Turkish. Set KOReader to the language and restart. Spanish and the translation system are by Sebas Moran.
-- Settings, Toolbar side: top, left or right on the canvas, for palms that kept hitting the toolbar.
-- Long-press a PDF in KOReader's file browser, or open it and use Tools, Ink Away: Open as Ink Away notebook. New, From a PDF now uses KOReader's own file list, without the .sdr folders.
-- KOReader's gestures (the light, a refresh, a screenshot) work inside Ink Away. Hold Back in the library to jump to the top folder.
-- A small coffee button beside the dark mode button in Settings, for anyone who wants to say thanks.
-- A highlighter over a page picture no longer covers the text under it in exports.
-
-To update from inside Ink Away: Settings, Updates, Install. Or download `ink-away.koplugin-v4.4.0.zip` below and put the `ink-away.koplugin` folder in KOReader's plugins folder.
