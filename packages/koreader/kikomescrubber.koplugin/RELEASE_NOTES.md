@@ -1,3 +1,49 @@
+# v2.5.0 · 2026-11-26
+
+## Summary
+
+Active filters show as pills in Library, there is a new Type filter, more file formats appear (Markdown and zip comics), covers without a picture look better, corners are smoother and now work in night mode, and there are a few small visual improvements.
+
+## Filters
+
+- Active filters (type, status and language, in that order) show as black pills between the tabs and the books. Tapping a pill removes that filter.
+- While pills are showing, the buttons that used to sit there (Add collection, the Back pill of a group or folder) move into the More menu. If the pills don't all fit, the extra ones are gathered in a "+N" pill.
+- Filters now apply to every Library tab except Files. Files is already prepared to behave the same if it gets filters later.
+- New Type filter, available in Library, Home and the collection book picker. It groups files by format:
+  - Books: epub, kepub, mobi, azw, azw3, fb2, prc, pdb, chm
+  - Graphic novels: cbz, cbr, zip
+  - Documents: pdf, djvu, xps, oxps, md, txt, rtf, doc, docx, htm, html, xhtml
+
+## Formats
+
+- The library scan now also picks up Markdown and other formats KOReader can open: md, doc, docx, xhtml, chm, pdb, prc, xps, oxps and kepub.
+- Zip files that KOReader can open, like manga and manhwa made of images, now show up in Library as Graphic novels. A .fb2.zip takes its type from the format inside. Zips KOReader can't open are still hidden.
+
+## Covers
+
+- Books without a cover get a redesigned placeholder: a white plate with a black spine, a small format tag, the real title in bold (sized to fit), a short rule, and the author at the bottom. Small thumbnails get a simpler version.
+- If drawing the placeholder fails, it falls back to a plain plate instead of crashing the plugin.
+- Rounded corners are smoother, which is most noticeable on a Kindle. They also work in night mode now, and covers are slightly less round when they are small.
+- While a book opens, the "Opening" message on its cover is now a black bar along the bottom edge. It is as wide as the cover and its bottom corners match the cover's.
+
+## Home and Action center
+
+- Home in list mode now always fits at least three books. On a short screen the covers shrink and each title takes a single line.
+- Action center: the Library icon is bigger and the row of actions takes less vertical space.
+- Action center: the page indicator in the footer is now made of horizontal lines instead of dots. The current page is a longer, thicker black line and the others are short, thin and grey.
+- Small visual improvements, such as the dots at the top of Home.
+
+## Translations
+
+- Spanish and Brazilian Portuguese translations are included for the new strings.
+
+## Installation
+1. Download `KiKomeScrubber.koplugin.zip` from the **Assets** section below (not "Source code").
+2. Unzip it and copy the `KiKomeScrubber.koplugin` folder into `koreader/plugins/`.
+3. Restart KOReader.
+
+To update, use **Check for updates** in KiKome's Settings, or replace the folder. To uninstall, delete it.
+
 # v2.4.0 · 2026-11-21
 
 ## What's new
@@ -171,50 +217,6 @@ To update, use **Check for updates** in KiKome's Settings, or replace the folder
 ### Fixes
 - Fixed a bug: tapping **Exit KOReader** now closes KOReader normally.
 - New Home button 
-
-## Installation
-1. Download `KiKomeScrubber.koplugin.zip` from the **Assets** section below (not "Source code").
-2. Unzip it and copy the `KiKomeScrubber.koplugin` folder into `koreader/plugins/`.
-3. Restart KOReader.
-
-To update, use **Check for updates** in KiKome's Settings, or replace the folder. To uninstall, delete it.
-
-# v2.0.0 · 2026-11-03
-
-## What's new
-This update turns Book Details into a place to actually work with your books. Browse every bookmark, highlight and note in one list. Edit a book's metadata, rating, status, collections and file from a single screen. And in Files, move books into any folder with the new **+**.
-
-### Book Details: Annotations
-A new bookmark button beside **Read now** opens every annotation in the book.
-- Bookmarks, highlights and notes in one list.
-- Filter by type, and by highlight style (highlight, underline, invert, strikethrough).
-- Tap an annotation to read it in full, with its date, chapter, quote and note.
-- **Show in book** jumps to its page.
-
-### Book Details: Edit
-The pencil button now opens a full editing screen for the book.
-- **Favorite, review and rating:** heart, a short review and five stars.
-- **Status:** Reading, On hold or Finished.
-- **Metadata:** edit title, authors, series, series number, language, keywords and description.
-  - You can choose to write the changes into the EPUB itself, with an optional backup copy.
-  - Restore the original metadata at any time.
-- **Collections:** add the book to any of your collections.
-- **Book settings:**
-  - Reset this document.
-  - Export its notes as a .md file.
-  - Refresh metadata.
-  - Buttons from your other plugins.
-- **File:** Rename, Copy, Cut and Delete the book's file.
-
-### Library > Files: Move to folder
-A new **+** button moves books into the folder you have open.
-- Pick from a list of your books; each one shows the folder it is in now.
-- The ticked books move into the open folder.
-
-### Also
-- Holding a book in Home, or in Library tabs other than Files and Collections, opens its details directly.
-- In Files and Collections, **KOReader menu** is now **Edit book**, and opens the Edit screen.
-- Holding a folder or collection in Home shows the same menu as in Library.
 
 ## Installation
 1. Download `KiKomeScrubber.koplugin.zip` from the **Assets** section below (not "Source code").
