@@ -2,13 +2,13 @@
 
 ## Added
 
-- Setting "Exclude from reading statistics" (Meguru → Settings, off by default). When enabled, Meguru books no longer add reading time, page turns or sessions to KOReader's statistics. Other books are not affected. Applies the next time a book is opened.
+- Setting "Exclude from reading statistics" (Meguru → Settings, off by default). When enabled, everything read in Meguru is left out of KOReader's statistics: no reading time, page turns or sessions are recorded. Books opened outside Meguru are not affected.
 
 ## Fixed
 
-- Fixed a crash when long-pressing a page that failed to load. The panel view now simply doesn't open.
-- Fixed a page being stretched to fill the screen after a retry following a load error. It now keeps its real proportions ([#18](https://github.com/Craftwork2720/meguru/issues/18)).
-- Fixed a two-page spread mixing one-page and two-page layouts after a retry following a load error. It now keeps the two-page fit.
+- Fixed a crash when long-pressing a page that failed to load.
+- Fixed a page being stretched to fill the screen after a retry following a load error ([#18](https://github.com/Craftwork2720/meguru/issues/18)).
+- Fixed a two-page spread mixing one-page and two-page layouts after a retry following a load error.
 
 **Full Changelog**: https://github.com/Craftwork2720/meguru/compare/v1.8.9...v1.8.10
 
