@@ -1,3 +1,13 @@
+# v3.1.0-beta.1 · 2026-11-27
+
+### Beta Pre-Release: InkAway Handwritten Notes Support
+
+- **InkAway (`ink-away.koplugin`) support for PDF & EPUB**: exports freehand strokes, shapes (lines, curves, rectangles, triangles, ellipses, polygons, arrows), RGB colors, highlighter opacity, text boxes, and linked `.inkaway` book/highlight notebooks into clean vector `.svg` files in `drawings/`.
+- **Automatic SVG updates**: tracks stroke changes per page so adding or editing drawings updates the exported SVG while keeping Obsidian `^hl-` block IDs stable.
+- **Note**: Exports your actual drawn strokes as vector SVG images (no OCR on handwriting).
+
+You can install this beta directly from KOReader via **Tomedown → Settings → App & updates → Release channel → Beta → Check for beta updates**.
+
 # v1.1.0-beta.3 · 2026-10-26
 
 **Tomedown 1.1.0-beta.3, the third beta of the per book edition.**
@@ -134,41 +144,5 @@ Sixth beta of the **Vault** release.
 3. **Device check this round**: open a highlight's menu on the Kindle screen — the entry *All highlights as Special Highlights* is longer than the old one. If it gets truncated on the e-ink menu, say so in the discussion.
 
 All 758 test assertions green.
-
-*Remotely Save users: set **Abort Sync If Modification Above Percentage** to **100 (disable the protection)** — Tomedown re-exports notes in bulk, which trips the default 50% guard.*
-
-# v0.8.0-beta.5 · 2026-10-02
-
-> **The Vault release is getting close — this beta locks the new export layout. Update, run one export, and every note is rewritten once.**
-
-Fifth beta of the **Vault** release: a cleaner layout for every exported file.
-
-## Highlights
-
-- **Every exported file opens with a horizontal rule** right after the frontmatter — properties, rule, content (book notes and the index alike)
-- **The index shows a stats line above the table** — `*9 books · 53 highlights — click a title to open its note.*`
-- **The book cover is centered** and framed by a rule before the `# **HIGHLIGHTS**` heading
-- **Menu renames**: *Generate the 00 - Index.md (for Obsidian)* and *All highlights as Special Highlights* — same behavior, clearer names
-- **Automatic rewrite**: the render format is part of the stored hash, so the first export after the update rewrites every note — no *Import all books* needed
-- Index covers stay at 90×120 (the table caps the size anyway)
-- README: refreshed menu and Obsidian screenshots
-
-## 0.8.0 recap (betas 1–5)
-
-- Book covers in the exports (frontmatter + `<img>` + index column), Obsidian 1.8.1+
-- Covers upload into their own `covers/` folder, created on the server on the first upload
-- Callouts on export, new index (v2)
-- Special Highlight: its own menu entry plus a dynamic row in the compact highlight menu
-- Status popup: wide (90% of the screen), small font, labels in bold
-- Keywords always valid Obsidian tags (whitelist)
-- Clean export layout: rules, stats line, centered cover
-
-## Beta focus
-
-1. On the Kindle: Settings → **Beta Releases** ON → *Check for updates* → update to beta.5 and restart.
-2. On desktop: reinstall the plugin from the asset below, then restart KOReader.
-3. Export once — everything rewrites — and check in Obsidian: the rule after the properties, the stats line above the index table, the centered cover.
-
-All 757 test assertions green.
 
 *Remotely Save users: set **Abort Sync If Modification Above Percentage** to **100 (disable the protection)** — Tomedown re-exports notes in bulk, which trips the default 50% guard.*
