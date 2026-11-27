@@ -1,3 +1,18 @@
+# v1.5.0-beta.6 · 2026-11-27
+
+### Check Hardcover links across your library
+
+Open **OrbitUI settings → Integrations → Hardcover book information → Re-scan all books with edition IDs → Auto-link editions**. OrbitUI compares each book’s embedded Hardcover edition ID with its saved link, creates missing links and corrects links that point to the wrong edition. The report also counts books that already match and books without an edition ID. Previously this menu only checked unlinked books.
+
+The regular auto-link action still starts with unlinked books. Its confirmation now explains that a first pass on a large library can take hours. An edition ID avoids a title search, but new links still need Hardcover lookups and book details.
+
+### Bookshelf 6.6.1 and SimpleUI 3.1.1
+
+- Page counting moves on if rendering one book stalls for five minutes. KOReader menu search also handles accented and other multibyte characters when a book preview is shortened.
+- The finished-books list shows the author ahead of the dates and offers a button for book actions. Tabs have larger default labels and more vertical spacing. French, Polish and Simplified Chinese translations have been updated.
+
+To install, enable **Include preview releases** in **OrbitUI → System & maintenance → Updates**, check for updates and restart KOReader after installation. For manual installation, download **orbitui.koplugin.zip**.
+
 # v1.5.0-beta.5 · 2026-11-25
 
 ### Pick how your current books look on Home
@@ -72,23 +87,3 @@ Home skips redundant repaints while a full-screen window is open. Reading-day st
 The milestone and cover handling were tested on a physical HiBreak. All 96 navigation taps in the Library and Manga comparison reached the expected view. The cover optimization applies to Android safe mode.
 
 To update, enable **Include preview releases** under **OrbitUI → System & maintenance → Updates**, check for updates, then restart KOReader. For a manual install, download **orbitui.koplugin.zip** below. The stable channel offers **1.4.0**.
-
-# v1.5.0-beta.1 · 2026-11-21
-
-### Select text with FingerTips
-
-Touch and drag to see the line above your finger. After lifting your finger, drag either handle to adjust the selection. The floating bar uses your six OrbitUI shortcuts, including actions provided by KOAssistant. FingerTips is bundled and enabled by default on touchscreens. An enabled standalone copy takes priority and existing FingerTips preferences carry over. You can turn it off under **OrbitUI → Integrations → Reader panel & X-Ray → FingerTips text selection**.
-
-### Revisit words from your books
-
-Add **Vocab Word** to the Bookshelf start menu to review words saved in KOReader’s Vocabulary Builder. It uses your installed dictionaries offline and can show the original sentence and book. Tap the word to open its dictionary entry or mark it as known to remove it from rotation. Opening the module picker skips the dictionary lookup.
-
-### Home, Reading log and shelves
-
-- Home can adapt text contrast to the wallpaper. The Reading log adds a monthly books/pages chart and shows your pace towards the annual goal.
-- Bookshelf 6.5.3 discards taps queued while a book opens. The reviewed SimpleUI 3.1.0 updates include statistics-card actions, clock date formats and subview navigation fixes.
-- Optional Library and Manga diagnostics measure the time to first paint on the device.
-
-To update, enable **Include preview releases** under **OrbitUI → System & maintenance → Updates**, check for updates, then restart KOReader. For manual installation, use the attached **orbitui.koplugin.zip**. The stable channel offers **1.4.0**.
-
-Tested in KOReader 2026.07.1 on an emulated Tolino Vision Color with a local dictionary and an EPUB. Physical Bigme and Kobo checks are still open for this beta.

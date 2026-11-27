@@ -1,3 +1,12 @@
+# v0.22.0 · 2026-11-27
+
+## 🚀 Features
+- feat(updater): optional check for updates on open
+- feat(ui): put Check for updates first in the hamburger menu, 1.5x taller
+
+## 🧰 Maintenance
+- docs(readme): add Coded with AI badge
+
 # v0.21.2 · 2026-10-28
 
 ## 🐛 Bug Fixes
@@ -22,15 +31,3 @@
 
 ## 🐛 Bug Fixes
 - fix(epub): keep the contents out of the spine so reading positions survive
-
-# v0.20.0 · 2026-09-01
-
-## 🚀 Features
-- feat(epub): add an in-book contents page
-
-## 🐛 Bug Fixes
-- fix(epub): put the contents page ahead of the chapters
-- fix(ui): rebuild the downloads list when the new-chapters badge is cleared
-
-## 🧰 Maintenance
-- docs: track CLAUDE.md pointing at AGENTS.md
