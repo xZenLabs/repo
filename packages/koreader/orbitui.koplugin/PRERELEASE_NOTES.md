@@ -1,3 +1,13 @@
+# v1.5.0-beta.7 · 2026-11-27
+
+### Faster Hardcover linking
+
+If your books already contain a Hardcover edition ID, OrbitUI can now link up to 25 editions in one request. The same request retrieves the book details, including page counts, publication year and ratings.
+
+In **Settings → Integrations → Hardcover**, choose **Auto-link all books → Auto-link editions** to link books that are still unlinked. To check the entire library, choose **Re-scan all books with edition IDs → Auto-link editions**. This also corrects links pointing to a different edition. Matching links are checked locally. If Hardcover leaves an edition out of a batch, OrbitUI retries it individually.
+
+On a Tolino Vision Color emulator with simulated Hardcover replies, linking 25 EPUBs went from **50 requests and 66 seconds in beta 6** to **one request and 11 seconds with this release ZIP**. A repeat scan made zero requests. A separate 1,000-book test of the batch lookup took about 18 minutes and 40 requests. Checking those 1,000 links again took 37 seconds with zero requests. Times on a physical reader and the live service will vary.
+
 # v1.5.0-beta.6 · 2026-11-27
 
 ### Check Hardcover links across your library
@@ -67,23 +77,3 @@ The Home card and the achievement catalogue display BookOrbit’s icons and rari
 Tested in KOReader on an emulated Tolino Vision Color with 66 modules and shortcuts at three sizes. The same seven test books produced rows or grids of three, four and seven covers. A tap selected the expected book at each size. Physical HiBreak testing of these changes is still pending.
 
 To update, enable **Include preview releases** under **OrbitUI → System & maintenance → Updates**, check for updates, install and restart KOReader. For manual installation, download **orbitui.koplugin.zip** below.
-
-# v1.5.0-beta.2 · 2026-11-24
-
-### Your next BookOrbit milestone on Home
-
-The optional **BookOrbit achievements** card now shows your latest award alongside the milestone you are closest to earning. See how many books, pages, reading hours or streak days remain. For other goals, the card shows the current count and target. The summary uses your existing BookOrbit plugin login and works without a separate API key or server changes. Tap the card to browse the available badges.
-
-### Bookshelves and Android covers
-
-- Bookshelf 6.6.0 keeps series boxes inside their author or section group and preserves cover contrast over wallpaper.
-- In Android safe mode, reopening a shelf skips books already checked for a cover when their file size and modification time match. Adding a custom cover, changing the book file or choosing **Refresh metadata** triggers another check.
-- Library metadata lookup skips per-book hashing when the hash-sidecar storage contains no custom metadata.
-
-### Home and reading statistics
-
-Home skips redundant repaints while a full-screen window is open. Reading-day statistics handle UTC offset changes, and finished-book actions let you correct a status or exclude a book from goals. This release also includes updated date formatting and Czech and Chinese translations.
-
-The milestone and cover handling were tested on a physical HiBreak. All 96 navigation taps in the Library and Manga comparison reached the expected view. The cover optimization applies to Android safe mode.
-
-To update, enable **Include preview releases** under **OrbitUI → System & maintenance → Updates**, check for updates, then restart KOReader. For a manual install, download **orbitui.koplugin.zip** below. The stable channel offers **1.4.0**.

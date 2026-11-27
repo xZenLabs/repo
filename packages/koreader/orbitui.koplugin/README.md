@@ -22,7 +22,7 @@ day, how much you read this week and your activity over the last twelve weeks.
 Add the optional **BookOrbit achievements** card to browse badges and track your next goal. You can also choose the first six actions in the text selection
 menu. Library and Manga do less work when opening large shelves.
 
-**[Try 1.5.0-beta.6](https://github.com/komadorirobin/orbitui.koplugin/releases/tag/v1.5.0-beta.6)** · Check existing Hardcover links against the edition IDs in your books. Page counting can now move past a stalled book, and finished-book rows offer quick access to book actions.
+**[Try 1.5.0-beta.7](https://github.com/komadorirobin/orbitui.koplugin/releases/tag/v1.5.0-beta.7)** · Link up to 25 Hardcover editions in one request and check existing links locally.
 
 FingerTips is included on touchscreens. While you
 select text, you can see the line above your finger. Lift your finger and drag
