@@ -158,9 +158,8 @@ make build_web
 # Clean Local Build
 make clean
 
-# Tests (after building React assets)
-make tests
-npm --prefix web test
+# Run before tagging: the tag workflow publishes only after these same checks pass.
+make check-release
 ```
 
 ## Notes
