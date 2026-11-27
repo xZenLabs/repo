@@ -13,12 +13,9 @@ The Model Context Protocol (MCP) is an open standard that enables AI assistants 
 - **Book Content Access**: AI assistants can read your current book's content at different scopes (current page, chapter, specific page ranges)
 - **Metadata Retrieval**: Access book metadata including title, author, reading progress, and statistics
 - **Interactive Tools**: Search within books, navigate to pages, get table of contents, add highlights and notes
-- **Resource Subscriptions**: Subscribe to resources and receive automatic notifications when they change (page turns, book changes)
-- **Client Features** (MCP 2025-03-26): 
-  - **Sampling**: Server can request LLM completions from the client
-  - **Elicitation**: Server can request user input (confirmations, text input, choices)
-  - **Logging**: Server can send log messages to the client
-- **Secure Local Network**: Server binds to your local network only
+- **Any modern MCP client**: Speaks both stateless MCP (2026-07-28) and the earlier handshake-based versions (2025-03-26 to 2025-11-25) on the same endpoint
+- **Asks you when it matters**: With clients that support elicitation (e.g. Claude), the server asks you before overwriting a note you already wrote
+- **Local Network Protection**: Requests from web pages on other sites are rejected (Origin validation against DNS rebinding)
 - **Cloud Relay**: Access your e-reader from anywhere via a cloud relay
 
 ### Why not just use the [KOAssistant plugin](https://github.com/zeeyado/koassistant.koplugin)?
@@ -54,6 +51,16 @@ Use the [App Store plugin](https://github.com/omer-faruq/appstore.koplugin) (or 
 3. Restart KOReader
 
 To update, repeat the steps above with the latest version.
+
+### Over Wi-Fi (for testing a branch)
+
+Turn on KOReader's SSH server (**⚙️ Settings → Network → SSH server**, port 2222) and add your public key to `koreader/settings/SSH/authorized_keys`. Then, from a checkout of the branch you want:
+
+```sh
+scripts/push-to-device.sh <reader-ip>
+```
+
+It finds KOReader's folder on Kobo, Kindle, Android and PocketBook, or takes the folder as a second argument. Restart KOReader afterwards (**Menu → Exit → Restart KOReader**).
 
 ## Usage
 
@@ -171,33 +178,23 @@ Prompts are pre-defined conversation starters for common reading companion inter
 | `translate` | Translate       | Translate text to another language                            |
 | `recommend` | Recommend Books | Get personalized book recommendations                         |
 
-### Server-Initiated Features (MCP 2025-03-26)
+### Protocol Versions
 
-The plugin supports advanced MCP features that enable the server to communicate back to the client:
+| Client speaks            | How it connects                                                                                        |
+| ------------------------ | ------------------------------------------------------------------------------------------------------ |
+| 2026-07-28 (stateless)   | Every request carries its version and capabilities in `_meta`; `server/discover` describes the server |
+| 2025-03-26 to 2025-11-25 | `initialize` handshake; the server answers with the client's version                                    |
 
-#### Resource Notifications
+Clients that speak both try 2026-07-28 first and fall back automatically.
 
-When clients subscribe to resources (e.g., `book://current/page`), the server automatically sends notifications when:
-- The current page changes
-- The book changes (open/close)
-- Selected text changes
+### Elicitation
 
-This enables real-time awareness of what the user is reading.
+On 2026-07-28 clients that declare form elicitation, `annotate` asks the user before changing a note that already exists (replace it, add below it, or keep it). The question travels inside the tool result (an `input_required` result, the protocol's multi round-trip request pattern) and the client retries the call with the answer, so it works through the cloud relay without any extra channel. With other clients, the tool doesn't touch the note and asks the AI to check with you and call again with `if_note_exists`.
 
-#### Logging
+### Not Supported
 
-The server can send log messages to the client at various levels:
-`debug`, `info`, `notice`, `warning`, `error`, `critical`, `alert`, `emergency`
-
-Clients can set the minimum log level via `logging/setLevel`.
-
-#### Sampling & Elicitation (Prepared for Future Use)
-
-The infrastructure is in place for server-initiated requests:
-- **Sampling**: Request LLM completions from the client
-- **Elicitation**: Request user confirmations, text input, or choices from forms
-
-These features require client support and are ready for when MCP clients implement them.
+- **Sampling and server logging**: deprecated in MCP 2026-07-28 and not implemented.
+- **Live change notifications** (page turns, book changes): planned through the 2026-07-28 `subscriptions/listen` stream. Until then the server doesn't advertise resource subscriptions, so clients don't wait for updates that never arrive.
 
 
 ## Local & Remote Modes
@@ -206,7 +203,7 @@ These features require client support and are ready for when MCP clients impleme
 
 In local mode, the MCP server runs on your e-reader and listens for connections on your local network (WiFi). This would be the default mode, but unfortunately some AI clients (most notably Claude Mobile) cannot connect to local network addresses and require a fully remote-accessible server.
 
-**Current limitations**: Server-initiated features (resource notifications, logging) are not yet available in local mode because HTTP is request/response only. These features work fully in remote mode via the cloud relay. See [PR #8](https://github.com/laughedelic/mcp.koplugin/pull/8) for work-in-progress on adding bidirectional communication via long-polling.
+The server accepts requests on `/` and `/mcp`. Requests carrying an `Origin` header are accepted only from `localhost` or the e-reader's own address, so a web page you open can't reach your library through your browser. Local mode has no authentication, so use it only on networks you trust.
 
 So for now this mode is kept for testing and limited use with compatible clients. I've tested it with GitHub Copilot with this configuration (replace `LOCAL_IP`):
 
@@ -263,12 +260,11 @@ The relay implementation is open source: [mcp-relay-cloudflare](https://github.c
 - **OAuth 2.1 Authorization Code + PKCE**: MCP clients authenticate via the /authorize login screen using your device ID + passcode, then exchange a code for a token
 - **Short-lived tokens**: Access tokens expire in 1 hour
 - **Audience validation**: Tokens are bound to your specific device
-- All traffic is encrypted (HTTPS)
+- All traffic is encrypted (HTTPS), and the plugin verifies the relay's certificate and host name before sending its credentials. If your e-reader's clock is far off, the check fails; fix the date and time. For a development relay with a self-signed certificate, set `mcp_relay_tls_verify = false` in KOReader's `settings.reader.lua`
 - The relay doesn't store any book content, only forwards authenticated requests
+- **Device secret** (needs an up-to-date relay): Your e-reader also generates a random secret that authenticates its connection to the relay, so knowing your device ID is not enough to receive your requests. The relay never forwards your AI client's access token to the e-reader. An older self-hosted relay ignores the secret, lets anyone who knows the device ID poll, and forwards the client's `Authorization` header, so the plugin shows a warning when the relay doesn't confirm the secret
+- **Brute-force protection** (also needs an up-to-date relay): The relay locks the login for your device after repeated wrong passcodes
 - You can reset your device ID and passcode anytime from the settings menu
-
-> [!WARNING]
-> Current implementation does not implement SSL certificate verification for the relay server 
 
 ## References
 
