@@ -1,3 +1,11 @@
+# v9.3.0 · 2026-11-27
+
+### New
+- Radar chart style for the Week view (Cards look only, see #112 Thanks again: @NijatTagizada): one spoke per day, clockwise from the oldest day. Zero reading sits at the centre, the week's highest value on the outer ring, today's point is hatched, and upcoming days have no point.
+- Radar week card layout: chart on the left, values with deltas stacked on the right. Bars and Line with dots keep the old layout. Tapping a day label opens that day's books, and a long press on today's label opens today's timeline.
+- "Day labels" setting (Week > Day labels: Dates / Day names), shared by bars, line with dots and radar in both week views. Dates is the default; Day names shows Mon … Yesterday, Today.
+- pt_BR added (#113 Thanks: @danieldcastro)
+
 # v9.2.0 · 2026-11-25
 
 ### New
@@ -30,9 +38,3 @@
 ### Fixed 
 
 - The white vertical line cutting through the day numbers in the Book progress calendar is gone, because the day number is now drawn on top of the “+%” and progress bar layer
-
-# v8.7.10 · 2026-11-04
-
-### Fixed
-
-- The Achievements info dialog appearing behind the list when SimpleUI is installed #87 (Thanks: @NijatTagizada )

@@ -1,3 +1,14 @@
+# v0.8.1 · 2026-11-27
+
+## What's Changed
+
+* Report the real plugin version by @laughedelic in https://github.com/laughedelic/mcp.koplugin/pull/18
+
+### Fixes
+- The plugin now reports its real version to the relay and to MCP clients. Until now, every release said 0.3.0. The version is read from `_meta.lua`.
+
+**Full Changelog**: https://github.com/laughedelic/mcp.koplugin/compare/v0.8.0...v0.8.1
+
 # v0.8.0 · 2026-11-27
 
 ## What's Changed
@@ -53,11 +64,3 @@
 
 
 **Full Changelog**: https://github.com/laughedelic/mcp.koplugin/compare/v0.5.0...v0.5.1
-
-# v0.5.0 · 2026-02-01
-
-## What's Changed
-* feat: prompts by @laughedelic in https://github.com/laughedelic/mcp.koplugin/pull/5
-
-
-**Full Changelog**: https://github.com/laughedelic/mcp.koplugin/compare/v0.4.0...v0.5.0
