@@ -64,7 +64,7 @@ At the top of the library, two badges point at what frees the most space: **Fini
 
 Every row has a checkbox on the right. Select the ones you want, or use the **Select all** line above them, which selects the deletable rows on the page you are looking at (so a delete is never of rows you have not seen). That line always shows the total you have selected, across every page of the list you are looking at, with its size: "Select all · 15 selected · 668.0 MB". A bar floats over the bottom of the list, just above the page controls (which stay whole, so you can always see which page you are on), with **Cancel** and **Delete**; nothing moves under your finger when it appears. Paging and sorting keep your selection; opening another folder, searching or changing a filter clears it, so a Delete only ever acts on rows you can see.
 
-You always get a confirmation first, naming what goes and how many books lose their reading progress. Rows that cannot be deleted are greyed out with a padlock instead of a checkbox, and tapping it tells you why. If a file or folder is locked only because ShelfSpace does not recognise it, its card (press and hold the row) says so and points to KOReader's file manager, which can delete it after asking once its **Show unsupported files** setting is on. With that on, the card has **Show in file manager**, which takes you to the file there. ShelfSpace never changes that setting for you.
+You always get a confirmation first, naming what goes and how many books lose their reading progress. A large delete shows a progress bar while it runs. Rows that cannot be deleted are greyed out with a padlock instead of a checkbox, and tapping it tells you why. If a file or folder is locked only because ShelfSpace does not recognise it, its card (press and hold the row) says so and points to KOReader's file manager, which can delete it after asking once its **Show unsupported files** setting is on. With that on, the card has **Show in file manager**, which takes you to the file there. ShelfSpace never changes that setting for you.
 
 ### KOReader
 
@@ -177,7 +177,7 @@ Taken in the KOReader desktop emulator at Kobo Libra Colour proportions, on a ma
 
 ## How it works
 
-The last scan is kept in KOReader's cache folder (`cache/shelfspace/scan.lua`). The next one only reads folders whose modification time changed. KOReader's own data folder is always read afresh, since its files change in place. Delete the file to force a full scan.
+The last scan is kept in KOReader's cache folder (`cache/shelfspace/scan.txt`). The next one only reads folders whose modification time changed, and the file is only written again when something did. KOReader's own data folder is always read afresh, since its files change in place. Delete the file to force a full scan.
 
 ## Development
 
@@ -192,6 +192,8 @@ The logic runs under plain `luajit`, without KOReader. It covers what may be del
 Screenshots are taken by `tools/screenshots/run.sh /path/to/KOReader.app`. It builds a sample library and a made-up 8 GB device, drives ShelfSpace through every screen in the desktop emulator, checks it as it goes (what may be deleted, every file type, duplicates, the filters), and washes the colour screenshots with `tools/kaleido-wash.sh`. Add `--readme` to put the washed ones in `assets/`. Every screenshot in this repository goes through that wash; run `tools/kaleido-wash.sh shot.png` on any other colour capture, once.
 
 `tools/screenshots/sizes.sh /path/to/KOReader.app` opens ShelfSpace at the screen sizes of common e-readers (from 600 × 800 up to 1440 × 1920, 167 to 300 dpi, upright and sideways) and checks that every tab fits, with a screenshot of each.
+
+`tools/perf/run.sh /path/to/KOReader.app [books]` times ShelfSpace on a large made-up library (5,000 books unless you say otherwise): opening it, the filters, selecting, turning pages, deleting every finished book at once, and the other tabs. The times are the computer's; an e-reader is many times slower, so read them for what grows with the library.
 
 `tools/make-wordmark.py` draws the name under the logo as outlines from a font file; the result is already in `shelfspace.koplugin/shelfspace/icons.lua`.
 

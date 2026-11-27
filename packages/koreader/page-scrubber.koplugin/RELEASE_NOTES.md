@@ -1,3 +1,32 @@
+# v9.0.1 · 2026-11-26
+
+## Translations & dates
+
+This update is all about language support. Thanks to @danieldcastro  for the Portuguese translations (#11 ) and the detailed i18n review that led to most of the fixes below!
+
+### Added
+- **Portuguese (pt / pt_BR) is now complete.** Every string in the plugin is translated.
+- **Dates follow each language's own order.** The date format is now translatable, so Spanish shows "26 de mayo de 2026" and Portuguese shows "26 de maio de 2026". Other languages are unchanged.
+- **"May" is translated correctly.** The full and abbreviated month now have separate translations ("mayo" / "may", "maio" / "mai").
+
+### Improved
+- **One shared translation loader.** Every module now reads the same files, so region files like `pt_BR.po` and `zh_CN.po` are used across the whole UI, not just in the main menu.
+- **Grid and table of contents landscape views are now translated** (they were always shown in English before).
+- **Quick menu, updater and dictionary use the plugin's own translations**, and fall back to KOReader's when a string is missing.
+- **Spanish:** about 80 missing strings added, including the render option descriptions in the quick menu and all the update messages. Duplicate entries removed and a few wordings corrected ("Añadido el", "Menú de selección del Scrubber").
+- **Portuguese:** 16 extra strings added (highlight colors, "Delete note", "Paste", "Searching…") on top of the contributed translations.
+
+### Fixed
+- A table of contents fallback title was written in Spanish in the code, so it showed "Capítulo" in every language. It's now translated properly.
+- The back button that appears when you zoom into an image had a very thick outline on Kindle. It now has a thinner outline in both the normal and expanded panel.
+
+## Installation
+1. Download the zip named `page_scrubber.koplugin-<version>.zip` from the **Assets** section below (not "Source code").
+2. Unzip it and copy the `page_scrubber.koplugin` folder into `koreader/plugins/`.
+3. Restart KOReader.
+
+To update, replace the folder. To uninstall, delete it (and `koreader/patches/2--page-scrubber-font.lua` if you used the system font).
+
 # v9.0.0 · 2026-11-25
 
 ## Page Scrubber — Patch notes
@@ -153,36 +182,6 @@ To update, replace the folder. To uninstall, delete it (and `koreader/patches/2-
 
 ### Fixes
 - Fixed the "!" placeholder that could appear on grid thumbnails after returning from the split menu. Thumbnails whose request got stuck are now retried in the background.
-
-## Installation
-1. Download the zip named `page_scrubber.koplugin-<version>.zip` from the **Assets** section below (not "Source code").
-2. Unzip it and copy the `page_scrubber.koplugin` folder into `koreader/plugins/`.
-3. Restart KOReader.
-
-To update, replace the folder. To uninstall, delete it (and `koreader/patches/2--page-scrubber-font.lua` if you used the system font).
-
-# v8.4.0 · 2026-11-09
-
-## 8.4 Search button in quick menu and more 
-
-### **Quick Menu**
-* Added a **Search** button to the bottom row (light · search · actions · settings) to immediately trigger KOReader's text search.
-
-### Kikome and bookshelf compatibility
-- Instant exit from the **Library** button when KiKome or Bookshelf is the "Start with" home: the book is parked instead of closed, so the library shows with no loading wait.
-  - Start with = KiKome: needs *Instant exit from books* on and the book opened from KiKome.
-  - Start with = Bookshelf: needs hot parking on and the book opened from the shelf.
-- Any other "Start with" value, a missing or disabled plugin, an option turned off, or a book opened from elsewhere exits exactly as before.
-
-**Table of Contents (Vertical & Horizontal)**
-* The current chapter row (marked by the gray dot) now displays the time left to finish the chapter, mirroring KOReader's footer logic and chapter hierarchy.
-* Adaptive label sizing: The time left indicator hides if reading stats are unavailable/zero, and falls back to a compact format (e.g., "12m" instead of "12m left") on cramped screens.
-* Smart 2-line expansion: If the text still won't fit, the row expands to two lines to prevent harsh title truncation, placing the dot and time left at the end of the second line. "Page N" stays vertically centered.
-
-**Right Split Panel (Vertical)**
-*Small visual tweaks in formating. 
-
-
 
 ## Installation
 1. Download the zip named `page_scrubber.koplugin-<version>.zip` from the **Assets** section below (not "Source code").

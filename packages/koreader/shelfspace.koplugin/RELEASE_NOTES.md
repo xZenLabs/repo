@@ -1,3 +1,12 @@
+# v0.15.1 · 2026-11-26
+
+## [0.15.1](https://github.com/ghepting/shelfspace.koplugin/compare/v0.15.0...v0.15.1) (2026-11-26)
+
+
+### Bug Fixes
+
+* faster on large libraries, less memory once closed, a progress bar for big deletes, and badges that update after a delete ([#109](https://github.com/ghepting/shelfspace.koplugin/issues/109)) ([7a335ce](https://github.com/ghepting/shelfspace.koplugin/commit/7a335ce41f7bcaf765f97d84b9be0e28fdc551c3))
+
 # v0.15.0 · 2026-11-22
 
 ## [0.15.0](https://github.com/ghepting/shelfspace.koplugin/compare/v0.14.0...v0.15.0) (2026-11-22)
@@ -41,12 +50,3 @@
 ### Bug Fixes
 
 * never offer an empty file as the copy to keep, and match the landscape set heading to portrait ([#94](https://github.com/ghepting/shelfspace.koplugin/issues/94)) ([d2ed72a](https://github.com/ghepting/shelfspace.koplugin/commit/d2ed72a82d1d74fa8a1ace055715439413480dc7))
-
-# v0.12.0 · 2026-11-02
-
-## [0.12.0](https://github.com/ghepting/shelfspace.koplugin/compare/v0.11.1...v0.12.0) (2026-11-02)
-
-
-### Features
-
-* redesign the Duplicates compare view as compact rows with a green keep and a finished screen ([#92](https://github.com/ghepting/shelfspace.koplugin/issues/92)) ([2f89e7c](https://github.com/ghepting/shelfspace.koplugin/commit/2f89e7c5e9ac96f057fa9579c022ff86bd20fd7a))
