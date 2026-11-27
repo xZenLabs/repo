@@ -1,3 +1,13 @@
+# v3.1.0-beta.2 · 2026-11-27
+
+### Beta Pre-Release: Optional Highlight Color Labels & Aliases (#53)
+
+- **Highlight color toggle** (*Settings → Notes & highlights → Highlight color*, off by default): appends the highlight's color name (e.g. `- **p. 10** · 02/09/2026 · Yellow`) to each exported highlight's metadata line across book notes, `00 - Reading Digest.md`, and `.txt` exports.
+- **Custom color aliases** (*Settings → Notes & highlights → Color aliases*): map any KOReader highlight color to a custom label (for example `Yellow → Key idea`, `Red → Disagree`).
+- **Per-book override**: toggle highlight color labels per book under *Current book → Format & layout → Notes & highlights*.
+
+You can install this beta directly in KOReader via **Tomedown → Settings → App & updates → Release channel → Beta → Check for beta updates**.
+
 # v3.1.0-beta.1 · 2026-11-27
 
 ### Beta Pre-Release: InkAway Handwritten Notes Support
@@ -124,25 +134,3 @@ Download `tomedown.koplugin-v1.1.0-beta.1.zip` from the **Assets** section at th
 The beta is also opt-in inside KOReader: *Settings → Updates → Developer*, with *Beta Releases* ticked, will offer it. Without that tick nothing changes, the background check stays on stable releases and nobody gets nudged towards it.
 
 README, full tutorial, quickstart sheets and Obsidian guide sheets: https://github.com/imanubdesigner/tomedown.koplugin
-
-# v0.8.0-beta.6 · 2026-10-03
-
-> **Last beta before the Vault stable: an index grammar fix and a device check for the new menus.**
-
-Sixth beta of the **Vault** release.
-
-## Highlights
-
-- **Stats line grammar**: a vault with a single book (or a single highlight) now reads `*1 book · 1 highlight — click a title to open its note.*` — no more `1 books · 1 highlights`
-- Nothing else changed in the export: hashes stay valid, so there is nothing to re-export; the index line corrects itself on the next export that writes files
-- README: the index sample shows the rendered status label, and the stale pre-format screenshot is gone
-
-## Beta focus
-
-1. On the Kindle: Settings → **Beta Releases** ON → *Check for updates* → update to beta.6 and restart.
-2. On desktop: reinstall the plugin from the asset below, then restart KOReader.
-3. **Device check this round**: open a highlight's menu on the Kindle screen — the entry *All highlights as Special Highlights* is longer than the old one. If it gets truncated on the e-ink menu, say so in the discussion.
-
-All 758 test assertions green.
-
-*Remotely Save users: set **Abort Sync If Modification Above Percentage** to **100 (disable the protection)** — Tomedown re-exports notes in bulk, which trips the default 50% guard.*
