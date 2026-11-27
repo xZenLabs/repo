@@ -1,3 +1,14 @@
+# 3.1.1 · 2026-11-27
+
+What's New in Simple UI v3.1.1
+
+- List Cover Stacks;
+- Direct Stat Card Access;
+- Finished Books Exclusion;
+- New Clock Date Formats and Translatable Date Labels;
+- Context-Aware Night Mode Quick Action Label;
+- Several bug fixes;
+
 # 3.1.0 · 2026-11-16
 
 What's New in Simple UI v3.1.0
@@ -51,19 +62,3 @@ What's New in Simple UI v3.0.1
 - Preserve original cover colors in Coverdeck's "Flow" layout while Night Mode is active;
 - Fix UI rendering bugs on the topbar, transparent wallpaper bars, and menu closures;
 - Reorganize detailed documentation into /docs and refresh the README.
-
-# 3.0.0 · 2026-10-24
-
-What's New in Simple UI v3.0
-
-Add Accent Color customization for supported color devices (with grayscale fallback for monochrome displays);
-Overhaul Reading Stats module with new Detailed Mode, built-in charts, category-grouped metrics, paginated grid layout, and per-card visual customization;
-Add live layout preview in settings and quick-adjust popup menu for Bento Grid homepages;
-Revamp Library UI with a compact tabbed title bar, resizable navigation elements, and Series sub-groupings in Author/Tag views;
-Introduce Tiny Critter reading companion with customizable decor, interactive dialogs, and daily challenges;
-Add Tabbed Grid module to categorize and jump between book lists directly from the home screen;
-Add dedicated Reader Mode to the Quick Settings bar;
-Add new "Flow" layout option to the Coverdeck module;
-Add backdrop opacity controls to improve readability over active wallpapers;
-Redesign dialog box UI across the entire plugin for a cleaner, cohesive aesthetic;
-General bug fixes and performance optimizations.
