@@ -1,3 +1,17 @@
+# v1.8.10 · 2026-11-27
+
+## Added
+
+- Setting "Exclude from reading statistics" (Meguru → Settings, off by default). When enabled, Meguru books no longer add reading time, page turns or sessions to KOReader's statistics. Other books are not affected. Applies the next time a book is opened.
+
+## Fixed
+
+- Fixed a crash when long-pressing a page that failed to load. The panel view now simply doesn't open.
+- Fixed a page being stretched to fill the screen after a retry following a load error. It now keeps its real proportions ([#18](https://github.com/Craftwork2720/meguru/issues/18)).
+- Fixed a two-page spread mixing one-page and two-page layouts after a retry following a load error. It now keeps the two-page fit.
+
+**Full Changelog**: https://github.com/Craftwork2720/meguru/compare/v1.8.9...v1.8.10
+
 # v1.8.9 · 2026-11-18
 
 ## Added
@@ -52,14 +66,3 @@ Fixes some `.cbz` files not opening.
 - Blurry local `.cbz` pages on high-DPI images ([#13](https://github.com/Craftwork2720/meguru/issues/13)).
 
 **Full Changelog**: https://github.com/Craftwork2720/meguru/compare/v1.8.5...v1.8.6
-
-# v1.8.5 · 2026-11-11
-
-## Fixed
-
-- Page turning works with Zen UI again.
-- The "In landscape" two-page view now works on tablets that are landscape by default (rotation mode 0).
-- Two-page view no longer shows white bands above and below the pages when auto crop and flexible gutter crop cut the two pages differently.
-- Local `.cbz` covers are rendered with MuPDF again.
-
-**Full Changelog**: https://github.com/Craftwork2720/meguru/compare/v1.8.3...v1.8.5
