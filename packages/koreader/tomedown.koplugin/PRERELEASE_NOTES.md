@@ -1,3 +1,14 @@
+# v3.1.0-beta.6 · 2026-11-28
+
+### Beta Pre-Release: Unified InkAway Annotations & Complete Tool Fidelity
+
+- **Natural unified EPUB & PDF annotations**: multi-word handwritten notes, arrows, shapes, dots, and margin marks drawn together on an EPUB or PDF page are now reconstructed in exact 2D layout and exported as a single cohesive SVG annotation instead of splitting word-by-word, while independent margin notes far apart vertically stay separate.
+- **Stable drawing IDs & automatic orphan cleanup**: reflowable EPUB notes keep stable anchor-based filenames and Obsidian block IDs across font/window resizes, and stale drawing files are automatically pruned on re-export.
+- **Complete InkAway tool support**: translucent highlighter/marker/watercolor opacity, eraser-split strokes (`breaks`), sticker & paint-bucket `fill_color` interiors + outlines, flood-fill runs, symmetry modes (`vert`/`horiz`/`quad`), rich-text bullets/checkboxes, and multi-page `Book notes` chapter continuations.
+- **Includes all features from `v3.1.0-beta.5`**: direct TOC chapter lookup for PDFs & EPUBs (#52), CReEngine offscreen safety, and optional highlight color labels & custom aliases (#53, #54).
+
+You can install or update directly in KOReader via **Tomedown > Settings > App & updates > Release channel > Beta > Check for beta updates**.
+
 # v3.1.0-beta.5 · 2026-11-28
 
 ### Beta Pre-Release: Safe TOC Chapter Lookup & Crash Fix
@@ -38,13 +49,3 @@ You can install or update directly in KOReader via **Tomedown > Settings > App &
 - **Per-book override**: toggle highlight color labels per book under *Current book → Format & layout → Notes & highlights*.
 
 You can install this beta directly in KOReader via **Tomedown → Settings → App & updates → Release channel → Beta → Check for beta updates**.
-
-# v3.1.0-beta.1 · 2026-11-27
-
-### Beta Pre-Release: InkAway Handwritten Notes Support
-
-- **InkAway (`ink-away.koplugin`) support for PDF & EPUB**: exports freehand strokes, shapes (lines, curves, rectangles, triangles, ellipses, polygons, arrows), RGB colors, highlighter opacity, text boxes, and linked `.inkaway` book/highlight notebooks into clean vector `.svg` files in `drawings/`.
-- **Automatic SVG updates**: tracks stroke changes per page so adding or editing drawings updates the exported SVG while keeping Obsidian `^hl-` block IDs stable.
-- **Note**: Exports your actual drawn strokes as vector SVG images (no OCR on handwriting).
-
-You can install this beta directly from KOReader via **Tomedown → Settings → App & updates → Release channel → Beta → Check for beta updates**.
