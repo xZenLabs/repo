@@ -1,11 +1,5 @@
 # v1.7.0 · 2026-11-28
 
-<div align="center">
-  <img width="60%" alt="image" src="https://github.com/user-attachments/assets/4d827cc0-6038-444d-b5b4-bdde48495c92" />
-  <br>
-  <em>Built by one, made better by many.</em>
-</div>
-
 > For the great doesn’t happen through impulse alone, and is a succession of little things that are brought together.
 >
 > — **Vincent van Gogh**, *Letter to Theo van Gogh* (1882).
@@ -16,7 +10,9 @@ Let's see what's new:
 
 # Main Features
 
-## 1. Native Compatibility with various KOReader plugins! 🎉 | @KristanLaimon @EmirErtorer @Craftwork2720
+## 1. Native Compatibility with many KOReader plugins! 🎉 | @KristanLaimon @EmirErtorer @Craftwork2720
+
+To enable these additional integration features, just install them along with Panels+, PanelsPlus will recognize them automatically. It works out of the box.
 
 <div align="center">
   <table>
@@ -101,7 +97,7 @@ Besides offering a variety of brushes and drawing tools, it lets you create note
 You can also write directly on your books, with annotations that adapt to changes in text layout aaaannndd you can now draw
 while zoomed in Panels+!
 
-***Why?***: Definitively this has a lot more, and it's a special case. I started to work in this integration 1+ month ago. I realized that, to make this work, it would require to modify Ink-Away internal code as well as Panels+ (obviously), so I started a small demo like 2-3 weeks ago I had to design, implement, [start the discussion with ink-away developer](https://github.com/EmirErtorer/ink-away.koplugin/discussions/69), open the [Pull Request](https://github.com/EmirErtorer/ink-away.koplugin/pull/80) and exchange some messages here and there. It was a shared effort between @EmirErtorer and [@Me](https://github.com/KristanLaimon). The result is the following:
+***Why?***: Definitively this has lore and it's a special case. I started to work in this integration 1+ month ago. I realized that, to make this work, it would require to modify Ink-Away internal code as well as Panels+ (obviously), so I started a small demo like 2-3 weeks ago I had to design, implement, [start the discussion with ink-away developer](https://github.com/EmirErtorer/ink-away.koplugin/discussions/69), open the [Pull Request](https://github.com/EmirErtorer/ink-away.koplugin/pull/80) and exchange some messages here and there. It was a shared effort between @EmirErtorer and [@Me](https://github.com/KristanLaimon). The result is the following:
 
 <div align="center">
   <table>
@@ -203,7 +199,7 @@ This alternative OCR gesture only applies when Long Press is configured as your 
 
 ---
 
-## 4. Smart & Safe algorithm improved beyond benchmarks | @KristanLaimon & Requested by @moozhub in [Feature Request](https://github.com/KristanLaimon/PanelsPlus/issues/17)
+## 4. Smart & Safe algorithm improved beyond benchmarks | @KristanLaimon
 
 > Context: As you may know or not, in Panels+ repo I have automatic testing for Smart and Safe mode against 1500+ panels hand-made by me across 3+ differente mangas/comics/documents.
 
