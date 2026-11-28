@@ -1,3 +1,28 @@
+# v1.4.1 · 2026-11-28
+
+Suwayomi Client v1.4.1 fixes out-of-memory crashes on memory-constrained e-readers (such as Kindle and Kobo devices) when downloading server-predownloaded chapter archives. Updating from v1.4.0 is recommended.
+
+## Fixed
+
+- Fix out-of-memory crashes when streaming pre-downloaded CBZ archives from the Suwayomi server ([#76](https://github.com/LK4D4/suwayomi.koplugin/issues/76), [#77](https://github.com/LK4D4/suwayomi.koplugin/pull/77)). Previously, the download sink rebuilt a 64 KB tail string on every incoming chunk, causing rapid memory churn that could OOM-kill the download worker or KOReader partway through larger chapters.
+- Buffer recent chunks and compact them only occasionally, keeping streaming allocations bounded while preserving archive output and integrity validation.
+- Add regression tests verifying exact archive tail capture across chunk boundaries and compaction, and bounded memory allocation during large archive streams.
+
+## Updating
+
+### KOReader App Store
+
+With the [KOReader App Store plugin](https://github.com/omer-faruq/appstore.koplugin), open **Tools > App Store**, select **Check plugin updates**, then **Check all updates**. Update `suwayomi.koplugin` and restart KOReader.
+
+### Manual update
+
+1. Download **`suwayomi.koplugin-v1.4.1.zip`** from the release assets, not GitHub's source archives.
+2. Quit KOReader normally. Replace the existing `koreader/plugins/suwayomi.koplugin` folder, then relaunch. Keep your KOReader settings and downloaded chapters.
+
+Existing settings, downloaded chapters, and reading progress are preserved.
+
+**Full changelog:** [v1.4.0...v1.4.1](https://github.com/LK4D4/suwayomi.koplugin/compare/v1.4.0...v1.4.1)
+
 # v1.4.0 · 2026-10-07
 
 Suwayomi Client v1.4.0 makes Library updates follow your saved scanlator filters and remembers your preferred Library order.
@@ -152,27 +177,3 @@ If a chapter list has never been loaded, it may have no saved information. Recor
 If an older queued job reports an unknown server origin, **Retry** cannot resume it. Use **Downloads > Clear failed**, reopen the manga on the intended server, and queue the chapter again. **Clear failed** removes failed jobs in bulk and keeps records linked to local archives.
 
 **Full changelog:** https://github.com/LK4D4/suwayomi.koplugin/compare/v1.1.1...v1.2.0
-
-# v1.1.1 · 2026-09-10
-
-Suwayomi Client v1.1.1 fixes a regression in v1.1.0 that prevented Basic Auth connections over HTTPS, including connections that were already configured.
-
-## Fixed
-
-- Fix **“Could not reach the Suwayomi server: redirect not supported”** when using Basic Auth over HTTPS. The plugin passed an unsupported option to KOReader's HTTPS client, which rejected the request before contacting the server. This error did not mean the server was redirecting the connection.
-- Restore HTTPS requests for connection tests, library access, covers, chapter pages, and chapter archive downloads. Simple Login and UI Login retain their existing redirect restrictions.
-
-## Verification improvements
-
-- Add a regression test that exercises the real LuaSec request-option validation for Basic Auth queries, images, and archives.
-- Add an optional HTTPS sandbox with a private localhost certificate and authenticated readiness checks. The repaired Basic Auth workflow was verified in real KOReader, including rejected credentials, successful connection, chapter download, opening, and return navigation. The fix was also confirmed on an Android device with existing Basic Auth settings.
-
-## Updating
-
-1. Download **`suwayomi.koplugin-v1.1.1.zip`** from the assets below, not GitHub's source archives.
-2. Quit KOReader normally. Replace the existing plugin under `koreader/plugins/`, then relaunch KOReader. Keep your KOReader settings and downloaded chapters.
-3. Run **Settings > Connection > Test connection** in Suwayomi.
-
-**Keep your existing HTTPS URL and Basic Auth credentials.** No server change, authentication-method change, or setup reset is needed. This hotfix does not change settings, downloads, or reading-state behavior.
-
-**Full changelog:** https://github.com/LK4D4/suwayomi.koplugin/compare/v1.1.0...v1.1.1
