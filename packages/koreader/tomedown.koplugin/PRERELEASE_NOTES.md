@@ -1,3 +1,13 @@
+# v3.1.0-beta.4 · 2026-11-28
+
+### Beta Pre-Release: Chapter Association for Handwritten Notes
+
+- **Direct Table of Contents (TOC) chapter lookup for InkAway & stylus notes** (#52): handwritten notes on PDFs and EPUBs are now automatically grouped under their actual book chapters using KOReader's Table of Contents (live reader TOC, custom handmade TOC, or embedded document TOC when exporting closed books), even in chapters without any text highlights.
+- **Reflowable EPUB & Book notes chapter alignment**: prioritizes XPointer document order (`DocFragment`) over shifted reflow page numbers and aligns InkAway `Book notes` chapter pages directly inside their matching chapter section.
+- Includes all features from `v3.1.0-beta.3`: **InkAway handwritten notes support** (#52) and **optional highlight color labels & custom aliases** (#53, #54).
+
+You can install or update directly in KOReader via **Tomedown > Settings > App & updates > Release channel > Beta > Check for beta updates**.
+
 # v3.1.0-beta.3 · 2026-11-28
 
 ### Beta Pre-Release: Combined Build
@@ -57,38 +67,6 @@ On a book with notes, turn preserve off, look at `<book>.md.bak`, turn it on and
 ## Installing
 
 Download `tomedown.koplugin-v1.1.0-beta.3.zip` from the **Assets** section at the bottom of this page (not the *Source code* archive), unzip it into `koreader/plugins/` and restart KOReader.
-
-The beta is also opt-in inside KOReader: *Settings → Updates → Developer*, with *Beta Releases* ticked, will offer it. Without that tick nothing changes, the background check stays on stable releases and nobody gets nudged towards it.
-
-README, full tutorial, quickstart sheets and Obsidian guide sheets: https://github.com/imanubdesigner/tomedown.koplugin
-
-# v1.1.0-beta.2 · 2026-10-26
-
-**Tomedown 1.1.0-beta.2, the second beta of the per book edition.**
-
-The first beta asked a new question: should preserve be a choice for each book? This one repairs the weakest part of the answer, the backups. Two copies sat next to every file, and the rules deciding which held what could still lose the one with your notes inside. Now each copy has a single job, and the one that matters always comes back.
-
-A beta, and it behaves like one: it replaces 1.0.0 in the plugin folder (going back means installing the 1.0.0 zip again). What it needs is a week of real reading, and a note from you the moment something feels off.
-
-## Highlights
-
-- **Turning preserve off parks your file.** The zoned file, notes included, is kept as `<name>.md.bak` while the plain export takes its place. Turn preserve on again and that copy becomes the base of the next export, so your notes are back in the file. It makes no difference whether the plain file on disk is one Tomedown wrote or one you left there: the parked copy is the one that counts. On, off, on, off, on: every note you kept returns each time, one you deleted stays deleted, one you added is kept.
-- **The second copy is a safety net.** `<name>.md.bak.1` now holds only text that could not come back by itself: something typed into the plain file while preserve was off (that file is regenerated), a block edited inside its comments, a cloud copy that moved on. It has one slot and never takes the place of `.bak`.
-- **A copy that fails stops the write.** If either slot cannot be written (a full card, a read-only folder), the export leaves the file exactly as it is and reports `the backup copy could not be written, file left as it is`. Nothing is traded for a rewrite, and the next export tries again.
-
-## Changed
-
-- A rename refused by the filesystem (some mounts on the Kindle card) no longer fails the copy: the content is written in place, with a warning in the log.
-- A cloud copy that is still the very file Tomedown uploaded last is not kept as `.bak.1`, so an ordinary export does not fill the second slot with your own bytes.
-- The README went through a full pass: shorter where it repeated itself, plainer where it explains the two copies, and a real mistake corrected (a block edited inside its comments goes to `.bak.1`, not `.bak`).
-
-## What to try first
-
-Turn preserve off on a book with notes, look at the `.bak`, turn it on and export: the notes are back. Then do it twice more. Type a line into the plain file while preserve is off, turn it on, and look in `.bak.1`: your line is there, the parked notes are in the file.
-
-## Installing
-
-Download `tomedown.koplugin-v1.1.0-beta.2.zip` from the **Assets** section at the bottom of this page (not the *Source code* archive), unzip it into `koreader/plugins/` and restart KOReader.
 
 The beta is also opt-in inside KOReader: *Settings → Updates → Developer*, with *Beta Releases* ticked, will offer it. Without that tick nothing changes, the background check stays on stable releases and nobody gets nudged towards it.
 
