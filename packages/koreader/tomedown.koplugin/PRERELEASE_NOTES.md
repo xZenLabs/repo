@@ -1,3 +1,14 @@
+# v3.1.0-beta.7 · 2026-11-28
+
+### Beta Pre-Release: Eraser Fidelity, Highlight-First Ordering & Per-Book Color Aliases
+
+- **InkAway eraser fidelity inside handwritten notes**: `kind = "erase"` strokes inside `Book notes` (`.inkaway`) now remove/split prior erased strokes so erased letters never reappear in exported SVGs, while preserving strokes drawn afterwards.
+- **Handwritten notes sorted under their linked highlight**: when a handwritten note shares the same page and timestamp as a text highlight, the text highlight always appears first with the handwritten note directly underneath it.
+- **`Color aliases` in `Current book`**: added `Color aliases` directly under `Current book > Format & layout > Notes & highlights` alongside `Highlight color`.
+- **Includes everything from `v3.1.0-beta.6`**: unified multi-word EPUB/PDF annotations, stable anchor IDs, automatic orphan SVG cleanup, direct TOC chapter lookup (#52), and highlight color labels (#53, #54).
+
+You can install or update directly in KOReader via **Tomedown > Settings > App & updates > Release channel > Beta > Check for beta updates**.
+
 # v3.1.0-beta.6 · 2026-11-28
 
 ### Beta Pre-Release: Unified InkAway Annotations & Complete Tool Fidelity
@@ -39,13 +50,3 @@ This beta combines both community-requested features for testing:
 - **Optional highlight color labels and custom aliases** (#53, #54): adds a **Highlight color** toggle (off by default) and **Color aliases** submenu under **Settings > Notes & highlights** (plus per-book override), appending the color name or custom alias to highlight metadata lines across book notes, `00 - Reading Digest.md`, and `.txt` exports.
 
 You can install or update directly in KOReader via **Tomedown > Settings > App & updates > Release channel > Beta > Check for beta updates**.
-
-# v3.1.0-beta.2 · 2026-11-27
-
-### Beta Pre-Release: Optional Highlight Color Labels & Aliases (#53)
-
-- **Highlight color toggle** (*Settings → Notes & highlights → Highlight color*, off by default): appends the highlight's color name (e.g. `- **p. 10** · 02/09/2026 · Yellow`) to each exported highlight's metadata line across book notes, `00 - Reading Digest.md`, and `.txt` exports.
-- **Custom color aliases** (*Settings → Notes & highlights → Color aliases*): map any KOReader highlight color to a custom label (for example `Yellow → Key idea`, `Red → Disagree`).
-- **Per-book override**: toggle highlight color labels per book under *Current book → Format & layout → Notes & highlights*.
-
-You can install this beta directly in KOReader via **Tomedown → Settings → App & updates → Release channel → Beta → Check for beta updates**.
