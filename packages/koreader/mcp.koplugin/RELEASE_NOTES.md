@@ -1,3 +1,21 @@
+# v0.9.0 · 2026-11-28
+
+## What's Changed
+
+* Save highlights through KOReader's highlighter, add note_format by @laughedelic in https://github.com/laughedelic/mcp.koplugin/pull/22
+
+### Improvements
+- Highlights made by the AI are saved the same way as your own. They use your default style and color, and get the chapter title. In PDFs they're written into the file when "Write highlights into PDF" is on.
+- Highlighting a passage by its text now works in PDF and DjVu books, not only in EPUB and other reflowable books.
+- Notes can be markdown or HTML (new `note_format` option). KOReader 2026.07 and later show them formatted.
+- The bookmarks resource now includes each highlight's color, style and note format.
+
+### Fixes
+- A highlight at a position that isn't in the book is now refused, where before it could save a broken, empty highlight.
+- Removed the deprecated `name` field from `_meta.lua`, so KOReader 2026.03+ no longer logs a warning about it.
+
+**Full Changelog**: https://github.com/laughedelic/mcp.koplugin/compare/v0.8.1...v0.9.0
+
 # v0.8.1 · 2026-11-27
 
 ## What's Changed
@@ -56,11 +74,3 @@
 
 
 **Full Changelog**: https://github.com/laughedelic/mcp.koplugin/compare/v0.5.1...v0.6.0
-
-# v0.5.1 · 2026-02-01
-
-## What's Changed
-* feat: add MCP tool annotations by @laughedelic in https://github.com/laughedelic/mcp.koplugin/pull/6
-
-
-**Full Changelog**: https://github.com/laughedelic/mcp.koplugin/compare/v0.5.0...v0.5.1

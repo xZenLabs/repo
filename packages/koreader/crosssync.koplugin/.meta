@@ -1,0 +1,22 @@
+# Crosssync plugin for KOReader
+# https://github.com/Sirence/crosssync.koplugin
+# zenpm:auto-scraped
+id=crosssync
+name=Crosssync
+version=1.0.4
+description=Syncs to CrossPoint directly and lets you browse your CrossPoint data and stats right on your device. Syncs reading progress, highlights, bookmarks, reading status and stats
+author=Sirence
+category=productivity
+platforms=koreader
+dependencies=
+source=https://github.com/Sirence/crosssync.koplugin
+stars=5
+updated_at=2026-11-28T01:01:02Z
+published_at=2026-11-27T10:06:14Z
+readme_url=packages/koreader/crosssync.koplugin/README.md
+readme_hash=63c5696e47aed45f43e43f7ba3438e95fd2f84da
+release_notes_url=packages/koreader/crosssync.koplugin/RELEASE_NOTES.md
+release_notes_hash=5f26af7baa59e7e31d19643256b5632e43f1ba765748591c1ab86a1daf7dd2e4
+releases=[{"tag_name":"1.0.4","assets":[{"name":"source-code.zip","url":"https://api.github.com/repos/Sirence/crosssync.koplugin/zipball/1.0.4"}],"name":"Historical sync & Library UI"},{"tag_name":"1.0.3","assets":[{"name":"source-code.zip","url":"https://api.github.com/repos/Sirence/crosssync.koplugin/zipball/1.0.3"}]},{"tag_name":"1.0.2","assets":[{"name":"source-code.zip","url":"https://api.github.com/repos/Sirence/crosssync.koplugin/zipball/1.0.2"}],"name":"For auto push on close / suspend, turn on wifi if not already on"},{"tag_name":"bug-fix","assets":[{"name":"source-code.zip","url":"https://api.github.com/repos/Sirence/crosssync.koplugin/zipball/bug-fix"}],"name":"1.0.1"},{"tag_name":"crosssync.koplugin","assets":[{"name":"source-code.zip","url":"https://api.github.com/repos/Sirence/crosssync.koplugin/zipball/crosssync.koplugin"}],"name":"crosssync.koplugin"}]
+source_type=source
+source_url=https://codeload.github.com/Sirence/crosssync.koplugin/zip/refs/heads/main
