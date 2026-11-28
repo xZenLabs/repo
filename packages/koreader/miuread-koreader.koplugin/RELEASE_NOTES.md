@@ -1,3 +1,7 @@
+# v6.6.0 · 2026-11-28
+
+- 书籍操作顺序、书签、插图续补、书城搜索到加书架
+
 # v6.5.7 · 2026-11-27
 
 - 恢复微信读书书城，并保持限量刷新
@@ -16,21 +20,3 @@
 - 内核改造，全面切换为原生
 - 无用内核删除
 - 双向定位补丁
-
-# v6.4.1 · 2026-11-09
-
-- perf(reader): skip toolbar state refresh when reader toolbar is disabled
-- perf(store): use ZIP central directory for EPUB identity instead of 1.75MB read and unzip subprocesses
-- perf(reader): gate WeRead-only and toolbar-only onReaderReady tasks on local books
-- fix(lifecycle): avoid 18s rebuild candidate false positive on CloseDocument
-- perf(store): bound settings_equal seen stack, deduplicate incremental flush pass, and skip clean native close flushes
-- perf(reader): isolate plugin-mode native books from recent-read writes, idle transition timers, and eager thought link guard
-- fix(readtime): allow time reports when rereading finished books (#183)
-- fix(readtime): preserve Web report status and failure scope
-- feat(readtime): include Web reports in opt-in diagnostics
-- fix(readtime): aggregate E-Ink offline reports and preserve unsent time (#184)
-- fix(readtime): reserve safe Web retries before dispatch
-- fix(readtime): exclude inactive gaps from Web reading time
-- 本次更新准备发布 MiuRead 6.5.0-beta.24，重点修复 EPUB 多级目录问题，并完善 GitHub Release 与 Issue 自动关联机制。
-- 导入书籍评论获取/稳定性提升
-- 测试流程修改
